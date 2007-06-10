@@ -3,10 +3,20 @@
 %% variáveis
 
 global = {
+  \tempo 4=60
+  
 }
 
 segAA = {
-  s
+  \relative c {
+    %% contorno 1
+    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r des4~\pp\<
+    %% contorno 2
+    des8\! d~\p d4~ d8 \breathe c'\( des4 \acciaccatura b8 a4~
+    %% contorno 3
+    a16\) b8\<( cis16~ cis f8.) \acciaccatura g8 a32\mf( aes) g8-. ges16-. f-. r8.
+    %% contorno 4
+  }
 }
 
 %% partitura
@@ -22,6 +32,7 @@ segAA = {
   }
   \score {
     \new Staff <<
+      \set Staff.midiInstrument = "clarinet"
       \global
       {
         \segAA
@@ -46,9 +57,7 @@ segAA = {
     }
   }
   \paper {
-    %% #(set-global-staff-size 8)
     #(set-paper-size "a4")
-
     line-width = 17.5\cm
     bottom-margin = 1.5\cm
     left-margin = 2\cm
