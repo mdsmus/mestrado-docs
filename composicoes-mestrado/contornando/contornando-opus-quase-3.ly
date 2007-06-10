@@ -10,9 +10,9 @@ global = {
 segAA = {
   \relative c {
     %% contorno 1
-    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r des4~\pp\<
+    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4~\pp\<
     %% contorno 2
-    des8\! d~\p d4~ d8 \breathe c'\( des4 \acciaccatura b8 a4~
+    cis8\! d~\p d4~ d8 \breathe bis'\( cis4 \acciaccatura b!8 a4~
     %% contorno 3
     a16\) b8\<( cis16~ cis f8.) \acciaccatura g8 a32\mf( aes) g8-. ges16-. f-. r8.
     %% contorno 4
