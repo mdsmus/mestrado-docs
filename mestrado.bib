@@ -79,6 +79,22 @@ Encoding: ISO8859_1
 	Retrieval},
   year = {2005},
   pages = {167--174},
+  abstract = {This paper proposes an efficient pattern extraction algorithm that
+	can be applied on melodic sequences that are represented as strings
+	of abstract intervallic symbols; the melodic representation introduces
+	special "don't care" symbols for intervals that may belong to two
+	partially overlapping intervallic categories. As a special case the
+	well established "step-leap" representation is examined. In the step-leap
+	representation, each melodic diatonic interval is classified as a
+	step (+-s), a leap (+-l) or a unison (u). Binary don't care symbols
+	are introduced to represent the possible overlapping between the
+	various abstract categories e.g. * = s, * = l and # = -s, # = -l.
+	For such a sequence, we are interested in finding maximal repeating
+	pairs and repetitions with a hole (two matching subsequences separated
+	with an intervening non-matching symbol). We propose an O(n + d(n
+	- d) + z )-time algorithm for computing all such repetitions in a
+	given sequence x = x[1..n] with d binary don't care symbols, where
+	z is the output size.},
   crossref = {05:_inter_confer_music_infor_retriev},
   keywords = {mir
 	
@@ -174,6 +190,22 @@ Encoding: ISO8859_1
   timestamp = {2007.04.21}
 }
 
+@ARTICLE{ellis2002qgt,
+  author = {Ellis, D. and Whitman, B. and Berenzweig, A. and Lawrence, S.},
+  title = {The quest for ground truth in musical artist similarity},
+  journal = {Proceedings of the 3rd International Conference on Music Information
+	Retrieval},
+  year = {2002},
+  crossref = {02:_inter_confer_music_infor_retriev},
+  keywords = {music similarity
+	
+	ismir},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2002/proceedings/02-FP05-4.pdf},
+  timestamp = {2007.05.17},
+  url = {http://www.ee.columbia.edu/~madadam/papers/ellis02truth.pdf}
+}
+
 @INCOLLECTION{evans74:_music,
   author = {Peter Evans},
   title = {Music of the european mainstream: 1940--1960},
@@ -204,6 +236,69 @@ Encoding: ISO8859_1
   timestamp = {2007.04.21}
 }
 
+@ARTICLE{grachten2msl,
+  author = {Grachten, M. and Arcos, J.L. and de Mantaras, R.L.},
+  title = {Melodic similarity: Looking for a good abstraction level},
+  journal = {Proceedings of the 5th International Conference on Music Information
+	Retrieval},
+  year = {2004},
+  note = {Disponível em <\url{http://ismir2004.ismir.net/proceedings/p040-page-210-paper166.pdf}>
+	[acesso 27 abril 2007]},
+  abstract = {Computing melodic similarity is a very general problem with diverse
+	musical applications ranging from music analysis to content-based
+	retrieval. Choosing the appropriate level of representation is a
+	crucial issue and depends on the type of application. Our research
+	interest concerns the development of a CBR system for expressive
+	music processing. In that context, a well chosen distance measure
+	for melodies is a crucial issue. In this paper we propose a new melodic
+	similarity measure based on the I/R model for melodic structure and
+	compare it with other existing measures. The experimentation shows
+	that the proposed measure provides a good compromise between discriminatory
+	power and ability to recognize phrases from the same song.},
+  crossref = {04:_inter_confer_music_infor_retriev},
+  keywords = {ismir
+	
+	music similarity},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2004/proceedings/p040-page-210-paper166.pdf},
+  timestamp = {2007.04.27},
+  url = {http://ismir2004.ismir.net/proceedings/p040-page-210-paper166.pdf}
+}
+
+@ARTICLE{hofmannengl2001tmm,
+  author = {Hofmann-Engl, L.},
+  title = {Towards a model of melodic similarity},
+  journal = {Proceedings of the 2nd International Conference on Music Information
+	Retrieval},
+  year = {2001},
+  note = {Disponível em <\url{http://ismir2001.ismir.net/pdf/hofmann-engl.pdf}>
+	[acesso 27 abril 2007]},
+  abstract = {In recent years the interest in melodic similarity has mushroomed
+	mainly due to the increased importance of music information retrieval
+	(MIR). A great number of similarity models and algorithms have been
+	developed, but little or no attention has been paid to cognitive
+	or perceptual aspects to the issue at hand. Questions, about the
+	relevant parameters and the appropriate implementation are under-researched
+	as are experimental data. This paper focuses on the pitch aspect
+	of melodic similarity, scrutinising the term pitch replacing it by
+	a less ambivalent and overused term, which we will call meloton.
+	Based on the term meloton the paper suggests to approach the issue
+	of 'melotonic' similarity from a transformational angle, where transformations
+	are executed as reflections and translations. 'Melotonic' similarity
+	then is seen as related to the transformation process in form of
+	a transpositional and interval vector. Finally, melotonic similarity
+	as portrait in a psychological context emerges as a multi-facet phenomenon
+	requiring the development of flexible models.},
+  crossref = {01:_inter_confer_music_infor_retriev},
+  keywords = {ismir
+	
+	music similarity},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2001/pdf/hofmann-engl.pdf},
+  timestamp = {2007.04.27},
+  url = {http://ismir2001.ismir.net/pdf/hofmann-engl.pdf}
+}
+
 @INCOLLECTION{maidin:gam,
   author = {Donncha Ó Maidín},
   title = {A Geometrical algorithm for melodic difference},
@@ -215,6 +310,46 @@ Encoding: ISO8859_1
 	melodic contour},
   owner = {marcos},
   timestamp = {2007.05.23}
+}
+
+@ARTICLE{miura2003sam,
+  author = {Miura, T. and Shioya, I.},
+  title = {Similarity among melodies for music information retrieval},
+  journal = {Proceedings of the twelfth international conference on Information
+	and knowledge management},
+  year = {2003},
+  pages = {61--68},
+  abstract = {Here we discuss how to look for similar melody in music databases
+	by giving monophonic melody in sheet. In this work, we utilize text
+	expression (or sheet music) to describe music and introduce pitch
+	spectrum of melodies. By this feature, we concisely distinguish music
+	from tempo, transposition or other arbitrary expressions. We show
+	the usefulness by experimental results.},
+  crossref = {03:_inter_confer_music_infor_retriev},
+  keywords = {music similarity},
+  owner = {marcos},
+  publisher = {ACM Press New York, NY, USA},
+  timestamp = {2007.04.25},
+  url = {http://portal.acm.org/citation.cfm?id=956863.956877&dl=portal&dl=ACM&type=series&idx=956863&part=Proceedings&WantType=Proceedings&title=Conference%20on%20Information%20and%20Knowledge%20Management}
+}
+
+@ARTICLE{mullensiefen:omm,
+  author = {Müllensiefen, D. and Frieler, K.},
+  title = {Optimizing measures of melodic similarity for the exploration of
+	a large folk song database},
+  journal = {Proceedings of the 5th International Conference on Music Information
+	Retrieval},
+  year = {2004},
+  note = {Disponível em <\url{http://ismir2004.ismir.net/proceedings/p052-page-274-paper178.pdf}>.
+	[Acesso 27 março 2007]},
+  crossref = {04:_inter_confer_music_infor_retriev},
+  keywords = {ismir
+	
+	music similarity},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2004/proceedings/p052-page-274-paper178.pdf},
+  timestamp = {2007.04.27},
+  url = {http://ismir2004.ismir.net/proceedings/p052-page-274-paper178.pdf}
 }
 
 @INCOLLECTION{nettl05:_apples_orang,
@@ -272,6 +407,62 @@ Encoding: ISO8859_1
   timestamp = {2007.03.21}
 }
 
+@ARTICLE{noll02:_opusc_towar_corpus_based_music_repos,
+  author = {Thomas Noll and J{\"o}rg Garbers and Karin H{\"o}thker and Christian
+	Spevak and Tillman Weyde},
+  title = {Opuscope - Towards a Corpus-Based Music Repository.},
+  journal = {Proceedings of the 3rd International Conference on Music Information
+	Retrieval},
+  year = {2002},
+  note = {Disponível em <\url{http://ismir2002.ismir.net/proceedings%5C03-SP04-3.pdf}>.
+	[Acesso 27 março 2007]},
+  annote = {ismir},
+  bibsource = {DBLP, dblp.uni-trier.de},
+  crossref = {02:_inter_confer_music_infor_retriev},
+  ee = {ismir2002.ismir.net/proceedings/03-SP04-3.pdf},
+  keywords = {ismir
+	
+	music similarity},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2002/proceedings/03-SP04-3.pdf},
+  url = {http://ismir2002.ismir.net/proceedings%5C03-SP04-3.pdf}
+}
+
+@ARTICLE{paulus2002msr,
+  author = {Paulus, J. and Klapuri, A.},
+  title = {Measuring the similarity of rhythmic patterns},
+  journal = {Proceedings of the 3rd International Conference on Music Information
+	Retrieval},
+  year = {2002},
+  note = {Disponível em <\url{http://ismir2002.ismir.net/proceedings%5C02-FP05-1.pdf}>.
+	[Acesso 27 abril 2007]},
+  annote = {ismir},
+  crossref = {02:_inter_confer_music_infor_retriev},
+  keywords = {ismir
+	
+	music similarity},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2002/proceedings/02-FP05-1.pdf},
+  timestamp = {2007.04.27},
+  url = {http://ismir2002.ismir.net/proceedings%5C02-FP05-1.pdf}
+}
+
+@ARTICLE{pauws2002cfo,
+  author = {Pauws, S.},
+  title = {Cubyhum: A fully operational query by humming system},
+  journal = {Proceedings of the 3rd International Conference on Music Information
+	Retrieval},
+  year = {2002},
+  pages = {187--196},
+  crossref = {02:_inter_confer_music_infor_retriev},
+  keywords = {mir
+	
+	melodic contour},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2002/proceedings/02-FP06-2.pdf},
+  timestamp = {2007.06.16},
+  url = {http://ismir2002.ismir.net/proceedings/02-FP06-2.pdf}
+}
+
 @INCOLLECTION{selfridge-field98:_concep_repres_issues_melod_compar,
   author = {Eleanor Selfridge-Field},
   title = {Conceptual and Representational Issues in Melodic Comparison},
@@ -289,6 +480,28 @@ Encoding: ISO8859_1
   timestamp = {2007.05.20}
 }
 
+@ARTICLE{toussaint2004crs,
+  author = {Toussaint, G.T.},
+  title = {A comparison of rhythmic similarity measures.},
+  journal = {Proceedings of the 5th International Conference on Music Information
+	Retrieval},
+  year = {2004},
+  pages = {242--245},
+  note = {Disponível em <\url{http://www.cs.mcgill.ca/research/reports/2004/SOCS-TR-2004.6.pdf}>.
+	[Acesso 27 abril 2007]},
+  annote = {A comparison of rhythmic similarity measures. En las actas de 5th
+	International Conference on Music Information Retrieval --- ISMIR},
+  crossref = {04:_inter_confer_music_infor_retriev},
+  keywords = {ismir
+	
+	music similarity},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2004/proceedings/p045-page-242-paper134.pdf},
+  publisher = {Universitat Pompeu Fabra, Barcelona, pag},
+  timestamp = {2007.04.25},
+  url = {http://www.cs.mcgill.ca/research/reports/2004/SOCS-TR-2004.6.pdf}
+}
+
 @ARTICLE{typke2005smi,
   author = {Rainer Typke and Frans Wiering and Remco C. Veltkamp},
   title = {A Survey of Music Information Retrieval Systems},
@@ -302,6 +515,68 @@ Encoding: ISO8859_1
   pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2005/proceedings/1020.pdf},
   timestamp = {2007.06.14},
   url = {http://ismir2005.ismir.net/proceedings/1020.pdf}
+}
+
+@ARTICLE{uitdenbogerd2003pre,
+  author = {Alexandra L. Uitdenbogerd and Yap, Y.W.},
+  title = {Was Parsons right? An experiment in usability of music representations
+	for melody-based music retrieval},
+  journal = {Proceedings of the 4th International Conference on Music Information
+	Retrieval},
+  year = {2003},
+  pages = {75--79},
+  abstract = {In 1975 Parsons developed his dictionary of musical themes based on
+	a simple contour representation. The motivation was that people with
+	little training in music would be able to identify pieces of music.
+	We decided to test whether people of various levels of musical skill
+	could indeed make use of a text representation to describe a simple
+	melody query. The results indicate that the task is beyond those
+	who are unmusical, and that a scale numeric representation is easier
+	than a contour one for those of moderate musical skill. Further,
+	a common error when using the scale representation still yields a
+	more accurate contour representation than if a user is asked to enter
+	a contour query. We observed an average query length of about seven
+	symbols for the retrieval task.},
+  crossref = {03:_inter_confer_music_infor_retriev},
+  keywords = {melodic contour},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2003/papers/Uitdenbogerd.PDF},
+  timestamp = {2007.05.31},
+  url = {http://ismir2003.ismir.net/papers/Uitdenbogerd.PDF}
+}
+
+@ARTICLE{Vignoli2005,
+  author = {Vignoli, F. and Pauws, S.},
+  title = {A Music Retrieval System Based on Music Similarity and its Evaluation},
+  journal = {Proceedings of the 6th International Conference on Music Information
+	Retrieval},
+  year = {2005},
+  note = {Disponível em <\url{http://ismir2005.ismir.net/proceedings/1021.pdf}>.
+	[Acesso 27 abril 2007]},
+  crossref = {05:_inter_confer_music_infor_retriev},
+  keywords = {ismir
+	
+	music similarity},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2005/proceedings/1021.pdf},
+  timestamp = {2007.04.27},
+  url = {http://ismir2005.ismir.net/proceedings/1021.pdf}
+}
+
+@ARTICLE{weyde2005emr,
+  author = {Weyde, T. and Datzko, C.},
+  title = {Efficient Melody Retrieval With Motif Contour Classes},
+  journal = {Proceedings of the 6th International Conference on Music Information
+	Retrieval},
+  year = {2005},
+  crossref = {05:_inter_confer_music_infor_retriev},
+  keywords = {mir
+	
+	melodic contour},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2005/proceedings/2118.pdf},
+  timestamp = {2007.06.16},
+  url = {http://ismir2005.ismir.net/proceedings/2118.pdf}
 }
 
 @INCOLLECTION{diferenca-gepb,
@@ -1612,6 +1887,7 @@ Encoding: ISO8859_1
 	
 	music similarity},
   owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2006/PAPERS/ISMIR06150_Paper.pdf},
   timestamp = {2007.04.27},
   url = {http://ismir2006.ismir.net/PAPERS/ISMIR06150_Paper.pdf}
 }
@@ -1897,6 +2173,22 @@ Encoding: ISO8859_1
   volume = {19},
   pages = {2--30},
   keywords = {music unity}
+}
+
+@ARTICLE{dannenberg2007ces,
+  author = {Dannenberg, R.B. and Birmingham, W.P. and Pardo, B. and Hu, N. and
+	Meek, C. and Tzanetakis, G.},
+  title = {A Comparative Evaluation of Search Techniques for Query-by-Humming
+	Using the Musart Testbed},
+  journal = {Technology},
+  year = {2007},
+  volume = {58},
+  pages = {3},
+  keywords = {mir},
+  owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/music-diversos/dannenberg2007ces.pdf},
+  timestamp = {2007.06.16},
+  url = {http://www.cs.cmu.edu/~rbd/papers/musart-testbed-jasist-2007.pdf}
 }
 
 @ARTICLE{danuser05:_herman_danus_trans_by_mary_whitt,
@@ -2374,20 +2666,6 @@ Encoding: ISO8859_1
   timestamp = {2007.04.13}
 }
 
-@ARTICLE{ellis2002qgt,
-  author = {Ellis, D. and Whitman, B. and Berenzweig, A. and Lawrence, S.},
-  title = {The quest for ground truth in musical artist similarity},
-  journal = {Proceedings of the 3rd International Conference on Music Information
-	Retrieval},
-  year = {2002},
-  keywords = {music similarity
-	
-	ismir},
-  owner = {marcos},
-  timestamp = {2007.05.17},
-  url = {http://www.ee.columbia.edu/~madadam/papers/ellis02truth.pdf}
-}
-
 @BOOK{houaiss90:_mirad_inter,
   title = {Enciclopédia Mirador Internacional},
   publisher = {Encyclopaedia Britannica do Brasil Publicações Ltda.},
@@ -2792,33 +3070,6 @@ Encoding: ISO8859_1
   owner = {marcos},
   timestamp = {2007.05.20},
   url = {http://www.iiia.csic.es/~maarten/articles/Dissertation-MGrachten-2006.pdf}
-}
-
-@ARTICLE{grachten2msl,
-  author = {Grachten, M. and Arcos, J.L. and de Mantaras, R.L.},
-  title = {Melodic similarity: Looking for a good abstraction level},
-  journal = {Proceedings of the 5th International Conference on Music Information
-	Retrieval},
-  year = {2004},
-  note = {Disponível em <\url{http://ismir2004.ismir.net/proceedings/p040-page-210-paper166.pdf}>
-	[acesso 27 abril 2007]},
-  abstract = {Computing melodic similarity is a very general problem with diverse
-	musical applications ranging from music analysis to content-based
-	retrieval. Choosing the appropriate level of representation is a
-	crucial issue and depends on the type of application. Our research
-	interest concerns the development of a CBR system for expressive
-	music processing. In that context, a well chosen distance measure
-	for melodies is a crucial issue. In this paper we propose a new melodic
-	similarity measure based on the I/R model for melodic structure and
-	compare it with other existing measures. The experimentation shows
-	that the proposed measure provides a good compromise between discriminatory
-	power and ability to recognize phrases from the same song.},
-  keywords = {ismir
-	
-	music similarity},
-  owner = {marcos},
-  timestamp = {2007.04.27},
-  url = {http://ismir2004.ismir.net/proceedings/p040-page-210-paper166.pdf}
 }
 
 @BOOK{green79:_form_tonal_music,
@@ -3434,39 +3685,6 @@ Encoding: ISO8859_1
   url = {http://www.chameleongroup.org.uk/research/rhythm.pdf}
 }
 
-@ARTICLE{hofmannengl2001tmm,
-  author = {Hofmann-Engl, L.},
-  title = {Towards a model of melodic similarity},
-  journal = {Proceedings of the 2nd International Conference on Music Information
-	Retrieval},
-  year = {2001},
-  note = {Disponível em <\url{http://ismir2001.ismir.net/pdf/hofmann-engl.pdf}>
-	[acesso 27 abril 2007]},
-  abstract = {In recent years the interest in melodic similarity has mushroomed
-	mainly due to the increased importance of music information retrieval
-	(MIR). A great number of similarity models and algorithms have been
-	developed, but little or no attention has been paid to cognitive
-	or perceptual aspects to the issue at hand. Questions, about the
-	relevant parameters and the appropriate implementation are under-researched
-	as are experimental data. This paper focuses on the pitch aspect
-	of melodic similarity, scrutinising the term pitch replacing it by
-	a less ambivalent and overused term, which we will call meloton.
-	Based on the term meloton the paper suggests to approach the issue
-	of 'melotonic' similarity from a transformational angle, where transformations
-	are executed as reflections and translations. 'Melotonic' similarity
-	then is seen as related to the transformation process in form of
-	a transpositional and interval vector. Finally, melotonic similarity
-	as portrait in a psychological context emerges as a multi-facet phenomenon
-	requiring the development of flexible models.},
-  keywords = {ismir
-	
-	music similarity},
-  owner = {marcos},
-  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2001/pdf/hofmann-engl.pdf},
-  timestamp = {2007.04.27},
-  url = {http://ismir2001.ismir.net/pdf/hofmann-engl.pdf}
-}
-
 @BOOK{holanda04:_novo_portug,
   title = {Novo Dicionário Aurélio da Língua Portuguesa},
   publisher = {Editora Positivo},
@@ -3918,6 +4136,7 @@ Encoding: ISO8859_1
 	
 	music similarity},
   owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2006/PAPERS/ISMIR0696_Paper.pdf},
   timestamp = {2007.03.27},
   url = {http://ismir2006.ismir.net/PAPERS/ISMIR0696_Paper.pdf}
 }
@@ -4926,6 +5145,7 @@ Encoding: ISO8859_1
 	
 	music similarity},
   owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2006/PAPERS/ISMIR0613_Paper.pdf},
   timestamp = {2007.03.27},
   url = {http://ismir2006.ismir.net/PAPERS/ISMIR0613_Paper.pdf}
 }
@@ -5299,26 +5519,6 @@ Encoding: ISO8859_1
   timestamp = {2007.03.22}
 }
 
-@ARTICLE{miura2003sam,
-  author = {Miura, T. and Shioya, I.},
-  title = {Similarity among melodies for music information retrieval},
-  journal = {Proceedings of the twelfth international conference on Information
-	and knowledge management},
-  year = {2003},
-  pages = {61--68},
-  abstract = {Here we discuss how to look for similar melody in music databases
-	by giving monophonic melody in sheet. In this work, we utilize text
-	expression (or sheet music) to describe music and introduce pitch
-	spectrum of melodies. By this feature, we concisely distinguish music
-	from tempo, transposition or other arbitrary expressions. We show
-	the usefulness by experimental results.},
-  keywords = {music similarity},
-  owner = {marcos},
-  publisher = {ACM Press New York, NY, USA},
-  timestamp = {2007.04.25},
-  url = {http://portal.acm.org/citation.cfm?id=956863.956877&dl=portal&dl=ACM&type=series&idx=956863&part=Proceedings&WantType=Proceedings&title=Conference%20on%20Information%20and%20Knowledge%20Management}
-}
-
 @BOOK{mora75:_diccion_filos,
   title = {Diccionarie de Filosofia},
   publisher = {Editorial Sudamericana},
@@ -5498,23 +5698,6 @@ Encoding: ISO8859_1
   url = {http://www.springerlink.com/index/l8n125rp54583v84.pdf}
 }
 
-@ARTICLE{mullensiefen:omm,
-  author = {Müllensiefen, D. and Frieler, K.},
-  title = {Optimizing measures of melodic similarity for the exploration of
-	a large folk song database},
-  journal = {Proceedings of the 5th International Conference on Music Information
-	Retrieval},
-  year = {2004},
-  note = {Disponível em <\url{http://ismir2004.ismir.net/proceedings/p052-page-274-paper178.pdf}>.
-	[Acesso 27 março 2007]},
-  keywords = {ismir
-	
-	music similarity},
-  owner = {marcos},
-  timestamp = {2007.04.27},
-  url = {http://ismir2004.ismir.net/proceedings/p052-page-274-paper178.pdf}
-}
-
 @BOOK{nef35,
   title = {An outline of the history of music},
   publisher = {Columbia University Press},
@@ -5624,24 +5807,6 @@ Encoding: ISO8859_1
   year = {2003}
 }
 
-@ARTICLE{noll02:_opusc_towar_corpus_based_music_repos,
-  author = {Thomas Noll and J{\"o}rg Garbers and Karin H{\"o}thker and Christian
-	Spevak and Tillman Weyde},
-  title = {Opuscope - Towards a Corpus-Based Music Repository.},
-  journal = {Proceedings of the 3rd International Conference on Music Information
-	Retrieval},
-  year = {2002},
-  note = {Disponível em <\url{http://ismir2002.ismir.net/proceedings%5C03-SP04-3.pdf}>.
-	[Acesso 27 março 2007]},
-  annote = {ismir},
-  bibsource = {DBLP, dblp.uni-trier.de},
-  ee = {ismir2002.ismir.net/proceedings/03-SP04-3.pdf},
-  keywords = {ismir
-	
-	music similarity},
-  url = {http://ismir2002.ismir.net/proceedings%5C03-SP04-3.pdf}
-}
-
 @ARTICLE{nordgren60:_measur_textur_patter_stren,
   author = {Q.R. Nordgren},
   title = {A Measure of Textural Patterns and Strengths},
@@ -5663,6 +5828,7 @@ Encoding: ISO8859_1
 	
 	music similarity},
   owner = {marcos},
+  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2006/PAPERS/ISMIR06148_Paper.pdf},
   timestamp = {2007.03.27},
   url = {http://ismir2006.ismir.net/PAPERS/ISMIR06148_Paper.pdf}
 }
@@ -5830,23 +5996,6 @@ Encoding: ISO8859_1
   doi = {10.1111/1468-2249.00085},
   eprint = {http://www.blackwell-synergy.com/doi/pdf/10.1111/1468-2249.00085},
   url = {http://www.blackwell-synergy.com/doi/abs/10.1111/1468-2249.00085}
-}
-
-@ARTICLE{paulus2002msr,
-  author = {Paulus, J. and Klapuri, A.},
-  title = {Measuring the similarity of rhythmic patterns},
-  journal = {Proceedings of the 3rd International Conference on Music Information
-	Retrieval},
-  year = {2002},
-  note = {Disponível em <\url{http://ismir2002.ismir.net/proceedings%5C02-FP05-1.pdf}>.
-	[Acesso 27 abril 2007]},
-  annote = {ismir},
-  keywords = {ismir
-	
-	music similarity},
-  owner = {marcos},
-  timestamp = {2007.04.27},
-  url = {http://ismir2002.ismir.net/proceedings%5C02-FP05-1.pdf}
 }
 
 @BOOK{Pauly1973,
@@ -7091,25 +7240,6 @@ Encoding: ISO8859_1
   url = {http://www.cc.jyu.fi/~ptee/publications/1_2002.pdf}
 }
 
-@ARTICLE{toussaint2004crs,
-  author = {Toussaint, G.T.},
-  title = {A comparison of rhythmic similarity measures.},
-  journal = {Proceedings of the 5th International Conference on Music Information
-	Retrieval},
-  year = {2004},
-  note = {Disponível em <\url{http://www.cs.mcgill.ca/research/reports/2004/SOCS-TR-2004.6.pdf}>.
-	[Acesso 27 abril 2007]},
-  annote = {A comparison of rhythmic similarity measures. En las actas de 5th
-	International Conference on Music Information Retrieval --- ISMIR},
-  keywords = {ismir
-	
-	music similarity},
-  owner = {marcos},
-  publisher = {Universitat Pompeu Fabra, Barcelona, pag},
-  timestamp = {2007.04.25},
-  url = {http://www.cs.mcgill.ca/research/reports/2004/SOCS-TR-2004.6.pdf}
-}
-
 @ARTICLE{tsang02:_allen_forte_atonal_music_music,
   author = {Tsang,Lee},
   title = {Allen Forte, The Atonal Music Music of Anton Webern},
@@ -7197,33 +7327,6 @@ Encoding: ISO8859_1
   url = {http://ismir2000.ismir.net/papers/invites/uitdenbogerd_invite.pdf}
 }
 
-@ARTICLE{uitdenbogerd2003pre,
-  author = {Alexandra L. Uitdenbogerd and Yap, Y.W.},
-  title = {Was Parsons right? An experiment in usability of music representations
-	for melody-based music retrieval},
-  journal = {Proceedings of the 4th International Conference on Music Information
-	Retrieval},
-  year = {2003},
-  pages = {75--79},
-  abstract = {In 1975 Parsons developed his dictionary of musical themes based on
-	a simple contour representation. The motivation was that people with
-	little training in music would be able to identify pieces of music.
-	We decided to test whether people of various levels of musical skill
-	could indeed make use of a text representation to describe a simple
-	melody query. The results indicate that the task is beyond those
-	who are unmusical, and that a scale numeric representation is easier
-	than a contour one for those of moderate musical skill. Further,
-	a common error when using the scale representation still yields a
-	more accurate contour representation than if a user is asked to enter
-	a contour query. We observed an average query length of about seven
-	symbols for the retrieval task.},
-  keywords = {melodic contour},
-  owner = {marcos},
-  pdf = {/home/marcos/profissional/docs/exclude-backup-docs/ismir/2003/papers/Uitdenbogerd.PDF},
-  timestamp = {2007.05.31},
-  url = {http://ismir2003.ismir.net/papers/Uitdenbogerd.PDF}
-}
-
 @BOOK{ulrich63,
   title = {A history of music and musical style},
   publisher = {Harcourt Brace \& World},
@@ -7239,22 +7342,6 @@ Encoding: ISO8859_1
 	Style, Musical.},
   owner = {marcos},
   timestamp = {2007.04.13}
-}
-
-@ARTICLE{Vignoli2005,
-  author = {Vignoli, F. and Pauws, S.},
-  title = {A Music Retrieval System Based on Music Similarity and its Evaluation},
-  journal = {Proceedings of the 6th International Conference on Music Information
-	Retrieval},
-  year = {2005},
-  note = {Disponível em <\url{http://ismir2005.ismir.net/proceedings/1021.pdf}>.
-	[Acesso 27 abril 2007]},
-  keywords = {ismir
-	
-	music similarity},
-  owner = {marcos},
-  timestamp = {2007.04.27},
-  url = {http://ismir2005.ismir.net/proceedings/1021.pdf}
 }
 
 @BOOK{Wade1979,
