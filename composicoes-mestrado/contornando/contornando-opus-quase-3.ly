@@ -4,10 +4,13 @@
 
 global = {
   \tempo 4=60
-  
+  s1*4/4*13
+  \tempo 4=80
 }
 
 segAA = {
+  \textSpannerUp
+  \override TextSpanner #'edge-text = #'("accel " . "")
   \relative c {
     %% contorno 1: segmento 1 em 3 notas (apoj). segmento 2 em 2 notas
     f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4~\pp\<
@@ -16,7 +19,23 @@ segAA = {
     %% contorno 3: segmento 1 em 6 notas (ritmo variado e apoj). segmento em 5 notas (ritmo variado).
     a16\) b8\<( cis16~ cis f8.) \acciaccatura g8 a32\mf( aes) g8-. ges16-. f-. r8.
     %% contorno 4: segmento 1 em 12 notas. segmento 2 em 2 notas
-    f,16->\pp\< fis g gis a32 ais b c cis d dis e f8-.\f r cis-. r
+    f,16->\pp\< fis g gis a32 ais b c cis d dis e f8-.\f r cis-.\p r
+    %% contorno 5: segmento 1 em 2 notas. segmento 2 em 2 notas. notas curtas
+    f,,8-. r r4 f'8-. r cis4\espressivo r4
+    %% contorno 6: segmento 1 em 2 notas. segmento 2 em 2 notas. notas longas
+    cis2\p\<( cis'4\f a)
+    %% contorno 7: segmento 1 em 3 notas (apoj). segmento 2 em 2 notas. notas curtas
+    \setTextCresc
+    f,8-. r r4 \acciaccatura e'8\p\( f4\< cis\)
+    %% contorno 8: segmento 1 em 4 notas (uma no meio e apoj). segmento 2 em 2 notas. notas curtas
+    f,8.-. d'16 r4 \acciaccatura e8\( f4 cis\)
+    %% contorno 9: segmento 1 com repetição da primeira nota. duas no meio e apoj. segmento 2 em 2 notas.
+    f,16 f\startTextSpan r8 r16 d' c8-. \acciaccatura e8 f8-. r cis-. r
+    %% repetição contorno 7
+    f,8-. r r4 \acciaccatura e'8\( f4 cis\)
+    f,8-. r r4 \acciaccatura e'8\( f4 cis\f\)\stopTextSpan r2\fermata \bar "||"
+    %% contorno 10: expandido (fator 2)
+    f,2\p\espressivo\trill( f'\trill f'\trill f,8-. r r4
   }
 }
 
