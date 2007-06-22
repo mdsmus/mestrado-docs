@@ -34,8 +34,16 @@ segAA = {
     %% repetição contorno 7
     f,8-. r r4 \acciaccatura e'8\( f4 cis\)
     f,8-. r r4 \acciaccatura e'8\( f4 cis\f\)\stopTextSpan r2\fermata \bar "||"
+
+    %% parte B
+    %% compasso 13
     %% contorno 10: expandido (fator 2)
-    f,2\p\espressivo\trill( f'\trill f'\trill f,8-. r r4
+    f,2\p\<\trill( f'\trill f'\trill\f f,8-.) r r4
+    %% contorno 11: expandido (fator 2) 5 notas apoj
+    f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f4 r
+    %% repetição contorno 1:
+    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4
+
   }
 }
 
