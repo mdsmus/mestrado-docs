@@ -3,12 +3,15 @@
 %% variáveis
 
 global = {
+  %% segA
   \tempo 4=60
-  s1*4/4*13
+  s1*4/4*12
+  \bar "||"
+  %% segB
   \tempo 4=80
 }
 
-segAA = {
+segA = {
   \textSpannerUp
   \override TextSpanner #'edge-text = #'("accel " . "")
   \relative c {
@@ -33,17 +36,21 @@ segAA = {
     f,16 f\startTextSpan r8 r16 d' c8-. \acciaccatura e8 f8-. r cis-. r
     %% repetição contorno 7
     f,8-. r r4 \acciaccatura e'8\( f4 cis\)
-    f,8-. r r4 \acciaccatura e'8\( f4 cis\f\)\stopTextSpan r2\fermata \bar "||"
+    f,8-. r r4 \acciaccatura e'8\( f4 cis\f\)\stopTextSpan r2\fermata
+  }
+}
 
-    %% parte B
+segB = {
+  \textSpannerUp
+  \override TextSpanner #'edge-text = #'("accel " . "")
+  \relative c {
     %% compasso 13
     %% contorno 10: expandido (fator 2)
-    f,2\p\<\trill( f'\trill f'\trill\f f,8-.) r r4
+    f2\p\<\trill( f'\trill f'\trill\f f,8-.) r r4
     %% contorno 11: expandido (fator 2) 5 notas apoj
     f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f4 r
     %% repetição contorno 1:
     f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4
-
   }
 }
 
@@ -63,7 +70,8 @@ segAA = {
       \set Staff.midiInstrument = "clarinet"
       \global
       {
-        \segAA
+        \segA
+        \segB
       }
     >>
     \midi { }
