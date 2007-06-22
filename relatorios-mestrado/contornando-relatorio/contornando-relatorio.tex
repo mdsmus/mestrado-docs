@@ -15,38 +15,145 @@
 %% articulação
 %% altura
 
+\section{Introdução}
+\label{sec:introducao}
+
+A peça \opus{Contornando, opus quase três} é um exercício cuja
+composição teve como objetivo experimentar possibilidades no
+preenchimento de contornos melódicos. Um dado contorno representado
+graficamente pela figura \ref{fig:contorno-1} tem dois segmentos e
+três pontos extremos. Este contorno tanto pode conter notas em apenas
+suas extremidades como pode conter três, quatro, cinco ou várias
+outras notas em cada segmento. Essas notas podem ser longas e ligadas,
+podem ser curtas alternadas com pausas ou um misto das duas coisas.
+Elas podem ter ou não a mesma diferença de altura entre si. Para a
+composição da peça está sendo utilizada uma representação simbólica de
+contornos melódicos em desenvolvimento pelo compositor.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=1]{contorno-1}
+  \caption{Representação gráfica dos contornos utilizados}
+  \label{fig:contorno-1}
+\end{figure}
+
+\section{Representação simbólica de contornos melódicos}
+\label{sec:repr-simb-de}
+
+A representação simbólica de contornos melódicos utilizada nesta peça
+consiste na representação das extremidades dos segmentos dos contornos
+em coordenadas cartesianas em que \texttt{y} representa altura e
+\texttt{x} tempo (c.f. figura \ref{fig:repres-cont1}). Os valores
+dessas coordenadas passam a ter sentido musical a partir da inserção
+dos parâmetros altura, duração e tempo. A altura, indicada em semitons
+é multiplicada por \texttt{y}, a duração, indicada como pulso mínimo
+(1 para semibreve, 2 para mínima, 4 para semínima, etc), é
+multiplicada por \texttt{x}, e o tempo apenas indica o andamento. Este
+último parâmetro é útil na comparação entre contornos. Esta
+representação está em fase de testes e até o momento mostra eficiência
+em operações de transposição, rotação, inversão, ampliação e
+diminuição de contornos.
+
 \section{Contorno utilizado}
 \label{sec:contorno-utilizado}
 
-O contorno utilizado para esta peça (c.f. figura \ref{fig:contorno-1})
-pode ser representado por:
+Nesta peça foram utilizados o contorno 1, representado pelas figuras
+\ref{fig:repres-cont1} e \ref{fig:contorno-1}, e dois contornos (2 e
+3) resultantes da alteração dos parâmetro altura e duração (c.f.
+figuras \ref{fig:repres-cont2} e \ref{fig:repres-cont3}).
 
-\begin{figure}[h]
+\begin{figure}
+\begin{minipage}{5cm}
   \centering
 \begin{verbatim}
 (event 'contorno-1
  :altura 4
  :duracao 4
  :tempo 60
- ((0 0)(2 3)(3 2)))
+ (0 0)(2 3)(3 2))
 \end{verbatim}
-  \caption{Representação do contorno}
-  \label{fig:repres-cont}
-\end{figure}
-
-\begin{figure}[h]
+  \caption{Representação do contorno 1}
+  \label{fig:repres-cont1}
+\end{minipage}
+\hfill
+\begin{minipage}{5cm}
   \centering
-  \includegraphics[scale=1]{contorno-1}
-  \caption{Contorno 1}
-  \label{fig:contorno-1}
+\begin{verbatim}
+(event 'contorno-2
+ :altura 8
+ :duracao 2
+ :tempo 60
+ (0 0)(2 3)(3 2))
+\end{verbatim}
+  \caption{Representação do contorno 2}
+  \label{fig:repres-cont2}
+\end{minipage}
+\hfill
+\begin{minipage}{5cm}
+  \centering
+\begin{verbatim}
+(event 'contorno-3
+ :altura 1
+ :duracao 4
+ :tempo 60
+ (0 0)(2 3)(3 2))
+\end{verbatim}
+  \caption{Representação do contorno 3}
+  \label{fig:repres-cont3}
+\end{minipage}
+\hfill
 \end{figure}
 
 \section{Tipos de preenchimento}
 \label{sec:tipos-de-preench}
 
+%% principal parte. ampliar
+
 O preenchimento dos segmentos de um dado contorno pode ser feito de
-várias maneiras. A forma mais simples é usar uma nota em cada
-extremidade dos segmentos.
+várias maneiras como o uso de notas longas nas extremidades de cada
+segmento.
+
+O preenchimento envolve diferentes parâmetros como número de notas em
+cada segmento, relação entre som e silêncio, duração de cada nota e
+relações de altura entre as notas das extremidades e as notas internas
+de cada contorno.
+
+\section{Forma}
+\label{sec:forma}
+
+Formalmente esta peça está dividida em seções. A característica de
+cada seção é o contorno utilizado e seu andamento. Na primeira seção é
+utilizado o contorno 1, na segunda, o contorno 2 e na terceira o
+contorno 3. Os andamentos são definidos nas representações dos
+contornos.
+
+\section{Uso de outros elementos}
+\label{sec:uso-de-outros}
+
+O uso de inversões, rotações e combinações de operações de contornos
+foi evitado para privilegiar o preenchimento dos contornos. Foram
+utilizados elementos como variação de dinâmica, de agógica e simples
+transposições tomando como base os pontos extremos dos contornos.
+
+\section{Documentação da composição}
+\label{sec:docum-da-comp}
+
+Todos os contornos utilizados foram marcados como comentários no
+código fonte da obra\footnote{A peça foi composta com o software livre
+  Lilypond}. Isso permite a precisão na localização de cada contorno.
+
+\begin{figure}
+  \centering
+\begin{verbatim}
+global = {
+  \tempo 4=60
+  s1*4/4*13
+  \tempo 4=80
+}
+\end{verbatim}
+  \caption{Código fonte da peça}
+  \label{fig:codigo}
+\end{figure}
 
 \bibliographystyle{mdschicago}
 \bibliography{mestrado}
