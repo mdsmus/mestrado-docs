@@ -51,6 +51,10 @@ segB = {
     f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f4 r
     %% repetição contorno 1:
     f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4
+    %% contorno 12: usando motivos rítmicos
+    f,,16-.\f f8-. f-. f16-. f8-. f'-. r f16-. f8-. f16-. f'2\trill f,8-. r
+    %% repetição contorno 11
+    f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f16 f8.-. r4
   }
 }
 
