@@ -53,8 +53,15 @@ segB = {
     f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4
     %% contorno 12: usando motivos rítmicos
     f,,16-.\f f8-. f-. f16-. f8-. f'-. r f16-. f8-. f16-. f'2\trill f,8-. r
+    %% contorno 13: desenvolvendo motivos rítmicos
+    f,8-. f f16 f8-. \acciaccatura e'8 f16 r f8.-. f8-. f-. \acciaccatura { d'16[ dis e] } f4~\startTrillSpan f8\stopTrillSpan r8 f,-.\p r
+    %% lembrete: continuar a desenvolver o ritmo.
+
     %% repetição contorno 11
     f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f16 f8.-. r4
+
+    %% contorno x: final
+%    f,32\p\<( fis g gis a ais b c cis d dis e f fis g gis a ais b cis d dis e f~\f f2)\trill
   }
 }
 
