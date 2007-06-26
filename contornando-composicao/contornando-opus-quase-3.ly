@@ -9,6 +9,9 @@ global = {
   \bar "||"
   %% segB
   \tempo 4=80
+  s1*4/4*12
+  \bar "||"
+  %% segC
 }
 
 segA = {
@@ -47,8 +50,8 @@ segB = {
     %% compasso 13
     %% contorno 10: expandido (fator 2)
     f2\p\<\trill( f'\trill f'\trill\f f,8-.) r r4
-    %% contorno 11: expandido (fator 2) 5 notas apoj
-    f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f4 r
+    %% contorno 11: expandido (fator 2) 5 notas apoj e uso de motivo ritmico
+    f,16\p\< f8.-. \acciaccatura {ais16[ c]} b16 b8.-. \acciaccatura e8 f16 f8.-. \acciaccatura {ais16[ c]} b16 b8.-. \acciaccatura e8 f8\f[ e32 ees d des] c b bes a aes g ges f~ f4 r
     %% repetição contorno 1:
     f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4
     %% contorno 12: usando motivos rítmicos
@@ -57,8 +60,11 @@ segB = {
     f,8-. f f16 f8-. \acciaccatura e'8 f16 r f8.-. f8-. f-. \acciaccatura { d'16[ dis e] } f4~\startTrillSpan f8\stopTrillSpan r8 f,-.\p r
     %% lembrete: continuar a desenvolver o ritmo.
 
-    %% repetição contorno 11
-    f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f16 f8.-. r4
+    %% repetição contorno 11 com notas longas
+    f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f16 f8.-.
+
+    %% repetição contorno 10
+    f,2\p\<\trill( f'4~\startTrillSpan f\stopTrillSpan f'2\trill\f f,8-.) r
 
     %% contorno x: final
 %    f,32\p\<( fis g gis a ais b c cis d dis e f fis g gis a ais b cis d dis e f~\f f2)\trill
