@@ -12,6 +12,9 @@ global = {
   s1*4/4*12
   \bar "||"
   %% segC
+  \tempo 4=100
+  s1*4/4*16
+  \bar "|."
 }
 
 segA = {
@@ -62,12 +65,42 @@ segB = {
 
     %% repetição contorno 11 com notas longas
     f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f16 f8.-.
-
     %% repetição contorno 10
     f,2\p\<\trill( f'4~\startTrillSpan f\stopTrillSpan f'2\trill\f f,8-.) r
+  }
+}
 
+segC = {
+  \textSpannerUp
+  \override TextSpanner #'edge-text = #'("accel " . "")
+  \relative c {
+    %% contorno 14: 3 notas (simples)
+    e2\pp( ges4 f)
+    %% contorno 15: com apoj
+    e''2\f\( \acciaccatura g8 ges4 f\)
+    %% contorno 16: longo/interrompido
+    e,2\pp\<( ges8-.)\f r f-.\pp r
+    %% contorno com muitas notas repetidas
+    e,8( f) e( f) ges4( f)
+    %% contorno com muitas notas repetidas (variado)
+    \times 2/3 {e'8( f) e-.} \times 2/3 {f( e) f-.} ges4( f)
+    
+    %% contorno 17: interrompido/longo
+    e,8-.\f r r4 ges4\pp( f)
+    %% contorno 18: interrompido
+    \setTextCresc
+    e8-.\< r r4 ges8-. r f-. r
+    %% contorno 19: interrompido 4 notas (repetido)
+    e-. r f-. r ges-. r f-. r
+    e-. r f-. r ges-. r f-. r
+    e'-.\startTextSpan r f-. r ges-. r f-. r
+    e-. r f-. r ges-. r f-. r
+    e'-. r f-. r ges-. r f-. r
+    e-. r f-. r ges-. r f-. r
+    e'2\f\stopTextSpan\trill\fermata r
     %% contorno x: final
-%    f,32\p\<( fis g gis a ais b c cis d dis e f fis g gis a ais b cis d dis e f~\f f2)\trill
+    f,,,16\p\<( fis g gis a ais b c cis d dis e f fis g gis a ais b cis d dis e f~\f f4)\trill
+    r8 f,,-.
   }
 }
 
@@ -89,6 +122,7 @@ segB = {
       {
         \segA
         \segB
+        \segC
       }
     >>
     \midi { }
