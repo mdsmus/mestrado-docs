@@ -19,16 +19,17 @@
 \label{sec:introducao}
 
 A peça \opus{Contornando, opus quase três} é um exercício cuja
-composição teve como objetivo experimentar possibilidades no
+realização teve como objetivo experimentar possibilidades no
 preenchimento de contornos melódicos. Um dado contorno representado
 graficamente pela figura \ref{fig:contorno-1} tem dois segmentos e
-três pontos extremos. Este contorno tanto pode conter notas em apenas
-suas extremidades como pode conter três, quatro, cinco ou várias
-outras notas em cada segmento. Essas notas podem ser longas e ligadas,
-podem ser curtas alternadas com pausas ou um misto das duas coisas.
-Elas podem ter ou não a mesma diferença de altura entre si. Para a
-composição da peça está sendo utilizada uma representação simbólica de
-contornos melódicos em desenvolvimento pelo compositor.
+três pontos extremos. O preenchimento deste contorno com notas pode
+ser feito de várias maneiras. O menor número possível de notas é três,
+com uma em cada extremo. Pode-se colocar várias outras notas em cada
+segmento. Essas notas podem ser longas e ligadas, podem ser curtas
+alternadas com pausas ou um misto das duas coisas. Elas podem ter ou
+não a mesma diferença de altura entre si. Para a composição da peça
+foi ainda utilizada uma representação simbólica de contornos melódicos
+em desenvolvimento pelo compositor.
 
 \begin{figure}[h]
   \centering
@@ -42,24 +43,25 @@ contornos melódicos em desenvolvimento pelo compositor.
 
 A representação simbólica de contornos melódicos utilizada nesta peça
 consiste na representação das extremidades dos segmentos dos contornos
-em coordenadas cartesianas em que \texttt{y} representa altura e
-\texttt{x} tempo (c.f. figura \ref{fig:repres-cont1}). Os valores
-dessas coordenadas passam a ter sentido musical a partir da inserção
-dos parâmetros altura, duração e tempo. A altura, indicada em semitons
-é multiplicada por \texttt{y}, a duração, indicada como pulso mínimo
-(1 para semibreve, 2 para mínima, 4 para semínima, etc), é
-multiplicada por \texttt{x}, e o tempo apenas indica o andamento. Este
-último parâmetro é útil na comparação entre contornos. Esta
-representação está em fase de testes e até o momento mostra eficiência
-em operações de transposição, rotação, inversão, ampliação e
-diminuição de contornos.
+com coordenadas cartesianas em que \texttt{y} representa altura e
+\texttt{x} tempo (veja figuras \ref{fig:repres-cont1},
+\ref{fig:repres-cont2} e \ref{fig:repres-cont3}). Os valores dessas
+coordenadas passam a ter sentido musical a partir da inserção dos
+parâmetros altura, duração e tempo. A altura, indicada em semitons é
+multiplicada por \texttt{y}, a duração, indicada como pulso mínimo (1
+para semibreve, 2 para mínima, 4 para semínima, etc), é multiplicada
+por \texttt{x}, e o tempo apenas indica o andamento. Este último
+parâmetro é útil na comparação entre contornos. Esta representação
+está em fase de testes e até o momento mostra eficiência em operações
+de transposição, rotação, inversão, ampliação e diminuição de
+contornos.
 
 \section{Contorno utilizado}
 \label{sec:contorno-utilizado}
 
 Nesta peça foram utilizados o contorno 1, representado pelas figuras
-\ref{fig:repres-cont1} e \ref{fig:contorno-1}, e dois contornos (2 e
-3) resultantes da alteração dos parâmetro altura e duração (c.f.
+\ref{fig:contorno-1} e \ref{fig:repres-cont1}, e dois contornos (2 e
+3) resultantes da alteração dos parâmetro altura e duração (veja
 figuras \ref{fig:repres-cont2} e \ref{fig:repres-cont3}).
 
 \begin{figure}
@@ -95,7 +97,7 @@ figuras \ref{fig:repres-cont2} e \ref{fig:repres-cont3}).
 (event 'contorno-3
  :altura 1
  :duracao 4
- :tempo 60
+ :tempo 100
  (0 0)(2 3)(3 2))
 \end{verbatim}
   \caption{Representação do contorno 3}
@@ -121,10 +123,10 @@ de cada contorno.
 \section{Forma}
 \label{sec:forma}
 
-Formalmente esta peça está dividida em seções. A característica de
-cada seção é o contorno utilizado e seu andamento. Na primeira seção é
-utilizado o contorno 1, na segunda, o contorno 2 e na terceira o
-contorno 3. Os andamentos são definidos nas representações dos
+Formalmente esta peça está dividida em três seções. A característica
+de cada seção é o contorno utilizado e o seu andamento. Na primeira
+seção é utilizado o contorno 1, na segunda, o contorno 2 e na terceira
+o contorno 3. Os andamentos são definidos nas representações dos
 contornos.
 
 \section{Uso de outros elementos}
@@ -133,22 +135,53 @@ contornos.
 O uso de inversões, rotações e combinações de operações de contornos
 foi evitado para privilegiar o preenchimento dos contornos. Foram
 utilizados elementos como variação de dinâmica, de agógica e simples
-transposições tomando como base os pontos extremos dos contornos.
+transposições tomando como base os pontos extremos dos contornos. O
+contorno final é o único diferente dos representados pela figura
+\ref{fig:contorno-1}.
 
 \section{Documentação da composição}
 \label{sec:docum-da-comp}
 
-Todos os contornos utilizados foram marcados como comentários no
-código fonte da obra\footnote{A peça foi composta com o software livre
-  Lilypond}. Isso permite a precisão na localização de cada contorno.
+Todos os contornos utilizados foram marcados com comentários no código
+fonte da obra, que foi editada com o software livre Lilypond. Isso
+permite a precisão na localização de cada contorno. (veja excerto do
+código na figura \ref{fig:codigo}).
 
 \begin{figure}
   \centering
 \begin{verbatim}
-global = {
-  \tempo 4=60
-  s1*4/4*13
-  \tempo 4=80
+segA = {
+  \textSpannerUp
+  \override TextSpanner #'edge-text = #'("accel " . "")
+  \relative c {
+    %% contorno 1: segmento 1 em 3 notas (apoj). segmento 2 em 2 notas
+    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4~\pp\<
+    %% contorno 2: segmento 1 em 3 notas. segmento 2 em 3 notas (apoj).
+    cis8\! d~\p d4~ d8 \breathe bis'\( cis4 \acciaccatura b!8 a4~
+    %% contorno 3: segmento 1 em 6 notas (ritmo variado e
+    %% apoj). segmento em 5 notas (ritmo variado).
+    a16\) b8\<( cis16~ cis f8.) \acciaccatura g8 a32\mf( aes)
+g8-. ges16-. f-. r8.
+    %% contorno 4: segmento 1 em 12 notas. segmento 2 em 2 notas
+    f,16->\pp\< fis g gis a32 ais b c cis d dis e f8-.\f r cis-.\p r
+    %% contorno 5: segmento 1 em 2 notas. segmento 2 em 2 notas. notas curtas
+    f,,8-. r r4 f'8-. r cis4\espressivo r4
+    %% contorno 6: segmento 1 em 2 notas. segmento 2 em 2 notas. notas longas
+    cis2\p\<( cis'4\f a)
+    %% contorno 7: segmento 1 em 3 notas (apoj). segmento 2 em 2
+    %% notas. notas curtas
+    \setTextCresc
+    f,8-. r r4 \acciaccatura e'8\p\( f4\< cis\)
+    %% contorno 8: segmento 1 em 4 notas (uma no meio e
+    %% apoj). segmento 2 em 2 notas. notas curtas
+    f,8.-. d'16 r4 \acciaccatura e8\( f4 cis\)
+    %% contorno 9: segmento 1 com repetição da primeira nota. duas no
+    %% meio e apoj. segmento 2 em 2 notas.
+    f,16 f\startTextSpan r8 r16 d' c8-. \acciaccatura e8 f8-. r cis-. r
+    %% repetição contorno 7
+    f,8-. r r4 \acciaccatura e'8\( f4 cis\)
+    f,8-. r r4 \acciaccatura e'8\( f4 cis\f\)\stopTextSpan r2\fermata
+  }
 }
 \end{verbatim}
   \caption{Código fonte da peça}
