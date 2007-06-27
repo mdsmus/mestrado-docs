@@ -18,10 +18,8 @@ dvi: $(all-figs) $(file).dvi $(file).tex
 ps:  $(all-figs) $(file).ps $(file).tex
 pdf:  $(all-figs) $(file).pdf $(file).tex
 
-cleanall: cleanout clean
-
-cleanout: $(file).tex
-	latex-mk -C $(out)/$<
+cleanall: clean
+	rm $(file).{aux,bbl,blg,dvi,log}
 
 clean:
 	rm -rf $(figs-out) ;\
@@ -30,7 +28,7 @@ clean:
 	rm -rf $(svg-figs)
 
 %.dvi: %.tex
-	latex-mk $(out)/$< ;\
+	latex $< ;\
 
 %.ps: %.dvi
 	dvips -o $@ $<
