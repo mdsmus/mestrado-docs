@@ -56,7 +56,7 @@ está em fase de testes e até o momento mostra eficiência em operações
 de transposição, rotação, inversão, ampliação e diminuição de
 contornos.
 
-\section{Contorno utilizado}
+\section{Contornos utilizados}
 \label{sec:contorno-utilizado}
 
 Nesta peça foram utilizados o contorno 1, representado pelas figuras
@@ -109,16 +109,109 @@ figuras \ref{fig:repres-cont2} e \ref{fig:repres-cont3}).
 \section{Tipos de preenchimento}
 \label{sec:tipos-de-preench}
 
-%% principal parte. ampliar
-
 O preenchimento dos segmentos de um dado contorno pode ser feito de
-várias maneiras como o uso de notas longas nas extremidades de cada
-segmento.
+várias maneiras. Ele depende de como são utilizados os seguintes
+elementos:
 
-O preenchimento envolve diferentes parâmetros como número de notas em
-cada segmento, relação entre som e silêncio, duração de cada nota e
-relações de altura entre as notas das extremidades e as notas internas
-de cada contorno.
+\begin{itemize}
+\item número de notas
+\item relação entre silêncio e som
+\item altura
+\item ritmo e duração
+\item articulação
+\end{itemize}
+
+O menor número de notas que um contorno pode ter é exatamente o número
+de extremidades que ele tem: três no contorno escolhido para este
+trabalho (veja exemplo na figura \ref{fig:notas-extremidades}). Em
+cada segmento é possível adicionar outras notas que unam as
+extremidades (veja figuras \ref{fig:varias-apojatura} e
+\ref{fig:muitas-notas}). O número máximo possível de notas depende da
+diferença de altura e do intervalo de tempo entre as extremidades.
+
+\begin{figure}[h]
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[scale=1]{3notas}
+  \caption{Preenchimento com notas apenas nas extremidades}
+  \label{fig:notas-extremidades}
+\end{minipage}
+\hfill
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[scale=1]{variasnotas-1}
+  \caption{Preenchimento de segmentos com apojatura}
+  \label{fig:varias-apojatura}
+\end{minipage}
+\hfill
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=1]{variasnotas-2}
+  \caption{Preenchimento de segmentos com muitas notas}
+  \label{fig:muitas-notas}
+\end{figure}
+
+O preenchimento depende também da relação entre silêncio e som de cada
+segmento. É possível ter notas completamente ligadas (veja figura
+\ref{fig:notas-extremidades}) ou ter interrupções em forma de pausas
+(veja figura \ref{fig:alternancia}).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=1]{alternancia}
+  \caption{Preenchimento com alternância entre som e silêncio}
+  \label{fig:alternancia}
+\end{figure}
+
+Intervalos melódicos entre as notas dos segmentos interferem no
+preenchimento. Um dado segmento com as duas notas de suas extremidades
+e uma nota mediana pode ser dividido do ponto de vista da altura ao
+meio, como no exemplo da figura \ref{fig:divisao-meio}, ou em outra
+proporção qualquer, como na figura \ref{fig:varias-apojatura}. Um
+exemplo de segmento com quatro notas e proporção desigual é exibido na
+figura \ref{fig:divisao-desigual}.
+
+\begin{figure}[h]
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[scale=1]{divisao-meio}
+  \caption{Preenchimento de segmento com 3 notas com proporção de 1:1}
+  \label{fig:divisao-meio}
+\end{minipage}
+\hfill
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[scale=1]{divisao-desigual}
+  \caption{Preenchimento de segmento com 4 notas e proporção desigual}
+  \label{fig:divisao-desigual}
+\end{minipage}
+\hfill
+\end{figure}
+
+A influência da duração no preenchimento é semelhante à dos intervalos
+melódicos. O ritmo e a articulação também podem ser utilizado para
+diversificação do preenchimento (veja figuras \ref{fig:ritmo} para
+ritmo e \ref{fig:varias-apojatura} para articulação).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=1]{ritmo}
+  \caption{Diversidade de preenchimento dada pela variação rítmica}
+  \label{fig:ritmo}
+\end{figure}
+
+\subsection{Combinações de elementos}
+\label{sec:comb-de-elem}
+
+Estes elementos podem ser combinados. A figura
+\ref{fig:varias-apojatura}, por exemplo, contém um fragmento de dois
+segmentos com preenchimentos diferentes. No primeiro há uma nota de
+ligação entre as extremidades com proporção de altura e duração
+desigual, som contínuo e articulação legato. No segundo segmento há
+apenas as notas das extremidades, som interrompido por pausa e
+articulação staccato.
 
 \section{Forma}
 \label{sec:forma}
@@ -143,11 +236,11 @@ contorno final é o único diferente dos representados pela figura
 \label{sec:docum-da-comp}
 
 Todos os contornos utilizados foram marcados com comentários no código
-fonte da obra, que foi editada com o software livre Lilypond. Isso
-permite a precisão na localização de cada contorno. (veja excerto do
-código na figura \ref{fig:codigo}).
+fonte da obra, que foi editada com o software livre \eng{Lilypond}
+\cite{Nienhuys2007}. Isso permite a precisão na localização de cada
+contorno. (veja excerto do código na figura \ref{fig:codigo}).
 
-\begin{figure}
+\begin{figure}[h]
   \centering
 \begin{verbatim}
 segA = {
