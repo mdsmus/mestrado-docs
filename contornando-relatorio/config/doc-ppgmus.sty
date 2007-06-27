@@ -1,0 +1,133 @@
+%% modelo para documento:
+
+%% \documentclass[12pt]{article}
+%% \usepackage{doc-ppgmus}
+%% \begin{document}
+%% \cabecalho{numerodisciplina}{professor}
+%% \titulo{titulo} || \capa{titulo}
+%% \end{document}
+
+\usepackage{ifthen}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[brazil]{babel}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{achicago}
+\usepackage{url}
+
+% usar para termos estrangeiros
+\newcommand{\eng}[1]{\textit{#1}}
+
+% usar para nomes de obras
+\newcommand{\opus}[1]{\textit{#1}}
+
+% usar para nomes de termos
+\newcommand{\termo}[1]{\textit{#1}}
+
+% usar para citação integral
+\newcommand{\citacao}[1]{``#1''}
+
+% usar para citação integral indentada
+\newcommand{\citacaoind}[3]{
+  \begin{quote}
+    \normalsize
+    #1. \cite[#2]{#3}.
+  \end{quote}
+}
+
+% usar para citação integral indentada com tradução
+\newcommand{\citacaoindt}[4]{
+  \begin{quote}
+    \normalsize
+%    \selectlanguage{english}
+    {#2}\footnote{
+      \selectlanguage{brazil}
+      ``{#1}''.
+    }.
+    \selectlanguage{brazil}
+    \cite[#3]{#4}.
+  \end{quote}
+}
+
+
+%% kroger: citacao longa
+\newcommand{\longquote}[4]{
+  \begin{quote}
+    \selectlanguage{english}
+    {#2}\footnote{\selectlanguage{brazil}``{#1}''.
+    } \selectlanguage{brazil}
+    {#3}\ifthenelse{\equal{#4}{}}
+    {.}
+    {#4}
+  \end{quote}
+}
+
+%% kroger: citacao curta
+\newcommand{\shortquote}[4]{
+  \selectlanguage{english}
+  ``{#2}''\footnote{\selectlanguage{brazil}``{#1}''.
+  } \selectlanguage{brazil}
+  {#3}\ifthenelse{\equal{#4}{}}{}{#4}
+}
+
+%% cabeçalho e título
+
+\newcommand{\cond}[3]{
+  \ifthenelse{\equal{#1}{#2}}{MUS #2 --- #3}{}
+}
+
+\newcommand{\disciplina}[1]{
+  \cond{#1}{502}{Estudos Metodológicos e Bibliográficos I}
+  \cond{#1}{524}{Seminários em Composição I}
+  \cond{#1}{525}{Seminários em Composição II}
+  \cond{#1}{506}{Informática em Música II}
+}
+
+\newcommand{\cabecalho}[2]{
+  \large
+  UNIVERSIDADE FEDERAL DA BAHIA \\
+  ESCOLA DE MÚSICA \\
+  PROGRAMA DE PÓS-GRADUAÇÃO \\
+  DISCIPLINA: \disciplina{#1} \\
+  PROFESSOR: #2 \\
+  ALUNO: Marcos da Silva Sampaio \\
+  DATA: \today
+}
+
+\newcommand{\cabecalhocurto}[2]{
+  \large
+  UNIVERSIDADE FEDERAL DA BAHIA \\
+  ESCOLA DE MÚSICA \\
+  PROGRAMA DE PÓS-GRADUAÇÃO \\
+  DISCIPLINA: \disciplina{#1} \\
+  PROFESSOR: #2 \\
+  ALUNO: Marcos da Silva Sampaio \\
+}
+
+\newcommand{\titulo}[1]{
+  \thispagestyle{empty}
+  \vspace{1cm}
+  \begin{center}
+    {\Huge \textbf{#1}}
+  \end{center}
+  \vspace{1cm}
+  \onehalfspace
+}
+
+\newcommand{\capa}[3]{
+  \clearpage
+  \thispagestyle{empty}
+  \cabecalhocurto{#1}{#2}
+%  \begin{center}
+    \vfill
+    \titulo{#3}
+    \vfill
+  \begin{center}
+    Salvador, BA -- \today
+  \end{center}
+  \clearpage
+}
+
+\setlength{\parindent}{0cm}
+
