@@ -13,7 +13,7 @@ global = {
   \bar "||"
   %% segC
   \tempo 4=100
-  s1*4/4*16
+  s1*4/4*17
   \bar "|."
 }
 
@@ -99,8 +99,7 @@ segC = {
     e-. r f-. r ges-. r f-. r
     e'2\f\stopTextSpan\trill\fermata r
     %% contorno x: final
-    f,,,16\p\<( fis g gis a ais b c cis d dis e f fis g gis a ais b cis d dis e f~\f f4)\trill
-    r8 f,,-.
+    f,,,16\p\<( fis g gis a ais b c cis d dis e f fis g gis a ais b cis d dis e f fis g gis a ais b cis d dis e f8~\f f2)\trill r8 f,,-.
   }
 }
 
