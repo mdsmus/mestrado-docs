@@ -107,8 +107,8 @@ segC = {
 
 \book {
   \header {
-    title = "Contornando"
-    instrument = "para Clarinete em Si bemol"
+    title = "Como é que se preenche um segmento melódico?"
+    instrument = "Clarinete em Si bemol"
     opus = "Opus quase 3"
     composer = "Marcos di Silva"
     date = "2007"
