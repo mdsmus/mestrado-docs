@@ -1,0 +1,34 @@
+;-*- outline -*-
+Idéias gerais para a composição
+
+* Idéia principal para estrutura formal
+** de onde venho e para onde vou
+
+* Uso de proporção
+** duração: 10 minutos
+** Usar número áureo para dividir a peça em 3 seções
+*** 0-0,382 (38,2%)
+*** 0,382-0,618 (23,6%)
+*** 0,618-1 (38,2%)
+** A localização temporal na peça pode ser dada por um número inteiro.
+*** início: t=0
+*** fim: t=1000
+
+* Implementação
+** top-down para estrutura geral
+** bottom-up para operações com contornos melódicos
+
+* Contornos (não melódicos) em larga escala
+** densidade geral
+*** complexidade rítmica
+*** amplitude intervalar
+*** complexidade de textura
+**** homofônica
+**** complexa
+** dinâmica geral
+** homogeneidade/heterogeneidade de timbre
+
+* andamento/caráter
+** seção 1: andante 76
+** seção 2: allegro 120
+** seção 3: moderato 108
