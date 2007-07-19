@@ -1,3 +1,5 @@
+maindir=$(shell pwd)
+
 file = preenchimento-relatorio
 out = out
 figs = figs
@@ -18,6 +20,7 @@ dvi: $(all-figs) $(file).dvi $(file).tex
 ps:  $(all-figs) $(file).ps $(file).tex
 pdf:  $(all-figs) $(file).pdf $(file).tex
 
+
 cleanall: clean
 	rm $(file).{aux,bbl,blg,dvi,log}
 
@@ -28,7 +31,9 @@ clean:
 	rm -rf $(svg-figs)
 
 %.dvi: %.tex
-	latex $< ;\
+	latex $<
+	bibtex $(basename $<)
+	latex $<
 
 %.ps: %.dvi
 	dvips -o $@ $<
@@ -50,3 +55,4 @@ clean:
 	cd $(figs-out)/tmp ;\
 	lilypond -b eps --preview $(notdir $<) ;\
 	mv $(notdir $(basename $<)).preview.eps ../$(notdir $(basename $<)).eps ;\
+#	cd $(maindir)
