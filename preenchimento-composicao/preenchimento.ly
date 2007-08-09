@@ -22,27 +22,27 @@ segA = {
   \override TextSpanner #'edge-text = #'("accel " . "")
   \relative c {
     %% contorno 1: segmento 1 em 3 notas (apoj). segmento 2 em 2 notas
-    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4~\pp\<
+    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r des4~\pp\<
     %% contorno 2: segmento 1 em 3 notas. segmento 2 em 3 notas (apoj).
-    cis8\! d~\p d4~ d8 \breathe bis'\( cis4 \acciaccatura b!8 a4~
+    des8\! d~\p d4~ d8 \breathe c'\( cis4 \acciaccatura b!8 a4~
     %% contorno 3: segmento 1 em 6 notas (ritmo variado e apoj). segmento em 5 notas (ritmo variado).
     a16\) b8\<( cis16~ cis f8.) \acciaccatura g8 a32\mf( aes) g8-. ges16-. f-. r8.
     %% contorno 4: segmento 1 em 12 notas. segmento 2 em 2 notas
-    f,16->\pp\< fis g gis a32 ais b c cis d dis e f8-.\f r cis-.\p r
+    f,16->\pp\< fis g gis a32 ais b c cis d dis e f8-.\f r des-.\p r
     %% contorno 5: segmento 1 em 2 notas. segmento 2 em 2 notas. notas curtas
     f,,8-. r r4 f'8-. r cis4\espressivo r4
     %% contorno 6: segmento 1 em 2 notas. segmento 2 em 2 notas. notas longas
     cis2\p\<( cis'4\f a)
     %% contorno 7: segmento 1 em 3 notas (apoj). segmento 2 em 2 notas. notas curtas
     \setTextCresc
-    f,8-. r r4 \acciaccatura e'8\p\( f4\< cis\)
+    f,8-. r r4 \acciaccatura e'8\p\( f4\< des\)
     %% contorno 8: segmento 1 em 4 notas (uma no meio e apoj). segmento 2 em 2 notas. notas curtas
-    f,8.-. d'16 r4 \acciaccatura e8\( f4 cis\)
+    f,8.-. d'16 r4 \acciaccatura e8\( f4 des\)
     %% contorno 9: segmento 1 com repetição da primeira nota. duas no meio e apoj. segmento 2 em 2 notas.
-    f,16 f\startTextSpan r8 r16 d' c8-. \acciaccatura e8 f8-. r cis-. r
+    f,16 f\startTextSpan r8 r16 d' c8-. \acciaccatura e8 f8-. r des-. r
     %% repetição contorno 7
-    f,8-. r r4 \acciaccatura e'8\( f4 cis\)
-    f,8-. r r4 \acciaccatura e'8\( f4 cis\f\)\stopTextSpan r2\fermata
+    f,8-. r r4 \acciaccatura e'8\( f4 des\)
+    f,8-. r r4 \acciaccatura e'8\( f4 des\f\)\stopTextSpan r2\fermata
   }
 }
 
@@ -54,9 +54,9 @@ segB = {
     %% contorno 10: expandido (fator 2)
     f2\p\<\trill( f'\trill f'\trill\f f,8-.) r r4
     %% contorno 11: expandido (fator 2) 5 notas apoj e uso de motivo ritmico
-    f,16\p\< f8.-. \acciaccatura {ais16[ c]} b16 b8.-. \acciaccatura e8 f16 f8.-. \acciaccatura {ais16[ c]} b16 b8.-. \acciaccatura e8 f8\f[ e32 ees d des] c b bes a aes g ges f~ f4 r
+    f,16\p\< f8.-. \acciaccatura {bes16[ c]} b16 b8.-. \acciaccatura e8 f16 f8.-. \acciaccatura {bes16[ c]} b16 b8.-. \acciaccatura e8 f8\f[ e32 ees d des] c b bes a aes g ges f~ f4 r
     %% repetição contorno 1:
-    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r cis4
+    f2\pp\<\( \acciaccatura e'8 f8-.\)\mp r des4
     %% contorno 12: usando motivos rítmicos
     f,,16-.\f f8-. f-. f16-. f8-. f'-. r f16-. f8-. f16-. f'2\trill f,8-. r
     %% contorno 13: desenvolvendo motivos rítmicos
@@ -64,7 +64,7 @@ segB = {
     %% lembrete: continuar a desenvolver o ritmo.
 
     %% repetição contorno 11 com notas longas
-    f,4\p\<\( \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {ais16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f16 f8.-.
+    f,4\p\<\( \acciaccatura {bes16[ c]} b4 \acciaccatura e8 f4 \acciaccatura {bes16[ c]} b4 \acciaccatura e8 f8\)\f[ e32 ees d des] c b bes a aes g ges f~ f16 f8.-.
     %% repetição contorno 10
     f,2\p\<\trill( f'4~\startTrillSpan f\stopTrillSpan f'2\trill\f f,8-.) r
   }
