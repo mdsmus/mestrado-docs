@@ -1,12 +1,14 @@
+(defparameter *dir* "/tmp/")
+
 (defun gnuplot (file)
   (run-program "/usr/bin/gnuplot" (list file)))
 
-(defun contorno-plot (titulo png data &optional (x1 0) (x2 10) (y1 0) (y2 10))
-  (with-open-file (f "/tmp/bar" :direction :output :if-exists :supersede)
+(defun contorno-plot (titulo png data out-file &optional (x1 0) (x2 10) (y1 0) (y2 10))
+  (with-open-file (f out-file :direction :output :if-exists :supersede)
     (format f "set title \"~a\"
 set terminal postscript eps enhanced
-set xlabel \"altura\"
-set ylabel \"tempo\"
+set ylabel \"altura\"
+set xlabel \"tempo\"
 set output \"~a.eps\"
 set nokey
 plot [~a:~a][~a:~a] '~a' with linespoints
@@ -17,9 +19,19 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
     (format f "~{~{~a ~}~%~}" contornos)))
 
 (defun ver (file)
-  (run-program "/usr/bin/gv" (list file)))
+  (run-program "/usr/bin/gv" (list (concat *dir* file ".eps"))))
 
-(contornos->file '((1 2) (2 3) (3 4)) "/tmp/foo")
-(contorno-plot "foo" "/tmp/resultado" "/tmp/foo")
-(gnuplot "/tmp/bar")
-(ver "/tmp/resultado.eps")
+(defun concat (&rest string)
+  (apply #'concatenate 'string string))
+
+(defun plot-contorno (contorno titulo arquivo &optional ver)
+  (let ((tmp-file (format nil "/tmp/~a" (gensym)))
+        (tmp-out (format nil "/tmp/~a" (gensym))))
+    (contornos->file contorno tmp-file)
+    (contorno-plot titulo (concat *dir* arquivo) tmp-file tmp-out)
+    (gnuplot tmp-out)
+    (if ver (ver arquivo))))
+
+;; (defparameter *dir* "/tmp/")
+;; (plot-contorno '((0 1) (3 4) (2 8)) "Contorno 1" "resultado")
+;;(ver "resultado")
