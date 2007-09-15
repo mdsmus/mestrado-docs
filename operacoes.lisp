@@ -18,6 +18,7 @@
   ;; inverte todas as bordas de um contorno
   (mapcar #'(lambda (par) (inverter-borda par eixo)) pares))
 
+;; FIXME: a abstracao da retrogradacao esta errada
 (defun retrogradar-contorno (pares)
   ;; retrograda as bordas de um contorno
   (reverse pares))
@@ -32,7 +33,6 @@
   ;; aumenta a altura de um contorno por multiplicacao por fator
   (mapcar #'(lambda (par) (aumentar-altura-borda par fator)) pares))
 
-
 ;; FIXME: a abstracao da aumentacao de duracao esta errada
 (defun aumentar-duracao-borda (par fator)
   ;; aumenta a duracao de uma borda por multiplicacao por fator
@@ -44,6 +44,10 @@
   ;; aumenta a duracao de um contorno por multiplicacao por fator
   (mapcar #'(lambda (par) (aumentar-duracao-borda par fator)) pares))
 
+(defun rotar-contorno (pares fator)
+  ;; rotaciona contorno a partir de um dado fator
+  (append (subseq pares fator) (subseq pares 0 fator)))
+
 ;; testes
 
 (transpor-contorno '((1 1)(2 4)(5 3)(7 5)) 1)
@@ -51,3 +55,4 @@
 (retrogradar-contorno '((1 1)(2 4)(5 3)(7 5)))
 (aumentar-altura '((1 1)(2 4)(5 3)(7 5)) 2)
 (aumentar-duracao '((1 1)(2 4)(5 3)(7 5)) 2)
+(rotar-contorno '((1 1)(2 4)(5 3)(7 5)) 2)
