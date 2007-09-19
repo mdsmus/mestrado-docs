@@ -18,3 +18,7 @@ lisp separado (e.g. foo.lisp) com o seguinte conteudo:
   as funções plot-contorno e ver.
 
 (ver "resultado")
+
+* a função preview gera um arquivo .ps com todos os contornos
+
+(preview "t0" "t1" "t2" "t3" "t4" "t5" "t6")

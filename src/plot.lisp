@@ -33,6 +33,33 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
     ;;(if ver (ver arquivo))
     ))
 
+(defun gera-tex (files)
+  (print files)
+  (with-open-file (file (concat *dir* "preview.tex") :direction :output :if-exists :supersede)
+    (format file "\\documentclass[a4paper]{article}
+\\usepackage[top=1cm,bottom=1cm,left=1cm,right=1cm]{geometry}
+\\usepackage{graphicx}
+
+\\begin{document}
+")
+    (loop
+       for x from 0 to (1- (length files)) by 2
+       for item = (nth x files)
+       for next-item = (nth (1+ x) files)
+       do
+         (format file "\\includegraphics[scale=.7]{~a}~%" item)
+         (when next-item
+           (format file "\\includegraphics[scale=.7]{~a}\\\\~%" next-item)))
+    
+    (format file "\\end{document}")))
+
+(defun preview (&rest files)
+  (sb-posix:chdir (pathname *dir*))
+  (gera-tex files)
+  (run-program "/usr/bin/latex" (list "-interaction=nonstopmode" "preview.tex"))
+  (run-program "/usr/bin/dvips" (list "preview.dvi"))
+  (run-program "/usr/bin/gv" (list (concat *dir* "preview.ps"))))
+
 ;; (defparameter *dir* "/tmp/")
 ;; (plot-contorno '((0 1) (3 4) (2 8)) "Contorno 1" "resultado")
 ;;(ver "resultado")

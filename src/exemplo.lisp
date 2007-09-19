@@ -1,7 +1,7 @@
 (load "/home/kroger/doc/classes/orientacao-marcos/marcos-mestrado/src/plot.lisp")
 (load "/home/kroger/doc/classes/orientacao-marcos/marcos-mestrado/src/operacoes.lisp")
 
-(defparameter *dir* "/tmp/")
+(defparameter *dir* "/tmp/foo/")
 
 (let ((contorno '((1 1) (2 4) (5 3) (7 5))))
   (plot-contorno contorno "contorno" "t0")
@@ -11,3 +11,8 @@
   (plot-contorno (aumentar-altura contorno 2) "aumenta altura" "t4")
   (plot-contorno (aumentar-duracao contorno 2) "aumenta duração" "t5")
   (plot-contorno (rotar-contorno contorno 2) "rotar" "t6"))
+
+;; (ver "t2")
+;; (loop for x from 0 to 6 do (ver (format nil "t~a" x)))
+
+;; (preview "t0" "t1" "t2" "t3" "t4" "t5" "t6")
