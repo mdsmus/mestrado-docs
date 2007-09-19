@@ -12,7 +12,18 @@
   (plot-contorno (aumentar-duracao contorno 2) "aumenta duração" "t5")
   (plot-contorno (rotar-contorno contorno 2) "rotar" "t6"))
 
-;; (ver "t2")
-;; (loop for x from 0 to 6 do (ver (format nil "t~a" x)))
+(ver "t2")
 
-;; (preview "t0" "t1" "t2" "t3" "t4" "t5" "t6")
+(loop for x from 0 to 6 do (ver (format nil "t~a" x)))
+
+(preview "t0" "t1" "t2" "t3" "t4" "t5" "t6")
+
+(preview-all '((1 1) (2 4) (5 3) (7 5))
+                   '(transpor-contorno 1
+                     retrogradar-contorno nil
+                     inverter-contorno 0
+                     aumentar-altura 2
+                     aumentar-duracao 2
+                     rotar-contorno 2))
+
+(preview-all-short '((1 1) (2 4) (5 3) (7 5)) 1 nil 0 2 2 2)
