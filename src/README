@@ -18,9 +18,3 @@ lisp separado (e.g. foo.lisp) com o seguinte conteudo:
   as funções plot-contorno e ver.
 
 (ver "resultado")
-
-* a função plot-contorno aceita um último parametro opcional para
-  plotar o contorno e mostrar o arquivo com gv automaticamente (sem
-  precisar da função ver)
-
-(plot-contorno '((0 1) (3 4) (2 8)) "Contorno 1" "resultado" 'ver)

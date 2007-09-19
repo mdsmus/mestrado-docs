@@ -50,9 +50,9 @@
 
 ;; testes
 
-(transpor-contorno '((1 1)(2 4)(5 3)(7 5)) 1)
-(inverter-contorno '((1 1)(2 4)(5 3)(7 5)) 0)
-(retrogradar-contorno '((1 1)(2 4)(5 3)(7 5)))
-(aumentar-altura '((1 1)(2 4)(5 3)(7 5)) 2)
-(aumentar-duracao '((1 1)(2 4)(5 3)(7 5)) 2)
-(rotar-contorno '((1 1)(2 4)(5 3)(7 5)) 2)
+;; (transpor-contorno '((1 1)(2 4)(5 3)(7 5)) 1)
+;; (inverter-contorno '((1 1)(2 4)(5 3)(7 5)) 0)
+;; (retrogradar-contorno '((1 1)(2 4)(5 3)(7 5)))
+;; (aumentar-altura '((1 1)(2 4)(5 3)(7 5)) 2)
+;; (aumentar-duracao '((1 1)(2 4)(5 3)(7 5)) 2)
+;; (rotar-contorno '((1 1)(2 4)(5 3)(7 5)) 2)
