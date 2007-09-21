@@ -48,6 +48,17 @@
   ;; rotaciona contorno a partir de um dado fator
   (append (subseq pares fator) (subseq pares 0 fator)))
 
+;; retrogrado
+
+(defun foo (par)
+  (let ((x (first par))
+        (y (second par)))
+    (list (* x -1) y)))
+
+(defun eixo (pares)
+  (let ((eixo (first (first pares))))
+    (list eixo)))
+
 ;; testes
 
 (transpor-contorno '((1 1)(2 4)(5 3)(7 5)) 1)
