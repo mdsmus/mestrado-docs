@@ -1,0 +1,10 @@
+(gera-b3 '((0 1) (1 0)))
+
+(gera 'b3 contorno)
+
+(preview "a2" "b2")
+
+(defun symbol->string (sim)
+  (string-downcase (symbol-name sim)))
+
+(apply #'preview (mapcar #'symbol->string '(a1 b1 c1 a2 b2 c2 a3 b3 c3 a4 b4 c4 a5 b5 c5)))
