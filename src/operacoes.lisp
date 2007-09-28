@@ -48,8 +48,11 @@
   ;; rotaciona contorno a partir de um dado fator
   (append (subseq pares fator) (subseq pares 0 fator)))
 
-;; retrogrado
+(defun insere-ponto (contorno par)
+  "Insere um par no 'meio' de um contorno de um único segmento."
+  (append (list (first contorno)) (list par) (list (second contorno))))
 
+  ;; retrogrado
 (defun foo (par)
   (let ((x (first par))
         (y (second par)))
