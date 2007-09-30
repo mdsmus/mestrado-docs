@@ -1,42 +1,120 @@
 \documentclass{article}
 \usepackage{mdschicago}
+\usepackage{ifthen}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[brazil]{babel}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{url}
+
+% usar para termos estrangeiros
+\newcommand{\eng}[1]{\textit{#1}}
+
+% usar para nomes de obras
+\newcommand{\opus}[1]{\textit{#1}}
+
+% usar para nomes de termos
+\newcommand{\termo}[1]{\textit{#1}}
 
 \begin{document}
 
-\section{Introdu��o}
+\title{Projeto de DissertaÃ§Ã£o}
+\author{Marcos da Silva Sampaio}
+\maketitle
+
+\thispagestyle{empty}
+
+\setlength{\parindent}{0cm}
+
+\section{IntroduÃ§Ã£o}
 \label{sec:introducao}
 
 \section{Objetivos}
 \label{sec:objetivos}
 
-Compor uma pe�a e fazer um memorial dela
+O principal objetivo deste projeto Ã© a composiÃ§Ã£o de uma peÃ§a e o seu
+memorial. Esta peÃ§a, escrita para quinteto de madeiras, deverÃ¡ ser
+construÃ­da a partir de operaÃ§Ãµes de transposiÃ§Ã£o, rotaÃ§Ã£o, inversÃ£o,
+retrogradaÃ§Ã£o, aumentaÃ§Ã£o e diminuiÃ§Ã£o, justaposiÃ§Ã£o e superposiÃ§Ã£o de
+contornos melÃ³dicos.
+
+SÃ£o objetivos secundÃ¡rios deste trabalho:
+
+\begin{itemize}
+\item Desenvolvimento de um programa de computador para processamento
+  de operaÃ§Ãµes de contornos melÃ³dicos.
+\end{itemize}
 
 \section{Justificativa}
 \label{sec:justificativa}
 
-%% apenas 1 par�grafo
+%% apenas 1 parÃ¡grafo
 
-\section{Revis�o de Literatura}
+Teorias de contornos melÃ³dicos sÃ£o utilizadas para anÃ¡lise
+composicional, porÃ©m nÃ£o para composiÃ§Ã£o.
+
+\section{RevisÃ£o de Literatura}
 \label{sec:revis-de-liter}
 
-\section{Estrutura de t�picos da disserta��o}
+\shortciteN{friedmann85:_method_discus_contour},
+\shortciteN{morris1987cpc}, \shortciteN{marvin87:_relat_music_contour}
+e \shortciteN{polansky92:_possib_impos_melod} iniciaram o
+desenvolvimento de teorias de contornos musicais expandindo o trabalho
+anterior de \shortciteN{seeger1960mml},
+\shortciteN{kolinkski65:_struc_melod_movem} e
+\shortciteN{adams1976mct}. Mais tarde essas teorias foram expandidas
+por \shortciteN{quinn97:_fuzzy_exten_theor_contour} e por
+\shortciteN{beard2003cmm}.
+
+
+\section{Estrutura de tÃ³picos da dissertaÃ§Ã£o}
 \label{sec:estrutura-de-topicos}
 
 \begin{enumerate}
-\item Introdu��o
-\item Revis�o de Literatura 'sobre contornos mel�dicos'
-\item An�lise da composi��o 'foobar'
-\item Partitura da composi��o
-\item Conclus�o
+\item IntroduÃ§Ã£o
+\item RevisÃ£o de Literatura 'sobre contornos melÃ³dicos'
+\item AnÃ¡lise da composiÃ§Ã£o ainda sem tÃ­tulo definido
+\item Partitura da composiÃ§Ã£o
+\item ConclusÃ£o
 \item Bibliografia
 \end{enumerate}
 
 \section{Cronograma}
 \label{sec:cronograma}
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lllllllllllll}
+    \hline
+    Tarefa & Jan. & Fev. & Mar. & Abr. & Mai. & Jun. & Jul. & Ago. & Set. &
+    Out. & Nov. & Dez. \\
+    \hline
+
+
+    \hline
+  \end{tabular}
+%   \caption{}
+  \label{tab:cronograma}
+\end{table}
+
+
 \section{Metodologia}
 \label{sec:metodologia}
-%% descrever o que ser� feito
+%% descrever o que serÃ¡ feito
+
+\begin{enumerate}
+\item RevisÃ£o de literatura sobre contornos melÃ³dicos
+\item ComposiÃ§Ã£o de peÃ§as didÃ¡ticas para experimento de possibilidades
+  com contornos melÃ³dicos
+\item Desenvolvimento de um programa de computador para processar
+  operaÃ§Ãµes com contornos melÃ³dicos
+\item ComposiÃ§Ã£o da peÃ§a
+\end{enumerate}
+
+\renewcommand{\refname}{Bibliografia}
+
+\nocite{adams1976mct,albrecht2004ect,alves05:_invar,alves2001cuc,batke2004edm,beard2003cmm,Blackburn2000thesis,buteau2005ama,buteau2003tmm,buteau1999mta,buteau2000csm,cambouropoulos2001mca,cambouropoulos2005pea,clifford1995cse,cook87:_techn_compar_analy,discipio2000ajc,dibben01:_motiv_struc_and_percep_of_simil,dowling1994mch,dowling1978sac,dowling1971rim,dowling1986mc,edworthy1985mca,forte83:_motiv_rhyth_contour_alto_rhaps,friedmann1987rmc,friedmann85:_method_discus_contour,ghias1995qhm,Hermann1995,hofmannengl1999vpa,ishiyama1996act,kim2000acb,kolinkski65:_struc_melod_movem,Li2004,lindsay1996ucm,logan2003tet,maidin:gam,marvin1988gtm,marvin87:_relat_music_contour,morris93:_new_direc_theor_analy_music_contour,morris1987cpc,AdamOckelford01012004,parsons1975dta,pauws2002cfo,polansky87mma,polansky92:_possib_impos_melod,prechelt2001imi,quinn2006mcp,quinn97:_fuzzy_exten_theor_contour,raju2002tam,raju2003tqh,ravenscroft2006rcc,music02:_melody,roy2004cbm,schmuckler1999tmm,schubert2006eih,schonberg1967fmc,seeger1960mml,serafine1989idm,sonoda2002bmr,Siu-LanTan04012004,toch1977sfm,toiviainen2002cmm,uitdenbogerd2003pre,weyde2005emr,yi1991tmc,zhu2002smc}
 
 \bibliography{mestrado}
 \bibliographystyle{mdschicago}
