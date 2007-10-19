@@ -7,3 +7,11 @@
 * iniciar leituras sobre lisp
 * compor
 ** fragmentos com contornos de densidade, complexidade rítmica
+
+* para 26/10
+** terminar projeto
+** fazer testes de unidades
+** inserir pontos em contornos
+** testar idéia de passos
+*** usar lista de alturas ao invés de lista de pontos contorno A1 (1 0), A2 (1 2 0)
+*** usar o número 12 para mapear o contorno
