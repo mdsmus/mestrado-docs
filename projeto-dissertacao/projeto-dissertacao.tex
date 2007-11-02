@@ -37,16 +37,6 @@ DATA: \today
 \end{center}
 \vspace{1cm}
 
-%% TODO: listar exemplos de contornos, e.g. adams
-%%       mostrar exemplos de utilização composicional
-%%      (tipo: o que temos feito, operações)
-%% enfatizar que terá uma maneira sistematica para trabalhar com
-%% contornos
-%% "contorno como determinante composicional"
-
-%% falar que assim como tem set, simetria, etc como determinante
-%% composicional, contornos podem ser interessantes
-
 \section{Introdução}
 \label{sec:introducao}
 
@@ -54,20 +44,27 @@ Contorno pode ser definido como o perfil, desenho ou formato de um
 objeto. Pode ser bidimensional e associar altura a comprimento,
 largura ou tempo. Em música contornos podem ser associados a altura,
 densidade, ritmo, complexidade rítmica, homogeneidade orquestral,
-harmônicos, intensidade, etc. Contornos melódicos estão relacionados
-com movimento de altura em função do tempo.
-
+amplitude de harmônicos, intensidade, etc. Contornos melódicos estão
+relacionados com movimento de altura em função do tempo.
 %% Contornos melódicos na composição
-
 Em composição o contorno melódico é um elemento de nível médio de
 abstração, entre altura, duração e timbre, e motivos e frases. Sua
 presença na música é tão comum quanto a de qualquer outro elemento
-citado.
+citado. 
 
 %% Geração de material composicional
 
-Ao estruturar uma obra musical compositores utilizam recursos como
-proporções matemáticas, relações entre notas (conjuntos, tonalidades).
+%% "contorno como determinante composicional"
+%% falar que assim como tem set, simetria, etc como determinante
+%% composicional, contornos podem ser interessantes
+Ao estruturar uma obra musical compositores utilizam recursos mais ou
+menos abstratos como proporções matemáticas, relações entre alturas
+(conjuntos, tonalidades), diversos tipos de simetrias e outros. Tais
+recursos já foram bastante analisados e documentados por autores como
+Lendvai \cite{Lendvai1971}, Howat \cite{Howat1983} e Babbitt
+\cite{babbitt1961ssc}. O uso sistemático de contornos melódicos como
+determinante composicional também pode ser interessante na
+estruturação de uma obra.
 
 %% Teorias de contornos - "sobre contornos"
 
@@ -77,18 +74,55 @@ uso em análise musical. Friedmann
 \cite{morris1987cpc}, Marvin e Laprade
 \cite{marvin87:_relat_music_contour} e Polansky e Bassein
 \cite{polansky92:_possib_impos_melod} iniciaram o desenvolvimento de
-teorias de contornos musicais expandindo o trabalho anterior de Seeger
-\cite{seeger1960mml}, Kolinski \cite{kolinkski65:_struc_melod_movem} e
-Adams \cite{adams1976mct}. Mais tarde essas teorias foram expandidas
-por Quinn \cite{quinn97:_fuzzy_exten_theor_contour} e por Beard
-\cite{beard2003cmm}. Algumas dessas teorias se assemelham à teoria dos
-conjuntos.
+teorias de contornos musicais expandindo o trabalho anterior de
+etnomusicólogos como Seeger \cite{seeger1960mml}, Kolinski
+\cite{kolinkski65:_struc_melod_movem} e Adams
+\cite{adams1976mct}. Mais tarde essas teorias foram expandidas por
+Quinn \cite{quinn97:_fuzzy_exten_theor_contour}, que se aprofundou na
+área de cognição e por Beard \cite{beard2003cmm}, que procurou
+descrever matematicamente contornos levando em conta a duração.
+
+%% TODO: listar exemplos de contornos, e.g. adams
+%%       mostrar exemplos de utilização composicional
+%%      (tipo: o que temos feito, operações)
+
+Adams \cite{adams1976mct} elaborou uma tipologia de quinze contornos
+melódicos reduzindo o contorno de uma melodia a quatro pontos:
+primeira e última notas, nota mais aguda e mais grave. Temos visto a
+partir de experiências preliminares de mapeamento desses contornos que
+entre alguns deles há relações de inversão e retrogradação. Os
+contornos chamados de S1D0 e S3D0, por exemplo guardam entre si uma
+relação de retrogradação (ver figura \ref{fig:adams}).
+
+Operações como inversão, retrogradação, rotação, transposição,
+aumentação e diminuição são musical e matematicamente simples de
+implementar. Contornos melódicos podem ser representados musicalmente,
+através da partitura, graficamente, a partir de pontos cartesianos, e
+simbolicamente com números. Temos feito experiências mapeando essas
+operações para contornos melódicos, representando os resultados de
+várias maneiras e compondo a partir do uso sistemático de tais
+contornos.
+
+\begin{figure}[h]
+  \begin{minipage}{1.0\linewidth}
+    \includegraphics[scale=.6]{a1}
+    \includegraphics[scale=.6]{c1}
+    \centering
+  \end{minipage}
+  \caption{Contornos de Adams}
+  \label{fig:adams}
+\end{figure}
 
 %% contornos em análise e em composição
 
-Estes estudos sobre contornos melódicos têm sido desenvolvidos para
-análise musical. Nenhum dos trabalhos citados, entretanto, aborda o
-uso de contornos melódicos para composição.
+%% enfatizar que terá uma maneira sistematica para trabalhar com
+%% contornos
+Estes estudos sobre contornos melódicos têm sido desenvolvidos
+exclusivamente para análise musical. Nenhum dos trabalhos citados,
+entretanto, aborda o uso de contornos melódicos para composição. O uso
+sistemático de contornos melódicos pode ser interessante na como
+determinante composicional, na estruturação de uma obra musical e na
+geração de material composicional.
 
 \section{Objetivos}
 \label{sec:objetivos}
