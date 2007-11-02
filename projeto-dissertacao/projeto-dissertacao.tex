@@ -1,11 +1,41 @@
 \documentclass{article}
-\usepackage{ppgmus}
+\usepackage{ifthen}
 \usepackage[utf8,utf8x]{inputenc}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[brazil]{babel}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{url}
 
+% usar para termos estrangeiros
+\newcommand{\eng}[1]{\textit{#1}}
+
+% usar para nomes de obras
+\newcommand{\opus}[1]{\textit{#1}}
+
+% usar para nomes de termos
+\newcommand{\termo}[1]{\textit{#1}}
+ 
 \begin{document}
 
-\cabecalho{792}{Pedro Kröger}
-\titulo{Projeto de Dissertação}
+\setlength{\parindent}{0cm}
+
+%% cabecalho
+\large
+UNIVERSIDADE FEDERAL DA BAHIA \\
+ESCOLA DE MÚSICA \\
+PROGRAMA DE PÓS-GRADUAÇÃO \\
+MESTRADO EM COMPOSIÇÃO \\
+ORIENTADOR: Pedro Kröger \\
+ALUNO: Marcos da Silva Sampaio \\
+DATA: \today
+
+\thispagestyle{empty}
+\vspace{1cm}
+\begin{center}
+  {\Huge \textbf{Projeto de Dissertação}}
+\end{center}
+\vspace{1cm}
 
 %% TODO: listar exemplos de contornos, e.g. adams
 %%       mostrar exemplos de utilização composicional
@@ -39,12 +69,20 @@ citado.
 Ao estruturar uma obra musical compositores utilizam recursos como
 proporções matemáticas, relações entre notas (conjuntos, tonalidades).
 
-%% Teorias de contornos
+%% Teorias de contornos - "sobre contornos"
 
 Teorias de contornos têm sido desenvolvidas desde os anos 1980 para
-uso em análise musical
-\cite{friedmann85:_method_discus_contour,friedmann1987rmc,marvin87:_relat_music_contour,polansky92:_possib_impos_melod,quinn97:_fuzzy_exten_theor_contour}. Algumas
-dessas teorias se assemelham à teoria dos conjuntos.
+uso em análise musical. Friedmann
+\cite{friedmann85:_method_discus_contour,friedmann1987rmc}, Morris
+\cite{morris1987cpc}, Marvin e Laprade
+\cite{marvin87:_relat_music_contour} e Polansky e Bassein
+\cite{polansky92:_possib_impos_melod} iniciaram o desenvolvimento de
+teorias de contornos musicais expandindo o trabalho anterior de Seeger
+\cite{seeger1960mml}, Kolinski \cite{kolinkski65:_struc_melod_movem} e
+Adams \cite{adams1976mct}. Mais tarde essas teorias foram expandidas
+por Quinn \cite{quinn97:_fuzzy_exten_theor_contour} e por Beard
+\cite{beard2003cmm}. Algumas dessas teorias se assemelham à teoria dos
+conjuntos.
 
 %% contornos em análise e em composição
 
@@ -78,23 +116,6 @@ São objetivos secundários deste trabalho:
 
 Teorias de contornos melódicos são utilizadas para análise
 composicional, porém não para composição.
-
-%% mudar titulo (algo como contornos na literatura, ou "sobre
-%% contornos"), coloca na introdução
-
-\section{Revisão de Literatura}
-\label{sec:revis-de-liter}
-
-Na década de 1980 Friedmann
-\cite{friedmann85:_method_discus_contour,friedmann1987rmc}, Morris
-\cite{morris1987cpc}, Marvin e Laprade
-\cite{marvin87:_relat_music_contour} e Polansky e Bassein
-\cite{polansky92:_possib_impos_melod} iniciaram o desenvolvimento de
-teorias de contornos musicais expandindo o trabalho anterior de Seeger
-\cite{seeger1960mml}, Kolinski \cite{kolinkski65:_struc_melod_movem} e
-Adams \cite{adams1976mct}. Mais tarde essas teorias foram expandidas
-por Quinn \cite{quinn97:_fuzzy_exten_theor_contour} e por Beard
-\cite{beard2003cmm}.
 
 \section{Metodologia}
 \label{sec:metodologia}
