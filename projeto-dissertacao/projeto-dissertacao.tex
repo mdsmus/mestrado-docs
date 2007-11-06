@@ -6,6 +6,7 @@
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{colortbl}
 
 % usar para termos estrangeiros
 \newcommand{\eng}[1]{\textit{#1}}
@@ -15,7 +16,15 @@
 
 % usar para nomes de termos
 \newcommand{\termo}[1]{\textit{#1}}
- 
+
+\newcommand{\ok}{
+  \multicolumn{1}{>{\columncolor[gray]{.6}}c}{}
+}
+
+\newcommand{\tri}[1]{
+  #1\textsuperscript{o} t
+}
+
 \begin{document}
 
 \setlength{\parindent}{0cm}
@@ -260,30 +269,44 @@ de mestrado, que incluirá a análise da referida obra.
 \section{Cronograma}
 \label{sec:cronograma}
 
-\begin{table}[h]
-  \begin{tabular}{lllllllll}
+\begin{table}[htbp]
+  \small
+  \centering
+  \begin{tabular}{|l||c|c||c|c|c|c|}
     \hline
-    Tarefa & Nov./07 & Dez. & Jan./08 & Fev. & Mar. & Abr. & Mai. \\
+    & \multicolumn{2}{|c||}{2007} & \multicolumn{4}{|c||}{2008} \\
     \hline
-    Revisão de Literatura & X &  &  & & & & & \\
-    Experimentos & X & & & & & & & \\
-    Software & X & X & X & X & & & &  \\
-    Composição da peça & & X & X & X & X & X \\
-    Recital & &  & & & & & X \\
+    \hline
+    \textbf{Atividades} &\tri{3}&\tri{4}&
+    \tri{1}&\tri{2}&\tri{3}&\tri{4}\\
+    \hline
+    \hline
+    revisão de literatura &
+    \ok&\ok& &   &  &   \\
+    \hline
+    experimentos &
+    &\ok&\ok&   &   & \\
+    \hline
+    desenvolvimento do software &
+    &\ok&\ok&\ok& &   \\
+    \hline
+    composição da peça &
+    &   &\ok&\ok & &\\
+    \hline
+    recital &
+    &   &   &\ok&  &  \\
+    \hline
+    escrita da dissertação &
+    &   &   &  & \ok  & \ok  \\
+    \hline
+    entrega da dissertação &
+    &   &   &  &  &\ok \\
+    \hline
+    defesa &
+    &   &   &  &  &\ok \\
     \hline
   \end{tabular}
-\end{table}
-\begin{table}[h]
-  \begin{tabular}{llllllll}
-    \hline
-    Tarefa & Jun./08 & Jul. & Ago. & Set. & Out. & Nov. & Dez. \\
-    \hline
-    Escrita da Dissertação & X & X & X & X & X & & \\
-    Entrega da Dissertação & & & & & & X & \\
-    Defesa & & & & & & & X \\
-    \hline
-  \end{tabular}
-
+  \caption{Cronograma das atividades (em trimestres)}
   \label{tab:cronograma}
 \end{table}
 
