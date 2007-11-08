@@ -1,3 +1,4 @@
+(in-package #:contornos)
 (defparameter *dir* "/tmp/")
 
 (defun gnuplot (file)

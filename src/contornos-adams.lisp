@@ -1,7 +1,7 @@
+(in-package #:contornos)
+
 (defparameter *main-dir* "/home/marcos/repositorios/marcos-mestrado/src/")
 ;; (defparameter *main-dir* "/home/kroger/doc/classes/orientacao-marcos/marcos-mestrado/src/"
-(load (concatenate 'string *main-dir* "plot.lisp"))
-(load (concatenate 'string *main-dir* "operacoes.lisp"))
 
 (defparameter *dir* "/tmp/foo/")
 
