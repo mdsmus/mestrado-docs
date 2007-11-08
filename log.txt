@@ -1,0 +1,5 @@
+* asdf funciona como make. carrega todas as dependencias
+* mudar pacote
+** (in-package :contornos)
+** no repl:  digita ',' e digita change-package e depois contornos
+
