@@ -3,3 +3,4 @@ NAME = projeto-dissertacao
 
 export BIBINPUTS=../:
 export TEXINPUTS=../config:
+export BSTINPUTS=../config:
