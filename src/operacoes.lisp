@@ -1,3 +1,5 @@
+(in-package #:contornos)
+
 (defun retrogradar-pares (pares)
   "mostra os pares em ordem reversa"
   (reverse pares))
