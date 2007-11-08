@@ -108,33 +108,23 @@ melódicos reduzindo uma melodia a quatro pontos: primeira e última
 notas, nota mais aguda e mais grave. Temos visto a partir de
 experiências preliminares de mapeamento desses contornos que entre
 alguns deles há relações de inversão e retrogradação. Os contornos
-chamados de S1D0 e S3D0, por exemplo guardam entre si uma relação de
+chamados de S1D2R1 e S1D2R2, por exemplo guardam entre si uma relação de
 retrogradação (ver figura \ref{fig:adams}).
-
-%%% kroger: a frase que começa com "contornos melodicos podem..." está
-%%% com problemas na divisão de ideias. as virgulas estão sendo usadas
-%%% para separar niveis diferentes. talvez seja bom usar virgulas e
-%%% ponto-e-virgulas eu re-rescrever a frase. algumas pessoas podem
-%%% argumentar que a partitura é uma representação grafica. talvez
-%%% seja bom deixar o "graficamente" mais claro.
 
 Operações como inversão, retrogradação, rotação, transposição,
 aumentação e diminuição são musical e matematicamente simples de
 implementar. Contornos melódicos podem ser representados musicalmente,
 através da partitura; graficamente, a partir de pontos cartesianos
-(para melhor entendimento ver figura \ref{fig:adams}); e
-simbolicamente com números. Temos feito experiências mapeando essas
-operações para contornos melódicos, representando os resultados de
-várias maneiras e compondo a partir do uso sistemático de tais
-contornos.
-
-%%% kroger: esses exemplos estão muito simples, talvez seja bom ter um
-%%% contorno mais detalhado.
+(para um melhor entendimento de uma representação gráfica ver figura
+\ref{fig:adams}); e simbolicamente com números. Temos feito
+experiências mapeando essas operações para contornos melódicos,
+representando os resultados de várias maneiras e compondo a partir do
+uso sistemático de tais contornos.
 
 \begin{figure}[h]
   \begin{minipage}{1.0\linewidth}
-    \includegraphics[scale=.6]{a1}
-    \includegraphics[scale=.6]{c1}
+    \includegraphics[scale=.6]{a4}
+    \includegraphics[scale=.6]{c5}
     \centering
   \end{minipage}
   \caption{Contornos de Adams}
@@ -145,14 +135,6 @@ contornos.
 
 %% enfatizar que terá uma maneira sistematica para trabalhar com
 %% contornos
-
-%%% kroger: "estes estudos" não fica claro que são os estudos do
-%%% paragrafo antes-do-anterior. fica parecendo que são os estudos do
-%%% paragrafo acima. [em geral é uma boa prática escrever cada
-%%% paragrafo auto-contido, em geral, "isso", "estes" são palavras
-%%% ruins para começar uma frase ou paragrafo porque quebram
-%%% \cross{isso} essa ideia de continuidade (viu como o "isso" nessa
-%%% frase está ruim? :-)]
 
 As citadas teorias sobre contornos melódicos têm sido desenvolvidos
 exclusivamente para análise musical. Nenhum dos trabalhos citados,
@@ -172,15 +154,13 @@ retrogradação, aumentação e diminuição, justaposição e superposição.
 
 São objetivos secundários deste trabalho:
 
-%%% kroger: é melhor usar enumeração
-
-\begin{itemize}
+\begin{enumerate}
 \item Desenvolvimento de um programa de computador para processamento
   de operações de contornos melódicos.
 \item Entendimento do mapeamento de contornos para elementos
   musicais/composicionais.
 \item Compreensão do estado de arte de contornos melódicos.
-\end{itemize}
+\end{enumerate}
 
 \section{Justificativa}
 \label{sec:justificativa}
