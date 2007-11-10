@@ -79,3 +79,8 @@ valores de x"
 (defun insere-ponto (contorno par)
   "Insere um par no 'meio' de um contorno de um único segmento."
   (ordena-crescente-x (append (list (first contorno)) (list par) (list (second contorno)))))
+
+(defun rotaciona-lista (lista &optional (n 1))
+  "Faz a rotação de elementos de uma lista"
+  (let ((mod-n (mod n (length lista))))
+    (append (subseq lista mod-n) (subseq lista 0 mod-n))))
