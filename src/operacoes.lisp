@@ -71,7 +71,11 @@
   "rotaciona contorno a partir de um dado fator"
   (append (subseq pares fator) (subseq pares 0 fator)))
 
-;; FIXME: reagrupar a saida em ordem crescente do valor de x
+(defun ordena-crescente-x (pares)
+  "Ordena pares de um contorno de forma crescente a partir dos
+valores de x"
+  (sort pares #'< :key #'first))
+
 (defun insere-ponto (contorno par)
   "Insere um par no 'meio' de um contorno de um único segmento."
-  (append (list (first contorno)) (list par) (list (second contorno))))
+  (ordena-crescente-x (append (list (first contorno)) (list par) (list (second contorno)))))

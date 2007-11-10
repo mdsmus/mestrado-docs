@@ -69,3 +69,9 @@
   (assert-equal '((0 1) (1 4) (2 0)) (insere-ponto '((0 1) (2 0)) '(1 4)))
   (assert-equal '((0 1) (2 2) (3 4)) (insere-ponto '((0 1) (2 2)) '(3 4)))
   )
+
+(define-test ordena-crescente-x
+  (assert-equal '((0 1) (1 2)) (ordena-crescente-x '((1 2) (0 1))))
+  (assert-equal '((0 1) (1 2) (3 8)) (ordena-crescente-x '((1 2) (0 1) (3 8))))
+  (assert-equal '((0 1) (1 2) (2 5) (3 8)) (ordena-crescente-x '((1 2) (0 1) (3 8) (2 5))))
+  )
