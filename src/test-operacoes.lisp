@@ -76,9 +76,9 @@
   (assert-equal '((0 1) (2 2) (3 4)) (insere-ponto '((0 1) (2 2)) '(3 4)))
   )
 
-(define-test remove-pares-repetidos
-  (assert-equal '((0 1)) (remove-pares-repetidos '((0 1) (0 1))))
-  (assert-equal '((0 1) (1 3)) (remove-pares-repetidos '((0 1) (1 3) (0 1))))
-  (assert-equal '((0 1) (1 3) (2 4) (3 5) (4 0)) (remove-pares-repetidos '((0 1) (1 3) (0 1) (2 4) (3 5) (4 0))))
-  (assert-equal '((0 1) (1 3) (2 4) (3 5) (4 0)) (remove-pares-repetidos '((0 1) (1 3) (0 1) (2 4) (3 5) (4 0) (4 0))))
+(define-test remover-duplicatas
+  (assert-equal '((0 1)) (remover-duplicatas '((0 1) (0 1))))
+  (assert-equal '((0 1) (1 3)) (remover-duplicatas '((0 1) (1 3) (0 1))))
+  (assert-equal '((0 1) (1 3) (2 4) (3 5) (4 0)) (remover-duplicatas '((0 1) (1 3) (0 1) (2 4) (3 5) (4 0))))
+  (assert-equal '((0 1) (1 3) (2 4) (3 5) (4 0)) (remover-duplicatas '((0 1) (1 3) (0 1) (2 4) (3 5) (4 0) (4 0))))
   )
