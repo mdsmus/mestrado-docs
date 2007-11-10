@@ -1,4 +1,4 @@
-(in-package :contornos)
+(in-package :goiaba)
 (use-package :lisp-unit)
 
 (define-test retrogradar-pares

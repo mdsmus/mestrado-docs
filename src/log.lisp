@@ -1,4 +1,4 @@
-(in-package #:contornos)
+(in-package #:goiaba)
 
 (load (concatenate 'string *main-dir* "operacoes.lisp"))
 

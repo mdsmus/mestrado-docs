@@ -1,5 +1,5 @@
-(asdf:defsystem :contornos
-  :name "contornos"
+(asdf:defsystem :goiaba
+  :name "goiaba"
   :version "0.1"
   :author "Marcos di Silva e Pedro Kroger"
   :serial t

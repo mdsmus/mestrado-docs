@@ -1,4 +1,4 @@
-(in-package #:contornos)
+(in-package #:goiaba)
 
 ;; FIXME: remover repeticoes
 (defun reduzir-contorno (pares)

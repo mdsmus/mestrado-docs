@@ -1,4 +1,4 @@
-(in-package #:contornos)
+(in-package #:goiaba)
 
 (defparameter *main-dir* "/home/marcos/repositorios/marcos-mestrado/src/")
 ;; (defparameter *main-dir* "/home/kroger/doc/classes/orientacao-marcos/marcos-mestrado/src/"

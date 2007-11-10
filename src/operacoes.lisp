@@ -1,4 +1,4 @@
-(in-package #:contornos)
+(in-package #:goiaba)
 
 (defun retrogradar-pares (pares)
   "mostra os pares em ordem reversa"
