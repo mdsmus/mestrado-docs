@@ -84,3 +84,8 @@ valores de x"
   "Faz a rotação de elementos de uma lista"
   (let ((mod-n (mod n (length lista))))
     (append (subseq lista mod-n) (subseq lista 0 mod-n))))
+
+(defun remover-duplicatas (pares)
+  "remove duplicatas de uma lista de pares e coloca em ordem
+crescente a partir de x"
+  (remove-duplicates pares :key #'first :from-end t))
