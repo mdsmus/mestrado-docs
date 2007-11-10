@@ -1,7 +1,7 @@
 * asdf funciona como make. carrega todas as dependencias
-* é necessário carregar o asdf inicialmente. no repl colocar (asdf :contornos)
+* é necessário carregar o asdf inicialmente. no repl colocar (asdf :goiaba)
 * mudar pacote
-** (in-package :contornos)
+** (in-package :goiaba)
 ** no repl:  digita ',' e digita change-package e depois contornos
 
 para testar:

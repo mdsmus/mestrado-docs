@@ -1,6 +1,5 @@
 (in-package #:goiaba)
 
-;; FIXME: remover repeticoes
 (defun reduzir-contorno (pares)
   "reduz pontos de um contorno a ponto inicial, final, ponto mais
 alto e mais baixo"
