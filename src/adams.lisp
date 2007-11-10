@@ -18,4 +18,4 @@ contorno"
 
 (defun inclinacoes-contorno-positivo-negativo (pares)
   "retorna 1 e -1 para inclinacoes positivas e negativas"
-  (mapcar #'(lambda (x) (if (= x 0) 0 (if (> x 1) 1 -1))) (inclinacoes-contorno pares)))
+  (mapcar #'(lambda (incl) (if (= incl 0) 0 (if (>= incl 1) 1 -1))) (inclinacoes-contorno pares)))
