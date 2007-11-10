@@ -6,3 +6,7 @@
 
 para testar:
 no repl (run-tests)
+
+* funcao para eliminar listas repetidas em uma lista de listas
+* usar loop
+* comparar numero por numero e guardar em uma variavel e comparar
