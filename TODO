@@ -5,16 +5,15 @@
 * pensar em aspectos da composição
 ** forma
 ** contornos
-* iniciar leituras sobre lisp
-* compor
-** fragmentos com contornos de densidade, complexidade rítmica
 
 * para 16/11
 ** fazer testes de unidades
 ** implementar adams
+*** problemas a resolver:
+*** adams - algoritmo para resolver reducao de contornos
 
-* para depois
-** inserir pontos em contornos
+* para quando der
 ** testar idéia de passos
 *** usar lista de alturas ao invés de lista de pontos contorno A1 (1 0), A2 (1 2 0)
 *** usar o número 12 para mapear o contorno
+
