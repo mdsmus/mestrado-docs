@@ -10,3 +10,9 @@
   (assert-equal '(1 -2) (inclinacoes-contorno '((0 4) (1 5) (2 3))))
   (assert-equal '(1 -2 -2 3 5 -6 -1) (inclinacoes-contorno '((0 4) (1 5) (2 3) (3 1) (4 4) (5 9) (6 3) (7 2))))
   )
+
+(define-test inclinacoes-contorno-positivo-negativo
+  (assert-equal '(1) (inclinacoes-contorno-positivo-negativo '((0 0) (1 1))))
+  (assert-equal '(1 -1) (inclinacoes-contorno-positivo-negativo '((0 4) (1 5) (2 3))))
+  (assert-equal '(1 -1 -1 1 1 -1 -1) (inclinacoes-contorno-positivo-negativo '((0 4) (1 5) (2 3) (3 1) (4 4) (5 9) (6 3) (7 2))))
+  )

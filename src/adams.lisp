@@ -15,3 +15,7 @@ alto e mais baixo"
   (let* ((tamanho (length pares))
          (lista (mapcar #'second pares)))
     (subseq (mapcar #'(lambda (a b) (- a b)) (rotaciona-lista lista ) lista) 0 (- tamanho 1))))
+
+(defun inclinacoes-contorno-positivo-negativo (pares)
+  "retorna 1 e -1 para inclinacoes positivas e negativas"
+  (mapcar #'(lambda (x) (if (= x 0) 0 (if (> x 1) 1 -1))) (inclinacoes-contorno pares)))
