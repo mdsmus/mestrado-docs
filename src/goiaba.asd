@@ -3,7 +3,7 @@
   :version "0.1"
   :author "Marcos di Silva e Pedro Kroger"
   :serial t
-  :depends-on (:lisp-unit)
+  :depends-on (:lisp-unit :cl-ppcre)
   :components (
                (:file "packages")
                (:file "operacoes")

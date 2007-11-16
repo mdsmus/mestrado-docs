@@ -2,7 +2,7 @@
 (defparameter *dir* "/tmp/")
 
 (defun gnuplot (file)
-  (run-program "/usr/bin/gnuplot" (list file)))
+  (sb-ext:run-program "/usr/bin/gnuplot" (list file)))
 
 (defun contorno-plot (titulo png data out-file &optional (x1 0) (x2 10) (y1 0) (y2 10))
   (with-open-file (f out-file :direction :output :if-exists :supersede)
@@ -20,7 +20,7 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
     (format f "~{~{~a ~}~%~}" contornos)))
 
 (defun ver (file)
-  (run-program "/usr/bin/gv" (list (concat *dir* file ".eps"))))
+  (sb-ext:run-program "/usr/bin/gv" (list (concat *dir* file ".eps"))))
 
 (defun concat (&rest string)
   (apply #'concatenate 'string string))
@@ -55,9 +55,9 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
 (defun preview (&rest files)
   (sb-posix:chdir (pathname *dir*))
   (gera-tex files)
-  (run-program "/usr/bin/latex" (list "-interaction=nonstopmode" "preview.tex"))
-  (run-program "/usr/bin/dvips" (list "preview.dvi"))
-  (run-program "/usr/bin/gv" (list (concat *dir* "preview.ps"))))
+  (sb-ext:run-program "/usr/bin/latex" (list "-interaction=nonstopmode" "preview.tex"))
+  (sb-ext:run-program "/usr/bin/dvips" (list "preview.dvi"))
+  (sb-ext:run-program "/usr/bin/gv" (list (concat *dir* "preview.ps"))))
 
 (defun plist-keys (plist)
   (loop for x from 0 to (1- (length plist)) by 2 collect
