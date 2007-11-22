@@ -1,3 +1,5 @@
+;;; -*- Mode: LISP; Syntax: COMMON-LISP; Package: CL-USER; Base: 10 -*-
+
 (asdf:defsystem :goiaba
   :name "goiaba"
   :version "0.1"
@@ -8,6 +10,9 @@
                (:file "packages")
                (:file "operacoes")
                (:file "plot")
-               (:file "test-operacoes")
                (:file "adams")
+               (:file "morris")
+               (:file "test-operacoes")
+               (:file "test-adams")
+               (:file "test-morris")
                ))
