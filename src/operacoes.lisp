@@ -4,12 +4,14 @@
   "mostra os pares em ordem reversa"
   (reverse pares))
 
+;; FIXME: fazer média entre maior e menor valor de x
 (defun ponto-medio-x (pares)
   "retorna o ponto medio de um contorno - x"
   (let ((primeiro (first (first pares)))
         (ultimo (first (first (last pares)))))
     (+ primeiro (/ (- ultimo primeiro) 2))))
 
+;; FIXME: fazer média entre maior e menor valor de y
 (defun ponto-medio-y (pares)
     "retorna o ponto medio de um contorno - y"
   (let ((primeiro (second (first pares)))
