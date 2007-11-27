@@ -69,7 +69,10 @@
 
 (defun rotar-contorno (pares fator)
   "rotaciona contorno a partir de um dado fator"
-  (append (subseq pares fator) (subseq pares 0 fator)))
+  (let* ((x-pares (mapcar #'first pares))
+         (y-pares (mapcar #'second pares))
+         (y-rotado (append (subseq y-pares fator) (subseq y-pares 0 fator))))
+    (mapcar #'list x-pares y-rotado)))
 
 (defun ordena-crescente-x (pares)
   "Ordena pares de um contorno de forma crescente a partir dos
@@ -80,6 +83,7 @@ valores de x"
   "Insere um par no 'meio' de um contorno de um único segmento."
   (ordena-crescente-x (append (list (first contorno)) (list par) (list (second contorno)))))
 
+;; FIXME: fazer lidar com duracao
 (defun rotaciona-lista (lista &optional (n 1))
   "Faz a rotação de elementos de uma lista"
   (let ((mod-n (mod n (length lista))))
