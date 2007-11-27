@@ -6,3 +6,7 @@
            (positivos (length (remove -1 inclinacoes)))
            (negativos (length (remove 1 inclinacoes))))
          (list positivos negativos)))
+
+;; FIXME: definir a funcao
+(defun contour-class (pares)
+  (mapcar #'first (sort pares #'< :key #'second)))
