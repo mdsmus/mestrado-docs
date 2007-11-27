@@ -93,3 +93,7 @@ valores de x"
   "remove duplicatas de uma lista de pares e coloca em ordem
 crescente a partir de x"
   (remove-duplicates pares :key #'first :from-end t))
+
+(defun remover-alturas-repetidas (pares)
+  "remove os pontos que tem alturas repetidas"
+  (remove-duplicates pares :key #'second :from-end t))
