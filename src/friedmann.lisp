@@ -7,6 +7,10 @@
            (negativos (length (remove 1 inclinacoes))))
          (list positivos negativos)))
 
-;; FIXME: definir a funcao
 (defun contour-class (pares)
-  (mapcar #'first (sort pares #'< :key #'second)))
+  (let* ((pares-sorteados (sort pares #'< :key #'second)))
+    (mapcar #'second (sort (loop
+         for (x y) in pares-sorteados
+         for n from 0
+         collect (list x n)) #'< :key #'first))))
+
