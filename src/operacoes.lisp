@@ -97,3 +97,15 @@ crescente a partir de x"
 (defun remover-alturas-repetidas (pares)
   "remove os pontos que tem alturas repetidas"
   (remove-duplicates pares :key #'second :from-end t))
+
+(defun rotate (conjunto &optional (n 1))
+  (let ((modn (mod n (length conjunto))))
+    (append (subseq conjunto modn) (subseq conjunto 0 modn))))
+
+(defun intervalo (membro1 membro2)
+  "retorna a diferenca entre membros"
+   (- membro2 membro1))
+
+(defun intervalos (pares)
+  "retorna os intervalos entre membros de uma lista"
+  (subseq (mapcar #'intervalo pares (rotate pares)) 0 (- (length pares) 1)))
