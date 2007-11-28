@@ -21,6 +21,7 @@
   (let ((x (first par))
         (y (second par)))
     (list x (+ y fator))))
+
 (defun transpor-contorno (pares fator)
   "transpoe todas as pontos de um contorno"
   (mapcar #'(lambda (par) (transpor-ponto par fator)) pares))
@@ -109,3 +110,12 @@ crescente a partir de x"
 (defun intervalos (pares)
   "retorna os intervalos entre membros de uma lista"
   (subseq (mapcar #'intervalo pares (rotate pares)) 0 (- (length pares) 1)))
+
+(defun subtrai-membros (a b)
+  (- a b))
+  
+(defun subtrai-lista-indice (lista indice)
+  (mapcar #'(lambda (x) (subtrai-membros x indice)) lista))
+
+(defun matriz (serie)
+  (mapcar #'(lambda (nota) (transpor serie nota)) serie))
