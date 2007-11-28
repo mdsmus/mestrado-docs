@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage[utf8,utf8x]{inputenc}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[brazil]{babel}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{colortbl}
+
+% usar para termos estrangeiros
+\newcommand{\eng}[1]{\textit{#1}}
+
+% usar para nomes de obras
+\newcommand{\opus}[1]{\textit{#1}}
+
+% usar para nomes de termos
+\newcommand{\termo}[1]{\textit{#1}}
+
+\newcommand{\ok}{
+  \multicolumn{1}{>{\columncolor[gray]{.6}}c}{}
+}
+
+\newcommand{\tri}[1]{
+  #1\textsuperscript{o} t
+}
+
+\title{Sobre Contornos}
+\author{Marcos di Silva}
+
+\begin{document}
+
+\setlength{\parindent}{0cm}
+\maketitle
+
+Friedmann \cite{friedmann85:_method_discus_contour} afirma que a
+música do século XX tem sido em grande parte analisada em função de
+relações de classes de alturas. Ele defende o uso independente de
+contornos melódicos para a análise deste repertório. Argumenta que
+ouvintes têm uma maior acuidade com contornos que com relações de
+classes de altura. Exemplifica a eficiência do uso de contornos com
+obras da literatura que têm no contorno o elemento mais
+importante. Propõe ferramentas e operações para a autonomia de uma
+análise a partir de contornos melódicos.
+
+Friedmann\cite{friedmann85:_method_discus_contour} propõe as seguintes
+ferramentas:
+
+\begin{itemize}
+\item série de contornos adjacentes \eng{Contour Adjacency Series
+    (CAS)};
+\item classe de contornos \eng{Contour Class (CC)};
+\item vetor de classe de contornos adjacentes \eng{Contour Adjacency
+    Series Vector (CASV)};
+\item intervalo de contorno \eng{Contour Interval (CI)};
+\item sucessão de intervalos de contorno \eng{Contour Interval
+    Succession (CIS)};
+\item \eng{array} de intervalos de contorno \eng{Contour Interval
+    Array (CIA)}
+\item vetor de classe de contorno I \eng{Contour Class Vector I
+    (CCVI)}
+\item vetor de classe de contorno II \eng{Contour Class Vector II
+    (CCVII)}
+\end{itemize}
+
+\bibliography{mestrado}
+\bibliographystyle{plainurl-br}
+
+\end{document}
