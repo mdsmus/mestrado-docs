@@ -118,4 +118,4 @@ crescente a partir de x"
   (mapcar #'(lambda (x) (subtrai-membros x indice)) lista))
 
 (defun matriz (serie)
-  (mapcar #'(lambda (nota) (transpor serie nota)) serie))
+  (mapcar #'(lambda (nota) (subtrai-lista-indice serie nota)) serie))
