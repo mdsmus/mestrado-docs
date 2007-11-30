@@ -19,3 +19,22 @@ normalizacao de contorno"
 (defun contour-interval-sucession (pares)
   "retorna os intervalos de uma contour class"
   (intervalos (contour-class pares)))
+
+(defun cia-aux (cc)
+  "Conta as CI de um cc."
+  (if (atom cc)
+      cc
+      (let ((primeiro (first cc)))
+        (append (mapcar (lambda (item) (- item primeiro)) (rest cc))
+                (cia-aux (rest cc))))))
+
+(defun cia (cc)
+  (let* ((lista (cia-aux cc))
+         (max (apply #'max cc))
+         (lista-negativa (remove-if #'plusp lista))
+         (lista-positiva (remove-if #'minusp lista)))
+    (list
+     (loop for x from 1 to max
+        collect (count x lista-positiva))
+     (loop for x from -1 downto (- max)
+        collect (count x lista-negativa)))))
