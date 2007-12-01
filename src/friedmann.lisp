@@ -3,7 +3,7 @@
 (defun cas (pares)
   "retorna a contour adjacency series de um contorno. o mesmo que
 inclinacoes-contorno-positivo-negativo"
-  (inclinacoes-contorno-positivo-negativo pares))
+  (remove 0 (inclinacoes-contorno-positivo-negativo pares)))
 
 (defun casv (cas)
   "retorna o vetor de contour adjacency series a partir de uma
