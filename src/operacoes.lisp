@@ -118,4 +118,18 @@ crescente a partir de x"
   (mapcar #'(lambda (x) (subtrai-membros x indice)) lista))
 
 (defun matriz (serie)
-  (mapcar #'(lambda (nota) (subtrai-lista-indice serie nota)) serie))
+  (mapcar #'(lambda (membro) (subtrai-lista-indice serie membro)) serie))
+
+(defun inverter-membro (membro eixo)
+  (- (* 2 eixo) membro))
+
+(defun inverter-lista (lista eixo)
+  (mapcar #'(lambda (membro) (inverter-membro membro eixo)) lista))
+
+(defun ponto-medio-lista (lista)
+  "retorna o ponto médio de uma lista (média aritmética)"
+  (let ((maior (first (sort lista #'>)))
+        (menor (first (sort lista #'<))))
+    (/ (+ maior menor) 2)))
+
+(merge 'list (list 1 2 3) (list 4 5) #'>)

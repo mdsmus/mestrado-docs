@@ -12,11 +12,11 @@ cas"
            (negativos (length (remove 1 cas))))
          (list positivos negativos)))
 
-(defun inverte-cas (cas)
+(defun inverter-cas (cas)
   "inverte uma contour adjacency series"
   (mapcar #'(lambda (x) (* x -1)) cas))
 
-(defun contour-class (pares)
+(defun cc (pares)
   "retorna o valor de contour class de um contorno. o mesmo que
 normalizacao de contorno"
   (let* ((pares-sorteados (sort (remover-alturas-repetidas pares) #'< :key #'second)))
@@ -25,7 +25,26 @@ normalizacao de contorno"
          for n from 0
          collect (list x n)) #'< :key #'first))))
 
-(defun contour-interval-sucession (cc)
+;; FIXME: sort destroi a lista passada
+(defun inverter-cc (cc)
+  "retorna a inversao de uma contour class (CC)"
+    (inverter-lista cc (ponto-medio-lista cc)))
+
+(defun inclinacoes-cc (cc)
+  "retorna o valor de inclinacao entre todos os elementos de uma cc"
+  (let* ((tamanho (length cc)))
+    (subseq
+     (mapcar #'(lambda (a b) (- a b)) (rotaciona-lista cc) cc)
+     0 (- tamanho 1))))
+
+(defun cas-cc (cc)
+    "retorna a cas de um contorno a partir de sua cc"
+  (mapcar #'(lambda (inclinacao) (if (zerop inclinacao)
+                                0
+                                (/ inclinacao (abs inclinacao))))
+          (inclinacoes-cc cc)))
+
+(defun cis-cc (cc)
   "retorna os intervalos de contorno (CI) de uma contour class (CC)"
   (intervalos cc))
 
