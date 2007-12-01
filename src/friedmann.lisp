@@ -25,7 +25,6 @@ normalizacao de contorno"
          for n from 0
          collect (list x n)) #'< :key #'first))))
 
-;; FIXME: sort destroi a lista passada
 (defun inverter-cc (cc)
   "retorna a inversao de uma contour class (CC)"
     (inverter-lista cc (ponto-medio-lista cc)))

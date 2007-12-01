@@ -128,8 +128,6 @@ crescente a partir de x"
 
 (defun ponto-medio-lista (lista)
   "retorna o ponto médio de uma lista (média aritmética)"
-  (let ((maior (first (sort lista #'>)))
-        (menor (first (sort lista #'<))))
+  (let ((maior (apply #'max lista))
+        (menor (apply #'min lista)))
     (/ (+ maior menor) 2)))
-
-(merge 'list (list 1 2 3) (list 4 5) #'>)
