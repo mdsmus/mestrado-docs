@@ -1,11 +1,20 @@
 (in-package #:goiaba)
 
-(defun vetor-cas (pares)
-  "retorna o vetor de contour adjacency series"
-  (let* ((inclinacoes (inclinacoes-contorno-positivo-negativo pares))
-           (positivos (length (remove -1 inclinacoes)))
-           (negativos (length (remove 1 inclinacoes))))
+(defun cas (pares)
+  "retorna a contour adjacency series de um contorno. o mesmo que
+inclinacoes-contorno-positivo-negativo"
+  (inclinacoes-contorno-positivo-negativo pares))
+
+(defun casv (cas)
+  "retorna o vetor de contour adjacency series a partir de uma
+cas"
+  (let* ((positivos (length (remove -1 cas)))
+           (negativos (length (remove 1 cas))))
          (list positivos negativos)))
+
+(defun inverte-cas (cas)
+  "inverte uma contour adjacency series"
+  (mapcar #'(lambda (x) (* x -1)) cas))
 
 (defun contour-class (pares)
   "retorna o valor de contour class de um contorno. o mesmo que
@@ -16,12 +25,13 @@ normalizacao de contorno"
          for n from 0
          collect (list x n)) #'< :key #'first))))
 
-(defun contour-interval-sucession (pares)
-  "retorna os intervalos de uma contour class"
-  (intervalos (contour-class pares)))
+(defun contour-interval-sucession (cc)
+  "retorna os intervalos de contorno (CI) de uma contour class (CC)"
+  (intervalos cc))
 
 (defun cia-aux (cc)
-  "Conta as CI de um cc."
+  "conta os intervalos de contorno (CI) de uma contour
+class (CC)"
   (if (atom cc)
       cc
       (let ((primeiro (first cc)))
@@ -29,6 +39,8 @@ normalizacao de contorno"
                 (cia-aux (rest cc))))))
 
 (defun cia (cc)
+  "retorna a contour interval array (CIA) de uma contour
+class (CC)"
   (let* ((lista (cia-aux cc))
          (max (apply #'max cc))
          (lista-negativa (remove-if #'plusp lista))
