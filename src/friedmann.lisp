@@ -68,3 +68,11 @@ class (CC)"
         collect (count x lista-positiva))
      (loop for x from -1 downto (- max)
         collect (count x lista-negativa)))))
+
+(defun ccvii (cc)
+  "retorna a countour class vector ii (ccvii) de uma contour
+class (cc). par com soma dos ci de um cia"
+  (let* ((var-cia (cia cc))
+        (soma-positivo (apply #'+ (first var-cia)))
+        (soma-negativo (apply #'+ (second var-cia))))
+    (list soma-positivo soma-negativo)))
