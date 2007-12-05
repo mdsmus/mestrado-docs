@@ -1,9 +1,5 @@
 (in-package #:goiaba)
 
-(defun retrogradar-pares (pares)
-  "mostra os pares em ordem reversa"
-  (reverse pares))
-
 (defun ponto-medio-x (pares)
   "retorna o ponto medio de um contorno - x"
   (let ((maior (first (sort (mapcar #'first pares) #'>)))
@@ -44,7 +40,7 @@
 
 (defun retrogradar-contorno (pares)
   "retrograda um contorno"
-  (retrogradar-pares
+  (reverse
    (mapcar #'(lambda (par) (retrogradar-ponto par (ponto-medio-x pares))) pares)))
 
 (defun aumentar-altura-ponto (par fator)
