@@ -22,3 +22,17 @@
 *** ver uso polifônico de contornos
 *** implementar 'possiveis contornos a partir de um tipo de CAS, CASV, CC, CIA, CCVI e CCVII'
 *** implementar subconjuntos de cc
+
+* férias
+
+** refatorar o codigo
+*** terminar os testes de unidade
+*** dividir as funcoes por nivel: funcoes para pontos, para contornos, para listas
+*** documentar as funcoes de maneira formal
+*** implementar funcoes usando orientacao a objeto (metodos) - ver objetos.lisp
+
+** implementar as funções
+*** começar pelo mais simples e documentar o que ficar em segundo plano
+
+* pedro
+** criar lily->contorno e contorno->lily
