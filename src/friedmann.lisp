@@ -69,10 +69,27 @@ class (CC)"
      (loop for x from -1 downto (- max)
         collect (count x lista-negativa)))))
 
+(defun ccv-aux (par)
+  "retorna a soma de valores de um par de listas"
+  (let* ((soma-positivo (apply #'+ (first par)))
+         (soma-negativo (apply #'+ (second par))))
+    (list soma-positivo soma-negativo)))
+
 (defun ccvii (cc)
   "retorna a countour class vector ii (ccvii) de uma contour
 class (cc). par com soma dos ci de um cia"
-  (let* ((var-cia (cia cc))
-        (soma-positivo (apply #'+ (first var-cia)))
-        (soma-negativo (apply #'+ (second var-cia))))
-    (list soma-positivo soma-negativo)))
+  (list (ccv-aux (cia cc))))
+  
+(let* ((cc '(1 0 3 2))
+       (cia (cia cc))
+       (tamanho (length (first cia)))
+       (primeiro (loop for
+                    n from 0 to (- tamanho 1)
+                    collect (* (1+ n)  (nth n (first cia)))))
+       (segundo (loop for
+                   n from 0 to (- tamanho 1)
+                   collect (* (1+ n)  (nth n (second cia))))))
+  (list primeiro segundo))
+
+       
+       
