@@ -17,3 +17,8 @@
 *** usar lista de alturas ao invés de lista de pontos contorno A1 (1 0), A2 (1 2 0)
 *** usar o número 12 para mapear o contorno
 
+* para fazer
+** friedmann
+*** ver uso polifônico de contornos
+*** implementar 'possiveis contornos a partir de um tipo de CAS, CASV, CC, CIA, CCVI e CCVII'
+*** implementar subconjuntos de cc
