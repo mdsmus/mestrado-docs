@@ -1,5 +1,42 @@
 (in-package #:goiaba)
 
+;; funções relacionadas a listas
+
+(defun rotate (conjunto &optional (n 1))
+  (let ((modn (mod n (length conjunto))))
+    (append (subseq conjunto modn) (subseq conjunto 0 modn))))
+
+(defun intervalo (membro1 membro2)
+  "retorna a diferenca entre membros"
+   (- membro2 membro1))
+
+(defun intervalos (pares)
+  "retorna os intervalos entre membros de uma lista"
+  (subseq (mapcar #'intervalo pares (rotate pares)) 0 (- (length pares) 1)))
+
+(defun subtrai-membros (a b)
+  (- a b))
+  
+(defun subtrai-lista-indice (lista indice)
+  (mapcar #'(lambda (x) (subtrai-membros x indice)) lista))
+
+(defun matriz (serie)
+  (mapcar #'(lambda (membro) (subtrai-lista-indice serie membro)) serie))
+
+(defun inverter-membro (membro eixo)
+  (- (* 2 eixo) membro))
+
+(defun inverter-lista (lista eixo)
+  (mapcar #'(lambda (membro) (inverter-membro membro eixo)) lista))
+
+(defun ponto-medio-lista (lista)
+  "retorna o ponto médio de uma lista (média aritmética)"
+  (let ((maior (apply #'max lista))
+        (menor (apply #'min lista)))
+    (/ (+ maior menor) 2)))
+
+;; funções relacionadas a pares
+
 (defun ponto-medio-x (pares)
   "retorna o ponto medio de um contorno - x"
   (let ((maior (first (sort (mapcar #'first pares) #'>)))
@@ -18,19 +55,11 @@
         (y (second par)))
     (list x (+ y fator))))
 
-(defun transpor-contorno (pares fator)
-  "transpoe todas as pontos de um contorno"
-  (mapcar #'(lambda (par) (transpor-ponto par fator)) pares))
-
 (defun inverter-ponto (par eixo)
   "inverte um ponto de contorno"
   (let ((x (first par))
         (y (second par)))
     (list x (- (* 2 eixo) y))))
-
-(defun inverter-contorno (pares eixo)
-  "inverte todas as pontos de um contorno"
-  (mapcar #'(lambda (par) (inverter-ponto par eixo)) pares))
 
 (defun retrogradar-ponto (par eixo)
   "retrograda as pontos de um contorno"
@@ -38,20 +67,11 @@
         (y (second par)))
     (list (- (* 2 eixo) x) y)))
 
-(defun retrogradar-contorno (pares)
-  "retrograda um contorno"
-  (reverse
-   (mapcar #'(lambda (par) (retrogradar-ponto par (ponto-medio-x pares))) pares)))
-
 (defun aumentar-altura-ponto (par fator)
   "aumenta a altura de um ponto por multiplicacao por fator"
   (let ((x (first par))
         (y (second par)))
     (list x (* y fator))))
-
-(defun aumentar-altura (pares fator)
-  "aumenta a altura de um contorno por multiplicacao por fator"
-  (mapcar #'(lambda (par) (aumentar-altura-ponto par fator)) pares))
 
 ;; FIXME: a abstracao da aumentacao de duracao esta errada
 (defun aumentar-duracao-ponto (par fator)
@@ -59,6 +79,25 @@
   (let ((x (first par))
         (y (second par)))
     (list (* x fator) y)))
+
+;; funções relacionadas a contornos
+
+(defun transpor-contorno (pares fator)
+  "transpoe todas as pontos de um contorno"
+  (mapcar #'(lambda (par) (transpor-ponto par fator)) pares))
+
+(defun inverter-contorno (pares eixo)
+  "inverte todas as pontos de um contorno"
+  (mapcar #'(lambda (par) (inverter-ponto par eixo)) pares))
+
+(defun retrogradar-contorno (pares)
+  "retrograda um contorno"
+  (reverse
+   (mapcar #'(lambda (par) (retrogradar-ponto par (ponto-medio-x pares))) pares)))
+
+(defun aumentar-altura (pares fator)
+  "aumenta a altura de um contorno por multiplicacao por fator"
+  (mapcar #'(lambda (par) (aumentar-altura-ponto par fator)) pares))
 
 (defun aumentar-duracao (pares fator)
   "aumenta a duracao de um contorno por multiplicacao por fator"
@@ -94,36 +133,3 @@ crescente a partir de x"
 (defun remover-alturas-repetidas (pares)
   "remove os pontos que tem alturas repetidas"
   (remove-duplicates pares :key #'second :from-end t))
-
-(defun rotate (conjunto &optional (n 1))
-  (let ((modn (mod n (length conjunto))))
-    (append (subseq conjunto modn) (subseq conjunto 0 modn))))
-
-(defun intervalo (membro1 membro2)
-  "retorna a diferenca entre membros"
-   (- membro2 membro1))
-
-(defun intervalos (pares)
-  "retorna os intervalos entre membros de uma lista"
-  (subseq (mapcar #'intervalo pares (rotate pares)) 0 (- (length pares) 1)))
-
-(defun subtrai-membros (a b)
-  (- a b))
-  
-(defun subtrai-lista-indice (lista indice)
-  (mapcar #'(lambda (x) (subtrai-membros x indice)) lista))
-
-(defun matriz (serie)
-  (mapcar #'(lambda (membro) (subtrai-lista-indice serie membro)) serie))
-
-(defun inverter-membro (membro eixo)
-  (- (* 2 eixo) membro))
-
-(defun inverter-lista (lista eixo)
-  (mapcar #'(lambda (membro) (inverter-membro membro eixo)) lista))
-
-(defun ponto-medio-lista (lista)
-  "retorna o ponto médio de uma lista (média aritmética)"
-  (let ((maior (apply #'max lista))
-        (menor (apply #'min lista)))
-    (/ (+ maior menor) 2)))
