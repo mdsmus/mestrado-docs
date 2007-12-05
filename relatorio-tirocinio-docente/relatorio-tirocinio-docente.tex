@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage[utf8,utf8x]{inputenc}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[brazil]{babel}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{colortbl}
+
+% usar para termos estrangeiros
+\newcommand{\eng}[1]{\textit{#1}}
+
+% usar para nomes de obras
+\newcommand{\opus}[1]{\textit{#1}}
+
+% usar para nomes de termos
+\newcommand{\termo}[1]{\textit{#1}}
+
+\newcommand{\ok}{
+  \multicolumn{1}{>{\columncolor[gray]{.6}}c}{}
+}
+
+\newcommand{\tri}[1]{
+  #1\textsuperscript{o} t
+}
+
+\begin{document}
+
+\setlength{\parindent}{0cm}
+
+%% cabecalho
+\large
+UNIVERSIDADE FEDERAL DA BAHIA \\
+ESCOLA DE MÚSICA \\
+PROGRAMA DE PÓS-GRADUAÇÃO \\
+MESTRADO EM COMPOSIÇÃO \\
+ORIENTADOR: Pedro Kröger \\
+ALUNO: Marcos da Silva Sampaio \\
+DATA: \today
+
+\thispagestyle{empty}
+\vspace{1cm}
+\begin{center}{
+    \Huge \textbf{Relatório de Tirocício Docente} \\
+}
+\vspace{12pt}
+{\Large Disciplina: Composição III (MUS110)}
+
+\end{center}
+\vspace{1cm}
+
+\section{Introdução}
+\label{sec:introducao}
+
+\section{Conteúdos}
+\label{sec:conteudos}
+
+\section{Objetivos}
+\label{sec:objetivos}
+
+O principal objetivo do trabalho foi levar os alunos a compreenderem e
+praticarem a exposição de uma idéia musical.
+
+\section{Justificativa}
+\label{sec:justificativa}
+
+\section{Metodologia}
+\label{sec:metodologia}
+
+\section{Recursos}
+\label{sec:recursos}
+
+\section{Avaliação}
+\label{sec:avaliacao}
+
+\section{Cronograma}
+\label{sec:cronograma}
+
+\renewcommand{\refname}{Bibliografia}
+
+\nocite{Beethoven1970,Heussenstamm1987,adler89:_study_orches,Kennan1997,stone80:_music_notat_twent_centur}
+
+\bibliography{mestrado}
+\bibliographystyle{plainurl-br}
+
+\end{document}
