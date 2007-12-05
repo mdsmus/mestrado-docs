@@ -3,13 +3,15 @@
 ;; funções relacionadas a elemento
 
 (defun intervalo (elemento1 elemento2)
-  "retorna a diferenca entre elementos"
-   (- elemento2 elemento1))
+  "Subtrai o primeiro elemento do segundo."
+  (- elemento2 elemento1))
 
 (defun subtrair-elementos (a b)
+  "Subtrai o segundo elemento do primeiro."
   (- a b))
 
 (defun inverter-elemento (elemento eixo)
+  "Faz inversão de um elemento em relação a um eixo dado."
   (- (* 2 eixo) elemento))
 
 ;; funções relacionadas a listas
@@ -22,7 +24,7 @@
   "retorna os intervalos entre elementos de uma lista"
   (subseq (mapcar #'intervalo lista (rotate lista)) 0 (- (length lista) 1)))
   
-(defun subtrai-lista-indice (lista indice)
+(defun subtrair-lista-indice (lista indice)
   (mapcar #'(lambda (x) (subtrair-elementos x indice)) lista))
 
 (defun inverter-lista (lista eixo)
