@@ -1,6 +1,24 @@
 (in-package :goiaba)
 (use-package :lisp-unit)
 
+(define-test intervalo
+  (assert-equal 1 (intervalo 1 2))
+  (assert-equal -1 (intervalo 2 1))
+  )
+
+(define-test subtrair-elementos
+  (assert-equal 1 (subtrair-elementos 2 1))
+  (assert-equal -1 (subtrair-elementos 1 2))
+  )
+
+(define-test inverter-elemento
+  (assert-equal 3 (inverter-elemento 1 2))
+  (assert-equal -1 (inverter-elemento 1 0))
+  (assert-equal 1 (inverter-elemento 3 2))
+  )
+
+;;
+
 (define-test ponto-medio-x
   (assert-equal 1 (ponto-medio-x '((0 1) (2 4))))
   (assert-equal 2 (ponto-medio-x '((0 1) (1 2) (2 4) (3 8) (4 12))))
