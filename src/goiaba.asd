@@ -11,6 +11,7 @@
                (:file "operacoes")
                (:file "plot")
                (:file "adams")
+               (:file "friedmann")
                (:file "morris")
                (:file "test-operacoes")
                (:file "test-adams")
