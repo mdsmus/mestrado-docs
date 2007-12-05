@@ -1,33 +1,32 @@
 (in-package #:goiaba)
 
+;; funções relacionadas a elemento
+
+(defun intervalo (elemento1 elemento2)
+  "retorna a diferenca entre elementos"
+   (- elemento2 elemento1))
+
+(defun subtrair-elementos (a b)
+  (- a b))
+
+(defun inverter-elemento (elemento eixo)
+  (- (* 2 eixo) elemento))
+
 ;; funções relacionadas a listas
 
-(defun rotate (conjunto &optional (n 1))
-  (let ((modn (mod n (length conjunto))))
-    (append (subseq conjunto modn) (subseq conjunto 0 modn))))
+(defun rotate (lista &optional (n 1))
+  (let ((modn (mod n (length lista))))
+    (append (subseq lista modn) (subseq lista 0 modn))))
 
-(defun intervalo (membro1 membro2)
-  "retorna a diferenca entre membros"
-   (- membro2 membro1))
-
-(defun intervalos (pares)
-  "retorna os intervalos entre membros de uma lista"
-  (subseq (mapcar #'intervalo pares (rotate pares)) 0 (- (length pares) 1)))
-
-(defun subtrai-membros (a b)
-  (- a b))
+(defun intervalos (lista)
+  "retorna os intervalos entre elementos de uma lista"
+  (subseq (mapcar #'intervalo lista (rotate lista)) 0 (- (length lista) 1)))
   
 (defun subtrai-lista-indice (lista indice)
-  (mapcar #'(lambda (x) (subtrai-membros x indice)) lista))
-
-(defun matriz (serie)
-  (mapcar #'(lambda (membro) (subtrai-lista-indice serie membro)) serie))
-
-(defun inverter-membro (membro eixo)
-  (- (* 2 eixo) membro))
+  (mapcar #'(lambda (x) (subtrair-elementos x indice)) lista))
 
 (defun inverter-lista (lista eixo)
-  (mapcar #'(lambda (membro) (inverter-membro membro eixo)) lista))
+  (mapcar #'(lambda (elemento) (inverter-elemento elemento eixo)) lista))
 
 (defun ponto-medio-lista (lista)
   "retorna o ponto médio de uma lista (média aritmética)"
