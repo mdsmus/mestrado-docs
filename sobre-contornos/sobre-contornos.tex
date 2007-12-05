@@ -109,12 +109,20 @@ valor +2, um de valor +3, dois de valor -1 e nenhum de valores -2 e
 \paragraph{Contour Class Vector I (CCVI)}
 \label{sec:contour-class-vector-1}
 
-Vetor de classe de contorno I
+Vetor de classe de contorno I. É um par de números que representa o
+grau de ascendência e descendência de uma classe de contorno (CC). É
+obtido através da soma da multiplicação do número de ocorrências de
+cada intervalo de contorno (CI) pelo próprio valor do intervalo. Por
+exemplo, em um CIA ((1 2 1)(2 0 0)) CCVI = (8 2).
 
 \paragraph{Contour Class Vector II (CCVII)}
 \label{sec:contour-class-vector-2}
 
-Vetor de classe de contorno II
+Vetor de classe de contorno II. É um par de números que representa o
+grau de ascendência e descendência de uma classe de contorno (CC). É
+obtido através da soma dos valores positivos e negativos das
+ocorrências de intervalos de contorno (CI). Por exemplo, em um CIA ((1
+2 1)(2 0 0)), CCVII = (8 2)
 
 \bibliography{mestrado}
 \bibliographystyle{plainurl-br}
