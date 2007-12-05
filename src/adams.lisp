@@ -1,5 +1,6 @@
 (in-package #:goiaba)
 
+;; FIXME: inserir recorrencia
 (defun reduzir-contorno (pares)
   "reduz pontos de um contorno a ponto inicial, final, ponto mais
 alto e mais baixo"
