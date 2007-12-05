@@ -77,19 +77,18 @@ class (CC)"
 
 (defun ccvii (cc)
   "retorna a countour class vector ii (ccvii) de uma contour
-class (cc). par com soma dos ci de um cia"
+class (cc)"
   (list (ccv-aux (cia cc))))
-  
-(let* ((cc '(1 0 3 2))
-       (cia (cia cc))
-       (tamanho (length (first cia)))
-       (primeiro (loop for
-                    n from 0 to (- tamanho 1)
-                    collect (* (1+ n)  (nth n (first cia)))))
-       (segundo (loop for
-                   n from 0 to (- tamanho 1)
-                   collect (* (1+ n)  (nth n (second cia))))))
-  (list primeiro segundo))
 
-       
-       
+(defun ccvi (cc)
+  "retorna a countour class vector i (ccvi) de uma contour
+class (cc)"
+  (let* ((cia (cia cc))
+         (tamanho (length (first cia)))
+         (primeiro (loop for
+                      n from 0 to (- tamanho 1)
+                      collect (* (1+ n)  (nth n (first cia)))))
+         (segundo (loop for
+                     n from 0 to (- tamanho 1)
+                     collect (* (1+ n)  (nth n (second cia))))))
+    (ccv-aux (list primeiro segundo))))
