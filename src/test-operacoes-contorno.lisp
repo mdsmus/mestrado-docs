@@ -66,7 +66,10 @@
   (assert-equal '((0 1) (2 0)) (aumentar-duracao '((0 1) (1 0)) 2))
   )
 
-;; inserir rotar-contorno
+(define-test rotar-contorno
+  (assert-equal '((0 6) (1 5) (2 1) (3 4) (4 0)) (rotar-contorno '((0 1) (1 4) (2 0) (3 6) (4 5)) 3))
+  (assert-equal '((0 0) (1 2) (2 1)) (rotar-contorno '((0 1) (1 0) (2 2))))
+  )
 
 (define-test ordena-crescente-duracao
   (assert-equal '((0 1) (1 2)) (ordena-crescente-duracao '((1 2) (0 1))))

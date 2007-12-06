@@ -73,7 +73,7 @@ dado fator."
   "Multiplica a duração de um contorno por um dado fator."
   (mapcar #'(lambda (par) (aumentar-duracao-ponto par fator)) pares))
 
-(defun rotar-contorno (pares fator)
+(defun rotar-contorno (pares &optional (fator 1))
   "Rotaciona um contorno a partir de um dado fator."
   (let* ((x-pares (mapcar #'first pares))
          (y-pares (mapcar #'second pares))
