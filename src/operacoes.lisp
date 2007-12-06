@@ -17,21 +17,25 @@
 ;; funções relacionadas a listas
 
 (defun rotate (lista &optional (n 1))
-  (let ((modn (mod n (length lista))))
-    (append (subseq lista modn) (subseq lista 0 modn))))
+  "Rotaciona uma lista a partir de um de seus elementos."
+  (let ((modulo-n (mod n (length lista))))
+    (append (subseq lista modulo-n) (subseq lista 0 modulo-n))))
 
 (defun intervalos (lista)
-  "retorna os intervalos entre elementos de uma lista"
+  "Retorna os intervalos entre elementos de uma lista."
   (subseq (mapcar #'intervalo lista (rotate lista)) 0 (- (length lista) 1)))
   
 (defun subtrair-lista-indice (lista indice)
+  "Subtrai todos os elementos de uma lista de um índice."
   (mapcar #'(lambda (x) (subtrair-elementos x indice)) lista))
 
 (defun inverter-lista (lista eixo)
+  "Inverte os elementos de uma lista em torno de um eixo dado."
   (mapcar #'(lambda (elemento) (inverter-elemento elemento eixo)) lista))
 
 (defun ponto-medio-lista (lista)
-  "retorna o ponto médio de uma lista (média aritmética)"
+  "Retorna a média entre o maior e o menor valor de elementos de
+uma lista."
   (let ((maior (apply #'max lista))
         (menor (apply #'min lista)))
     (/ (+ maior menor) 2)))
