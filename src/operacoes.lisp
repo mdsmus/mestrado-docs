@@ -40,6 +40,12 @@ uma lista."
         (menor (apply #'min lista)))
     (/ (+ maior menor) 2)))
 
+;; FIXME: fazer lidar com duracao
+(defun rotaciona-lista (lista &optional (n 1))
+  "Faz a rotação de elementos de uma lista"
+  (let ((mod-n (mod n (length lista))))
+    (append (subseq lista mod-n) (subseq lista 0 mod-n))))
+
 ;; funções relacionadas a pares
 
 (defun ponto-medio-duracao (pares)
@@ -128,12 +134,6 @@ valores de duração."
 (defun insere-ponto (contorno par)
   "Insere um ponto em um contorno de um único segmento."
   (ordena-crescente-duracao (append (list (first contorno)) (list par) (list (second contorno)))))
-
-;; FIXME: fazer lidar com duracao
-(defun rotaciona-lista (lista &optional (n 1))
-  "Faz a rotação de elementos de uma lista"
-  (let ((mod-n (mod n (length lista))))
-    (append (subseq lista mod-n) (subseq lista 0 mod-n))))
 
 (defun remover-duplicatas (pares)
   "Remove duplicatas de uma lista de pares e coloca em ordem
