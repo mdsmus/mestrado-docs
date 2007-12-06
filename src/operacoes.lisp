@@ -80,7 +80,6 @@ de um dado eixo. Esta função é útil para retrogradar um contorno."
         (y (second par)))
     (list x (* y fator))))
 
-;; FIXME: a abstracao da aumentacao de duracao esta errada
 (defun aumentar-duracao-ponto (par fator)
   "Multiplica a duração de um ponto por um dado fator."
   (let ((x (first par))
@@ -90,41 +89,45 @@ de um dado eixo. Esta função é útil para retrogradar um contorno."
 ;; funções relacionadas a contornos
 
 (defun transpor-contorno (pares fator)
-  "transpoe todas as pontos de um contorno"
+  "Transpõe todos os pontos de um contorno a partir de um dado fator."
   (mapcar #'(lambda (par) (transpor-ponto par fator)) pares))
 
 (defun inverter-contorno (pares eixo)
-  "inverte todas as pontos de um contorno"
+  "Inverte todos os pontos de um contorno em relação à altura a
+partir de um dado eixo."
   (mapcar #'(lambda (par) (inverter-ponto par eixo)) pares))
 
 (defun retrogradar-contorno (pares)
-  "retrograda um contorno"
+  "Retrograda um contorno. É o mesmo que inverter o contorno em
+relação à duração a partir do seu ponto médio."
   (reverse
    (mapcar #'(lambda (par) (retrogradar-ponto par (ponto-medio-duracao pares))) pares)))
 
 (defun aumentar-altura (pares fator)
-  "aumenta a altura de um contorno por multiplicacao por fator"
+  "Multiplica a altura de todos os pares de um contorno por um
+dado fator."
   (mapcar #'(lambda (par) (aumentar-altura-ponto par fator)) pares))
 
+;; FIXME: a abstracao da aumentacao de duracao esta errada
 (defun aumentar-duracao (pares fator)
-  "aumenta a duracao de um contorno por multiplicacao por fator"
+  "Multiplica a duração de um contorno por um dado fator."
   (mapcar #'(lambda (par) (aumentar-duracao-ponto par fator)) pares))
 
 (defun rotar-contorno (pares fator)
-  "rotaciona contorno a partir de um dado fator"
+  "Rotaciona um contorno a partir de um dado fator."
   (let* ((x-pares (mapcar #'first pares))
          (y-pares (mapcar #'second pares))
          (y-rotado (append (subseq y-pares fator) (subseq y-pares 0 fator))))
     (mapcar #'list x-pares y-rotado)))
 
-(defun ordena-crescente-x (pares)
-  "Ordena pares de um contorno de forma crescente a partir dos
-valores de x"
+(defun ordena-crescente-duracao (pares)
+  "Ordena os pontos de um contorno de forma crescente a partir dos
+valores de duração."
   (sort pares #'< :key #'first))
 
 (defun insere-ponto (contorno par)
-  "Insere um par no 'meio' de um contorno de um único segmento."
-  (ordena-crescente-x (append (list (first contorno)) (list par) (list (second contorno)))))
+  "Insere um ponto em um contorno de um único segmento."
+  (ordena-crescente-duracao (append (list (first contorno)) (list par) (list (second contorno)))))
 
 ;; FIXME: fazer lidar com duracao
 (defun rotaciona-lista (lista &optional (n 1))
@@ -133,10 +136,10 @@ valores de x"
     (append (subseq lista mod-n) (subseq lista 0 mod-n))))
 
 (defun remover-duplicatas (pares)
-  "remove duplicatas de uma lista de pares e coloca em ordem
-crescente a partir de x"
+  "Remove duplicatas de uma lista de pares e coloca em ordem
+crescente a partir de x."
   (remove-duplicates pares :key #'first :from-end t))
 
 (defun remover-alturas-repetidas (pares)
-  "remove os pontos que tem alturas repetidas"
+  "Remove os pontos de um contorno que têm alturas repetidas."
   (remove-duplicates pares :key #'second :from-end t))

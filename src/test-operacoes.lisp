@@ -106,10 +106,10 @@
   (assert-equal '((0 1) (2 0)) (aumentar-duracao '((0 1) (1 0)) 2))
   )
 
-(define-test ordena-crescente-x
-  (assert-equal '((0 1) (1 2)) (ordena-crescente-x '((1 2) (0 1))))
-  (assert-equal '((0 1) (1 2) (3 8)) (ordena-crescente-x '((1 2) (0 1) (3 8))))
-  (assert-equal '((0 1) (1 2) (2 5) (3 8)) (ordena-crescente-x '((1 2) (0 1) (3 8) (2 5))))
+(define-test ordena-crescente-duracao
+  (assert-equal '((0 1) (1 2)) (ordena-crescente-duracao '((1 2) (0 1))))
+  (assert-equal '((0 1) (1 2) (3 8)) (ordena-crescente-duracao '((1 2) (0 1) (3 8))))
+  (assert-equal '((0 1) (1 2) (2 5) (3 8)) (ordena-crescente-duracao '((1 2) (0 1) (3 8) (2 5))))
   )
 
 (define-test insere-ponto
