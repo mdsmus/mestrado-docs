@@ -42,45 +42,47 @@ uma lista."
 
 ;; funções relacionadas a pares
 
-(defun ponto-medio-x (pares)
-  "retorna o ponto medio de um contorno - x"
+(defun ponto-medio-duracao (pares)
+  "Retorna o ponto médio de um contorno em relação à duração."
   (let ((maior (first (sort (mapcar #'first pares) #'>)))
         (menor (first (sort (mapcar #'first pares) #'<))))
     (/ (+ maior menor) 2)))
 
-(defun ponto-medio-y (pares)
-    "retorna o ponto medio de um contorno - y"
+(defun ponto-medio-altura (pares)
+    "Retorna o ponto médio de um contorno em relação à altura."
   (let ((maior (first (sort (mapcar #'second pares) #'>)))
         (menor (first (sort (mapcar #'second pares) #'<))))
     (/ (+ maior menor) 2)))
 
 (defun transpor-ponto (par fator)
-  "transpoe um ponto de um contorno"
+  "Transpõe um ponto de um contorno a partir de um dado fator."
   (let ((x (first par))
         (y (second par)))
     (list x (+ y fator))))
 
 (defun inverter-ponto (par eixo)
-  "inverte um ponto de contorno"
+  "Inverte um ponto de um contorno em relação à altura a partir
+de um dado eixo."
   (let ((x (first par))
         (y (second par)))
     (list x (- (* 2 eixo) y))))
 
 (defun retrogradar-ponto (par eixo)
-  "retrograda as pontos de um contorno"
+  "Inverte um ponto de um contorno em relação à duração a partir
+de um dado eixo. Esta função é útil para retrogradar um contorno."
   (let ((x (first par))
         (y (second par)))
     (list (- (* 2 eixo) x) y)))
 
 (defun aumentar-altura-ponto (par fator)
-  "aumenta a altura de um ponto por multiplicacao por fator"
+  "Multiplica a altura de um ponto por um dado fator."
   (let ((x (first par))
         (y (second par)))
     (list x (* y fator))))
 
 ;; FIXME: a abstracao da aumentacao de duracao esta errada
 (defun aumentar-duracao-ponto (par fator)
-  "aumenta a duracao de um ponto por multiplicacao por fator"
+  "Multiplica a duração de um ponto por um dado fator."
   (let ((x (first par))
         (y (second par)))
     (list (* x fator) y)))
@@ -98,7 +100,7 @@ uma lista."
 (defun retrogradar-contorno (pares)
   "retrograda um contorno"
   (reverse
-   (mapcar #'(lambda (par) (retrogradar-ponto par (ponto-medio-x pares))) pares)))
+   (mapcar #'(lambda (par) (retrogradar-ponto par (ponto-medio-duracao pares))) pares)))
 
 (defun aumentar-altura (pares fator)
   "aumenta a altura de um contorno por multiplicacao por fator"

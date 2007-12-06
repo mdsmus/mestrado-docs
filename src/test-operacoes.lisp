@@ -41,19 +41,19 @@
   )
 
 (define-test ponto-medio-lista
-  (assert-equal 3 (ponto-medio-lista '(1 3 2 4 5 7)))
-  (assert-equal 3 (ponto-medio-lista '(1 7)))
+  (assert-equal 4 (ponto-medio-lista '(1 3 2 4 5 7)))
+  (assert-equal 4 (ponto-medio-lista '(1 7)))
   (assert-equal 4 (ponto-medio-lista '(1 0 8 7)))
   )
 
-(define-test ponto-medio-x
-  (assert-equal 1 (ponto-medio-x '((0 1) (2 4))))
-  (assert-equal 2 (ponto-medio-x '((0 1) (1 2) (2 4) (3 8) (4 12))))
+(define-test ponto-medio-duracao
+  (assert-equal 1 (ponto-medio-duracao '((0 1) (2 4))))
+  (assert-equal 2 (ponto-medio-duracao '((0 1) (1 2) (2 4) (3 8) (4 12))))
   )
 
-(define-test ponto-medio-y
-  (assert-equal 3 (ponto-medio-y '((0 1) (2 5))))
-  (assert-equal 6 (ponto-medio-y '((0 0) (1 2) (2 4) (3 8) (4 12))))
+(define-test ponto-medio-altura
+  (assert-equal 3 (ponto-medio-altura '((0 1) (2 5))))
+  (assert-equal 6 (ponto-medio-altura '((0 0) (1 2) (2 4) (3 8) (4 12))))
   )
 
 (define-test transpor-ponto
