@@ -30,7 +30,7 @@ espaço de contorno (Contour Space ou c-space)."
          collect (list x n)) #'< :key #'first))))
 
 (defun inverter-cc (cc)
-  "Inverte de uma Contour Class (CC)."
+  "Inverte uma Contour Class (CC)."
     (inverter-lista cc (ponto-medio-lista cc)))
 
 (defun cis-cc (cc)
