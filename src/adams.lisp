@@ -2,8 +2,9 @@
 
 ;; FIXME: inserir recorrencia
 (defun reducao-adams (pares)
-  "reduz pontos de um contorno a ponto inicial, final, ponto mais
-alto e mais baixo"
+  "Faz redução de contorno sugerida por Adams
+\cite{adams1976mct}. Reduz um contorno a quatro pontos: ponto
+inicial, final, mais alto e mais baixo."
   (let* ((primeiro (first pares))
          (ultimo (first (reverse pares)))
          (mais-agudo (first (sort pares #'> :key #'second)))
@@ -11,8 +12,9 @@ alto e mais baixo"
     (remover-duplicatas (sort (list primeiro mais-agudo mais-grave ultimo) #'< :key #'first))))
 
 (defun inclinacoes-contorno (pares)
-  "retorna o valor de inclinacao entre todos os pares de um
-contorno"
+  "Retorna as diferenças de altura entre os pontos de um
+contorno, ou seja, as inclinações entre os pontos de um contorno
+em valores absolutos."
   (let* ((tamanho (length pares))
          (lista (mapcar #'second pares)))
     (subseq
@@ -20,9 +22,10 @@ contorno"
      0 (- tamanho 1))))
 
 (defun inclinacoes-contorno-positivo-negativo (pares)
-  "retorna 1 e -1 para inclinacoes positivas e
-negativas. semelhante a contour adjacency series (cas), de
-friedmann"
+  "Retorna valores 1, 0 e -1 para inclinação positiva, nula e
+negativa entre pontos de um contorno. Friedmann
+\cite{friedmann85:_method_discus_contour} chama esta opeçaão de
+Contour Adjacency Series (CAS)."
   (mapcar #'(lambda (inclinacao) (if (zerop inclinacao)
                                 0
                                 (/ inclinacao (abs inclinacao))))
