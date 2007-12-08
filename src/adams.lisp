@@ -23,9 +23,9 @@ em valores absolutos."
 
 (defun inclinacoes-contorno-positivo-negativo (pares)
   "Retorna valores 1, 0 e -1 para inclinação positiva, nula e
-negativa entre pontos de um contorno. Friedmann
-\cite{friedmann85:_method_discus_contour} chama esta opeçaão de
-Contour Adjacency Series (CAS)."
+negativa entre pontos de um contorno. É semelhante à função
+definida por Friedmann \cite{friedmann85:_method_discus_contour}
+como Contour Adjacency Series (CAS)."
   (mapcar #'(lambda (inclinacao) (if (zerop inclinacao)
                                 0
                                 (/ inclinacao (abs inclinacao))))
