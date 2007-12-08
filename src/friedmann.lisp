@@ -1,19 +1,21 @@
 (in-package #:goiaba)
 
 (defun cas (pares)
-  "retorna a contour adjacency series de um contorno. o mesmo que
-inclinacoes-contorno-positivo-negativo"
+  "Retorna a Contour Adjacency Series (CAS) de um
+contorno. Diferente da função
+inclinacoes-contorno-positivo-negativo, as inclinações nulas são
+ignoradas."
   (remove 0 (inclinacoes-contorno-positivo-negativo pares)))
 
 (defun casv (cas)
-  "retorna o vetor de contour adjacency series a partir de uma
-cas"
+  "Retorna o Contour Adjacency Series Vector (CASV) de uma
+Contour Adjacency Series (CAS)."
   (let* ((positivos (length (remove -1 cas)))
            (negativos (length (remove 1 cas))))
          (list positivos negativos)))
 
 (defun inverter-cas (cas)
-  "inverte uma contour adjacency series"
+  "Inverte uma Contour Adjacency Series (CAS)."
   (mapcar #'(lambda (x) (* x -1)) cas))
 
 (defun cc (pares)
@@ -28,30 +30,23 @@ espaço de contorno (Contour Space ou c-space)."
          collect (list x n)) #'< :key #'first))))
 
 (defun inverter-cc (cc)
-  "retorna a inversao de uma contour class (CC)"
+  "Inverte de uma Contour Class (CC)."
     (inverter-lista cc (ponto-medio-lista cc)))
 
-(defun inclinacoes-cc (cc)
-  "retorna o valor de inclinacao entre todos os elementos de uma cc"
-  (let* ((tamanho (length cc)))
-    (subseq
-     (mapcar #'(lambda (a b) (- a b)) (rotate cc) cc)
-     0 (- tamanho 1))))
+(defun cis-cc (cc)
+  "Retorna os Contour Interval (CI) de uma Contour Class (CC)."
+  (intervalos cc))
 
 (defun cas-cc (cc)
-    "retorna a cas de um contorno a partir de sua cc"
+  "Retorna a Contour Adjacency Series (CAS) de um contorno a
+partir de sua Contour Class (CC)."
   (mapcar #'(lambda (inclinacao) (if (zerop inclinacao)
                                 0
                                 (/ inclinacao (abs inclinacao))))
-          (inclinacoes-cc cc)))
-
-(defun cis-cc (cc)
-  "retorna os intervalos de contorno (CI) de uma contour class (CC)"
-  (intervalos cc))
+          (cis-cc cc)))
 
 (defun cia-aux (cc)
-  "conta os intervalos de contorno (CI) de uma contour
-class (CC)"
+  "Conta os Contour Interval (CI) de uma Contour Class (CC)."
   (if (atom cc)
       cc
       (let ((primeiro (first cc)))
@@ -59,8 +54,8 @@ class (CC)"
                 (cia-aux (rest cc))))))
 
 (defun cia (cc)
-  "retorna a contour interval array (CIA) de uma contour
-class (CC)"
+  "Retorna a Contour Interval Array (CIA) de uma Contour
+Class (CC)."
   (let* ((lista (cia-aux cc))
          (max (apply #'max cc))
          (lista-negativa (remove-if #'plusp lista))
@@ -72,19 +67,19 @@ class (CC)"
         collect (count x lista-negativa)))))
 
 (defun ccv-aux (par)
-  "retorna a soma de valores de um par de listas"
+  "Retorna a soma de valores de um par de listas."
   (let* ((soma-positivo (apply #'+ (first par)))
          (soma-negativo (apply #'+ (second par))))
     (list soma-positivo soma-negativo)))
 
 (defun ccvii (cc)
-  "retorna a countour class vector ii (ccvii) de uma contour
-class (cc)"
+    "Retorna o Countour Class Vector II (CCVII) de uma Contour
+Class (cc)."
   (list (ccv-aux (cia cc))))
 
 (defun ccvi (cc)
-  "retorna a countour class vector i (ccvi) de uma contour
-class (cc)"
+  "Retorna o Countour Class Vector I (CCVI) de uma Contour
+Class (cc)."
   (let* ((cia (cia cc))
          (tamanho (length (first cia)))
          (primeiro (loop for
