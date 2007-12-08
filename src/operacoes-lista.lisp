@@ -39,9 +39,3 @@ uma lista."
   (let ((maior (apply #'max lista))
         (menor (apply #'min lista)))
     (/ (+ maior menor) 2)))
-
-;; FIXME: fazer lidar com duracao
-(defun rotaciona-lista (lista &optional (n 1))
-  "Faz a rotação de elementos de uma lista"
-  (let ((mod-n (mod n (length lista))))
-    (append (subseq lista mod-n) (subseq lista 0 mod-n))))

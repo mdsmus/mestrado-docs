@@ -16,7 +16,7 @@ contorno"
   (let* ((tamanho (length pares))
          (lista (mapcar #'second pares)))
     (subseq
-     (mapcar #'(lambda (a b) (- a b)) (rotaciona-lista lista) lista)
+     (mapcar #'(lambda (a b) (- a b)) (rotate lista) lista)
      0 (- tamanho 1))))
 
 (defun inclinacoes-contorno-positivo-negativo (pares)

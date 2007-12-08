@@ -17,8 +17,10 @@ cas"
   (mapcar #'(lambda (x) (* x -1)) cas))
 
 (defun cc (pares)
-  "retorna o valor de contour class de um contorno. o mesmo que
-normalizacao de contorno"
+  "Retorna o valor da classe de contorno (Contour Class) de um
+contorno. É o mesmo que normalização de contorno. Morris
+\cite{morris93:_new_direc_theor_analy_music_contour} chama de
+espaço de contorno (Contour Space ou c-space)."
   (let* ((pares-sorteados (sort (remover-alturas-repetidas pares) #'< :key #'second)))
     (mapcar #'second (sort (loop
          for (x y) in pares-sorteados
@@ -33,7 +35,7 @@ normalizacao de contorno"
   "retorna o valor de inclinacao entre todos os elementos de uma cc"
   (let* ((tamanho (length cc)))
     (subseq
-     (mapcar #'(lambda (a b) (- a b)) (rotaciona-lista cc) cc)
+     (mapcar #'(lambda (a b) (- a b)) (rotate cc) cc)
      0 (- tamanho 1))))
 
 (defun cas-cc (cc)

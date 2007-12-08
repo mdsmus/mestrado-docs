@@ -45,5 +45,3 @@
   (assert-equal 4 (ponto-medio-lista '(1 7)))
   (assert-equal 4 (ponto-medio-lista '(1 0 8 7)))
   )
-
-;; inserir rotaciona-lista
