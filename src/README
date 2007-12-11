@@ -1,10 +1,6 @@
 Para plotar um contorno usando as funções em plot.lisp crie um arquivo
 lisp separado (e.g. foo.lisp) com o seguinte conteudo:
 
-* isso carrega o arquivo plot.lisp
-
-(load "/home/kroger/doc/classes/orientacao-marcos/marcos-mestrado/src/plot.lisp")
-
 * define o diretório onde os arquivos de plotagem vao ser gerados (formato .eps)
 
 (defparameter *dir* "/tmp/")

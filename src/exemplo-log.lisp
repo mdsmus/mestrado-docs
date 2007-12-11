@@ -1,7 +1,5 @@
 (in-package #:goiaba)
 
-(load (concatenate 'string *main-dir* "operacoes.lisp"))
-
 (gera-b3 '((0 1) (1 0)))
 
 (gera 'b3 contorno)
