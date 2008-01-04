@@ -19,6 +19,13 @@
         (+ 3 up)
         (- 3 down))))
 
+(defun conta-oitava (oitavas)
+  (let ((up (count #\' oitavas))
+        (down (count #\, oitavas)))
+    (if (plusp up)
+        up
+        (- down))))
+
 (defun parse-oitava (oitava)
   (* 12 (oitava-absoluta oitava)))
 
@@ -26,6 +33,23 @@
   (cl-ppcre:register-groups-bind (nome acidente oitava dur)
       ("(c|d|e|f|g|a|b)([es|is]*)(['|,]*)(128|1|2|4|8|16|32|64)?" nota :sharedp t)
     (declare (ignore dur))
-    (+ (nota->numero nome) (conta-acidentes acidente) (parse-oitava oitava))))
+    (list (+ (nota->numero nome) (conta-acidentes acidente))
+          (conta-oitava oitava))))
 
-;; (mapcar #'parse-nota (cl-ppcre:split " " "c d e f g a b"))
+(defun aplicar-oitavas (oitava-relativa lista-de-notas)
+  (let ((oitava-global (parse-oitava oitava-relativa))
+        (oitava-anterior 0))
+    (loop for x in lista-de-notas
+       for nota-lista = (parse-nota x)
+       for nota = (first nota-lista)
+       for oitava = (second nota-lista)
+       collect (list nota (+ oitava-global (* 12 (+ oitava oitava-anterior))))
+       do (unless (zerop oitava)
+            (incf oitava-anterior oitava))
+       do (print (list nota oitava oitava-anterior)))))
+
+
+(defun parse-lily (string)
+  (cl-ppcre:register-groups-bind (oitava-relativa notas)
+      ("relative\\s+c(['|,]*)\\s+{(.*)}" string :sharedp t)
+    (aplicar-oitavas oitava-relativa (cl-ppcre:split "(\\s+)" (string-trim " " notas)))))
