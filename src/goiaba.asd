@@ -8,6 +8,7 @@
   :depends-on (:lisp-unit :cl-ppcre)
   :components (
                (:file "packages")
+               (:file "lily")
                (:file "operacoes-contorno")
                (:file "operacoes-lista")
                (:file "plot")
