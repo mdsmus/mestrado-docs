@@ -11,8 +11,9 @@ set terminal postscript eps enhanced
 set ylabel \"altura\"
 set xlabel \"tempo\"
 set output \"~a.eps\"
+set grid
 set nokey
-plot [~a:~a][~a:~a] '~a' with linespoints
+plot [~a:~a][~a:~a] '~a' with linespoints lw 4
 pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
 
 (defun contornos->file (contornos file)
