@@ -39,3 +39,10 @@ uma lista."
   (let ((maior (apply #'max lista))
         (menor (apply #'min lista)))
     (/ (+ maior menor) 2)))
+
+(defun lista-de-alturas->contorno (lista-de-alturas)
+  "Retorna um contorno a partir de uma lista de alturas."
+  (loop
+     for y in lista-de-alturas
+     for n from 0
+     collect (list n y)))
