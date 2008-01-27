@@ -40,9 +40,7 @@ espaço de contorno (Contour Space ou c-space)."
 (defun cas-cc (cc)
   "Retorna a Contour Adjacency Series (CAS) de um contorno a
 partir de sua Contour Class (CC)."
-  (mapcar #'(lambda (inclinacao) (if (zerop inclinacao)
-                                0
-                                (/ inclinacao (abs inclinacao))))
+  (mapcar #'(lambda (inclinacao) (positivo-ou-negativo inclinacao))
           (cis-cc cc)))
 
 (defun cia-aux (cc)

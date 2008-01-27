@@ -11,6 +11,4 @@ c-space."
        for y in c-space
        collect (loop
                   for x in c-space
-                  collect (if (zerop (- x y))
-                              0
-                              (/ (- x y) (abs (- x y)))))))
+                  collect (positivo-ou-negativo (- x y)))))
