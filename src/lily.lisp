@@ -58,6 +58,13 @@
 e valor de oitava."
   (mapcar (lambda (x) (reduce #'+ x)) lista-altura-oitava))
 
+(defun altura-relativa (lista-alturas-absolutas)
+  "Retorna pares com altura relativa e valor de oitava a partir de uma
+lista de alturas absolutas."
+  (loop
+     for x in lista-alturas-absolutas
+     collect (list (remainder x 12)(* 12 (floor x 12)))))
+
 (defun lily->contorno (string)
   "Retorna um contorno a partir de uma string em formato do Lilypond."
   (lista-de-alturas->contorno (altura-absoluta (parse-lily string))))
@@ -68,3 +75,4 @@ e valor de oitava."
     (plot-contorno contorno "Titulo" "foo"
                    0 (1- (length contorno)) y1 y2)))
 
+  
