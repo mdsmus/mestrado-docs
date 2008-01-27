@@ -48,7 +48,6 @@
             (incf oitava-anterior oitava))
        do (print (list nota oitava oitava-anterior)))))
 
-
 (defun parse-lily (string)
   (cl-ppcre:register-groups-bind (oitava-relativa notas)
       ("relative\\s+c(['|,]*)\\s+{(.*)}" string :sharedp t)
@@ -58,3 +57,14 @@
   "Retorna o valor absoluto de uma lista de pares com altura relativa
 e valor de oitava."
   (mapcar (lambda (x) (reduce #'+ x)) lista-altura-oitava))
+
+(defun lily->contorno (string)
+  "Retorna um contorno a partir de uma string em formato do Lilypond."
+  (lista-de-alturas->contorno (altura-absoluta (parse-lily string))))
+
+(defun plot-lily (string)
+  "Plota um contorno a partir de uma string em formato do Lilypond."
+  (let ((contorno (lily->contorno string)))
+    (plot-contorno contorno "Titulo" "foo"
+                   0 (1- (length contorno)) 0 80)))
+
