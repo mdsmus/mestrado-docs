@@ -56,8 +56,8 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
 (defun preview (&rest files)
   (sb-posix:chdir (pathname *dir*))
   (gera-tex files)
-  (sb-ext:run-program "/usr/bin/latex" (list "-interaction=nonstopmode" "preview.tex"))
-  (sb-ext:run-program "/usr/bin/dvips" (list "preview.dvi"))
+  (sb-ext:run-program "/opt/texlive/bin/latex" (list "-interaction=nonstopmode" "preview.tex"))
+  (sb-ext:run-program "/opt/texlive/bin/dvips" (list "preview.dvi"))
   (sb-ext:run-program "/usr/bin/gv" (list (concat *dir* "preview.ps"))))
 
 (defun plist-keys (plist)
@@ -86,18 +86,3 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
                  aumentar-altura ,aum-altura
                  aumentar-duracao ,aum-duracao
                  rotar-contorno ,rotar)))
-
-;;(retrogradar-contorno)
-#|
-    (plot-contorno contorno "contorno" "t0")
-    (plot-contorno (transpor-contorno contorno 1) "transposição" "t1")
-    (plot-contorno (inverter-contorno contorno 0) "inversão" "t2" 0 10 10 -10)
-    (plot-contorno (retrogradar-contorno contorno) "retrogado" "t3")
-    (plot-contorno (aumentar-altura contorno 2) "aumenta altura" "t4")
-    (plot-contorno (aumentar-duracao contorno 2) "aumenta duração" "t5")
-    (plot-contorno (rotar-contorno contorno 2) "rotar" "t6"))
-|#
-
-;; (defparameter *dir* "/tmp/")
-;; (plot-contorno '((0 1) (3 4) (2 8)) "Contorno 1" "resultado")
-;;(ver "resultado")
