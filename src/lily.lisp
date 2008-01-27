@@ -62,9 +62,9 @@ e valor de oitava."
   "Retorna um contorno a partir de uma string em formato do Lilypond."
   (lista-de-alturas->contorno (altura-absoluta (parse-lily string))))
 
-(defun plot-lily (string)
+(defun plot-lily (string &optional (y1 0) (y2 108))
   "Plota um contorno a partir de uma string em formato do Lilypond."
   (let ((contorno (lily->contorno string)))
     (plot-contorno contorno "Titulo" "foo"
-                   0 (1- (length contorno)) 0 80)))
+                   0 (1- (length contorno)) y1 y2)))
 
