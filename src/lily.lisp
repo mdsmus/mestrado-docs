@@ -53,3 +53,8 @@
   (cl-ppcre:register-groups-bind (oitava-relativa notas)
       ("relative\\s+c(['|,]*)\\s+{(.*)}" string :sharedp t)
     (aplicar-oitavas oitava-relativa (cl-ppcre:split "(\\s+)" (string-trim " " notas)))))
+
+(defun altura-absoluta (lista-altura-oitava)
+  "Retorna o valor absoluto de uma lista de pares com altura relativa
+e valor de oitava."
+  (mapcar (lambda (x) (reduce #'+ x)) lista-altura-oitava))
