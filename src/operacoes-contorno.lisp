@@ -97,3 +97,16 @@ crescente a partir de x."
 (defun remover-alturas-repetidas (pares)
   "Remove os pontos de um contorno que têm alturas repetidas."
   (remove-duplicates pares :key #'second :from-end t))
+
+(defun contorno->contorno-simples (pares)
+  "Retorna um contorno representado por uma lista de alturas a partir
+de um contorno representado por pares coordenados."
+  (mapcar #'second pares))
+
+(defun contorno-simples->contorno (lista-de-alturas)
+  "Retorna um contorno representado por pares coordenados a partir de
+uma lista de alturas (contorno simples)."
+  (loop
+     for elemento in lista-de-alturas
+     for n from 0 to (length lista-de-alturas)
+     collect (list n elemento)))
