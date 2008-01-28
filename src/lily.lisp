@@ -74,5 +74,3 @@ lista de alturas absolutas."
   (let ((contorno (lily->contorno string)))
     (plot-contorno contorno "Titulo" "foo"
                    0 (1- (length contorno)) y1 y2)))
-
-  

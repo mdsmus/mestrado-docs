@@ -7,8 +7,8 @@
 (defun com-matrix (c-space)
   "Retorna a matriz de comparacao de um contorno a partir de seu
 c-space."
-    (loop
-       for y in c-space
-       collect (loop
-                  for x in c-space
-                  collect (positivo-ou-negativo (- x y)))))
+  (loop
+     for y in c-space
+     collect (loop
+                for x in c-space
+                collect (positivo-ou-negativo (- x y)))))
