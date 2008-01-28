@@ -12,3 +12,11 @@ c-space."
      collect (loop
                 for x in c-space
                 collect (positivo-ou-negativo (- x y)))))
+
+(defun inverte-com-matrix (com-matrix)
+  "Retorna a inversão da matriz de comparação de um contorno."
+  (loop
+     for linha in com-matrix
+     collect (loop
+                  for elemento in linha
+                  collect (* -1 elemento))))
