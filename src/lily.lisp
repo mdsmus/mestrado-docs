@@ -74,3 +74,19 @@ lista de alturas absolutas."
   (let ((contorno-com-duracao (lily->contorno-com-duracao codigo-lily)))
     (plot-contorno contorno-com-duracao titulo arquivo
                    0 (1- (length contorno-com-duracao)) y1 y2)))
+
+(defun simple-lily->contorno-com-duracao (codigo-lily &optional (oitava-lily "'"))
+  "Retorna contorno-com-duracao a partir de uma string em formato
+  Lilypond em nível mais alto que lily->contorno-com-duracao."
+  (lily->contorno-com-duracao
+   (concat "\relative c" oitava-lily " {" codigo-lily "}")))
+
+(defun plot-simple-lily (codigo-lily
+                         &optional (oitava-lily "'")
+                         (y1 0) (y2 108) (titulo "Contorno")
+                         (arquivo "foo"))
+  "Plota um contorno a partir de uma string em formato Lilypond em
+nível mais alto de abstração que plot-lily."
+  (plot-lily
+   (concat "\relative c" oitava-lily " {" codigo-lily "}")
+   y1 y2 titulo arquivo))
