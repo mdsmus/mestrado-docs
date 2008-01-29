@@ -65,12 +65,12 @@ lista de alturas absolutas."
      for x in lista-alturas-absolutas
      collect (list (remainder x 12)(* 12 (floor x 12)))))
 
-(defun lily->contorno (codigo-lily)
+(defun lily->contorno-com-duracao (codigo-lily)
   "Retorna um contorno a partir de uma string em formato do Lilypond."
-  (lista-de-alturas->contorno (altura-absoluta (parse-lily codigo-lily))))
+  (lista-de-alturas->contorno-com-duracao (altura-absoluta (parse-lily codigo-lily))))
 
 (defun plot-lily (codigo-lily &optional (y1 0) (y2 108) (titulo "foo") (arquivo "foo"))
   "Plota um contorno a partir de uma string em formato do Lilypond."
-  (let ((contorno (lily->contorno codigo-lily)))
-    (plot-contorno contorno titulo arquivo
-                   0 (1- (length contorno)) y1 y2)))
+  (let ((contorno-com-duracao (lily->contorno-com-duracao codigo-lily)))
+    (plot-contorno contorno-com-duracao titulo arquivo
+                   0 (1- (length contorno-com-duracao)) y1 y2)))

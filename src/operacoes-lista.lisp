@@ -40,7 +40,7 @@ uma lista."
         (menor (apply #'min lista)))
     (/ (+ maior menor) 2)))
 
-(defun lista-de-alturas->contorno (lista-de-alturas)
+(defun lista-de-alturas->contorno-com-duracao (lista-de-alturas)
   "Retorna um contorno a partir de uma lista de alturas."
   (loop
      for y in lista-de-alturas
