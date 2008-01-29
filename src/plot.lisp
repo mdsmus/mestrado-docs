@@ -40,6 +40,7 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
 \\usepackage[top=1cm,bottom=1cm,left=1cm,right=1cm]{geometry}
 \\usepackage{graphicx}
 
+\\setlength{\\parindent}{0cm}
 \\begin{document}
 ")
     (loop
