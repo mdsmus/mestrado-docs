@@ -4,7 +4,7 @@
   "Numera as alturas de um contorno de 0 a n-1, sendo 0 o ponto mais
   grave e n-1 o mais agudo." )
 
-(defun com-matrix (c-space)
+(defun matriz-de-comparacao (c-space)
   "Retorna a matriz de comparacao de um contorno a partir de seu
 c-space."
   (loop
@@ -13,10 +13,10 @@ c-space."
                 for x in c-space
                 collect (positivo-ou-negativo (- x y)))))
 
-(defun inverte-com-matrix (com-matrix)
+(defun inverte-matriz-de-comparacao (matriz-de-comparacao)
   "Retorna a inversão da matriz de comparação de um contorno."
   (loop
-     for linha in com-matrix
+     for linha in matriz-de-comparacao
      collect (loop
                   for elemento in linha
                   collect (* -1 elemento))))

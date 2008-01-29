@@ -2,108 +2,109 @@
 
 ;; funções relacionadas a pares
 
-(defun ponto-medio-duracao (pares)
+(defun ponto-medio-duracao (contorno-com-duracao)
   "Retorna o ponto médio de um contorno em relação à duração."
-  (let ((maior (first (sort (mapcar #'first pares) #'>)))
-        (menor (first (sort (mapcar #'first pares) #'<))))
+  (let ((maior (first (sort (mapcar #'first contorno-com-duracao) #'>)))
+        (menor (first (sort (mapcar #'first contorno-com-duracao) #'<))))
     (/ (+ maior menor) 2)))
 
-(defun ponto-medio-altura (pares)
+(defun ponto-medio-altura (contorno-com-duracao)
     "Retorna o ponto médio de um contorno em relação à altura."
-  (let ((maior (first (sort (mapcar #'second pares) #'>)))
-        (menor (first (sort (mapcar #'second pares) #'<))))
+  (let ((maior (first (sort (mapcar #'second contorno-com-duracao) #'>)))
+        (menor (first (sort (mapcar #'second contorno-com-duracao) #'<))))
     (/ (+ maior menor) 2)))
 
-(defun transpor-ponto (par fator)
+(defun transpor-ponto (ponto fator)
   "Transpõe um ponto de um contorno a partir de um dado fator."
-  (let ((x (first par))
-        (y (second par)))
+  (let ((x (first ponto))
+        (y (second ponto)))
     (list x (+ y fator))))
 
-(defun inverter-ponto (par eixo)
+(defun inverter-ponto (ponto eixo)
   "Inverte um ponto de um contorno em relação à altura a partir
 de um dado eixo."
-  (let ((x (first par))
-        (y (second par)))
+  (let ((x (first ponto))
+        (y (second ponto)))
     (list x (- (* 2 eixo) y))))
 
-(defun retrogradar-ponto (par eixo)
+(defun retrogradar-ponto (ponto eixo)
   "Inverte um ponto de um contorno em relação à duração a partir
 de um dado eixo. Esta função é útil para retrogradar um contorno."
-  (let ((x (first par))
-        (y (second par)))
+  (let ((x (first ponto))
+        (y (second ponto)))
     (list (- (* 2 eixo) x) y)))
 
-(defun aumentar-altura-ponto (par fator)
+(defun aumentar-altura-ponto (ponto fator)
   "Multiplica a altura de um ponto por um dado fator."
-  (let ((x (first par))
-        (y (second par)))
+  (let ((x (first ponto))
+        (y (second ponto)))
     (list x (* y fator))))
 
-(defun aumentar-duracao-ponto (par fator)
+(defun aumentar-duracao-ponto (ponto fator)
   "Multiplica a duração de um ponto por um dado fator."
-  (let ((x (first par))
-        (y (second par)))
+  (let ((x (first ponto))
+        (y (second ponto)))
     (list (* x fator) y)))
 
 ;; funções relacionadas a contornos
 
-(defun transpor-contorno (pares fator)
+(defun transpor-contorno (contorno-com-duracao fator)
   "Transpõe todos os pontos de um contorno a partir de um dado fator."
-  (mapcar #'(lambda (par) (transpor-ponto par fator)) pares))
+  (mapcar #'(lambda (ponto) (transpor-ponto ponto fator)) contorno-com-duracao))
 
-(defun inverter-contorno (pares eixo)
+(defun inverter-contorno (contorno-com-duracao eixo)
   "Inverte todos os pontos de um contorno em relação à altura a
 partir de um dado eixo."
-  (mapcar #'(lambda (par) (inverter-ponto par eixo)) pares))
+  (mapcar #'(lambda (ponto) (inverter-ponto ponto eixo)) contorno-com-duracao))
 
-(defun retrogradar-contorno (pares)
+(defun retrogradar-contorno (contorno-com-duracao)
   "Retrograda um contorno. É o mesmo que inverter o contorno em
 relação à duração a partir do seu ponto médio."
   (reverse
-   (mapcar #'(lambda (par) (retrogradar-ponto par (ponto-medio-duracao pares))) pares)))
+   (mapcar #'(lambda (ponto) (retrogradar-ponto ponto (ponto-medio-duracao contorno-com-duracao))) contorno-com-duracao)))
 
-(defun aumentar-altura (pares fator)
+(defun aumentar-altura (contorno-com-duracao fator)
   "Multiplica a altura de todos os pares de um contorno por um
 dado fator."
-  (mapcar #'(lambda (par) (aumentar-altura-ponto par fator)) pares))
+  (mapcar #'(lambda (ponto) (aumentar-altura-ponto ponto fator)) contorno-com-duracao))
 
 ;; FIXME: a abstracao da aumentacao de duracao esta errada
-(defun aumentar-duracao (pares fator)
+(defun aumentar-duracao (contorno-com-duracao fator)
   "Multiplica a duração de um contorno por um dado fator."
-  (mapcar #'(lambda (par) (aumentar-duracao-ponto par fator)) pares))
+  (mapcar #'(lambda (ponto) (aumentar-duracao-ponto ponto fator)) contorno-com-duracao))
 
-(defun rotar-contorno (pares &optional (fator 1))
+(defun rotar-contorno (contorno-com-duracao &optional (fator 1))
   "Rotaciona um contorno a partir de um dado fator."
-  (let* ((x-pares (mapcar #'first pares))
-         (y-pares (mapcar #'second pares))
+  (let* ((x-pares (mapcar #'first contorno-com-duracao))
+         (y-pares (mapcar #'second contorno-com-duracao))
          (y-rotado (append (subseq y-pares fator) (subseq y-pares 0 fator))))
     (mapcar #'list x-pares y-rotado)))
 
-(defun ordena-crescente-duracao (pares)
+(defun ordena-crescente-duracao (contorno-com-duracao)
   "Ordena os pontos de um contorno de forma crescente a partir dos
 valores de duração."
-  (sort pares #'< :key #'first))
+  (sort contorno-com-duracao #'< :key #'first))
 
-(defun insere-ponto (contorno par)
+(defun insere-ponto (contorno ponto)
   "Insere um ponto em um contorno de um único segmento."
-  (ordena-crescente-duracao (append (list (first contorno)) (list par) (list (second contorno)))))
+  (ordena-crescente-duracao (append (list (first contorno)) (list ponto) (list (second contorno)))))
 
-(defun remover-duplicatas (pares)
+(defun remover-duplicatas (contorno-com-duracao)
   "Remove duplicatas de uma lista de pares e coloca em ordem
 crescente a partir de x."
-  (remove-duplicates pares :key #'first :from-end t))
+  (remove-duplicates contorno-com-duracao :key #'first :from-end t))
 
-(defun remover-alturas-repetidas (pares)
-  "Remove os pontos de um contorno que têm alturas repetidas."
-  (remove-duplicates pares :key #'second :from-end t))
+(defun remover-alturas-repetidas (contorno-com-duracao)
+  "Remove os pontos de um contorno que têm alturas repetidas, mantendo
+o primeiro ponto em ordem de aparição."
+  (remove-duplicates contorno-com-duracao :key #'second :from-end t))
 
-(defun contorno->contorno-simples (pares)
+(defun contorno-com-duracao->contorno-simples (contorno-com-duracao)
   "Retorna um contorno representado por uma lista de alturas a partir
 de um contorno representado por pares coordenados."
-  (mapcar #'second pares))
+  (mapcar #'second contorno-com-duracao))
 
-(defun contorno-simples->contorno (lista-de-alturas)
+(defun contorno-simples->contorno-com-duracao (lista-de-alturas)
   "Retorna um contorno representado por pares coordenados a partir de
 uma lista de alturas (contorno simples)."
   (loop
