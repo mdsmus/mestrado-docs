@@ -26,7 +26,7 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
 (defun concat (&rest string)
   (apply #'concatenate 'string string))
 
-(defun plot-contorno (contorno titulo arquivo &optional (x1 0) (x2 10) (y1 0) (y2 10))
+(defun plot-contorno (contorno titulo arquivo &optional (x1 0) (x2 (- (length contorno) 1)) (y1 (menor-altura-contorno contorno)) (y2 (maior-altura-contorno contorno)))
   (let ((tmp-file (format nil "/tmp/~a" (gensym)))
         (tmp-out (format nil "/tmp/~a" (gensym))))
     (contornos->file contorno tmp-file)
