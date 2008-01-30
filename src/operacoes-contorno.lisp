@@ -2,6 +2,14 @@
 
 ;; funções relacionadas a pares
 
+(defun menor-altura-contorno (contorno-com-duracao)
+  "Retorna a menor altura de um contorno."
+  (first (sort (mapcar #'second contorno-com-duracao) #'<)))
+
+(defun maior-altura-contorno (contorno-com-duracao)
+    "Retorna a maior altura de um contorno."
+    (first (sort (mapcar #'second contorno-com-duracao) #'>)))
+
 (defun ponto-medio-duracao (contorno-com-duracao)
   "Retorna o ponto médio de um contorno em relação à duração."
   (let ((maior (first (sort (mapcar #'first contorno-com-duracao) #'>)))
