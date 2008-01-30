@@ -2,9 +2,11 @@
 (defparameter *dir* "/tmp/")
 
 (defun gnuplot (file)
+  "Roda o gnuplot em um arquivo."
   (sb-ext:run-program "/usr/bin/gnuplot" (list file)))
 
 (defun contorno-plot (titulo png data out-file &optional (x1 0) (x2 10) (y1 0) (y2 10))
+  "Formata arquivo de plotagem."
   (with-open-file (f out-file :direction :output :if-exists :supersede)
     (format f "set title \"~a\"
 set terminal postscript eps enhanced
@@ -17,16 +19,15 @@ plot [~a:~a][~a:~a] '~a' with linespoints lw 4
 pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
 
 (defun contornos->file (contornos file)
+  "Envia contorno para arquivo de plotagem."
   (with-open-file (f file :direction :output :if-exists :supersede)
     (format f "~{~{~a ~}~%~}" contornos)))
 
 (defun ver (file)
   (sb-ext:run-program "/usr/bin/gv" (list (concat *dir* file ".eps"))))
 
-(defun concat (&rest string)
-  (apply #'concatenate 'string string))
-
 (defun plot-contorno (contorno titulo arquivo &optional (x1 0) (x2 (- (length contorno) 1)) (y1 (menor-altura-contorno contorno)) (y2 (maior-altura-contorno contorno)))
+  "Plota contorno em um arquivo dado."
   (let ((tmp-file (format nil "/tmp/~a" (gensym)))
         (tmp-out (format nil "/tmp/~a" (gensym))))
     (contornos->file contorno tmp-file)
@@ -34,6 +35,7 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
     (gnuplot tmp-out)))
 
 (defun gera-tex (files)
+  "Formata arquivo \LaTeX."
   (print files)
   (with-open-file (file (concat *dir* "preview.tex") :direction :output :if-exists :supersede)
     (format file "\\documentclass[a4paper]{article}
@@ -55,6 +57,7 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
     (format file "\\end{document}")))
 
 (defun preview (&rest files)
+  "Visualiza arquivos em um documento \LaTeX."
   (sb-posix:chdir (pathname *dir*))
   (gera-tex files)
   (sb-ext:run-program "/opt/texlive/bin/latex" (list "-interaction=nonstopmode" "preview.tex"))
