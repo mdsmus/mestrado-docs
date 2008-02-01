@@ -8,13 +8,13 @@
         (y (second par)))
     (list (- (* 2 eixo) x) y)))
 
-(defclass contorno ()
+(defclass contorno-com-duracao ()
   ((args :accessor args :initarg :args)))
 
 (defclass classe-de-contorno ()
   ((args :accessor args :initarg :args)))
 
-(defmethod retrogradar ((objeto contorno))
+(defmethod retrogradar ((objeto contorno-com-duracao))
   (reverse
    (mapcar #'(lambda (par) (retrogradar-ponto par (ponto-medio-x (args objeto))))
            (args objeto))))
@@ -25,8 +25,8 @@
 (defparameter cont (make-instance 'contorno :args '((0 1) (0 0))))
 (defparameter cc (make-instance 'classe-de-contorno :args '(1 0)))
 
-(defun make-contorno (args)
-  (make-instance 'contorno :args args))
+(defun make-contorno-com-duracao (args)
+  (make-instance 'contorno-com-duracao :args args))
 
 (defun make-cc (args)
   (make-instance 'classe-de-contorno :args args))
