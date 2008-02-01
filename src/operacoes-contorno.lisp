@@ -120,7 +120,7 @@ uma lista de alturas (contorno simples)."
      for n from 0 to (length lista-de-alturas)
      collect (list n elemento)))
 
-;;; métodos para transposição
+;;; métodos
 
 (defmethod transpor ((objeto ponto) fator)
   "Transpõe um ponto de um contorno a partir de um dado fator."
@@ -137,3 +137,43 @@ fator."
   "Transpõe um contorno em codificação com duração a partir de um dado
 fator."
   (mapcar #'(lambda (ponto) (transpor (make-ponto ponto) fator)) (args objeto)))
+
+(defmethod inverter ((objeto ponto) eixo)
+  "Inverte um ponto de um contorno em relação à altura a partir de um
+dado eixo."
+  (let ((x (first (args objeto)))
+        (y (second (args objeto))))
+    (list x (- (* 2 eixo) y))))
+
+(defmethod inverter ((objeto contorno-simples) eixo)
+  "Inverte um contorno em codificação simples em relação à altura a
+partir de um dado eixo."
+  (mapcar #'(lambda (altura) (- (* 2 eixo) altura)) (args objeto)))
+
+(defmethod inverter ((objeto contorno-com-duracao) eixo)
+  "Inverte um contorno em codificação com duração em relação à altura
+a partir de um dado eixo."
+  (mapcar #'(lambda (ponto) (inverter (make-ponto ponto) eixo)) (args objeto)))
+
+(defmethod retrogradar ((objeto contorno-simples))
+  "Retrograda um contorno em codificação simples."
+  (reverse (args objeto)))
+
+(defmethod retrogradar ((objeto contorno-com-duracao))
+  "Retrograda um contorno em codificação com duração."
+  (reverse
+   (mapcar #'(lambda (ponto) (retrogradar-ponto ponto (ponto-medio-duracao (args objeto))))
+           (args objeto))))
+
+(defmethod rotacionar ((objeto contorno-simples) &optional (fator 1))
+  "Rotaciona um contorno em codificação simples a partir de um dado
+fator."
+  (append (subseq (args objeto) fator) (subseq (args objeto) 0 fator)))
+
+(defmethod rotacionar ((objeto contorno-com-duracao) &optional (fator 1))
+  "Rotaciona um contorno em codificação com duração a partir de um
+dado fator."
+  (let* ((x-pares (mapcar #'first (args objeto)))
+         (y-pares (mapcar #'second (args objeto)))
+         (y-rotado (append (subseq y-pares fator) (subseq y-pares 0 fator))))
+    (mapcar #'list x-pares y-rotado)))
