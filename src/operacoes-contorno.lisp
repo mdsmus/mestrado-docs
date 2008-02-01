@@ -119,3 +119,21 @@ uma lista de alturas (contorno simples)."
      for elemento in lista-de-alturas
      for n from 0 to (length lista-de-alturas)
      collect (list n elemento)))
+
+;;; métodos para transposição
+
+(defmethod transpor ((objeto ponto) fator)
+  "Transpõe um ponto de um contorno a partir de um dado fator."
+  (let ((x (first (args objeto)))
+        (y (second (args objeto))))
+    (list x (+ y fator))))
+
+(defmethod transpor ((objeto contorno-simples) fator)
+  "Transpõe um contorno em codificação simples a partir de um dado
+fator."
+  (mapcar #'+ (args objeto)))
+
+(defmethod transpor ((objeto contorno-com-duracao) fator)
+  "Transpõe um contorno em codificação com duração a partir de um dado
+fator."
+  (mapcar #'(lambda (ponto) (transpor (make-ponto ponto) fator)) (args objeto)))
