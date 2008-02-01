@@ -8,7 +8,7 @@
   :depends-on (:lisp-unit :cl-ppcre)
   :components (
                (:file "packages")
-               (:file "libgoiaba")
+               (:file "utils")
                (:file "lily")
                (:file "operacoes-contorno")
                (:file "operacoes-lista")
