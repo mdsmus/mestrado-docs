@@ -30,3 +30,7 @@
 
 (defun make-cc (args)
   (make-instance 'classe-de-contorno :args args))
+
+; exemplos
+;(retrogradar (make-contorno '((0 2)(1 1))))
+;(retrogradar (make-cc '(0 2 1)))
