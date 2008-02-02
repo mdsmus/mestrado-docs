@@ -155,6 +155,11 @@ partir de um dado eixo."
 a partir de um dado eixo."
   (mapcar #'(lambda (ponto) (inverter (make-ponto ponto) eixo)) (args objeto)))
 
+(defmethod retrogradar ((objeto list))
+  (if (consp (first objeto))
+      (retrogradar (make-contorno-com-duracao objeto))
+      (retrogradar (make-contorno-simples objeto))))
+
 (defmethod retrogradar ((objeto contorno-simples))
   "Retrograda um contorno em codificação simples."
   (reverse (args objeto)))
