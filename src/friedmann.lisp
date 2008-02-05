@@ -1,11 +1,11 @@
 (in-package #:goiaba)
 
-(defun cas (pares)
+(defun cas (contorno-com-duracao)
   "Retorna a Contour Adjacency Series (CAS) de um
 contorno. Diferente da função
 inclinacoes-contorno-positivo-negativo, as inclinações nulas são
 ignoradas."
-  (remove 0 (inclinacoes-contorno-positivo-negativo pares)))
+  (remove 0 (inclinacoes-contorno-positivo-negativo contorno-com-duracao)))
 
 (defun casv (cas)
   "Retorna o Contour Adjacency Series Vector (CASV) de uma
@@ -18,14 +18,14 @@ Contour Adjacency Series (CAS)."
   "Inverte uma Contour Adjacency Series (CAS)."
   (mapcar #'(lambda (x) (* x -1)) cas))
 
-(defun cc (pares)
+(defun cc (pontos)
   "Retorna o valor da classe de contorno (Contour Class) de um
 contorno. É o mesmo que normalização de contorno. Morris
 \cite{morris93:_new_direc_theor_analy_music_contour} chama de
 espaço de contorno (Contour Space ou c-space)."
-  (let* ((pares-sorteados (sort (remover-alturas-repetidas pares) #'< :key #'second)))
+  (let* ((pontos-do-contorno (sort (remover-alturas-repetidas pontos) #'< :key #'second)))
     (mapcar #'second (sort (loop
-         for (x y) in pares-sorteados
+         for (x y) in pontos-do-contorno
          for n from 0
          collect (list x n)) #'< :key #'first))))
 
