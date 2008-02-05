@@ -27,6 +27,12 @@
 (defclass contorno-simples ()
   ((args :accessor args :initarg :args)))
 
+(defclass classe-de-contorno ()
+  ((args :accessor args :initarg :args)))
+
+(defclass contour-adjacency-series ()
+  ((args :accessor args :initarg :args)))
+
 ;; definição de parâmetros
 
 (defparameter ponto
@@ -38,6 +44,12 @@
 (defparameter contorno-simples
   (make-instance 'contorno-simples :args '(1 0 2)))
 
+(defparameter classe-de-contorno
+  (make-instance 'classe-de-contorno :args '(1 0 2)))
+
+(defparameter contour-adjacency-series
+  (make-instance 'contour-adjacency-series :args '(1 0 2)))
+
 ;; make instance
 
 (defun make-ponto (args)
@@ -48,3 +60,9 @@
 
 (defun make-contorno-simples (args)
   (make-instance 'contorno-simples :args args))
+
+(defun make-classe-de-contorno (args)
+  (make-instance 'classe-de-contorno :args args))
+
+(defun make-contour-adjacency-series (args)
+  (make-instance 'contour-adjacency-series :args args))
