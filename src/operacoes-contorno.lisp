@@ -12,14 +12,18 @@
 
 (defun ponto-medio-duracao (contorno-com-duracao)
   "Retorna o ponto médio de um contorno em relação à duração."
-  (let ((maior (first (sort (mapcar #'first contorno-com-duracao) #'>)))
-        (menor (first (sort (mapcar #'first contorno-com-duracao) #'<))))
+  (let ((maior (first (sort (mapcar #'first contorno-com-duracao)
+  #'>)))
+        (menor (first (sort (mapcar #'first contorno-com-duracao)
+        #'<))))
     (/ (+ maior menor) 2)))
 
 (defun ponto-medio-altura (contorno-com-duracao)
     "Retorna o ponto médio de um contorno em relação à altura."
-  (let ((maior (first (sort (mapcar #'second contorno-com-duracao) #'>)))
-        (menor (first (sort (mapcar #'second contorno-com-duracao) #'<))))
+  (let ((maior (first (sort (mapcar #'second contorno-com-duracao)
+  #'>)))
+        (menor (first (sort (mapcar #'second contorno-com-duracao)
+        #'<))))
     (/ (+ maior menor) 2)))
 
 (defun transpor-ponto (ponto fator)
@@ -58,23 +62,31 @@ de um dado eixo. Esta função é útil para retrogradar um contorno."
 
 (defun transpor-contorno (contorno-com-duracao fator)
   "Transpõe todos os pontos de um contorno a partir de um dado fator."
-  (mapcar #'(lambda (ponto) (transpor-ponto ponto fator)) contorno-com-duracao))
+  (mapcar #'(lambda (ponto)
+              (transpor-ponto ponto fator)) contorno-com-duracao))
 
 (defun inverter-contorno (contorno-com-duracao eixo)
   "Inverte todos os pontos de um contorno em relação à altura a
 partir de um dado eixo."
-  (mapcar #'(lambda (ponto) (inverter-ponto ponto eixo)) contorno-com-duracao))
+  (mapcar #'(lambda (ponto)
+              (inverter-ponto ponto eixo)) contorno-com-duracao))
 
 (defun retrogradar-contorno (contorno-com-duracao)
   "Retrograda um contorno. É o mesmo que inverter o contorno em
 relação à duração a partir do seu ponto médio."
   (reverse
-   (mapcar #'(lambda (ponto) (retrogradar-ponto ponto (ponto-medio-duracao contorno-com-duracao))) contorno-com-duracao)))
+   (mapcar #'(lambda (ponto)
+               (retrogradar-ponto ponto
+                                  (ponto-medio-duracao
+                                  contorno-com-duracao)))
+                                  contorno-com-duracao)))
 
 (defun aumentar-altura (contorno-com-duracao fator)
   "Multiplica a altura de todos os pares de um contorno por um
 dado fator."
-  (mapcar #'(lambda (ponto) (aumentar-altura-ponto ponto fator)) contorno-com-duracao))
+  (mapcar #'(lambda (ponto)
+              (aumentar-altura-ponto ponto fator))
+              contorno-com-duracao))
 
 ;; FIXME: a abstracao da aumentacao de duracao esta errada
 (defun aumentar-duracao (contorno-com-duracao fator)
@@ -83,10 +95,10 @@ dado fator."
 
 (defun rotar-contorno (contorno-com-duracao &optional (fator 1))
   "Rotaciona um contorno a partir de um dado fator."
-  (let* ((x-pares (mapcar #'first contorno-com-duracao))
-         (y-pares (mapcar #'second contorno-com-duracao))
-         (y-rotado (append (subseq y-pares fator) (subseq y-pares 0 fator))))
-    (mapcar #'list x-pares y-rotado)))
+  (let* ((x-contorno (mapcar #'first contorno-com-duracao))
+         (y-contorno (mapcar #'second contorno-com-duracao))
+         (y-rotado (append (subseq y-contorno fator) (subseq y-contorno 0 fator))))
+    (mapcar #'list x-contorno y-rotado)))
 
 (defun ordena-crescente-duracao (contorno-com-duracao)
   "Ordena os pontos de um contorno de forma crescente a partir dos
@@ -95,7 +107,10 @@ valores de duração."
 
 (defun insere-ponto (contorno ponto)
   "Insere um ponto em um contorno de um único segmento."
-  (ordena-crescente-duracao (append (list (first contorno)) (list ponto) (list (second contorno)))))
+  (ordena-crescente-duracao (append
+                             (list (first contorno))
+                             (list ponto)
+                             (list (second contorno)))))
 
 (defun remover-duplicatas (contorno-com-duracao)
   "Remove duplicatas de uma lista de pares e coloca em ordem
@@ -136,7 +151,8 @@ fator."
 (defmethod transpor ((objeto contorno-com-duracao) fator)
   "Transpõe um contorno em codificação com duração a partir de um dado
 fator."
-  (mapcar #'(lambda (ponto) (transpor (make-ponto ponto) fator)) (args objeto)))
+  (mapcar #'(lambda (ponto)
+              (transpor (make-ponto ponto) fator)) (args objeto)))
 
 (defmethod inverter ((objeto ponto) eixo)
   "Inverte um ponto de um contorno em relação à altura a partir de um
@@ -153,7 +169,8 @@ partir de um dado eixo."
 (defmethod inverter ((objeto contorno-com-duracao) eixo)
   "Inverte um contorno em codificação com duração em relação à altura
 a partir de um dado eixo."
-  (mapcar #'(lambda (ponto) (inverter (make-ponto ponto) eixo)) (args objeto)))
+  (mapcar #'(lambda (ponto)
+              (inverter (make-ponto ponto) eixo)) (args objeto)))
 
 (defmethod retrogradar ((objeto list))
   (if (consp (first objeto))
@@ -167,7 +184,10 @@ a partir de um dado eixo."
 (defmethod retrogradar ((objeto contorno-com-duracao))
   "Retrograda um contorno em codificação com duração."
   (reverse
-   (mapcar #'(lambda (ponto) (retrogradar-ponto ponto (ponto-medio-duracao (args objeto))))
+   (mapcar #'(lambda (ponto)
+               (retrogradar-ponto ponto
+                                  (ponto-medio-duracao
+                                   (args objeto))))
            (args objeto))))
 
 (defmethod rotacionar ((objeto contorno-simples) &optional (fator 1))
@@ -178,7 +198,9 @@ fator."
 (defmethod rotacionar ((objeto contorno-com-duracao) &optional (fator 1))
   "Rotaciona um contorno em codificação com duração a partir de um
 dado fator."
-  (let* ((x-pares (mapcar #'first (args objeto)))
-         (y-pares (mapcar #'second (args objeto)))
-         (y-rotado (append (subseq y-pares fator) (subseq y-pares 0 fator))))
-    (mapcar #'list x-pares y-rotado)))
+  (let* ((x-contorno (mapcar #'first (args objeto)))
+         (y-contorno (mapcar #'second (args objeto)))
+         (y-rotado (append
+                    (subseq y-contorno fator)
+                    (subseq y-contorno 0 fator))))
+    (mapcar #'list x-contorno y-rotado)))
