@@ -154,23 +154,18 @@ fator."
   (mapcar #'(lambda (ponto)
               (transpor (make-ponto ponto) fator)) (args objeto)))
 
-(defmethod inverter ((objeto ponto) eixo)
-  "Inverte um ponto de um contorno em relação à altura a partir de um
-dado eixo."
-  (let ((x (first (args objeto)))
-        (y (second (args objeto))))
-    (list x (- (* 2 eixo) y))))
-
-(defmethod inverter ((objeto contorno-simples) eixo)
+(defmethod inverter ((objeto contorno-simples) &optional eixo)
   "Inverte um contorno em codificação simples em relação à altura a
 partir de um dado eixo."
-  (mapcar #'(lambda (altura) (- (* 2 eixo) altura)) (args objeto)))
+  (let* ((eixo (or eixo (ponto-medio-altura (args objeto)))))
+    (mapcar #'(lambda (altura) (- (* 2 eixo) altura)) (args objeto))))
 
-(defmethod inverter ((objeto contorno-com-duracao) eixo)
+(defmethod inverter ((objeto contorno-com-duracao) &optional eixo)
   "Inverte um contorno em codificação com duração em relação à altura
 a partir de um dado eixo."
-  (mapcar #'(lambda (ponto)
-              (inverter (make-ponto ponto) eixo)) (args objeto)))
+  (let* ((eixo (or eixo (ponto-medio-altura (args objeto)))))
+    (mapcar #'(lambda (ponto)
+                (inverter-ponto ponto eixo)) (args objeto))))
 
 (defmethod retrogradar ((objeto list))
   (if (consp (first objeto))
