@@ -27,6 +27,9 @@
 (defclass contorno-simples ()
   ((args :accessor args :initarg :args)))
 
+(defclass matriz-de-comparacao ()
+  ((args :accessor args :initarg :args)))
+
 (defclass classe-de-contorno ()
   ((args :accessor args :initarg :args)))
 
@@ -44,6 +47,13 @@
 (defparameter contorno-simples
   (make-instance 'contorno-simples :args '(1 0 2)))
 
+(defparameter matriz-de-comparacao
+  (make-instance 'matriz-de-comparacao
+                 :args '((0 -1 1 1)
+                         (1 0 1 1)
+                         (-1 -1 0 -1)
+                         (-1 -1 1 0))))
+
 (defparameter classe-de-contorno
   (make-instance 'classe-de-contorno :args '(1 0 2)))
 
@@ -59,6 +69,9 @@
   (make-instance 'contorno-com-duracao :args args))
 
 (defun make-contorno-simples (args)
+  (make-instance 'contorno-simples :args args))
+
+(defun make-matriz-de-comparacao (args)
   (make-instance 'contorno-simples :args args))
 
 (defun make-classe-de-contorno (args)
