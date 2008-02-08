@@ -35,11 +35,11 @@
         \new GrandStaff <<
           \new Staff <<
             \gestosglobal
-            \gestosorgaol
+            \gestosorgaor
           >>
           \new Staff <<
             \gestosglobal
-            \gestosorgaor
+            \gestosorgaol
           >>
           \new Staff <<
             \gestosglobal
