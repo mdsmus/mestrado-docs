@@ -29,19 +29,23 @@
     <<
       \new StaffGroup <<
         \new Staff <<
+          \set Staff.midiInstrument = "flute"
           \gestosglobal
           \gestosflauta
         >>
         \new GrandStaff <<
           \new Staff <<
+          \set Staff.midiInstrument = "church organ"
             \gestosglobal
             \gestosorgaor
           >>
           \new Staff <<
+            \set Staff.midiInstrument = "church organ"
             \gestosglobal
             \gestosorgaol
           >>
           \new Staff <<
+            \set Staff.midiInstrument = "church organ"
             \gestosglobal
             \gestosorgaob
           >>
