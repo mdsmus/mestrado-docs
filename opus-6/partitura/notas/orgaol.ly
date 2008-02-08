@@ -13,8 +13,8 @@ gestoAorgaol = {
     <d g d'>~
     <d g a d>~
     <d g a d>~
-    <d g a d>~
-    <d e g a d>
+    <d g a d>2~ <d e g a d>2~
+    <d e g a d>1
   }
 }
 gestoBorgaol = {

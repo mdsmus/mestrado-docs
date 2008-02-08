@@ -13,7 +13,7 @@ gestoAorgaor = {
     e4 c g b
     R1
     c2. g4
-    c,2. f4
+    c,4 f4 r2
     R1
   }
 }
