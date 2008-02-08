@@ -6,7 +6,9 @@
 \include "gestosglobal.ly"
 \include "gestosflauta.ly"
 \include "gestosglobal.ly"
-\include "gestosorgao.ly"
+\include "gestosorgaol.ly"
+\include "gestosorgaor.ly"
+\include "gestosorgaob.ly"
 
 #(set-global-staff-size 17)
 
@@ -27,16 +29,22 @@
     <<
       \new StaffGroup <<
         \new Staff <<
-          \set Staff.instrumentName = \markup {\hcenter-in #5 "Flauta"}
-          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 ""}
           \gestosglobal
           \gestosflauta
         >>
-        \new Staff <<
-          \set Staff.instrumentName = \markup {\hcenter-in #5 "Órgão"}
-          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 ""}
-          \gestosglobal
-          \gestosorgao
+        \new GrandStaff <<
+          \new Staff <<
+            \gestosglobal
+            \gestosorgaol
+          >>
+          \new Staff <<
+            \gestosglobal
+            \gestosorgaor
+          >>
+          \new Staff <<
+            \gestosglobal
+            \gestosorgaob
+          >>
         >>
       >>
     >>
