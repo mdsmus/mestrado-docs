@@ -3,7 +3,8 @@
 \include "newcommand.ly"
 
 gestoAorgaob = {
-  R1*4
+  \clef bass
+  R1*11
 }
 gestoBorgaob = {
   R1*4

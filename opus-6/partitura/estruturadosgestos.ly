@@ -1,5 +1,5 @@
 gestoAicode = {
-  R1*4
+  R1*11
 }
 gestoBicode = {
   R1*4
