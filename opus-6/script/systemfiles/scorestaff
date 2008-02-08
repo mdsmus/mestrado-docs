@@ -1,0 +1,6 @@
+        \new Staff <<
+          \set Staff.instrumentName = \markup {\hcenter-in #5 "iname"}
+          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "iabrev"}
+          \gestosglobal
+          \gestosicode
+        >>

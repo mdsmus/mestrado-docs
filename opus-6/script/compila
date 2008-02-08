@@ -1,0 +1,367 @@
+#!/bin/bash
+
+source variaveis
+
+###
+### funções de inicialização da peça
+###
+
+function executa_chmod {
+
+## converte todos os scripts em executáveis
+
+    echo Convertendo scripts em arquivos executáveis...
+
+    chmod 755 ${scriptdir}/*
+}
+
+function processa_instrumentos {
+
+    echo Processando os nomes de instrumentos...
+
+## processa nomes de instrumentos
+
+## remove arquivos operacionais anteriores
+
+    rm $ilistop 2> /dev/null
+    mkdir $tempdir 2> /dev/null
+
+## envia lista de instrumentos processada para $ilistop
+
+    for l in $(seq 1 $linhas)
+      do
+      i=$(sed -n "$l  p" $ilist)
+
+  ## define nome e abreviação de cada instrumento
+
+      iname=$(echo $i | cut -d ':' -f 1)
+      iabrev=$(echo $i | cut -d ':' -f 2)
+
+  ## define o código do instrumento que será utilizado pelo programa e
+  ## envia para a lista operacional de instrumentos
+
+      icode=$(echo $iname | sed 's/IX$/nine/' | sed 's/9$/nine/' |sed 's/VIII$/eight/' | sed 's/8$/eight/' | sed 's/VII$/seven/' | sed 's/7$/seven/' | sed 's/VI$/six/' | sed 's/6$/six/' | sed 's/IV$/four/' | sed 's/4$/four/' | sed 's/V$/five/' | sed 's/5$/five/' | sed 's/III$/three/' | sed 's/3$/three/' | sed 's/II$/two/' | sed 's/2$/two/' | sed 's/[1I]$/one/' | sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÃÂÉÊÍÓÕÚÜÇ/abcdefghijklmnopqrstuvwxyzaaaaeeioouuc/' | sed 'y/áàãâéêíóõúüç/aaaaeeioouuc/'| tr -d ' ')
+      echo $icode:$iname:$iabrev >> $ilistop
+
+    done
+}
+
+function cria_score {
+
+
+    ## FIXME: alterar função para que, se não forem definidas
+    ## abreviações para os instrumentos, não seja incluído comando de
+    ## abreviação.
+
+    ## verifica se o arquivo score.ly já existe
+
+    echo
+    echo Verificando se o arquivo ${lyscorename} já existe...
+
+    if [ -s ${lyscore} ]
+        then
+        echo Arquivo $lyscorename já existe.
+    else
+
+        ## criando o cabeçalho e enviando a arquivo parcial score4
+
+        cat ${scoredir}/header.ly > ${systemdir}/score4
+
+        ## removendo arquivos temporários antigos
+
+        rm ${systemdir}/score2 2> /dev/null
+        rm ${systemdir}/score6 2> /dev/null        
+
+        ## laço de execução
+
+        for l in $(seq 1 $linhas)
+          do
+          i=$(sed -n "$l p" $ilistop)
+          icode=$(echo $i | cut -d ':' -f 1)
+          iname=$(echo $i | cut -d ':' -f 2)
+          iabrev=$(echo $i | cut -d ':' -f 3)
+
+          ## criando os includes dos instrumentos e enviando a arquivo
+          ## parcial score2
+
+          echo \\include \"gestosglobal.ly\" >> ${systemdir}/score2
+          echo \\include \"gestos${icode}.ly\" >> ${systemdir}/score2
+
+          ## criando os new staff dos instrumentos e enviando a
+          ## arquivo parcial score6
+          
+          cat ${systemdir}/scorestaff | sed "s/gestosicode/gestos${icode}/" | sed "s/iname/${iname}/" | sed "s/iabrev/${iabrev}/" >> ${systemdir}/score6
+        done
+
+        rm $lyscore 2> /dev/null
+
+        ## compilando arquivos parciais
+
+        ### inserindo versão atualizada do lilypond
+        
+        cat ${systemdir}/score1 | sed "s/lilypondversion/$lilypondversion/" >> ${scoredir}/$lyscorename
+
+        for num in $(seq 2 7)
+          do
+          cat ${systemdir}/score$num >> ${scoredir}/$lyscorename
+        done
+
+        ## remove temporarios
+
+        rm ${systemdir}/score2
+        rm ${systemdir}/score4
+        rm ${systemdir}/score6
+    fi
+}
+
+function cria_partes {
+
+    ## verifica se os arquivos de partes já existem
+
+    echo
+    echo Verificando se já existem arquivos de partes...
+
+    for l in $(seq 1 $linhas)
+      do
+      i=$(sed -n "$l p" $ilistop)
+      icode=$(echo $i | cut -d ':' -f 1)
+      iname=$(echo $i | cut -d ':' -f 2)
+
+      if [ -s ${partesdir}/parte_$icode.ly ]
+          then
+          echo Arquivo parte_$icode.ly já existe.
+      else
+
+          ## criando os includes dos instrumentos e enviando a arquivo
+          ## parcial score2
+
+          rm ${systemdir}/score2 2> /dev/null
+
+          echo \\include \"gestosglobal.ly\" >> ${systemdir}/score2
+          echo \\include \"gestos${icode}.ly\" >> ${systemdir}/score2
+
+          ## cabecalho das partes
+
+          cat ${scoredir}/header.ly | sed '/}/ d' > ${systemdir}/score4
+          echo "    instrument = \"${iname}\"" >> ${systemdir}/score4
+          echo "  }" >> ${systemdir}/score4
+
+          {
+              cat ${systemdir}/score1 | sed "s/score/parte_${icode}/" | sed "s/lilypondversion/$lilypondversion/"
+              cat ${systemdir}/score2
+              cat ${systemdir}/score3
+              cat ${systemdir}/score4
+              cat ${systemdir}/scoreparte | sed "s/gestosinstrname/gestos${icode}/"
+              cat ${systemdir}/score7
+              rm ${systemdir}/score2
+              rm ${systemdir}/score4
+          } > ${partesdir}/parte_${icode}.ly
+      fi
+    done
+}
+
+function controle_de_versao {
+
+    ## insere arquivos criados no darcs
+
+    if darcs add $(echo $lyscore ${partesdir}/* ${notesdir}/*) 2> /dev/null
+        then
+        echo
+        echo Os arquivos criados foram adicionados ao repositório.
+        echo Para salvar as mudanças faça:
+        echo darcs record
+    fi
+}
+
+function inicializa {
+
+    ## executa funções de inicialização
+
+    time {
+        executa_chmod
+        processa_instrumentos
+        cria_score
+        cria_partes
+        ${scriptdir}/atualiza_gestos_pausas
+        controle_de_versao
+    }
+
+    echo
+    echo Operação concluída!
+
+}
+
+###
+### funções de compilação
+###
+
+function verifica_score {
+
+    ## verifica se existe o arquivo lyscore. caso não exista, inicia o
+    ## trabalho
+
+    if [ ! -s $lyscore ]
+        then
+        inicializa
+    fi
+
+}
+
+function remove_gestos {
+
+    ## removendo arquivos individuais de gestos a compilar
+
+    rm ${systemdir}/gestos*.ly 2> /dev/null
+
+}
+
+function atualiza_gestos {
+
+    remove_gestos
+
+    ## gerando arquivos individuais com gestos a compilar
+
+    for l in $(seq 1 $linhas)
+      do
+      i=$(sed -n "$l p" $ilistop)
+      icode=$(echo $i | cut -d ':' -f 1)
+
+      cat $gestos | sed "s/icode/${icode}/" > $systemdir/gestos${icode}.ly
+
+    done
+
+    ## gerando arquivo individual global com gestos a compilar
+
+    cat $gestos | sed 's/icode/global/' > $systemdir/gestosglobal.ly
+
+}
+
+function compila_peca {
+    atualiza_gestos
+
+    echo Este processo pode levar muuuuuuito tempo...
+
+    ## executa o Lilypond procurando por arquivos nos diretórios
+    ## precedidos de '-I'
+
+    lilypond \
+        -I $piecedir \
+        -I $notesdir \
+        -I $systemdir \
+        $lyscore
+
+    ## verifica se a compilacao foi bem sucedida
+    if ! ls $scriptdir/$psscorename 2> /dev/null > /dev/null
+        then
+        ## soa o beep 2 vezes em caso de erro
+        echo -en \\007
+        sleep .1
+        echo -en \\007
+        echo Ocorreram erros na compilação
+    else
+        ## move arquivos ps e pdf para diretórios corretos
+        mkdir $pdfdir 2> /dev/null ;
+        mv $scriptdir/$psscorename $pdfdir ;
+        mv $scriptdir/$pdfscorename $pdfdir ;
+
+        ## move arquivos midi para diretório correto
+        mkdir $mididir 2> /dev/null ; 
+        mv $scriptdir/*.midi $mididir 2> /dev/null ;
+
+        ## remove arquivos desnecessários
+        echo Removendo arquivos temporários
+        rm *.ps 2> /dev/null ;
+        rm *.pdf 2> /dev/null
+
+        ## mensagens de finalização
+        echo
+        echo Compilação realizada com sucesso!!
+        echo
+        echo Os aquivos para impressão gerados podem ser visualizados em:
+        echo $pdfdir/
+        echo
+        echo Os arquivos MIDI podem ser visualizados em:
+        echo $mididir/
+    fi
+
+#    remove_gestos
+
+}
+
+function compila_partes {
+
+    atualiza_gestos
+
+    for f in $partesdir/*.ly
+      do
+      lilypond \
+          -I $scoredir \
+          -I $notesdir \
+          -I $systemdir \
+          $f
+
+      echo
+
+    done
+
+    ## verifica se a compilacao foi bem sucedida
+
+    if ! ls $scriptdir/parte* 2> /dev/null > /dev/null
+        then
+
+        ## soa o beep 2 vezes em caso de erro
+
+        echo -en \\007
+        sleep .2
+        echo -en \\007
+        echo Ocorreram erros na compilação
+    else
+
+        ## move arquivos ps e pdf para diretórios correto
+
+        mv $scriptdir/parte*.p* $pdfdir ;
+
+        ## move arquivos midi para diretório correto mv
+
+        mv $scriptdir/parte*.midi $mididir 2> /dev/null ;
+
+        echo Partes geradas com sucesso!
+    fi
+
+    remove_gestos
+
+}
+
+case $1 in
+    h)
+        echo Ajuda
+        echo Escolha uma das seguintes opções:
+        echo compila - compila a partitura
+        echo compila p - compila as partes
+        echo compila a - compila partitura e partes
+        ;;
+    a)
+        echo Compilando partitura e partes...
+        time {
+            verifica_score
+            compila_peca
+            compila_partes
+        }
+        ;;
+    p)
+        echo Compilando partes...
+        time {
+            verifica_score
+            compila_partes
+        }
+        ;;
+    instrumento)
+        processa_instrumentos
+        ;;
+    *)
+        echo Compilando partitura...
+        time {
+            verifica_score
+            compila_peca
+        }
+esac

@@ -1,0 +1,89 @@
+#!/bin/bash
+
+source variaveis
+
+function partitura {
+
+    ## verifica se o arquivo 'ps' existe
+
+    if [ ! -s ${pdfdir}/${psscorename} ]
+        then
+        $scriptdir/compila
+    fi
+
+    ## abre o ghostview com a partitura
+
+    gv $pdfdir/$psscorename &
+
+}
+
+function partes {
+
+    ## verifica se o arquivo 'ps' existe
+
+    if ! ls $pdfdir/parte*.ps 2> /dev/null
+        then
+        $scriptdir/compila p
+    fi
+
+    ## abre o ghostview com as partes
+
+    for f in $pdfdir/parte*.ps
+      do
+      gv $f &
+    done
+}
+
+function edita {
+    
+    if ps ax | awk '{print $5}' | grep emacs > /dev/null
+    then
+        emacsclient $notesdir &
+    else
+        emacs $notesdir &
+    fi
+
+}
+
+function ouve {
+
+    if [ ! -s $mididir/$midiscorename ]
+        then
+        $scriptdir/compila
+    fi
+
+    timidity $mididir/$midiscorename
+
+}
+
+case $1 in
+    h)
+        echo Ajuda
+        echo visualiza - visualiza ps da partitura.
+        echo visualiza p - visualiza ps das partes.
+        echo visualiza e - abre o emacs.
+        echo visualiza a - visualiza ps da partitura e partes.
+        echo visualiza all - abre o emacs e visualiza todos os ps.
+        echo visualiza o - ouve a peça.
+        ;;
+    p)
+        partes
+        ;;
+    e)
+        edita
+        ;;
+    a)
+        partitura
+        partes
+        ;;
+    all)
+        partitura
+        partes
+        edita
+        ;;
+    o)
+        ouve
+        ;;
+    *)
+        partitura
+esac
