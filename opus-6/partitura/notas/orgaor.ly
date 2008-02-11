@@ -14,7 +14,11 @@ gestoAorgaor = {
     R1
     c2. g4
     c,4 f4 r2
-    R1
+    R1*7
+    r2 a8 c8 b' e,
+    g1~
+    <e g>~
+    <e g>
   }
 }
 gestoBorgaor = {

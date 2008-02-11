@@ -14,7 +14,17 @@ gestoAorgaol = {
     <d g a d>~
     <d g a d>~
     <d g a d>2~ <d e g a d>2~
-    <d e g a d>1
+    <e g a>1~
+    <g a>2.~ a4~
+    a1~
+    a~
+    <g a>~
+    <g a>~
+    <g a>~
+    <f g a>~
+    <f g a b>~
+    <f g a b>~
+    <f g a b>
   }
 }
 gestoBorgaol = {

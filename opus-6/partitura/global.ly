@@ -22,7 +22,7 @@ gestoAglobal = {
   \padraoglobal
   \tempo 4=60
   \time 4/4
-  s1*11
+  s1*21
   \bar "||"
 }
 
