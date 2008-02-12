@@ -28,7 +28,24 @@ gestoAorgaol = {
   }
 }
 gestoBorgaol = {
-  R1*4
+  \clef bass
+  \relative c {
+    R1*9
+    d4\pp^"fagote"( e a f8 g~
+    g8 d4. e4 c'~
+    c4. f,16 b a2)
+    d4( c e4. b8
+    a4. f8~ f4.) b8(
+    g4. a8~ a2
+    d,1)
+    d,4\pp( e a f8 g~
+    g8 d4. e4 c'~
+    c4. f,16 b a2)
+    d4( c e4. b8
+    a4. f8~ f4.) b8(
+    g4. a8~ a2
+    d,1)
+  }
 }
 gestoCorgaol = {
   R1*4

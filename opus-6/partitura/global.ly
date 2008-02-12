@@ -30,8 +30,7 @@ gestoBglobal = {
   %% gesto A %% duracao=?
   \padraoglobal
   \tempo 4=80
-  \time 4/4
-  s1*11
+  s1*23
   \bar "||"
 }
 
