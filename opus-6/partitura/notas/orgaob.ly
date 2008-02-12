@@ -4,10 +4,10 @@
 
 gestoAorgaob = {
   \clef bass
-  R1*11
+  R1*21
 }
 gestoBorgaob = {
-  R1*4
+  R1*23
 }
 gestoCorgaob = {
   R1*4
