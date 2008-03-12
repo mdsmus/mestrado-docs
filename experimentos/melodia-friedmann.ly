@@ -2,7 +2,7 @@
 
 \book {
   \header{
-    title = "Experimentos com contornos"
+    title = "Experimentos com contornos - Friedmann"
     composer = "Marcos di Silva"
     date = "2008"
   }
