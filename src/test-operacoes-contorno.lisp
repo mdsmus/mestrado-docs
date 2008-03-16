@@ -11,14 +11,20 @@
   (assert-equal 6 (ponto-medio-altura '((0 0) (1 2) (2 4) (3 8) (4 12))))
   )
 
-(define-test transpor-ponto
-  (assert-equal '(0 2) (transpor-ponto '(0 1) 1))
-  (assert-equal '(1 8) (transpor-ponto '(1 5) 3))
+(define-test transpor
+  (assert-equal '((0 2)(1 4)) (transpor (make-contorno-com-duracao '((0 1)(1 3))) 1))
+  (assert-equal '(6 9 7 5) (transpor (make-contorno-simples '(1 4 2 0)) 5))
   )
 
-(define-test inverter-ponto
-  (assert-equal '(0 -2) (inverter-ponto '(0 2) 0))
-  (assert-equal '(1 7) (inverter-ponto '(1 9) 8))
+(define-test %inverter-ponto
+  (assert-equal '(0 -2) (%inverter-ponto '(0 2) 0))
+  (assert-equal '(1 7) (%inverter-ponto '(1 9) 8))
+  )
+
+(define-test inverter
+  (assert-equal '(4 -1 1) (inverter (make-contorno-simples '(0 5 3)) 2))
+  (assert-equal '((1 7)(2 13)(4 10)) (inverter (make-contorno-com-duracao '((1 9)(2 3)(4 6))) 8))
+  (assert-equal '(4 2 3) (inverter (make-classe-de-contorno '(0 2 1)) 2))
   )
 
 (define-test retrogradar-ponto
@@ -26,6 +32,20 @@
   (assert-equal '(14 9) (retrogradar-ponto '(2 9) 8))
   )
 
+(define-test retrogradar
+  (assert-equal '(3 5 0) (retrogradar (make-contorno-simples '(0 5 3))))
+  (assert-equal '((1 6)(3 3)(4 9)) (retrogradar (make-contorno-com-duracao '((1 9)(2 3)(4 6)))))
+  (assert-equal '(1 2 0) (retrogradar (make-classe-de-contorno '(0 2 1))))
+  )
+
+(define-test rotacionar
+  (assert-equal '(5 3 0) (rotacionar (make-contorno-simples '(0 5 3))))
+  (assert-equal '(3 0 5) (rotacionar (make-contorno-simples '(0 5 3)) 2))
+  (assert-equal '((1 3)(2 6)(4 9)) (rotacionar (make-contorno-com-duracao '((1 9)(2 3)(4 6)))))
+  (assert-equal '((1 6)(2 9)(4 3)) (rotacionar (make-contorno-com-duracao '((1 9)(2 3)(4 6))) 2))
+  (assert-equal '(3 2 0) (rotacionar (make-classe-de-contorno '(0 3 2 1))))
+  (assert-equal '(3 2 0) (rotacionar (make-classe-de-contorno '(0 3 2 1)) 2))
+  )
 
 (define-test aumentar-altura-ponto
   (assert-equal '(1 4) (aumentar-altura-ponto '(1 2) 2))

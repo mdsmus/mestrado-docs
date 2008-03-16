@@ -6,9 +6,25 @@
   "Retorna a menor altura de um contorno."
   (first (sort (mapcar #'second contorno-com-duracao) #'<)))
 
+(defmethod menor-altura ((objeto contorno-com-duracao))
+  "Retorna a menor altura de um contorno em codificação com duração."
+  (first (sort (mapcar #'second (args objeto)) #'<)))
+
+(defmethod menor-altura ((objeto contorno-simples))
+  "Retorna a menor altura de um contorno em codificação simples."
+  (first (sort (args objeto) #'<)))
+
 (defun maior-altura-contorno (contorno-com-duracao)
     "Retorna a maior altura de um contorno."
     (first (sort (mapcar #'second contorno-com-duracao) #'>)))
+
+(defmethod maior-altura ((objeto contorno-com-duracao))
+  "Retorna a maior altura de um contorno em codificação com duração."
+  (first (sort (mapcar #'second (args objeto)) #'>)))
+
+(defmethod maior-altura ((objeto contorno-simples))
+  "Retorna a maior altura de um contorno em codificação simples."
+  (first (sort (args objeto) #'>)))
 
 (defun ponto-medio-duracao (contorno-com-duracao)
   "Retorna o ponto médio de um contorno em relação à duração."
@@ -32,14 +48,14 @@
         (y (second ponto)))
     (list x (+ y fator))))
 
-(defun inverter-ponto (ponto eixo)
+(defun %inverter-ponto (ponto eixo)
   "Inverte um ponto de um contorno em relação à altura a partir
 de um dado eixo."
   (let ((x (first ponto))
         (y (second ponto)))
     (list x (- (* 2 eixo) y))))
 
-(defun retrogradar-ponto (ponto eixo)
+(defun %retrogradar-ponto (ponto eixo)
   "Inverte um ponto de um contorno em relação à duração a partir
 de um dado eixo. Esta função é útil para retrogradar um contorno."
   (let ((x (first ponto))
@@ -69,14 +85,14 @@ de um dado eixo. Esta função é útil para retrogradar um contorno."
   "Inverte todos os pontos de um contorno em relação à altura a
 partir de um dado eixo."
   (mapcar #'(lambda (ponto)
-              (inverter-ponto ponto eixo)) contorno-com-duracao))
+              (%inverter-ponto ponto eixo)) contorno-com-duracao))
 
 (defun retrogradar-contorno (contorno-com-duracao)
   "Retrograda um contorno. É o mesmo que inverter o contorno em
 relação à duração a partir do seu ponto médio."
   (reverse
    (mapcar #'(lambda (ponto)
-               (retrogradar-ponto ponto
+               (%retrogradar-ponto ponto
                                   (ponto-medio-duracao
                                   contorno-com-duracao)))
                                   contorno-com-duracao)))
@@ -146,7 +162,7 @@ uma lista de alturas (contorno simples)."
 (defmethod transpor ((objeto contorno-simples) fator)
   "Transpõe um contorno em codificação simples a partir de um dado
 fator."
-  (mapcar #'+ (args objeto)))
+  (mapcar #'(lambda (ponto) (+ ponto fator)) (args objeto)))
 
 (defmethod transpor ((objeto contorno-com-duracao) fator)
   "Transpõe um contorno em codificação com duração a partir de um dado
@@ -165,7 +181,7 @@ partir de um dado eixo."
 a partir de um dado eixo."
   (let* ((eixo (or eixo (ponto-medio-altura (args objeto)))))
     (mapcar #'(lambda (ponto)
-                (inverter-ponto ponto eixo)) (args objeto))))
+                (%inverter-ponto ponto eixo)) (args objeto))))
 
 (defmethod retrogradar ((objeto list))
   (if (consp (first objeto))
@@ -180,7 +196,7 @@ a partir de um dado eixo."
   "Retrograda um contorno em codificação com duração."
   (reverse
    (mapcar #'(lambda (ponto)
-               (retrogradar-ponto ponto
+               (%retrogradar-ponto ponto
                                   (ponto-medio-duracao
                                    (args objeto))))
            (args objeto))))
