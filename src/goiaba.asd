@@ -17,6 +17,7 @@
                (:file "friedmann")
                (:file "morris")
                (:file "test-operacoes-contorno")
+               (:file "test-utils")
                (:file "test-operacoes-lista")
                (:file "test-adams")
                (:file "test-friedmann")
