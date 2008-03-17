@@ -199,8 +199,8 @@ a partir de um dado eixo."
    (mapcar #'(lambda (ponto)
                (%retrogradar-ponto ponto
                                   (ponto-medio-duracao
-                                   (args objeto))))
-           (args objeto))))
+                                   (pontos objeto))))
+           (pontos objeto))))
 
 (defmethod rotacionar ((objeto contorno-simples) &optional (fator 1))
   "Rotaciona um contorno em codificação simples a partir de um dado

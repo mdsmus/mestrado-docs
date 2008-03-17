@@ -46,7 +46,7 @@
   (make-instance 'contorno-com-duracao :pontos '((0 1) (0 0))))
 
 (defparameter contorno-simples
-  (make-instance 'contorno-simples :altura '(1 0 2)))
+  (make-instance 'contorno-simples :alturas '(1 0 2)))
 
 (defparameter matriz-de-comparacao
   (make-instance 'matriz-de-comparacao
@@ -76,7 +76,7 @@
   (make-instance 'contorno-simples :args args))
 
 (defun make-classe-de-contorno (args)
-  (make-instance 'classe-de-contorno :args args))
+  (make-instance 'classe-de-contorno :alturas args))
 
 (defun make-contour-adjacency-series (args)
   (make-instance 'contour-adjacency-series :args args))
