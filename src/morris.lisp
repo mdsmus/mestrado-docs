@@ -1,16 +1,12 @@
 (in-package #:goiaba)
 
-(defun c-space (pares)
-  "Numera as alturas de um contorno de 0 a n-1, sendo 0 o ponto mais
-  grave e n-1 o mais agudo." )
-
-(defun matriz-de-comparacao (c-space)
+(defun matriz-de-comparacao (classe-de-contorno)
   "Retorna a matriz de comparacao de um contorno a partir de seu
-c-space."
+classe-de-contorno."
   (loop
-     for y in c-space
+     for y in classe-de-contorno
      collect (loop
-                for x in c-space
+                for x in classe-de-contorno
                 collect (positivo-ou-negativo (- x y)))))
 
 (defun inverte-matriz-de-comparacao (matriz-de-comparacao)
