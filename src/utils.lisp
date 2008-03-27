@@ -39,27 +39,27 @@
 
 ;; definição de parâmetros
 
-(defparameter ponto
-  (make-instance 'ponto :args '(1 0 2)))
+;; (defparameter ponto
+;;   (make-instance 'ponto :args '(1 0 2)))
 
-(defparameter contorno-com-duracao
-  (make-instance 'contorno-com-duracao :pontos '((0 1) (0 0))))
+;; (defparameter contorno-com-duracao
+;;   (make-instance 'contorno-com-duracao :pontos '((0 1) (0 0))))
 
-(defparameter contorno-simples
-  (make-instance 'contorno-simples :alturas '(1 0 2)))
+;; (defparameter contorno-simples
+;;   (make-instance 'contorno-simples :alturas '(1 0 2)))
 
-(defparameter matriz-de-comparacao
-  (make-instance 'matriz-de-comparacao
-                 :args '((0 -1 1 1)
-                         (1 0 1 1)
-                         (-1 -1 0 -1)
-                         (-1 -1 1 0))))
+;; (defparameter matriz-de-comparacao
+;;   (make-instance 'matriz-de-comparacao
+;;                  :args '((0 -1 1 1)
+;;                          (1 0 1 1)
+;;                          (-1 -1 0 -1)
+;;                          (-1 -1 1 0))))
 
-(defparameter classe-de-contorno
-  (make-instance 'classe-de-contorno :args '(1 0 2)))
+;; (defparameter classe-de-contorno
+;;   (make-instance 'classe-de-contorno :args '(1 0 2)))
 
-(defparameter contour-adjacency-series
-  (make-instance 'contour-adjacency-series :args '(1 0 2)))
+;; (defparameter contour-adjacency-series
+;;   (make-instance 'contour-adjacency-series :args '(1 0 2)))
 
 ;; make instance
 

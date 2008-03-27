@@ -16,3 +16,7 @@ classe-de-contorno."
      collect (loop
                   for elemento in linha
                   collect (* -1 elemento))))
+
+(defun contour-reduction-algorithm (classe-de-contorno)
+  (let ((contorno-com-duracao (contorno-simples->contorno-com-duracao classe-de-contorno)))
+    (maior-altura-contorno contorno-com-duracao)))
