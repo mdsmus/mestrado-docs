@@ -34,8 +34,8 @@ espaço de contorno (Contour Space ou c-space)."
                               collect (list x n)) #'< :key #'first))))
 
 (defmethod cc ((objeto contorno-simples))
-  (cc (make-contorno-com-duracao
-       (contorno-simples->contorno-com-duracao (alturas objeto)))))
+  (make-instance 'contorno-simples :alturas (cc (make-contorno-com-duracao
+    (contorno-simples->contorno-com-duracao (alturas objeto))))))
 
 (defmethod cas ((objeto contorno-com-duracao))
   "Retorna a Contour Adjacency Series (CAS) de um
