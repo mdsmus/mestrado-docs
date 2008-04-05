@@ -1,2 +1,6 @@
 conversa-com-passos
 logbook-mestrado.pdf
+*.fasl
+*.ps
+*.pdf
+*.midi
