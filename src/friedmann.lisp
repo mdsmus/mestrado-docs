@@ -27,16 +27,16 @@
 contorno. É o mesmo que normalização de contorno. Morris
 \cite{morris93:_new_direc_theor_analy_music_contour} chama de
 espaço de contorno (Contour Space ou c-space)."
-  (let ((pontos-do-contorno (sort (remover-alturas-repetidas (args objeto)) #'< :key #'second)))
+  (let* ((pontos-do-contorno (sort (remover-alturas-repetidas (args objeto)) #'< :key #'second)))
     (mapcar #'second (sort (loop
-                              for (x y) in pontos-do-contorno
-                              for n from 0
-                              collect (list x n)) #'< :key #'first))))
+         for (x y) in pontos-do-contorno
+         for n from 0
+         collect (list x n)) #'< :key #'first))))
 
 (defmethod cc ((objeto contorno-simples))
   (cc
    (make-contorno-com-duracao
-    (contorno-simples->contorno-com-duracao (alturas objeto)))))
+    (contorno-simples->contorno-com-duracao (args objeto)))))
 
 (defmethod cas ((objeto contorno-com-duracao))
   "Retorna a Contour Adjacency Series (CAS) de um
@@ -45,7 +45,7 @@ inclinacoes-contorno-positivo-negativo, as inclinações nulas são
 ignoradas."
   (remove 0
           (inclinacoes-contorno-positivo-negativo
-           (pontos objeto))))
+           (args objeto))))
 
 (defmethod cas ((objeto contorno-simples))
   "Retorna a Contour Adjacency Series (CAS) de um
@@ -54,7 +54,7 @@ inclinacoes-contorno-positivo-negativo, as inclinações nulas são
 ignoradas."
   (remove 0
           (inclinacoes-contorno-positivo-negativo
-           (contorno-simples->contorno-com-duracao (alturas objeto)))))
+           (contorno-simples->contorno-com-duracao (args objeto)))))
 
 (defmethod contour-interval-succession ((objeto classe-de-contorno))
   "Retorna os Contour Interval (CI) de uma Contour Class (CC)."
