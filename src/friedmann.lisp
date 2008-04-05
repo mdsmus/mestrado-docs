@@ -27,14 +27,15 @@
 contorno. É o mesmo que normalização de contorno. Morris
 \cite{morris93:_new_direc_theor_analy_music_contour} chama de
 espaço de contorno (Contour Space ou c-space)."
-  (let ((pontos-do-contorno (sort (remover-alturas-repetidas (pontos objeto)) #'< :key #'second)))
+  (let ((pontos-do-contorno (sort (remover-alturas-repetidas (args objeto)) #'< :key #'second)))
     (mapcar #'second (sort (loop
                               for (x y) in pontos-do-contorno
                               for n from 0
                               collect (list x n)) #'< :key #'first))))
 
 (defmethod cc ((objeto contorno-simples))
-  (cc (make-contorno-com-duracao
+  (cc
+   (make-contorno-com-duracao
     (contorno-simples->contorno-com-duracao (alturas objeto)))))
 
 (defmethod cas ((objeto contorno-com-duracao))
@@ -57,15 +58,15 @@ ignoradas."
 
 (defmethod contour-interval-succession ((objeto classe-de-contorno))
   "Retorna os Contour Interval (CI) de uma Contour Class (CC)."
-  (intervalos (alturas objeto)))
+  (intervalos (args objeto)))
 
 (defmethod contour-interval-succession ((objeto contorno-simples))
   "Retorna os Contour Interval (CI) de um contorno simples."
-  (intervalos (alturas objeto)))
+  (intervalos (args objeto)))
 
 (defmethod contour-interval-succession ((objeto contorno-com-duracao))
   "Retorna os Contour Interval (CI) de um contorno com duração."
-  (intervalos (cc (make-contorno-com-duracao (pontos objeto)))))
+  (intervalos (cc (make-contorno-com-duracao (args objeto)))))
 
 (defmethod casv ((objeto contour-adjacency-series))
   "Retorna o Contour Adjacency Series Vector (CASV) de um contorno com
@@ -77,7 +78,7 @@ duração."
 (defmethod casv ((objeto contorno-com-duracao))
   "Retorna o Contour Adjacency Series Vector (CASV) de um contorno com
 duração."
-  (let* ((cas (cas (make-contorno-com-duracao (pontos objeto))))
+  (let* ((cas (cas (make-contorno-com-duracao (args objeto))))
          (positivos (length (remove -1 cas)))
          (negativos (length (remove 1 cas))))
     (list positivos negativos)))
@@ -85,7 +86,7 @@ duração."
 (defmethod casv ((objeto contorno-simples))
   "Retorna o Contour Adjacency Series Vector (CASV) de um contorno
 simples."
-  (let* ((cas (cas (make-contorno-simples (alturas objeto))))
+  (let* ((cas (cas (make-contorno-simples (args objeto))))
          (positivos (length (remove -1 cas)))
          (negativos (length (remove 1 cas))))
     (list positivos negativos)))
@@ -93,8 +94,8 @@ simples."
 (defmethod cia ((objeto classe-de-contorno))
   "Retorna a Contour Interval Array (CIA) de uma Contour
 Class (CC)."
-  (let* ((lista (%cia (alturas objeto)))
-         (max (apply #'max (alturas objeto)))
+  (let* ((lista (%cia (args objeto)))
+         (max (apply #'max (args objeto)))
          (lista-negativa (remove-if #'plusp lista))
          (lista-positiva (remove-if #'minusp lista)))
     (list
@@ -106,33 +107,33 @@ Class (CC)."
 (defmethod cia ((objeto contorno-simples))
   "Retorna a Contour Interval Array (CIA) a partir de um contorno
 simples."
-  (cia (make-classe-de-contorno (cc (make-contorno-simples (alturas
+  (cia (make-classe-de-contorno (cc (make-contorno-simples (args
   objeto))))))
 
 (defmethod cia ((objeto contorno-com-duracao))
   "Retorna a Contour Interval Array (CIA) a partir de um contorno
 simples."
-  (cia (make-classe-de-contorno (cc (make-contorno-com-duracao (pontos
+  (cia (make-classe-de-contorno (cc (make-contorno-com-duracao (args
   objeto))))))
 
 (defmethod ccvii ((objeto classe-de-contorno))
   "Retorna o Countour Class Vector II (CCVII) de uma Contour
 Class (cc)."
-  (%ccv (cia (make-classe-de-contorno (alturas objeto)))))
+  (%ccv (cia (make-classe-de-contorno (args objeto)))))
 
 (defmethod ccvii ((objeto contorno-simples))
   "Retorna o Countour Class Vector II (CCVII) de um contorno simples."
-  (%ccv (cia (make-contorno-simples (alturas objeto)))))
+  (%ccv (cia (make-contorno-simples (args objeto)))))
 
 (defmethod ccvii ((objeto contorno-com-duracao))
   "Retorna o Countour Class Vector II (CCVII) de um contorno com
 duração."
-  (%ccv (cia (make-contorno-com-duracao (pontos objeto)))))
+  (%ccv (cia (make-contorno-com-duracao (args objeto)))))
 
 (defmethod ccvi ((objeto classe-de-contorno))
   "Retorna o Countour Class Vector I (CCVI) de uma Contour
 Class (cc)."
-  (let* ((cia (cia (make-classe-de-contorno (alturas objeto))))
+  (let* ((cia (cia (make-classe-de-contorno (args objeto))))
          (tamanho (length (first cia)))
          (primeiro (loop for
                       n from 0 to (- tamanho 1)
@@ -144,7 +145,7 @@ Class (cc)."
 
 (defmethod ccvi ((objeto contorno-simples))
   "Retorna o Countour Class Vector I (CCVI) de um contorno simples."
-  (let* ((cia (cia (make-contorno-simples (alturas classe-de-contorno))))
+  (let* ((cia (cia (make-contorno-simples (args classe-de-contorno))))
          (tamanho (length (first cia)))
          (primeiro (loop for
                       n from 0 to (- tamanho 1)
@@ -157,7 +158,7 @@ Class (cc)."
 (defmethod ccvi ((objeto contorno-com-duracao))
   "Retorna o Countour Class Vector I (CCVI) de um contorno com
 duração."
-  (let* ((cia (cia (make-contorno-com-duracao (alturas classe-de-contorno))))
+  (let* ((cia (cia (make-contorno-com-duracao (args classe-de-contorno))))
          (tamanho (length (first cia)))
          (primeiro (loop for
                       n from 0 to (- tamanho 1)
