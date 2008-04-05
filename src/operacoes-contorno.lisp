@@ -2,9 +2,9 @@
 
 ;; funções relacionadas a pares
 
-(defun menor-altura-contorno (contorno-com-duracao)
+(defun menor-altura-contorno (contorno-com-duracao &optional (fn #'second))
   "Retorna a menor altura de um contorno."
-  (first (sort (mapcar #'second contorno-com-duracao) #'<)))
+  (first (sort (mapcar fn contorno-com-duracao) #'<)))
 
 (defmethod menor-altura ((objeto contorno-com-duracao))
   "Retorna a menor altura de um contorno em codificação com duração."
@@ -14,9 +14,9 @@
   "Retorna a menor altura de um contorno em codificação simples."
   (first (sort (args objeto) #'<)))
 
-(defun maior-altura-contorno (contorno-com-duracao)
+(defun maior-altura-contorno (contorno-com-duracao &optional (fn #'second))
     "Retorna a maior altura de um contorno."
-    (first (sort (mapcar #'second contorno-com-duracao) #'>)))
+    (first (sort (mapcar fn contorno-com-duracao) #'>)))
 
 (defmethod maior-altura ((objeto contorno-com-duracao))
   "Retorna a maior altura de um contorno em codificação com duração."
@@ -162,19 +162,20 @@ uma lista de alturas (contorno simples)."
 (defmethod transpor ((objeto contorno-simples) fator)
   "Transpõe um contorno em codificação simples a partir de um dado
 fator."
-  (mapcar #'(lambda (ponto) (+ ponto fator)) (args objeto)))
+  (mapcar #'(lambda (ponto) (+ ponto fator)) (alturas objeto)))
 
 (defmethod transpor ((objeto contorno-com-duracao) fator)
   "Transpõe um contorno em codificação com duração a partir de um dado
 fator."
   (mapcar #'(lambda (ponto)
-              (transpor (make-ponto ponto) fator)) (args objeto)))
+              (transpor (make-ponto ponto) fator)) (pontos objeto)))
 
 (defmethod inverter ((objeto contorno-simples) &optional eixo)
   "Inverte um contorno em codificação simples em relação à altura a
 partir de um dado eixo."
-  (let* ((eixo (or eixo (ponto-medio-altura (contorno-simples->contorno-com-duracao (args objeto))))))
-    (mapcar #'(lambda (altura) (- (* 2 eixo) altura)) (args objeto))))
+  (let ((eixo (or eixo
+                  (ponto-medio-altura (contorno-simples->contorno-com-duracao (alturas objeto))))))
+    (mapcar #'(lambda (altura) (- (* 2 eixo) altura)) (alturas objeto))))
 
 (defmethod inverter ((objeto contorno-com-duracao) &optional eixo)
   "Inverte um contorno em codificação com duração em relação à altura
@@ -190,7 +191,7 @@ a partir de um dado eixo."
 
 (defmethod retrogradar ((objeto contorno-simples))
   "Retrograda um contorno em codificação simples."
-  (reverse (args objeto)))
+  (reverse (alturas objeto)))
 
 (defmethod retrogradar ((objeto contorno-com-duracao))
   "Retrograda um contorno em codificação com duração."
@@ -198,13 +199,13 @@ a partir de um dado eixo."
    (mapcar #'(lambda (ponto)
                (%retrogradar-ponto ponto
                                   (ponto-medio-duracao
-                                   (args objeto))))
-           (args objeto))))
+                                   (pontos objeto))))
+           (pontos objeto))))
 
 (defmethod rotacionar ((objeto contorno-simples) &optional (fator 1))
   "Rotaciona um contorno em codificação simples a partir de um dado
 fator."
-  (append (subseq (args objeto) fator) (subseq (args objeto) 0 fator)))
+  (append (subseq (alturas objeto) fator) (subseq (alturas objeto) 0 fator)))
 
 (defmethod rotacionar ((objeto contorno-com-duracao) &optional (fator 1))
   "Rotaciona um contorno em codificação com duração a partir de um

@@ -19,13 +19,14 @@
 ;; definição de classes
 
 (defclass ponto ()
-    ((args :accessor args :initarg :args)))
+  ((pontos :accessor pontos :initarg :args)))
 
 (defclass contorno-com-duracao ()
-  ((args :accessor args :initarg :args)))
+  ((pontos :accessor pontos :initarg :pontos)))
 
 (defclass contorno-simples ()
-  ((args :accessor args :initarg :args)))
+  ((alturas :accessor alturas :initarg :alturas)
+   (alturas-originais :accessor alturas-originais :initarg :alturas)))
 
 (defclass matriz-de-comparacao ()
   ((args :accessor args :initarg :args)))
@@ -42,10 +43,10 @@
   (make-instance 'ponto :args '(1 0 2)))
 
 (defparameter contorno-com-duracao
-  (make-instance 'contorno-com-duracao :args '((0 1) (0 0))))
+  (make-instance 'contorno-com-duracao :pontos '((0 1) (0 0))))
 
 (defparameter contorno-simples
-  (make-instance 'contorno-simples :args '(1 0 2)))
+  (make-instance 'contorno-simples :alturas '(1 0 2)))
 
 (defparameter matriz-de-comparacao
   (make-instance 'matriz-de-comparacao
@@ -63,19 +64,19 @@
 ;; make instance
 
 (defun make-ponto (args)
-  (make-instance 'ponto :args args))
+  (make-instance 'ponto :pontos args))
 
 (defun make-contorno-com-duracao (args)
-  (make-instance 'contorno-com-duracao :args args))
+  (make-instance 'contorno-com-duracao :pontos args))
 
 (defun make-contorno-simples (args)
-  (make-instance 'contorno-simples :args args))
+  (make-instance 'contorno-simples :alturas args))
 
 (defun make-matriz-de-comparacao (args)
   (make-instance 'contorno-simples :args args))
 
 (defun make-classe-de-contorno (args)
-  (make-instance 'classe-de-contorno :args args))
+  (make-instance 'classe-de-contorno :alturas args))
 
 (defun make-contour-adjacency-series (args)
   (make-instance 'contour-adjacency-series :args args))

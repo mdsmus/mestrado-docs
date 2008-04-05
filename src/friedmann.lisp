@@ -27,16 +27,15 @@
 contorno. É o mesmo que normalização de contorno. Morris
 \cite{morris93:_new_direc_theor_analy_music_contour} chama de
 espaço de contorno (Contour Space ou c-space)."
-  (let* ((pontos-do-contorno (sort (remover-alturas-repetidas (args objeto)) #'< :key #'second)))
+  (let ((pontos-do-contorno (sort (remover-alturas-repetidas (pontos objeto)) #'< :key #'second)))
     (mapcar #'second (sort (loop
-         for (x y) in pontos-do-contorno
-         for n from 0
-         collect (list x n)) #'< :key #'first))))
+                              for (x y) in pontos-do-contorno
+                              for n from 0
+                              collect (list x n)) #'< :key #'first))))
 
 (defmethod cc ((objeto contorno-simples))
-  (cc
-   (make-contorno-com-duracao
-    (contorno-simples->contorno-com-duracao (args objeto)))))
+  (cc (make-contorno-com-duracao
+    (contorno-simples->contorno-com-duracao (alturas objeto)))))
 
 (defmethod cas ((objeto contorno-com-duracao))
   "Retorna a Contour Adjacency Series (CAS) de um
@@ -45,7 +44,7 @@ inclinacoes-contorno-positivo-negativo, as inclinações nulas são
 ignoradas."
   (remove 0
           (inclinacoes-contorno-positivo-negativo
-           (args objeto))))
+           (pontos objeto))))
 
 (defmethod cas ((objeto contorno-simples))
   "Retorna a Contour Adjacency Series (CAS) de um
@@ -54,19 +53,19 @@ inclinacoes-contorno-positivo-negativo, as inclinações nulas são
 ignoradas."
   (remove 0
           (inclinacoes-contorno-positivo-negativo
-           (contorno-simples->contorno-com-duracao (args objeto)))))
+           (contorno-simples->contorno-com-duracao (alturas objeto)))))
 
 (defmethod contour-interval-succession ((objeto classe-de-contorno))
   "Retorna os Contour Interval (CI) de uma Contour Class (CC)."
-  (intervalos (args objeto)))
+  (intervalos (alturas objeto)))
 
 (defmethod contour-interval-succession ((objeto contorno-simples))
   "Retorna os Contour Interval (CI) de um contorno simples."
-  (intervalos (args objeto)))
+  (intervalos (alturas objeto)))
 
 (defmethod contour-interval-succession ((objeto contorno-com-duracao))
   "Retorna os Contour Interval (CI) de um contorno com duração."
-  (intervalos (cc (make-contorno-com-duracao (args objeto)))))
+  (intervalos (cc (make-contorno-com-duracao (pontos objeto)))))
 
 (defmethod casv ((objeto contour-adjacency-series))
   "Retorna o Contour Adjacency Series Vector (CASV) de um contorno com
@@ -78,7 +77,7 @@ duração."
 (defmethod casv ((objeto contorno-com-duracao))
   "Retorna o Contour Adjacency Series Vector (CASV) de um contorno com
 duração."
-  (let* ((cas (cas (make-contorno-com-duracao (args objeto))))
+  (let* ((cas (cas (make-contorno-com-duracao (pontos objeto))))
          (positivos (length (remove -1 cas)))
          (negativos (length (remove 1 cas))))
     (list positivos negativos)))
@@ -86,7 +85,7 @@ duração."
 (defmethod casv ((objeto contorno-simples))
   "Retorna o Contour Adjacency Series Vector (CASV) de um contorno
 simples."
-  (let* ((cas (cas (make-contorno-simples (args objeto))))
+  (let* ((cas (cas (make-contorno-simples (alturas objeto))))
          (positivos (length (remove -1 cas)))
          (negativos (length (remove 1 cas))))
     (list positivos negativos)))
@@ -94,8 +93,8 @@ simples."
 (defmethod cia ((objeto classe-de-contorno))
   "Retorna a Contour Interval Array (CIA) de uma Contour
 Class (CC)."
-  (let* ((lista (%cia (args objeto)))
-         (max (apply #'max (args objeto)))
+  (let* ((lista (%cia (alturas objeto)))
+         (max (apply #'max (alturas objeto)))
          (lista-negativa (remove-if #'plusp lista))
          (lista-positiva (remove-if #'minusp lista)))
     (list
@@ -107,33 +106,33 @@ Class (CC)."
 (defmethod cia ((objeto contorno-simples))
   "Retorna a Contour Interval Array (CIA) a partir de um contorno
 simples."
-  (cia (make-classe-de-contorno (cc (make-contorno-simples (args
+  (cia (make-classe-de-contorno (cc (make-contorno-simples (alturas
   objeto))))))
 
 (defmethod cia ((objeto contorno-com-duracao))
   "Retorna a Contour Interval Array (CIA) a partir de um contorno
 simples."
-  (cia (make-classe-de-contorno (cc (make-contorno-com-duracao (args
+  (cia (make-classe-de-contorno (cc (make-contorno-com-duracao (pontos
   objeto))))))
 
 (defmethod ccvii ((objeto classe-de-contorno))
   "Retorna o Countour Class Vector II (CCVII) de uma Contour
 Class (cc)."
-  (%ccv (cia (make-classe-de-contorno (args objeto)))))
+  (%ccv (cia (make-classe-de-contorno (alturas objeto)))))
 
 (defmethod ccvii ((objeto contorno-simples))
   "Retorna o Countour Class Vector II (CCVII) de um contorno simples."
-  (%ccv (cia (make-contorno-simples (args objeto)))))
+  (%ccv (cia (make-contorno-simples (alturas objeto)))))
 
 (defmethod ccvii ((objeto contorno-com-duracao))
   "Retorna o Countour Class Vector II (CCVII) de um contorno com
 duração."
-  (%ccv (cia (make-contorno-com-duracao (args objeto)))))
+  (%ccv (cia (make-contorno-com-duracao (pontos objeto)))))
 
 (defmethod ccvi ((objeto classe-de-contorno))
   "Retorna o Countour Class Vector I (CCVI) de uma Contour
 Class (cc)."
-  (let* ((cia (cia (make-classe-de-contorno (args objeto))))
+  (let* ((cia (cia (make-classe-de-contorno (alturas objeto))))
          (tamanho (length (first cia)))
          (primeiro (loop for
                       n from 0 to (- tamanho 1)
@@ -145,7 +144,7 @@ Class (cc)."
 
 (defmethod ccvi ((objeto contorno-simples))
   "Retorna o Countour Class Vector I (CCVI) de um contorno simples."
-  (let* ((cia (cia (make-contorno-simples (args classe-de-contorno))))
+  (let* ((cia (cia (make-contorno-simples (alturas classe-de-contorno))))
          (tamanho (length (first cia)))
          (primeiro (loop for
                       n from 0 to (- tamanho 1)
@@ -158,7 +157,7 @@ Class (cc)."
 (defmethod ccvi ((objeto contorno-com-duracao))
   "Retorna o Countour Class Vector I (CCVI) de um contorno com
 duração."
-  (let* ((cia (cia (make-contorno-com-duracao (args classe-de-contorno))))
+  (let* ((cia (cia (make-contorno-com-duracao (alturas classe-de-contorno))))
          (tamanho (length (first cia)))
          (primeiro (loop for
                       n from 0 to (- tamanho 1)
