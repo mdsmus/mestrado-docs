@@ -4,3 +4,10 @@ logbook-mestrado.pdf
 *.ps
 *.pdf
 *.midi
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.toc
+figs-out
