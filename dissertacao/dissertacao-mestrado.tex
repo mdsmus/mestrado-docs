@@ -9,6 +9,20 @@
 
 \doublespacing
 
+% usar para citação integral indentada com tradução
+\newcommand{\citacaoindt}[4]{
+  \begin{quote}
+    \normalsize
+%    \selectlanguage{english}
+    {#2}\footnote{
+      \selectlanguage{brazil}
+      ``{#1}''.
+    }.
+    \selectlanguage{brazil}
+    \cite[#3]{#4}.
+  \end{quote}
+}
+
 \title{Contornos melódicos para composição}
 \author{Marcos da Silva Sampaio}
 \begin{document}
