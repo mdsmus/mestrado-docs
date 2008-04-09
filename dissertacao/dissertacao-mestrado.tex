@@ -5,7 +5,8 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{achicago}
-\usepackage{setspace}  
+\usepackage{setspace}
+\usepackage{amsmath}
 
 \doublespacing
 
@@ -32,6 +33,10 @@
 \chapter{Introdução}
 \label{cha:introducao}
 
+A idéia de preservação de contorno é encontrada em diferentes
+situações musicais, como nas respostas reais e tonais das fugas
+\cite[p. 29]{morris87:composition}.
+
 \chapter{Sobre contornos}
 \label{cha:sobre-contornos}
 
@@ -46,6 +51,7 @@
 % problemas com teorias: clifford
 % estruturação da composição a partir de contornos
 % exemplos com análise de peças?
+% contornos: coerência, schoenberg
 
 A terminologia utilizada em teorias de contornos melódicos não é
 uniforme. Cada autor utiliza termos diferentes para ferramentas
@@ -64,15 +70,33 @@ Friedmann, e Morris, Marvin e Laprade.
   \caption{Quadro comparativo de ferramentas de análise de contornos}
   \label{tab:compara-ferramentas}
 \end{table}
- 
-Clifford afirma que
 
-\citacaoindt{contour, in absence of other pervasive systems of pitch
-  organization, represents a structural factor equal in significance
-  to pitch or set class relations}{contorno, na falta de outros
-  sistemas ocupantes de organização de altura, representa um fator
-  estrutural igual em significado a relações de alturas ou de classes
-  de conjuntos}{p. 32}{clifford95:contour}
+A Matriz de Comparação representa o total de comparações de um
+contorno. É obtida através da comparação de todos os pares ordenados
+de um contorno. Em uma matriz $E$ de um contorno $P$, a posição $E
+(x,y)$ contém $Com (Px,Py)$. A matriz exibe uma simetria de sinais
+invertidos em torno da diagonal principal, preenchida apenas por
+zeros. Dois contornos são equivalentes se geram a mesma matriz de
+comparação \cite[p. 28]{morris87:composition}. Um exemplo desta matriz
+referente ao contorno $\langle 4\:3\:5\:6 \rangle$ pode ser visto na
+tabela \ref{tab:matriz-4356}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{r|cccc}
+    & $4$ & $3$ & $5$ & $6$ \\
+    \hline
+    $4$ & $0$ & $-$ & $+$ & $+$ \\
+    $3$ & $+$ & $0$ & $+$ & $+$ \\
+    $5$ & $-$ & $-$ & $0$ & $+$ \\
+    $6$ & $-$ & $-$ & $-$ & $0$ \\
+  \end{tabular}
+  \caption{Matriz de comparação do contorno $\langle 4\:3\:5\:6 \rangle$}
+\label{tab:matriz-4356}
+\end{table}
+
+\section{Percepção de contornos}
+\label{sec:perc-de-cont}
 
 Contorno melódico é uma importante característica musical no
 reconhecimento de melodias familiares
@@ -82,6 +106,36 @@ Dowling e Fujitani \cite{dowling.ea71:contour}. Estes experimentos
 consistiam em submeter ouvintes ao reconhecimento de versões de
 canções familiares às quais intervalos melódicos e/ou ritmo eram
 modificados e o contorno preservado.
+
+De acordo com Friedmann as implicações do estudo de contornos na
+música do século XX são mais significativas para os ouvintes do que
+para os compositores. Isto porque a percepção de contornos é mais
+geral do que a percepção de altura e dos outros elementos do universo
+da teoria atonal \cite[p. 224]{friedmann85:methodology}.
+
+A idéia de Hindemith sobre percepção de contornos é semelhante à dos
+demais autores, embora o contexto em que se aplique seja o do estudo
+da harmonia. De acordo com ele é mais fácil lembrar de sucessão
+rítmica e de curvas de uma linha melódica do que de diferenças em
+tensão entre harmonias \cite[p. 175]{hindemith41:craft}.
+
+\section{Contorno como determinante composicional}
+\label{sec:cont-como-determ}
+
+Clifford afirma que
+
+\citacaoindt{contour, in absence of other pervasive systems of pitch
+  organization, represents a structural factor equal in significance
+  to pitch or set class relations}{contorno, na falta de outros
+  sistemas ocupantes de organização de altura, representa um fator
+  estrutural igual em significado a relações de alturas ou de classes
+  de conjuntos}{p. 157}{clifford95:contour}
+
+No nível melódico relações de contorno podem associar segmentos de
+contorno distintos entre dois ou mais segmentos. Neste nível contorno
+pode contribuir com um processo de transformação melódica
+\cite[p. 159]{clifford95:contour}
+
 
 \chapter{Ferramentas}
 \label{cha:ferramentas}
@@ -96,7 +150,7 @@ modificados e o contorno preservado.
 %% teoria dos contornos
 
 \bibliographystyle{mdschicago}
-\bibliography{melodic-contour,music-perception}
+\bibliography{melodic-contour,music-perception,composition}
 
 \chapter{Apêndice}
 \label{cha:apendice}
