@@ -1,0 +1,11 @@
+*.fasl
+*.aux
+*.blg
+*.dvi
+*.bbl
+*.log
+*.midi
+*.pdf
+*.ps
+instrumentos_op
+opus-6/script/systemfiles/*
