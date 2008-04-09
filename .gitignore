@@ -1,5 +1,11 @@
+conversa-com-passos
+logbook-mestrado.pdf
 *.fasl
+*.ps
+*.pdf
+*.midi
 *.aux
+*.bbl
 *.blg
 *.dvi
 *.bbl
@@ -9,3 +15,5 @@
 *.ps
 instrumentos_op
 opus-6/script/systemfiles/*
+*.toc
+figs-out

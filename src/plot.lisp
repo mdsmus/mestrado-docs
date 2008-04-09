@@ -26,36 +26,6 @@ pause -1 \"Hit return to continue\"" titulo png x1 x2 y1 y2 data)))
 (defun ver (file)
   (sb-ext:run-program "/usr/bin/gv" (list (concat *dir* file ".eps"))))
 
-;;(defgeneric plot ((objeto contorno-com-duracao) &optional (filename "bar"))
-;;  (:documentation "plota um objeto"))
-
-(defmethod plot ((objeto contorno-com-duracao) &optional (filename "bar"))
-  (let ((tmp-file (format nil "/tmp/~a" (gensym)))
-        (tmp-out (format nil "/tmp/~a" (gensym)))
-        (contorno (pontos objeto)))
-    (contornos->file contorno tmp-file)
-    (contorno-plot "foo"
-                   (concat *dir* filename)
-                   tmp-file
-                   tmp-out
-                   (menor-altura-contorno contorno #'first)
-                   (maior-altura-contorno contorno #'first)
-                   (menor-altura-contorno contorno)
-                   (maior-altura-contorno contorno #'second))
-    (gnuplot tmp-out)))
-
-(defmethod plot ((objeto contorno-simples) &optional (filename "bar"))
-  (plot (make-instance 'contorno-com-duracao :pontos
-                       (contorno-simples->contorno-com-duracao (alturas objeto)))
-        filename))
-
-(defmethod plot-operacoes ((objeto contorno-simples))
-  (plot (make-instance 'contorno-simples :alturas (inverter objeto)) "c1")
-  (plot (make-instance 'contorno-simples :alturas (rotacionar objeto)) "c2")
-  (plot (make-instance 'contorno-simples :alturas (retrogradar objeto)) "c3")
-  (plot (make-instance 'contorno-simples :alturas (inverter (make-instance 'contorno-simples :alturas (retrogradar objeto))) "c4")
-  )
-  
 (defun plot-contorno (contorno titulo arquivo &optional (x1 0) (x2 (- (length contorno) 1)) (y1 (menor-altura-contorno contorno)) (y2 (maior-altura-contorno contorno)))
   "Plota contorno em um arquivo dado."
   (let ((tmp-file (format nil "/tmp/~a" (gensym)))

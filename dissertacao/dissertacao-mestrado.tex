@@ -1,0 +1,241 @@
+\documentclass[12pt,brazil]{book}
+\usepackage[utf8x]{inputenc}
+\usepackage{babel}
+\usepackage[a4paper,top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{achicago}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\doublespacing
+
+% usar para citação integral indentada com tradução
+\newcommand{\citacaoindt}[4]{
+  \begin{quote}
+    \normalsize
+%    \selectlanguage{english}
+    {#2}\footnote{
+      \selectlanguage{brazil}
+      ``{#1}''.
+    }.
+    \selectlanguage{brazil}
+    \cite[#3]{#4}.
+  \end{quote}
+}
+
+\title{Contornos melódicos para composição}
+\author{Marcos da Silva Sampaio}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Introdução}
+\label{cha:introducao}
+
+A idéia de preservação de contorno é encontrada em diferentes
+situações musicais, como nas respostas reais e tonais das fugas
+\cite[p. 29]{morris87:composition}.
+
+\chapter{Sobre contornos}
+\label{cha:sobre-contornos}
+
+%% brainstorm
+
+% análise: comparação e equivalência de materiais.
+% análise: objetivos diferentes.
+% redução: tipologia de adams e algoritmo de morris
+% equivalência a partir de matriz de comparação
+% cognição: dowling
+% terminologias diferentes: friedmann
+% problemas com teorias: clifford
+% estruturação da composição a partir de contornos
+% exemplos com análise de peças?
+% contornos: coerência, schoenberg
+
+A terminologia utilizada em teorias de contornos melódicos não é
+uniforme. Cada autor utiliza termos diferentes para ferramentas
+semelhantes \cite{friedmann87:response}. A tabela
+\ref{tab:compara-ferramentas} tem uma comparação dos termos usados por
+Friedmann, e Morris, Marvin e Laprade.
+
+\begin{table}
+  \centering
+  \begin{tabular}{l|l}
+    Friedmann & Marvin e Laprade \\ \hline
+    Contour Adacency Series (CAS) & INT \\
+    Contour Class (CC) & cseg \\
+    Subset & csubseg 
+  \end{tabular}
+  \caption{Quadro comparativo de ferramentas de análise de contornos}
+  \label{tab:compara-ferramentas}
+\end{table}
+
+A Matriz de Comparação representa o total de comparações de um
+contorno. É obtida através da comparação de todos os pares ordenados
+de um contorno. Em uma matriz $E$ de um contorno $P$, a posição $E
+(x,y)$ contém $Com (Px,Py)$. A matriz exibe uma simetria de sinais
+invertidos em torno da diagonal principal, preenchida apenas por
+zeros. Dois contornos são equivalentes se geram a mesma matriz de
+comparação \cite[p. 28]{morris87:composition}. Um exemplo desta matriz
+referente ao contorno $\langle 4\:3\:5\:6 \rangle$ pode ser visto na
+tabela \ref{tab:matriz-4356}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{r|cccc}
+    & $4$ & $3$ & $5$ & $6$ \\
+    \hline
+    $4$ & $0$ & $-$ & $+$ & $+$ \\
+    $3$ & $+$ & $0$ & $+$ & $+$ \\
+    $5$ & $-$ & $-$ & $0$ & $+$ \\
+    $6$ & $-$ & $-$ & $-$ & $0$ \\
+  \end{tabular}
+  \caption{Matriz de comparação do contorno $\langle 4\:3\:5\:6 \rangle$}
+\label{tab:matriz-4356}
+\end{table}
+
+\section{Percepção de contornos}
+\label{sec:perc-de-cont}
+
+Contorno melódico é uma importante característica musical no
+reconhecimento de melodias familiares
+\cite[p. 136]{dowling.ea86:music}. Esta afirmação é endossada por
+experimentos realizados por White \cite{white60:recognition}, e
+Dowling e Fujitani \cite{dowling.ea71:contour}. Estes experimentos
+consistiam em submeter ouvintes ao reconhecimento de versões de
+canções familiares às quais intervalos melódicos e/ou ritmo eram
+modificados e o contorno preservado.
+
+De acordo com Friedmann as implicações do estudo de contornos na
+música do século XX são mais significativas para os ouvintes do que
+para os compositores. Isto porque a percepção de contornos é mais
+geral do que a percepção de altura e dos outros elementos do universo
+da teoria atonal \cite[p. 224]{friedmann85:methodology}.
+
+A idéia de Hindemith sobre percepção de contornos é semelhante à dos
+demais autores, embora o contexto em que se aplique seja o do estudo
+da harmonia. De acordo com ele é mais fácil lembrar de sucessão
+rítmica e de curvas de uma linha melódica do que de diferenças em
+tensão entre harmonias \cite[p. 175]{hindemith41:craft}.
+
+\section{Contorno como determinante composicional}
+\label{sec:cont-como-determ}
+
+Clifford afirma que
+
+\citacaoindt{contour, in absence of other pervasive systems of pitch
+  organization, represents a structural factor equal in significance
+  to pitch or set class relations}{contorno, na falta de outros
+  sistemas ocupantes de organização de altura, representa um fator
+  estrutural igual em significado a relações de alturas ou de classes
+  de conjuntos}{p. 157}{clifford95:contour}
+
+No nível melódico relações de contorno podem associar segmentos de
+contorno distintos entre dois ou mais segmentos. Neste nível contorno
+pode contribuir com um processo de transformação melódica
+\cite[p. 159]{clifford95:contour}
+
+
+\chapter{Ferramentas}
+\label{cha:ferramentas}
+
+\chapter{Análise da composição}
+\label{cha:anal-da-comp}
+
+\chapter{Conclusão}
+\label{cha:conclusao}
+
+%%% bibliografia
+%% teoria dos contornos
+
+\bibliographystyle{mdschicago}
+\bibliography{melodic-contour,music-perception,composition}
+
+\chapter{Apêndice}
+\label{cha:apendice}
+
+\section{Glossário}
+\label{sec:glossario}
+
+\paragraph{Contour Adjacency Series (CAS)}
+\label{sec:cont-adjac-seri}
+
+Série de elementos adjacentes de um contorno. É uma série de sinais
+'+' e '-' referentes às inclinações positivas e negativas entre notas
+adjascentes de um contorno. Contornos adjacentes de mesma altura são
+desconsiderados, assim como não há uma indicação de repetição de
+altura em larga escala. Por exemplo, para um contorno \texttt{d c f
+  d}, CAS = \texttt{$<$-,+,-$>$}; para um contorno \texttt{d c c e}, CAS =
+\texttt{$<$-,+$>$}.
+
+A principal utilidade da CAS está na comparação de equivalência com
+retrógrado ou rotação de ordem dos elementos do contorno.
+
+\paragraph{Contour Class (CC)}
+\label{sec:contour-class-cc}
+
+Classe de contornos. É uma série ordenada de números que representa a
+relação de alturas entre todas as notas de um contorno, na qual a nota
+mais grave é indicada por 0 e a nota mais aguda por n-1, onde n=total
+de notas. Por exemplo, para um contorno \texttt{d c f e}, CC = \texttt{$<$1 0
+3 2$>$}.
+
+\paragraph{Contour Adjacency Series Vector (CASV)}
+\label{sec:cont-adjac-seri-1}
+
+Vetor de classe de contornos adjacentes. É um vetor de dois dígitos
+com a soma das inclinações positivas e negativas de um contorno. Por
+exemplo, para um contorno \texttt{d c f e} CASV = \texttt{$<$1,2$>$}.
+
+Sua principal utilidade é estabelecer uma classe de equivalência entre
+rotações, retrógrados e outras permutações de ordem de elementos.
+
+\paragraph{Contour Interval (CI)}
+\label{sec:contour-interval-ci}
+
+Intervalo de contorno. É a distância entre dois elementos de uma
+classe de contorno (CC). Por exemplo, em CC $<$1 0 3 2$>$, a CI de \texttt{1-0} é
+\texttt{-1}, a CI de \texttt{0-3} é \texttt{+3}.
+
+\paragraph{Contour Interval Succession (CIS)}
+\label{sec:cont-interv-succ}
+
+Sucessão de intervalos de contorno é uma série de números que
+representam os intervalos de contorno (CI) de uma classe de contorno
+(CC). Por exemplo, em CC \texttt{$<$1 0 3 2$>$}, CIS = \texttt{$<$1 3 -1$>$}.
+
+\paragraph{Contour Interval Array (CIA)}
+\label{sec:cont-interv-array}
+
+Vetor de intervalos de contorno. É uma série de números que representa
+a multiplicidade de intervalos de contornos (CI) de uma classe de
+contorno (CC). Esta série é dividida em duas e cada número representa
+o número de CI's de valor \texttt{1}, \texttt{2}, \texttt{3}, etc, a
+depender do tamanho do contorno. A primeira parte da série representa
+CI's positivos e a segunda representa CI's negativos. Por exemplo,
+para CC = \texttt{$<$1 0 3 2$>$}, CIA = \texttt{$<$1 2 1$>$,$<$2 0
+  0$>$}. Esta CC tem um intervalo de valor \texttt{+1}, dois de valor
+\texttt{+2}, um de valor \texttt{+3}, dois de valor \texttt{-1} e
+nenhum de valores \texttt{-2} e \texttt{-3}.
+
+\paragraph{Contour Class Vector I (CCVI)}
+\label{sec:contour-class-vector-1}
+
+Vetor de classe de contorno I. É um par de números que representa o
+grau de ascendência e descendência de uma classe de contorno (CC). É
+obtido através da soma da multiplicação do número de ocorrências de
+cada intervalo de contorno (CI) pelo próprio valor do intervalo. Por
+exemplo, em um CIA \texttt{$<$1 2 1$>$,$<$2 0 0$>$} CCVI =
+\texttt{$<$8 2$>$}.
+
+\paragraph{Contour Class Vector II (CCVII)}
+\label{sec:contour-class-vector-2}
+
+Vetor de classe de contorno II. É um par de números que representa o
+grau de ascendência e descendência de uma classe de contorno (CC). É
+obtido através da soma dos valores positivos e negativos das
+ocorrências de intervalos de contorno (CI). Por exemplo, em um CIA
+\texttt{$<$1 2 1$>$,$<$2 0 0$>$}, CCVII = \texttt{$<$8 2$>$}
+
+\end{document}
