@@ -13,6 +13,8 @@
 % usar para termos estrangeiros
 \newcommand{\eng}[1]{\textit{#1}}
 
+\newcommand{\contorno}[1]{$\langle #1 \rangle$}
+
 % usar para citação integral indentada com tradução
 \newcommand{\citacaoindt}[4]{
   \begin{quote}
@@ -34,6 +36,7 @@
 \tableofcontents
 \listoftables
 \listoffigures
+\graphicspath{{figs-out/}}
 
 \chapter{Introdução}
 \label{cha:introducao}
@@ -41,7 +44,6 @@
 A idéia de preservação de contorno é encontrada em diferentes
 situações musicais, como nas respostas reais e tonais das fugas
 \cite[p. 29]{morris87:composition}.
-
 \chapter{Sobre contornos}
 \label{cha:sobre-contornos}
 
@@ -57,6 +59,44 @@ situações musicais, como nas respostas reais e tonais das fugas
 % estruturação da composição a partir de contornos
 % exemplos com análise de peças?
 % contornos: coerência, schoenberg
+
+De acordo com Beard teorias de contornos foram desenvolvidas
+primariamente como técnicas analíticas para composições atonais que
+podem não ter características musicais usadas para demonstrar
+coerência em composições tonais \cite[p. 1]{beard03:contour}.
+
+Morris define contorno como um conjunto ordenado de elementos
+distintos, com ou sem repetição, numerados de forma ascendente
+\cite[p. 206]{morris93:directions}.
+
+Morris admite também que um contorno pode ser interpretado como
+registro, dinâmica ou densidade de acordes no tempo
+\cite[p. 206]{morris93:directions}. Representações do contorno
+\contorno{4\:3\:5\:6} podem ser vistas nas figuras
+\ref{fig:pitches-in-time}, \ref{fig:chord-densities-in-time} e
+\ref{fig:dynamics-in-time}.
+
+\begin{figure}
+\begin{minipage}{5.2cm}
+  \centering
+  \includegraphics[scale=1]{pitches-in-time}
+  \caption{Contorno \contorno{4\:3\:5\:6}: alturas no tempo}
+  \label{fig:pitches-in-time}
+\end{minipage}
+\begin{minipage}{5.2cm}
+  \centering
+  \includegraphics[scale=1]{chord-densities-in-time}
+  \caption{Contorno \contorno{4\:3\:5\:6}: densidade de acordes no
+    tempo}
+\label{fig:chord-densities-in-time}
+\end{minipage}
+\begin{minipage}{5.2cm}
+  \centering
+  \includegraphics[scale=1]{dynamics-in-time}
+  \caption{Contorno \contorno{4\:3\:5\:6}: dinâmicas no tempo}
+\label{fig:dynamics-in-time}
+\end{minipage}
+\end{figure}
 
 A terminologia utilizada em teorias de contornos melódicos não é
 uniforme. Cada autor utiliza termos diferentes para ferramentas
@@ -75,6 +115,13 @@ Friedmann, e Morris, Marvin e Laprade.
   \caption{Quadro comparativo de ferramentas de análise de contornos}
   \label{tab:compara-ferramentas}
 \end{table}
+
+Morris define os conceitos de espaço de alturas e espaço de contorno
+\cite{morris87:composition}. Trata-se de uma abstração. No primeiro os
+elementos a serem considerados são as notas e no segundo são os
+elementos são os registros dessas notas. Beard confunde a idéia espaço
+do contorno com a definição de classe de contorno
+\cite[p. 11]{beard03:contour}.
 
 A Matriz de Comparação representa o total de comparações de um
 contorno. É obtida através da comparação de todos os pares ordenados
@@ -165,7 +212,7 @@ Clifford afirma que
 No nível melódico relações de contorno podem associar segmentos de
 contorno distintos entre dois ou mais segmentos. Neste nível contorno
 pode contribuir com um processo de transformação melódica
-\cite[p. 159]{clifford95:contour}
+\cite[p. 159]{clifford95:contour}.
 
 
 \chapter{Ferramentas}
