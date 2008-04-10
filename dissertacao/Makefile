@@ -1,3 +1,5 @@
+BSTINPUTS=:config
+
 maindir=$(shell pwd)
 
 file = dissertacao-mestrado
