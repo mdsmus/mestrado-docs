@@ -17,3 +17,5 @@ instrumentos_op
 opus-6/script/systemfiles/*
 *.toc
 figs-out
+*.lof
+*.lot
