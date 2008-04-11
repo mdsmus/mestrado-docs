@@ -1,4 +1,4 @@
-BSTINPUTS=:config
+export BSTINPUTS=$BSTINPUTS:config:.
 
 maindir=$(shell pwd)
 
@@ -34,7 +34,7 @@ cleanall: clean cleanbib
 	rm $(file).{dvi,log}
 
 cleanbib:
-	rm $(file).{aux,bbl,blg}
+	rm $(file).{aux,bbl,blg,l*,toc} ;\
 
 clean:
 	rm -rf $(figs-out) ;\
