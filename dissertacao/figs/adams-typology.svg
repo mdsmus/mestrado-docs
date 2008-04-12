@@ -13,7 +13,7 @@
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.45.1"
-   sodipodi:docbase="/home/marcos/repositorios/marcos-mestrado/dissertacao/figs"
+   sodipodi:docbase="/home/marcos/profissional/mestrado/marcos-mestrado/dissertacao/figs"
    sodipodi:docname="adams-typology.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
@@ -25,15 +25,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.52928546"
-     inkscape:cx="372.04724"
-     inkscape:cy="526.18109"
+     inkscape:zoom="0.74278186"
+     inkscape:cx="204.24066"
+     inkscape:cy="674.37348"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="1280"
      inkscape:window-height="747"
      inkscape:window-x="0"
-     inkscape:window-y="0" />
+     inkscape:window-y="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -50,10 +52,9 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g9703"
-       transform="translate(614.92858,602.51702)">
+       id="g6375">
       <g
-         transform="matrix(-1,0,0,-1,-1097.3972,-448.63997)"
+         transform="matrix(-1,0,0,-1,-482.46862,153.87705)"
          id="g8164">
         <g
            id="g8166"
@@ -115,7 +116,7 @@
         </g>
       </g>
       <g
-         transform="translate(-39.688165,-191.58138)"
+         transform="translate(575.24041,410.93564)"
          id="g8136">
         <g
            id="g8120"
@@ -177,7 +178,7 @@
         </g>
       </g>
       <g
-         transform="matrix(-0.4330127,-0.25,-0.25,0.4330127,-712.9458,-1027.9203)"
+         transform="matrix(-0.4330127,-0.25,-0.25,0.4330127,-98.01722,-424.44582)"
          id="g8200">
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.29788065;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -206,7 +207,7 @@
            transform="matrix(0.954031,0,0,0.9566441,-785.20988,400.57201)" />
       </g>
       <g
-         transform="translate(-16.91125,33.158073)"
+         transform="translate(598.01733,635.67509)"
          id="g8507">
         <g
            id="g7983"
@@ -297,7 +298,7 @@
         </g>
       </g>
       <g
-         transform="translate(-32.2875,1.8218819)"
+         transform="translate(582.64108,604.3389)"
          id="g8493">
         <g
            id="g6925"
@@ -388,7 +389,7 @@
         </g>
       </g>
       <g
-         transform="matrix(1,0,0,-1,276.02132,-448.63997)"
+         transform="matrix(1,0,0,-1,890.9499,153.87705)"
          id="g8182">
         <g
            id="g8184"
@@ -450,7 +451,7 @@
         </g>
       </g>
       <g
-         transform="matrix(-1,0,0,1,-781.68767,-191.58138)"
+         transform="matrix(-1,0,0,1,-166.75909,410.93564)"
          id="g8146">
         <g
            id="g8148"
@@ -512,7 +513,7 @@
         </g>
       </g>
       <g
-         transform="matrix(0.4330127,-0.25,0.25,0.4330127,-108.43004,-1030.0097)"
+         transform="matrix(0.4330127,-0.25,0.25,0.4330127,506.49854,-424.44582)"
          id="g8208">
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.29788065;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -541,7 +542,7 @@
            transform="matrix(0.954031,0,0,0.9566441,-785.20988,400.57201)" />
       </g>
       <g
-         transform="translate(29.468965,27.000032)"
+         transform="translate(644.39755,629.51705)"
          id="g8451">
         <g
            id="g7945"
@@ -632,7 +633,7 @@
         </g>
       </g>
       <g
-         transform="translate(38.966015,-1.1571289)"
+         transform="translate(653.89459,601.35989)"
          id="g8465">
         <g
            id="g8052"
@@ -723,7 +724,7 @@
         </g>
       </g>
       <g
-         transform="matrix(1,0,0,-1,24.83972,-139.11043)"
+         transform="matrix(1,0,0,-1,639.7683,463.40659)"
          id="g8092">
         <g
            id="g8076"
@@ -785,7 +786,7 @@
         </g>
       </g>
       <g
-         transform="translate(20.237887,-501.11092)"
+         transform="translate(635.16647,101.4061)"
          id="g8102">
         <g
            id="g8104"
@@ -847,7 +848,7 @@
         </g>
       </g>
       <g
-         transform="matrix(0.5,0,0,0.5,-40.965688,-847.76595)"
+         transform="matrix(0.5,0,0,0.5,573.96289,-273.54381)"
          id="g8216">
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.28909922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -876,7 +877,7 @@
            transform="matrix(0.954031,0,0,0.9566441,-868.38117,365.19471)" />
       </g>
       <g
-         transform="matrix(-1,0,0,1,-823.95646,-12.13451)"
+         transform="matrix(-1,0,0,1,-209.02788,590.38251)"
          id="g8333">
         <g
            id="g8309"
@@ -967,7 +968,7 @@
         </g>
       </g>
       <g
-         transform="translate(6.0899658,-1.8218824)"
+         transform="translate(621.01855,600.69514)"
          id="g8479">
         <g
            id="g8349"
