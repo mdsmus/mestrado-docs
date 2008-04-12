@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.74278186"
-     inkscape:cx="204.24066"
-     inkscape:cy="674.37348"
+     inkscape:zoom="0.94425401"
+     inkscape:cx="182.24066"
+     inkscape:cy="754.37346"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="1280"
@@ -52,9 +52,9 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g6375">
+       id="g7357">
       <g
-         transform="matrix(-1,0,0,-1,-482.46862,153.87705)"
+         transform="matrix(-1,0,0,-1,-482.46862,57.064403)"
          id="g8164">
         <g
            id="g8166"
@@ -116,7 +116,7 @@
         </g>
       </g>
       <g
-         transform="translate(575.24041,410.93564)"
+         transform="translate(575.24041,353.28909)"
          id="g8136">
         <g
            id="g8120"
@@ -178,7 +178,7 @@
         </g>
       </g>
       <g
-         transform="matrix(-0.4330127,-0.25,-0.25,0.4330127,-98.01722,-424.44582)"
+         transform="matrix(-0.4330127,-0.25,-0.25,0.4330127,-98.01722,-424.44578)"
          id="g8200">
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.29788065;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -207,7 +207,7 @@
            transform="matrix(0.954031,0,0,0.9566441,-785.20988,400.57201)" />
       </g>
       <g
-         transform="translate(598.01733,635.67509)"
+         transform="translate(598.01733,504.74458)"
          id="g8507">
         <g
            id="g7983"
@@ -298,7 +298,7 @@
         </g>
       </g>
       <g
-         transform="translate(582.64108,604.3389)"
+         transform="translate(582.64108,444.3389)"
          id="g8493">
         <g
            id="g6925"
@@ -389,7 +389,7 @@
         </g>
       </g>
       <g
-         transform="matrix(1,0,0,-1,890.9499,153.87705)"
+         transform="matrix(1,0,0,-1,846.94989,57.064403)"
          id="g8182">
         <g
            id="g8184"
@@ -451,7 +451,7 @@
         </g>
       </g>
       <g
-         transform="matrix(-1,0,0,1,-166.75909,410.93564)"
+         transform="matrix(-1,0,0,1,-210.7591,353.28909)"
          id="g8146">
         <g
            id="g8148"
@@ -513,7 +513,7 @@
         </g>
       </g>
       <g
-         transform="matrix(0.4330127,-0.25,0.25,0.4330127,506.49854,-424.44582)"
+         transform="matrix(0.4330127,-0.25,0.25,0.4330127,462.49853,-424.44578)"
          id="g8208">
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.29788065;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -542,7 +542,7 @@
            transform="matrix(0.954031,0,0,0.9566441,-785.20988,400.57201)" />
       </g>
       <g
-         transform="translate(644.39755,629.51705)"
+         transform="translate(600.39754,498.58654)"
          id="g8451">
         <g
            id="g7945"
@@ -633,7 +633,7 @@
         </g>
       </g>
       <g
-         transform="translate(653.89459,601.35989)"
+         transform="translate(609.89458,441.35989)"
          id="g8465">
         <g
            id="g8052"
@@ -724,7 +724,7 @@
         </g>
       </g>
       <g
-         transform="matrix(1,0,0,-1,639.7683,463.40659)"
+         transform="matrix(1,0,0,-1,617.76829,366.59394)"
          id="g8092">
         <g
            id="g8076"
@@ -786,7 +786,7 @@
         </g>
       </g>
       <g
-         transform="translate(635.16647,101.4061)"
+         transform="translate(613.16646,43.759554)"
          id="g8102">
         <g
            id="g8104"
@@ -848,7 +848,7 @@
         </g>
       </g>
       <g
-         transform="matrix(0.5,0,0,0.5,573.96289,-273.54381)"
+         transform="matrix(0.5,0,0,0.5,551.96288,-273.54377)"
          id="g8216">
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.28909922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -877,7 +877,7 @@
            transform="matrix(0.954031,0,0,0.9566441,-868.38117,365.19471)" />
       </g>
       <g
-         transform="matrix(-1,0,0,1,-209.02788,590.38251)"
+         transform="matrix(-1,0,0,1,-231.02789,459.452)"
          id="g8333">
         <g
            id="g8309"
@@ -968,7 +968,7 @@
         </g>
       </g>
       <g
-         transform="translate(621.01855,600.69514)"
+         transform="translate(599.01854,440.69514)"
          id="g8479">
         <g
            id="g8349"
