@@ -142,19 +142,18 @@ Friedmann, e Morris, Marvin e Laprade.
   \begin{tabular}{l|l}
     Friedmann & Marvin e Laprade \\ \hline
     \gls{cas}  & $INT_1$ \\
-    \gls{cc} & \gls{cseg} \\
-     & \gls{csubseg}
   \end{tabular}
   \caption{Quadro comparativo de ferramentas de análise de contornos}
   \label{tab:compara-ferramentas}
 \end{table}
 
-Morris define os conceitos de espaço de alturas e espaço de contorno
-(\eng{\gls{c-space}}) \cite{morris87:composition}. Trata-se de uma
-abstração. No primeiro os elementos a serem considerados são as notas
-e no segundo são os elementos são os registros dessas notas. Beard
-confunde a idéia de espaço do contorno com a definição de classe de
-contorno \cite[p. 11]{beard03:contour}.
+Morris define os conceitos de espaço de alturas (\eng{\gls{p-space}})
+e espaço de contorno (\eng{\gls{c-space}})
+\cite{morris87:composition}. Trata-se de uma abstração. No primeiro os
+elementos a serem considerados são as notas e no segundo são os
+elementos são os registros dessas notas. Beard confunde a idéia de
+espaço do contorno com a definição de classe de contorno
+\cite[p. 11]{beard03:contour}.
 
 A Matriz de Comparação (\eng{\gls{com-matrix}}) representa o total de
 comparações de um contorno. É obtida através da comparação de todos os
@@ -164,12 +163,6 @@ de sinais invertidos em torno da diagonal principal, esta preenchida
 apenas por zeros. Um exemplo desta matriz referente ao contorno
 $\langle 4\:3\:5\:6 \rangle$ pode ser visto na tabela
 \ref{tab:matriz-4356} \cite[p. 28]{morris87:composition}.
-
-Contornos diferentes que geram uma mesma matriz de comparação
-são considerados equivalentes. Também são considerados equivalentes
-contornos que, após uma operação de identidade, retrogradação,
-inversão, ou retrogradação com inversão geram uma mesma matriz de
-comparação.
 
 \begin{table}
   \centering
@@ -195,6 +188,30 @@ $\langle 4\:3\:5\:6 \rangle$, $INT_1 = \langle - + +\rangle$
 representa as diferenças entre $4$ e $3$, $3$ e $5$, e $5$ e
 $6$. $INT_2 = \langle + + \rangle$ representa as diferenças entre $4$
 e $5$, e $3$ e $6$.
+
+Esta matriz permite a verificação de duas classes de equivalência de
+contornos. A primeira é formada por todos os \gls{cseg} que dividem
+uma mesma \eng{\gls{com-matrix}}, e a segunda ---
+\eng{\gls{csegclass}} --- formada por todos os \gls{cseg} relacionados
+por operações de identidade, translação, retrogradação, inversão e
+retrogradação da inversão.
+
+A operação de inversão é obtida pela subtração de todos os
+\eng{\gls{cps}} por $(n-1)$. Para um dado \eng{\gls{cseg}} $P$, a
+operação de identidade é identificada como $IP$. A retrogradação de um
+\eng{\gls{cseg}} $P$ (representado por $RP$), bem como de sua inversão
+($IP$) são obtidas colocando os \eng{\gls{cps}} em ordem reversa
+\cite[p. 231]{marvin.ea87:relating}.
+
+A forma prima de um \eng{\gls{cseg}} é obtida operando-se de um
+algoritmo de três etapas:
+\begin{enumerate}
+\item realiza-se a translação do \eng{\gls{cseg}} caso seja necessário;
+\item se a substração de $(n-1)$ pelo último \eng{\gls{cps}} é menor
+  que o primeiro \eng{\gls{cps}}, inverte-se a \eng{\gls{cseg}};
+\item se o último \eng{\gls{cps}} é menor que o primeiro
+  \eng{\gls{cps}} retrograda-se a \eng{\gls{cseg}}.
+\end{enumerate}
 
 Michael Friedmann procurou desenvolver uma metodologia para estudo
 sistemático de contornos \cite{friedmann85:methodology}. Para isso
