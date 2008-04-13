@@ -1,0 +1,85 @@
+%%
+%% This is file `glossary-hypernav.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% glossaries.dtx  (with options: `glossary-hypernav.sty,package')
+%% 
+%%  glossaries.dtx
+%%  Copyright 2008 Nicola Talbot
+%% 
+%%  This work may be distributed and/or modified under the
+%%  conditions of the LaTeX Project Public License, either version 1.3
+%%  of this license of (at your option) any later version.
+%%  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%%  and version 1.3 or later is part of all distributions of LaTeX
+%%  version 2005/12/01 or later.
+%% 
+%%  This work has the LPPL maintenance status `maintained'.
+%% 
+%%  The Current Maintainer of this work is Nicola Talbot.
+%% 
+%%  This work consists of the files glossaries.dtx and glossaries.ins and the derived files glossaries.sty, mfirstuc.sty, glossary-hypernav.sty, glossary-list.sty, glossary-long.sty, glossary-super.sty, glossaries-babel.sty, glossaries-dictionary-Danish.dict, glossaries-dictionary-Dutch.dict, glossaries-dictionary-English.dict, glossaries-dictionary-French.dict, glossaries-dictionary-German.dict, glossaries-dictionary-Irish.dict, glossaries-dictionary-Italian.dict, glossaries-dictionary-Magyar.dict, glossaries-dictionary-Spanish.dict, minimalgls.tex, sample.tex, sample4col.tex, sampleAcr.tex, sampleAcrDesc.tex, sampleDB.tex, sampleEq.tex, sampleEqPg.tex, sampleNtn.tex, sampleSec.tex, database1.tex, database2.tex, glossaries.perl.
+%% 
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+\ProvidesPackage{glossary-hypernav}[2007/07/04 v1.01 (NLCT)]
+\@ifundefined{hyperlink}{%
+\newcommand*{\glsnavhyperlink}[3][]{#3}}{%
+\newcommand*{\glsnavhyperlink}[3][\@glo@type]{%
+\edef\gls@grplabel{#2}\edef\@gls@grptitle{#3}%
+\hyperlink{glsn:#1@#2}{#3}}}
+\@ifundefined{hypertarget}{%
+\newcommand*{\glsnavhypertarget}[3][]{#3}}{%
+\newcommand*{\glsnavhypertarget}[3][\@glo@type]{%
+\hypertarget{glsn:#1@#2}{#3}}}
+\newcommand*{\glsnavigation}{%
+\glssymbolnav
+\glsnavhyperlink{A}{\glsgetgrouptitle{A}} \textbar\
+\glsnavhyperlink{B}{\glsgetgrouptitle{B}} \textbar\
+\glsnavhyperlink{C}{\glsgetgrouptitle{C}} \textbar\
+\glsnavhyperlink{D}{\glsgetgrouptitle{D}} \textbar\
+\glsnavhyperlink{E}{\glsgetgrouptitle{E}} \textbar\
+\glsnavhyperlink{F}{\glsgetgrouptitle{F}} \textbar\
+\glsnavhyperlink{G}{\glsgetgrouptitle{G}} \textbar\
+\glsnavhyperlink{H}{\glsgetgrouptitle{H}} \textbar\
+\glsnavhyperlink{I}{\glsgetgrouptitle{I}} \textbar\
+\glsnavhyperlink{J}{\glsgetgrouptitle{J}} \textbar\
+\glsnavhyperlink{K}{\glsgetgrouptitle{K}} \textbar\
+\glsnavhyperlink{L}{\glsgetgrouptitle{L}} \textbar\
+\glsnavhyperlink{M}{\glsgetgrouptitle{M}} \textbar\
+\glsnavhyperlink{N}{\glsgetgrouptitle{N}} \textbar\
+\glsnavhyperlink{O}{\glsgetgrouptitle{O}} \textbar\
+\glsnavhyperlink{P}{\glsgetgrouptitle{P}} \textbar\
+\glsnavhyperlink{Q}{\glsgetgrouptitle{Q}} \textbar\
+\glsnavhyperlink{R}{\glsgetgrouptitle{R}} \textbar\
+\glsnavhyperlink{S}{\glsgetgrouptitle{S}} \textbar\
+\glsnavhyperlink{T}{\glsgetgrouptitle{T}} \textbar\
+\glsnavhyperlink{U}{\glsgetgrouptitle{U}} \textbar\
+\glsnavhyperlink{V}{\glsgetgrouptitle{V}} \textbar\
+\glsnavhyperlink{W}{\glsgetgrouptitle{W}} \textbar\
+\glsnavhyperlink{X}{\glsgetgrouptitle{X}} \textbar\
+\glsnavhyperlink{Y}{\glsgetgrouptitle{Y}} \textbar\
+\glsnavhyperlink{Z}{\glsgetgrouptitle{Z}}}
+\newcommand*{\glssymbolnav}{%
+\glsnavhyperlink{glssymbols}{\glsgetgrouptitle{glssymbols}} \textbar\
+\glsnavhyperlink{glsnumbers}{\glsgetgrouptitle{glsnumbers}} \textbar\
+}
+\endinput
+%%
+%% End of file `glossary-hypernav.sty'.
