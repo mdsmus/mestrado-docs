@@ -157,7 +157,7 @@ A Matriz de Comparação representa o total de comparações de um
 contorno. É obtida através da comparação de todos os pares ordenados
 de um contorno. Em uma matriz $E$ de um contorno $P$, a posição $E
 (x,y)$ contém $Com (Px,Py)$. A matriz exibe uma simetria de sinais
-invertidos em torno da diagonal principal, preenchida apenas por
+invertidos em torno da diagonal principal, esta preenchida apenas por
 zeros. Um exemplo desta matriz referente ao contorno $\langle
 4\:3\:5\:6 \rangle$ pode ser visto na tabela \ref{tab:matriz-4356}
 \cite[p. 28]{morris87:composition}.
@@ -181,6 +181,16 @@ comparação.
   \caption{Matriz de comparação do contorno $\langle 4\:3\:5\:6 \rangle$}
 \label{tab:matriz-4356}
 \end{table}
+
+Cada diagonal à direita da diagonal zero recebe o nome $INT_n$, onde
+$n$ representa a diferença de posição entre dois elementos. Dessa
+forma $INT_1$ representa as diferenças de altura entre \eng{c-pitches}
+adjacentes, $INT_2$ representa as diferenças de altura entre
+\eng{c-pitches} separados não adjacentes separados por um elemento e
+assim por diante \cite[p. 231]{marvin.ea87:relating}. Dado um contorno
+$\langle 4\:3\:5\:6 \rangle$, $INT_1 = \langle - + +\rangle$
+representa as diferenças entre $4$ e $3$, $3$ e $5$, e $5$ e
+$6$. $INT_2$ representa as diferenças entre $4$ e $5$, e $3$ e $6$.
 
 Michael Friedmann procurou desenvolver uma metodologia para estudo
 sistemático de contornos \cite{friedmann85:methodology}. Para isso
@@ -207,6 +217,9 @@ Há mais seis ferramentas derivadas dessas duas principais:
 \item Vetor de classe de contorno I (\eng{Contour Class Vector II -
     CCVII}).
 \end{enumerate}
+
+A série de classe de contornos adjacentes é um subconjunto da matriz
+de comparação representada pela diagonal superior à diagonal zero.
 
 \section{Percepção de contornos}
 \label{sec:perc-de-cont}
