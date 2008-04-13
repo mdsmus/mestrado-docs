@@ -108,7 +108,7 @@
 }
 
 \newglossaryentry{cps}{
-  name=c-pitches,
+  name=c-pitch,
   description={
     Altura de contorno. Elementos no espaço de contorno numerados de
     forma ordenada do mais grave para o mais agudo, de $0$ a $(n -
@@ -158,3 +158,46 @@
     Espaço de altura.
   }
 }
+
+\newglossaryentry{int}{
+  name=INT,
+  symbol={$INT_n$},
+  description={
+    Qualquer das diagonais à direita da diagonal principal da
+    \gls{com-matrix}.
+  }
+}
+
+\newglossaryentry{I}{
+  name=Inversão,
+  description={
+    Inversão de um \gls{cseg} S constituído de $n$ distintos \gls{cps}.
+    É calculada subtraindo cada \gls{cps} de $(n-1)$.
+  }
+}
+
+\newglossaryentry{normalform}{
+  name={Forma Normal},
+  description={
+    Um vetor ordenado no qual elementos de uma \gls{cseg} de $n$
+    distintos \gls{cps} são numerados de 0 a $(n-1)$ e listados na
+    ordem temporal
+  }
+}
+
+\newglossaryentry{T}{
+  name=Translação,
+  description={
+    Operação através da qual um \gls{csubseg} é renumerado de $0$
+    (nota mais grave) a $(n-1)$ (nota mais aguda).
+  }
+}
+
+\newglossaryentry{csim}{
+  name=CSIM,
+  description={
+    Função de similaridade de contorno. Mede o grau de similaridade
+    entre dois \gls{cseg} de mesma cardinalidade.
+  }
+}
+
