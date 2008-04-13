@@ -48,6 +48,7 @@ cleanlight:
 %.dvi: %.tex
 	latex $<
 	bibtex $(basename $<)
+	makeindex -s $(basename $<).ist -t $(basename $<).glg -o $(basename $<).gls $(basename $<).glo
 	latex $<
 	latex $<
 
