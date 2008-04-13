@@ -34,7 +34,7 @@ cleanall: clean cleanbib
 	rm $(file).{dvi,log}
 
 cleanbib:
-	rm $(file).{aux,bbl,blg,l*,toc} ;\
+	rm $(file).{aux,bbl,blg,l*,toc,gl*,ist} ;\
 
 clean:
 	rm -rf $(figs-out) ;\
