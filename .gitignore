@@ -19,3 +19,5 @@ opus-6/script/systemfiles/*
 figs-out
 *.lof
 *.lot
+*.ist
+*.gl*
