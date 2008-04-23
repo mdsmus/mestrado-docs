@@ -17,17 +17,18 @@
 
 % usar para termos estrangeiros
 \newcommand{\eng}[1]{\textit{#1}}
+\newcommand{\eg}[1]{\textit{\gls{#1}}}
 
 \newcommand{\contorno}[1]{$\langle #1 \rangle$}
 
 % usar para citação integral indentada com tradução
-\newcommand{\citacaoindt}[4]{
+\newcommand{\citacaolonga}[4]{
   \begin{quote}
     \normalsize
 %    \selectlanguage{english}
-    {#2}\footnote{
+    {#1}\footnote{
       \selectlanguage{brazil}
-      ``{#1}''.
+      ``{#2}''.
     }.
     \selectlanguage{brazil}
     \cite[#3]{#4}.
@@ -83,13 +84,10 @@ repetição, numerados de forma ascendente
 \cite[p. 206]{morris93:directions}. Por definição contornos musicais
 são ordenados \cite[p. 228]{marvin.ea87:relating}.
 
-%% kroger: voz passiva fica cansativa rapido, eu sugiro "Nos podemos
-%% ver representações do contorno <foo> na figura bar.
-
 Um contorno pode ser interpretado como registro, dinâmica ou densidade
 de acordes no tempo \cite[p. 206]{morris93:directions}
-\cite[p. 22]{clifford95:contour}. Representações do contorno
-\contorno{4\:3\:5\:6} podem ser vistas na figura
+\cite[p. 22]{clifford95:contour}. Podemos ver representações do
+contorno \contorno{4\:3\:5\:6} na figura
 \ref{fig:non-melodic-contours}.
 
 \begin{figure}
@@ -134,10 +132,8 @@ de H) \cite{adams76:melodic}.
   \label{fig:adams-typology}
 \end{figure}
 
-%% eu prefiro e termo "operação" no lugar de "ferramenta"
-
 A terminologia utilizada em teorias de contornos melódicos não é
-uniforme. Cada autor utiliza termos diferentes para ferramentas
+uniforme. Cada autor utiliza termos diferentes para operações
 semelhantes \cite{friedmann87:response}. A tabela
 \ref{tab:compara-ferramentas} tem uma comparação dos termos usados por
 Friedmann, e Morris, Marvin e Laprade.
@@ -152,20 +148,14 @@ Friedmann, e Morris, Marvin e Laprade.
   \label{tab:compara-ferramentas}
 \end{table}
 
-%% "Trata-se de uma abstração" esta solta e quebra o ritmo da frase
-%% anterior. eu sugiro evitar "no primeiro" e "no segundo", em um
-%% trabalho tecnico cheio de jargao vale a pena repetir o nome da
-%% coisa.
+Morris define os conceitos de espaço de alturas (\eg{p-space}) e
+espaço de contorno (\eg{c-space}) \cite{morris87:composition}. Em
+\eg{p-space} os elementos a serem considerados são as notas e em
+\eg{c-space} os elementos são os registros dessas notas. Beard
+confunde a idéia de espaço do contorno com a definição de classe de
+contorno \cite[p. 11]{beard03:contour}.
 
-Morris define os conceitos de espaço de alturas (\eng{\gls{p-space}})
-e espaço de contorno (\eng{\gls{c-space}})
-\cite{morris87:composition}. Trata-se de uma abstração. No primeiro os
-elementos a serem considerados são as notas e no segundo são os
-elementos são os registros dessas notas. Beard confunde a idéia de
-espaço do contorno com a definição de classe de contorno
-\cite[p. 11]{beard03:contour}.
-
-A Matriz de Comparação (\eng{\gls{com-matrix}}) representa o total de
+A Matriz de Comparação (\eg{com-matrix}) representa o total de
 comparações de um contorno. É obtida através da comparação de todos os
 pares ordenados de um contorno. Em uma matriz $E$ de um contorno $P$,
 a posição $E (x,y)$ contém $Com (Px,Py)$. A matriz exibe uma simetria
@@ -190,7 +180,7 @@ $\langle 4\:3\:5\:6 \rangle$ pode ser visto na tabela
 
 Cada diagonal à direita da diagonal zero recebe o nome $INT_n$, onde
 $n$ representa a diferença de posição entre dois elementos. Dessa
-forma $INT_1$ representa as diferenças de altura entre \eng{\gls{cps}}
+forma $INT_1$ representa as diferenças de altura entre \eg{cps}
 adjacentes, $INT_2$ representa as diferenças de altura entre
 \eng{c-pitches} separados não adjacentes separados por um elemento e
 assim por diante \cite[p. 231]{marvin.ea87:relating}. Dado um contorno
@@ -201,26 +191,26 @@ e $5$, e $3$ e $6$.
 
 Esta matriz permite a verificação de duas classes de equivalência de
 contornos. A primeira é formada por todos os \gls{cseg} que dividem
-uma mesma \eng{\gls{com-matrix}}, e a segunda ---
-\eng{\gls{csegclass}} --- formada por todos os \gls{cseg} relacionados
+uma mesma \eg{com-matrix}, e a segunda ---
+\eg{csegclass} --- formada por todos os \gls{cseg} relacionados
 por operações de identidade, translação, retrogradação, inversão e
 retrogradação da inversão.
 
 A operação de inversão é obtida pela subtração de todos os
-\eng{\gls{cps}} por $(n-1)$. Para um dado \eng{\gls{cseg}} $P$, a
+\eg{cps} por $(n-1)$. Para um dado \eg{cseg} $P$, a
 operação de identidade é identificada como $IP$. A retrogradação de um
-\eng{\gls{cseg}} $P$ (representado por $RP$), bem como de sua inversão
-($IP$) são obtidas colocando os \eng{\gls{cps}} em ordem reversa
+\eg{cseg} $P$ (representado por $RP$), bem como de sua inversão
+($IP$) são obtidas colocando os \eg{cps} em ordem reversa
 \cite[p. 231]{marvin.ea87:relating}.
 
-A forma prima de um \eng{\gls{cseg}} é obtida operando-se de um
+A forma prima de um \eg{cseg} é obtida operando-se de um
 algoritmo de três etapas:
 \begin{enumerate}
-\item realiza-se a translação do \eng{\gls{cseg}} caso seja necessário;
-\item se a subtração de $(n-1)$ pelo último \eng{\gls{cps}} é menor
-  que o primeiro \eng{\gls{cps}}, inverte-se a \eng{\gls{cseg}};
-\item se o último \eng{\gls{cps}} é menor que o primeiro
-  \eng{\gls{cps}} retrograda-se a \eng{\gls{cseg}}.
+\item realiza-se a translação do \eg{cseg} caso seja necessário;
+\item se a subtração de $(n-1)$ pelo último \eg{cps} é menor
+  que o primeiro \eg{cps}, inverte-se a \eg{cseg};
+\item se o último \eg{cps} é menor que o primeiro
+  \eg{cps} retrograda-se a \eg{cseg}.
 \end{enumerate}
 
 Michael Friedmann procurou desenvolver uma metodologia para estudo
@@ -228,19 +218,19 @@ sistemático de contornos \cite{friedmann85:methodology}. Para isso
 criou duas ferramentas principais:
 
 \begin{enumerate}
-\item \eng{\gls{cas}} (CAS) e
-\item \eng{\gls{cc}} (CC).
+\item \eg{cas} (CAS) e
+\item \eg{cc} (CC).
 \end{enumerate}
 
 Há mais seis ferramentas derivadas dessas duas principais:
 
 \begin{enumerate}
-\item \eng{\gls{casv}} (CASV),
-\item \eng{\gls{ci}} (CI),
-\item \eng{\gls{cis}} (CIS),
-\item \eng{\gls{cia}} (CIA),
-\item \eng{\gls{ccvi}} (CCVI), e
-\item \eng{\gls{ccvii}} (CCVII).
+\item \eg{casv} (CASV),
+\item \eg{ci} (CI),
+\item \eg{cis} (CIS),
+\item \eg{cia} (CIA),
+\item \eg{ccvi} (CCVI), e
+\item \eg{ccvii} (CCVII).
 \end{enumerate}
 
 A série de classe de contornos adjacentes é um subconjunto da matriz
@@ -275,13 +265,9 @@ tensão entre harmonias \cite[p. 175]{hindemith41:craft}.
 
 Clifford afirma que
 
-%%% sugiro mudar o nome da macro para citacaolonga
-
-%%% coloca-se o original em ingles no corpo do texto e a traducao no rodape.
-
 %%% quando citamos literalmente, é bom fazer algum comentario
 
-\citacaoindt{contour, in absence of other pervasive systems of pitch
+\citacaolonga{contour, in absence of other pervasive systems of pitch
   organization, represents a structural factor equal in significance
   to pitch or set class relations}{contorno, na falta de outros
   sistemas ocupantes de organização de altura, representa um fator
