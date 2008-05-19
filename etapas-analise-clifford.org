@@ -1,0 +1,9 @@
+;-*-org-*-
+
+* Segmentação
+** Determinação csegs apropriados para análise
+** Explicação de grupos ambíguos
+* Avaliação de interações
+** Entre csegs e acordes
+** Contorno textural
+* Verificação de relações em larga escala
