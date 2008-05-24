@@ -8,7 +8,7 @@
 %% \end{document}
 
 \usepackage{ifthen}
-\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
 \usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
 \usepackage[brazil]{babel}
 \usepackage{setspace}
@@ -25,10 +25,10 @@
 % usar para nomes de termos
 \newcommand{\termo}[1]{\textit{#1}}
 
-% usar para citação integral
+% usar para citaÃ§Ã£o integral
 \newcommand{\citacao}[1]{``#1''}
 
-% usar para citação integral indentada
+% usar para citaÃ§Ã£o integral indentada
 \newcommand{\citacaoind}[3]{
   \begin{quote}
     \normalsize
@@ -36,7 +36,7 @@
   \end{quote}
 }
 
-% usar para citação integral indentada com tradução
+% usar para citaÃ§Ã£o integral indentada com traduÃ§Ã£o
 \newcommand{\citacaoindt}[4]{
   \begin{quote}
     \normalsize
@@ -71,24 +71,24 @@
   {#3}\ifthenelse{\equal{#4}{}}{}{#4}
 }
 
-%% cabeçalho e título
+%% cabeÃ§alho e tÃ­tulo
 
 \newcommand{\cond}[3]{
   \ifthenelse{\equal{#1}{#2}}{MUS #2 --- #3}{}
 }
 
 \newcommand{\disciplina}[1]{
-  \cond{#1}{502}{Estudos Metodológicos e Bibliográficos I}
-  \cond{#1}{524}{Seminários em Composição I}
-  \cond{#1}{525}{Seminários em Composição II}
-  \cond{#1}{506}{Informática em Música II}
+  \cond{#1}{502}{Estudos MetodolÃ³gicos e BibliogrÃ¡ficos I}
+  \cond{#1}{524}{SeminÃ¡rios em ComposiÃ§Ã£o I}
+  \cond{#1}{525}{SeminÃ¡rios em ComposiÃ§Ã£o II}
+  \cond{#1}{506}{InformÃ¡tica em MÃºsica II}
 }
 
 \newcommand{\cabecalho}[2]{
   \large
   UNIVERSIDADE FEDERAL DA BAHIA \\
-  ESCOLA DE MÚSICA \\
-  PROGRAMA DE PÓS-GRADUAÇÃO \\
+  ESCOLA DE MÃšSICA \\
+  PROGRAMA DE PÃ“S-GRADUAÃ‡ÃƒO \\
   DISCIPLINA: \disciplina{#1} \\
   PROFESSOR: #2 \\
   ALUNO: Marcos da Silva Sampaio \\
@@ -98,8 +98,8 @@
 \newcommand{\cabecalhocurto}[2]{
   \large
   UNIVERSIDADE FEDERAL DA BAHIA \\
-  ESCOLA DE MÚSICA \\
-  PROGRAMA DE PÓS-GRADUAÇÃO \\
+  ESCOLA DE MÃšSICA \\
+  PROGRAMA DE PÃ“S-GRADUAÃ‡ÃƒO \\
   DISCIPLINA: \disciplina{#1} \\
   PROFESSOR: #2 \\
   ALUNO: Marcos da Silva Sampaio \\
