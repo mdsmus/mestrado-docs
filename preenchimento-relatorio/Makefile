@@ -34,6 +34,7 @@ clean:
 	latex $<
 	bibtex $(basename $<)
 	latex $<
+	latex $<
 
 %.ps: %.dvi
 	dvips -o $@ $<
@@ -55,4 +56,3 @@ clean:
 	cd $(figs-out)/tmp ;\
 	lilypond -b eps --preview $(notdir $<) ;\
 	mv $(notdir $(basename $<)).preview.eps ../$(notdir $(basename $<)).eps ;\
-#	cd $(maindir)
