@@ -12,19 +12,24 @@ vpath score.ly $(globaldir)
 
 .PHONY: default atualiza
 
-default: atualiza score.ps
+default: atualiza compila
 
 atualiza:
 	cd $(scriptdir) ;\
 	bash atualiza_gestos_pausas ;\
 	cd -
 
-score.ps: score.ly
-	cd $(globaldir)
-	lilypond -I $(globaldir) -I $(notasdir) -I $(systemdir)/gestos*.ly $<
-	mv score.{ps,pdf} $(pdfdir)
-	mv score.midi $(audiodir)
-	cd $(dir)
+compila:
+	cd $(scriptdir) ;\
+	bash compila ;\
+	cd -
 
 ver: default
-	gv --watch $(pdfdir)/$< &
+	cd $(scriptdir) ;\
+	bash visualiza ;\
+	cd -
+
+clean:
+	cd $(scriptdir) ;\
+	bash limpa ;\
+	cd -
