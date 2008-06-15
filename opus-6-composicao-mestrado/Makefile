@@ -10,6 +10,15 @@ systemdir = $(scriptdir)/systemfiles
 vpath gestos%.ly $(systemdir)
 vpath score.ly $(globaldir)
 
+.PHONY: default atualiza
+
+default: atualiza score.ps
+
+atualiza:
+	cd $(scriptdir) ;\
+	bash atualiza_gestos_pausas ;\
+	cd -
+
 score.ps: score.ly
 	cd $(globaldir)
 	lilypond -I $(globaldir) -I $(notasdir) -I $(systemdir)/gestos*.ly $<
@@ -17,5 +26,5 @@ score.ps: score.ly
 	mv score.midi $(audiodir)
 	cd $(dir)
 
-ver: score.ps
+ver: default
 	gv --watch $(pdfdir)/$< &
