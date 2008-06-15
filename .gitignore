@@ -14,7 +14,7 @@ logbook-mestrado.pdf
 *.pdf
 *.ps
 instrumentos_op
-opus-6/script/systemfiles/*
+opus-6-composicao-mestrado/script/systemfiles/gestos*
 *.toc
 figs-out
 *.lof
