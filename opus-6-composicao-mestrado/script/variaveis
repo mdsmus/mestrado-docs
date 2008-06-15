@@ -1,0 +1,42 @@
+#!/bin/bash
+
+## variaveis bash
+
+piecedir=$(cd ..; pwd)
+piecedirname=$(basename ${piecedir})
+scoredir=${piecedir}/partitura
+scriptdir=${piecedir}/script
+
+systemdir=${scriptdir}/systemfiles
+tempdir=${scriptdir}/temp
+
+notesdir=${scoredir}/notas
+partesdir=${scoredir}/partes
+pdfdir=${scoredir}/pdf
+mididir=${scoredir}/audio
+
+
+## nomes de arquivos
+
+scorename=score
+lyscorename=${scorename}.ly
+psscorename=${scorename}.ps
+pdfscorename=${scorename}.pdf
+midiscorename=${scorename}.midi
+falhalogname=falha.log
+
+## arquivos
+
+score=${scoredir}/${scorename}
+lyscore=${score}.ly
+falhalog=${piecedir}/${falhalogname}
+
+ilist=${scoredir}/nomes_instrumentos
+ilistop=${tempdir}/instrumentos_op
+gestos=${scoredir}/gestosacompilar.ly
+
+linhas=$(echo $(($(cat $ilist | wc -l)+1)))
+
+## outros elementos
+
+lilypondversion=$(lilypond -v | head -n 1 | awk '{print $3}')

@@ -1,0 +1,78 @@
+#!/bin/bash
+
+source variaveis
+
+function remove_til {
+
+    echo Removendo arquivos terminados em "~"
+
+    rm $piecedir/*~ 2> /dev/null ;
+    rm $scoredir/*~ 2> /dev/null ;
+    rm $notesdir/*~ 2> /dev/null ;
+    rm $partesdir/*~ 2> /dev/null ;
+    rm $pdfdir/*~ 2> /dev/null ;
+    rm $scriptdir/*~ 2> /dev/null;
+    rm $systemdir/*~ 2> /dev/null
+    rm $tempdir/*~ 2> /dev/null
+
+}
+
+function limpa_diretorios {
+
+    echo Removendo arquivos da compilação
+
+    rm $pdfdir/* 2> /dev/null
+    rm $mididir/* 2> /dev/null
+    rm $systemdir/gestos* 2> /dev/null
+    rm $falhalog 2> /dev/null
+    rm $systemdir/ilistop 2> /dev/null
+    rm $tempdir/* 2> /dev/null
+    rm $ilistop 2> /dev/null
+
+}
+
+function reinicia_peca {
+
+    rm $lyscore 2> /dev/null
+    rm $partesdir/* 2> /dev/null
+    rm $notesdir/* 2> /dev/null
+
+}
+
+function confirma {
+
+    echo Esta opção reiniciará a peça.
+    echo Serão perdidos os arquivos de notas e o arquivo score.ly
+    read -p "Deseja confirmar? (digite sim para confirmar) " resp
+
+    case $resp in
+        sim)
+            echo Removendo tudo
+            reinicia_peca
+            remove_til
+            limpa_diretorios
+            ;;
+        *)
+            echo Operação não executada.
+    esac
+
+}
+
+case $1 in
+    h)
+        echo Ajuda
+        echo Escolha uma das seguintes opções:
+        echo limpa - remove arquivos terminados em ~ e limpa diretórios
+        echo limpa \~ - remove arquivos terminados em ~
+        echo limpa all - remove tudo. Inclusive arquivos com notas.
+        ;;
+    ~)
+        remove_til
+        ;;
+    all)
+        confirma
+        ;;
+    *)
+        remove_til
+        limpa_diretorios
+esac

@@ -1,0 +1,200 @@
+#!/bin/bash
+
+source variaveis
+
+function cria_arquivo_notas {
+
+    ## verifica se a lista operacional de instrumentos já existe
+
+    if [ ! -s $ilistop ] 2> /dev/null
+        then
+
+        ## caso não exista é executado o script
+        ## 'inicia_trabalho'/processa instrumento
+
+        $scriptdir/compila instrumento
+    fi
+
+    for l in $(seq 1 $linhas)
+      do
+      i=$(sed -n "$l p" $ilistop)
+      icode=$(echo $i | cut -d ':' -f 1)
+
+      ## verifica se o arquivo já existe
+
+      if [ ! -s $notesdir/$icode.ly ]
+          then
+
+          ## caso o arquivo ainda não exista ele é criado.
+
+          echo O arquivo $icode.ly não existe e está sendo criado.
+          cat $scoredir/cabecalho.ly | sed "s/icode/$icode/" | sed "s/lilypondversion/$lilypondversion/"> $notesdir/$icode.ly
+          cat $scoredir/estruturadosgestos.ly | sed "s/icode/$icode/" >> $notesdir/$icode.ly
+
+      else
+
+          echo O arquivo $icode.ly já existe
+
+      fi
+    done
+}
+
+function lista_gestos {
+
+
+    ## lista os gestos do arquivo estruturadosgestos.ly e envia para
+    ## arquivo listadegestos.tmp
+
+    cat $scoredir/estruturadosgestos.ly | grep gesto | awk -F 'icode' '{print $1}' > listadegestos.tmp
+
+
+}
+
+function processa_gestos {
+
+    ## inclui os gestos da estrutura nos arquivos de notas dos
+    ## instrumentos
+
+    for file in $notesdir/*
+      do
+
+      ## indica o arquivo processado
+
+      echo
+      echo "***" Processando $(basename $file) "***"
+      echo
+
+      ## para cada instrumento na pasta $notesdir executar o comando
+      ## abaixo
+
+      ## a lista de gestos aparece de trás para frente para que o
+      ## gesto que encerra o arquivo seja processado primeiro
+
+      for gest in $(tac listadegestos.tmp)
+        do
+
+        ## para cada gesto de cada instrumento testa a condição:
+
+        if echo $(basename ${file}):${gest}:$(grep -c $gest $file) | grep 0 > ${file}list.tmp
+
+        ## mostra o nome do arquivo do instrumento
+
+        ## FIXME: melhorar o 1.
+
+        ## 1) isola o nome do arquivo com o basename
+        ## 2) adiciona o separador ':', adiciona o nome do gesto
+        ## 3) procura o nome do gesto no arquivo. se existir retorna
+        ## '1'. se não existir, retorna '0' (com o pipe e grep 0'
+
+        ## retorna apenas os gestos que não foram encontrados.
+
+        ## a condição testada é exatamente essa. se houver o número
+        ## '0' na busca, ou seja, houver algum gesto faltando, o teste
+        ## é verdadeiro.
+
+        ## envia saída para o arquivo ${file}list.tmp
+
+            then
+
+            ## sendo verdadeiro, a seção que falta é retornada com o
+            ## comando abaixo, que cria o gesto em questão
+
+            sed "/$(cut -d ':' -f2 ${file}list.tmp)/,/}/ !d" $scoredir/estruturadosgestos.ly | sed -e 's/instrname/'"$(cut -d '.' -f1 ${file}list.tmp)/" > ${file}gesto.tmp
+
+            ## Verifica se o gesto em questão é o último gesto da
+            ## estrutura
+
+            if [ $(cut -d ':' -f2 ${file}list.tmp) = $(tail -n 1 listadegestos.tmp) ]
+
+                then
+
+                ## sendo o último gesto, ele é inserido ao final da
+                ## partitura
+
+                echo Inserindo $(cut -d ':' -f2 ${file}list.tmp) no final do arquivo
+
+                ## insere espaços em branco no fim do arquivo
+
+                echo >> $file
+                echo >> $file
+
+                ## insere gesto no fim do arquivo
+
+                cat ${file}gesto.tmp >> $file
+
+            else
+
+                ## não sendo o último gesto, as partes anteriores e
+                ## posteriores a ele são recolhidas e ele é inserido
+                ## no meio
+
+                echo Inserindo $(cut -d ':' -f2 ${file}list.tmp) no meio do arquivo, antes de $(grep $(cut -d ':' -f2 ${file}list.tmp) listadegestos.tmp -A1 | tail -n 1)
+
+                ## retorna linha anterior ao aparecimento do gesto em
+                ## questao em $file
+
+                linha=$(($(grep -n $(grep $(cut -d ':' -f2 ${file}list.tmp) listadegestos.tmp -A1 | tail -n 1) $file | cut -d ':' -f1) - 1 ))
+
+
+                ## copia o $file para um arquivo novo, para manter os
+                ## atributos
+
+                cp ${file} ${file}novo
+
+                ## recolhendo parte anterior ao local onde será inserido o
+                ## gesto
+
+                sed "$linha,$ d" $file > ${file}anterior
+
+                ## recolhendo parte posterior ao ao local onde será
+                ## inserido o gesto
+
+                sed "1,$linha d" $file > ${file}posterior
+
+                ## envia ao novo arquivo criado, ${file}novo, as partes
+                ## anterior, central (gesto) e posterior
+
+                {
+                    cat ${file}anterior
+                    echo
+                    cat ${file}gesto.tmp
+                    echo
+                    cat ${file}posterior
+                } > ${file}novo
+
+                ## copia o conteúdo do novo arquivo criado para o arquivo
+                ## original
+
+                cp ${file}novo ${file}
+
+                ## removendo arquivos temporários
+
+                unset linha
+                rm ${file}anterior
+                rm ${file}posterior
+                rm ${file}novo
+
+            fi
+
+            rm ${file}gesto.tmp
+
+        fi
+
+        rm ${file}list.tmp
+
+      done
+    done
+
+    ## remove listas
+    
+    rm listadegestos.tmp
+
+}
+
+## executa funções
+
+time {
+    cria_arquivo_notas
+    lista_gestos
+    processa_gestos
+}
