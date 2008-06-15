@@ -19,6 +19,10 @@ Idéias gerais para a composição
 ** top-down para estrutura geral
 ** bottom-up para operações com contornos melódicos
 
+* Contorno utilizado
+** 5 3 4 1 2 0
+** c-6-26 (0 2 1 4 3 5)
+
 * Contornos (não melódicos) em larga escala
 ** densidade geral
 *** complexidade rítmica

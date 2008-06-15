@@ -1,0 +1,13 @@
+* contorno utilizado na peça
+** forma principal
+(5 3 4 1 2 0)
+** forma prima
+(0 2 1 4 3 5)
+** subconjuntos
+*** 5 elementos
+*** 4 elementos
+*** 3 elementos
+
+%%% Local Variables: 
+%%% mode: org
+%%% End:
