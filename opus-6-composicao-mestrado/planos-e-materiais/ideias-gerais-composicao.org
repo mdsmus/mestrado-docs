@@ -1,10 +1,8 @@
-;-*- outline -*-
 Idéias gerais para a composição
 
 * Idéia principal para estrutura formal
 ** de onde venho e para onde vou
 ** a peça pode ser um "livro de gestos/texturas conectados"
-
 * Uso de proporção
 ** duração: 10 minutos
 ** Usar número áureo para dividir a peça em 3 seções
@@ -14,15 +12,12 @@ Idéias gerais para a composição
 ** A localização temporal na peça pode ser dada por um número inteiro.
 *** início: t=0
 *** fim: t=1000
-
 * Implementação
 ** top-down para estrutura geral
 ** bottom-up para operações com contornos melódicos
-
 * Contorno utilizado
 ** 5 3 4 1 2 0
 ** c-6-26 (0 2 1 4 3 5)
-
 * Contornos (não melódicos) em larga escala
 ** densidade geral
 *** complexidade rítmica
@@ -33,36 +28,33 @@ Idéias gerais para a composição
 **** complexa
 ** dinâmica geral
 ** homogeneidade/heterogeneidade de timbre
-
 os contornos não melódicos podem ajudar a definir as operações feitas
 com contornos melódicos
-
 * andamento/caráter
 ** seção 1: andante 76
 ** seção 2: allegro 120
 ** seção 3: moderato 108
-
 * como compor:
 ** formar imagens dos gestos
-
 * procedimento a utilizar:
 ** fuga
 *** simples
 *** dupla
 *** tripla
-
 * temática (particular ao compositor)
 ** pensamento
 ** possibilidade e princípio da incerteza, de heisenberg
 ** frases:
 *** um objeto pode estar em vários lugares ao mesmo tempo
 *** várias possibilidades de futuro podem ocorrer simultaneamente
-
 * possíveis títulos:
 ** quantum
 ** cogitatio
-
 * questões
 ** como fazer uma pensamento acontecer no futuro de várias formas ao mesmo tempo?
 ** como ter o mesmo objeto em vários lugares ao mesmo tempo?
 ** quem é o observador dos acontecimentos?
+
+%%% Local Variables: 
+%%% mode: org
+%%% End:
