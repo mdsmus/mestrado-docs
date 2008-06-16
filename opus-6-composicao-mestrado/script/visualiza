@@ -13,7 +13,7 @@ function partitura {
 
     ## abre o ghostview com a partitura
 
-    gv $pdfdir/$psscorename &
+    gv --watch $pdfdir/$psscorename &
 
 }
 
@@ -30,7 +30,7 @@ function partes {
 
     for f in $pdfdir/parte*.ps
       do
-      gv $f &
+      gv --watch $f &
     done
 }
 
