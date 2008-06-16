@@ -94,7 +94,15 @@ gestoBAEfagote = {
 
 gestoBBAfagote = {
   \clef bass
-  R1*4
+  \relative c' {
+    R1*5
+    \transpose d a, {
+      \relative {
+        d4-^ b-^ cis-^ gis8( ais
+        g?4. ais8 b4.) g8( gis d' cis2.)
+      }
+    }
+  }
 }
 
 gestoBBBfagote = {
