@@ -163,9 +163,9 @@ gestoBAEglobal = {
 
 gestoBBAglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=120
   \time 4/4
-  s1*4
+  s1*11
   \bar "||"
 }
 
