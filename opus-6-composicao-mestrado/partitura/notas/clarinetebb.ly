@@ -78,8 +78,8 @@ gestoBBAclarinetebb = {
   \relative c'' {
     R1*4
     %% sujeito do fugato
-    d4-^ b-^ cis-^ gis8( ais
-    g?4. ais8 b4.) g8( gis d' cis2.)
+    d4-^\f b-^ cis-^ gis8( ais
+    g?4. ais8 b4.) g8\p( gis d' cis2.)
   }
 }
 
