@@ -33,3 +33,8 @@ clean:
 	cd $(scriptdir) ;\
 	bash limpa ;\
 	cd -
+
+ouvir:
+	cd $(scriptdir) ;\
+	bash visualiza o ;\
+	cd -
