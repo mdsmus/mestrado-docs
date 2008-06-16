@@ -96,6 +96,7 @@ gestoBBAfagote = {
   \clef bass
   \relative c' {
     R1*5
+    %% sujeito do fugato transposto a quinta
     \transpose d a, {
       \relative {
         d4-^ b-^ cis-^ gis8( ais
