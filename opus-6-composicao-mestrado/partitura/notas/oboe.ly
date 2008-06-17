@@ -81,7 +81,7 @@ gestoBBAoboe = {
     \transpose d a' {
       \relative {
         d4-^\f b-^ cis-^ gis8( ais
-        g?4. ais8 b4.) g8\p( gis d' cis2.)
+        g?1)
       }
     }
   }

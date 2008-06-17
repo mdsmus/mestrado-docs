@@ -78,9 +78,7 @@ gestoBBAflauta = {
   \relative c''' {
     %% sujeito do fugato
     d4-^\f b-^ cis-^ gis8( ais
-    g?4. ais8 b4.) g8\p( gis d' cis2) c4
-    \times 2/3 {ees2( d2) fis2(}
-    \times 2/3 {eis2) gis4~} gis2
+    g?1)
   }
 }
 
