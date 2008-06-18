@@ -102,9 +102,17 @@ gestoBBAfagote = {
         %% #s(5 3 4 1 2 0)
         d4-^\f b-^ cis-^ gis8( ais
         g?4.)
-        %% (rotacionar #s(5 3 4 1 2 0) 3)
+        %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         bes8->( e,8) g'4( cis,8~
         cis e8~\trill e2)
+        %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
+        gis,4\p
+        b8( ais4) d8( cis4)
+        %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
+        e8->( gis,)
+        b( ais) d2 e4~
+        e cis4 g' e,
+        bes' g2.\trill
       }
     }
   }
