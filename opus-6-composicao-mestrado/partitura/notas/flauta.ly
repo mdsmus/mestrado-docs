@@ -91,6 +91,12 @@ gestoBBAflauta = {
     b( ais) d2 e4~
     e cis4 g' e,
     bes' g2.\trill
+    %% #s(5 3 4 1 2 0)
+    d'4-^\f b-^ cis-^ gis8( ais
+    g?4.)
+    %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
+    bes8->( e,8) g'4( cis,8~
+    cis e8~\trill e2)
   }
 }
 
