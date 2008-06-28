@@ -29,7 +29,7 @@ gestoAABfagote = {
     fis2.\espressivo cis2(
     e2.~ e4) r
     g1\p\espressivo cis,4(
-    e2.~ e2
+    e2.~ e2~
   }
 }
 gestoAACfagote = {

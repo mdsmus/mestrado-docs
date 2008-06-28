@@ -12,16 +12,16 @@ gestoAABoboe = {
     %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
     g1\p\dolce e4(
     fis2.~ fis2~
-    fis2. r4 g~
-    g1 e4
-    fis2. r4 fis~
-    fis1 cis4
+    fis2.) r4 g~
+    g1 e4(
+    fis2.) r4 fis~
+    fis1 cis4(
   }
 }
 
 gestoAACoboe = {
   \relative c' {
-    e2 r2.
+    e2) r2.
     R1*5/4*7
   }
 }
