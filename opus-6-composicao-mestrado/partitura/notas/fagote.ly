@@ -94,8 +94,13 @@ gestoBAEfagote = {
 
 gestoBBAfagote = {
   \clef bass
+    R1*11
+}
+
+gestoBBBfagote = {
+  \clef bass
   \relative c' {
-    R1*5
+    R1*1
     %% sujeito do fugato transposto a quinta
     \transpose d a, {
       \relative {
@@ -112,20 +117,39 @@ gestoBBAfagote = {
         e8->( gis,)
         b( ais) d2 e4~
         e cis4 g' e,
-        bes' g2.\trill
       }
     }
   }
 }
 
-gestoBBBfagote = {
-  \clef bass
-  R1*4
-}
-
 gestoBBCfagote = {
   \clef bass
-  R1*4
+  \relative c' {
+    %% continuação do fugato transposto a quinta
+    \transpose d a, {
+      \relative {
+        bes4 g2.\trill
+        %% #s(5 3 4 1 2 0)
+        d'4-^\f b-^ cis-^ gis8( ais
+        g?4.)
+        %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
+        bes8->( e,8) g'4( cis,8~
+        cis e8~\trill e2) r4
+
+      }
+    }
+    d4-^ b-^ cis-^ gis8( ais
+    g?2~ g4.) r8
+
+    d'4-^ b-^ cis-^ gis8( ais
+    g?2~ g4.) r8
+
+    d'4-^ b-^ cis-^ gis8( ais
+    g?4.) r8 
+
+    d'4-^ b-^ 
+    g1\trill
+  }
 }
 
 gestoCAAfagote = {

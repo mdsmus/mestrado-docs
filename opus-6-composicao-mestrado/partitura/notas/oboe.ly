@@ -94,17 +94,73 @@ gestoBBAoboe = {
         b( ais) d2 e4~
         e cis4 g' e,
         bes' g2.\trill
+        %% #s(5 3 4 1 2 0)
+        d'4-^\f b-^ cis-^ gis8( ais
+        g?4.)
+        %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
+        bes8->( e,8) g'4( cis,8~
       }
     }
   }
 }
 
 gestoBBBoboe = {
-  R1*4
+  \relative c'' {
+    %% continuação do fugato transposto a quinta
+    \transpose d a' {
+      \relative {
+        cis8 e8~\trill e2) r4
+
+        R1*2
+
+        %% repetição
+
+        %% #s(5 3 4 1 2 0)
+        d4-^\f b-^ cis-^ gis8( ais
+        g?4.)
+        %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
+        bes8->( e,8) g'4( cis,8~
+        cis e8~\trill e2)
+        %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
+        gis,4\p
+        b8( ais4) d8( cis4)
+        %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
+        e8->( gis,)
+
+
+
+      }
+    }
+  }
 }
 
 gestoBBCoboe = {
-  R1*4
+  \relative c'' {
+    %% continuação do fugato transposto a quinta
+    \transpose d a' {
+      \relative {
+
+        b8( ais) d2 e4~
+        e cis4 g' e,
+        bes' g2.\trill
+
+      }
+    }
+    %% #s(5 3 4 1 2 0)
+    d4-^\f b-^ cis-^ gis8( ais
+    g?2~ g4.) r8
+
+    d'4-^ b-^ cis-^ gis8( ais
+    g?2~ g4.) r8
+
+    d'4-^ b-^ cis-^ gis8( ais
+    g?4.) r8
+
+    d'4-^ b-^ cis-^ gis8( ais
+    g?4.) r8
+
+    g1\trill
+  }
 }
 
 gestoCAAoboe = {

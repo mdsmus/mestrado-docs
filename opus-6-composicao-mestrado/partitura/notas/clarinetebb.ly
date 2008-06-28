@@ -76,7 +76,12 @@ gestoBAEclarinetebb = {
 
 gestoBBAclarinetebb = {
   \relative c'' {
-    R1*4
+    R1*11
+  }
+}
+
+gestoBBBclarinetebb = {
+  \relative c'' {
     %% sujeito do fugato
     %% #s(5 3 4 1 2 0)
     d4-^\f b-^ cis-^ gis8( ais
@@ -92,15 +97,33 @@ gestoBBAclarinetebb = {
     b( ais) d2 e4~
     e cis4 g' e,
     bes' g2.\trill
+    %% #s(5 3 4 1 2 0)
   }
 }
 
-gestoBBBclarinetebb = {
-  R1*4
-}
-
 gestoBBCclarinetebb = {
-  R1*4
+  \relative c'' {
+    %% continuação do fugato
+    d4-^\f b-^ cis-^ gis8( ais
+    g?4.)
+    %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
+    bes8->( e,8) g'4( cis,8~
+    cis e8~\trill e2) r4
+
+    d,4-^\f b-^ cis-^ gis8( ais
+    g?2~ g4.) r8 
+
+    d'4-^ b-^ cis-^ gis8( ais
+    g?2~ g4.) r8 
+    
+    d'4-^ b-^ cis-^ gis8( ais
+    g?4.) r8
+
+    d'4-^ b-^ cis-^ gis8( ais
+    g?4.) r8
+
+    cis'1\trill
+  }
 }
 
 gestoCAAclarinetebb = {

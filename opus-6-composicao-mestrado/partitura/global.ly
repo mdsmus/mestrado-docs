@@ -162,26 +162,32 @@ gestoBAEglobal = {
 }
 
 gestoBBAglobal = {
+  %% início da fuga (fl+ob)
+  %% encerramento gradual da homofonia da seção anterior
   \padraoglobal
   \tempo 4=120
   \time 4/4
   s1*11
-  \bar "||"
+%   \bar "||"
 }
 
 gestoBBBglobal = {
+  %% continuação da fuga. entram cl+fg
+  %% homofonia anterior encerrada
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=120
   \time 4/4
-  s1*4
-  \bar "||"
+  s1*7
+%   \bar "||"
 }
 
 gestoBBCglobal = {
+  %% continuação da fuga. entram fl+ob+cl+fg
+  %% entrada da trompa em ritmo desdobrado com tema da fuga
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=120
   \time 4/4
-  s1*4
+  s1*11
   \bar "||"
 }
 

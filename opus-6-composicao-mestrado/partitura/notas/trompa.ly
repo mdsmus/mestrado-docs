@@ -75,15 +75,29 @@ gestoBAEtrompa = {
 }
 
 gestoBBAtrompa = {
-  R1*4
+  R1*11
 }
 
 gestoBBBtrompa = {
-  R1*4
+  R1*7
 }
 
 gestoBBCtrompa = {
-  R1*4
+  \relative c' {
+    d1\f
+    b2 cis~
+    cis gis4 ais
+    g1~
+    g2. r4
+
+    d'1
+    b2 cis
+    d1
+    b2 cis
+
+    d2 b
+    cis1
+  }
 }
 
 gestoCAAtrompa = {
