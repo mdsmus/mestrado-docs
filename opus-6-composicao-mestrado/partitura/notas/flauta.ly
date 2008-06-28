@@ -37,7 +37,7 @@ gestoAADflauta = {
     e1) r4
     bes'2.\espressivo fis2(
     a2. e4 g4~
-    g1 r4
+    g1) r4
   }
 }
 
