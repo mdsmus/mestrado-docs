@@ -42,7 +42,22 @@ gestoAADflauta = {
 }
 
 gestoAAEflauta = {
-  R1*5/4*8
+  \relative c'''' {
+    %% dobramento do material da trompa
+    %% variação da seção AAA - fagote.
+    %% inclusão de transposição
+    %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
+    %% procedimentos utilizados: expansão de intervalos e transposição
+    \setTextCresc
+    g1\<\espressivo e4(
+    fis2) fis cis4
+    e1) r4
+    bes'2.\espressivo fis2(
+    a2. e4 g4~
+    g1) r4
+    g1\espressivo e4(
+    fis2.~\f fis2)
+  }
 }
 
 gestoAAFflauta = {
