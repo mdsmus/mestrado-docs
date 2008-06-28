@@ -39,6 +39,11 @@ ouvir:
 	bash visualiza o ;\
 	cd -
 
+partes:
+	cd $(scriptdir) ;\
+	bash compila p ;\
+	cd -
+
 wave:
 	timidity -Ow $(audiodir)/score.midi
 
