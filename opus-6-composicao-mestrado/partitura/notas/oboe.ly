@@ -42,7 +42,21 @@ gestoAADoboe = {
 }
 
 gestoAAEoboe = {
-  R1*5/4*8
+  \relative c'' {
+    %% repetição material seção AAB - clarinete
+    %% #s(5 3 4 1 2 0)
+    \setTextCresc
+    e2\<( cis2.
+    dis2) r4 a2(
+    bes2 g2) r4
+
+    %% repetição
+    e'2( cis2.
+    dis2) r4 a2(
+    bes2 g2) r4
+    e'2( cis2.
+    dis2.~\f dis2)
+  }
 }
 
 gestoAAFoboe = {

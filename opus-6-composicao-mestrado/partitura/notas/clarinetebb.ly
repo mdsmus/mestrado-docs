@@ -52,7 +52,19 @@ gestoAADclarinetebb = {
 }
 
 gestoAAEclarinetebb = {
-  R1*5/4*8
+  \relative c'' {
+    \setTextCresc
+    g2\<( e fis4~
+    fis cis2 dis2
+    bes2.~ bes2)
+
+    %% repetição
+    g'4( e fis cis dis
+    bes2) g'4( e fis
+    cis dis bes2) g'8( e
+    fis cis dis bes g' e fis cis dis bes)
+    g'2.~\f g2)
+  }
 }
 
 gestoAAFclarinetebb = {
