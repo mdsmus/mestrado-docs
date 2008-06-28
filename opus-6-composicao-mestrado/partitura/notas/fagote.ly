@@ -5,6 +5,8 @@
 gestoAAAfagote = {
   \clef bass
   \relative c' {
+    %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
+    %% procedimentos utilizados: expansão de intervalos e transposição
     g1\p\dolce\piacere\espressivo e4(
     fis2.~ fis2)
     fis1\espressivo cis4(
