@@ -8,6 +8,8 @@ gestoAAAoboe = {
 
 gestoAABoboe = {
   \relative c'' {
+    %% variação sobre material do fagote seção AAA
+    %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
     g1\p\dolce e4(
     fis2.~ fis2)
     bes1 fis4(

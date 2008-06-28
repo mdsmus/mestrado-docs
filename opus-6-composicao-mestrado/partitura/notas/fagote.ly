@@ -21,6 +21,7 @@ gestoAAAfagote = {
 gestoAABfagote = {
   \clef bass
   \relative c' {
+    %% repetição com variação do material utilizado em AAA
     g1\p\espressivo e4(
     fis2.~ fis2)
     fis2.\espressivo cis2(
