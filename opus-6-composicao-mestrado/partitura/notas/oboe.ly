@@ -9,11 +9,11 @@ gestoAAAoboe = {
 gestoAABoboe = {
   \relative c'' {
     g1\p\dolce e4(
-    fis1) r4
+    fis2.~ fis2)
     bes1 fis4(
     a1) r4
     ees'1 a,4(
-    c1)
+    c2.~ c2)
   }
 }
 

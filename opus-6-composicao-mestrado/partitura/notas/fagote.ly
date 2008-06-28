@@ -20,9 +20,15 @@ gestoAAAfagote = {
 
 gestoAABfagote = {
   \clef bass
-  R1*5/4*6
+  \relative c' {
+    g1\p\espressivo e4(
+    fis2.~ fis2)
+    fis2.\espressivo cis2(
+    e2.~ e4) r
+    \acciaccatura a8 e2.\espressivo g2~
+    g1~ r4
+  }
 }
-
 gestoAACfagote = {
   \clef bass
   R1*4
