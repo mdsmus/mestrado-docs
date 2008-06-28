@@ -11,10 +11,12 @@ gestoAAAfagote = {
     fis2.~ fis2)
     fis1\espressivo cis4(
     e2.~ e4) r
-    bes'2.\espressivo fis2(
-    a1) r4
-    \acciaccatura a8 e1\espressivo g4~
-    g1~ r4
+
+    %% repetição variada
+    g2. e4 e4
+    fis2.~ fis2
+    fis2.\espressivo cis4 cis4
+    e2.~ e4 r
   }
 }
 
