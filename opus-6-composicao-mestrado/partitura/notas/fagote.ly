@@ -32,7 +32,7 @@ gestoAABfagote = {
 }
 gestoAACfagote = {
   \clef bass
-  R1*4
+  R1*5/4*8
 }
 
 gestoAADfagote = {

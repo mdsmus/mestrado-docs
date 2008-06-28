@@ -21,7 +21,9 @@ gestoAABclarinetebb = {
 }
 
 gestoAACclarinetebb = {
-  R1*4
+  \relative c'' {
+    R1*5/4*8
+  }
 }
 
 gestoAADclarinetebb = {
