@@ -15,7 +15,18 @@ gestoAACtrompa = {
 }
 
 gestoAADtrompa = {
-  R1*5/4*6
+  \relative c'' {
+    %% variação da seção AAA - fagote.
+    %% inclusão de transposição
+    %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
+    %% procedimentos utilizados: expansão de intervalos e transposição
+    g1\p\dolce\espressivo e4(
+    fis2) fis cis4
+    e1) r4
+    bes'2.\espressivo fis2(
+    a2. e4 g4~
+    g1
+  }
 }
 
 gestoAAEtrompa = {
