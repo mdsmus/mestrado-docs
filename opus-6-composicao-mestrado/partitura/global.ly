@@ -27,6 +27,7 @@ gestoAAAglobal = {
 }
 
 gestoAABglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=82
   \time 5/4
@@ -34,6 +35,7 @@ gestoAABglobal = {
 }
 
 gestoAACglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=82
   \time 5/4
@@ -41,6 +43,7 @@ gestoAACglobal = {
 }
 
 gestoAADglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=82
   \time 5/4
@@ -48,6 +51,7 @@ gestoAADglobal = {
 }
 
 gestoAAEglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=82
   \time 5/4
