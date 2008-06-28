@@ -15,7 +15,7 @@ gestoAACtrompa = {
 }
 
 gestoAADtrompa = {
-  R1*4
+  R1*5/4*6
 }
 
 gestoAAEtrompa = {
