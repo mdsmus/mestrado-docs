@@ -3,7 +3,7 @@
 \include "newcommand.ly"
 
 gestoAAAflauta = {
-  R1*4
+  R1*5/4*8
 }
 
 gestoAABflauta = {

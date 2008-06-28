@@ -4,7 +4,16 @@
 
 gestoAAAfagote = {
   \clef bass
-  R1*4
+  \relative c' {
+    g1\p\dolce\piacere\espressivo e4(
+    fis2.~ fis2)
+    fis1\espressivo cis4(
+    e2.~ e4) r
+    bes'2.\espressivo fis2(
+    a1) r4
+    \acciaccatura a8 e1\espressivo g4~
+    g2.~ g2
+  }
 }
 
 gestoAABfagote = {
