@@ -7,7 +7,7 @@ gestoAAAflauta = {
 }
 
 gestoAABflauta = {
-  R1*4
+  R1*5/4*6
 }
 
 gestoAACflauta = {
