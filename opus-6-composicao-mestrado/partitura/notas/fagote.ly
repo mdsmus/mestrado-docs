@@ -12,7 +12,7 @@ gestoAAAfagote = {
     bes'2.\espressivo fis2(
     a1) r4
     \acciaccatura a8 e1\espressivo g4~
-    g2.~ g2
+    g1~ r4
   }
 }
 
