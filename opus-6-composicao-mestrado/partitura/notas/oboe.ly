@@ -27,11 +27,22 @@ gestoAACoboe = {
 }
 
 gestoAADoboe = {
-  R1*5/4*6
+  \relative c'' {
+    %% repetição material seção AAB - clarinete
+    %% #s(5 3 4 1 2 0)
+    e2\p( cis2.
+    dis2) r4 a2(
+    bes2 g2) r4
+
+    %% repetição
+    e'2( cis2.
+    dis2) r4 a2(
+    bes2 g2) r4
+  }
 }
 
 gestoAAEoboe = {
-  R1*4
+  R1*5/4*8
 }
 
 gestoAAFoboe = {

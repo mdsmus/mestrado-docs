@@ -39,11 +39,20 @@ gestoAACclarinetebb = {
 }
 
 gestoAADclarinetebb = {
-  R1*5/4*6
+  \relative c'' {
+    g2\p( e fis4~
+    fis cis2 dis2
+    bes2.~ bes2)
+
+    %% repetição
+    g'2( e fis4~
+    fis cis2 dis2
+    c?2.~ c2)
+  }
 }
 
 gestoAAEclarinetebb = {
-  R1*4
+  R1*5/4*8
 }
 
 gestoAAFclarinetebb = {

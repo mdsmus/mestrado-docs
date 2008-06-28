@@ -25,12 +25,12 @@ gestoAADtrompa = {
     e1) r4
     bes'2.\espressivo fis2(
     a2. e4 g4~
-    g1
+    g1 r4
   }
 }
 
 gestoAAEtrompa = {
-  R1*4
+  R1*5/4*8
 }
 
 gestoAAFtrompa = {
