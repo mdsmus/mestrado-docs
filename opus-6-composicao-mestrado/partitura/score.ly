@@ -14,7 +14,7 @@
 \include "gestosglobal.ly"
 \include "gestostrompa.ly"
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 15.3)
 
 %% partitura
 
