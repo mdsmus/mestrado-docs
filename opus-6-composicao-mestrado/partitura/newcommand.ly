@@ -99,6 +99,7 @@ deciso = ^\markup{\italic{deciso}}
 dramatico = ^\markup{\italic{dramático}}
 energico = ^\markup{\italic{enérgico}}
 furioso = ^\markup{\italic{furioso}}
+piacere = ^\markup{\italic{a piacere}}
 sffz = #(make-dynamic-script "sffz")
 
 % andamento
