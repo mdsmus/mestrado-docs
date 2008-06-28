@@ -42,7 +42,14 @@ gestoAACfagote = {
 
 gestoAADfagote = {
   \clef bass
-  R1*5/4*6
+  \relative c {
+    g2\p( bes4 a2~
+    a4) dis2( cis4 e4~
+    e2) g2( bes4
+    a2) \clef tenor dis2( cis4~
+    cis e2) g2(
+    bes4 a1)
+  }
 }
 
 gestoAAEfagote = {
