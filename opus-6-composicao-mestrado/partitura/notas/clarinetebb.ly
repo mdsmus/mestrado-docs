@@ -22,7 +22,19 @@ gestoAABclarinetebb = {
 
 gestoAACclarinetebb = {
   \relative c'' {
-    R1*5/4*8
+    %% repetição do material de AAA do fagote
+    %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
+    %% procedimentos utilizados: expansão de intervalos e transposição
+    g1\p\dolce\espressivo e4(
+    fis2.~ fis2)
+    fis1\espressivo cis4(
+    e2.~ e4) r
+
+    %% repetição variada
+    g2. e4 e4
+    fis2.~ fis2
+    fis2.\espressivo cis4 cis4
+    e2.~ e4 r
   }
 }
 

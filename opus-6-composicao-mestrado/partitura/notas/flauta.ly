@@ -11,7 +11,18 @@ gestoAABflauta = {
 }
 
 gestoAACflauta = {
-  R1*5/4*8
+  \relative c'' {
+    R1*5/4
+    %% variação do material de AAB do clarinete
+    %% #s(5 3 4 1 2 0)
+    e2\p cis dis4~
+    dis2 a2.
+    bes2 g2 g4
+    e'2\trill cis4 dis2\trill
+    a2 bes4 g2~\startTrillSpan
+    g4\stopTrillSpan \acciaccatura {a16[ cis dis]} e4 cis4 dis2~
+    dis2.~ dis4 r4
+  }
 }
 
 gestoAADflauta = {

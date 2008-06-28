@@ -11,16 +11,19 @@ gestoAABoboe = {
     %% variação sobre material do fagote seção AAA
     %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
     g1\p\dolce e4(
-    fis2.~ fis2)
-    bes1 fis4(
-    a1) r4
-    ees'1 a,4(
-    c2.~ c2)
+    fis2.~ fis2~
+    fis2. r4 g~
+    g1 e4
+    fis2. r4 fis~
+    fis1 cis4
   }
 }
 
 gestoAACoboe = {
-  R1*5/4*8
+  \relative c' {
+    e2 r2.
+    R1*5/4*7
+  }
 }
 
 gestoAADoboe = {

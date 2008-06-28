@@ -28,13 +28,16 @@ gestoAABfagote = {
     fis2.~ fis2)
     fis2.\espressivo cis2(
     e2.~ e4) r
-    \acciaccatura a8 e2.\espressivo g2~
-    g1~ r4
+    g1\p\espressivo cis,4(
+    e2.~ e2
   }
 }
 gestoAACfagote = {
   \clef bass
-  R1*5/4*8
+  \relative c {
+    e1) r4
+    R1*5/4*7
+  }
 }
 
 gestoAADfagote = {
