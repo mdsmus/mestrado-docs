@@ -38,3 +38,9 @@ ouvir:
 	cd $(scriptdir) ;\
 	bash visualiza o ;\
 	cd -
+
+wave:
+	timidity -Ow $(audiodir)/score.midi
+
+ouvirwave: $(audiodir)/score.wav
+	mplayer $(audiodir)/score.wav
