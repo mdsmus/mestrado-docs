@@ -1,52 +1,3 @@
-\documentclass[12pt,brazil]{book}
-\usepackage[utf8x]{inputenc}
-\usepackage{babel}
-\usepackage[a4paper,top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
-\usepackage{graphicx}
-\usepackage{url}
-\usepackage{setspace}
-\usepackage{amsmath}
-\usepackage{subfigure}
-\usepackage{glossaries}
-
-\include{glossario}
-
-\graphicspath{{figs-out/}}
-
-\doublespacing
-
-% usar para termos estrangeiros
-\newcommand{\eng}[1]{\textit{#1}}
-\newcommand{\eg}[1]{\textit{\gls{#1}}}
-
-\newcommand{\opus}[1]{\textit{#1}}
-
-\newcommand{\contorno}[1]{$\langle #1 \rangle$}
-
-% usar para citação integral indentada com tradução
-\newcommand{\citacaolonga}[4]{
-  \begin{quote}
-    \normalsize
-%    \selectlanguage{english}
-    {#1}\footnote{
-      \selectlanguage{brazil}
-      ``{#2}''.
-    }.
-    \selectlanguage{brazil}
-    \cite[#3]{#4}.
-  \end{quote}
-}
-
-\title{Nome da peça: Aplicações da Teoria dos Contornos na composição}
-\author{Marcos da Silva Sampaio}
-
-\begin{document}
-
-\maketitle
-\tableofcontents
-\listoftables
-\listoffigures
-
 \chapter{Introdução}
 \label{cha:introducao}
 
@@ -142,8 +93,7 @@ de H) \cite{adams76:melodic}.
 \begin{figure}
   \centering
   \includegraphics[scale=.6]{adams-typology}
-  \caption{Tipologia de contornos de Charles Adams
-    \cite{adams76:melodic}}
+  \caption{Tipologia de contornos de Charles Adams}
   \label{fig:adams-typology}
 \end{figure}
 
@@ -157,7 +107,7 @@ Friedmann, e Morris, Marvin e Laprade.
   \centering
   \begin{tabular}{l|l}
     Friedmann & Marvin e Laprade \\ \hline
-    \gls{cas}  & $INT_1$ \\
+    \eg{cas}  & $INT_1$ \\
   \end{tabular}
   \caption{Quadro comparativo de ferramentas de análise de contornos}
   \label{tab:compara-ferramentas}
@@ -205,9 +155,9 @@ $6$. $INT_2 = \langle + + \rangle$ representa as diferenças entre $4$
 e $5$, e $3$ e $6$.
 
 Esta matriz permite a verificação de duas classes de equivalência de
-contornos. A primeira é formada por todos os \gls{cseg} que dividem
+contornos. A primeira é formada por todos os \eg{cseg} que dividem
 uma mesma \eg{com-matrix}, e a segunda ---
-\eg{csegclass} --- formada por todos os \gls{cseg} relacionados
+\eg{csegclass} --- formada por todos os \eg{cseg} relacionados
 por operações de identidade, translação, retrogradação, inversão e
 retrogradação da inversão.
 
@@ -317,16 +267,3 @@ do contorno principal P.
 
 \chapter{Conclusão}
 \label{cha:conclusao}
-
-%%% bibliografia
-%% teoria dos contornos
-
-\bibliographystyle{plainurl-br}
-\bibliography{melodic-contour,music-perception,composition}
-
-\glsaddall{cas,cc,ci,casv,ci,cia,ccvi,ccvii} 
-\glsaddall{COM-Matrix,cps,c-space,cseg,csegclass,csubseg,i,normalform,T}
-
-\printglossary[title=Glossário]
-
-\end{document}
