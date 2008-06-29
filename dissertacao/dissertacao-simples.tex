@@ -1,0 +1,60 @@
+\documentclass[12pt,brazil]{book}
+\RequirePackage[utf8,utf8x]{inputenc}
+\RequirePackage[brazil]{babel}
+\RequirePackage{url}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{glossaries}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{glossaries}
+\usepackage{lmodern}
+
+% usar para termos estrangeiros
+\newcommand{\eng}[1]{\textit{#1}}
+% \newcommand{\eg}[1]{\textit{\gls{#1}}}
+\newcommand{\eg}[1]{\textit{#1}}
+
+\newcommand{\opus}[1]{\textit{#1}}
+\newcommand{\tr}[1]{\textit{#1}}
+
+\newcommand{\contorno}[1]{$\langle #1 \rangle$}
+\newcommand{\obra}{\textit{Peça ainda sem título}}
+
+% usar para citação integral indentada com tradução
+\newcommand{\citacaolonga}[4]{
+  \begin{quote}
+    \normalsize
+%    \selectlanguage{english}
+    {#1}\footnote{
+      \selectlanguage{brazil}
+      ``{#2}''.
+    }.
+    \selectlanguage{brazil}
+    \cite[#3]{#4}.
+  \end{quote}
+}
+
+\title{\obra{}: Aplicações da Teoria dos Contornos na composição}
+\author{Marcos da Silva Sampaio}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\listoftables
+\listoffigures
+
+% \begin{spacing}{1}
+%   \begin{abstract}
+%     \input{abstract}
+%   \end{abstract}
+% \end{spacing}
+
+\input{body-pt}
+\bibliographystyle{plain}
+\input{lista-bibliografia}
+
+\end{document}
