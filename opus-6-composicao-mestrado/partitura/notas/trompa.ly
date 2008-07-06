@@ -64,12 +64,19 @@ gestoABBtrompa = {
     bes2.~ bes2
     bes2.~-> bes2~
     bes4 bes2.~-> bes8 bes~->
-    bes2~ bes8 bes~-> bes2
+    bes2~ bes8 bes~-> bes2~
   }
 }
 
 gestoABCtrompa = {
-  R1*5/4*8
+  \relative c' {
+    bes2 r2.
+    bes2. r2
+    R1*5/4
+    r4 bes1
+    R1*5/4*3
+    bes2.~ bes2
+  }
 }
 
 gestoABDtrompa = {

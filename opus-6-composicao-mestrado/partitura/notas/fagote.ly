@@ -82,7 +82,15 @@ gestoABBfagote = {
 
 gestoABCfagote = {
   \clef bass
-  R1*5/4*8
+  \relative c' {
+    e4 r2 e,~
+    e2 r2.
+    r2 e2.
+    R1*5/4*2
+    r4 e1
+    R1*5/4
+    bes,2.~ bes2
+  }
 }
 
 gestoABDfagote = {
