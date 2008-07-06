@@ -62,7 +62,7 @@ gestoAAEflauta = {
 
 gestoABAflauta = {
   \relative c'''' {
-    g2.~\ppp\startTrillSpan g2~
+    g2.~\p\startTrillSpan g2~
     g2\stopTrillSpan r2 g4~\startTrillSpan
     g1\stopTrillSpan r4
     r2 g2.~\startTrillSpan

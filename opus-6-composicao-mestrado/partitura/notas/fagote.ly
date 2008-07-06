@@ -61,7 +61,7 @@ gestoABAfagote = {
   \clef bass
   \relative c' {
     R1*5/4*2
-    r2. e2~\ppp
+    r2. e2~\p
     e1 r4
     R1*5/4
     r1 e4~

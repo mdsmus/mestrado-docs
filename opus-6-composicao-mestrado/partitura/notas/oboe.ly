@@ -62,7 +62,7 @@ gestoAAEoboe = {
 gestoABAoboe = {
   \relative c''' {
     R1*5/4
-    cis2.~\ppp cis2
+    cis2.~\p cis2
     r2 cis2.~
     cis2 r2.
     R1*5/4
