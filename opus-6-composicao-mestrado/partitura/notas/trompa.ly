@@ -59,11 +59,11 @@ gestoABAtrompa = {
 }
 
 gestoABBtrompa = {
-  R1*4
+  R1*5/4*5
 }
 
 gestoABCtrompa = {
-  R1*4
+  R1*5/4*8
 }
 
 gestoABDtrompa = {

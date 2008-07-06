@@ -73,11 +73,11 @@ gestoABAoboe = {
 }
 
 gestoABBoboe = {
-  R1*4
+  R1*5/4*5
 }
 
 gestoABCoboe = {
-  R1*4
+  R1*5/4*8
 }
 
 gestoABDoboe = {

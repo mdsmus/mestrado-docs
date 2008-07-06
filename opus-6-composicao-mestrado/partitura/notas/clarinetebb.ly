@@ -81,11 +81,11 @@ gestoABAclarinetebb = {
 }
 
 gestoABBclarinetebb = {
-  R1*4
+  R1*5/4*5
 }
 
 gestoABCclarinetebb = {
-  R1*4
+  R1*5/4*8
 }
 
 gestoABDclarinetebb = {

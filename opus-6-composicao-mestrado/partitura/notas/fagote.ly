@@ -72,12 +72,12 @@ gestoABAfagote = {
 
 gestoABBfagote = {
   \clef bass
-  R1*4
+  R1*5/4*5
 }
 
 gestoABCfagote = {
   \clef bass
-  R1*4
+  R1*5/4*8
 }
 
 gestoABDfagote = {
