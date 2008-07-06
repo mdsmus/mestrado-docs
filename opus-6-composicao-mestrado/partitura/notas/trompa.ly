@@ -48,13 +48,13 @@ gestoAAEtrompa = {
 }
 
 gestoABAtrompa = {
-  \relative c {
+  \relative c' {
     R1*5/4*3
-    r4 e1~\ppp
-    e1 r4
+    r4 bes1~\ppp
+    bes1 r4
     R1*5/4
-    r4 e1
-    r1 e4
+    r4 bes1
+    r1 bes4
   }
 }
 
