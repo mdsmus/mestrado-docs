@@ -57,21 +57,6 @@ gestoAAEfagote = {
   R1*5/4*8
 }
 
-gestoAAFfagote = {
-  \clef bass
-  R1*4
-}
-
-gestoAAGfagote = {
-  \clef bass
-  R1*4
-}
-
-gestoAAHfagote = {
-  \clef bass
-  R1*4
-}
-
 gestoABAfagote = {
   \clef bass
   R1*4

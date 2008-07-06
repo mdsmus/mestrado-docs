@@ -67,18 +67,6 @@ gestoAAEclarinetebb = {
   }
 }
 
-gestoAAFclarinetebb = {
-  R1*4
-}
-
-gestoAAGclarinetebb = {
-  R1*4
-}
-
-gestoAAHclarinetebb = {
-  R1*4
-}
-
 gestoABAclarinetebb = {
   R1*4
 }

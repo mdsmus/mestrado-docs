@@ -59,30 +59,6 @@ gestoAAEglobal = {
   \bar "||"
 }
 
-gestoAAFglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
-gestoAAGglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
-gestoAAHglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
 gestoABAglobal = {
   \padraoglobal
   \tempo 4=60

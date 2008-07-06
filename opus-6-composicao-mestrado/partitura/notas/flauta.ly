@@ -60,18 +60,6 @@ gestoAAEflauta = {
   }
 }
 
-gestoAAFflauta = {
-  R1*4
-}
-
-gestoAAGflauta = {
-  R1*4
-}
-
-gestoAAHflauta = {
-  R1*4
-}
-
 gestoABAflauta = {
   R1*4
 }

@@ -8,9 +8,6 @@ gestosicode = {
 \gestoAACicode
 \gestoAADicode
 \gestoAAEicode
-\gestoAAFicode
-\gestoAAGicode
-\gestoAAHicode
 \gestoABAicode
 \gestoABBicode
 \gestoABCicode

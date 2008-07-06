@@ -59,18 +59,6 @@ gestoAAEoboe = {
   }
 }
 
-gestoAAFoboe = {
-  R1*4
-}
-
-gestoAAGoboe = {
-  R1*4
-}
-
-gestoAAHoboe = {
-  R1*4
-}
-
 gestoABAoboe = {
   R1*4
 }
