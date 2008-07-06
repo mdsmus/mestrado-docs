@@ -59,7 +59,15 @@ gestoAAEfagote = {
 
 gestoABAfagote = {
   \clef bass
-  R1*4
+  \relative c' {
+    R1*5/4*2
+    r2. e2~\ppp
+    e1 r4
+    R1*5/4
+    r1 e4~
+    e2. r2
+    r2 e2.
+  }
 }
 
 gestoABBfagote = {

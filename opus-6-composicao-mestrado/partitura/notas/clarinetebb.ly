@@ -68,7 +68,16 @@ gestoAAEclarinetebb = {
 }
 
 gestoABAclarinetebb = {
-  R1*4
+  \relative c''' {
+    r1 g4~\ppp
+    g2. r2
+    r4 g1
+    bes,2.~ bes2
+    R1*5/4
+    g'2.~ g2
+    bes,2.~ bes2
+    g'2. bes,2
+  }
 }
 
 gestoABBclarinetebb = {
