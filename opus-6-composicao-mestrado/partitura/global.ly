@@ -60,6 +60,8 @@ gestoAAEglobal = {
 }
 
 gestoABAglobal = {
+  %% s(5 3 4 1 2 0) distribuido entre os instrunentos
+  %% expansão de intervalos
   \padraoglobal
   \tempo 4=66
   \time 5/4
