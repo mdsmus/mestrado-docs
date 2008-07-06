@@ -74,7 +74,12 @@ gestoABAflauta = {
 }
 
 gestoABBflauta = {
-  R1*5/4*5
+  \relative c'''' {
+    g2.~\startTrillSpan g2\stopTrillSpan
+    r4 g1~\startTrillSpan
+    g2\stopTrillSpan g2.->\trill
+    g1->\trill r4
+  }
 }
 
 gestoABCflauta = {

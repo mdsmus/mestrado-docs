@@ -73,7 +73,12 @@ gestoABAoboe = {
 }
 
 gestoABBoboe = {
-  R1*5/4*5
+  \relative c''' {
+    r2 cis2.~
+    cis2. cis2~->
+    cis2. cis2~->
+    cis4 cis1->
+  }
 }
 
 gestoABCoboe = {

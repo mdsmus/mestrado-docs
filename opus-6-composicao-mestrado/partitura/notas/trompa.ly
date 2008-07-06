@@ -49,17 +49,23 @@ gestoAAEtrompa = {
 
 gestoABAtrompa = {
   \relative c' {
+    %% lembrete: dimnuir duração das notas
     R1*5/4*3
     r4 bes1~\p
     bes1 r4
     R1*5/4
     r4 bes1
-    r1 bes4
+    r1 bes4~
   }
 }
 
 gestoABBtrompa = {
-  R1*5/4*5
+  \relative c' {
+    bes2.~ bes2
+    bes2.~-> bes2~
+    bes4 bes2.~-> bes8 bes~->
+    bes2~ bes8 bes~-> bes2
+  }
 }
 
 gestoABCtrompa = {
