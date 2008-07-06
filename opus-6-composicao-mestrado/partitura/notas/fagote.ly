@@ -95,7 +95,24 @@ gestoABCfagote = {
 
 gestoBAAfagote = {
   \clef bass
-  R1*4
+  \relative c {
+    a8-.->\mp\energico a-. a-. a-.-> a-. a-. a-.-> a-.
+    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+    a4.-> a-> a4~->
+    a8 a4.-> a2-> a4->
+    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
+    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+    a4.-> a-> a4~->
+    a8 a4.-> a2-> a4->
+    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
+    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+    a4.-> a-> a4~->
+    a8 a4.-> a2-> a4->
+    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
+    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+    a4.-> a-> a4~->
+    a8 a4.-> a2-> a4->
+  }
 }
 
 gestoBABfagote = {

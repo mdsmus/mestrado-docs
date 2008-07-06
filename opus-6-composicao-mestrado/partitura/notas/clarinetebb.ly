@@ -103,7 +103,24 @@ gestoABCclarinetebb = {
 }
 
 gestoBAAclarinetebb = {
-  R1*4
+  \relative c' {
+    g8-.->\mp\energico g-. g-. g-.-> g-. g-. g-.-> g-.
+    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
+    g4.-> g-> g4~->
+    g8 g4.-> g2-> g4->
+    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
+    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
+    cis4.-> cis-> cis4~->
+    cis8 cis4.-> cis2-> cis4->
+    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
+    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
+    cis4.-> cis-> cis4~->
+    cis8 cis4.-> cis2-> cis4->
+    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
+    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
+    cis4.-> cis-> cis4~->
+    cis8 cis4.-> cis2-> cis4->
+  }
 }
 
 gestoBABclarinetebb = {

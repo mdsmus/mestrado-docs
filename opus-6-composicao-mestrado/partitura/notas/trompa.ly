@@ -80,7 +80,18 @@ gestoABCtrompa = {
 }
 
 gestoBAAtrompa = {
-  R1*4
+  \relative c' {
+    \repeat unfold 5 {
+      R1
+      R1*5/4
+    }
+    g1~\mf
+    g8 e4. fis2.
+    cis4. dis c4~
+    c1 r4
+    R1
+    R1*5/4
+  }
 }
 
 gestoBABtrompa = {

@@ -94,7 +94,24 @@ gestoABCoboe = {
 }
 
 gestoBAAoboe = {
-  R1*4
+  \relative c' {
+    R1
+    R1*5/4
+    cis8-.->\mp\energico cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
+    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
+    cis4.-> cis-> cis4~->
+    cis8 cis4.-> cis2-> cis4->
+    dis8-.-> dis-. dis-. dis-.-> dis-. dis-. dis-.-> dis-.
+    dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
+    dis4.-> dis-> dis4~->
+    dis8 dis4.-> dis2-> dis4->
+    dis8-.-> dis-. dis-. dis-.-> dis-. dis-. dis-.-> dis-.
+    dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
+    dis4.-> dis-> dis4~->
+    dis8 dis4.-> dis2-> dis4->
+    dis8-.-> dis-. dis-. dis-.-> dis-. dis-. dis-.-> dis-.
+    dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
+  }
 }
 
 gestoBABoboe = {
