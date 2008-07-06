@@ -93,16 +93,6 @@ gestoABCfagote = {
   }
 }
 
-gestoABDfagote = {
-  \clef bass
-  R1*4
-}
-
-gestoABEfagote = {
-  \clef bass
-  R1*4
-}
-
 gestoBAAfagote = {
   \clef bass
   R1*4

@@ -79,14 +79,6 @@ gestoABCtrompa = {
   }
 }
 
-gestoABDtrompa = {
-  R1*4
-}
-
-gestoABEtrompa = {
-  R1*4
-}
-
 gestoBAAtrompa = {
   R1*4
 }

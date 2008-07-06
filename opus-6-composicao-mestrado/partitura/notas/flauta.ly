@@ -93,14 +93,6 @@ gestoABCflauta = {
   }
 }
 
-gestoABDflauta = {
-  R1*4
-}
-
-gestoABEflauta = {
-  R1*4
-}
-
 gestoBAAflauta = {
   R1*4
 }

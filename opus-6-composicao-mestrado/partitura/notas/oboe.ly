@@ -93,14 +93,6 @@ gestoABCoboe = {
   }
 }
 
-gestoABDoboe = {
-  R1*4
-}
-
-gestoABEoboe = {
-  R1*4
-}
-
 gestoBAAoboe = {
   R1*4
 }

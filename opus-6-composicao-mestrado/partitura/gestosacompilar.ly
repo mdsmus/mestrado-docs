@@ -11,8 +11,6 @@ gestosicode = {
 \gestoABAicode
 \gestoABBicode
 \gestoABCicode
-\gestoABDicode
-\gestoABEicode
 \gestoBAAicode
 \gestoBABicode
 \gestoBACicode

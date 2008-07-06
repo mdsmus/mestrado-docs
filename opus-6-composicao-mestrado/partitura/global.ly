@@ -86,22 +86,6 @@ gestoABCglobal = {
   \bar "||"
 }
 
-gestoABDglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
-gestoABEglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
 gestoBAAglobal = {
   \padraoglobal
   \tempo 4=60
