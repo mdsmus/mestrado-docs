@@ -26,7 +26,9 @@
       \set Score.skipBars = ##t
       \new Staff <<
         \gestosglobal
-        \gestostrompa
+          \transpose c g {
+            \gestostrompa
+          }
       >>
     >>
     \midi { }
