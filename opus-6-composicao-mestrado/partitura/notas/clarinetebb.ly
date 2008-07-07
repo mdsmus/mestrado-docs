@@ -215,7 +215,7 @@ gestoBBCclarinetebb = {
     d'4-^ b-^ cis-^ gis8( ais
     g?4.) r8
 
-    cis'1\trill
+    cis'1\trill\fermata
   }
 }
 

@@ -227,7 +227,7 @@ gestoBBCoboe = {
     d'4-^ b-^ cis-^ gis8( ais
     g?4.) r8
 
-    g1\trill
+    g1\trill\fermata
   }
 }
 

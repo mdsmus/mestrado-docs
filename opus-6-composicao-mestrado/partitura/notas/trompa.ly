@@ -158,7 +158,7 @@ gestoBBCtrompa = {
     b2 cis
 
     d2 b
-    cis1
+    cis1\fermata
   }
 }
 

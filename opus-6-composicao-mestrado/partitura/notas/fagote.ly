@@ -220,7 +220,7 @@ gestoBBCfagote = {
     g?4.) r8 
 
     d'4-^ b-^ 
-    g1\trill
+    g1\trill\fermata
   }
 }
 

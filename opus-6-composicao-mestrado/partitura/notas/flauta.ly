@@ -224,7 +224,7 @@ gestoBBCflauta = {
     g?4.) r8 
 
     d'4-^ b-^ 
-    cis1\trill
+    cis1\trill\fermata
   }
 }
 
