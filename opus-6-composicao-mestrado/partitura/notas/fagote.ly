@@ -10,13 +10,13 @@ gestoAAAfagote = {
     g1\p\dolce\piacere\espressivo e4(
     fis2.~ fis2)
     fis1\espressivo cis4(
-    e2.~ e4) r
+    e1) r4
 
     %% repetição variada
     g2. e4 e4
     fis2.~ fis2
     fis2.\espressivo cis4 cis4
-    e2.~ e4 r
+    e1 r4
   }
 }
 
@@ -27,7 +27,7 @@ gestoAABfagote = {
     g1\p\espressivo e4(
     fis2.~ fis2)
     fis2.\espressivo cis2(
-    e2.~ e4) r
+    e1) r4
     g1\p\espressivo cis,4(
     e2.~ e2~
   }
