@@ -75,7 +75,7 @@ gestoABCtrompa = {
     R1*5/4
     r4 bes1
     R1*5/4*3
-    bes2.~ bes2
+    bes2. r2\fermata
   }
 }
 

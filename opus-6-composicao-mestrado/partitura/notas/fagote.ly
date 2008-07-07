@@ -89,7 +89,7 @@ gestoABCfagote = {
     R1*5/4*2
     r4 e1
     R1*5/4
-    bes,2.~ bes2
+    bes,2. r2\fermata
   }
 }
 
