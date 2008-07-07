@@ -6,6 +6,7 @@ globaldir = partitura
 notasdir = $(globaldir)/notas
 partesdir = $(globaldir)/partes
 systemdir = $(scriptdir)/systemfiles
+audiofile = audio
 
 vpath gestos%.ly $(systemdir)
 vpath score.ly $(globaldir)
@@ -34,18 +35,22 @@ clean:
 	bash limpa ;\
 	cd -
 
-ouvir:
-	cd $(scriptdir) ;\
-	bash visualiza o ;\
-	cd -
-
 partes:
 	cd $(scriptdir) ;\
 	bash compila p ;\
 	cd -
 
-wave:
-	timidity -Ow $(audiodir)/score.midi
+cria-audio:
+	cd $(globaldir) ;\
+	lilypond -I ../$(systemdir) -I $(notdir $(notasdir)) $(audiofile).ly ;\
+	mv $(audiofile).midi $(notdir $(audiodir)) ;\
+	cd -
 
-ouvirwave: $(audiodir)/score.wav
-	mplayer $(audiodir)/score.wav
+ouvir:
+	timidity $(audiodir)/$(audiofile).midi
+
+wave:
+	timidity -Ow $(audiodir)/$(audiofile).midi
+
+ouvirwave: $(audiodir)/$(audiofile).wav
+	mplayer $(audiodir)/$(audiofile).wav
