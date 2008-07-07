@@ -143,16 +143,6 @@ gestoBACfagote = {
   }
 }
 
-gestoBADfagote = {
-  \clef bass
-  R1*4
-}
-
-gestoBAEfagote = {
-  \clef bass
-  R1*4
-}
-
 gestoBBAfagote = {
   \clef bass
     R1*11

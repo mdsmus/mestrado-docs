@@ -18,18 +18,6 @@ gestoAAEicode = {
   R1*4
 }
 
-gestoAAFicode = {
-  R1*4
-}
-
-gestoAAGicode = {
-  R1*4
-}
-
-gestoAAHicode = {
-  R1*4
-}
-
 gestoABAicode = {
   R1*4
 }
@@ -42,14 +30,6 @@ gestoABCicode = {
   R1*4
 }
 
-gestoABDicode = {
-  R1*4
-}
-
-gestoABEicode = {
-  R1*4
-}
-
 gestoBAAicode = {
   R1*4
 }
@@ -59,14 +39,6 @@ gestoBABicode = {
 }
 
 gestoBACicode = {
-  R1*4
-}
-
-gestoBADicode = {
-  R1*4
-}
-
-gestoBAEicode = {
   R1*4
 }
 

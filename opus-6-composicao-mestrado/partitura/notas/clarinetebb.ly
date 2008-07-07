@@ -153,14 +153,6 @@ gestoBACclarinetebb = {
   }
 }
 
-gestoBADclarinetebb = {
-  R1*4
-}
-
-gestoBAEclarinetebb = {
-  R1*4
-}
-
 gestoBBAclarinetebb = {
   \relative c'' {
     R1*11

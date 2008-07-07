@@ -141,14 +141,6 @@ gestoBACoboe = {
   }
 }
 
-gestoBADoboe = {
-  R1*4
-}
-
-gestoBAEoboe = {
-  R1*4
-}
-
 gestoBBAoboe = {
   \relative c'' {
     R1*2

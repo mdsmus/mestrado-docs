@@ -137,14 +137,6 @@ gestoBACflauta = {
   }
 }
 
-gestoBADflauta = {
-  R1*4
-}
-
-gestoBAEflauta = {
-  R1*4
-}
-
 gestoBBAflauta = {
   \relative c''' {
     %% sujeito do fugato

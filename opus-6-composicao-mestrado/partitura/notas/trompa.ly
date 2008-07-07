@@ -136,14 +136,6 @@ gestoBACtrompa = {
   }
 }
 
-gestoBADtrompa = {
-  R1*4
-}
-
-gestoBAEtrompa = {
-  R1*4
-}
-
 gestoBBAtrompa = {
   R1*11
 }
