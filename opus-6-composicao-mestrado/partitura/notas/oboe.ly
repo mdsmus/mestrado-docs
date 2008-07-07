@@ -110,8 +110,8 @@ gestoBAAoboe = {
     dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
     dis4.-> dis-> dis4~->
     dis8 dis4.-> dis2-> dis4->
-    dis8-.-> dis-. dis-. dis-.-> dis-. dis-. dis-.-> dis-.
-    dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
+    g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
+    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
   }
 }
 

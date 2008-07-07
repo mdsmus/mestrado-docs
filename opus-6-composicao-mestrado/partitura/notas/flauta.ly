@@ -110,9 +110,8 @@ gestoBAAflauta = {
     g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
     g4.-> g-> g4~->
     g8 g4.-> g2-> g4->
-    g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
-
+    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
+    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
   }
 }
 
