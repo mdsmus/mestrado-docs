@@ -115,7 +115,14 @@ gestoBAAoboe = {
 }
 
 gestoBABoboe = {
-  R1*4
+  \relative c'' {
+    \repeat unfold 4 {
+      a4.-> a-> a4~->
+      a8 a4.-> a2-> a4->
+      a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
+      a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+    }
+  }
 }
 
 gestoBACoboe = {

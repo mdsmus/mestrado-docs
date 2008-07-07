@@ -95,7 +95,24 @@ gestoBAAtrompa = {
 }
 
 gestoBABtrompa = {
-  R1*4
+  \relative c' {
+    bes1~
+    bes8 g4. a2.
+    e4. fis dis4~
+    dis1 r4
+    R1
+    R1*5/4
+    e'1~
+    e8 cis4. dis2.
+    bes4. c a4~
+    a1 r4
+    R1
+    R1*5/4
+    ees'8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
+    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
+    ees4.-> ees-> ees4~->
+    ees8 ees4.-> ees2-> ees4->
+  }
 }
 
 gestoBACtrompa = {

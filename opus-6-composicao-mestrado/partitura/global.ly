@@ -101,10 +101,13 @@ gestoBAAglobal = {
 
 gestoBABglobal = {
   \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
+  \tempo 4=120
+  \repeat unfold 8 {
+    \time 4/4
+    s1
+    \time 5/4
+    s1*5/4
+  }
 }
 
 gestoBACglobal = {
