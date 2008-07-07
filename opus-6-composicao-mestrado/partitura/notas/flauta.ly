@@ -118,12 +118,16 @@ gestoBAAflauta = {
 
 gestoBABflauta = {
   \relative c''' {
-    \repeat unfold 4 {
+    \repeat unfold 3 {
       g4.-> g-> g4~->
       g8 g4.-> g2-> g4->
       g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
       g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
     }
+    g4.-> g-> g4~->
+    g8 g4.-> g2-> g4->
+    des'8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
+    des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
   }
 }
 
