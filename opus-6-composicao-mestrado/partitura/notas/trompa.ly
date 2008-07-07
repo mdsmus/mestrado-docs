@@ -112,11 +112,28 @@ gestoBABtrompa = {
     ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
     ees4.-> ees-> ees4~->
     ees8 ees4.-> ees2-> ees4->
+    g,8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
+    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
+    g4.-> g-> g4~->
+    g8 g4.-> g2-> g4->
   }
 }
 
 gestoBACtrompa = {
-  R1*4
+  \relative c'' {
+    R1
+    R1*5/4
+    bes1~
+    bes8 g4. a2.
+    e4. fis dis4~
+    dis1 r4
+    R1
+    R1*5/4
+    a'8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
+    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+    a4.-> a-> a4~->
+    a8 a4.-> a2-> a4->
+  }
 }
 
 gestoBADtrompa = {

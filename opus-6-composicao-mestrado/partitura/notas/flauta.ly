@@ -127,7 +127,14 @@ gestoBABflauta = {
 }
 
 gestoBACflauta = {
-  R1*4
+  \relative c''' {
+    \repeat unfold 4 {
+      des4.-> des-> des4~->
+      des8 des4.-> des2-> des4->
+      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
+      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
+    }
+  }
 }
 
 gestoBADflauta = {

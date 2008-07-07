@@ -135,7 +135,22 @@ gestoBABclarinetebb = {
 }
 
 gestoBACclarinetebb = {
-  R1*4
+  \relative c'' {
+    \repeat unfold 2 {
+      ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
+      ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
+      ees4.-> ees-> ees4~->
+      ees8 ees4.-> ees2-> ees4->
+    }
+    e1~
+    e8 cis4. dis2.
+    bes4. c a4~
+    a1 r4
+    ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
+    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
+    ees4.-> ees-> ees4~->
+    ees8 ees4.-> ees2-> ees4->
+  }
 }
 
 gestoBADclarinetebb = {

@@ -132,8 +132,15 @@ gestoBABfagote = {
 }
 
 gestoBACfagote = {
-  \clef bass
-  R1*4
+  \clef tenor
+  \relative c' {
+    \repeat unfold 4 {
+      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
+      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
+      des4.-> des-> des4~->
+      des8 des4.-> des2-> des4->
+    }
+  }
 }
 
 gestoBADfagote = {
