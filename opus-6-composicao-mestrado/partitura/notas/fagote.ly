@@ -144,14 +144,31 @@ gestoBACfagote = {
 }
 
 gestoBBAfagote = {
-  \clef bass
-    R1*11
+  \clef tenor
+  \relative c' {
+    des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
+    des-. des-.-> des-. des-. des-.-> des-. des-. des-.
+    des-.-> des-. des4.-> des->
+    des4.-> des4.-> des4~->
+    des4-> des4->
+    %% repetição
+    \setTextDecresc
+    des8-.->\> des-. des-. des-.-> des-. des-. des-.-> des-.
+    des-. des-.-> des-. des-. des-.-> des-. des-. des-.
+    des-.-> des-. des4~->
+    des8 des4.->
+    des4.-> des8~->
+    des4-> des2-> des4->
+    %% repetição parcial
+    des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
+    des-. des-.-> des-. des-. des-.-> des-. des-. des-.\pp
+  }
 }
 
 gestoBBBfagote = {
-  \clef bass
   \relative c' {
     R1*1
+    \clef bass
     %% sujeito do fugato transposto a quinta
     \transpose d a, {
       \relative {

@@ -155,8 +155,21 @@ gestoBACclarinetebb = {
 }
 
 gestoBBAclarinetebb = {
-  \relative c'' {
-    R1*11
+  \relative c' {
+    ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
+    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.
+    ees-.-> ees-. ees4.-> ees->
+    ees4.-> ees4.-> ees4~->
+    ees4-> ees4->
+    %% repetição
+    \setTextDecresc
+    ees8-.->\> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
+    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.
+    ees-.-> ees-. ees4~->
+    ees8 ees4.->
+    ees4.-> ees8~->
+    ees4-> ees2-> ees4->\pp
+    R1*2
   }
 }
 
