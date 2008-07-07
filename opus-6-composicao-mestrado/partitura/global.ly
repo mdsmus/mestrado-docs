@@ -17,6 +17,8 @@ padraoglobal = {
   \override Score.RehearsalMark #'padding = #0.5
 }
 
+%% verificar acidentes nos trill
+
 gestoAAAglobal = {
   %% merge do AAA e AAB planejados
   \padraoglobal
