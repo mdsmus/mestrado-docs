@@ -78,6 +78,8 @@ gestoABAglobal = {
 }
 
 gestoABBglobal = {
+  %% inserir nos 2 últimos compassos crescendo e decrescendo
+  %% expressivo
   \mark \default
   \padraoglobal
   \tempo 4=66
