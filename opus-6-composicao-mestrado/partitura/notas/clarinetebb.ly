@@ -98,6 +98,7 @@ gestoABCclarinetebb = {
     r2 g'2.
     R1*5/4
     bes,1 r4
+    %% FIXME: inserir fermata
     R1*5/4
   }
 }

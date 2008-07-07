@@ -89,6 +89,7 @@ gestoABCflauta = {
     g2\stopTrillSpan r2.
     r2. g2~\startTrillSpan
     g2.\stopTrillSpan r2
+    %% FIXME: inserir fermata
     R1*5/4*3
   }
 }

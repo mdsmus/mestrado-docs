@@ -89,6 +89,7 @@ gestoABCoboe = {
     R1*5/4
     r1 cis4~
     cis2. r2
+    %% FIXME: inserir fermata
     R1*5/4*2
   }
 }
