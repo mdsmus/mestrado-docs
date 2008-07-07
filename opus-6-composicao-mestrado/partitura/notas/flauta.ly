@@ -83,9 +83,9 @@ gestoABBflauta = {
 }
 
 gestoABCflauta = {
-  \relative c''' {
+  \relative c'''' {
     g2.~\startTrillSpan g2\stopTrillSpan
-    r4 g1~\startTrillSpan
+    r4 g,1~\startTrillSpan
     g2\stopTrillSpan r2.
     r2. g2~\startTrillSpan
     g2.\stopTrillSpan r2

@@ -76,7 +76,7 @@ gestoABBfagote = {
     r2. e2~
     e1 e4~->
     e2.~ e8 e~-> e4~
-    e4. e8~-> e2.
+    e4. e8~-> e2.~
   }
 }
 
