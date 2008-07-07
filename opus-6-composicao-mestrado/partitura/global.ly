@@ -61,8 +61,15 @@ gestoAAEglobal = {
 }
 
 gestoABAglobal = {
-  %% s(5 3 4 1 2 0) distribuido entre os instrunentos
-  %% expansão de intervalos
+  %% s(5 3 4 1 2 0) distribuido entre os instrunentos expansão de
+  %% intervalos.
+
+  %% repensar uso de trinado exclusivo na flauta. a distribuição dos
+  %% trinados pode incorporar uma operação de contorno
+
+  %% repensar timbre do contorno. mudar os instrumentos que tocam as
+  %% notas
+  
   \mark \default
   \padraoglobal
   \tempo 4=66
@@ -79,6 +86,7 @@ gestoABBglobal = {
 }
 
 gestoABCglobal = {
+  %% FIXME: inserir fermata no final
   \mark \default
   \padraoglobal
   \tempo 4=66
@@ -101,6 +109,7 @@ gestoBAAglobal = {
 }
 
 gestoBABglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=120
   \repeat unfold 8 {
@@ -124,25 +133,10 @@ gestoBACglobal = {
   \bar "||"
 }
 
-gestoBADglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
-gestoBAEglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
 gestoBBAglobal = {
   %% início da fuga (fl+ob)
   %% encerramento gradual da homofonia da seção anterior
+  \mark \default
   \padraoglobal
   \tempo 4=120
   \time 4/4
@@ -153,6 +147,7 @@ gestoBBAglobal = {
 gestoBBBglobal = {
   %% continuação da fuga. entram cl+fg
   %% homofonia anterior encerrada
+  \mark \default
   \padraoglobal
   \tempo 4=120
   \time 4/4
@@ -163,6 +158,7 @@ gestoBBBglobal = {
 gestoBBCglobal = {
   %% continuação da fuga. entram fl+ob+cl+fg
   %% entrada da trompa em ritmo desdobrado com tema da fuga
+  \mark \default
   \padraoglobal
   \tempo 4=120
   \time 4/4
