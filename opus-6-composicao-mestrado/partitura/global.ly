@@ -105,7 +105,6 @@ gestoBAAglobal = {
     \time 5/4
     s1*5/4
   }
-  \bar "||"
 }
 
 gestoBABglobal = {
@@ -141,7 +140,6 @@ gestoBBAglobal = {
   \tempo 4=120
   \time 4/4
   s1*11
-%   \bar "||"
 }
 
 gestoBBBglobal = {
@@ -152,7 +150,6 @@ gestoBBBglobal = {
   \tempo 4=120
   \time 4/4
   s1*7
-%   \bar "||"
 }
 
 gestoBBCglobal = {
