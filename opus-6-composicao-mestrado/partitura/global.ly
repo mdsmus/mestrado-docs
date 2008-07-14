@@ -168,6 +168,7 @@ gestoBBCglobal = {
 }
 
 gestoCAAglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=108
   \time 4/4
@@ -175,6 +176,7 @@ gestoCAAglobal = {
 }
 
 gestoCABglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=108
   \time 4/4
@@ -182,6 +184,7 @@ gestoCABglobal = {
 }
 
 gestoCACglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=108
   \time 4/4
