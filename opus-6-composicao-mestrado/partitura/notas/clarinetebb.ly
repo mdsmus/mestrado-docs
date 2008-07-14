@@ -220,7 +220,20 @@ gestoBBCclarinetebb = {
 }
 
 gestoCAAclarinetebb = {
-  R1*15
+  \relative c' {
+    R1*3
+    %% junto à trompa
+    r2. g4~\p
+    g e8->\st fis4. fis8 g
+    e2 r4 g4~
+    g e8->\st fis4. fis8 g~
+    g2 r4 g4~
+    g e8->\st fis4. fis8 g
+    e2 r4 g4~
+    g e8->\st fis4. e8 e~
+    e2 r2
+    R1*3
+  }
 }
 
 gestoCABclarinetebb = {

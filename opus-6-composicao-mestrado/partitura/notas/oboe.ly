@@ -232,7 +232,14 @@ gestoBBCoboe = {
 }
 
 gestoCAAoboe = {
-  R1*15
+  \relative c' {
+    R1*11
+    %% preparação com retrogradação de #s(5 3 4 1 2 0)
+    r4 r8. c16\p( ees des fis e) g4~
+    g e8->\st fis4. cis8 g'
+    e2 r4 g4~
+    g e8->\st fis4. cis8 cis
+  }
 }
 
 gestoCABoboe = {
