@@ -194,6 +194,7 @@ gestoCACglobal = {
 }
 
 gestoCBAglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=112
   \time 4/4
@@ -202,6 +203,7 @@ gestoCBAglobal = {
 }
 
 gestoCBBglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=112
   \time 4/4
@@ -210,6 +212,7 @@ gestoCBBglobal = {
 }
 
 gestoCBCglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=112
   \time 4/4
@@ -218,6 +221,7 @@ gestoCBCglobal = {
 }
 
 gestoCBDglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=112
   \time 4/4
@@ -226,6 +230,7 @@ gestoCBDglobal = {
 }
 
 gestoCBEglobal = {
+  \mark \default
   \padraoglobal
   \tempo 4=112
   \time 4/4
