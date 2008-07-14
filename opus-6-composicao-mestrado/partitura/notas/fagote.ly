@@ -226,17 +226,17 @@ gestoBBCfagote = {
 
 gestoCAAfagote = {
   \clef bass
-  R1*4
+  R1*15
 }
 
 gestoCABfagote = {
   \clef bass
-  R1*4
+  R1*9
 }
 
 gestoCACfagote = {
   \clef bass
-  R1*4
+  R1*15
 }
 
 gestoCADfagote = {

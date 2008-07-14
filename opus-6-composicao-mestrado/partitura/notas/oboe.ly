@@ -232,15 +232,15 @@ gestoBBCoboe = {
 }
 
 gestoCAAoboe = {
-  R1*4
+  R1*15
 }
 
 gestoCABoboe = {
-  R1*4
+  R1*9
 }
 
 gestoCACoboe = {
-  R1*4
+  R1*15
 }
 
 gestoCADoboe = {

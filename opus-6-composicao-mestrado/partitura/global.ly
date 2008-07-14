@@ -169,25 +169,23 @@ gestoBBCglobal = {
 
 gestoCAAglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=108
   \time 4/4
-  s1*4
-  \bar "||"
+  s1*15
 }
 
 gestoCABglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=108
   \time 4/4
-  s1*4
-  \bar "||"
+  s1*9
 }
 
 gestoCACglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=108
   \time 4/4
-  s1*4
+  s1*15
   \bar "||"
 }
 

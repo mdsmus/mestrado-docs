@@ -163,15 +163,15 @@ gestoBBCtrompa = {
 }
 
 gestoCAAtrompa = {
-  R1*4
+  R1*15
 }
 
 gestoCABtrompa = {
-  R1*4
+  R1*9
 }
 
 gestoCACtrompa = {
-  R1*4
+  R1*15
 }
 
 gestoCADtrompa = {

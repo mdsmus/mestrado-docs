@@ -229,15 +229,15 @@ gestoBBCflauta = {
 }
 
 gestoCAAflauta = {
-  R1*4
+  R1*15
 }
 
 gestoCABflauta = {
-  R1*4
+  R1*9
 }
 
 gestoCACflauta = {
-  R1*4
+  R1*15
 }
 
 gestoCADflauta = {

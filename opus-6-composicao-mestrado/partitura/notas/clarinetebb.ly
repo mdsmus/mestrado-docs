@@ -220,15 +220,15 @@ gestoBBCclarinetebb = {
 }
 
 gestoCAAclarinetebb = {
-  R1*4
+  R1*15
 }
 
 gestoCABclarinetebb = {
-  R1*4
+  R1*9
 }
 
 gestoCACclarinetebb = {
-  R1*4
+  R1*15
 }
 
 gestoCADclarinetebb = {
