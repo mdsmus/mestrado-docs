@@ -280,7 +280,18 @@ gestoCACoboe = {
 }
 
 gestoCBAoboe = {
-  R1*16
+  \relative c'' {
+    R1*9
+    \setTextCresc
+    r4 cis16\ppp\< dis c? g e fis r8 r4
+    cis'16 dis c? g e fis cis'16 dis c? g e fis r4
+    r2 cis'16\f dis c? g e fis cis'16 dis
+    c? g e fis r2.
+    \setTextDecresc
+    r4 cis'16\> dis c? g e fis cis'16 dis c? g e fis
+    r4 cis'16\ppp dis c? g e fis r8 r4
+    R1
+  }
 }
 
 gestoCBBoboe = {

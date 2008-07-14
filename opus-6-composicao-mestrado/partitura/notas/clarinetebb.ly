@@ -266,7 +266,25 @@ gestoCACclarinetebb = {
 }
 
 gestoCBAclarinetebb = {
-  R1*16
+  \relative c' {
+    R1*3
+    r2 e16\ppp g, bes e, g' cis, r8
+    e16 g, bes e, g' cis, r8 r2
+    e16 g, bes e, g' cis, e16 g, bes e, g' cis, r4
+    r2. e16 g, bes e,
+    g' cis, e16 g, bes e, g' cis, r4 e16 g, bes e,
+    g' cis, e16 g, bes e, g' cis, r2
+    e16 g, bes e, g' cis, e16 g, bes e, g' cis, r4
+    \setTextCresc
+    r4 e16\< g, bes e, g' cis, e16 g, bes e, g' cis,
+    r4 e16\f g, bes e, g' cis, e16 g, bes e, g' cis,
+    r4 e16 g, bes e, g' cis, r8 r4
+    \setTextDecresc
+    e16\> g, bes e, g' cis, r8 r2
+    e16 g, bes e, g' cis, r8 r2
+    e16\ppp g, bes e, g' cis, e16 g, bes e, g' cis, r4
+    
+  }
 }
 
 gestoCBBclarinetebb = {

@@ -209,7 +209,13 @@ gestoCACtrompa = {
 }
 
 gestoCBAtrompa = {
-  R1*16
+  \relative c'' {
+    R1*11
+    g1\ppp\<
+    g8~\sfz\> g2..~
+    g8\ppp r8 r2.
+    R1*2
+  }
 }
 
 gestoCBBtrompa = {

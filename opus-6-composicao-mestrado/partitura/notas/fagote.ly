@@ -282,7 +282,21 @@ gestoCACfagote = {
 
 gestoCBAfagote = {
   \clef bass
-  R1*16
+  \relative c' {
+    R1*6
+    r2 e16\ppp cis g' e, bes' g r8
+    r4 e'16 cis g' e, bes' g r8 r4
+    r4 e'16 cis g' e, bes' g e'16 cis g' e, bes' g
+    \setTextCresc
+    r2. e'16\< cis g' e,
+    bes' g e'16 cis g' e, bes' g r2
+    e'16\f cis g' e, bes' g e'16 cis g' e, bes' g r4
+    \setTextDecresc
+    e'16 cis g' e, bes' g r8 r4 e'16\> cis g' e,
+    bes' g r8 r2 e'16 cis g' e,
+    bes' g r8 r4 e'16 cis g' e, bes' g r8
+    r4 e'16\ppp cis g' e, bes' g r8 r4
+  }
 }
 
 gestoCBBfagote = {

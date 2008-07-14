@@ -262,7 +262,27 @@ gestoCACflauta = {
 }
 
 gestoCBAflauta = {
-  R1*16
+  \relative c'' {
+    g16\ppp e fis cis dis c? r8 r4 g'16 e fis cis
+    dis c? r4 g'16 e fis cis dis c? g'16 e fis cis
+    dis c? r8 r4 g'16 e fis cis dis c? r8
+    r4 g'16 e fis cis dis c? g'16 e fis cis dis c?
+    r4 g'16 e fis cis dis c? r8 r4
+    r2 g'16 e fis cis dis c? r8
+    r4 g'16 e fis cis dis c? r8 r4
+    r2 g'16 e fis cis dis c? g'16 e
+    fis cis dis c? r2 g''16 e fis cis
+    \setTextCresc
+    dis c? r8 r4 g'16\< e fis cis dis c? r8
+    r2 g''16 e fis cis dis c? g'16 e
+    fis cis dis c? r2 g'16\f e fis cis
+    \setTextDecresc
+    dis c? r8 r4 g'16\> e fis cis dis c? r8
+    r2 g'16 e fis cis dis c? g'16 e
+    fis cis dis c? r2 g16 e fis cis
+    dis c? r8 r4 g'16\ppp e fis cis dis c? r8
+   
+  }
 }
 
 gestoCBBflauta = {
