@@ -195,40 +195,40 @@ gestoCACglobal = {
 
 gestoCBAglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=112
   \time 4/4
-  s1*4
+  s1*16
   \bar "||"
 }
 
 gestoCBBglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=112
   \time 4/4
-  s1*4
+  s1*10
   \bar "||"
 }
 
 gestoCBCglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=112
   \time 4/4
-  s1*4
+  s1*16
   \bar "||"
 }
 
 gestoCBDglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=112
   \time 4/4
-  s1*4
+  s1*10
   \bar "||"
 }
 
 gestoCBEglobal = {
   \padraoglobal
-  \tempo 4=60
+  \tempo 4=112
   \time 4/4
-  s1*4
+  s1*16
   \bar "|."
 }

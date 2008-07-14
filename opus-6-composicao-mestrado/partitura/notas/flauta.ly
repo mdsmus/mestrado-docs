@@ -262,21 +262,21 @@ gestoCACflauta = {
 }
 
 gestoCBAflauta = {
-  R1*4
+  R1*16
 }
 
 gestoCBBflauta = {
-  R1*4
+  R1*10
 }
 
 gestoCBCflauta = {
-  R1*4
+  R1*16
 }
 
 gestoCBDflauta = {
-  R1*4
+  R1*10
 }
 
 gestoCBEflauta = {
-  R1*4
+  R1*16
 }

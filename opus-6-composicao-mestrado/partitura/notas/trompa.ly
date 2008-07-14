@@ -209,21 +209,21 @@ gestoCACtrompa = {
 }
 
 gestoCBAtrompa = {
-  R1*4
+  R1*16
 }
 
 gestoCBBtrompa = {
-  R1*4
+  R1*10
 }
 
 gestoCBCtrompa = {
-  R1*4
+  R1*16
 }
 
 gestoCBDtrompa = {
-  R1*4
+  R1*10
 }
 
 gestoCBEtrompa = {
-  R1*4
+  R1*16
 }

@@ -266,21 +266,21 @@ gestoCACclarinetebb = {
 }
 
 gestoCBAclarinetebb = {
-  R1*4
+  R1*16
 }
 
 gestoCBBclarinetebb = {
-  R1*4
+  R1*10
 }
 
 gestoCBCclarinetebb = {
-  R1*4
+  R1*16
 }
 
 gestoCBDclarinetebb = {
-  R1*4
+  R1*10
 }
 
 gestoCBEclarinetebb = {
-  R1*4
+  R1*16
 }

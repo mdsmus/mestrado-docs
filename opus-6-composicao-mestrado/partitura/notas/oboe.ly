@@ -280,21 +280,21 @@ gestoCACoboe = {
 }
 
 gestoCBAoboe = {
-  R1*4
+  R1*16
 }
 
 gestoCBBoboe = {
-  R1*4
+  R1*10
 }
 
 gestoCBCoboe = {
-  R1*4
+  R1*16
 }
 
 gestoCBDoboe = {
-  R1*4
+  R1*10
 }
 
 gestoCBEoboe = {
-  R1*4
+  R1*16
 }
