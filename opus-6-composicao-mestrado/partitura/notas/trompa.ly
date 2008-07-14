@@ -212,7 +212,7 @@ gestoCBAtrompa = {
   \relative c'' {
     R1*11
     %% centro
-    g1\ppp\<
+    g1~\ppp\<
     g8~\sfz\> g2..~
     g8\ppp r8 r2.
     R1*2
