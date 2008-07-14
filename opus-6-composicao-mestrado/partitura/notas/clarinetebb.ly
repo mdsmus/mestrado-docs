@@ -265,14 +265,6 @@ gestoCACclarinetebb = {
   }
 }
 
-gestoCADclarinetebb = {
-  R1*4
-}
-
-gestoCAEclarinetebb = {
-  R1*4
-}
-
 gestoCBAclarinetebb = {
   R1*4
 }
@@ -290,17 +282,5 @@ gestoCBDclarinetebb = {
 }
 
 gestoCBEclarinetebb = {
-  R1*4
-}
-
-gestoCBFclarinetebb = {
-  R1*4
-}
-
-gestoCBGclarinetebb = {
-  R1*4
-}
-
-gestoCBHclarinetebb = {
   R1*4
 }

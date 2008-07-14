@@ -280,16 +280,6 @@ gestoCACfagote = {
   }
 }
 
-gestoCADfagote = {
-  \clef bass
-  R1*4
-}
-
-gestoCAEfagote = {
-  \clef bass
-  R1*4
-}
-
 gestoCBAfagote = {
   \clef bass
   R1*4
@@ -311,21 +301,6 @@ gestoCBDfagote = {
 }
 
 gestoCBEfagote = {
-  \clef bass
-  R1*4
-}
-
-gestoCBFfagote = {
-  \clef bass
-  R1*4
-}
-
-gestoCBGfagote = {
-  \clef bass
-  R1*4
-}
-
-gestoCBHfagote = {
   \clef bass
   R1*4
 }

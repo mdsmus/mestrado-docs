@@ -66,14 +66,6 @@ gestoCACicode = {
   R1*4
 }
 
-gestoCADicode = {
-  R1*4
-}
-
-gestoCAEicode = {
-  R1*4
-}
-
 gestoCBAicode = {
   R1*4
 }
@@ -91,17 +83,5 @@ gestoCBDicode = {
 }
 
 gestoCBEicode = {
-  R1*4
-}
-
-gestoCBFicode = {
-  R1*4
-}
-
-gestoCBGicode = {
-  R1*4
-}
-
-gestoCBHicode = {
   R1*4
 }

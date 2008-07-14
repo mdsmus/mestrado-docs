@@ -20,14 +20,9 @@ gestosicode = {
 \gestoCAAicode
 \gestoCABicode
 \gestoCACicode
-\gestoCADicode
-\gestoCAEicode
 \gestoCBAicode
 \gestoCBBicode
 \gestoCBCicode
 \gestoCBDicode
 \gestoCBEicode
-\gestoCBFicode
-\gestoCBGicode
-\gestoCBHicode
 }

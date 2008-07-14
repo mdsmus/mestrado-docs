@@ -261,14 +261,6 @@ gestoCACflauta = {
   }
 }
 
-gestoCADflauta = {
-  R1*4
-}
-
-gestoCAEflauta = {
-  R1*4
-}
-
 gestoCBAflauta = {
   R1*4
 }
@@ -286,17 +278,5 @@ gestoCBDflauta = {
 }
 
 gestoCBEflauta = {
-  R1*4
-}
-
-gestoCBFflauta = {
-  R1*4
-}
-
-gestoCBGflauta = {
-  R1*4
-}
-
-gestoCBHflauta = {
   R1*4
 }

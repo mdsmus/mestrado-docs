@@ -279,14 +279,6 @@ gestoCACoboe = {
   }
 }
 
-gestoCADoboe = {
-  R1*4
-}
-
-gestoCAEoboe = {
-  R1*4
-}
-
 gestoCBAoboe = {
   R1*4
 }
@@ -304,17 +296,5 @@ gestoCBDoboe = {
 }
 
 gestoCBEoboe = {
-  R1*4
-}
-
-gestoCBFoboe = {
-  R1*4
-}
-
-gestoCBGoboe = {
-  R1*4
-}
-
-gestoCBHoboe = {
   R1*4
 }

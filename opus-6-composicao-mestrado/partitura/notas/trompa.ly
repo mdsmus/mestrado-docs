@@ -208,14 +208,6 @@ gestoCACtrompa = {
   }
 }
 
-gestoCADtrompa = {
-  R1*4
-}
-
-gestoCAEtrompa = {
-  R1*4
-}
-
 gestoCBAtrompa = {
   R1*4
 }
@@ -233,17 +225,5 @@ gestoCBDtrompa = {
 }
 
 gestoCBEtrompa = {
-  R1*4
-}
-
-gestoCBFtrompa = {
-  R1*4
-}
-
-gestoCBGtrompa = {
-  R1*4
-}
-
-gestoCBHtrompa = {
   R1*4
 }

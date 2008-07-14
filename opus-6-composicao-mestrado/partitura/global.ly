@@ -193,22 +193,6 @@ gestoCACglobal = {
   \bar "||"
 }
 
-gestoCADglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
-gestoCAEglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
 gestoCBAglobal = {
   \padraoglobal
   \tempo 4=60
@@ -242,30 +226,6 @@ gestoCBDglobal = {
 }
 
 gestoCBEglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
-gestoCBFglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
-gestoCBGglobal = {
-  \padraoglobal
-  \tempo 4=60
-  \time 4/4
-  s1*4
-  \bar "||"
-}
-
-gestoCBHglobal = {
   \padraoglobal
   \tempo 4=60
   \time 4/4
