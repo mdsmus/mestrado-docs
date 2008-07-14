@@ -168,6 +168,7 @@ gestoBBCglobal = {
 }
 
 gestoCAAglobal = {
+  %% contorno #s(5 3 4 1 2 0) usado na densidade de CA
   \mark \default
   \padraoglobal
   \tempo 4=108

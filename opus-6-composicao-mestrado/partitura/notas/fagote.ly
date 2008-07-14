@@ -246,7 +246,15 @@ gestoCAAfagote = {
 
 gestoCABfagote = {
   \clef bass
-  R1*9
+  \relative c {
+    a4 g8->\st a4. r4
+    \repeat unfold 2 {
+      a4 g8->\st a4. g8->\st a~
+      a4 g8->\st a4. cis8->\st dis,->\st
+      a'4 g8->\st a4. g8->\st a~
+      a4 g8->\st a4. r4
+    }
+  }
 }
 
 gestoCACfagote = {

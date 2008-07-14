@@ -184,7 +184,10 @@ gestoCAAtrompa = {
 }
 
 gestoCABtrompa = {
-  R1*9
+  \relative c' {
+    a2 r
+    R1*8
+  }
 }
 
 gestoCACtrompa = {

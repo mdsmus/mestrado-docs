@@ -238,12 +238,24 @@ gestoCAAoboe = {
     r4 r8. c16\p( ees des fis e) g4~
     g e8->\st fis4. cis8 g'
     e2 r4 g4~
-    g e8->\st fis4. cis8 cis
+    g e8->\st fis4. cis8 cis~
   }
 }
 
 gestoCABoboe = {
-  R1*9
+  \relative c' {
+    %% preparação com retrogradação de #s(5 3 4 1 2 0)
+    cis4.. c16( ees des fis e g4~
+    g bes4. a4.~
+    a2~ a8.) cis,16( g' e bes' g
+    cis2. bis4
+    dis1)\trill
+    fis4( e a g
+    %% expansão de #s(5 3 4 1 2 0)
+    bes2. a4~
+    a2) bes,16( ees e,? a bes,4~
+    bes2.) r4
+  }
 }
 
 gestoCACoboe = {
