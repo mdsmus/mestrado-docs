@@ -283,6 +283,7 @@ gestoCBAoboe = {
   \relative c'' {
     R1*9
     \setTextCresc
+    %% variação de rot3 #s(5 3 4 1 2 0)
     r4 cis16\ppp\< dis c? g e fis r8 r4
     cis'16 dis c? g e fis cis'16 dis c? g e fis r4
     r2 cis'16\f dis c? g e fis cis'16 dis

@@ -284,6 +284,7 @@ gestoCBAfagote = {
   \clef bass
   \relative c' {
     R1*6
+    %% rot3 retr. #s(5 3 4 1 2 0)
     r2 e16\ppp cis g' e, bes' g r8
     r4 e'16 cis g' e, bes' g r8 r4
     r4 e'16 cis g' e, bes' g e'16 cis g' e, bes' g

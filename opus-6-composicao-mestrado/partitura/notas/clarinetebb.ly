@@ -268,6 +268,7 @@ gestoCACclarinetebb = {
 gestoCBAclarinetebb = {
   \relative c' {
     R1*3
+    %% rot2 #s(5 3 4 1 2 0)
     r2 e16\ppp g, bes e, g' cis, r8
     e16 g, bes e, g' cis, r8 r2
     e16 g, bes e, g' cis, e16 g, bes e, g' cis, r4

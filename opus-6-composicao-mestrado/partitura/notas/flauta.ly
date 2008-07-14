@@ -263,6 +263,7 @@ gestoCACflauta = {
 
 gestoCBAflauta = {
   \relative c'' {
+    %% #s(5 3 4 1 2 0)
     g16\ppp e fis cis dis c? r8 r4 g'16 e fis cis
     dis c? r4 g'16 e fis cis dis c? g'16 e fis cis
     dis c? r8 r4 g'16 e fis cis dis c? r8
