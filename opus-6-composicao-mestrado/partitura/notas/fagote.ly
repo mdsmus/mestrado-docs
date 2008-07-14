@@ -228,7 +228,7 @@ gestoCAAfagote = {
   \clef bass
   \relative c {
     %% idéia de INT_1(5 3 4 1 2 0)
-    a4\f g8->\st a4. g8->\st a~
+    a4\p g8->\st a4. g8->\st a~
     a4 g8->\st a4. cis8->\st dis,->\st
     a'4 g8->\st a4. g8->\st a~
     a4 g8->\st a4. r4
