@@ -259,7 +259,25 @@ gestoCABfagote = {
 
 gestoCACfagote = {
   \clef bass
-  R1*15
+  \relative c {
+    %% repetição de CAA
+    a4 g8->\st a4. g8->\st a~
+    a4 g8->\st a4. cis8->\st dis,->\st
+    a'4 g8->\st a4. g8->\st a~
+    a4 g8->\st a4. r4
+    a4 g8->\st a4. g8->\st a~
+    a4 g8->\st a4. cis8->\st dis,->\st
+    \setTextCresc
+    a'4\< g8->\st a4. g8->\st a~
+    a4 g8->\st a4. r4
+    a4 g8->\st a4. g8->\st a~
+    a4 g8->\st a4. cis8->\st dis,->\st
+    a'4 g8->\st a4. g8->\st a~
+    a4 g8->\st a4. r4
+    a4 g8->\st a4. g8->\st a~
+    a4 g8->\st a4. cis8->\st dis,->\st
+    a'2\ff r
+  }
 }
 
 gestoCADfagote = {

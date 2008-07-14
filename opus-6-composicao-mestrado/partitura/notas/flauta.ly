@@ -233,11 +233,32 @@ gestoCAAflauta = {
 }
 
 gestoCABflauta = {
-  R1*9
+  \relative c'' {
+    R1*8
+    r4 r8. c16\p( ees des fis e? g4~
+  }
 }
 
 gestoCACflauta = {
-  R1*15
+  \relative c''' {
+    g4) e8->\st fis4. cis8->\st e~
+    e4 g8->\st e->\st r2
+    g4 e8->\st fis4. cis8->\st e~
+    e4 e8->\st cis->\st r2
+    %% repetição
+    g'4 e8->\st fis4. cis8->\st e~
+    e4 g8->\st e->\st r2
+    \setTextCresc
+    g4\< e8->\st fis4. cis8->\st e~
+    e4 e8->\st cis->\st r8. c'16( ees des fis e?
+    g4) e8->\st fis4. cis8->\st e~
+    e4 g8->\st e->\st r8. c16( ees des fis e?
+    g4) e8->\st fis4. cis8->\st e~
+    e4 e8->\st cis->\st r8. c16( ees des fis e?
+    g4) e8->\st fis4 r16 c16( ees des fis e?
+    g4) e8->\st fis4 r16 c16( ees des fis e?
+    cis2)\ff r
+  }
 }
 
 gestoCADflauta = {

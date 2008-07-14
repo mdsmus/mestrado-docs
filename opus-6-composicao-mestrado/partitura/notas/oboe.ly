@@ -259,7 +259,24 @@ gestoCABoboe = {
 }
 
 gestoCACoboe = {
-  R1*15
+  \relative c'' {
+    g2( e
+    fis1)
+    cis2( dis
+    c?2) \times 2/3 {r4 cis4( e}
+    g2 e
+    fis1)
+    \setTextCresc
+    cis2\<( dis
+    c?2) \times 2/3 {r4 cis4( e}
+    g4 e fis2)
+    cis4( dis c?2)
+    g'4 e fis2)
+    cis4( dis c?2)
+    g'8 e fis4 cis8 dis c?4)
+    e2( fis
+    g)\ff r
+  }
 }
 
 gestoCADoboe = {

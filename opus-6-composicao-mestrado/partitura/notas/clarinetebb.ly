@@ -237,11 +237,32 @@ gestoCAAclarinetebb = {
 }
 
 gestoCABclarinetebb = {
-  R1*9
+  \relative c'' {
+    R1*8
+    r4 r8. g16\p( bes a des c? ees4~
+  }
 }
 
 gestoCACclarinetebb = {
-  R1*15
+  \relative c'' {
+    ees4) c8->\st bes4. a8->\st c~
+    c4 ees8->\st c->\st r2
+    ees4 c8->\st bes4. a8->\st c~
+    c4 cis8->\st a->\st r2
+    %% repetição
+    ees'4 c8->\st bes4. a8->\st c~
+    c4 ees8->\st c->\st r2
+    \setTextCresc
+    ees4\< c8->\st bes4. a8->\st c~
+    c4 cis8->\st a->\st r8. g16( bes a des c?
+    ees4) c8->\st bes4. a8->\st c~
+    c4 ees8->\st c->\st r8. g16( bes a des c?
+    ees4) c8->\st bes4. a8->\st c~
+    c4 cis8->\st a->\st r8. g16( bes a des c?
+    ees4) c8->\st bes4 r16 g16( bes a des c?
+    ees4) c8->\st bes4 r16 g16( bes a des c?
+    ees2)\ff r
+  }
 }
 
 gestoCADclarinetebb = {

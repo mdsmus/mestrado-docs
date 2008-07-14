@@ -191,7 +191,21 @@ gestoCABtrompa = {
 }
 
 gestoCACtrompa = {
-  R1*15
+  \relative c' {
+    R1*3
+    r2 \times 2/3 {a2-+\p( bes4}
+    a1~-+
+    a1)-+
+    R1
+    r2 \times 2/3 {a2-+( bes4}
+    a1)-+
+    R1
+    a1~-+\mp
+    a1-+
+    R1
+    c2-+\mf\<( bes-+
+    a-+)\ff r
+  }
 }
 
 gestoCADtrompa = {
