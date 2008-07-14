@@ -120,3 +120,7 @@ tempoMark = #(define-music-function (parser location markp) (string?)
 
 piumosso = \tempoMark "Poco piu mosso"
 menomosso = \tempoMark "Meno mosso"
+
+%% simplificação
+
+st = \staccatissimo
