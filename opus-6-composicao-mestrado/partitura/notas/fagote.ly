@@ -297,12 +297,27 @@ gestoCBAfagote = {
 
 gestoCBBfagote = {
   \clef bass
-  R1*10
+  \relative c' {
+    r2. r8 e16 cis
+    g' e, bes' g r2.
+    r2. e'16 cis g' e,
+    bes' g r8 r2 e'16 cis g' e,
+    bes' g r8 r2.
+    e'16 cis g' e, bes' g r8 r2
+    \setTextCresc
+    e'16\< cis g' e, bes' g r8 r2
+    e'16 cis g' e, bes' g r8 r2
+    e'16 cis g' e, bes' g r8 r2
+    e'16 cis g' e, bes' g r8 r2
+  }
 }
 
 gestoCBCfagote = {
   \clef bass
-  R1*16
+  \relative c' {
+    e8\ff r r2.
+    R1*15
+  }
 }
 
 gestoCBDfagote = {

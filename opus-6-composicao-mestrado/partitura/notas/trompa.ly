@@ -213,11 +213,21 @@ gestoCBAtrompa = {
 }
 
 gestoCBBtrompa = {
-  R1*10
+  \relative c'' {
+    R1*6
+    \setTextCresc
+    g1~\ppp\<
+    g~
+    g~
+    g~
+  }
 }
 
 gestoCBCtrompa = {
-  R1*16
+  \relative c'' {
+    g8\sfz r r2.
+    R1*15
+  }
 }
 
 gestoCBDtrompa = {

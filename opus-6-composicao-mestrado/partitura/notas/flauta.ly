@@ -283,11 +283,28 @@ gestoCBAflauta = {
 }
 
 gestoCBBflauta = {
-  R1*10
+  \relative c''' {
+    %% #s(5 3 4 1 2 0)
+    %% continua seção anterior
+    g16 e fis cis dis c? r8 r2
+    r4. g'16 e fis cis dis c? r4
+    R1
+    g'16 e fis cis dis c? r8 r2
+    r2 g'16 e fis cis dis c? r8
+    r2 g'16 e fis cis dis c? r8
+    \setTextCresc
+    r2 g'16\< e fis cis dis c? r8
+    r2 g'16 e fis cis dis c? r8
+    r2 g'16 e fis cis dis c? r8
+    r2 g'16 e fis cis dis c? r8
+  }
 }
 
 gestoCBCflauta = {
-  R1*16
+  \relative c'' {
+    g8\ff r r2.
+    R1*15
+  }
 }
 
 gestoCBDflauta = {

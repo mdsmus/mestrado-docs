@@ -283,11 +283,25 @@ gestoCBAclarinetebb = {
 }
 
 gestoCBBclarinetebb = {
-  R1*10
+  \relative c' {
+    R1
+    r8 e16 g, bes e, g' cis, r2
+    r4 e16 g, bes e, g' cis, r8 r4
+    r4 e16 g, bes e, g' cis, r8 r4
+    r4 e16 g, bes e, g' cis, r8 r4
+    r4 e16 g, bes e, g' cis, r8 r4
+    r4 e16 g, bes e, g' cis, r8 r4
+    r4 e16 g, bes e, g' cis, r8 r4
+    r4 e16 g, bes e, g' cis, r8 r4
+    r4 e16 g, bes e, g' cis, r8 r4
+  }
 }
 
 gestoCBCclarinetebb = {
-  R1*16
+  \relative c' {
+    e8\ff r r2.
+    R1*15
+  }
 }
 
 gestoCBDclarinetebb = {

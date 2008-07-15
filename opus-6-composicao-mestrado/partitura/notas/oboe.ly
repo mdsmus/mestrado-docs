@@ -293,11 +293,26 @@ gestoCBAoboe = {
 }
 
 gestoCBBoboe = {
-  R1*10
+  \relative c' {
+    r2 e16 fis cis' dis c? g e fis
+    R1
+    cis'16 dis c? g e fis r8 r2
+    r2 cis'16 dis c? g e fis r8
+    r2. cis'16 dis c? g
+    e fis r8 r2 cis'16 dis c? g
+    \setTextCresc
+    e fis r8 r2 cis'16\< dis c? g
+    e fis r8 r2 cis'16 dis c? g
+    e fis r8 r2 cis'16 dis c? g
+    e fis r8 r2 cis'16 dis c? g
+  }
 }
 
 gestoCBCoboe = {
-  R1*16
+  \relative c' {
+    e8\ff r r2.
+    R1*15
+  }
 }
 
 gestoCBDoboe = {
