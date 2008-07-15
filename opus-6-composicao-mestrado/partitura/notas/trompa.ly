@@ -244,8 +244,9 @@ gestoCBCtrompa = {
 
 gestoCBDtrompa = {
   \relative c'' {
-    bes1\f
-    R1*5
+    bes1~\f
+    bes2 r
+    R1*4
     r4 g,2.~\mp
     g4 e fis2~
     fis2. fis4~
