@@ -85,9 +85,9 @@ gestoABBflauta = {
 gestoABCflauta = {
   \relative c'''' {
     g2.~\startTrillSpan g2\stopTrillSpan
-    r4 g,1~\startTrillSpan
+    r4 g1~\startTrillSpan
     g2\stopTrillSpan r2.
-    r2. g2~\startTrillSpan
+    r2. g,2~\startTrillSpan
     g2.\stopTrillSpan r2
     %% FIXME: inserir fermata
     R1*5/4*3
