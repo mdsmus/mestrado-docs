@@ -264,25 +264,21 @@ gestoCACflauta = {
 gestoCBAflauta = {
   \relative c'' {
     %% #s(5 3 4 1 2 0)
-    g16\ppp e fis cis dis c? r8 r4 g'16 e fis cis
-    dis c? r4 g'16 e fis cis dis c? g'16 e fis cis
-    dis c? r8 r4 g'16 e fis cis dis c? r8
-    r4 g'16 e fis cis dis c? g'16 e fis cis dis c?
+    g16\ppp e fis cis dis c? r8 r2
+    g'16 e fis r r4 r16 cis r8 dis16 c? r8
+    r2 g'16 e fis cis dis r8.
+    r8. c?16 g'16 e fis cis dis c? r8 r4
+    r2 g'16 e fis cis r4
+    dis16[ c? r g'16] r4 e16 fis cis dis c? r8.
+    r2 g'16 e fis r cis[ r dis c?]
+    r2. g'16 r8.
+    e16 fis cis r16 r2.
+    r4 dis16 c? g' e fis r8. r4
+    r2. g16 e fis r
+    cis dis c? r r2.
+    R1*2
     r4 g'16 e fis cis dis c? r8 r4
-    r2 g'16 e fis cis dis c? r8
-    r4 g'16 e fis cis dis c? r8 r4
-    r2 g'16 e fis cis dis c? g'16 e
-    fis cis dis c? r2 g''16 e fis cis
-    \setTextCresc
-    dis c? r8 r4 g'16\< e fis cis dis c? r8
-    r2 g''16 e fis cis dis c? g'16 e
-    fis cis dis c? r2 g'16\f e fis cis
-    \setTextDecresc
-    dis c? r8 r4 g'16\> e fis cis dis c? r8
-    r2 g'16 e fis cis dis c? g'16 e
-    fis cis dis c? r2 g16 e fis cis
-    dis c? r8 r4 g'16\ppp e fis cis dis c? r8
-   
+    R1
   }
 }
 
