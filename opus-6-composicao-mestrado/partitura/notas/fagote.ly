@@ -63,9 +63,8 @@ gestoABAfagote = {
     R1*5/4*2
     r2. e2~\p
     e1 r4
-    R1*5/4
-    r1 e4~
-    e2. r2
+    R1*5/4*2
+    r4 bes1
     r2 e2.
   }
 }
@@ -85,9 +84,10 @@ gestoABCfagote = {
   \relative c' {
     e4 r2 e,~
     e2 r2.
-    r2 e2.
-    R1*5/4*2
-    r4 e1
+    R1*5/4
+    r4 bes'1
+    R1*5/4
+    r4 e,1
     R1*5/4
     bes,2. r2\fermata
   }

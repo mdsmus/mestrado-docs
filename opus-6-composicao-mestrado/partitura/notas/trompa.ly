@@ -53,8 +53,8 @@ gestoABAtrompa = {
     R1*5/4*3
     r4 bes1~\p
     bes1 r4
-    R1*5/4
-    r4 bes1
+    r1 e4~
+    e2. r2
     r1 bes4~
   }
 }
@@ -72,10 +72,10 @@ gestoABCtrompa = {
   \relative c' {
     bes2 r2.
     bes2. r2
+    r2 e,2.
     R1*5/4
-    r4 bes1
     R1*5/4*3
-    bes2. r2\fermata
+    bes'2. r2\fermata
   }
 }
 
