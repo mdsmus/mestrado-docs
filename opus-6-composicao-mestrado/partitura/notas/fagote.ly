@@ -308,15 +308,32 @@ gestoCBBfagote = {
     e'16\< cis g' e, bes' g r8 r2
     e'16 cis g' e, bes' g r8 r2
     e'16 cis g' e, bes' g r8 r2
-    e'16 cis g' e, bes' g r8 r2
+    e'16 cis g' e, bes' g r8 e2
   }
 }
 
 gestoCBCfagote = {
   \clef bass
   \relative c' {
-    e8\ff r r2.
-    R1*15
+    e16\ff cis g' e, bes' g8.~\fp g2
+    c,,16\ppp( ees des fis e g e g fis bes a c) r4
+    c,16( ees des fis e g e g fis bes a c ees des fis e
+    g4) r c,,16( ees des fis e g e g
+    fis bes a c) r2.
+    c,16( ees des fis e g e g fis bes a c) r4
+    c,16( ees des fis e g e g fis bes a c ees des fis e
+    g4) r2.
+    c,16( ees des fis e g e g fis bes a c) r4
+    r2 c,16( ees des fis e g e g
+    fis bes a c ees des fis e g4) r
+    \clef tenor
+    r4 c,16( ees des fis e g e g fis bes a c)
+    \clef bass
+    r2 c,,16( ees des fis e g e g
+    fis bes a c ees des fis e g4) r
+    \clef tenor
+    c,16( ees des fis e g e g fis bes a c) r4
+    R1
   }
 }
 

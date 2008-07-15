@@ -310,8 +310,24 @@ gestoCBBoboe = {
 
 gestoCBCoboe = {
   \relative c' {
-    e8\ff r r2.
-    R1*15
+    e16 fis8.~\fp fis2\f cis'16 dis c? g
+    e fis8.~\p fis2 cis'16\f dis c? g
+    e fis8.~\p fis2 cis'16\mf dis c? g
+    %% toca também material do clarinte transposto oitava acima
+    e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c? g
+    e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c? g
+    e fis r8 e'16\ppp g, bes e, g' cis, r8 r4
+    R1*1
+    r2 c,16( ees des fis e g e g
+    fis bes a c) r2.
+    c,16( ees des fis e g e g fis bes a c ees des fis e
+    g4) r2 c,,16( ees des fis
+    e g e g fis bes a c) r2
+    c,16( ees des fis e g e g fis bes a c ees des fis e
+    g4) r2 c,16( ees des fis
+    e g e g fis bes a c) r4 c,16( ees des fis
+    e g e g fis bes a c ees des fis e
+    g4)
   }
 }
 

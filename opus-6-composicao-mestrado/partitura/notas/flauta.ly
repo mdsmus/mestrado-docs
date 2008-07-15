@@ -301,14 +301,26 @@ gestoCBBflauta = {
 }
 
 gestoCBCflauta = {
-  \relative c'''' {
-    g8\ff r r2.
-    R1*15
+  \relative c''' {
+    g2\ff g'16 e fis cis dis c? r8
+    %% toca também material do fagote transposto oitava acima
+    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c? r8
+    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c? r8
+    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c? r8
+    e,16 cis g' e, bes' g r8 g'16 e fis cis dis c? r8
+    e16 cis g' e, bes' g r8 g16\ppp e fis cis dis c? r8
+    R1*7
+    r2 e'16\mf( g fis bes a c a c
+    bes e cis dis) r2.
+    e,16( g fis bes a c a c bes e cis dis fis e bes' g
   }
 }
 
 gestoCBDflauta = {
-  R1*10
+  \relative c'''' {
+    a4) r2.
+    R1*9
+  }
 }
 
 gestoCBEflauta = {

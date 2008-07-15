@@ -293,14 +293,29 @@ gestoCBBclarinetebb = {
     r4 e16 g, bes e, g' cis, r8 r4
     r4 e16 g, bes e, g' cis, r8 r4
     r4 e16 g, bes e, g' cis, r8 r4
-    r4 e16 g, bes e, g' cis, r8 r4
+    r4 e16 g, bes e, g' cis, r8 e4~
   }
 }
 
 gestoCBCclarinetebb = {
   \relative c' {
-    e8\ff r r2.
-    R1*15
+    e4\ff e16 g, bes e, g' cis,8.~\fp cis4~
+    cis4 e16\f g, bes e, g' cis,8.~\p cis4~
+    cis4 e16\mf g, bes e, g' cis,8.~\p\> cis4
+    \setTextCresc
+    e,16\ppp( g fis bes a c a c bes e cis dis) r4
+    e,16( g fis bes a c a c bes e cis dis fis e bes' g
+    a4) r4 e,16( g fis bes a c a c
+    bes e cis dis) r2 e,16( g fis bes
+    a c a c bes e cis dis fis e bes' g a4)
+    r2 e,16( g fis bes a c a c
+    bes e cis dis) r2.
+    r4 e,16( g fis bes a c a c bes e cis dis
+    fis e bes' g a4) r4 e16( g fis bes
+    a c a c bes e cis dis) r2
+    e,16( g fis bes a c a c bes e cis dis fis e bes' g
+    a4) r4 e16( g fis bes a c a c
+    bes e cis dis) r2.
   }
 }
 

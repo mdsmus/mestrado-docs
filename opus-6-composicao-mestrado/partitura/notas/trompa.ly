@@ -225,8 +225,11 @@ gestoCBBtrompa = {
 
 gestoCBCtrompa = {
   \relative c'' {
-    g8\sfz r r2.
-    R1*15
+    \setTextDecresc
+    g8~\sfz\> g2..~
+    g1~
+    g8\ppp r8 r2.
+    R1*13
   }
 }
 
