@@ -66,9 +66,9 @@ gestoABAoboe = {
     r2 cis2.~
     cis2 r2.
     R1*5/4
-    r4 cis1~
-    cis4 r1
-    r4 cis1
+    r4 cis1~\startTrillSpan
+    cis4\stopTrillSpan r1
+    r4 cis1\trill
   }
 }
 
@@ -76,8 +76,8 @@ gestoABBoboe = {
   \relative c''' {
     r2 cis2.~
     cis2. cis2~->
-    cis2. cis2~->
-    cis4 cis1->
+    cis2. cis2~->\startTrillSpan
+    cis4\stopTrillSpan cis1->\trill
   }
 }
 

@@ -71,7 +71,7 @@ gestoABAclarinetebb = {
   \relative c''' {
     r1 g4~\p
     g2. r2
-    r4 g1
+    r4 g1\trill
     bes,2.~ bes2
     R1*5/4
     g'2.~ g2

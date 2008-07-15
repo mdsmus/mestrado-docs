@@ -72,8 +72,8 @@ gestoABAfagote = {
 gestoABBfagote = {
   \clef bass
   \relative c' {
-    r2. e2~
-    e1 e4~->
+    r2. e2~\startTrillSpan
+    e1\stopTrillSpan e4~->
     e2.~ e8 e~-> e4~
     e4. e8~-> e2.~
   }
@@ -82,8 +82,8 @@ gestoABBfagote = {
 gestoABCfagote = {
   \clef bass
   \relative c' {
-    e4 r2 e,~
-    e2 r2.
+    e4 r2 e,~\startTrillSpan
+    e2\stopTrillSpan r2.
     R1*5/4
     r4 bes'1
     R1*5/4
