@@ -332,7 +332,17 @@ gestoCBCoboe = {
 }
 
 gestoCBDoboe = {
-  R1*10
+  \relative c' {
+    R1*3
+    r2. dis8-.->\p r
+    dis8-.->[ r r dis8-.->] r4 dis8-.->[ r
+    r dis-.->] r4 dis8-.-> r r4
+    dis8-.->[ r dis-.->] r r dis-.-> r4
+    dis8-.->[ r r dis-.->] r4 dis8-.-> r
+    r4 dis8-.-> r dis-.->[ r r dis-.->]
+    r4 dis8-.-> r r dis-.-> r4
+%     dis-. dis-. dis-. dis-. dis-. dis-. dis-. dis-.
+  }
 }
 
 gestoCBEoboe = {

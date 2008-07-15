@@ -320,7 +320,17 @@ gestoCBCclarinetebb = {
 }
 
 gestoCBDclarinetebb = {
-  R1*10
+  \relative c' {
+    R1*3
+    r2. cis8-.->\p r
+    cis8-.->[ r r cis8-.->] r4 cis8-.->[ r
+    r cis-.->] r4 cis8-.-> r r4
+    cis8-.->[ r cis-.->] r r cis-.-> r4
+    cis8-.->[ r r cis-.->] r4 cis8-.-> r
+    r4 cis8-.-> r cis-.->[ r r cis-.->]
+    r4 cis8-.-> r r cis-.-> r4
+%     cis-. cis-. cis-. cis-. cis-. cis-. cis-. cis-.
+  }
 }
 
 gestoCBEclarinetebb = {

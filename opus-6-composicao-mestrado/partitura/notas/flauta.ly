@@ -318,7 +318,7 @@ gestoCBCflauta = {
 
 gestoCBDflauta = {
   \relative c'''' {
-    a4) r2.
+    a4)\f r2.
     R1*9
   }
 }
