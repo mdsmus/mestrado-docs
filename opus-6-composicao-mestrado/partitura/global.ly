@@ -199,7 +199,6 @@ gestoCBAglobal = {
   \tempo 4=112
   \time 4/4
   s1*16
-  \bar "||"
 }
 
 gestoCBBglobal = {
@@ -208,7 +207,6 @@ gestoCBBglobal = {
   \tempo 4=112
   \time 4/4
   s1*10
-  \bar "||"
 }
 
 gestoCBCglobal = {
@@ -217,7 +215,6 @@ gestoCBCglobal = {
   \tempo 4=112
   \time 4/4
   s1*16
-  \bar "||"
 }
 
 gestoCBDglobal = {
@@ -226,7 +223,6 @@ gestoCBDglobal = {
   \tempo 4=112
   \time 4/4
   s1*10
-  \bar "||"
 }
 
 gestoCBEglobal = {
