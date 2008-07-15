@@ -355,5 +355,20 @@ gestoCBDfagote = {
 
 gestoCBEfagote = {
   \clef bass
-  R1*16
+  \relative c {
+    a4 g8->\st a4. g8->\st a~
+    a4 g8->\st a4. r4
+    \repeat unfold 3 {
+      a4 g8->\st a4. g8->\st a~
+      a4 g8->\st a4. cis8->\st dis,->\st
+      a'4 g8->\st a4. g8->\st a~
+      a4 g8->\st a4. r4
+    }
+    a4 g8->\st a4. g8->\st a~
+    a4 g8->\st a4. cis8->\st dis,->\st
+    a'4 g8->\st a4. g8->\st a~
+    g4( e4 fis cis8 dis
+    c?1~
+    c)
+  }
 }

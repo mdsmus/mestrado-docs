@@ -322,17 +322,39 @@ gestoCBCclarinetebb = {
 gestoCBDclarinetebb = {
   \relative c' {
     R1*3
-    r2. cis8-.->\p r
-    cis8-.->[ r r cis8-.->] r4 cis8-.->[ r
-    r cis-.->] r4 cis8-.-> r r4
-    cis8-.->[ r cis-.->] r r cis-.-> r4
-    cis8-.->[ r r cis-.->] r4 cis8-.-> r
-    r4 cis8-.-> r cis-.->[ r r cis-.->]
-    r4 cis8-.-> r r cis-.-> r4
-%     cis-. cis-. cis-. cis-. cis-. cis-. cis-. cis-.
+    r2. dis8-.->\p r
+    dis8-.->[ r r dis8-.->] r4 dis8-.->[ r
+    r dis-.->] r4 dis8-.-> r r4
+    dis8-.->[ r dis-.->] r r dis-.-> r4
+    dis8-.->[ r r dis-.->] r4 dis8-.-> r
+    r4 dis8-.-> r dis-.->[ r r dis-.->]
+    r4 dis8-.-> r r dis-.-> r4
   }
 }
 
 gestoCBEclarinetebb = {
-  R1*16
+  \relative c' {
+    dis8-.-> r8 r4 dis8-.->[ r dis8-.->] r
+    r dis8-.-> r r dis8-.->[ r r dis8-.->]
+    r4 dis8-.-> r r4 dis8-.-> r
+    %% repete padrão
+    dis8-.->[ r r dis8-.->] r4 dis8-.->[ r
+    r dis-.->] r4 dis8-.-> r r4
+    dis8-.->[ r dis-.->] r r dis-.-> r4
+    dis8-.->[ r r dis-.->] r4 dis8-.-> r
+    r4 dis8-.-> r dis-.->[ r r dis-.->]
+    r4 dis8-.-> r r dis-.-> r4
+    dis8-.-> r8 r4 dis8-.->[ r dis8-.->] r
+    r dis8-.-> r r dis8-.->[ r r dis8-.->]
+    r4 dis8-.-> r r4 dis8-.-> r
+    %% repete padrão
+    dis8-.->[ r r dis8-.->] r4 dis8-.->[ r
+    r dis-.->] r4 dis8-.-> r r4
+    dis8-.->[ r dis-.->] r r dis-.-> r4
+    dis8-.->[ r r dis-.->] r4 dis8-.-> r
+    r4 dis8-.-> r dis-.->[ r r dis-.->]
+    g4( e4 fis cis8 dis
+    c?1~
+    c)
+  }
 }

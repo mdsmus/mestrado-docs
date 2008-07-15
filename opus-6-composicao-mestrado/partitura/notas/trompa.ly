@@ -257,6 +257,24 @@ gestoCBDtrompa = {
 gestoCBEtrompa = {
   \relative c {
     e1
-    R1*15
+    r4 g2.~
+    g4 e fis2~
+    fis2. fis4~
+    fis2. cis4
+    e1
+    r4 g2.~
+    g4 e fis2~
+    fis2. fis4~
+    fis2. cis4
+    e1
+    g2 e
+    fis cis4 dis
+    c?1
+    g'2 e
+    fis cis4 dis
+    c?1
+    g'4 e4 fis cis8 dis
+    c?1~
+    c
   }
 }
