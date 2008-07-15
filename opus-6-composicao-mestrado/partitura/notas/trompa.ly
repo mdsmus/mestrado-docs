@@ -229,12 +229,24 @@ gestoCBCtrompa = {
     g8~\sfz\> g2..~
     g1~
     g8\ppp r8 r2.
-    R1*13
+    R1*4
+    g,1~\p
+    g2 bes2~(
+    bes4 a2.~
+    a2) r
+    cis1~
+    cis2 bis2(
+    dis1)
+    fis2 e
+    a g
   }
 }
 
 gestoCBDtrompa = {
-  R1*10
+  \relative c'' {
+    bes1
+    R1*9
+  }
 }
 
 gestoCBEtrompa = {
