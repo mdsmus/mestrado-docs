@@ -22,3 +22,6 @@ figs-out
 *.ist
 *.gl*
 *.wav
+*.old
+*.texi
+*.eps
