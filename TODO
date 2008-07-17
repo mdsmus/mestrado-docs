@@ -1,20 +1,10 @@
--*-outline-*-
-
-* procurar "compositional determinant" no google
-* revisar teoria dos contornos
-* pensar em aspectos da composição
-** forma
-** contornos
-
 * para 16/11
-** fazer testes de unidades
 ** implementar adams
 *** problemas a resolver:
 *** adams - algoritmo para resolver reducao de contornos
 
 * para quando der
 ** testar idéia de passos
-*** usar lista de alturas ao invés de lista de pontos contorno A1 (1 0), A2 (1 2 0)
 *** usar o número 12 para mapear o contorno
 
 * para fazer
@@ -25,14 +15,9 @@
 
 * férias
 
-** refatorar o codigo
-*** terminar os testes de unidade
-*** dividir as funcoes por nivel: funcoes para pontos, para contornos, para listas
-*** documentar as funcoes de maneira formal
-*** implementar funcoes usando orientacao a objeto (metodos) - ver objetos.lisp
-
-** implementar as funções
-*** começar pelo mais simples e documentar o que ficar em segundo plano
-
 * pedro
 ** criar lily->contorno e contorno->lily
+
+%%% Local Variables: 
+%%% mode: org
+%%% End:
