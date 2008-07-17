@@ -127,10 +127,10 @@ gestoBAAclarinetebb = {
 gestoBABclarinetebb = {
   \relative c'' {
     \repeat unfold 4 {
-      cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-      cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-      cis4.-> cis-> cis4~->
-      cis8 cis4.-> cis2-> cis4->
+      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
+      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
+      des4.-> des-> des4~->
+      des8 des4.-> des2-> des4->
     }
   }
 }
@@ -322,37 +322,37 @@ gestoCBCclarinetebb = {
 gestoCBDclarinetebb = {
   \relative c' {
     R1*3
-    r2. dis8-.->\p r
-    dis8-.->[ r r dis8-.->] r4 dis8-.->[ r
-    r dis-.->] r4 dis8-.-> r r4
-    dis8-.->[ r dis-.->] r r dis-.-> r4
-    dis8-.->[ r r dis-.->] r4 dis8-.-> r
-    r4 dis8-.-> r dis-.->[ r r dis-.->]
-    r4 dis8-.-> r r dis-.-> r4
+    r2. ees8-.->\p r
+    ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
+    r ees-.->] r4 ees8-.-> r r4
+    ees8-.->[ r ees-.->] r r ees-.-> r4
+    ees8-.->[ r r ees-.->] r4 ees8-.-> r
+    r4 ees8-.-> r ees-.->[ r r ees-.->]
+    r4 ees8-.-> r r ees-.-> r4
   }
 }
 
 gestoCBEclarinetebb = {
   \relative c' {
-    dis8-.-> r8 r4 dis8-.->[ r dis8-.->] r
-    r dis8-.-> r r dis8-.->[ r r dis8-.->]
-    r4 dis8-.-> r r4 dis8-.-> r
+    ees8-.-> r8 r4 ees8-.->[ r ees8-.->] r
+    r ees8-.-> r r ees8-.->[ r r ees8-.->]
+    r4 ees8-.-> r r4 ees8-.-> r
     %% repete padrão
-    dis8-.->[ r r dis8-.->] r4 dis8-.->[ r
-    r dis-.->] r4 dis8-.-> r r4
-    dis8-.->[ r dis-.->] r r dis-.-> r4
-    dis8-.->[ r r dis-.->] r4 dis8-.-> r
-    r4 dis8-.-> r dis-.->[ r r dis-.->]
-    r4 dis8-.-> r r dis-.-> r4
-    dis8-.-> r8 r4 dis8-.->[ r dis8-.->] r
-    r dis8-.-> r r dis8-.->[ r r dis8-.->]
-    r4 dis8-.-> r r4 dis8-.-> r
+    ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
+    r ees-.->] r4 ees8-.-> r r4
+    ees8-.->[ r ees-.->] r r ees-.-> r4
+    ees8-.->[ r r ees-.->] r4 ees8-.-> r
+    r4 ees8-.-> r ees-.->[ r r ees-.->]
+    r4 ees8-.-> r r ees-.-> r4
+    ees8-.-> r8 r4 ees8-.->[ r ees8-.->] r
+    r ees8-.-> r r ees8-.->[ r r ees8-.->]
+    r4 ees8-.-> r r4 ees8-.-> r
     %% repete padrão
-    dis8-.->[ r r dis8-.->] r4 dis8-.->[ r
-    r dis-.->] r4 dis8-.-> r r4
-    dis8-.->[ r dis-.->] r r dis-.-> r4
-    dis8-.->[ r r dis-.->] r4 dis8-.-> r
-    r4 dis8-.-> r dis-.->[ r r dis-.->]
+    ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
+    r ees-.->] r4 ees8-.-> r r4
+    ees8-.->[ r ees-.->] r r ees-.-> r4
+    ees8-.->[ r r ees-.->] r4 ees8-.-> r
+    r4 ees8-.-> r ees-.->[ r r ees-.->]
     g4( e4 fis cis8 dis
     c?1~
     c)
