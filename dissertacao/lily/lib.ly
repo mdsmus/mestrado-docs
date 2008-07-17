@@ -4,3 +4,12 @@ bracketUp = {
 bracketRevert = {
       \revert Staff.HorizontalBracket #'direction
 }
+
+%% abre colchete com texto
+colcheteO = #(define-music-function (parser location texto) (string?)
+   #{
+       \startGroup^\markup{\italic{ #$texto }}
+   #})
+
+%% fecha colchete
+colcheteC = \stopGroup
