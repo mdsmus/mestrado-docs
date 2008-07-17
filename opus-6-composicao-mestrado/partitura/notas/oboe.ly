@@ -253,14 +253,14 @@ gestoCABoboe = {
     fis4( e a g
     %% expansão de #s(5 3 4 1 2 0)
     bes2. a4~
-    a2) bes,16( ees e,? a bes,4~
-    bes2.) r4
+    a2) bes,16( ees) e,?( a bes,4~\<
+    bes2.) r4\!
   }
 }
 
 gestoCACoboe = {
   \relative c'' {
-    g2( e
+    g2\p( e
     fis1)
     cis2( dis
     c?2) \times 2/3 {r4 cis4( e}
