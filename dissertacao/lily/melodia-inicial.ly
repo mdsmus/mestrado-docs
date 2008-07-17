@@ -13,10 +13,10 @@
         %% procedimentos utilizados: expansão de intervalos e transposição
         \bracketUp
         \override TextScript #'extra-offset = #'( 0 . 2 )
-        g1\colcheteO #"segmento 1" e4(
-        fis2.~ fis2)\colcheteC
-        fis1\colcheteO #"segmento 2" cis4(
-        e1)\colcheteC r4
+        g1\startGroup^\markup{\italic{segmento 1}} e4(
+        fis2.~ fis2)\stopGroup
+        fis1\startGroup^\markup{\italic{segmento 2}} cis4(
+        e1)\stopGroup r4
       }
     }
   \layout {
