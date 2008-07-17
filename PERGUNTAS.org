@@ -2,7 +2,12 @@
 * porque quinteto de metais?
 * poderia ter feito a musica sem contornos?
 * porque contornos?
+** contornos são estruturas situadas em um nível mais alto de abstração do que altura/duração. está mais próximo do compositor
+** relações de contornos melódicos são mais facilmente percebidos por ouvintes do que relações de altura
+** contornos podem ser associados a diversos parâmetros musicais como proporção, dinâmica, andamento, densidade, textura, etc.
+** contornos permitem operações e combinações de operações
 * pensa em motivos?
+** sim, um motivo principal (g e fis cis dis c), e suas derivações
 
 %%% Local Variables: 
 %%% mode: org
