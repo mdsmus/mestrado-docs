@@ -3,3 +3,7 @@
 * poderia ter feito a musica sem contornos?
 * porque contornos?
 * pensa em motivos?
+
+%%% Local Variables: 
+%%% mode: org
+%%% End:
