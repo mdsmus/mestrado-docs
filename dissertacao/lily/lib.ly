@@ -13,3 +13,9 @@ colcheteO = #(define-music-function (parser location texto) (string?)
 
 %% fecha colchete
 colcheteC = \stopGroup
+
+%% insere texto
+textoit = #(define-music-function (parser location texto) (string?)
+            #{
+            ^\markup{\italic{ #$texto }}
+            #})
