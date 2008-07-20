@@ -1,6 +1,6 @@
 \version "2.10.33"
 
-\include "lib.ly"
+\include "../config/lib.ly"
 
 \score {
   \new Staff \with {
