@@ -606,5 +606,29 @@ que uma textura polifônica é mais complexa que uma textura homofônica,
 a alternância entre estas texturas delineia um contorno de $INT_1$ (-
 + - + -), derivado do contorno principal \contpr{}.
 
+\subsection{Operações de contorno não utilizadas}
+\label{sec:oper-de-cont}
+
+Nem todas as operações das teorias de contornos foram utilizadas na
+composição. A \tr{COM-matrix}, por exemplo, é bastante utilizada para
+análise, mas não encontramos uma forma interessante de usá-la na
+composição.
+
+\begin{figure}
+  \centering
+  \begin{tabular}{r|cccccc}
+      & 5 & 3 & 4 & 1 & 2 & 0 \\
+      \hline
+    5 & 0 & - & - & - & - & - \\
+    3 & + & 0 & + & - & - & - \\
+    4 & + & - & 0 & - & - & - \\
+    1 & + & + & + & 0 & + & - \\
+    2 & + & + & + & - & 0 & - \\
+    0 & + & + & + & + & + & 0
+  \end{tabular}
+  \caption{Matriz de comparação do contorno (5 3 4 1 2 0)}
+  \label{fig:matriz-534120}
+\end{figure}
+
 \chapter{Conclusão}
 \label{cha:conclusao}
