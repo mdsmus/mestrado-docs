@@ -3,7 +3,7 @@
 \score {
   \new Staff \with {
     \remove "Time_signature_engraver" }{
-      \time 6/4
+      \time 7/4
       \relative c''' {
         \override Stem #'transparent = ##t
         g4 e fis cis dis c
