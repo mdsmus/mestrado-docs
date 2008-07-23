@@ -1,15 +1,15 @@
 \version "2.10.33"
 
 \score {
-  \new Staff \with {
-    \remove "Time_signature_engraver" }{
-      \time 7/4
-      \relative c''' {
-        \override Stem #'transparent = ##t
-        g4 e fis cis dis c
+    \new Staff \with {
+      \remove "Time_signature_engraver" }{
+        \time 4/4
+        \relative c' {
+          s8. c16 ees[ des f e]
+          g4
+        }
       }
-    }
-  \layout {
+    \layout {
     \context {
       \Staff \consists "Horizontal_bracket_engraver"
     }
