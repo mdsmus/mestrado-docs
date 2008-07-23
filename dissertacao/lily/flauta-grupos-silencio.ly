@@ -9,9 +9,10 @@
         \set Score.currentBarNumber = #177
         \bar ""
         \bracketUp
-        \override TextScript #'extra-offset = #'( -6 . 4 )
-        r2 g16 e fis cis dis r8.
-        r8. c?16 g'16 e fis cis dis c? r8 r4
+        \override TextScript #'extra-offset = #'( 0 . 1 )
+        %% corrigir o nome do motivo
+        r2 g16^\startGroup^\markup{Motivo alpha} e fis cis dis r8.
+        r8. c?16\stopGroup g'16\startGroup^\markup{Motivo alpha} e fis cis dis c?\stopGroup r8 r4
       }
     }
   \layout {
