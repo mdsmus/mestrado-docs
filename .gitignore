@@ -2,7 +2,12 @@ conversa-com-passos
 logbook-mestrado.pdf
 *.fasl
 *.ps
-*.pdf
+preenchimento-composicao/*.pdf
+opus-6-composicao-mestrado/partitura/pdf
+dissertacao/lily/*.pdf
+dissertacao/*.pdf
+dissertacao/lily/*.tex
+dissertacao/lily/*.texi
 *.midi
 *.aux
 *.bbl
@@ -11,7 +16,6 @@ logbook-mestrado.pdf
 *.bbl
 *.log
 *.midi
-*.pdf
 *.ps
 instrumentos_op
 opus-6-composicao-mestrado/script/systemfiles/gestos*
@@ -23,5 +27,4 @@ figs-out
 *.gl*
 *.wav
 *.old
-*.texi
 *.eps
