@@ -23,7 +23,6 @@
         \RhythmicStaff \consists "Horizontal_bracket_engraver"
       }
     }
-  \midi {}
 }
 \paper {
   paper-width = 6.6\cm
