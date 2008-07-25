@@ -36,4 +36,6 @@
   top-margin = -.1\cm
   left-margin = -1.2\cm
   tagline = 0
+  print-page-number = #'nil
+  indent = #0
 }
