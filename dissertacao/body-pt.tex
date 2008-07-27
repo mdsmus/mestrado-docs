@@ -38,6 +38,61 @@ tornaram necessárias à área da Análise Musical
 %% lembrete: falar que consideramos operação tudo o que parte do
 %% contorno: subconjuntos, retrógrado, int, etc
 
+Teorias que visam sistematizar o estudo de contornos dispõem de várias
+operações para mapeamento e comparação de contornos
+\cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}
+\note{período fragmentado}. A partir das idéias destas teorias é
+possível, por exemplo, reconhecer semelhanças entre as duas melodias
+de quatro notas da figura \ref{fig:ly-cseg-5968}, cujo contorno está
+representado em gráfico cartesiano na figura
+\ref{fig:cseg-5968}. Outros exemplos de melodias de contornos
+semelhantes podem ser vistos nas figuras \ref{fig:melodias-cseg} e
+\ref{fig:graficos-cseg}. A terminologia utilizada nessas figuras é
+explicada mais adiante,\note{essa vírgula não é uma vírgula, deveriam
+  ser frases separadas} no entanto uma descrição de todas as operações
+de contorno foge ao escopo deste artigo. Assim, descreveremos apenas
+as operações implementadas no \goiaba.
+
+\begin{figure}
+  \centering
+  \subfloat[melodias com cseg $P\langle5\:9\:6\:8\rangle$]{
+    \includegraphics[scale=.9]{ly-5968}
+    \label{fig:ly-cseg-5968}
+  }
+  \subfloat[melodias com cseg $Q\langle5\:7\:6\:8\rangle$]{
+    \includegraphics[scale=.9]{ly-5768}
+    \label{fig:ly-cseg-5768}
+  }
+
+  \subfloat[melodias com cseg $R\langle3\:0\:5\:1\rangle$]{
+    \includegraphics[scale=.9]{ly-3051}
+    \label{fig:ly-cseg-3051}
+  }
+  \caption{Melodias para diferentes cseg}
+  \label{fig:melodias-cseg}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \subfloat[cseg $P\langle5\:9\:6\:8\rangle$]{
+    \includegraphics{c-5968}
+    \label{fig:cseg-5968}
+  }
+  \subfloat[cseg $Q\langle5\:7\:6\:8\rangle$]{
+    \includegraphics{c-5768}
+    \label{fig:cseg-5768}
+  }
+  \subfloat[cseg $R\langle3\:0\:5\:1\rangle$]{
+    \includegraphics{c-3051}
+
+    \label{fig:cseg-3051}
+  }
+  \caption{Gráficos de cseg}
+  \label{fig:graficos-cseg}
+\end{figure}
+
+%%
+
 Teorias de contornos foram desenvolvidas primariamente como técnicas
 analíticas para composições atonais que podem não ter características
 musicais usadas para demonstrar coerência em composições tonais
