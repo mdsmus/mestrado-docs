@@ -9,6 +9,7 @@
 \newcommand{\contorno}[1]{$\langle #1 \rangle$}
 \newcommand{\contpr}{P(5 3 4 1 2 0)}
 \newcommand{\obra}{\textit{Peça ainda sem título}}
+\newcommand{\goiaba}{\opus{Goiaba}}
 
 % usar para citação integral indentada com tradução
 \newcommand{\citacaolonga}[4]{
@@ -23,3 +24,11 @@
     \cite[#3]{#4}.
   \end{quote}
 }
+
+\newcounter{notecounter}
+
+\newcommand{\note}[1]{
+  \addtocounter{notecounter}{1}
+  \textcolor{red}{[note \arabic{notecounter}: #1]}
+}
+
