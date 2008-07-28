@@ -518,6 +518,70 @@ pode contribuir com um processo de transformação melódica
 \section{Goiaba---software para processar contornos}
 \label{sec:goiaba-software-para}
 
+O \goiaba{} é desenvolvido em Common Lisp com o compilador SBCL
+\cite{team07:sbcl}. A classe \texttt{ponto} define pontos cartesianos
+como (x, y), a classe \texttt{contorno-duracao} é uma lista de pontos
+como ((x, y) (z, w)), e a classe \texttt{contorno-simples} define
+apenas as alturas dos contornos como (y w). Algumas macros de leitura
+foram definidas para simplificar o processo de criar instâncias de
+objetos. Por exemplo, para criar uma instância do tipo \texttt{ponto}
+pode-se fazer normalmente \texttt{(make-instance 'ponto :x 0 :y 3)} ou
+simplesmente \verb!#p(0 3)! com a macro de leitura. Da mesma maneira,
+um \texttt{contorno-duracao} com dois pontos pode ser instanciado com
+\verb!#d(#p(0 3) #p(1 4))! ao invés de usar \texttt{make-instance}.
+
+As operações em contornos são implementadas em métodos,
+aproveitando-se do despacho múltiplo usado pelo sistema de objetos de
+Common Lisp (CLOS). Desse modo um método como \texttt{transpor} vai se
+comportar de maneira diferente dependendo qual o tipo do seu primeiro
+parâmetro:
+
+\begin{verbatim}
+(defmethod transpor ((objeto contorno-duracao) fator)
+  (map-contorno-duracao #L(transpor !1 fator) (pontos objeto)))
+\end{verbatim}
+
+\begin{verbatim}
+(defmethod transpor ((objeto contorno-simples) fator)
+  (map-contorno-simples #L(+ !1 fator) (pontos objeto)))
+\end{verbatim}
+
+O \goiaba{} processa contornos representados de forma simples, como
+uma lista de \tr{c-pitch}: \verb!#c(5 9 6)!, e contorno com
+duração: \verb!#d(#p(0 5)(1 9)(2 6))!. O segundo formato servirá para
+a futura implementação do tempo no contorno.
+
+O \goiaba{} tem diversas operações para lidar com contornos, como
+tranposição, inversão, retrogradação, rotação e expansão de
+intervalos. Além disso operações definidas na literatura também estão
+implementadas, como redução de contornos \cite{adams76:melodic},
+\tr{CC}, \tr{CAS}, \tr{CASV}, \tr{CI}, \tr{CIA},
+\tr{CCVI} e \tr{CCVII} \cite{friedmann85:methodology} e
+\tr{COM-matrix} \cite{morris93:directions}.
+
+Finalmente, \goiaba{} usa a biblioteca
+Cl-pdf\footnote{www.cliki.net/CL-PDF} para plotar facilmente contornos
+definidos, permitindo a fácil visualização de operações em
+contornos. As figuras \ref{fig:graficos-cseg} e \ref{fig:534120} por
+exemplo foram criadas automaticamente pelo \goiaba{}.
+
+Para o futuro pretendemos implementar a possibilidade de gerar
+contornos a partir de partituras musicais e vice-versa, e implementar
+uma interface gráfica. O desenvolvimento do \goiaba{} segue
+procedimentos oriundos do desenvolvimento de software livre como uso
+de controle de versão e disponibilização do código-fonte na
+internet\footnote{Referência ao código-fonte não inserida por motivo
+  do anonimato. Será incluído para a publicação.}.
+
+As descrições das teorias de contornos nem sempre são feitas pelos
+seus autores de uma forma totalmente clara. A programação de uma
+teoria em um software de computador é um exercício poderoso no
+processo de aprendizagem, pois o programador é obrigado a expressar de
+forma precisa a compreensão que tem de uma idéia obscura. Dessa forma
+a implementação das operações de contorno em um software de computador
+ajuda na compreensão da teoria, uma vez que é preciso entender
+totalmente como cada operação se processa e que funcionalidade tem.
+
 \section{Outras ferramentas computacionais}
 \label{sec:outr-ferr-comp}
 
