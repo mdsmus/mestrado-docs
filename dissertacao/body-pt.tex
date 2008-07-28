@@ -116,9 +116,9 @@ espaços, como de altura e de contorno \cite{morris87:composition}. O
 espaço de contorno (\tr{c-space}) é uma abstração de espaço musical
 que consiste em elementos organizados do grave para o agudo
 desconsiderando os intervalos exatos entre eles. Leva-se em conta
-apenas a relação entre os registros dos elementos. O \tr{c-space}
-pode ser entendido como um grande conjunto de \tr{c-pitch} (alturas
-de contorno).
+apenas a relação entre os registros dos elementos. O \tr{c-space} pode
+ser entendido como um grande conjunto de \tr{c-pitch} (alturas de
+contorno).
 
 Cada conjunto de \tr{c-pitch} contido em um \tr{c-space} é chamado de
 \tr{cseg} (segmento de contorno)\footnote{Trata-se de uma idéia
@@ -178,15 +178,15 @@ esta inversão com a operação $COM(P_a,P_b)=-COM(IP_a,IP_b)$.
 
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação (\tr{COM}), matriz de comparação
-(\tr{COM-matrix}) e classe de contorno (\tr{CC}) \note{fica
-  parecendo que matrizes de comparação e classes de contorno são
-  operações, acho bom mudar a vírgula de lugar ou algo assim}.
+(\tr{COM-matrix}) e classe de contorno (\tr{CC}) \note{fica parecendo
+  que matrizes de comparação e classes de contorno são operações, acho
+  bom mudar a vírgula de lugar ou algo assim}.
 
-A operação de comparação \tr{COM(a,b)} retorna a diferença de
-registro entre dois elementos, ou seja, informa se um elemento é mais
-agudo, mais grave ou de mesma altura que outro. O valor de \tr{COM}
-é o sinal ``$+$'' se $b$ é maior que $a$; ``$-$'' se $b$ é maior que
-$a$; e ``$0$'' se $b$ é igual a $a$. Por exemplo, no contorno
+A operação de comparação \tr{COM(a,b)} retorna a diferença de registro
+entre dois elementos, ou seja, informa se um elemento é mais agudo,
+mais grave ou de mesma altura que outro. O valor de \tr{COM} é o sinal
+``$+$'' se $b$ é maior que $a$; ``$-$'' se $b$ é maior que $a$; e
+``$0$'' se $b$ é igual a $a$. Por exemplo, no contorno
 $P\:\langle5\:9\:6\:8\rangle$, o valor de $COM(P_0,P_1)$ é o sinal
 ``$+$'', o de $COM(P_1,P_2)$ é ``$-$'', e o valor de $COM(P_3,P_0)$ é
 o sinal ``$+$''. Esta medida de comparação pode ser invertida de modo
@@ -194,14 +194,13 @@ que a comparação entre dois elementos é igual ao inverso da comparação
 destes elementos em ordem reversa. Esta idéia pode ser melhor
 entendida observando-se a equação $COM(a,b)=-COM(b,a)$.
 
-A \tr{COM-matrix} é uma matriz bidimensional que compara um
-\tr{cseg} com ele próprio. Esta matriz mostra os resultados da
-função de comparação \tr{COM} para todos os \tr{c-pitch} de um
-\tr{cseg}. A tabela \ref{tab:matriz-5968} contém a matriz de
-comparação de um \tr{cseg} $P\:\langle5\:9\:6\:8\rangle$. As
-\tr{COM-matrix} dos exemplos já vistos na figura
-\ref{fig:graficos-cseg} podem ser vistos na tabela
-\ref{tab:matriz-exemplos}.
+A \tr{COM-matrix} é uma matriz bidimensional que compara um \tr{cseg}
+com ele próprio. Esta matriz mostra os resultados da função de
+comparação \tr{COM} para todos os \tr{c-pitch} de um \tr{cseg}. A
+tabela \ref{tab:matriz-5968} contém a matriz de comparação de um
+\tr{cseg} $P\:\langle5\:9\:6\:8\rangle$. As \tr{COM-matrix} dos
+exemplos já vistos na figura \ref{fig:graficos-cseg} podem ser vistos
+na tabela \ref{tab:matriz-exemplos}.
 
 \begin{table}
   \centering
@@ -244,12 +243,12 @@ comparação de um \tr{cseg} $P\:\langle5\:9\:6\:8\rangle$. As
   \label{tab:matriz-exemplos}
 \end{table}
 
-As diagonais superiores à diagonal principal zero da
-\tr{COM-matrix} são chamadas de $INT_n$, onde $n$ é o número da
-diagonal: 1 para a superior mais próxima da diagonal zero, 2 para a
-seguinte, 3 para a posterior e assim por diante. A diagonal $INT_1$
-traz comparações de registros entre elementos adjacentes do
-\tr{cseg}. Em $P\:\langle5\:9\:6\:8\rangle$, por exemplo,
+As diagonais superiores à diagonal principal zero da \tr{COM-matrix}
+são chamadas de $INT_n$, onde $n$ é o número da diagonal: 1 para a
+superior mais próxima da diagonal zero, 2 para a seguinte, 3 para a
+posterior e assim por diante. A diagonal $INT_1$ traz comparações de
+registros entre elementos adjacentes do \tr{cseg}. Em
+$P\:\langle5\:9\:6\:8\rangle$, por exemplo,
 $INT_1=\langle+\:-\:+\rangle$, ou seja, o movimento melódico é
 ascendente entre 5 e 9, descendente entre 9 e 6, e ascendente entre 6
 e 8. Esta comparação é feita também com uma operação conhecida como
@@ -261,34 +260,34 @@ série de contornos adjacentes (\tr{CAS}) \footnote{Em teorias de
 A classe de contorno (\tr{CC}) é uma operação importante para a
 verificação de similaridade entre contornos. Obtém-se \tr{CC}
 numerando-se ordenadamente todos os \tr{c-pitch} de $0$ a $(n-1)$,
-sendo $n$ o número total de \tr{c-pitch} do \tr{cseg}. Uma
-\tr{CC} engloba todos os contornos considerados equivalentes. Dois
-ou mais contornos são considerados equivalentes quando geram uma mesma
-\tr{COM-matrix}, ou seja, quando mantêm a mesma estrutura de
-registro entre suas notas. Dessa forma, dado um \tr{cseg}
+sendo $n$ o número total de \tr{c-pitch} do \tr{cseg}. Uma \tr{CC}
+engloba todos os contornos considerados equivalentes. Dois ou mais
+contornos são considerados equivalentes quando geram uma mesma
+\tr{COM-matrix}, ou seja, quando mantêm a mesma estrutura de registro
+entre suas notas. Dessa forma, dado um \tr{cseg}
 $P\:\langle5\:9\:6\:8\rangle$, são considerados seus equivalentes os
 \tr{cseg} $\langle1\:5\:2\:3\rangle$, $\langle0\:10\:4\:7\rangle$,
 $\langle0\:3\:1\:2\rangle$ e muitos outros. Todos eles têm
 $\langle0\:3\:1\:2\rangle$ como forma normal e \tr{CC}.
 
 Os Intervalos de Contorno (\tr{CI}) representam as relações entre
-\tr{c-pitch} de uma \tr{CC} e podem ser entendidos de duas
-formas: guardando o valor entre os \tr{c-pitch}
+\tr{c-pitch} de uma \tr{CC} e podem ser entendidos de duas formas:
+guardando o valor entre os \tr{c-pitch}
 \cite{friedmann85:methodology}, ou guardando apenas a direção, mas não
 o valor da diferença entre os \tr{c-pitch}
 \cite{morris93:directions}. Por exemplo, para um mesmo \tr{cseg}
 $P\:\langle0\:3\:1\:2\rangle$, o \tr{CI} entre $P_1$ e $P_2$ para
 Friedmann é -2, e para Morris, ``$-$''.
 
-O Vetor de Intervalos de Contornos (\tr{CIA}) descreve a freqüência
-de cada tipo de \tr{CI} em uma \tr{CC}. Por exemplo, o
-\tr{cseg} $P\:\langle0\:3\:1\:2\rangle$ tem \tr{CIA}
+O Vetor de Intervalos de Contornos (\tr{CIA}) descreve a freqüência de
+cada tipo de \tr{CI} em uma \tr{CC}. Por exemplo, o \tr{cseg}
+$P\:\langle0\:3\:1\:2\rangle$ tem \tr{CIA}
 $\langle2,1,1/1,1,0\rangle$. Os dígitos da esquerda da barra
-representam os \tr{CI} ascendentes em ordem crescente, e os dígitos
-da direita os \tr{CI} descendentes em ordem crescente de valor
+representam os \tr{CI} ascendentes em ordem crescente, e os dígitos da
+direita os \tr{CI} descendentes em ordem crescente de valor
 absoluto. \cite{friedmann85:methodology}. Os Vetores de classe de
-contorno (\tr{CCVI} e \tr{CCVII}), de dois dígitos cada um,
-refletem os movimentos ascendentes e ascendentes de um contorno e são
+contorno (\tr{CCVI} e \tr{CCVII}), de dois dígitos cada um, refletem
+os movimentos ascendentes e ascendentes de um contorno e são
 calculados a partir dos \tr{CI} ascendentes e descendentes.
 
 A redução de contornos é possível a partir de dois diferentes
@@ -390,9 +389,9 @@ contorno \cite[p. 11]{beard03:contour}.
 
 A Matriz de Comparação (\eg{com-matrix}) representa o total de
 comparações de um contorno. É obtida através da comparação de todos os
-pares ordenados de um contorno. Em uma matriz Mi de um contorno $P$,
-a posição $E (x,y)$ contém $Com (Px,Py)$. A matriz exibe uma simetria
-de sinais invertidos em torno da diagonal principal, esta preenchida
+pares ordenados de um contorno. Em uma matriz Mi de um contorno $P$, a
+posição $E (x,y)$ contém $Com (Px,Py)$. A matriz exibe uma simetria de
+sinais invertidos em torno da diagonal principal, esta preenchida
 apenas por zeros. Um exemplo desta matriz referente ao contorno
 $\langle 4\:3\:5\:6 \rangle$ pode ser visto na tabela
 \ref{fig:matriz-4356} \cite[p. 28]{morris87:composition}.
@@ -423,21 +422,20 @@ $6$. INT$_2 = \langle + + \rangle$ representa as diferenças entre $4$
 e $5$, e $3$ e $6$.
 
 Esta matriz permite a verificação de duas classes de equivalência de
-contornos. A primeira é formada por todos os \eg{cseg} que dividem
-uma mesma \eg{com-matrix}, e a segunda ---
-\eg{csegclass} --- formada por todos os \eg{cseg} relacionados
-por operações de identidade, translação, retrogradação, inversão e
-retrogradação da inversão.
+contornos. A primeira é formada por todos os \eg{cseg} que dividem uma
+mesma \eg{com-matrix}, e a segunda --- \eg{csegclass} --- formada por
+todos os \eg{cseg} relacionados por operações de identidade,
+translação, retrogradação, inversão e retrogradação da inversão.
 
-A operação de inversão é obtida pela subtração de todos os
-\eg{cps} por $(n-1)$. Para um dado \eg{cseg} $P$, a
-operação de identidade é identificada como $IP$. A retrogradação de um
-\eg{cseg} $P$ (representado por $RP$), bem como de sua inversão
-($IP$) são obtidas colocando os \eg{cps} em ordem reversa
+A operação de inversão é obtida pela subtração de todos os \eg{cps}
+por $(n-1)$. Para um dado \eg{cseg} $P$, a operação de identidade é
+identificada como $IP$. A retrogradação de um \eg{cseg} $P$
+(representado por $RP$), bem como de sua inversão ($IP$) são obtidas
+colocando os \eg{cps} em ordem reversa
 \cite[p. 231]{marvin.ea87:relating}.
 
-A forma prima de um \eg{cseg} é obtida operando-se de um
-algoritmo de três etapas:
+A forma prima de um \eg{cseg} é obtida operando-se de um algoritmo de
+três etapas:
 \begin{enumerate}
 \item realiza-se a translação do \eg{cseg} caso seja necessário;
 \item se a subtração de $(n-1)$ pelo último \eg{cps} é menor
