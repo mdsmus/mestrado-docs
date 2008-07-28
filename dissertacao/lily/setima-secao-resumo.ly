@@ -82,14 +82,14 @@ trompa = {
       \clarinete
     >>
     \new Staff <<
-      \set Staff.instrumentName = \markup {\hcenter-in #5 "Fg."}
-      \global
-      \fagote
-    >>
-    \new Staff <<
       \set Staff.instrumentName = \markup {\hcenter-in #5 "Tpa."}
       \global
       \trompa
+    >>
+    \new Staff <<
+      \set Staff.instrumentName = \markup {\hcenter-in #5 "Fg."}
+      \global
+      \fagote
     >>
   >>
   \layout {
