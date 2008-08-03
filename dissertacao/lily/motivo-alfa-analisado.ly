@@ -1,12 +1,19 @@
 \version "2.10.33"
 
+\include "../config/lib.ly"
+
 \score {
   \new Staff \with {
     \remove "Time_signature_engraver" }{
-      \time 5/4
+      \time 7/4
       \relative c'' {
         \override Stem #'transparent = ##t
-        <a c>4 b <g a c d> <f g b c d e f>
+        \bracketUp
+        \override TextScript #'extra-offset = #'( -2 . 2 )
+        g4^\startGroup^\markup{Motivo beta} e
+        \revert TextScript #'extra-offset
+        \override TextScript #'extra-offset = #'( 0 . 2 )
+        fis\stopGroup cis^\startGroup^\markup{Motivo beta invertido} dis c\stopGroup
       }
     }
   \layout {

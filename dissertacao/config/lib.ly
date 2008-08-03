@@ -19,3 +19,7 @@ textoit = #(define-music-function (parser location texto) (string?)
             #{
             ^\markup{\italic{ #$texto }}
             #})
+
+st = \staccatissimo
+
+dolce = ^\markup{\italic{dolce}}

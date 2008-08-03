@@ -5,14 +5,17 @@
 \score {
   \new Staff {
       \time 4/4
-      \relative c'' {
-        \set Score.currentBarNumber = #177
+      \relative c {
+        \set Score.currentBarNumber = #134
         \bar ""
         \bracketUp
-        \override TextScript #'extra-offset = #'( 0 . 1 )
-        %% corrigir o nome do motivo
-        r2 g16^\startGroup^\markup{Motivo alpha} e fis cis dis r8.
-        r8. c?16\stopGroup g'16\startGroup^\markup{Motivo alpha} e fis cis dis c?\stopGroup r8 r4
+        
+        \clef bass
+        %% idéia de INT_1(5 3 4 1 2 0)
+        a4\p g8\st a4. g8\st a~
+        a4 g8\st a4. cis8\st dis,\st
+        a'4 g8\st a4. g8\st a~
+        a4 g8\st a4. r4
       }
     }
   \layout {

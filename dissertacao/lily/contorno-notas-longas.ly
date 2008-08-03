@@ -22,7 +22,6 @@
       \Staff \consists "Horizontal_bracket_engraver"
     }
   }
-  \midi {}
 }
 \paper {
   paper-width = 12.6\cm
@@ -31,4 +30,5 @@
   top-margin = -.1\cm
   left-margin = -1.2\cm
   tagline = 0
+  indent = #0
 }

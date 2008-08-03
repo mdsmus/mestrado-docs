@@ -1,20 +1,19 @@
 \version "2.10.33"
 
 \score {
-    \new Staff \with {
-      \remove "Time_signature_engraver" }{
-        \time 4/4
-        \relative c' {
-          s8. c16 ees[ des f e]
-          g4
-        }
+  \new Staff \with {
+    \remove "Time_signature_engraver" }{
+      \time 7/4
+      \relative c''' {
+        \override Stem #'transparent = ##t
+        g4 e fis cis dis c
       }
-    \layout {
+    }
+  \layout {
     \context {
       \Staff \consists "Horizontal_bracket_engraver"
     }
   }
-  \midi {}
 }
 \paper {
   paper-width = 4.6\cm
@@ -23,4 +22,5 @@
   top-margin = -.1\cm
   left-margin = -1.2\cm
   tagline = 0
+  indent = #0
 }

@@ -55,13 +55,6 @@
           }
         >>
         \new Staff <<
-          \set Staff.instrumentName = \markup {\hcenter-in #5 "Fagote"}
-          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Fg."}
-          \set Staff.midiInstrument = "bassoon"
-          \gestosglobal
-          \gestosfagote
-        >>
-        \new Staff <<
           \set Staff.instrumentName = \markup {\hcenter-in #5 "Trompa"}
           \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Tpa."}
           \set Staff.midiInstrument = "french horn"
@@ -69,6 +62,13 @@
           \transpose c g {
             \gestostrompa
           }
+        >>
+        \new Staff <<
+          \set Staff.instrumentName = \markup {\hcenter-in #5 "Fagote"}
+          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Fg."}
+          \set Staff.midiInstrument = "bassoon"
+          \gestosglobal
+          \gestosfagote
         >>
       >>
     >>

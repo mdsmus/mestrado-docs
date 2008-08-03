@@ -3,7 +3,7 @@
 \score {
   \new Staff \with {
     \remove "Time_signature_engraver" }{
-      \time 4/4
+      \time 5/4
       \relative c'' {
         \override Stem #'transparent = ##t
         a f bes d
@@ -14,7 +14,6 @@
       \Staff \consists "Horizontal_bracket_engraver"
     }
   }
-  \midi {}
 }
 \paper {
   paper-width = 4.6\cm
@@ -23,4 +22,5 @@
   top-margin = -.1\cm
   left-margin = -1.2\cm
   tagline = 0
+  indent = #0
 }
