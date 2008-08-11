@@ -10,10 +10,10 @@
         \override Stem #'transparent = ##t
         \bracketUp
         \override TextScript #'extra-offset = #'( -2 . 2 )
-        g4^\startGroup^\markup{Motivo beta} e
+        g4^\startGroup^\markup{\italic{motivo} #(ly:export (ly:wide-char->utf-8 #x3B2))} e
         \revert TextScript #'extra-offset
         \override TextScript #'extra-offset = #'( 0 . 2 )
-        fis\stopGroup cis^\startGroup^\markup{Motivo beta invertido} dis c\stopGroup
+        fis\stopGroup cis^\startGroup^\markup{\italic{motivo} #(ly:export (ly:wide-char->utf-8 #x3B2)) \italic{invertido}} dis c\stopGroup
       }
     }
   \layout {
