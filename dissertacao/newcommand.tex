@@ -25,6 +25,15 @@
   \end{quote}
 }
 
+\newcommand{\citacaoinline}[4]{
+  \selectlanguage{english}
+  ``#1''\footnote{
+    \selectlanguage{brazil}
+    ``{#2}''. Tradução nossa.}
+  \selectlanguage{brazil}
+  \cite[#3]{#4}.
+}
+
 \newcounter{notecounter}
 
 \newcommand{\note}[1]{
