@@ -26,7 +26,7 @@ oboe = {
 
 clarinete = {
   \relative c'' {
-    e2\p^\markup{\italic{motivo} #(ly:export (ly:wide-char->utf-8 #x3B1))}( cis2.
+    e2\p^\markup{\italic{motivo #(ly:export (ly:wide-char->utf-8 #x3B1))}}( cis2.
     dis2) r4 a2(
     bes2 g2) r4
   }
