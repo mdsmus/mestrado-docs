@@ -192,6 +192,8 @@ pode contribuir com um processo de transformação melódica
 
 %% usar termos cseg, c-space, etc em português
 
+%% em algum lugar colocar tabela de classes de segmentos de contorno
+
 Teorias que visam sistematizar o estudo de contornos dispõem de várias
 operações para mapeamento e comparação de contornos
 \cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}
@@ -560,19 +562,23 @@ de comparação representada pela diagonal superior à diagonal zero.
 \chapter{Ferramentas}
 \label{cha:ferramentas}
 
-\section{Goiaba---software para processar contornos}
+%% fazer introdução sobre ferramentas
+
+\section{Goiaba, um software para processar contornos}
 \label{sec:goiaba-software-para}
 
 O \goiaba{} é desenvolvido em Common Lisp com o compilador SBCL
-\cite{team07:sbcl}. A classe \texttt{ponto} define pontos cartesianos
-como (x, y), a classe \texttt{contorno-duracao} é uma lista de pontos
-como ((x, y) (z, w)), e a classe \texttt{contorno-simples} define
-apenas as alturas dos contornos como (y w). Algumas macros de leitura
-foram definidas para simplificar o processo de criar instâncias de
-objetos. Por exemplo, para criar uma instância do tipo \texttt{ponto}
-pode-se fazer normalmente \texttt{(make-instance 'ponto :x 0 :y 3)} ou
-simplesmente \verb!#p(0 3)! com a macro de leitura. Da mesma maneira,
-um \texttt{contorno-duracao} com dois pontos pode ser instanciado com
+\cite{team07:sbcl}.
+%% falar sobre as classes do goiaba
+A classe \texttt{ponto} define pontos cartesianos como (x, y), a
+classe \texttt{contorno-duracao} é uma lista de pontos como ((x, y)
+(z, w)), e a classe \texttt{contorno-simples} define apenas as alturas
+dos contornos como (y w). Algumas macros de leitura foram definidas
+para simplificar o processo de criar instâncias de objetos. Por
+exemplo, para criar uma instância do tipo \texttt{ponto} pode-se fazer
+normalmente \texttt{(make-instance 'ponto :x 0 :y 3)} ou simplesmente
+\verb!#p(0 3)! com a macro de leitura. Da mesma maneira, um
+\texttt{contorno-duracao} com dois pontos pode ser instanciado com
 \verb!#d(#p(0 3) #p(1 4))! ao invés de usar \texttt{make-instance}.
 
 As operações em contornos são implementadas em métodos,
@@ -643,21 +649,22 @@ totalmente como cada operação se processa e que funcionalidade tem.
 \label{cha:anal-da-comp}
 %% falar de contornos, motivos, forma, altura, timbre, gestual
 
-A obra \obra{} é um quinteto de madeiras com trompa em movimento
-único. Sua composição foi focada no uso sistemático de contornos
-melódicos e não-melódicos. Além de contornos trabalhamos com
-proporções, metas composicionais, gestos e motivos em um nível
-secundário.
+A obra \obra{} é um quinteto de madeiras em movimento único. Sua
+composição foi focada no uso sistemático de contornos melódicos e
+não-melódicos. Além de contornos, trabalhamos com proporções, metas
+composicionais, gestos e motivos em um nível secundário.
 
-A obra contém três estruturas musicais a partir das quais todo o
-material composicional é derivado. A primeira estrutura é uma
-bifonia---representada pela figura \ref{fig:bifonia}. A segunda
-estrutura é o motivo $\alpha$\footnote{Os motivos são descritos na
+%% bifonia: paulo lima sugeriu citar que encontrei uso deste termo em
+%% widmer
+A obra contém três elementos musicais a partir dos quais todo o
+material composicional é derivado. O primeiro elemento é uma
+bifonia---representada pela figura \ref{fig:bifonia}. O segundo
+elemento é o motivo $\alpha$\footnote{Os motivos são descritos na
   seção \ref{sec:uso-de-motivos}.}, o principal da obra, representado
 pela figura \ref{fig:motivo-alfa}. Este motivo é derivado por meio de
-alternância entre as notas das duas vozes da bifonia. A terceira
-estrutura é o contorno principal da peça \contpr{} (figura
-\ref{fig:534120}). Este é o contorno do motivo $\alpha$.
+alternância entre as notas das duas vozes da bifonia. O terceiro
+elemento é o contorno principal da peça \contpr{}, representado pela
+figura \ref{fig:534120}. Este é o contorno do motivo $\alpha$.
 
 \begin{figure}
   \centering
@@ -690,9 +697,11 @@ com proporções baseadas na razão áurea.
 %%
 Porém, como admitimos uma tolerância relativamente alta entre
 planejamento e resultado final, estas proporções ficaram diferentes na
-versão final da obra. Admitimos esta alta tolerância porque decidimos
-concentrar esforços no objetivo principal do trabalho e deixar
-questões como proporções formais em segundo plano.
+versão final da obra.
+%% dizer o quanto desviei
+Admitimos esta alta tolerância porque decidimos concentrar esforços no
+objetivo principal do trabalho e deixar questões como proporções
+formais em segundo plano.
 
 A tabela \ref{tab:secoes-obra} contém informações de cada uma das
 seções da obra como a duração, andamento, a localização do seu início
@@ -718,17 +727,18 @@ e fim pelo número de compasso e letra de ensaio.
 
 O planejamento inicial desta peça foi feito pouco menos de um ano
 antes de sua composição. Neste planejamento detalhamos elementos de
-alto nível de abstração\footnote{Consideramos estruturas musicais como
-  temas, movimentos, seções como de alto nível de abstração, e notas e
-  durações como de baixo nível de abstração.}, como forma, seções,
-microseções, proporções, andamentos, metas composicionais e
-texturas. O resultado deste planejamento pode ser visto na tabela
+alto nível de abstração como forma, seções, microseções, proporções,
+andamentos, metas composicionais e texturas. Consideramos estruturas
+musicais como temas, movimentos, seções como de alto nível de
+abstração, e notas e durações como de baixo nível de abstração. O
+resultado deste planejamento pode ser visto na tabela
 \ref{tab:planejamento-inicial}. Muitos dos elementos planejados foram
 modificados em função da própria dinâmica da composição. À medida que
-a música foi criada adaptamos o planejamento privilegiando a questão
-artística.
+a música foi criada adaptamos o planejamento privilegiando o resultado
+artístico.
 
 \begin{table}
+  %% aumentar a fonte das palavras
   \includegraphics[scale=.81]{planejamento-inicial}
   \caption{Planejamento inicial da peça}
   \label{tab:planejamento-inicial}
@@ -738,7 +748,7 @@ No planejamento previmos criar seis seções agrupáveis duas a duas (Aa,
 Ab, Ba, Bb, Ca, Cb). Durante a composição dividimos a seção Cb em dois
 pedaços, criando então uma nova seção.
 
-As seções menores estão desmembradas em microseções (Aaa, Aab, Aac e
+As seções menores estão desmembradas em sub-seções (Aaa, Aab, Aac e
 assim por diante). Estas divisões mínimas foram planejadas para conter
 microgestos, mas ao longo do processo preferimos trabalhar com gestos
 maiores e usá-las para marcar mudanças de instrumental, de timbre, ou
@@ -748,19 +758,21 @@ composição.
 
 O uso destas microseções para mudança de instrumental pode ser visto
 na seção inicial da peça (vide tabela
-\ref{tab:microsecoes-primeira-secao}). A microseção Aaa (compassos
-1--8) compreende o solo do fagote e tem 29 segundos. a microseção Aab
-(compassos 9--14) compreende o trio entre fagote, clarinete e oboé e
-tem 22 segundos. A microseção Aac (compassos 15--22), de 29 segundos
-compreende o duo entre a melodia inicial no clarinete e o contraponto
-da flauta. A microseção Aad (compassos 23--28), de 22 segundos
-compreende o quinteto completo. Por último, a microseção Aae
-(compassos 29--36), de 29 segundos, compreende o quarteto
-fl./ob./cl./fg. e o aumento da densidade.
+\ref{tab:microsecoes-primeira-secao}). A microseção \textbf{Aaa}
+(compassos 1--8) compreende o solo do fagote e tem 29 segundos. a
+microseção \textbf{Aab} (compassos 9--14) compreende o trio entre
+fagote, clarinete e oboé e tem 22 segundos. A microseção \textbf{Aac}
+(compassos 15--22), de 29 segundos compreende o duo entre a melodia
+inicial no clarinete e o contraponto da flauta. A microseção
+\textbf{Aad} (compassos 23--28), de 22 segundos compreende o quinteto
+completo. Por último, a microseção \textbf{Aae} (compassos 29--36), de
+29 segundos, compreende o quarteto fl./ob./cal./fg. e o aumento da
+densidade.
 
 \begin{table}
+  %% mudar cores
   \centering
-  \begin{tabular}{r|rrrrr}
+  \begin{tabular}{r|erre}
     & Aaa & Aab & Aac & Aad & Aae \\
     \hline
     Flauta & & & \cinzaa & \cinzaa & \cinzaa \\
@@ -773,6 +785,7 @@ fl./ob./cl./fg. e o aumento da densidade.
   \label{tab:microsecoes-primeira-secao}
 \end{table}
 
+%% explicar melhor este período:
 Os números 1, 2 e 3 associados às metas representam seu grau de
 importância na peça.
 %% verificar: gradação ou graduação
@@ -787,8 +800,11 @@ fato textura homofônica.
 \subsection{Descrição das seções}
 \label{sec:descricao-das-secoes}
 
-A seção inicial da obra contém em toda sua extensão a repetição de uma
-mesma melodia (figura \ref{fig:melodia-inicial}). Esta repetição é
+%% usar nome das seções ao invés de primeira, segunda
+
+A seção 1, no início da obra\footnote{Vide seções na tabela
+  \ref{tab:secoes-obra}.}, contém em toda sua extensão a repetição de
+uma mesma melodia (figura \ref{fig:melodia-inicial}). Esta repetição é
 alternada entre os instrumentos. Ainda nesta seção, a partir do
 compasso 9, o motivo $\alpha$ (figura \ref{fig:motivo-alfa}) aparece
 simultaneamente em duas vozes formando uma textura contrapontística
@@ -805,13 +821,14 @@ seção, que culmina no acorde do compasso 36.
 
 \begin{figure}
   \centering
+  %% consertar 'alfa' no lilypond
   \includegraphics{contraponto-alfa}
   \caption{Contraponto com motivo $\alpha$}
   \label{fig:contraponto-alfa}
 \end{figure}
 
-A segunda seção da obra contém uma textura de entradas defasadas de
-notas longas. Estas notas---Si$\flat$2, Mi3, Si$\flat$3 Dó$\sharp$5, e
+A seção 2 contém uma textura de entradas defasadas de notas
+longas. Estas notas---Si$\flat$2, Mi3, Si$\flat$3 Dó$\sharp$5, e
 Sol5---estão em diferentes registros e estão presentes nas linhas de
 diferentes instrumentos (figura \ref{fig:contorno-notas-longas}). As
 maiores características são a estaticidade das linhas dos instrumentos
@@ -831,41 +848,40 @@ entradas instrumentais.
 \begin{figure}
   \centering
   %% inserir figura de 3 a 4 compassos seção 2, pico de densidade
-  \caption{Pico de densidade na segunda seção}
+  \caption{Pico de densidade na seção 2}
   \label{fig:pico-densidade-secao-2}
 \end{figure}
 
-O início da quarta seção ocorre antes do final da terceira, que tem um
+O início da seção 4 ocorre antes do final da seção 3, que tem um
 desfecho gradativo, formando uma espécie de dégradé entre estas seções
-(figura \ref{fig:transicao-3-4}). A quarta seção é um fugato com
-sujeito e contra-sujeito derivados do contorno principal e de
-combinações de operações\footnote{Para maiores detalhes sobre este
-  fugato e combinações de operações vide seção
-  \ref{sec:comb-de-oper}.}. Do ponto de vista gestual, há uma passagem
-de uma menor densidade no início da quarta seção, com as entradas
-instrumentais sucessivas, para uma maior densidade no final da mesma
-seção. Isto ocorre por três razões: (1) a entrada da trompa em ritmo
-largo (comp. 123), (2) o estreitamento entre as entradas das madeiras,
-e (3) a partir do compasso 128, o jogo de perguntas e respostas com o
-primeiro segmento do sujeito, que ocorre entre as duplas flauta/fagote
-e oboé/clarinete.
+(figura \ref{fig:transicao-3-4}). A seção 4 é um fugato com sujeito e
+contra-sujeito derivados do contorno principal e de combinações de
+operações\footnote{Para maiores detalhes sobre este fugato e
+  combinações de operações vide seção \ref{sec:comb-de-oper}.}. Do
+ponto de vista gestual, há uma passagem de uma menor densidade no
+início da seção 4, com as entradas instrumentais sucessivas, para uma
+maior densidade no final da mesma seção. Isto ocorre por três razões:
+(1) a entrada da trompa em ritmo largo (comp. 123), (2) o
+estreitamento entre as entradas das madeiras, e (3) a partir do
+compasso 128, o jogo de perguntas e respostas com o primeiro segmento
+do sujeito, que ocorre entre as duplas flauta/fagote e oboé/clarinete.
 
 \begin{figure}
   \centering
   %% inserir figura de 4 a 5 compassos seção transição seções 3 e 4
-  \caption{Transição entre terceira e quarta seções}
+  \caption{Transição entre seções 3 e 4}
   \label{fig:transicao-3-4}
 \end{figure}
 
-A quinta seção tem como elemento fundamental um ostinato na linha do
-fagote (figura \ref{fig:ostinato-fagote}). Este ostinato é inspirado
-em um dos toques da capoeira\footnote{A utilização deste elemento foi
-  apenas pontual. Por este motivo não aprofundaremos em maiores
-  explicações sobre a capoeira e seus toques.}. O ritmo do ostinato é
-aproveitado para a construção da bifonia (vide seção
+A seção 5 tem como elemento fundamental um ostinato na linha do fagote
+(figura \ref{fig:ostinato-fagote}). Este ostinato é inspirado em um
+dos toques da capoeira\footnote{A utilização deste elemento foi apenas
+  pontual. Por este motivo não aprofundaremos em maiores explicações
+  sobre a capoeira e seus toques.}. O ritmo do ostinato é aproveitado
+para a construção da bifonia (vide seção
 \ref{sec:aspectos-verticais}). O desenho gestual desta seção é
-bastante parecido ao da seção inicial, com aumento progressivo da
-densidade culminando no acorde do compasso 172.
+bastante parecido ao da seção 1, com aumento progressivo da densidade
+culminando no acorde do compasso 172.
 
 \begin{figure}
   \centering
@@ -874,12 +890,11 @@ densidade culminando no acorde do compasso 172.
   \label{fig:ostinato-fagote}
 \end{figure}
 
-A sexta seção da obra, em contraste às anteriores, é caracterizada por
-grupos de notas curtas, rápidas e desligadas. Estes grupos são
-separados entre si por silêncios (figura
-\ref{fig:sexta-secao-184-187}). As linhas dos instrumentos contêm cada
-uma o motivo $\alpha$ modificado por operações de
-rotação\footnote{Estas operações estão descritas na seção
+A seção 6, em contraste às anteriores, é caracterizada por grupos de
+notas curtas, rápidas e desligadas. Estes grupos são separados entre
+si por silêncios (figura \ref{fig:sexta-secao-184-187}). As linhas dos
+instrumentos contêm cada uma o motivo $\alpha$ modificado por
+operações de rotação\footnote{Estas operações estão descritas na seção
   \ref{sec:comb-de-oper}.}. Os grupos de notas curtas não englobam
 necessariamente todas as notas do motivo $\alpha$. Por vezes o
 silêncio interrompe o motivo, como por exemplo na linha da flauta, nos
@@ -898,15 +913,15 @@ motivo é concluído logo após o silêncio.
     \label{fig:grupos-separados-silencio}
   }
 
-  \subfloat[Transição entre os dois gestos da sexta seção]{
+  \subfloat[Transição entre os dois gestos da seção 6]{
     \includegraphics{transicao-sexta-dois-gestos}
     \label{fig:transicao-sexta-dois-gestos}
   }
-  \caption{Notas curtas separadas por silêncios (sexta seção)}
+  \caption{Notas curtas separadas por silêncios (seção 6)}
   \label{fig:sexta-secao-notas-curtas}
 \end{figure}
 
-A sexta seção contém dois gestos interligados. O primeiro gesto
+A seção 6 contém dois gestos interligados. O primeiro gesto
 (comp. 173--198) é marcado pelo aumento da densidade, obtido pela
 diminuição dos silêncios. O colorido melódico tem destaque no final
 deste gesto (comp. 194--198). O segundo gesto (comp. 199--214) é
@@ -916,22 +931,22 @@ derivada da linha do oboé (comp. 149--157) interliga esta seção com a
 seguinte. Na figura \ref{fig:transicao-sexta-dois-gestos} percebemos o
 início do segundo gesto com elementos do gesto anterior.
 
-A sétima e última seção engloba elementos importantes das seções
+A seção 7, última da obra, engloba elementos importantes das seções
 anteriores (figura \ref{fig:setima-secao-resumo}). A linha do fagote é
-uma repetição do que ocorre na quarta seção. A linha do clarinete
-representa o ritmo e acentuação da terceira seção. A linha da trompa
+uma repetição do que ocorre na seção 4. A linha do clarinete
+representa o ritmo e acentuação da seção 3. A linha da trompa
 corresponde ao solo do fagote do início da peça. As linhas do oboé e
-flauta representam a bifonia apresentada na quinta seção. Finalmente o
+flauta representam a bifonia apresentada na seção 5. Finalmente o
 material apresentado pela flauta e oboé a partir do compasso 239
-representa o sujeito do fugato da quarta seção. As relações de
-contornos nesta seção são, portanto, as mesmas que estes citados
-elementos mantêm nas seções anteriores.
+representa o sujeito do fugato da seção 4. As relações de contornos
+nesta seção são, portanto, as mesmas que estes citados elementos
+mantêm nas seções anteriores.
 
 %% FIXME: refazer figura após terminar composição e inserir colchetes
 \begin{figure}
   \centering
   \includegraphics{setima-secao-resumo}
-  \caption{Elementos de outras seções na sétima seção}
+  \caption{Elementos de outras seções na seção 7}
   \label{fig:setima-secao-resumo}
 \end{figure}
 \section{Aspectos verticais}
@@ -954,9 +969,8 @@ escala octatônica\footnote{A escala octatônica é obtida a partir da
 
 Ao longo da obra um acorde é apresentado de forma recorrente (figura
 \ref{fig:acorde-motivo}). Este acorde é derivado da bifonia e tem
-sonoridade octatônica. A terceira seção da peça é inteiramente
-construída com este acorde, que tem sua orquestração modificada no
-decorrer do gesto.
+sonoridade octatônica. A seção 3 é inteiramente construída com este
+acorde, que tem sua orquestração modificada no decorrer do gesto.
 
 \begin{figure}
   \centering
@@ -965,11 +979,11 @@ decorrer do gesto.
   \label{fig:acorde-motivo}
 \end{figure}
 
-A bifonia é apresentada em sua forma mais explícita na quinta seção
-(figura \ref{fig:bifonia-grave}). Aparece inicialmente na região
-grave, nas linhas do clarinete e da trompa (comp. 137--144), depois
-brevemente no oboé e na trompa (comp. 146--149), e mais adiante na
-flauta e no clarinete (comp. 157--172).
+A bifonia é apresentada em sua forma mais explícita na seção 5 (figura
+\ref{fig:bifonia-grave}). Aparece inicialmente na região grave, nas
+linhas do clarinete e da trompa (comp. 137--144), depois brevemente no
+oboé e na trompa (comp. 146--149), e mais adiante na flauta e no
+clarinete (comp. 157--172).
 
 \begin{figure}
   \centering
@@ -1016,10 +1030,10 @@ O motivo $\alpha$ contém dois motivos $\beta$, um em sua forma
 original e outro invertido. Além disso o motivo $\alpha$ também está
 presente de forma invertida no motivo $\gamma$, com as notas
 Dó-Mi$\flat$-Ré$\flat$. Este motivo $\alpha$ é utilizado na linha do
-fagote do início da peça, no sujeito do fugato da quarta seção (letra
-L), na linha do clarinete nos compassos 137--144, na linha da flauta
-nos compassos 158--171, no material da flauta e oboé na sexta seção
-(letra R) e na seção final.
+fagote do início da peça, no sujeito do fugato da seção 4 (letra L),
+na linha do clarinete nos compassos 137--144, na linha da flauta nos
+compassos 158--171, no material da flauta e oboé na seção 6 (letra R)
+e na seção final.
 %% inserir figura com linha inicial do fagote
 %% inserir seção em que falo que a última seção é resumo das outras
 
@@ -1030,9 +1044,9 @@ clarinete nos compassos 157--172, na contrução do material ascendente
 dos compassos 200--215 e na seção final.
 
 O motivo $\delta$ não tem relação com altura ou contorno. É apenas um
-padrão de acentuação que é repetido na terceira e última seções. Na
-primeira aparição há notas \eng{stacatto} entre os acentos. Na segunda
-aparição há apenas os acentos.
+padrão de acentuação que é repetido nas seções 3 e 7. Na primeira
+aparição há notas \eng{stacatto} entre os acentos. Na segunda aparição
+há apenas os acentos.
 
 \section{Uso de contornos}
 \label{sec:uso-de-contornos}
@@ -1081,9 +1095,9 @@ da obra, nos compassos 9--14 no fagote e oboé, nos compassos 15--22 no
 clarinete, e nos compassos 23--36 na flauta e trompa.
 
 A combinação de rotação e expansão de contornos ocorre no sujeito e
-contra-sujeito do fugato da quarta seção e no material de notas curtas
-da sexta seção. O sujeito do fugato (figura \ref{fig:sujeito-fugato})
-é constituído por dois segmentos elididos. O primeiro segmento é o
+contra-sujeito do fugato da seção 4 e no material de notas curtas da
+seção 6. O sujeito do fugato (figura \ref{fig:sujeito-fugato}) é
+constituído por dois segmentos elididos. O primeiro segmento é o
 próprio motivo $\alpha$, por consequüencia, é também o contorno
 principal (5 3 4 1 2 0). O segundo segmento é o contorno resultante da
 combinação da operação de rotação de fator 3, (1 2 0 5 3 4), e da
@@ -1120,14 +1134,14 @@ um ponto.
 \end{figure}
 
 A combinação de rotação e expansão de contornos também está presente
-na sexta seção, nas linhas das quatro madeiras. A linha da flauta
-contém o motivo $\alpha$ em sua forma original. A linha do clarinete
-contém uma rotação de fator 2 e uma expansão de intervalos de segunda
-para intervalos de terça. A linha do oboé contém um desvio da
-estrutura do contorno. Trata-se de uma rotação de fator 3 do motivo
-$\alpha$, porém com transposição da segunda metade do motivo para uma
-oitava abaixo. Neste ponto a estrutura do contorno foi sacrificada em
-prol do desenho gestual da seção, que não supera o Ré$\sharp$4 neste
+na seção 6, nas linhas das quatro madeiras. A linha da flauta contém o
+motivo $\alpha$ em sua forma original. A linha do clarinete contém uma
+rotação de fator 2 e uma expansão de intervalos de segunda para
+intervalos de terça. A linha do oboé contém um desvio da estrutura do
+contorno. Trata-se de uma rotação de fator 3 do motivo $\alpha$, porém
+com transposição da segunda metade do motivo para uma oitava
+abaixo. Neste ponto a estrutura do contorno foi sacrificada em prol do
+desenho gestual da seção, que não supera o Ré$\sharp$4 neste
 trecho. Finalmente a linha do fagote contém uma rotação de fator 4 do
 motivo $\alpha$ e expansão semelhante ao do clarinete. Na figura
 \ref{fig:notas-curtas-madeiras} estão exibidas estas variações do
@@ -1172,7 +1186,7 @@ representações gráficas das rotações utilizadas.
     Clarinete & 2 & Sim \\
     Fagote & 4 & Sim \\
   \end{tabular}
-  \caption{Operações na sexta seção}
+  \caption{Operações na seção 6}
   \label{tab:operacoes-secao-6}
 \end{table}
 
@@ -1189,7 +1203,7 @@ intervalo de segunda para intervalo de quarta.
 \begin{figure}
   \centering
   \includegraphics{oboe-solo-secao-5}
-  \caption{Solo do oboé na quinta seção}
+  \caption{Solo do oboé na seção 5}
   \label{fig:oboe-solo-secao-5}
 \end{figure}
 
@@ -1207,18 +1221,18 @@ interpolado com o contorno iniciado em Sol.
 \label{sec:cont-nao-comb}
 
 O contorno principal \contpr{} está associado também ao colorido
-instrumental. Isto ocorre na segunda seção da peça, em que as
-notas---Si$\flat$2, Mi3, Si$\flat$3 Dó$\sharp$5, e Sol5---ocorrem nas
-linhas dos instrumentos (figura \ref{fig:contorno-notas-longas},
+instrumental. Isto ocorre na seção 2, em que as notas---Si$\flat$2,
+Mi3, Si$\flat$3 Dó$\sharp$5, e Sol5---ocorrem nas linhas dos
+instrumentos (figura \ref{fig:contorno-notas-longas},
 p. \pageref{fig:contorno-notas-longas}).
 
 A operação de INT$_1$ do contorno principal (- + - + -) ocorre de
 maneira não ortodoxa no ostinato da linha do fagote, ao longo de toda
-a quinta seção (figura \ref{fig:ostinato-fagote},
+a seção 5 (figura \ref{fig:ostinato-fagote},
 p. \pageref{fig:ostinato-fagote}). O padrão com as notas Sol e Lá
 sugere o movimento (- +) presente no contorno principal.
 
-%% falar sobre o gestual da quinta seção e uso da anacruze e da
+%% falar sobre o gestual da seção 5 e uso da anacruze e da
 %% semelhança com o contraponto da primeira seção
 
 \subsection{Contornos associados a outros parâmetros musicais}
@@ -1232,11 +1246,11 @@ Os andamentos utilizados na peça---82, 66, 120, 108 e 112 (vide tabela
 contorno A(1 0 4 2 3). Este contorno é um subconjunto de 5 elementos
 do contorno principal utilizado, \contpr{}.
 
-Na seção inicial da obra relações de contornos estão associados a
-densidade. A densidade neste trecho tem contorno D(1 3 2 5 4), isto é
-começa com um instrumento, depois um trio, um duo, o quinteto completo
-e um quarteto. Esta seção é iniciada com um solo de fagote (1) seguido
-de um trio com fagote, clarinete e oboé (3). Ocorre então um duo entre
+Na seção 1 relações de contornos estão associados a densidade. A
+densidade neste trecho tem contorno D(1 3 2 5 4), isto é começa com um
+instrumento, depois um trio, um duo, o quinteto completo e um
+quarteto. Esta seção é iniciada com um solo de fagote (1) seguido de
+um trio com fagote, clarinete e oboé (3). Ocorre então um duo entre
 clarinete e flauta (2), um \eng{tutti} (5) e finalmente um quarteto
 sem o fagote (4). Este contorno D é o retrógrado de um subconjunto de
 5 elementos do contorno principal P.
