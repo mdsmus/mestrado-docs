@@ -1,7 +1,20 @@
 \chapter{Introdução}
 \label{cha:introducao}
 
-%% começar falando o que é contorno
+Há diversas definições de contorno melódico na literatura
+\cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour},
+cada uma delas relacionada com o objetivo do trabalho de seu autor.
+%% dar exemplo
+No presente estudo entendemos que contorno melódico é um conjunto
+ordenado de alturas de notas (chamadas de pontos) cujo valor absoluto
+é ignorado e somente o registro, que pode ser mantido ou variar
+ascendente e descendentemente entre um ponto e outro, é considerado.
+
+O estudo de contornos é importante porque, assim como conjuntos de
+notas e motivos, contornos podem ajudar a dar coerência a uma obra
+musical. Eles representam estruturas musicais manipuláveis através de
+várias operações como inversão e retrogradação, e podem ser abordados
+tanto do ponto de vista da análise quanto da composição.
 
 A idéia de preservação de contornos e variação de intervalos entre
 notas é encontrada em diferentes situações musicais. Há adequação de
@@ -20,21 +33,6 @@ tornaram necessárias a área da Análise Musical
 \cite[p. 226]{marvin.ea87:relating}.
 %% marcos: o que não acha bom?
 
-Há diversas definições de contorno melódico na literatura
-\cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour},
-cada uma delas relacionada com o objetivo do trabalhos de seu autor.
-%% dar exemplo
-No presente estudo entendemos que contorno melódico é um conjunto
-ordenado de alturas de notas (chamadas de pontos) cujo valor absoluto
-é ignorado e somente o registro, que pode ser mantido ou variar
-ascendente e descendentemente entre um ponto e outro, é considerado.
-
-O estudo de contornos é importante porque, assim como conjuntos de
-notas e motivos, contornos podem ajudar a dar coerência a uma obra
-musical. Eles representam estruturas musicais manipuláveis através de
-várias operações como inversão e retrogradação, e podem ser abordados
-tanto do ponto de vista da análise quanto da composição.
-
 No campo da percepção musical o contorno melódico é um importante
 recurso para o reconhecimento de melodias familiares \cite[p.
 136]{dowling.ea86:music}. Além disso é reconhecido que ouvintes têm
@@ -46,19 +44,20 @@ necessárias à área da Análise Musical
 \cite[p. 226]{marvin.ea87:relating}.
 
 Há estudos e aplicações de contornos melódicos também em outras áreas
-da música. Na área da Etnomusicologia contornos são usados para
-representar e classificar melodias populares
-\cite{adams76:melodic}. Na área da Computação musical,
-especificamente, \eng{Music Information Retrieval}, contornos são
-utilizados em sistemas \eng{query by humming} --- de busca em bases de
-dados a partir de melodias cantadas \cite{ghias.ea95:query}.
+da música como Etnomusicologia e Computação Musical. Na área da
+Etnomusicologia contornos são usados para representar e classificar
+melodias populares \cite{adams76:melodic}. Na área da Computação
+musical, especificamente, \eng{Music Information Retrieval}, contornos
+são utilizados em sistemas \eng{query by humming} --- de busca em
+bases de dados a partir de melodias cantadas \cite{ghias.ea95:query}.
 
 %% remover nome da seção ou criar uma nova seção neste capítulo
+%% marcos: o que mais deve estar na introdução?
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
 
 O presente trabalho tem como principais objetivos a composição de uma
-obra musical com base em combinações de operações de contorno e a
+obra musical com base em combinações de operações de contornos e a
 produção do seu memorial. O instrumental da obra é um quinteto de
 madeiras de aproximadamente 10 minutos de duração.
 
@@ -72,10 +71,11 @@ São objetivos secundários deste trabalho:
 \item Compreensão do estado de arte de contornos melódicos.
 \end{enumerate}
 
-O uso sistemático de contornos melódicos para geração de material
-composicional e como determinante composicional é um assunto carente
-de literatura.
+O uso sistemático de contornos melódicos tanto para geração de
+material composicional quanto como determinante composicional é um
+assunto carente de literatura.
 %% rever frase. substituir 'colaborar'
+%% marcos: não sei bem o que colocar
 Seu estudo poderá colaborar com a área de Composição.
 
 \chapter{Sobre contornos}
@@ -118,12 +118,15 @@ Contorno é um conjunto ordenado de elementos distintos, com ou sem
 repetição, numerados de forma ascendente
 \cite[p. 206]{morris93:directions}.
 
-%% explicar melhor de modo que um leigo entenda
 Um contorno pode ser interpretado como registro, dinâmica ou densidade
 de acordes no tempo \cite[p. 206]{morris93:directions}
-\cite[p. 22]{clifford95:contour}. Podemos ver representações do
-contorno \contorno{4\:3\:5\:6} na figura
-\ref{fig:non-melodic-contours}.
+\cite[p. 22]{clifford95:contour}. Um dado contorno (4 3 5 6), por
+exemplo, pode ser associado ao parâmetro registro com as notas Lá, Fá,
+Si$\flat$ e Ré (figura \ref{fig:pitches-in-time}); pode ser associado
+a densidades de acordes com acordes de duas, uma, quatro e sete notas
+(figura \ref{fig:chord-densities-in-time}); ou pode ainda ser
+associado aos graus de dinâmica \music{p}, \music{ppp}, \music{mf} e
+\music{fff} (figura \ref{fig:dynamics-in-time}).
 
 \begin{figure}
   \centering
@@ -137,7 +140,7 @@ contorno \contorno{4\:3\:5\:6} na figura
   \subfloat[dinâmicas no tempo]{
     \includegraphics[scale=1]{dynamics-in-time}
     \label{fig:dynamics-in-time}}
-  \caption{Contornos \contorno{4\:3\:5\:6} não melódicos}
+  \caption{Contornos (4 3 5 6) não melódicos}
   \label{fig:non-melodic-contours}
 \end{figure}
 
@@ -197,15 +200,14 @@ pode contribuir com um processo de transformação melódica
 Teorias que visam sistematizar o estudo de contornos dispõem de várias
 operações para mapeamento e comparação de contornos
 \cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}
-\note{período fragmentado}.
-%% dizer porque as melodias não são semelhantes se não vemos o
-%% contorno
-A partir das idéias destas teorias é possível, por exemplo, reconhecer
-semelhanças entre as duas melodias de quatro notas da figura
-\ref{fig:ly-cseg-5968}, cujo contorno está representado graficamente
-na figura \ref{fig:cseg-5968}. Outros exemplos de melodias de
-contornos semelhantes podem ser vistos nas figuras
-\ref{fig:melodias-cseg} e \ref{fig:graficos-cseg}.
+\note{período fragmentado}.  A partir das idéias destas teorias é
+possível, por exemplo, reconhecer semelhanças de registro entre as
+duas melodias de quatro notas da figura \ref{fig:ly-cseg-5968}, cujo
+contorno está representado graficamente na figura
+\ref{fig:cseg-5968}. Estas semelhanças são identificadas apenas se
+observamos os seus contornos. Outros exemplos de melodias de contornos
+semelhantes podem ser vistos nas figuras \ref{fig:melodias-cseg} e
+\ref{fig:graficos-cseg}.
 
 \begin{figure}
   \centering
@@ -314,6 +316,8 @@ comparação. Calcula-se esta inversão com a operação
 $COM(P_a,P_b)=-COM(IP_a,IP_b)$.
 
 %% reescrever para tirar nota
+%% marcos: top colocou esta nota, mas estamos entendendo que matrizes
+%% são operações. posso manter o original?
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação (\tr{COM}), matriz de comparação
 (\tr{COM-matrix}) e classe de contorno (\tr{CC}) \note{fica parecendo
