@@ -10,8 +10,8 @@
         r8 g g g
         ees2
         r8 f f f
-        des2~
-        des
+        d2~
+        d
         \bar "||"
       }
     }
