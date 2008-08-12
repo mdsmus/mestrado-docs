@@ -323,23 +323,23 @@ intervalos exatos entre eles. Leva-se em conta apenas a relação entre
 os registros dos elementos. O \tr{c-space} pode ser entendido como um
 grande conjunto de alturas de contorno (\tr{c-pitch}).
 
-Cada conjunto de \tr{c-pitch} contido em um \tr{c-space} é chamado de
-segmento de contorno (\tr{cseg})\footnote{Trata-se de uma idéia
-  semelhante à da geometria, de reta e segmento de reta, onde o
+Cada conjunto de alturas de contorno contido em um \tr{c-space} é
+chamado de segmento de contorno (\tr{cseg})\footnote{Trata-se de uma
+  idéia semelhante à da geometria, de reta e segmento de reta, onde o
   \tr{c-space} seria análogo à reta, e o \tr{cseg} ao segmento de
   reta.}. Para uma simplificação terminológica neste trabalho nos
 referimos a segmento de contorno com o termo genérico
 ``contorno''. Estes \tr{cseg} podem conter elementos contíguos ou não
 contíguos do \tr{c-space}. Subconjuntos de \tr{cseg} são chamados
 \tr{csubseg}. A figura \ref{fig:c-space} contém três exemplos de um
-mesmo \tr{c-space} de 10 \tr{c-pitch} enumerados do mais grave (0)
-para o mais agudo (9). Na figura \ref{fig:c-space5968} o \tr{c-space}
-contém o \tr{cseg} P, com os \tr{c-pitch} 5, 9, 6 e 8. Na figura
-\ref{fig:c-space7420} o \tr{c-space} contém o \tr{cseg} M, com
-\tr{c-pitch} 7, 4, 2 e 0. Ainda nesta figura o \tr{cseg} M contém o
-\tr{csubseg} O, com \tr{c-pitch} 4 e 2. Por último, na figura
-\ref{fig:c-space564} o \tr{c-space} contém o \tr{cseg} N, com os
-\tr{c-pitch} não adjacentes 5, 6 e 4.
+mesmo \tr{c-space} de 10 alturas de contorno enumeradas do mais grave
+(0) para o mais agudo (9). Na figura \ref{fig:c-space5968} o
+\tr{c-space} contém o \tr{cseg} P, com as alturas de contorno 5, 9, 6
+e 8. Na figura \ref{fig:c-space7420} o \tr{c-space} contém o \tr{cseg}
+M, com alturas de contorno 7, 4, 2 e 0. Ainda nesta figura o \tr{cseg}
+M contém o \tr{csubseg} O, com alturas de contorno 4 e 2. Por último,
+na figura \ref{fig:c-space564} o \tr{c-space} contém o \tr{cseg} N,
+com as alturas de contorno não adjacentes 5, 6 e 4.
 
 \begin{figure}
   \centering
@@ -371,7 +371,7 @@ P$_1$ é igual a 9 e P$_2$ é igual a 6.
 %% confirmar procedimento para expansão de intervalos
 Operações como retrogradação e rotação são semelhantes às realizadas
 com alturas de notas. A expansão de intervalos consiste na
-multiplicação dos intervalos entre cada \tr{c-pitch} por um dado
+multiplicação dos intervalos entre cada altura de contorno por um dado
 fator. Por exemplo, a expansão de fator 2 do contorno (5 9 6 8) é (5
 13 7 11).
 
@@ -408,10 +408,10 @@ $COM(a,b)=-COM(b,a)$.
 
 A \tr{COM-matrix} é uma matriz bidimensional que compara um \tr{cseg}
 com ele próprio. Esta matriz mostra os resultados da função de
-comparação \tr{COM} para todos os \tr{c-pitch} de um \tr{cseg}. A
-tabela \ref{fig:matriz-5968} contém a matriz de comparação de um
-\tr{cseg} P(5 9 6 8). As \tr{COM-matrix} dos exemplos já vistos na
-figura \ref{fig:graficos-cseg} podem ser vistos na tabela
+comparação \tr{COM} para todas as alturas de contorno de um
+\tr{cseg}. A tabela \ref{fig:matriz-5968} contém a matriz de
+comparação de um \tr{cseg} P(5 9 6 8). As \tr{COM-matrix} dos exemplos
+já vistos na figura \ref{fig:graficos-cseg} podem ser vistos na tabela
 \ref{fig:matriz-exemplos}.
 
 \begin{figure}
@@ -472,24 +472,24 @@ com uma operação conhecida como série de contornos adjacentes
 
 A classe de contorno (\tr{CC}) é uma operação importante para a
 verificação de similaridade entre contornos. Obtém-se \tr{CC}
-numerando-se ordenadamente todos os \tr{c-pitch} de $0$ a $(n-1)$,
-sendo $n$ o número total de \tr{c-pitch} do \tr{cseg}. Uma \tr{CC}
-engloba todos os contornos considerados equivalentes. Dois ou mais
-contornos são considerados equivalentes quando geram uma mesma
-\tr{COM-matrix}, ou seja, quando mantêm a mesma estrutura de registro
-entre suas notas. Dessa forma, dado um \tr{cseg} P(5 9 6 8), são
-considerados seus equivalentes os \tr{cseg} (1 5 2 3), (0 10 4 7), (0
-3 1 2) e muitos outros. Todos eles têm (0 3 1 2) como forma normal e
-\tr{CC}.
+numerando-se ordenadamente todas as alturas de contorno de $0$ a
+$(n-1)$, sendo $n$ o número total de alturas de contorno do
+\tr{cseg}. Uma \tr{CC} engloba todos os contornos considerados
+equivalentes. Dois ou mais contornos são considerados equivalentes
+quando geram uma mesma \tr{COM-matrix}, ou seja, quando mantêm a mesma
+estrutura de registro entre suas notas. Dessa forma, dado um \tr{cseg}
+P(5 9 6 8), são considerados seus equivalentes os \tr{cseg} (1 5 2 3),
+(0 10 4 7), (0 3 1 2) e muitos outros. Todos eles têm (0 3 1 2) como
+forma normal e \tr{CC}.
 
 Os Intervalos de Contorno (\tr{CI}) representam as relações entre
-\tr{c-pitch} de uma \tr{CC} e podem ser entendidos de duas formas:
-guardando o valor entre os \tr{c-pitch}
+alturas de contorno de uma \tr{CC} e podem ser entendidos de duas
+formas: guardando o valor entre as alturas de contorno
 \cite{friedmann85:methodology}, ou guardando apenas a direção, mas não
-o valor da diferença entre os \tr{c-pitch}
-\cite{morris93:directions}. Por exemplo, para um mesmo \tr{cseg}
-P(0 3 1 2), o \tr{CI} entre $P_1$ e $P_2$ para
-Friedmann é -2, e para Morris, ``$-$''.
+o valor da diferença entre as alturas de contorno
+\cite{morris93:directions}. Por exemplo, para um mesmo \tr{cseg} P(0 3
+1 2), o \tr{CI} entre $P_1$ e $P_2$ para Friedmann é -2, e para
+Morris, ``$-$''.
 
 O Vetor de Intervalos de Contornos (\tr{CIA}) descreve a freqüência de
 cada tipo de \tr{CI} em uma \tr{CC}. Por exemplo, o \tr{cseg} P(0 3 1
@@ -504,12 +504,12 @@ calculados a partir dos \tr{CI} ascendentes e descendentes.
 A redução de contornos é possível a partir de dois diferentes
 algoritmos \cite{adams76:melodic,morris93:directions}. O algoritmo de
 Adams, criado para definir uma tipologia de contornos, reduz uma
-melodia inteira a apenas quatro \tr{c-pitch}\footnote{Adams utiliza
-  uma terminologia diferenciada da que apresentamos aqui.}: a primeira
-altura, a última, a mais aguda e a mais grave. O algoritmo de Morris,
-processado em várias etapas, reduz a melodia através da observação de
-mudanças de direção entre segmentos adjacentes e eliminação de
-\tr{c-pitch}.
+melodia inteira a apenas quatro alturas de contorno\footnote{Adams
+  utiliza uma terminologia diferenciada da que apresentamos aqui.}: a
+primeira altura, a última, a mais aguda e a mais grave. O algoritmo de
+Morris, processado em várias etapas, reduz a melodia através da
+observação de mudanças de direção entre segmentos adjacentes e
+eliminação de alturas de contorno.
 
 %% texto antigo
 
@@ -585,12 +585,12 @@ apenas por zeros. Um exemplo desta matriz referente ao contorno
 Cada diagonal à direita da diagonal zero recebe o nome INT$_n$, onde
 $n$ representa a diferença de posição entre dois elementos. Dessa
 forma INT$_1$ representa as diferenças de altura entre \eg{cps}
-adjacentes, INT$_2$ representa as diferenças de altura entre
-\eng{c-pitches} separados não adjacentes separados por um elemento e
-assim por diante \cite[p. 231]{marvin.ea87:relating}. Dado um contorno
-(4 3 5 6), INT$_1$ = (- + +) representa as diferenças entre 4 e 3, 3 e
-5, e 5 e 6. INT$_2$ = (+ +) representa as diferenças entre 4 e 5, e 3
-e 6.
+adjacentes, INT$_2$ representa as diferenças de altura entre as
+alturas de contorno separadas não adjacentes separados por um elemento
+e assim por diante \cite[p. 231]{marvin.ea87:relating}. Dado um
+contorno (4 3 5 6), INT$_1$ = (- + +) representa as diferenças entre 4
+e 3, 3 e 5, e 5 e 6. INT$_2$ = (+ +) representa as diferenças entre 4
+e 5, e 3 e 6.
 
 Esta matriz permite a verificação de duas classes de equivalência de
 contornos. A primeira é formada por todos os \eg{cseg} que dividem uma
@@ -672,7 +672,7 @@ parâmetro:
 \end{verbatim}
 
 O \goiaba{} processa contornos representados de forma simples, como
-uma lista de \tr{c-pitch}: \verb!#c(5 9 6)!, e contorno com
+uma lista de alturas de contorno: \verb!#c(5 9 6)!, e contorno com
 duração: \verb!#d(#p(0 5)(1 9)(2 6))!. O segundo formato servirá para
 a futura implementação do tempo no contorno.
 
