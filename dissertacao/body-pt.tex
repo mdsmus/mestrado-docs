@@ -704,21 +704,36 @@ totalmente como cada operação se processa e que funcionalidade tem.
 Um sistema de controle de versão é um programa de computador que tem
 como função gerenciar todas as versões de arquivos de um determinado
 projeto. É normalmente utilizado em desenvolvimento de software,
-embora seu uso não seja restrito a este tipo de atividade. Com um
-sistema de controle de versão é possível trabalhar colaborativamente
-sem que haja conflitos entre as versões dos arquivos dos usuários. É
-possível também comparar versões de arquivos para observar as
-mudanças, voltar a versões antigas para encontrar erros.
+embora seu uso não seja restrito a este tipo de atividade.
+
+%% falar de funcionalidades de um sistema de controle de versão
+Um sistema de controle de versão possibilita o trabalho colaborativo
+sem conflitos entre as versões dos arquivos dos usuários. Com um
+sistema deste é possível comparar versões de arquivos para observar as
+mudanças, voltar a versões antigas para encontrar erros, criar novos
+ramos paralelos de desenvolvimento e outras inúmeras funcionalidades.
 
 %% explicar em linhas gerais como um sistema de controle de versão funciona
 Normalmente inicia-se o controle de versão no diretório raiz de um
 projeto. O sistema cria um repositório oculto para onde todos os
 arquivos e mudanças colocados em controle de versão são copiados. O
-procedimento do usuário normalmente é registrar cada mudança feita em
-um arquivo com um título e descrição, de forma que ele possa
-reconhecer a mudança quando precisar.
+procedimento do usuário normalmente é salvar cada mudança feita em um
+arquivo com um título e descrição, de forma que ele possa reconhecer a
+mudança quando precisar. A figura \ref{fig:controle-de-versao} mostra
+um esquema gráfico deste processo. Neste exemplo o arquivo foo é
+alterado e a linha com o texto \verb!43! é substituída por
+\verb!43 MS!. O sistema compara a versão do diretório com a versão do
+repositório e salva apenas as mudanças. O esquema de funcionamento
+interno dos repositórios é diferente em cada sistema de controle de
+versão, embora o processo para o usuário seja sempre parecido com o
+que apresentamos.
 
-%% falar de funcionalidades de um sistema de controle de versão
+\begin{figure}
+  \centering
+  \includegraphics[scale=.6]{controle-de-versao}
+  \caption{Funcionamento de um sistema de controle de versão}
+  \label{fig:controle-de-versao}
+\end{figure}
 
 %% desenvolver sobre git
 O Git---\eng{Fast Version Control System}
