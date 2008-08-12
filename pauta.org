@@ -1,0 +1,6 @@
+* mostrar tempos verbais diferentes
+* contornos ou contornos melódicos?
+
+%%% Local Variables: 
+%%% mode: org
+%%% End:
