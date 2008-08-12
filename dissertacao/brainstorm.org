@@ -1,0 +1,17 @@
+brainstorm
+
+* análise: comparação e equivalência de materiais.
+* análise: objetivos diferentes.
+* redução: tipologia de adams e algoritmo de morris
+* equivalência a partir de matriz de comparação
+* cognição: dowling
+* terminologias diferentes: friedmann
+* problemas com teorias: clifford
+* estruturação da composição a partir de contornos
+* exemplos com análise de peças?
+* contornos: coerência, schoenberg
+
+
+%%% Local Variables: 
+%%% mode: org
+%%% End:

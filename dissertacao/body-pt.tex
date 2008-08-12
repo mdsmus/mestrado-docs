@@ -1,62 +1,91 @@
 \chapter{Introdução}
 \label{cha:introducao}
 
-A idéia de preservação de contorno e variação de intervalos entre
+Há diversas definições de contorno melódico na literatura
+\cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour},
+cada uma delas relacionada com o objetivo do trabalho de seu autor.
+No presente estudo entendemos que contorno melódico é um conjunto
+ordenado de alturas de notas (chamadas de pontos) cujo valor absoluto
+é ignorado e somente o registro, que pode ser mantido ou variar
+ascendente e descendentemente entre um ponto e outro, é
+considerado. Por exemplo, no fragmento da 5ª Sinfonia de Beethoven
+(figura \ref{fig:5a-sinfonia}), ignoramos todas as alturas e
+intervalos, consideramos que não há diferença de registro entre as
+três primeiras notas, que a nota Mi$\flat$ tem registro mais grave que
+a nota Sol, que a nota Fá tem registro mais agudo que a nota
+Mi$\flat$, e que a nota Ré tem registro mais grave que a nota Fá.
+
+\begin{figure}
+  \centering
+  \includegraphics{5a-sinfonia}
+  \caption{Fragmento da 5ª Sinfonia de Beethoven}
+  \label{fig:5a-sinfonia}
+\end{figure}
+
+O estudo de contornos é importante porque, assim como conjuntos de
+notas e motivos, contornos podem ajudar a dar coerência a uma obra
+musical. Eles representam estruturas musicais manipuláveis através de
+várias operações como inversão e retrogradação, e podem ser abordados
+tanto do ponto de vista da análise quanto da composição.
+
+A idéia de preservação de contornos e variação de intervalos entre
 notas é encontrada em diferentes situações musicais. Há adequação de
 notas à tonalidade em respostas tonais de fugas, em mudanças de modo
 em peças do tipo tema e variações, e em \eng{leitmotifs} e idéias
 fixas, citando apenas exemplos óbvios
 \cite[p. 29]{morris87:composition}. Outras obras têm motivos cujos
-intervalos são pouco a pouco expandidos ou contraídos, como por
+intervalos são progressivamente expandidos ou contraídos, como por
 exemplo ocorre no início da \opus{Música para Cordas, Percussão e
   Celesta}, de Béla Bartók.
 
 Teóricos musicais reconhecem que ouvintes têm maior acuidade na
 percepção de semelhança de contornos do que na semelhança de
 alturas. Por isso novas teorias para comparação de contornos se
-tornaram necessárias à área da Análise Musical
+tornaram necessárias a área da Análise Musical
 \cite[p. 226]{marvin.ea87:relating}.
+%% marcos: o que não acha bom?
 
-Há diversas definições de contorno melódico na literatura
-\cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour},
-cada uma delas relacionada com o objetivo do trabalhos de seu
-autor. No presente estudo entendemos que contorno melódico é um
-conjunto ordenado de alturas de notas (chamadas de pontos) cujo valor
-absoluto é ignorado e somente o registro, que pode ser mantido ou
-variar ascendente e descendentemente entre um ponto e outro, é
-considerado.
-
-O estudo de contornos é importante porque, assim como conjuntos de
-notas e motivos, contornos ajudam a dar coerência musical a uma
-obra. Eles representam estruturas musicais manipuláveis através de
-várias operações como inversão e retrogradação, e podem ser abordados
-tanto do ponto de vista da análise quanto da composição.
-
-No campo da percepção musical contorno melódico é uma importante
-característica para o reconhecimento de melodias familiares \cite[p.
+No campo da percepção musical o contorno melódico é um importante
+recurso para o reconhecimento de melodias familiares \cite[p.
 136]{dowling.ea86:music}. Além disso é reconhecido que ouvintes têm
 maior acuidade na percepção de semelhança de contornos do que na
-semelhança de alturas. Por isso novas teorias para comparação de
-contornos se tornaram necessárias à área da Análise Musical
+semelhança de alturas.
+%% referência acima é a mesma da frase seguinte
+Por isso novas teorias para comparação de contornos se tornaram
+necessárias à área da Análise Musical
 \cite[p. 226]{marvin.ea87:relating}.
 
 Há estudos e aplicações de contornos melódicos também em outras áreas
-da música. Na área da Etnomusicologia contornos são usados para
-representar e classificar melodias populares
-\cite{adams76:melodic}. Na área da Computação musical,
-especificamente, \eng{Music Information Retrieval}, contornos são
-utilizados em sistemas \eng{query by humming} --- de busca em bases de
-dados a partir de melodias cantadas \cite{ghias.ea95:query}.
+da música como Etnomusicologia e Computação Musical. Na área da
+Etnomusicologia contornos são usados para representar e classificar
+melodias populares \cite{adams76:melodic}. Na área da Computação
+musical, especificamente, \eng{Music Information Retrieval}, contornos
+são utilizados em sistemas \eng{query by humming} --- de busca em
+bases de dados a partir de melodias cantadas \cite{ghias.ea95:query}.
 
+Embora haja na literatura estudos sobre contornos associados a duração
+\cite{beard03:contour}, não abordamos este aspecto neste
+trabalho. Percebemos ao longo do processo que incluir a duração em
+nosso estudo demandaria mais tempo do que o disponível e
+inviabilizaria o projeto.
+
+Neste estudo consideramos como operação de contorno todo tipo de
+manipulação de um contorno. Dessa forma consideramos operações
+procedimentos como inversão, retrogradação, expansão e subconjuntos de
+contorno, bem como procedimentos da literatura de contornos como
+matriz de comparação, classe de contorno, INT$_n$, e várias
+outras. Estas operações fornecidas pelas teorias de contornos são
+detalhadas na seção \ref{sec:teor-sobre-cont}.
+
+
+%% marcos: o que mais deve estar na introdução?
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
 
 O presente trabalho tem como principais objetivos a composição de uma
-obra musical com base em combinações de operações de contorno e a
+obra musical com base em combinações de operações de contornos e a
 produção do seu memorial. O instrumental da obra é um quinteto de
-madeiras com trompa e as operações de contorno são transposição,
-rotação, inversão, retrogradação, expansão, justaposição e
-superposição.
+madeiras de aproximadamente 10 minutos de duração.
 
 São objetivos secundários deste trabalho:
 
@@ -68,37 +97,69 @@ São objetivos secundários deste trabalho:
 \item Compreensão do estado de arte de contornos melódicos.
 \end{enumerate}
 
-O uso sistemático de contornos melódicos para geração de material
-composicional e como determinante composicional é um assunto carente
-de literatura. Seu estudo poderá colaborar com a área de Composição.
+O uso sistemático de contornos melódicos tanto para geração de
+material composicional quanto como determinante composicional é um
+assunto carente de literatura.
+%% rever frase. substituir 'colaborar'
+%% marcos: não sei bem o que colocar
+Seu estudo poderá colaborar com a área de Composição.
+
+\section{Metodologia}
+\label{sec:metodologia}
+
+Para a realização deste trabalho cumprimos as seguintes atividades:
+
+\begin{enumerate}
+\item Revisão de literatura sobre contornos melódicos
+
+\item Mapeamento de contornos para elementos musicais
+
+  Trata-se da representação de elementos musicais como altura e
+  duração para contornos. Envolveu o estudo das particularidades de
+  tais elementos como representação numérica de notas, intervalos e
+  ritmo, bem como estudo de possíveis operações de contornos.
+
+\item Composição de estudos para experimento de possibilidades com
+  contornos melódicos.
+
+  Compomos duas peças para experimentar possibilidades com operações
+  de contornos melódicos\footnote{Vide partituras destas peças nos
+    anexos deste trabalho.}. A primeira---\opus{Como é que se preenche
+    um contorno melódico? Op.3}---contém um único contorno melódico e
+  operações de preenchimento deste contorno. A segunda---\opus{Bobó de
+    legumes. Op.5}---contém também um único contorno e suas operações
+  e concatenações. Com estes experimentos foi possível aprofundar a
+  prática da composição de contornos antes de compor a obra final do
+  mestrado.
+
+\item Desenvolvimento de um programa de computador para processar
+  operações com contornos melódicos (vide seção
+  \ref{sec:goiaba-software-para}).
+
+  Desenvolvemos um software que lida com contornos melódicos,
+  operações e combinações. Ele retorna representações simbólicas e
+  gráficas de operações de transposição, inversão, retrogradação e
+  rotação de um dado contorno. Além disso ele permite a combinação de
+  operações e sua concatenação. Este software ajudou no mapeamento e
+  processamento de contornos melódicos no estudo do estado de arte, na
+  composição dos experimentos, e na composição da obra final.
+  
+\item Composição da peça (vide capítulo \ref{cha:anal-da-comp}).
+
+\item Escrita da dissertação
+\end{enumerate}
 
 \chapter{Sobre contornos}
 \label{cha:sobre-contornos}
 
-%% brainstorm
-
-% análise: comparação e equivalência de materiais.
-% análise: objetivos diferentes.
-% redução: tipologia de adams e algoritmo de morris
-% equivalência a partir de matriz de comparação
-% cognição: dowling
-% terminologias diferentes: friedmann
-% problemas com teorias: clifford
-% estruturação da composição a partir de contornos
-% exemplos com análise de peças?
-% contornos: coerência, schoenberg
-
-%% lembrete: falar que não abordaremos o aspecto duração
-
-%% lembrete: falar que consideramos operação tudo o que parte do
-%% contorno: subconjuntos, retrógrado, int, etc
-
 Teorias de contornos foram desenvolvidas primariamente como técnicas
-analíticas aplicáveis a composições atonais que não possuem as típicas
-características musicais que dão coerência a composições tonais
-\cite[p. 1]{beard03:contour}. Exemplos destas características são
-frases, períodos, temas e harmonia funcional.
+analíticas aplicáveis a composições atonais que não possuem as
+características musicais típicas como frase, períodos, temas e
+harmonia funcional, que dão coerência a composições tonais
+\cite[p. 1]{beard03:contour}.
 
+%% comentar o sucesso e o que foi achado de diferente nas análises de
+%% friedmann, clifford e beard
 Embora teorias de contorno não tenham surgido para análise de obras
 tonais, a análise a partir da perspectiva dos contornos já se mostrou
 eficiente também neste tipo de obra. Assim, além de obras de Schönberg
@@ -108,14 +169,17 @@ analisadas sob a ótica das teorias de contornos.
 
 Contorno é um conjunto ordenado de elementos distintos, com ou sem
 repetição, numerados de forma ascendente
-\cite[p. 206]{morris93:directions}. Por definição contornos musicais
-são ordenados \cite[p. 228]{marvin.ea87:relating}.
+\cite[p. 206]{morris93:directions}.
 
 Um contorno pode ser interpretado como registro, dinâmica ou densidade
 de acordes no tempo \cite[p. 206]{morris93:directions}
-\cite[p. 22]{clifford95:contour}. Podemos ver representações do
-contorno \contorno{4\:3\:5\:6} na figura
-\ref{fig:non-melodic-contours}.
+\cite[p. 22]{clifford95:contour}. Um dado contorno (4 3 5 6), por
+exemplo, pode ser associado ao parâmetro registro com as notas Lá, Fá,
+Si$\flat$ e Ré (figura \ref{fig:pitches-in-time}); pode ser associado
+a densidades de acordes com acordes de duas, uma, quatro e sete notas
+(figura \ref{fig:chord-densities-in-time}); ou pode ainda ser
+associado aos graus de dinâmica \music{p}, \music{ppp}, \music{mf} e
+\music{fff} (figura \ref{fig:dynamics-in-time}).
 
 \begin{figure}
   \centering
@@ -129,22 +193,25 @@ contorno \contorno{4\:3\:5\:6} na figura
   \subfloat[dinâmicas no tempo]{
     \includegraphics[scale=1]{dynamics-in-time}
     \label{fig:dynamics-in-time}}
-  \caption{Contornos \contorno{4\:3\:5\:6} não melódicos}
+  \caption{Contornos (4 3 5 6) não melódicos}
   \label{fig:non-melodic-contours}
 \end{figure}
 
 \section{Percepção de contornos}
 \label{sec:perc-de-cont}
 
+%% substituir "característica musical"
 Contorno melódico é uma importante característica musical no
 reconhecimento de melodias familiares
 \cite[p. 136]{dowling.ea86:music}. Esta afirmação é endossada por
 experimentos realizados por White \cite{white60:recognition}, e
 Dowling e Fujitani \cite{dowling.ea71:contour} nos quais ouvintes
 foram submetidos ao reconhecimento de versões de canções familiares
-que tinham intervalos melódicos e/ou ritmo eram modificados e o
-contorno preservado.
+que tinham ritmo e/ou intervalos melódicos modificados e o contorno
+preservado.
 
+%% talvez merge
+%% que "outros elementos"?
 Implicações do estudo de contornos na música do século XX são mais
 significativas para os ouvintes do que para os compositores. Isto
 porque a percepção de contornos é mais geral do que a percepção de
@@ -160,16 +227,14 @@ tensão entre harmonias \cite[p. 175]{hindemith41:craft}.
 \section{Contorno como determinante composicional}
 \label{sec:cont-como-determ}
 
-Clifford afirma que
-
 %%% quando citamos literalmente, é bom fazer algum comentario
-
-\citacaolonga{contour, in absence of other pervasive systems of pitch
-  organization, represents a structural factor equal in significance
-  to pitch or set class relations}{contorno, na falta de outros
-  sistemas ocupantes de organização de altura, representa um fator
-  estrutural igual em significado a relações de alturas ou de classes
-  de conjuntos}{p. 157}{clifford95:contour}
+Clifford afirma que \citacaoinline{contour, in absence of other
+  pervasive systems of pitch organization, represents a structural
+  factor equal in significance to pitch or set class
+  relations}{contorno, na falta de outros sistemas ocupantes de
+  organização de altura, representa um fator estrutural igual em
+  significado a relações de alturas ou de classes de
+  conjuntos}{p. 157}{clifford95:contour}
 
 No nível melódico relações de contorno podem associar segmentos de
 contorno distintos entre dois ou mais segmentos. Neste nível contorno
@@ -179,14 +244,19 @@ pode contribuir com um processo de transformação melódica
 \section{Teorias sobre contornos}
 \label{sec:teor-sobre-cont}
 
+%% usar termos cseg, c-space, etc em português
+
+%% em algum lugar colocar tabela de classes de segmentos de contorno
+
 Teorias que visam sistematizar o estudo de contornos dispõem de várias
 operações para mapeamento e comparação de contornos
 \cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}
-\note{período fragmentado}. A partir das idéias destas teorias é
-possível, por exemplo, reconhecer semelhanças entre as duas melodias
-de quatro notas da figura \ref{fig:ly-cseg-5968}, cujo contorno está
-representado em gráfico cartesiano na figura
-\ref{fig:cseg-5968}. Outros exemplos de melodias de contornos
+\note{período fragmentado}.  A partir das idéias destas teorias é
+possível, por exemplo, reconhecer semelhanças de registro entre as
+duas melodias de quatro notas da figura \ref{fig:ly-cseg-5968}, cujo
+contorno está representado graficamente na figura
+\ref{fig:cseg-5968}. Estas semelhanças são identificadas apenas se
+observamos os seus contornos. Outros exemplos de melodias de contornos
 semelhantes podem ser vistos nas figuras \ref{fig:melodias-cseg} e
 \ref{fig:graficos-cseg}.
 
@@ -234,22 +304,23 @@ de contorno \cite{morris87:composition}. O espaço de contorno
 elementos organizados do grave para o agudo desconsiderando os
 intervalos exatos entre eles. Leva-se em conta apenas a relação entre
 os registros dos elementos. O \tr{c-space} pode ser entendido como um
-grande conjunto de \tr{c-pitch} (alturas de contorno).
+grande conjunto de alturas de contorno (\tr{c-pitch}).
 
 Cada conjunto de \tr{c-pitch} contido em um \tr{c-space} é chamado de
-\tr{cseg} (segmento de contorno)\footnote{Trata-se de uma idéia
+segmento de contorno (\tr{cseg})\footnote{Trata-se de uma idéia
   semelhante à da geometria, de reta e segmento de reta, onde o
   \tr{c-space} seria análogo à reta, e o \tr{cseg} ao segmento de
-  reta.}. Estes \tr{cseg} podem conter elementos contíguos ou não do
-\tr{c-space}. Subconjuntos de \tr{cseg} são chamados \tr{csubseg}. A
-figura \ref{fig:c-space} contém três exemplos de um mesmo \tr{c-space}
-de 10 \tr{c-pitch} enumerados do mais grave (0) para o mais agudo
-(9). Na figura \ref{fig:c-space5968} o \tr{c-space} contém o \tr{cseg}
-P, com os \tr{c-pitch} 5, 9, 6 e 8. Na figura \ref{fig:c-space7420} o
-\tr{c-space} contém o \tr{cseg} M, com \tr{c-pitch} 7, 4, 2 e 0. Ainda
-nesta figura o \tr{cseg} M contém o \tr{csubseg} O, com \tr{c-pitch} 4
-e 2. Por último, na figura \ref{fig:c-space564} o \tr{c-space} contém
-o \tr{cseg} N, com os \tr{c-pitch} não adjacentes 5, 6 e 4.
+  reta.}. Estes \tr{cseg} podem conter elementos contíguos ou não
+contíguos do \tr{c-space}. Subconjuntos de \tr{cseg} são chamados
+\tr{csubseg}. A figura \ref{fig:c-space} contém três exemplos de um
+mesmo \tr{c-space} de 10 \tr{c-pitch} enumerados do mais grave (0)
+para o mais agudo (9). Na figura \ref{fig:c-space5968} o \tr{c-space}
+contém o \tr{cseg} P, com os \tr{c-pitch} 5, 9, 6 e 8. Na figura
+\ref{fig:c-space7420} o \tr{c-space} contém o \tr{cseg} M, com
+\tr{c-pitch} 7, 4, 2 e 0. Ainda nesta figura o \tr{cseg} M contém o
+\tr{csubseg} O, com \tr{c-pitch} 4 e 2. Por último, na figura
+\ref{fig:c-space564} o \tr{c-space} contém o \tr{cseg} N, com os
+\tr{c-pitch} não adjacentes 5, 6 e 4.
 
 \begin{figure}
   \centering
@@ -270,13 +341,13 @@ o \tr{cseg} N, com os \tr{c-pitch} não adjacentes 5, 6 e 4.
   \label{fig:c-space}
 \end{figure}
 
-Contornos são representados por letras maiúsculas e têm seus elementos
-representados por numerais subscritos. Estes numerais indicam a
-posição destes elementos em ordem temporal
+Os contornos são representados por letras maiúsculas e têm seus
+elementos representados por numerais subscritos, como A$_3$. Estes
+numerais indicam a posição destes elementos em ordem temporal
 \cite{marvin.ea87:relating}. Por exemplo, um contorno $P$ de quatro
-elementos tem a seguinte configuração: P(P$_0$ P$_1$ P$_3$
+elementos tem a seguinte configuração: P(P$_0$ P$_1$ P$_2$
 P$_3$). Dessa forma, dado um contorno P(5 9 6 8), P$_0$ é igual a 5,
-P$_1$ é igual a 9, P$_2$ é igual a 6, e P$_3$ é igual a 8.
+P$_1$ é igual a 9 e P$_2$ é igual a 6.
 
 %% confirmar procedimento para expansão de intervalos
 Operações como retrogradação e rotação são semelhantes às realizadas
@@ -285,6 +356,7 @@ multiplicação dos intervalos entre cada \tr{c-pitch} por um dado
 fator. Por exemplo, a expansão de fator 2 do contorno (5 9 6 8) é (5
 13 7 11).
 
+%% inserir exemplos gráficos
 A operação de inversão de um contorno P de ordem $q$ é representada
 por $IP$, e é matematicamente calculada por
 IP$_n=(q-1-$P$_n)$. Portanto, dado um \tr{cseg} P(5 9 6 8), de ordem
@@ -294,6 +366,9 @@ ainda relacionar a inversão entre elementos através da matriz de
 comparação. Calcula-se esta inversão com a operação
 $COM(P_a,P_b)=-COM(IP_a,IP_b)$.
 
+%% reescrever para tirar nota
+%% marcos: top colocou esta nota, mas estamos entendendo que matrizes
+%% são operações. posso manter o original?
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação (\tr{COM}), matriz de comparação
 (\tr{COM-matrix}) e classe de contorno (\tr{CC}) \note{fica parecendo
@@ -315,12 +390,12 @@ $COM(a,b)=-COM(b,a)$.
 A \tr{COM-matrix} é uma matriz bidimensional que compara um \tr{cseg}
 com ele próprio. Esta matriz mostra os resultados da função de
 comparação \tr{COM} para todos os \tr{c-pitch} de um \tr{cseg}. A
-tabela \ref{tab:matriz-5968} contém a matriz de comparação de um
+tabela \ref{fig:matriz-5968} contém a matriz de comparação de um
 \tr{cseg} P(5 9 6 8). As \tr{COM-matrix} dos exemplos já vistos na
 figura \ref{fig:graficos-cseg} podem ser vistos na tabela
-\ref{tab:matriz-exemplos}.
+\ref{fig:matriz-exemplos}.
 
-\begin{table}
+\begin{figure}
   \centering
   \subfloat[cseg P(5 9 6 8)]{
     \begin{tabular}{c|cccc}
@@ -331,7 +406,7 @@ figura \ref{fig:graficos-cseg} podem ser vistos na tabela
       $6$ & $-$ & $+$ & $0$ & $+$ \\
       $8$ & $-$ & $+$ & $-$ & $0$
     \end{tabular}
-    \label{tab:matriz-5968}
+    \label{fig:matriz-5968}
   }
   \qquad
   \subfloat[cseg Q(5 7 6 8)]{
@@ -343,7 +418,7 @@ figura \ref{fig:graficos-cseg} podem ser vistos na tabela
       $6$ & $-$ & $+$ & $0$ & $+$ \\
       $8$ & $-$ & $-$ & $-$ & $0$
     \end{tabular}
-    \label{tab:matriz-5768}
+    \label{fig:matriz-5768}
   }
   \qquad
   \subfloat[cseg R(3 0 5 1)]{
@@ -355,24 +430,26 @@ figura \ref{fig:graficos-cseg} podem ser vistos na tabela
       $5$ & $-$ & $-$ & $0$ & $-$ \\
       $1$ & $+$ & $-$ & $+$ & $0$
     \end{tabular}
-    \label{tab:matriz-3051}
+    \label{fig:matriz-3051}
   }
   \caption{Exemplos de \tr{COM-matrix}}
-  \label{tab:matriz-exemplos}
-\end{table}
+  \label{fig:matriz-exemplos}
+\end{figure}
 
 As diagonais superiores à diagonal principal zero da \tr{COM-matrix}
 são chamadas de INT$_n$, onde $n$ é o número da diagonal: 1 para a
 superior mais próxima da diagonal zero, 2 para a seguinte, 3 para a
-posterior e assim por diante. A diagonal INT$_1$ traz comparações de
-registros entre elementos adjacentes do \tr{cseg}. Em P(5 9 6 8), por
-exemplo, INT$_1=(+ - +)$, ou seja, o movimento melódico é ascendente
-entre 5 e 9, descendente entre 9 e 6, e ascendente entre 6 e 8. Esta
-comparação é feita também com uma operação conhecida como série de
-contornos adjacentes (\tr{CAS}) \footnote{Em teorias de contornos não
-  há consenso em relação a terminologia. Por isso há idéias
-  semelhantes com nomes diferentes, como INT$_1$ e \tr{CAS}
-  \cite{friedmann87:response}.}.
+posterior e assim por diante. 
+%% marcos: eu dou exemplos de int logo abaixo. o que quer dizer com
+%% apontar valores no exemplo?
+A diagonal INT$_1$ traz comparações de registros entre elementos
+adjacentes do \tr{cseg}. Em P(5 9 6 8), por exemplo, INT$_1=(+ - +)$,
+ou seja, o movimento melódico é ascendente entre 5 e 9, descendente
+entre 9 e 6, e ascendente entre 6 e 8. Esta comparação é feita também
+com uma operação conhecida como série de contornos adjacentes
+(\tr{CAS}) \footnote{Em teorias de contornos não há consenso em
+  relação a terminologia. Por isso há idéias semelhantes com nomes
+  diferentes, como INT$_1$ e \tr{CAS} \cite{friedmann87:response}.}.
 
 A classe de contorno (\tr{CC}) é uma operação importante para a
 verificação de similaridade entre contornos. Obtém-se \tr{CC}
@@ -540,19 +617,23 @@ de comparação representada pela diagonal superior à diagonal zero.
 \chapter{Ferramentas}
 \label{cha:ferramentas}
 
-\section{Goiaba---software para processar contornos}
+%% fazer introdução sobre ferramentas
+
+\section{Goiaba, um software para processar contornos}
 \label{sec:goiaba-software-para}
 
 O \goiaba{} é desenvolvido em Common Lisp com o compilador SBCL
-\cite{team07:sbcl}. A classe \texttt{ponto} define pontos cartesianos
-como (x, y), a classe \texttt{contorno-duracao} é uma lista de pontos
-como ((x, y) (z, w)), e a classe \texttt{contorno-simples} define
-apenas as alturas dos contornos como (y w). Algumas macros de leitura
-foram definidas para simplificar o processo de criar instâncias de
-objetos. Por exemplo, para criar uma instância do tipo \texttt{ponto}
-pode-se fazer normalmente \texttt{(make-instance 'ponto :x 0 :y 3)} ou
-simplesmente \verb!#p(0 3)! com a macro de leitura. Da mesma maneira,
-um \texttt{contorno-duracao} com dois pontos pode ser instanciado com
+\cite{team07:sbcl}.
+%% falar sobre as classes do goiaba
+A classe \texttt{ponto} define pontos cartesianos como (x, y), a
+classe \texttt{contorno-duracao} é uma lista de pontos como ((x, y)
+(z, w)), e a classe \texttt{contorno-simples} define apenas as alturas
+dos contornos como (y w). Algumas macros de leitura foram definidas
+para simplificar o processo de criar instâncias de objetos. Por
+exemplo, para criar uma instância do tipo \texttt{ponto} pode-se fazer
+normalmente \texttt{(make-instance 'ponto :x 0 :y 3)} ou simplesmente
+\verb!#p(0 3)! com a macro de leitura. Da mesma maneira, um
+\texttt{contorno-duracao} com dois pontos pode ser instanciado com
 \verb!#d(#p(0 3) #p(1 4))! ao invés de usar \texttt{make-instance}.
 
 As operações em contornos são implementadas em métodos,
@@ -619,25 +700,88 @@ totalmente como cada operação se processa e que funcionalidade tem.
 \subsection{Sistema de controle de versão Git}
 \label{sec:sistema-de-controle}
 
+%% dizer o que é um sistema de controle de versão
+Um sistema de controle de versão é um programa de computador que tem
+como função gerenciar todas as versões de arquivos de um determinado
+projeto. É normalmente utilizado em desenvolvimento de software,
+embora seu uso não seja restrito a este tipo de atividade.
+
+%% falar de funcionalidades de um sistema de controle de versão
+Um sistema de controle de versão possibilita o trabalho colaborativo
+sem conflitos entre as versões dos arquivos dos usuários. Com um
+sistema deste é possível comparar versões de arquivos para observar as
+mudanças, voltar a versões antigas para encontrar erros, criar novos
+ramos paralelos de desenvolvimento e outras inúmeras funcionalidades.
+
+%% explicar em linhas gerais como um sistema de controle de versão funciona
+Normalmente inicia-se o controle de versão no diretório raiz de um
+projeto. O sistema cria um repositório oculto para onde todos os
+arquivos e mudanças colocados em controle de versão são copiados. O
+procedimento do usuário normalmente é salvar cada mudança feita em um
+arquivo com um título e descrição, de forma que ele possa reconhecer a
+mudança quando precisar. A figura \ref{fig:controle-de-versao} mostra
+um esquema gráfico deste processo. Neste exemplo o arquivo foo é
+alterado e a linha com o texto \verb!43! é substituída por
+\verb!43 MS!. O sistema compara a versão do diretório com a versão do
+repositório e salva apenas as mudanças. O esquema de funcionamento
+interno dos repositórios é diferente em cada sistema de controle de
+versão, embora o processo para o usuário seja sempre parecido com o
+que apresentamos.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=.6]{controle-de-versao}
+  \caption{Funcionamento de um sistema de controle de versão}
+  \label{fig:controle-de-versao}
+\end{figure}
+
+%% desenvolver sobre git
+O Git---\eng{Fast Version Control System}
+
+%% falar sobre controle de versão neste trabalho (programa, projeto,
+%% composições e dissertação)
+Utilizamos o sistema de controle de versão Git no desenvolvimento de
+todo o trabalho. É possível baixar o repositório de todo este trabalho
+em \url{git.genos.mus.br/marcos-mestrado.git}. Usamos controle de
+versão no gerenciamento do desenvolvimento do Goiaba, nos experimentos
+composicionais, na obra final, no projeto e na escrita desta
+dissertação.
+
+A possibilidade de criar ramos diferentes de desenvolvimento nos
+possibilitou fazer a refatoração do Goiaba ao mesmo tempo que podíamos
+ter em funcionamento uma versão estável anterior.
+
+Na composição o sistema possibilitou, por exemplo, consultas
+posteriores a fragmentos que havíamos desistido de manter na obra. Com
+um sistema deste tipo é possível reconstituir o passo-a-passo do
+compositor na criação de uma obra musical.
+
+A produção desta dissertação ilustra o uso de controle de versão em um
+projeto colaborativo. Em um trabalho sem este tipo de ferramenta,
+enquanto o orientador faz notas no texto, o autor não pode editá-lo
+para não criar conflitos entre as versões. Neste trabalho pudemos
+trabalhar sempre simultaneamente.
+
 \chapter{Análise da composição}
 \label{cha:anal-da-comp}
 %% falar de contornos, motivos, forma, altura, timbre, gestual
 
-A obra \obra{} é um quinteto de madeiras com trompa em movimento
-único. Sua composição foi focada no uso sistemático de contornos
-melódicos e não-melódicos. Além de contornos trabalhamos com
-proporções, metas composicionais, gestos e motivos em um nível
-secundário.
+A obra \obra{} é um quinteto de madeiras em movimento único. Sua
+composição foi focada no uso sistemático de contornos melódicos e
+não-melódicos. Além de contornos, trabalhamos com proporções, metas
+composicionais, gestos e motivos em um nível secundário.
 
-A obra contém três estruturas musicais a partir das quais todo o
-material composicional é derivado. A primeira estrutura é uma
-bifonia---representada pela figura \ref{fig:bifonia}. A segunda
-estrutura é o motivo $\alpha$\footnote{Os motivos são descritos na
+%% bifonia: paulo lima sugeriu citar que encontrei uso deste termo em
+%% widmer
+A obra contém três elementos musicais a partir dos quais todo o
+material composicional é derivado. O primeiro elemento é uma
+bifonia---representada pela figura \ref{fig:bifonia}. O segundo
+elemento é o motivo $\alpha$\footnote{Os motivos são descritos na
   seção \ref{sec:uso-de-motivos}.}, o principal da obra, representado
 pela figura \ref{fig:motivo-alfa}. Este motivo é derivado por meio de
-alternância entre as notas das duas vozes da bifonia. A terceira
-estrutura é o contorno principal da peça \contpr{} (vide figura
-\ref{fig:534120}). Este é o contorno do motivo $\alpha$.
+alternância entre as notas das duas vozes da bifonia. O terceiro
+elemento é o contorno principal da peça \contpr{}, representado pela
+figura \ref{fig:534120}. Este é o contorno do motivo $\alpha$.
 
 \begin{figure}
   \centering
@@ -670,9 +814,11 @@ com proporções baseadas na razão áurea.
 %%
 Porém, como admitimos uma tolerância relativamente alta entre
 planejamento e resultado final, estas proporções ficaram diferentes na
-versão final da obra. Admitimos esta alta tolerância porque decidimos
-concentrar esforços no objetivo principal do trabalho e deixar
-questões como proporções formais em segundo plano.
+versão final da obra.
+%% dizer o quanto desviei
+Admitimos esta alta tolerância porque decidimos concentrar esforços no
+objetivo principal do trabalho e deixar questões como proporções
+formais em segundo plano.
 
 A tabela \ref{tab:secoes-obra} contém informações de cada uma das
 seções da obra como a duração, andamento, a localização do seu início
@@ -698,17 +844,18 @@ e fim pelo número de compasso e letra de ensaio.
 
 O planejamento inicial desta peça foi feito pouco menos de um ano
 antes de sua composição. Neste planejamento detalhamos elementos de
-alto nível de abstração\footnote{Consideramos estruturas musicais como
-  temas, movimentos, seções como de alto nível de abstração, e notas e
-  durações como de baixo nível de abstração.}, como forma, seções,
-microseções, proporções, andamentos, metas composicionais e
-texturas. O resultado deste planejamento pode ser visto na tabela
+alto nível de abstração como forma, seções, microseções, proporções,
+andamentos, metas composicionais e texturas. Consideramos estruturas
+musicais como temas, movimentos, seções como de alto nível de
+abstração, e notas e durações como de baixo nível de abstração. O
+resultado deste planejamento pode ser visto na tabela
 \ref{tab:planejamento-inicial}. Muitos dos elementos planejados foram
 modificados em função da própria dinâmica da composição. À medida que
-a música foi criada adaptamos o planejamento privilegiando a questão
-artística.
+a música foi criada adaptamos o planejamento privilegiando o resultado
+artístico.
 
 \begin{table}
+  %% aumentar a fonte das palavras
   \includegraphics[scale=.81]{planejamento-inicial}
   \caption{Planejamento inicial da peça}
   \label{tab:planejamento-inicial}
@@ -718,7 +865,7 @@ No planejamento previmos criar seis seções agrupáveis duas a duas (Aa,
 Ab, Ba, Bb, Ca, Cb). Durante a composição dividimos a seção Cb em dois
 pedaços, criando então uma nova seção.
 
-As seções menores estão desmembradas em microseções (Aaa, Aab, Aac e
+As seções menores estão desmembradas em sub-seções (Aaa, Aab, Aac e
 assim por diante). Estas divisões mínimas foram planejadas para conter
 microgestos, mas ao longo do processo preferimos trabalhar com gestos
 maiores e usá-las para marcar mudanças de instrumental, de timbre, ou
@@ -728,17 +875,19 @@ composição.
 
 O uso destas microseções para mudança de instrumental pode ser visto
 na seção inicial da peça (vide tabela
-\ref{tab:microsecoes-primeira-secao}). A microseção Aaa (compassos
-1--8) compreende o solo do fagote e tem 29 segundos. a microseção Aab
-(compassos 9--14) compreende o trio entre fagote, clarinete e oboé e
-tem 22 segundos. A microseção Aac (compassos 15--22), de 29 segundos
-compreende o duo entre a melodia inicial no clarinete e o contraponto
-da flauta. A microseção Aad (compassos 23--28), de 22 segundos
-compreende o quinteto completo. Por último, a microseção Aae
-(compassos 29--36), de 29 segundos, compreende o quarteto
-fl./ob./cl./fg. e o aumento da densidade.
+\ref{tab:microsecoes-primeira-secao}). A microseção \textbf{Aaa}
+(compassos 1--8) compreende o solo do fagote e tem 29 segundos. a
+microseção \textbf{Aab} (compassos 9--14) compreende o trio entre
+fagote, clarinete e oboé e tem 22 segundos. A microseção \textbf{Aac}
+(compassos 15--22), de 29 segundos compreende o duo entre a melodia
+inicial no clarinete e o contraponto da flauta. A microseção
+\textbf{Aad} (compassos 23--28), de 22 segundos compreende o quinteto
+completo. Por último, a microseção \textbf{Aae} (compassos 29--36), de
+29 segundos, compreende o quarteto fl./ob./cal./fg. e o aumento da
+densidade.
 
 \begin{table}
+  %% mudar cores
   \centering
   \begin{tabular}{r|rrrrr}
     & Aaa & Aab & Aac & Aad & Aae \\
@@ -753,6 +902,7 @@ fl./ob./cl./fg. e o aumento da densidade.
   \label{tab:microsecoes-primeira-secao}
 \end{table}
 
+%% explicar melhor este período:
 Os números 1, 2 e 3 associados às metas representam seu grau de
 importância na peça.
 %% verificar: gradação ou graduação
@@ -767,12 +917,15 @@ fato textura homofônica.
 \subsection{Descrição das seções}
 \label{sec:descricao-das-secoes}
 
-A seção inicial da obra contém em toda sua extensão a repetição de uma
-mesma melodia (vide figura \ref{fig:melodia-inicial}). Esta repetição
-é alternada entre os instrumentos. Ainda nesta seção, a partir do
+%% usar nome das seções ao invés de primeira, segunda
+
+A seção 1, no início da obra\footnote{Vide seções na tabela
+  \ref{tab:secoes-obra}.}, contém em toda sua extensão a repetição de
+uma mesma melodia (figura \ref{fig:melodia-inicial}). Esta repetição é
+alternada entre os instrumentos. Ainda nesta seção, a partir do
 compasso 9, o motivo $\alpha$ (figura \ref{fig:motivo-alfa}) aparece
 simultaneamente em duas vozes formando uma textura contrapontística
-(vide figura \ref{fig:contraponto-alfa}). O progressivo aumento da
+(figura \ref{fig:contraponto-alfa}). O progressivo aumento da
 densidade e do nível de dinâmica colaboram com o desenho gestual da
 seção, que culmina no acorde do compasso 36.
 
@@ -785,22 +938,22 @@ seção, que culmina no acorde do compasso 36.
 
 \begin{figure}
   \centering
+  %% consertar 'alfa' no lilypond
   \includegraphics{contraponto-alfa}
   \caption{Contraponto com motivo $\alpha$}
   \label{fig:contraponto-alfa}
 \end{figure}
 
-A segunda seção da obra contém uma textura de entradas defasadas de
-notas longas. Estas notas---Si$\flat$2, Mi3, Si$\flat$3 Dó$\sharp$5, e
+A seção 2 contém uma textura de entradas defasadas de notas
+longas. Estas notas---Si$\flat$2, Mi3, Si$\flat$3 Dó$\sharp$5, e
 Sol5---estão em diferentes registros e estão presentes nas linhas de
-diferentes instrumentos (vide figura
-\ref{fig:contorno-notas-longas}). As maiores características são a
-estaticidade das linhas dos instrumentos e o colorido timbrístico. O
-seu gestual forma um arco em que a densidade aumenta até um pico, no
-compasso 47, e gradativamente descresce (vide figura
-\ref{fig:pico-densidade-secao-2}). Esta densidade está relacionada ao
-estreitamento e posteriormente ao alargamento das entradas
-instrumentais.
+diferentes instrumentos (figura \ref{fig:contorno-notas-longas}). As
+maiores características são a estaticidade das linhas dos instrumentos
+e o colorido timbrístico. O seu gestual forma um arco em que a
+densidade aumenta até um pico, no compasso 47, e gradativamente
+descresce (figura \ref{fig:pico-densidade-secao-2}). Esta densidade
+está relacionada ao estreitamento e posteriormente ao alargamento das
+entradas instrumentais.
 
 \begin{figure}
   \centering
@@ -812,41 +965,40 @@ instrumentais.
 \begin{figure}
   \centering
   %% inserir figura de 3 a 4 compassos seção 2, pico de densidade
-  \caption{Pico de densidade na segunda seção}
+  \caption{Pico de densidade na seção 2}
   \label{fig:pico-densidade-secao-2}
 \end{figure}
 
-O início da quarta seção ocorre antes do final da terceira, que tem um
+O início da seção 4 ocorre antes do final da seção 3, que tem um
 desfecho gradativo, formando uma espécie de dégradé entre estas seções
-(vide figura \ref{fig:transicao-3-4}). A quarta seção é um fugato com
-sujeito e contra-sujeito derivados do contorno principal e de
-combinações de operações\footnote{Para maiores detalhes sobre este
-  fugato e combinações de operações vide seção
-  \ref{sec:comb-de-oper}.}. Do ponto de vista gestual, há uma passagem
-de uma menor densidade no início da quarta seção, com as entradas
-instrumentais sucessivas, para uma maior densidade no final da mesma
-seção. Isto ocorre por três razões: (1) a entrada da trompa em ritmo
-largo (comp. 123), (2) o estreitamento entre as entradas das madeiras,
-e (3) a partir do compasso 128, o jogo de perguntas e respostas com o
-primeiro segmento do sujeito, que ocorre entre as duplas flauta/fagote
-e oboé/clarinete.
+(figura \ref{fig:transicao-3-4}). A seção 4 é um fugato com sujeito e
+contra-sujeito derivados do contorno principal e de combinações de
+operações\footnote{Para maiores detalhes sobre este fugato e
+  combinações de operações vide seção \ref{sec:comb-de-oper}.}. Do
+ponto de vista gestual, há uma passagem de uma menor densidade no
+início da seção 4, com as entradas instrumentais sucessivas, para uma
+maior densidade no final da mesma seção. Isto ocorre por três razões:
+(1) a entrada da trompa em ritmo largo (comp. 123), (2) o
+estreitamento entre as entradas das madeiras, e (3) a partir do
+compasso 128, o jogo de perguntas e respostas com o primeiro segmento
+do sujeito, que ocorre entre as duplas flauta/fagote e oboé/clarinete.
 
 \begin{figure}
   \centering
   %% inserir figura de 4 a 5 compassos seção transição seções 3 e 4
-  \caption{Transição entre terceira e quarta seções}
+  \caption{Transição entre seções 3 e 4}
   \label{fig:transicao-3-4}
 \end{figure}
 
-A quinta seção tem como elemento fundamental um ostinato na linha do
-fagote (vide figura \ref{fig:ostinato-fagote}). Este ostinato é
-inspirado em um dos toques da capoeira\footnote{A utilização deste
-  elemento foi apenas pontual. Por este motivo não aprofundaremos em
-  maiores explicações sobre a capoeira e seus toques.}. O ritmo do
-ostinato é aproveitado para a construção da bifonia (vide seção
+A seção 5 tem como elemento fundamental um ostinato na linha do fagote
+(figura \ref{fig:ostinato-fagote}). Este ostinato é inspirado em um
+dos toques da capoeira\footnote{A utilização deste elemento foi apenas
+  pontual. Por este motivo não aprofundaremos em maiores explicações
+  sobre a capoeira e seus toques.}. O ritmo do ostinato é aproveitado
+para a construção da bifonia (vide seção
 \ref{sec:aspectos-verticais}). O desenho gestual desta seção é
-bastante parecido ao da seção inicial, com aumento progressivo da
-densidade culminando no acorde do compasso 172.
+bastante parecido ao da seção 1, com aumento progressivo da densidade
+culminando no acorde do compasso 172.
 
 \begin{figure}
   \centering
@@ -855,18 +1007,16 @@ densidade culminando no acorde do compasso 172.
   \label{fig:ostinato-fagote}
 \end{figure}
 
-A sexta seção da obra, em contraste às anteriores, é caracterizada por
-grupos de notas curtas, rápidas e desligadas. Estes grupos são
-separados entre si por silêncios (vide figura
-\ref{fig:sexta-secao-184-187}). As linhas dos instrumentos contêm cada
-uma o motivo $\alpha$ modificado por operações de
-rotação\footnote{Estas operações estão descritas na seção
+A seção 6, em contraste às anteriores, é caracterizada por grupos de
+notas curtas, rápidas e desligadas. Estes grupos são separados entre
+si por silêncios (figura \ref{fig:sexta-secao-184-187}). As linhas dos
+instrumentos contêm cada uma o motivo $\alpha$ modificado por
+operações de rotação\footnote{Estas operações estão descritas na seção
   \ref{sec:comb-de-oper}.}. Os grupos de notas curtas não englobam
 necessariamente todas as notas do motivo $\alpha$. Por vezes o
 silêncio interrompe o motivo, como por exemplo na linha da flauta, nos
-compassos 177--178 (vide figura
-\ref{fig:grupos-separados-silencio}). O motivo é concluído logo após o
-silêncio.
+compassos 177--178 (figura \ref{fig:grupos-separados-silencio}). O
+motivo é concluído logo após o silêncio.
 
 \begin{figure}
   \centering
@@ -880,15 +1030,15 @@ silêncio.
     \label{fig:grupos-separados-silencio}
   }
 
-  \subfloat[Transição entre os dois gestos da sexta seção]{
+  \subfloat[Transição entre os dois gestos da seção 6]{
     \includegraphics{transicao-sexta-dois-gestos}
     \label{fig:transicao-sexta-dois-gestos}
   }
-  \caption{Notas curtas separadas por silêncios (sexta seção)}
+  \caption{Notas curtas separadas por silêncios (seção 6)}
   \label{fig:sexta-secao-notas-curtas}
 \end{figure}
 
-A sexta seção contém dois gestos interligados. O primeiro gesto
+A seção 6 contém dois gestos interligados. O primeiro gesto
 (comp. 173--198) é marcado pelo aumento da densidade, obtido pela
 diminuição dos silêncios. O colorido melódico tem destaque no final
 deste gesto (comp. 194--198). O segundo gesto (comp. 199--214) é
@@ -898,22 +1048,22 @@ derivada da linha do oboé (comp. 149--157) interliga esta seção com a
 seguinte. Na figura \ref{fig:transicao-sexta-dois-gestos} percebemos o
 início do segundo gesto com elementos do gesto anterior.
 
-A sétima e última seção engloba elementos importantes das seções
-anteriores (vide figura \ref{fig:setima-secao-resumo}). A linha do
-fagote é uma repetição do que ocorre na quarta seção. A linha do
-clarinete representa o ritmo e acentuação da terceira seção. A linha
-da trompa corresponde ao solo do fagote do início da peça. As linhas
-do oboé e flauta representam a bifonia apresentada na quinta
-seção. Finalmente o material apresentado pela flauta e oboé a partir
-do compasso 239 representa o sujeito do fugato da quarta seção. As
-relações de contornos nesta seção são, portanto, as mesmas que estes
-citados elementos mantêm nas seções anteriores.
+A seção 7, última da obra, engloba elementos importantes das seções
+anteriores (figura \ref{fig:setima-secao-resumo}). A linha do fagote é
+uma repetição do que ocorre na seção 4. A linha do clarinete
+representa o ritmo e acentuação da seção 3. A linha da trompa
+corresponde ao solo do fagote do início da peça. As linhas do oboé e
+flauta representam a bifonia apresentada na seção 5. Finalmente o
+material apresentado pela flauta e oboé a partir do compasso 239
+representa o sujeito do fugato da seção 4. As relações de contornos
+nesta seção são, portanto, as mesmas que estes citados elementos
+mantêm nas seções anteriores.
 
 %% FIXME: refazer figura após terminar composição e inserir colchetes
 \begin{figure}
   \centering
   \includegraphics{setima-secao-resumo}
-  \caption{Elementos de outras seções na sétima seção}
+  \caption{Elementos de outras seções na seção 7}
   \label{fig:setima-secao-resumo}
 \end{figure}
 \section{Aspectos verticais}
@@ -934,11 +1084,10 @@ escala octatônica\footnote{A escala octatônica é obtida a partir da
   \label{fig:escala-octatonica}
 \end{figure}
 
-Ao longo da obra um acorde é apresentado de forma recorrente (vide
-figura \ref{fig:acorde-motivo}). Este acorde é derivado da bifonia e
-tem sonoridade octatônica. A terceira seção da peça é inteiramente
-construída com este acorde, que tem sua orquestração modificada no
-decorrer do gesto.
+Ao longo da obra um acorde é apresentado de forma recorrente (figura
+\ref{fig:acorde-motivo}). Este acorde é derivado da bifonia e tem
+sonoridade octatônica. A seção 3 é inteiramente construída com este
+acorde, que tem sua orquestração modificada no decorrer do gesto.
 
 \begin{figure}
   \centering
@@ -947,11 +1096,11 @@ decorrer do gesto.
   \label{fig:acorde-motivo}
 \end{figure}
 
-A bifonia é apresentada em sua forma mais explícita na quinta seção
-(vide figura \ref{fig:bifonia-grave}). Aparece inicialmente na região
-grave, nas linhas do clarinete e da trompa (comp. 137--144), depois
-brevemente no oboé e na trompa (comp. 146--149), e mais adiante na
-flauta e no clarinete (comp. 157--172).
+A bifonia é apresentada em sua forma mais explícita na seção 5 (figura
+\ref{fig:bifonia-grave}). Aparece inicialmente na região grave, nas
+linhas do clarinete e da trompa (comp. 137--144), depois brevemente no
+oboé e na trompa (comp. 146--149), e mais adiante na flauta e no
+clarinete (comp. 157--172).
 
 \begin{figure}
   \centering
@@ -963,13 +1112,12 @@ flauta e no clarinete (comp. 157--172).
 \section{Uso de motivos}
 \label{sec:uso-de-motivos}
 
-A obra contém três motivos derivados da bifonia (vide figura
-\ref{fig:bifonia}, p. \pageref{fig:bifonia}). O motivo $\alpha$ (vide
-figura \ref{fig:motivo-alfa-analisado}) dá origem aos motivos de três
-notas $\beta$ (vide figura \ref{fig:motivo-beta}) e de semicolcheias
-$\gamma$ (vide figura \ref{fig:motivo-gama}). Além destes há a
-presença de um motivo unicamente rítmico $\delta$ (vide figura
-\ref{fig:motivo-delta}).
+A obra contém três motivos derivados da bifonia (figura
+\ref{fig:bifonia}, p. \pageref{fig:bifonia}). O motivo $\alpha$
+(figura \ref{fig:motivo-alfa-analisado}) dá origem aos motivos de três
+notas $\beta$ (figura \ref{fig:motivo-beta}) e de semicolcheias
+$\gamma$ (figura \ref{fig:motivo-gama}). Além destes há a presença de
+um motivo unicamente rítmico $\delta$ (figura \ref{fig:motivo-delta}).
 
 \begin{figure}
   \centering
@@ -999,10 +1147,10 @@ O motivo $\alpha$ contém dois motivos $\beta$, um em sua forma
 original e outro invertido. Além disso o motivo $\alpha$ também está
 presente de forma invertida no motivo $\gamma$, com as notas
 Dó-Mi$\flat$-Ré$\flat$. Este motivo $\alpha$ é utilizado na linha do
-fagote do início da peça, no sujeito do fugato da quarta seção (letra
-L), na linha do clarinete nos compassos 137--144, na linha da flauta
-nos compassos 158--171, no material da flauta e oboé na sexta seção
-(letra R) e na seção final.
+fagote do início da peça, no sujeito do fugato da seção 4 (letra L),
+na linha do clarinete nos compassos 137--144, na linha da flauta nos
+compassos 158--171, no material da flauta e oboé na seção 6 (letra R)
+e na seção final.
 %% inserir figura com linha inicial do fagote
 %% inserir seção em que falo que a última seção é resumo das outras
 
@@ -1013,9 +1161,9 @@ clarinete nos compassos 157--172, na contrução do material ascendente
 dos compassos 200--215 e na seção final.
 
 O motivo $\delta$ não tem relação com altura ou contorno. É apenas um
-padrão de acentuação que é repetido na terceira e última seções. Na
-primeira aparição há notas \eng{stacatto} entre os acentos. Na segunda
-aparição há apenas os acentos.
+padrão de acentuação que é repetido nas seções 3 e 7. Na primeira
+aparição há notas \eng{stacatto} entre os acentos. Na segunda aparição
+há apenas os acentos.
 
 \section{Uso de contornos}
 \label{sec:uso-de-contornos}
@@ -1053,7 +1201,7 @@ de contornos. Combinamos estas operações desta forma:
 %% que termo que usar? melodia? fragmento melódico? motivo?
 A combinação das operações de subconjunto, expansão e transposição foi
 utilizada na linha do fagote no início da peça. Neste ponto há uma
-melodia (vide figura \ref{fig:melodia-inicial},
+melodia (figura \ref{fig:melodia-inicial},
 p. \pageref{fig:melodia-inicial}) construída com o subconjunto do
 contorno principal (2 0 1). A melodia tem dois segmentos, sendo o
 primeiro derivado das três notas iniciais do motivo $\alpha$, e o
@@ -1064,17 +1212,17 @@ da obra, nos compassos 9--14 no fagote e oboé, nos compassos 15--22 no
 clarinete, e nos compassos 23--36 na flauta e trompa.
 
 A combinação de rotação e expansão de contornos ocorre no sujeito e
-contra-sujeito do fugato da quarta seção e no material de notas curtas
-da sexta seção. O sujeito do fugato (vide figura
-\ref{fig:sujeito-fugato}) é constituído por dois segmentos elididos. O
-primeiro segmento é o próprio motivo $\alpha$, por consequüencia, é
-também o contorno principal (5 3 4 1 2 0). O segundo segmento é o
-contorno resultante da combinação da operação de rotação de fator 3,
-(1 2 0 5 3 4), e da operação de expansão. O segundo segmento é
-iniciado na nota Sol, última nota do segmento anterior.
+contra-sujeito do fugato da seção 4 e no material de notas curtas da
+seção 6. O sujeito do fugato (figura \ref{fig:sujeito-fugato}) é
+constituído por dois segmentos elididos. O primeiro segmento é o
+próprio motivo $\alpha$, por consequüencia, é também o contorno
+principal (5 3 4 1 2 0). O segundo segmento é o contorno resultante da
+combinação da operação de rotação de fator 3, (1 2 0 5 3 4), e da
+operação de expansão. O segundo segmento é iniciado na nota Sol,
+última nota do segmento anterior.
 
 O contra-sujeito é composto de três segmentos que contêm combinações
-de operações de retrogradação e rotação de contornos (vide figura
+de operações de retrogradação e rotação de contornos (figura
 \ref{fig:contra-sujeito-fugato}). O primeiro segmento contém uma
 rotação de fator 5 do retrógrado do contorno principal (5 0 2 1 4
 3). A primeira nota está elidida com a última nota do sujeito. O
@@ -1103,14 +1251,14 @@ um ponto.
 \end{figure}
 
 A combinação de rotação e expansão de contornos também está presente
-na sexta seção, nas linhas das quatro madeiras. A linha da flauta
-contém o motivo $\alpha$ em sua forma original. A linha do clarinete
-contém uma rotação de fator 2 e uma expansão de intervalos de segunda
-para intervalos de terça. A linha do oboé contém um desvio da
-estrutura do contorno. Trata-se de uma rotação de fator 3 do motivo
-$\alpha$, porém com transposição da segunda metade do motivo para uma
-oitava abaixo. Neste ponto a estrutura do contorno foi sacrificada em
-prol do desenho gestual da seção, que não supera o Ré$\sharp$4 neste
+na seção 6, nas linhas das quatro madeiras. A linha da flauta contém o
+motivo $\alpha$ em sua forma original. A linha do clarinete contém uma
+rotação de fator 2 e uma expansão de intervalos de segunda para
+intervalos de terça. A linha do oboé contém um desvio da estrutura do
+contorno. Trata-se de uma rotação de fator 3 do motivo $\alpha$, porém
+com transposição da segunda metade do motivo para uma oitava
+abaixo. Neste ponto a estrutura do contorno foi sacrificada em prol do
+desenho gestual da seção, que não supera o Ré$\sharp$4 neste
 trecho. Finalmente a linha do fagote contém uma rotação de fator 4 do
 motivo $\alpha$ e expansão semelhante ao do clarinete. Na figura
 \ref{fig:notas-curtas-madeiras} estão exibidas estas variações do
@@ -1155,13 +1303,13 @@ representações gráficas das rotações utilizadas.
     Clarinete & 2 & Sim \\
     Fagote & 4 & Sim \\
   \end{tabular}
-  \caption{Operações na sexta seção}
+  \caption{Operações na seção 6}
   \label{tab:operacoes-secao-6}
 \end{table}
 
 A combinação entre expansão e retrogradação ocorre na linha do oboé
-nos compassos 149--157 (vide figura \ref{fig:oboe-solo-secao-5}). O
-motivo $\gamma$ (vide seção \ref{sec:uso-de-motivos} e figura
+nos compassos 149--157 (figura \ref{fig:oboe-solo-secao-5}). O motivo
+$\gamma$ (vide seção \ref{sec:uso-de-motivos} e figura
 \ref{fig:motivo-gama}) é uma retrogradação do motivo $\alpha$ da
 peça. Neste trecho este motivo aparece três vezes: na primeira vez em
 sua forma original, na segunda vez com uma expansão e intervalo de
@@ -1172,7 +1320,7 @@ intervalo de segunda para intervalo de quarta.
 \begin{figure}
   \centering
   \includegraphics{oboe-solo-secao-5}
-  \caption{Solo do oboé na quinta seção}
+  \caption{Solo do oboé na seção 5}
   \label{fig:oboe-solo-secao-5}
 \end{figure}
 
@@ -1190,18 +1338,18 @@ interpolado com o contorno iniciado em Sol.
 \label{sec:cont-nao-comb}
 
 O contorno principal \contpr{} está associado também ao colorido
-instrumental. Isto ocorre na segunda seção da peça, em que as
-notas---Si$\flat$2, Mi3, Si$\flat$3 Dó$\sharp$5, e Sol5---ocorrem nas
-linhas dos instrumentos (vide figura \ref{fig:contorno-notas-longas},
+instrumental. Isto ocorre na seção 2, em que as notas---Si$\flat$2,
+Mi3, Si$\flat$3 Dó$\sharp$5, e Sol5---ocorrem nas linhas dos
+instrumentos (figura \ref{fig:contorno-notas-longas},
 p. \pageref{fig:contorno-notas-longas}).
 
 A operação de INT$_1$ do contorno principal (- + - + -) ocorre de
 maneira não ortodoxa no ostinato da linha do fagote, ao longo de toda
-a quinta seção (vide figura \ref{fig:ostinato-fagote},
+a seção 5 (figura \ref{fig:ostinato-fagote},
 p. \pageref{fig:ostinato-fagote}). O padrão com as notas Sol e Lá
 sugere o movimento (- +) presente no contorno principal.
 
-%% falar sobre o gestual da quinta seção e uso da anacruze e da
+%% falar sobre o gestual da seção 5 e uso da anacruze e da
 %% semelhança com o contraponto da primeira seção
 
 \subsection{Contornos associados a outros parâmetros musicais}
@@ -1215,11 +1363,11 @@ Os andamentos utilizados na peça---82, 66, 120, 108 e 112 (vide tabela
 contorno A(1 0 4 2 3). Este contorno é um subconjunto de 5 elementos
 do contorno principal utilizado, \contpr{}.
 
-Na seção inicial da obra relações de contornos estão associados a
-densidade. A densidade neste trecho tem contorno D(1 3 2 5 4), isto é
-começa com um instrumento, depois um trio, um duo, o quinteto completo
-e um quarteto. Esta seção é iniciada com um solo de fagote (1) seguido
-de um trio com fagote, clarinete e oboé (3). Ocorre então um duo entre
+Na seção 1 relações de contornos estão associados a densidade. A
+densidade neste trecho tem contorno D(1 3 2 5 4), isto é começa com um
+instrumento, depois um trio, um duo, o quinteto completo e um
+quarteto. Esta seção é iniciada com um solo de fagote (1) seguido de
+um trio com fagote, clarinete e oboé (3). Ocorre então um duo entre
 clarinete e flauta (2), um \eng{tutti} (5) e finalmente um quarteto
 sem o fagote (4). Este contorno D é o retrógrado de um subconjunto de
 5 elementos do contorno principal P.
@@ -1261,3 +1409,9 @@ composição.
 
 \chapter{Conclusão}
 \label{cha:conclusao}
+
+\section{Discussão}
+\label{sec:discussao}
+
+\section{Trabalhos futuros}
+\label{sec:trabalhos-futuros}
