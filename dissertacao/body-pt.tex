@@ -19,78 +19,6 @@ estudo de contornos, criamos um programa de computador para
 processamento de contornos, apresentamos a análise e partitura da obra
 \obra{}, composta com base em combinações de operações de contornos.
 
-Há diversas definições de contorno melódico na literatura
-\cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour},
-sendo cada uma delas relacionada com o objetivo do trabalho de seu
-autor. Para o presente estudo preferimos criar uma definição
-própria. Dessa forma entendemos que contorno melódico é um conjunto
-ordenado de alturas de notas (chamadas de pontos) cujo valor absoluto
-é ignorado e somente o registro, que pode ser mantido ou variar
-ascendente e descendentemente entre um ponto e outro, é
-considerado. Por exemplo, no fragmento da 5ª Sinfonia de Beethoven
-(figura \ref{fig:5a-sinfonia}), ignoramos todas as alturas e
-intervalos, consideramos que não há diferença de registro entre as
-três primeiras notas, que a nota Mi$\flat$ tem registro mais grave que
-a nota Sol, que a nota Fá tem registro mais agudo que a nota
-Mi$\flat$, e que a nota Ré tem registro mais grave que a nota Fá.
-
-\begin{figure}
-  \centering
-  \includegraphics{5a-sinfonia}
-  \caption{Fragmento da 5ª Sinfonia de Beethoven}
-  \label{fig:5a-sinfonia}
-\end{figure}
-
-A idéia de preservação de contornos e variação de intervalos entre
-notas é encontrada em diferentes situações musicais. Há adequação de
-notas à tonalidade em respostas tonais de fugas, em mudanças de modo
-em peças do tipo tema e variações, e em \eng{leitmotifs} e idéias
-fixas, citando apenas exemplos óbvios
-\cite[p. 29]{morris87:composition}. Outras obras têm motivos cujos
-intervalos são progressivamente expandidos ou contraídos, como por
-exemplo ocorre no início da \opus{Música para Cordas, Percussão e
-  Celesta}, de Béla Bartók.
-
-Teóricos musicais reconhecem que ouvintes têm maior acuidade na
-percepção de semelhança de contornos do que na semelhança de
-alturas. Por isso novas teorias para comparação de contornos se
-tornaram necessárias a área da Análise Musical
-\cite[p. 226]{marvin.ea87:relating}.
-%% marcos: o que não acha bom?
-
-No campo da percepção musical o contorno melódico é um importante
-recurso para o reconhecimento de melodias familiares \cite[p.
-136]{dowling.ea86:music}. Além disso é reconhecido que ouvintes têm
-maior acuidade na percepção de semelhança de contornos do que na
-semelhança de alturas.
-%% referência acima é a mesma da frase seguinte
-Por isso novas teorias para comparação de contornos se tornaram
-necessárias à área da Análise Musical
-\cite[p. 226]{marvin.ea87:relating}.
-
-Há estudos e aplicações de contornos melódicos também em outras áreas
-da música como Etnomusicologia e Computação Musical. Na área da
-Etnomusicologia contornos são usados para representar e classificar
-melodias populares \cite{adams76:melodic}. Na área da Computação
-musical, especificamente, \eng{Music Information Retrieval}, contornos
-são utilizados em sistemas \eng{query by humming} --- de busca em
-bases de dados a partir de melodias cantadas \cite{ghias.ea95:query}.
-
-Embora haja na literatura estudos sobre contornos associados a duração
-\cite{beard03:contour}, não abordamos este aspecto neste
-trabalho. Percebemos ao longo do processo que incluir a duração em
-nosso estudo demandaria mais tempo do que o disponível e
-inviabilizaria o projeto.
-
-Neste estudo consideramos como operação de contorno todo tipo de
-manipulação de um contorno. Dessa forma consideramos operações
-procedimentos como inversão, retrogradação, expansão e subconjuntos de
-contorno, bem como procedimentos da literatura de contornos como
-matriz de comparação, classe de contorno, INT$_n$, e várias
-outras. Estas operações fornecidas pelas teorias de contornos são
-detalhadas na seção \ref{sec:teor-sobre-cont}.
-
-
 %% marcos: o que mais deve estar na introdução?
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
@@ -164,6 +92,77 @@ Para a realização deste trabalho cumprimos as seguintes atividades:
 
 \chapter{Sobre contornos}
 \label{cha:sobre-contornos}
+
+Há diversas definições de contorno melódico na literatura
+\cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour},
+sendo cada uma delas relacionada com o objetivo do trabalho de seu
+autor. Para o presente estudo preferimos criar uma definição
+própria. Dessa forma entendemos que contorno melódico é um conjunto
+ordenado de alturas de notas (chamadas de pontos) cujo valor absoluto
+é ignorado e somente o registro, que pode ser mantido ou variar
+ascendente e descendentemente entre um ponto e outro, é
+considerado. Por exemplo, no fragmento da 5ª Sinfonia de Beethoven
+(figura \ref{fig:5a-sinfonia}), ignoramos todas as alturas e
+intervalos, consideramos que não há diferença de registro entre as
+três primeiras notas, que a nota Mi$\flat$ tem registro mais grave que
+a nota Sol, que a nota Fá tem registro mais agudo que a nota
+Mi$\flat$, e que a nota Ré tem registro mais grave que a nota Fá.
+
+\begin{figure}
+  \centering
+  \includegraphics{5a-sinfonia}
+  \caption{Fragmento da 5ª Sinfonia de Beethoven}
+  \label{fig:5a-sinfonia}
+\end{figure}
+
+A idéia de preservação de contornos e variação de intervalos entre
+notas é encontrada em diferentes situações musicais. Há adequação de
+notas à tonalidade em respostas tonais de fugas, em mudanças de modo
+em peças do tipo tema e variações, e em \eng{leitmotifs} e idéias
+fixas, citando apenas exemplos óbvios
+\cite[p. 29]{morris87:composition}. Outras obras têm motivos cujos
+intervalos são progressivamente expandidos ou contraídos, como por
+exemplo ocorre no início da \opus{Música para Cordas, Percussão e
+  Celesta}, de Béla Bartók.
+
+Teóricos musicais reconhecem que ouvintes têm maior acuidade na
+percepção de semelhança de contornos do que na semelhança de
+alturas. Por isso novas teorias para comparação de contornos se
+tornaram necessárias a área da Análise Musical
+\cite[p. 226]{marvin.ea87:relating}.
+%% marcos: o que não acha bom?
+
+No campo da percepção musical o contorno melódico é um importante
+recurso para o reconhecimento de melodias familiares \cite[p.
+136]{dowling.ea86:music}. Além disso é reconhecido que ouvintes têm
+maior acuidade na percepção de semelhança de contornos do que na
+semelhança de alturas.
+%% referência acima é a mesma da frase seguinte
+Por isso novas teorias para comparação de contornos se tornaram
+necessárias à área da Análise Musical
+\cite[p. 226]{marvin.ea87:relating}.
+
+Há estudos e aplicações de contornos melódicos também em outras áreas
+da música como Etnomusicologia e Computação Musical. Na área da
+Etnomusicologia contornos são usados para representar e classificar
+melodias populares \cite{adams76:melodic}. Na área da Computação
+musical, especificamente, \eng{Music Information Retrieval}, contornos
+são utilizados em sistemas \eng{query by humming} --- de busca em
+bases de dados a partir de melodias cantadas \cite{ghias.ea95:query}.
+
+Embora haja na literatura estudos sobre contornos associados a duração
+\cite{beard03:contour}, não abordamos este aspecto neste
+trabalho. Percebemos ao longo do processo que incluir a duração em
+nosso estudo demandaria mais tempo do que o disponível e
+inviabilizaria o projeto.
+
+Neste estudo consideramos como operação de contorno todo tipo de
+manipulação de um contorno. Dessa forma consideramos operações
+procedimentos como inversão, retrogradação, expansão e subconjuntos de
+contorno, bem como procedimentos da literatura de contornos como
+matriz de comparação, classe de contorno, INT$_n$, e várias
+outras. Estas operações fornecidas pelas teorias de contornos são
+detalhadas na seção \ref{sec:teor-sobre-cont}.
 
 Teorias de contornos foram desenvolvidas primariamente como técnicas
 analíticas aplicáveis a composições atonais que não possuem as
