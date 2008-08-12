@@ -326,20 +326,20 @@ como um grande conjunto de alturas de contorno (\tr{c-pitch}).
 Cada conjunto de alturas de contorno contido em um espaço de contorno
 é chamado de segmento de contorno (\tr{cseg})\footnote{Trata-se de uma
   idéia semelhante à da geometria, de reta e segmento de reta, onde o
-  espaço de contorno seria análogo à reta, e o \tr{cseg} ao segmento
-  de reta.}. Para uma simplificação terminológica neste trabalho nos
-referimos a segmento de contorno com o termo genérico
-``contorno''. Estes \tr{cseg} podem conter elementos contíguos ou não
-contíguos do espaço de contorno. Subconjuntos de \tr{cseg} são
+  espaço de contorno seria análogo à reta, e o segmento de contorno ao
+  segmento de reta.}. Para uma simplificação terminológica neste
+trabalho nos referimos a segmento de contorno com o termo genérico
+``contorno''. Estes contornos podem conter elementos contíguos ou não
+contíguos do espaço de contorno. Subconjuntos de contornos são
 chamados \tr{csubseg}. A figura \ref{fig:c-space} contém três exemplos
 de um mesmo espaço de contorno de 10 alturas de contorno enumeradas do
 mais grave (0) para o mais agudo (9). Na figura \ref{fig:c-space5968}
-o espaço de contorno contém o \tr{cseg} P, com as alturas de contorno
+o espaço de contorno contém o contorno P, com as alturas de contorno
 5, 9, 6 e 8. Na figura \ref{fig:c-space7420} o espaço de contorno
-contém o \tr{cseg} M, com alturas de contorno 7, 4, 2 e 0. Ainda nesta
-figura o \tr{cseg} M contém o \tr{csubseg} O, com alturas de contorno
-4 e 2. Por último, na figura \ref{fig:c-space564} o espaço de contorno
-contém o \tr{cseg} N, com as alturas de contorno não adjacentes 5, 6 e
+contém o contorno M, com alturas de contorno 7, 4, 2 e 0. Ainda nesta
+figura o contorno M contém o \tr{csubseg} O, com alturas de contorno 4
+e 2. Por último, na figura \ref{fig:c-space564} o espaço de contorno
+contém o contorno N, com as alturas de contorno não adjacentes 5, 6 e
 4.
 
 \begin{figure}
@@ -379,7 +379,7 @@ fator. Por exemplo, a expansão de fator 2 do contorno (5 9 6 8) é (5
 %% inserir exemplos gráficos
 A operação de inversão de um contorno P de ordem $q$ é representada
 por $IP$, e é matematicamente calculada por
-IP$_n=(q-1-$P$_n)$. Portanto, dado um \tr{cseg} P(5 9 6 8), de ordem
+IP$_n=(q-1-$P$_n)$. Portanto, dado um contorno P(5 9 6 8), de ordem
 10, IP$_0=(10-1-$P$_0)$. Logo, IP$_0=4$. Aplicando-se a mesma idéia
 aos outros elementos chegamos ao contorno IP(4 0 3 1). É possível
 ainda relacionar a inversão entre elementos através da matriz de
@@ -407,11 +407,11 @@ elementos é igual ao inverso da comparação destes elementos em ordem
 reversa. Esta idéia pode ser melhor entendida observando-se a equação
 $COM(a,b)=-COM(b,a)$.
 
-A \tr{COM-matrix} é uma matriz bidimensional que compara um \tr{cseg}
+A \tr{COM-matrix} é uma matriz bidimensional que compara um contorno
 com ele próprio. Esta matriz mostra os resultados da função de
 comparação \tr{COM} para todas as alturas de contorno de um
-\tr{cseg}. A tabela \ref{fig:matriz-5968} contém a matriz de
-comparação de um \tr{cseg} P(5 9 6 8). As \tr{COM-matrix} dos exemplos
+contorno. A tabela \ref{fig:matriz-5968} contém a matriz de
+comparação de um contorno P(5 9 6 8). As \tr{COM-matrix} dos exemplos
 já vistos na figura \ref{fig:graficos-cseg} podem ser vistos na tabela
 \ref{fig:matriz-exemplos}.
 
@@ -463,7 +463,7 @@ posterior e assim por diante.
 %% marcos: eu dou exemplos de int logo abaixo. o que quer dizer com
 %% apontar valores no exemplo?
 A diagonal INT$_1$ traz comparações de registros entre elementos
-adjacentes do \tr{cseg}. Em P(5 9 6 8), por exemplo, INT$_1=(+ - +)$,
+adjacentes do contorno. Em P(5 9 6 8), por exemplo, INT$_1=(+ - +)$,
 ou seja, o movimento melódico é ascendente entre 5 e 9, descendente
 entre 9 e 6, e ascendente entre 6 e 8. Esta comparação é feita também
 com uma operação conhecida como série de contornos adjacentes
@@ -475,11 +475,11 @@ A classe de contorno (\tr{CC}) é uma operação importante para a
 verificação de similaridade entre contornos. Obtém-se \tr{CC}
 numerando-se ordenadamente todas as alturas de contorno de $0$ a
 $(n-1)$, sendo $n$ o número total de alturas de contorno do
-\tr{cseg}. Uma \tr{CC} engloba todos os contornos considerados
+contorno. Uma \tr{CC} engloba todos os contornos considerados
 equivalentes. Dois ou mais contornos são considerados equivalentes
 quando geram uma mesma \tr{COM-matrix}, ou seja, quando mantêm a mesma
-estrutura de registro entre suas notas. Dessa forma, dado um \tr{cseg}
-P(5 9 6 8), são considerados seus equivalentes os \tr{cseg} (1 5 2 3),
+estrutura de registro entre suas notas. Dessa forma, dado um contorno
+P(5 9 6 8), são considerados seus equivalentes os contornos (1 5 2 3),
 (0 10 4 7), (0 3 1 2) e muitos outros. Todos eles têm (0 3 1 2) como
 forma normal e \tr{CC}.
 
@@ -488,12 +488,12 @@ alturas de contorno de uma \tr{CC} e podem ser entendidos de duas
 formas: guardando o valor entre as alturas de contorno
 \cite{friedmann85:methodology}, ou guardando apenas a direção, mas não
 o valor da diferença entre as alturas de contorno
-\cite{morris93:directions}. Por exemplo, para um mesmo \tr{cseg} P(0 3
+\cite{morris93:directions}. Por exemplo, para um mesmo contorno P(0 3
 1 2), o \tr{CI} entre $P_1$ e $P_2$ para Friedmann é -2, e para
 Morris, ``$-$''.
 
 O Vetor de Intervalos de Contornos (\tr{CIA}) descreve a freqüência de
-cada tipo de \tr{CI} em uma \tr{CC}. Por exemplo, o \tr{cseg} P(0 3 1
+cada tipo de \tr{CI} em uma \tr{CC}. Por exemplo, o contorno P(0 3 1
 2) tem \tr{CIA} (2,1,1/1,1,0). Os dígitos da esquerda da barra
 representam os \tr{CI} ascendentes em ordem crescente, e os dígitos da
 direita os \tr{CI} descendentes em ordem crescente de valor
@@ -594,26 +594,26 @@ e 3, 3 e 5, e 5 e 6. INT$_2$ = (+ +) representa as diferenças entre 4
 e 5, e 3 e 6.
 
 Esta matriz permite a verificação de duas classes de equivalência de
-contornos. A primeira é formada por todos os \eg{cseg} que dividem uma
+contornos. A primeira é formada por todos os contornos que dividem uma
 mesma \eg{com-matrix}, e a segunda --- \eg{csegclass} --- formada por
-todos os \eg{cseg} relacionados por operações de identidade,
+todos os contornos relacionados por operações de identidade,
 translação, retrogradação, inversão e retrogradação da inversão.
 
 A operação de inversão é obtida pela subtração de todos os \eg{cps}
-por $(n-1)$. Para um dado \eg{cseg} $P$, a operação de identidade é
-identificada como $IP$. A retrogradação de um \eg{cseg} $P$
+por $(n-1)$. Para um dado contorno $P$, a operação de identidade é
+identificada como $IP$. A retrogradação de um contorno $P$
 (representado por $RP$), bem como de sua inversão ($IP$) são obtidas
 colocando os \eg{cps} em ordem reversa
 \cite[p. 231]{marvin.ea87:relating}.
 
-A forma prima de um \eg{cseg} é obtida operando-se de um algoritmo de
+A forma prima de um contorno é obtida operando-se de um algoritmo de
 três etapas:
 \begin{enumerate}
-\item realiza-se a translação do \eg{cseg} caso seja necessário;
-\item se a subtração de $(n-1)$ pelo último \eg{cps} é menor
-  que o primeiro \eg{cps}, inverte-se a \eg{cseg};
-\item se o último \eg{cps} é menor que o primeiro
-  \eg{cps} retrograda-se a \eg{cseg}.
+\item realiza-se a translação do contorno caso seja necessário;
+\item se a subtração de $(n-1)$ pelo último \eg{cps} é menor que o
+  primeiro \eg{cps}, inverte-se o contorno;
+\item se o último \eg{cps} é menor que o primeiro \eg{cps}
+  retrograda-se o contorno.
 \end{enumerate}
 
 Michael Friedmann procurou desenvolver uma metodologia para estudo
