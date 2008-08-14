@@ -10,6 +10,7 @@ opus-6-composicao-mestrado/partitura/audio
 opus-6-composicao-mestrado/script/systemfiles/gestos*
 opus-6-composicao-mestrado/script/temp
 dissertacao/*.pdf
+dissertacao/paginas-composicao.tex
 dissertacao/lily/*.pdf
 dissertacao/lily/*.tex
 dissertacao/lily/*.texi
