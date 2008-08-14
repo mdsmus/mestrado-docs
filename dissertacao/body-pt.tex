@@ -14,18 +14,12 @@ musical. Eles representam estruturas musicais manipuláveis através de
 várias operações como inversão e retrogradação, e podem ser abordados
 tanto do ponto de vista da análise quanto da composição.
 
+%% inserir qual o problema a ser resolvido
+
 Neste trabalho fazemos a revisão de teorias desenvolvidas para o
 estudo de contornos, criamos um programa de computador para
 processamento de contornos, apresentamos a análise e partitura da obra
 \obra{}, composta com base em combinações de operações de contornos.
-
-%% dúvida: o que mais deve estar na introdução?
-
-
-%% kroger: 
-%% * "organização da dissertação" no final do capitulo
-%% * deixar mais claro o problema que voce vai resolver. veja a intro
-%% da minha tese
 
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
@@ -47,17 +41,9 @@ São objetivos secundários deste trabalho:
 
 O uso sistemático de contornos melódicos tanto para geração de
 material composicional quanto como determinante composicional é um
-assunto carente de literatura.
-%% rever frase. substituir 'colaborar'
-%% dúvida: o que coloco no lugar de contribuir/colaborar?
-
-%% kroger: nesse contexto eu acho que "elevar o estado de arte" é
-%% melhor. talvez seja melhor ser mais especifico: elevar o estado de
-%% arte da teoria de contornos e contribuir com novas ferramentas para
-%% a area de composicao
-
-Este estudo pode contribuir tanto com o estado de arte de contornos
-quanto com a área de Composição.
+assunto carente de literatura. Este estudo pode elevar o estado de
+arte das teorias de contornos e contribuir com novas ferramentas para
+a área de Composição.
 
 \section{Metodologia}
 \label{sec:metodologia}
@@ -104,6 +90,19 @@ Para a realização deste trabalho cumprimos as seguintes atividades:
 \item Escrita da dissertação
 \end{enumerate}
 
+\section{Estrutura da dissertação}
+\label{sec:estr-da-diss}
+
+Esta dissertação está organizada da seguinte maneira:
+
+\begin{itemize}
+\item Capítulo 1: identificação dos problemas abordados e objetivos
+  deste trabalho
+\item Capítulo 2: abordagem do estado de arte de contornos
+\item Capítulo 3: descrição das ferramentas desenvolvidas e utilizadas
+\item Capítulo 4: análise da obra \obra{}
+\end{itemize}
+
 \chapter{Sobre contornos}
 \label{cha:sobre-contornos}
 
@@ -141,20 +140,6 @@ fixas, citando apenas exemplos óbvios
 intervalos são progressivamente expandidos ou contraídos, como por
 exemplo ocorre no início da \opus{Música para Cordas, Percussão e
   Celesta}, de Béla Bartók.
-
-%% dúvida: o que não acha bom neste parágrafo?
-
-%% kroger: eu nao acho que exista essa relacao de causa e consequencia
-%% (apenas) "vamos criar uma teoria de contorno porque os ouvintes
-%% ouvem melhor contornos", mesmo que marvin diga isso, parece que
-%% *todas* as teorias de contornos foram feitas por isso, o que os
-%% outros autores nao afirmam
-
-Teóricos musicais reconhecem que ouvintes têm maior acuidade na
-percepção de semelhança de contornos do que na semelhança de
-alturas. Por isso novas teorias para comparação de contornos se
-tornaram necessárias a área da Análise Musical
-\cite[p. 226]{marvin.ea87:relating}.
 
 Embora haja na literatura estudos sobre contornos associados a duração
 \cite{beard03:contour}, não abordamos este aspecto neste
@@ -231,14 +216,7 @@ No campo da percepção musical o contorno melódico é um importante
 recurso para o reconhecimento de melodias familiares \cite[p.
 136]{dowling.ea86:music}. Além disso é reconhecido que ouvintes têm
 maior acuidade na percepção de semelhança de contornos do que na
-semelhança de alturas.
-%% dúvida: você pediu para colocar referência na frase acima. a
-%% referência é a mesma da frase seguinte. como resolvo?
-
-%% kroger: talvez dando um merge nas duas frases
-Por isso novas teorias para comparação de contornos se tornaram
-necessárias à área da Análise Musical
-\cite[p. 226]{marvin.ea87:relating}.
+semelhança de alturas \cite[p. 226]{marvin.ea87:relating}.
 
 %% substituir "característica musical"
 Contorno melódico é uma importante característica musical no
@@ -406,17 +384,9 @@ ainda relacionar a inversão entre elementos através da matriz de
 comparação. Calcula-se esta inversão com a operação
 $COM(P_a,P_b)=-COM(IP_a,IP_b)$.
 
-%% reescrever para tirar nota
-%% dúvida: top colocou esta nota, mas estamos entendendo que matrizes
-%% são operações. posso manter o original?
-
-%% kroger: sim
-
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação, matriz de comparação e classe de
-contorno\note{fica parecendo que matrizes de comparação e classes de
-  contorno são operações, acho bom mudar a vírgula de lugar ou algo
-  assim}.
+contorno.
 
 A operação de comparação \tr{COM(a,b)} retorna a diferença de registro
 entre dois elementos, ou seja, informa se um elemento é mais agudo,
@@ -479,15 +449,10 @@ para todas as alturas de contorno de um contorno. A tabela
   \label{fig:matriz-exemplos}
 \end{figure}
 
-As diagonais superiores à diagonal principal zero da matriz de
-comparação são chamadas de INT$_n$, onde $n$ é o número da diagonal: 1
-para a superior mais próxima da diagonal zero, 2 para a seguinte, 3
-para a posterior e assim por diante.
-%% dúvida: você pediu para apontar valores no exemplo. eu dou exemplos
-%% de int logo abaixo. o que quer?
-
-%% kroger: que voce faça uma ligação dos exemplos no texto com os
-%% exemplos graficos para o leitor visualizar
+As diagonais superiores paralelas à diagonal principal zero da matriz
+de comparação são chamadas de INT$_n$, onde $n$ é o número da
+diagonal: 1 para a superior mais próxima da diagonal zero, 2 para a
+seguinte, 3 para a posterior e assim por diante.
 
 A diagonal INT$_1$ traz comparações de registros entre elementos
 adjacentes do contorno. Em P(5 9 6 8), por exemplo, INT$_1=(+ - +)$,
@@ -499,7 +464,22 @@ com uma operação conhecida como série de contornos adjacentes
   diferentes, como INT$_1$ e Série de contornos adjacentes
   \cite{friedmann87:response}. A série de contornos adjacentes de
   Friedmann, por exemplo, seria entendida por Morris como uma série de
-  alturas de contorno adjacentes.}.
+  alturas de contorno adjacentes.}. A tabela \ref{tab:int-contornos}
+traz as INT$_n$ dos contornos (5 9 6 8), (5 7 6 8) e (3 0 5 1), cujas
+matrizes são apresentadas na figura \ref{fig:matriz-exemplos}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{r|ccc}
+    Contorno & INT$_1$ & INT$_2$ & INT$_3$ \\
+    \hline
+    (5 9 6 8) & (+ - +) & (+ -) & (+) \\
+    (5 7 6 8) & (+ - +) & (+ -) & (+) \\
+    (3 0 5 1) & (- + -) & (+ +) & (-)
+  \end{tabular}
+  \caption{Exemplos de INT$_n$}
+  \label{tab:int-contornos}
+\end{table}
 
 A classe de contorno (\tr{CC}) é uma operação importante para a
 verificação de similaridade entre contornos. Obtém-se classe de
@@ -1256,6 +1236,8 @@ de contornos. Combinamos estas operações desta forma:
 
 %% kroger: talvez "solo de fagote" se voce esta se referindo apenas ao
 %% solo de fagote (antes dos instrumentos entrarem) :-)
+
+%% marcos: estou preferindo deixar "melodia"
 
 A combinação das operações de subconjunto, expansão e transposição foi
 utilizada na linha do fagote no início da peça. Neste ponto há uma
