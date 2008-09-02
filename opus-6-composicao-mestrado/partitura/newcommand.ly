@@ -124,3 +124,7 @@ menomosso = \tempoMark "Meno mosso"
 %% simplificação
 
 st = \staccatissimo
+
+% sinal para alterar trill
+tris = ^\markup{\sharp}
+tres = ^\markup{\flat}
