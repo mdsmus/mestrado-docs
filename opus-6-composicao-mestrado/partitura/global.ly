@@ -25,7 +25,6 @@ gestoAAAglobal = {
   \tempo 4=82
   \time 5/4
   s1*5/4*8
-  \break
   \bar "||"
 }
 
