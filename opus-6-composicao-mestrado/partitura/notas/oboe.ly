@@ -253,7 +253,7 @@ gestoCABoboe = {
     fis4( e a g
     %% expansão de #s(5 3 4 1 2 0)
     bes2. a4~
-    a2) bes,16( ees) e,?( a bes,4~\<
+    a2) bes,16( ees) e,?\<( a bes,4~
     bes2.) r4\!
   }
 }
