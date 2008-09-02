@@ -284,9 +284,9 @@ gestoCBAoboe = {
     R1*11
     \setTextCresc
     %% variação de rot3 #s(5 3 4 1 2 0)
-    r2 cis16\ppp dis c? g e fis r8
+    r2 cis16\ppp dis c g e fis r8
     R1
-    r4 cis'16 dis c? g r2
+    r4 cis'16 dis c g r2
     R1*2
     %% contorno completa na seção seguinte
   }

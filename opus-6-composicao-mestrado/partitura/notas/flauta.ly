@@ -264,20 +264,20 @@ gestoCACflauta = {
 gestoCBAflauta = {
   \relative c'' {
     %% #s(5 3 4 1 2 0)
-    g16\ppp e fis cis dis c? r8 r2
-    g'16 e fis r r4 r16 cis r8 dis16 c? r8
+    g16\ppp e fis cis dis c r8 r2
+    g'16 e fis8-. r4 r16 cis8.-. dis16 c r8
     r2 g'16 e fis cis dis r8.
-    r8. c?16 g'16 e fis cis dis c? r8 r4
+    r8. c?16 g'16 e fis cis dis c r8 r4
     r2 g'16 e fis cis r4
-    dis16[ c? r g'16] r4 e16 fis cis dis c? r8.
-    r2 g'16 e fis r cis[ r dis c?]
+    dis16 c?8-. g'16 r4 e16 fis cis dis c r8.
+    r2 g'16 e fis8-. cis8-. dis16 c
     r2. g'16 r8.
-    e16 fis cis r16 r2.
+    e16 fis cis8-. r2.
     r4 dis16 c? g' e fis r8. r4
-    r2. g16 e fis r
-    cis dis c? r r2.
+    r2. g16 e fis8-.
+    cis16 dis c8-. r2.
     R1*2
-    r4 g'16 e fis cis dis c? r8 r4
+    r4 g'16 e fis cis dis c r8 r4
     R1
   }
 }

@@ -287,10 +287,10 @@ gestoCBAfagote = {
     %% rot3 retr. #s(5 3 4 1 2 0)
     r2. e16\ppp cis g' e,
     bes' g r8 r2.
-    r4 e'16 cis g' r e, r8. r4
+    r4 e'16 cis g'8-. e,16 r8. r4
     R1*2
-    e'16 cis g' r r2.
-    r2. e,16 bes' g r
+    e'16 cis g'8-. r2.
+    r2. e,16 bes' g8-.
     e'16 cis g' e, bes' g r8 r2
   }
 }

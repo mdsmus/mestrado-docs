@@ -270,12 +270,12 @@ gestoCBAclarinetebb = {
     R1*6
     %% rot2 #s(5 3 4 1 2 0)
     e16\ppp g, bes e, g' cis, r8 r2
-    e16 g, bes r r8 e,16 g' cis, r8. r8 e16 g,
+    e16 g, bes8-. r8 e,16 g' cis,8-. r8 r8 e16 g,
     r4 bes16 e, g' cis, r2
     r2. e16 g, bes e,
     g' cis, r8 r2.
     R1
-    e16 g, bes e,16 r4 g'16 cis, e16 r g, r8.
+    e16 g, bes e,16 r4 g'16 cis, e8-. g,16 r8.
     r2. bes16 e, g' cis,
     R1
     r2 e16 g, bes e, g' cis, r8
