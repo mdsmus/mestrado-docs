@@ -286,29 +286,29 @@ gestoCBBflauta = {
   \relative c''' {
     %% #s(5 3 4 1 2 0)
     %% continua seção anterior
-    g16 e fis cis dis c? r8 r2
-    r4. g'16 e fis cis dis c? r4
+    g16 e fis cis dis c r8 r2
+    r4. g'16 e fis cis dis c r4
     R1
-    g'16 e fis cis dis c? r8 r2
-    r2 g'16 e fis cis dis c? r8
-    r2 g'16 e fis cis dis c? r8
+    g'16 e fis cis dis c r8 r2
+    r2 g'16 e fis cis dis c r8
+    r2 g'16 e fis cis dis c r8
     \setTextCresc
-    r2 g'16\< e fis cis dis c? r8
-    r2 g'16 e fis cis dis c? r8
-    r2 g''16 e fis cis dis c? r8
-    r2 g'16 e fis cis dis c? r8
+    r2 g'16\< e fis cis dis c r8
+    r2 g'16 e fis cis dis c r8
+    r2 g''16 e fis cis dis c r8
+    r2 g'16 e fis cis dis c r8
   }
 }
 
 gestoCBCflauta = {
   \relative c''' {
-    g2\ff g'16 e fis cis dis c? r8
+    g2\ff g'16 e fis cis dis c r8
     %% toca também material do fagote transposto oitava acima
-    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c? r8
-    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c? r8
-    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c? r8
-    e,16 cis g' e, bes' g r8 g'16 e fis cis dis c? r8
-    e16 cis g' e, bes' g r8 g16\ppp e fis cis dis c? r8
+    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c r8
+    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c r8
+    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c r8
+    e,16 cis g' e, bes' g r8 g'16 e fis cis dis c r8
+    e16 cis g' e, bes' g r8 g16\ppp e fis cis dis c r8
     R1*7
     r2 e'16\mf( g fis bes a c a c
     bes e cis dis) r2.
@@ -325,13 +325,13 @@ gestoCBDflauta = {
 
 gestoCBEflauta = {
   \relative c'' {
-    r4 r8. c16\p( ees des fis e? g4~
+    r4 r8. c16\p( ees des fis e g4~
     g4) e8->\st fis4. cis8->\st e~
     e4 g8->\st e->\st r2
     g4 e8->\st fis4. cis8->\st e~
     e4 e8->\st cis->\st r2
     R1*3
-    r4 r8. c'16\p( ees des fis e? g4~
+    r4 r8. c'16\p( ees des fis e g4~
     g4) e8->\st fis4. cis8->\st e~
     e4 g8->\st e->\st r2
     g4 e8->\st fis4. cis8->\st e~

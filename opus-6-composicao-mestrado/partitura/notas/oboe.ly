@@ -294,28 +294,28 @@ gestoCBAoboe = {
 
 gestoCBBoboe = {
   \relative c' {
-    r2 e16 fis cis' dis c? g e fis
+    r2 e16 fis cis' dis c g e fis
     R1
-    cis'16 dis c? g e fis r8 r2
-    r2 cis'16 dis c? g e fis r8
-    r2. cis'16 dis c? g
-    e fis r8 r2 cis'16 dis c? g
+    cis'16 dis c g e fis r8 r2
+    r2 cis'16 dis c g e fis r8
+    r2. cis'16 dis c g
+    e fis r8 r2 cis'16 dis c g
     \setTextCresc
-    e fis r8 r2 cis'16\< dis c? g
-    e fis r8 r2 cis'16 dis c? g
-    e fis r8 r2 cis'16 dis c? g
-    e fis r8 r2 cis'16 dis c? g
+    e fis r8 r2 cis'16\< dis c g
+    e fis r8 r2 cis'16 dis c g
+    e fis r8 r2 cis'16 dis c g
+    e fis r8 r2 cis'16 dis c g
   }
 }
 
 gestoCBCoboe = {
   \relative c' {
-    e16 fis8.~\fp fis2\f cis'16 dis c? g
-    e fis8.~\p fis2 cis'16\f dis c? g
-    e fis8.~\p fis2 cis'16\mf dis c? g
+    e16 fis8.~\fp fis2\f cis'16 dis c g
+    e fis8.~\p fis2 cis'16\f dis c g
+    e fis8.~\p fis2 cis'16\mf dis c g
     %% toca também material do clarinte transposto oitava acima
-    e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c? g
-    e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c? g
+    e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c g
+    e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c g
     e fis r8 e'16\ppp g, bes e, g' cis, r8 r4
     R1*1
     r2 c,16( ees des fis e g e g
@@ -340,7 +340,7 @@ gestoCBDoboe = {
 gestoCBEoboe = {
   \relative c'' {
     R1*4
-    r4 r8. c16\p( ees des fis e? g4~
+    r4 r8. c16\p( ees des fis e g4~
     g4) e8->\st fis4. cis8->\st e~
     e4 g8->\st e->\st r2
     g4 e8->\st fis4. cis8->\st e~
