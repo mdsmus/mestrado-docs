@@ -8,4 +8,5 @@ rm $file 2> /dev/null
 for f in $(seq 1 $paginas)
 do
     echo \\includegraphics{score-dissertacao-$f}\\\\ >> $file
+    echo >> $file
 done
