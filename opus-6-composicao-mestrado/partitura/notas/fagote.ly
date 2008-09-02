@@ -72,7 +72,7 @@ gestoABAfagote = {
 gestoABBfagote = {
   \clef bass
   \relative c' {
-    r2. e2~\startTrillSpan
+    r2. e2~\startTrillSpan\tris
     e1\stopTrillSpan e4~->
     e2.~ e8 e~-> e4~
     e4. e8~-> e2.~
@@ -82,7 +82,7 @@ gestoABBfagote = {
 gestoABCfagote = {
   \clef bass
   \relative c' {
-    e4 r2 e,~\startTrillSpan
+    e4 r2 e,~\startTrillSpan\tris
     e2\stopTrillSpan r2.
     R1*5/4
     r4 bes'1
@@ -177,7 +177,7 @@ gestoBBBfagote = {
         g?4.)
         %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         bes8->( e,8) g'4( cis,8~
-        cis e8~\trill e2)
+        cis e8~\trill\tris e2)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
         gis,4\p
         b8( ais4) d8( cis4)
@@ -202,7 +202,7 @@ gestoBBCfagote = {
         g?4.)
         %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         bes8->( e,8) g'4( cis,8~
-        cis e8~\trill e2) r4
+        cis e8~\trill\tris e2) r4
 
       }
     }
