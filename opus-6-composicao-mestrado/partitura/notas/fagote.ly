@@ -60,36 +60,27 @@ gestoAAEfagote = {
 gestoABAfagote = {
   \clef bass
   \relative c' {
-    R1*5/4*2
-    r2. e2~\p
-    e1 r4
-    R1*5/4*2
-    r4 bes1
-    r2 e2.
+    R1*5/4*6
+    r2. dis2~\p
+    dis2. cis2
   }
 }
 
 gestoABBfagote = {
   \clef bass
   \relative c' {
-    r2. e2~\startTrillSpan\tris
-    e1\stopTrillSpan e4~->
-    e2.~ e8 e~-> e4~
-    e4. e8~-> e2.~
+    \setTextCresc
+    cis4\< r2 bes,~
+    bes2 r8 dis,~ dis2~
+    dis8 dis->~ dis2~ dis8 dis-> dis4~->\f
+    dis4. dis8-> r2.
   }
 }
 
 gestoABCfagote = {
   \clef bass
   \relative c' {
-    e4 r2 e,~\startTrillSpan\tris
-    e2\stopTrillSpan r2.
-    R1*5/4
-    r4 bes'1
-    R1*5/4
-    r4 e,1
-    R1*5/4
-    bes,2. r2\fermata
+    R1*5/4*8
   }
 }
 

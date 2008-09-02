@@ -48,34 +48,28 @@ gestoAAEtrompa = {
 }
 
 gestoABAtrompa = {
-  \relative c' {
+  \relative c'' {
     %% lembrete: dimnuir duração das notas
-    R1*5/4*3
-    r4 bes1~\p
-    bes1 r4
-    r1 e4~
-    e2. r2
-    r1 bes4~
+    R1*5/4*5
+    r1 g4~-+\p
+    g2.~-+ g2-+
+    r1 a4~
   }
 }
 
 gestoABBtrompa = {
-  \relative c' {
-    bes2.~ bes2
-    bes2.~-> bes2~
-    bes4 bes2.~-> bes8 bes~->
-    bes2~ bes8 bes~-> bes2~
+  \relative c'' {
+    \setTextCresc
+    a4.\< g,8~ g2.~
+    g4 r8 cis,~ cis2~ cis8 cis~->
+    cis2~ cis8 cis->~ cis4 cis~->\f
+    cis8 cis->~ cis2 r2
   }
 }
 
 gestoABCtrompa = {
   \relative c' {
-    bes2 r2.
-    bes2. r2
-    r2 e,2.
-    R1*5/4
-    R1*5/4*3
-    bes'2. r2\fermata
+    R1*5/4*8
   }
 }
 

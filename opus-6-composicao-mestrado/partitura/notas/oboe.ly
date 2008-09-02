@@ -62,35 +62,29 @@ gestoAAEoboe = {
 gestoABAoboe = {
   \relative c''' {
     R1*5/4
-    cis2.~\p cis2
-    r2 cis2.~
-    cis2 r2.
+    r1 e4~\p
+    e2.~ e2
     R1*5/4
-    r4 cis1~\startTrillSpan\tris
-    cis4\stopTrillSpan r1
-    r4 cis1\trill\tris
+    r4 e,2. r4
+    g2.~ g2
+    r4 cis,1~
+    cis4 r c'?2.~
   }
 }
 
 gestoABBoboe = {
   \relative c''' {
-    r2 cis2.~
-    cis2. cis2~->
-    cis2. cis2~->\startTrillSpan\tris
-    cis4\stopTrillSpan cis1->\trill\tris
+    \setTextCresc
+    c8\< cis,~ cis1
+    r4 a'4 c,,4. bes'4.~
+    bes4. bes8~ bes4 c,4 c->\f
+    a''2. r2
   }
 }
 
 gestoABCoboe = {
   \relative c'' {
-    r2 cis2.~
-    cis4 r1
-    cis2 r2.
-    R1*5/4
-    r1 cis4~
-    cis2. r2
-    %% FIXME: inserir fermata
-    R1*5/4*2
+    R1*5/4*8
   }
 }
 

@@ -62,35 +62,29 @@ gestoAAEflauta = {
 
 gestoABAflauta = {
   \relative c'''' {
-    g2.~\p\startTrillSpan g2~
-    g2\stopTrillSpan r2 g4~
+    g1\p r4
+    R1*5/4*2
+    r2 bes,2.~
+    bes2 r4 g'2~
     g1 r4
-    r2 g2.~
-    g4 r2 g~
-    g2. r2
-    r2 g2.~
-    g2. r2
+    r1 g4~
+    g1 r4
   }
 }
 
 gestoABBflauta = {
   \relative c'''' {
-    g2.~ g2
-    r4 g1~\startTrillSpan
-    g2\stopTrillSpan g2.->\trill
-    g1->\trill r4
+    \setTextCresc
+    g2.~\< g4 r
+    g2. g2->~
+    g4 g2.-> g4~->\f
+    g2 r2.
   }
 }
 
 gestoABCflauta = {
   \relative c'''' {
-    g2.~\startTrillSpan g2\stopTrillSpan
-    r4 g1~
-    g2 r2.
-    r2. g,2~\startTrillSpan
-    g2.\stopTrillSpan r2
-    %% FIXME: inserir fermata
-    R1*5/4*3
+    R1*5/4*8
   }
 }
 

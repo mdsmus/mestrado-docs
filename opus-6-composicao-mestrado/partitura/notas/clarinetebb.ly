@@ -69,37 +69,30 @@ gestoAAEclarinetebb = {
 
 gestoABAclarinetebb = {
   \relative c''' {
-    r1 g4~\p
-    g2. r2
-    r4 g1\trill
-    bes,2.~ bes2
     R1*5/4
-    g'2.~ g2
-    bes,2.~ bes2
-    g'2. bes,2
+    cis2.~\p cis2
+    r2. g2~
+    g1 r4
+    R1*5/4
+    r2 cis2.~
+    cis2. r2
+    r4 e,1
   }
 }
 
 gestoABBclarinetebb = {
   \relative c''' {
-    r4 g2. bes,4~
-    bes2 g'2.
-    bes,2~ bes8 g'~ g4 bes,~
-    bes8 g'~ g4 bes,2.~
+    \setTextCresc
+    r4 bes4\< e,,2.
+    r8 bes'~ bes2. a'4
+    c,,2 a''2 a8->\f bes,~
+    bes4 c,2 r2
   }
 }
 
 gestoABCclarinetebb = {
   \relative c'' {
-    bes4 g2. bes,4~
-    bes2. g'2~
-    g2. r4 bes4~
-    bes,2 r2.
-    r2 g'2.
-    R1*5/4
-    bes,1 r4
-    %% FIXME: inserir fermata
-    R1*5/4
+    R1*5/4*8
   }
 }
 
