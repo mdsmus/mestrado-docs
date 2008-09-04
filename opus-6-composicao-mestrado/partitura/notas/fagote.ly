@@ -73,7 +73,7 @@ gestoABBfagote = {
     cis4\< r2 bes,~
     bes2 r8 dis,~ dis2~
     dis8 dis->~ dis2~ dis8 dis-> dis4~->\f
-    dis4. dis8-> r2.
+    dis4. dis8->~ dis2~ dis8 dis->
   }
 }
 

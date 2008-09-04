@@ -78,7 +78,7 @@ gestoABBoboe = {
     c8\< cis,~ cis1
     r4 a'4 c,,4. bes'4.~
     bes4. bes8~ bes4 c,4 c->\f
-    a''2. r2
+    a''2~ a8 bes,~ bes2
   }
 }
 

@@ -63,7 +63,7 @@ gestoABBtrompa = {
     a4.\< g,8~ g2.~
     g4 r8 cis,~ cis2~ cis8 cis~->
     cis2~ cis8 cis->~ cis4 cis~->\f
-    cis8 cis->~ cis2 r2
+    cis8 cis->~ cis2~ cis8 cis4.->
   }
 }
 

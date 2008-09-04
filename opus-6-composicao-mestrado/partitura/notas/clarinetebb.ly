@@ -86,7 +86,7 @@ gestoABBclarinetebb = {
     r4 bes4\< e,,2.
     r8 bes'~ bes2. a'4
     c,,2 a''2 a8->\f bes,~
-    bes4 c,2 r2
+    bes4 c,2 a''4 c,,
   }
 }
 

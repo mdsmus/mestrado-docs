@@ -78,7 +78,7 @@ gestoABBflauta = {
     g2.~\< g4 r
     g2. g2->~
     g4 g2.-> g4~->\f
-    g2 r2.
+    g2 g2.->
   }
 }
 
