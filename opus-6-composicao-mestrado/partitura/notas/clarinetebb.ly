@@ -86,13 +86,21 @@ gestoABBclarinetebb = {
     r4 bes4\< e,,2.
     r8 bes'~ bes2. a'4
     c,,2 a''2 a8->\f bes,~
-    bes4 c,2 a''4 c,,
+    bes4 c,2 a''4 c,,~
   }
 }
 
 gestoABCclarinetebb = {
-  \relative c'' {
-    R1*5/4*8
+  \relative c' {
+    \setTextDecresc
+    c4\> c'2 a,~
+    a4 r cis'2.
+    r1 bes,4~
+    bes1 r4
+    fis1 r4
+    r1 e4~\pp
+    e2. r2
+    R1*5/4
   }
 }
 

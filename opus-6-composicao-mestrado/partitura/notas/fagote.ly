@@ -79,8 +79,16 @@ gestoABBfagote = {
 
 gestoABCfagote = {
   \clef bass
-  \relative c' {
-    R1*5/4*8
+  \relative c, {
+    \setTextDecresc
+    dis2.~\> dis8 fis4.
+    fis2 r2.
+    r4 cis2. r4
+    R1*5/4
+    r2 a'2.
+    r2 cis2.
+    r4 g2. r4
+    r2. e2\pp
   }
 }
 

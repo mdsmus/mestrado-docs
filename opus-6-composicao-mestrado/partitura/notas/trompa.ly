@@ -68,8 +68,16 @@ gestoABBtrompa = {
 }
 
 gestoABCtrompa = {
-  \relative c' {
-    R1*5/4*8
+  \relative c {
+    \setTextDecresc
+    cis2~\> cis8 cis~ cis2
+    r4 g''2.-+ g,4~
+    g2 r2.
+    r2. cis,2~
+    cis2 r2.
+    g'2. r2
+    r1 bes,4~\pp
+    bes2 r2.
   }
 }
 

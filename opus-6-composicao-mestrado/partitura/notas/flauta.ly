@@ -83,8 +83,13 @@ gestoABBflauta = {
 }
 
 gestoABCflauta = {
-  \relative c'''' {
-    R1*5/4*8
+  \relative c''' {
+    \setTextDecresc
+    g2.\> r2
+    g2. r2
+    r2 g,2.~\mp
+    g2. r2
+    R1*5/4*4
   }
 }
 
