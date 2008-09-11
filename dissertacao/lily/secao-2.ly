@@ -8,7 +8,7 @@
       \override Stem #'transparent = ##t
       \relative c'''' {
         g4 cis, e g, bes e, \bar "||"
-        g' g, cis' g,, cis cis, \bar "||"
+        g' g, cis g, cis cis, \bar "||"
         g''' e, c' cis,, a' fis, \bar "||"
         g''' cis,, bes' g,, e' bes, \bar "||"
         g'''' bes,, a' cis,,, c' dis,, \bar "||"
