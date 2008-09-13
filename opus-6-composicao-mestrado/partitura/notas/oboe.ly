@@ -105,16 +105,26 @@ gestoBAAoboe = {
     r2 r4. dis16\mp( cis
     fis e g8~ g1~
     g2~ g8 fis8 cis4~
-    cis2. c2)
+    cis2. c2~
   }
 }
 
 gestoBABoboe = {
-  \relative c'' {
-    \repeat unfold 8 {
-      R1*4/4
-      R1*5/4
+  \relative c' {
+    c4.) r8 g'-.\pp[ g-. r g-.]
+    \repeat unfold 2 {
+      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
+      r g-. g-. r g-.[ g-. r g-.]
     }
+    g8-.[ r g-. g-.] r4. dis16( e g4~
+    g1~
+    g8 cis,~ cis2. dis4
+    c?) r4 g'8-.[ g-. r g-.]
+    \repeat unfold 3 {
+      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
+      r g-. g-. r g-.[ g-. r g-.]
+    }
+    g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
   }
 }
 

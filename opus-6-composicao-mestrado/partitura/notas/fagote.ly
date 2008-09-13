@@ -108,12 +108,15 @@ gestoBAAfagote = {
 }
 
 gestoBABfagote = {
-  \clef tenor
   \relative c' {
-    \repeat unfold 8 {
-      R1*4/4
-      R1*5/4
+    \repeat unfold 5 {
+      a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.->[ a-. a-.] a,-.->[ a'-. a-. a-.] cis-.-> r
     }
+    a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.-> r4 g,,2.~(
+    g4. e fis4~
+    fis2.) fis2~(
+    fis4. cis dis4~
+    dis8 c?~ c2.) r4
   }
 }
 

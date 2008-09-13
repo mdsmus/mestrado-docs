@@ -103,11 +103,19 @@ gestoBAAflauta = {
 }
 
 gestoBABflauta = {
-  \relative c''' {
-    \repeat unfold 8 {
+  \relative c'' {
+    \repeat unfold 4 {
       R1*4/4
       R1*5/4
     }
+    r2 \times 2/3 { r8 c\mf( dis } \times 2/3 { cis fis e }
+    g2.~ g2~
+    g8 e4. fis2~
+    fis2.~ fis2)
+    a,1~\p
+    a2~ a2.
+    a1~
+    a2~ a2.
   }
 }
 

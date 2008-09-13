@@ -99,9 +99,13 @@ gestoBAAtrompa = {
 
 gestoBABtrompa = {
   \relative c' {
-    \repeat unfold 8 {
-      R1*4/4
-      R1*5/4
+    g8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
+    g,8-.->[ r8 r dis'-.->] r4 g,8-.-> r
+    r8 g~( g2. e4
+    fis1~
+    fis8 c~ c1)
+    \repeat unfold 5 {
+      g'8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
     }
   }
 }
