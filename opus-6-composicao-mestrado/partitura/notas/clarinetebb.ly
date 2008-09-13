@@ -105,11 +105,19 @@ gestoABCclarinetebb = {
 }
 
 gestoBAAclarinetebb = {
-  \relative c' {
-    \repeat unfold 8 {
+  \relative c'' {
+    \repeat unfold 3 {
       R1*4/4
       R1*5/4
     }
+    R1*4/4
+    r2 g2.~\ppp\<(
+    g1~
+    g8\mp\> c,~ c1~
+    c1~
+    c8\pp) r r1
+    g8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
+    g,8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
   }
 }
 

@@ -83,9 +83,16 @@ gestoABCtrompa = {
 
 gestoBAAtrompa = {
   \relative c' {
-    \repeat unfold 8 {
+    \repeat unfold 2 {
       R1*4/4
       R1*5/4
+    }
+    g8-.->\pp[ r8 r g-.->] r4 g8-.->[ r r g-.->] r4 g8-.-> r r4 g8-.-> r
+    \repeat unfold 3 {
+      g8-.->[ r8 r g-.->] r4 g8-.->[ r r g-.->] r4 g8-.-> r r4 g8-.-> r
+    }
+    \repeat unfold 2 {
+      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     }
   }
 }

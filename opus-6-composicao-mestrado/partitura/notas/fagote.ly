@@ -95,9 +95,14 @@ gestoABCfagote = {
 gestoBAAfagote = {
   \clef bass
   \relative c {
-    \repeat unfold 8 {
-      R1*4/4
-      R1*5/4
+    %% padrão de 2 compassos:
+    a8-.->\pp[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-. a-.] a-.-> r
+    a8-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-. a-.] a'-.-> r
+    \repeat unfold 2 {
+      a,8-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-. a-.] a'-.-> r
+    }
+    \repeat unfold 4 {
+      a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] a,-.->[ a'-. a-.] dis-.->[ a-. a-.] a,-.->[ a'-. a-. a-.] cis-.-> r
     }
   }
 }

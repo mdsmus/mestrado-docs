@@ -96,10 +96,16 @@ gestoABCoboe = {
 
 gestoBAAoboe = {
   \relative c' {
-    \repeat unfold 8 {
+    \repeat unfold 6 {
       R1*4/4
       R1*5/4
     }
+    %% anacruze com #s(2 1 4 3) - retrógrado de subconjunto de #s(5 3 4 1 2 0)
+    %% contorno com #s(5 4 1 0) - subconjunto de #s(5 3 4 1 2 0)
+    r2 r4. dis16\mp( cis
+    fis e g8~ g1~
+    g2~ g8 fis8 cis4~
+    cis2. c2)
   }
 }
 
