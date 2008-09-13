@@ -95,49 +95,29 @@ gestoABCfagote = {
 gestoBAAfagote = {
   \clef bass
   \relative c {
-    a8-.->\mp\energico a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
-    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
-    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
-    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
+    }
   }
 }
 
 gestoBABfagote = {
   \clef tenor
   \relative c' {
-    \repeat unfold 3 {
-      ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-      ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
-      ees4.-> ees-> ees4~->
-      ees8 ees4.-> ees2-> ees4->
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
     }
-    g1~\mf
-    g8 e4. fis2.
-    cis4. dis c4~
-    c1 r4
   }
 }
 
 gestoBACfagote = {
   \clef tenor
   \relative c' {
-    \repeat unfold 4 {
-      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
-      des4.-> des-> des4~->
-      des8 des4.-> des2-> des4->
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
     }
   }
 }

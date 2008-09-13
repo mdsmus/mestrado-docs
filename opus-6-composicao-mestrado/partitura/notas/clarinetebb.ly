@@ -106,52 +106,28 @@ gestoABCclarinetebb = {
 
 gestoBAAclarinetebb = {
   \relative c' {
-    g8-.->\mp\energico g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
-    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    cis4.-> cis-> cis4~->
-    cis8 cis4.-> cis2-> cis4->
-    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    cis4.-> cis-> cis4~->
-    cis8 cis4.-> cis2-> cis4->
-    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    dis4.-> dis-> dis4~->
-    dis8 dis4.-> dis2-> dis4->
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
+    }
   }
 }
 
 gestoBABclarinetebb = {
   \relative c'' {
-    \repeat unfold 4 {
-      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
-      des4.-> des-> des4~->
-      des8 des4.-> des2-> des4->
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
     }
   }
 }
 
 gestoBACclarinetebb = {
   \relative c'' {
-    \repeat unfold 2 {
-      ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-      ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
-      ees4.-> ees-> ees4~->
-      ees8 ees4.-> ees2-> ees4->
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
     }
-    e1~
-    e8 cis4. dis2.
-    bes4. c a4~
-    a1 r4
-    ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
-    ees4.-> ees-> ees4~->
-    ees8 ees4.-> ees2-> ees4->
   }
 }
 

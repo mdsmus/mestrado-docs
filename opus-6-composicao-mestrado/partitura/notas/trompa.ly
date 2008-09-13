@@ -83,58 +83,28 @@ gestoABCtrompa = {
 
 gestoBAAtrompa = {
   \relative c' {
-    \repeat unfold 5 {
-      R1
+    \repeat unfold 8 {
+      R1*4/4
       R1*5/4
     }
-    g1~\mf
-    g8 e4. fis2.
-    cis4. dis c4~
-    c1 r4
-    R1
-    R1*5/4
   }
 }
 
 gestoBABtrompa = {
   \relative c' {
-    bes1~
-    bes8 g4. a2.
-    e4. fis dis4~
-    dis1 r4
-    R1
-    R1*5/4
-    e'1~
-    e8 cis4. dis2.
-    bes4. c a4~
-    a1 r4
-    R1
-    R1*5/4
-    ees'8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
-    ees4.-> ees-> ees4~->
-    ees8 ees4.-> ees2-> ees4->
-    g,8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
+    }
   }
 }
 
 gestoBACtrompa = {
   \relative c'' {
-    R1
-    R1*5/4
-    bes1~
-    bes8 g4. a2.
-    e4. fis dis4~
-    dis1 r4
-    R1
-    R1*5/4
-    a'8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
+    }
   }
 }
 

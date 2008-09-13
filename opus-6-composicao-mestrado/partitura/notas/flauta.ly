@@ -95,47 +95,27 @@ gestoABCflauta = {
 
 gestoBAAflauta = {
   \relative c' {
-    R1
-    R1*5/4
-    cis8-.->\mp\energico cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    cis4.-> cis-> cis4~->
-    cis8 cis4.-> cis2-> cis4->
-    g'8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
-    g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
-    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
+    }
   }
 }
 
 gestoBABflauta = {
   \relative c''' {
-    \repeat unfold 3 {
-      g4.-> g-> g4~->
-      g8 g4.-> g2-> g4->
-      g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-      g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
     }
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
-    des'8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-    des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
   }
 }
 
 gestoBACflauta = {
   \relative c''' {
-    \repeat unfold 4 {
-      des4.-> des-> des4~->
-      des8 des4.-> des2-> des4->
-      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
     }
   }
 }

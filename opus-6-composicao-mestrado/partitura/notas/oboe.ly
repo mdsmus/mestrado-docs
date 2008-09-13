@@ -96,49 +96,28 @@ gestoABCoboe = {
 
 gestoBAAoboe = {
   \relative c' {
-    R1
-    R1*5/4
-    cis8-.->\mp\energico cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    cis4.-> cis-> cis4~->
-    cis8 cis4.-> cis2-> cis4->
-    dis8-.-> dis-. dis-. dis-.-> dis-. dis-. dis-.-> dis-.
-    dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
-    dis4.-> dis-> dis4~->
-    dis8 dis4.-> dis2-> dis4->
-    dis8-.-> dis-. dis-. dis-.-> dis-. dis-. dis-.-> dis-.
-    dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
-    dis4.-> dis-> dis4~->
-    dis8 dis4.-> dis2-> dis4->
-    g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
+    }
   }
 }
 
 gestoBABoboe = {
   \relative c'' {
-    \repeat unfold 4 {
-      a4.-> a-> a4~->
-      a8 a4.-> a2-> a4->
-      a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-      a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
     }
   }
 }
 
 gestoBACoboe = {
   \relative c''' {
-    \repeat unfold 3 {
-      g4.-> g-> g4~->
-      g8 g4.-> g2-> g4->
-      g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-      g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
     }
-    g1~\mf
-    g8 e4. fis2.
-    cis4. dis c4~
-    c1 r4
-
   }
 }
 
