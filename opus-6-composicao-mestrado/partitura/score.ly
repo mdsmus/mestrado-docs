@@ -34,18 +34,22 @@
         \new Staff <<
           \set Staff.instrumentName = \markup {\hcenter-in #5 "Flauta"}
           \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Fl."}
+          \set Staff.midiInstrument = "flute"
           \gestosglobal
           \gestosflauta
         >>
         \new Staff <<
           \set Staff.instrumentName = \markup {\hcenter-in #5 "Oboé"}
           \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Ob."}
+          \set Staff.midiInstrument = "oboe"
           \gestosglobal
           \gestosoboe
         >>
         \new Staff <<
           \set Staff.instrumentName = \markup {\hcenter-in #5 "Clarinete Bb"}
           \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Cl.Bb"}
+          \set Staff.midiInstrument = "clarinet"
+          \transposition bes
           \gestosglobal
           \transpose c d {
             \gestosclarinetebb
@@ -54,6 +58,8 @@
         \new Staff <<
           \set Staff.instrumentName = \markup {\hcenter-in #5 "Trompa"}
           \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Tpa."}
+          \set Staff.midiInstrument = "french horn"
+          \transposition f
           \gestosglobal
           \transpose c g {
             \gestostrompa
@@ -62,11 +68,13 @@
         \new Staff <<
           \set Staff.instrumentName = \markup {\hcenter-in #5 "Fagote"}
           \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Fg."}
+          \set Staff.midiInstrument = "bassoon"
           \gestosglobal
           \gestosfagote
         >>
       >>
     >>
+    \midi { }
     \layout {
       \context { \Score
                  \override MetronomeMark #'extra-offset = #'(-9 . 0)
