@@ -3,26 +3,26 @@
 \include "icode.ly"
 
 gestosicode = {
-\gestoAAAicode
-\gestoAABicode
-\gestoAACicode
-\gestoAADicode
-\gestoAAEicode
-\gestoABAicode
-\gestoABBicode
-\gestoABCicode
+% \gestoAAAicode
+% \gestoAABicode
+% \gestoAACicode
+% \gestoAADicode
+% \gestoAAEicode
+% \gestoABAicode
+% \gestoABBicode
+% \gestoABCicode
 \gestoBAAicode
 \gestoBABicode
 \gestoBACicode
-\gestoBBAicode
-\gestoBBBicode
-\gestoBBCicode
-\gestoCAAicode
-\gestoCABicode
-\gestoCACicode
-\gestoCBAicode
-\gestoCBBicode
-\gestoCBCicode
-\gestoCBDicode
-\gestoCBEicode
+% \gestoBBAicode
+% \gestoBBBicode
+% \gestoBBCicode
+% \gestoCAAicode
+% \gestoCABicode
+% \gestoCACicode
+% \gestoCBAicode
+% \gestoCBBicode
+% \gestoCBCicode
+% \gestoCBDicode
+% \gestoCBEicode
 }
