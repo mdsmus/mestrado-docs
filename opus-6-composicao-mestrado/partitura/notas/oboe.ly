@@ -151,7 +151,8 @@ gestoBACoboe = {
 
 gestoBBAoboe = {
   \relative c'' {
-    R1*2
+    r8[ g-. g-. r] g-.[ g-. r g-.]
+    g8-.[ r g-. g-.] r2
     %% sujeito do fugato transposto a quinta
     \transpose d a' {
       \relative {

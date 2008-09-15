@@ -131,24 +131,18 @@ gestoBACfagote = {
 }
 
 gestoBBAfagote = {
-  \clef tenor
   \relative c' {
-    des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-    des-. des-.-> des-. des-. des-.-> des-. des-. des-.
-    des-.-> des-. des4.-> des->
-    des4.-> des4.-> des4~->
-    des4-> des4->
-    %% repetição
+    \repeat unfold 2 {
+      r8[ a-. a-. r] a-.[ a-. r a-.]
+      a-.[ r a-. a-.] r a-. a-. a-. r a-.
+    }
     \setTextDecresc
-    des8-.->\> des-. des-. des-.-> des-. des-. des-.-> des-.
-    des-. des-.-> des-. des-. des-.-> des-. des-. des-.
-    des-.-> des-. des4~->
-    des8 des4.->
-    des4.-> des8~->
-    des4-> des2-> des4->
-    %% repetição parcial
-    des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-    des-. des-.-> des-. des-. des-.-> des-. des-. des-.\pp
+    r8[ a-.\> a-. r] a-.[ a-. r a-.]
+    a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
+    r8[ a-. a-. r] a-.[ a-. r a-.]
+    a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
+    r8[ a-. a-. r] a-.[ a-. r a-.]
+    a-.[ r a-. a-.] r a-. a-.[ a-.]\pp
   }
 }
 
