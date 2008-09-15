@@ -121,7 +121,19 @@ gestoBABflauta = {
 
 gestoBACflauta = {
   \relative c''' {
-    \repeat unfold 8 {
+    a,1~
+    a2~ a2.
+    a1~
+    a2~ a2.
+    a2. r16 c( dis cis
+    fis e g8~ g1)
+    e4.( fis8~ fis2~
+    fis8 cis4. dis2 c4~
+    c2) r
+    a2~ a2.
+    a1~
+    a2~ a2.
+    \repeat unfold 2 {
       R1*4/4
       R1*5/4
     }

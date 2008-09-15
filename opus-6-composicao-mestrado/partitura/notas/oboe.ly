@@ -114,7 +114,7 @@ gestoBABoboe = {
     c4.) r8 g'-.\pp[ g-. r g-.]
     \repeat unfold 2 {
       g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
-      r g-. g-. r g-.[ g-. r g-.]
+      r[ g-. g-. r] g-.[ g-. r g-.]
     }
     g8-.[ r g-. g-.] r4. dis16( e g4~
     g1~
@@ -122,15 +122,27 @@ gestoBABoboe = {
     c?) r4 g'8-.[ g-. r g-.]
     \repeat unfold 3 {
       g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
-      r g-. g-. r g-.[ g-. r g-.]
+      r[ g-. g-. r] g-.[ g-. r g-.]
     }
-    g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
+    g8-.[ r g-. g-.] r g-. r8 r16 c( dis cis fis e
   }
 }
 
 gestoBACoboe = {
   \relative c''' {
-    \repeat unfold 8 {
+    g2. e4
+    fis2.~ fis4 cis
+    dis4. c?8~ c2~
+    c2.) r2
+    \repeat unfold 2 {
+      r8[ g-. g-. r] g-.[ g-. r g-.]
+      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
+    }
+    r16 fis( a g c bes cis8~ cis2~
+    cis8) bes4.( c2.
+    g4. a fis4~
+    fis2) r2.
+    \repeat unfold 2 {
       R1*4/4
       R1*5/4
     }

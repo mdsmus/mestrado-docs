@@ -134,11 +134,20 @@ gestoBABclarinetebb = {
 }
 
 gestoBACclarinetebb = {
-  \relative c'' {
-    \repeat unfold 8 {
-      R1*4/4
-      R1*5/4
+  \relative c' {
+    \repeat unfold 2 {
+      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     }
+    r16 c( dis cis fis e g8~ g2~
+    g2 e fis4~
+    fis2. cis4~
+    cis8 dis4. c2.)
+    dis8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    \repeat unfold 2 {
+      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    }
+    R1*4/4
+    R1*5/4
   }
 }
 

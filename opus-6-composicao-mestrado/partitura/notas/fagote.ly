@@ -121,12 +121,14 @@ gestoBABfagote = {
 }
 
 gestoBACfagote = {
-  \clef tenor
+  \clef bass
   \relative c' {
-    \repeat unfold 8 {
-      R1*4/4
-      R1*5/4
+    \repeat unfold 7 {
+      r8[ a-. a-. r] a-.[ a-. r a-.]
+      a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
     }
+    R1*4/4
+    R1*5/4
   }
 }
 
