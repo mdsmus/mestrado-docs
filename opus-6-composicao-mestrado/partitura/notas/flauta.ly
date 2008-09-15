@@ -133,10 +133,10 @@ gestoBACflauta = {
     a2~ a2.
     a1~
     a2~ a2.
-    \repeat unfold 2 {
-      R1*4/4
-      R1*5/4
-    }
+    r16 a'16( c bes dis cis e8~ e4 cis4~
+    cis8 dis4. bes2 c4
+    a1~
+    a2.) r8. a16( c bes dis cis
   }
 }
 
@@ -144,7 +144,7 @@ gestoBBAflauta = {
   \relative c''' {
     %% sujeito do fugato
     %% #s(5 3 4 1 2 0)
-    d4-^\f b-^ cis-^ gis8( ais
+    d?4-^\f b-^ cis-^ gis8( ais
     g?4.)
     %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
     bes8->( e,8) g'4( cis,8~

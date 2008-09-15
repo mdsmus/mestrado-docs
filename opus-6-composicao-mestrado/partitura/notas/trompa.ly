@@ -117,11 +117,14 @@ gestoBACtrompa = {
     g1 e4
     fis2. cis4~
     cis8 dis4. c2) r4
-    \repeat unfold 4 {
+    \repeat unfold 2 {
       g8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
     }
-    R1*4/4
-    R1*5/4
+    g,8-.->[ r8 r cis-.->] r4 g'8-.-> r
+    cis1( bes4
+    c4. g a4
+    fis2) r2 g8-.-> r
+    g,8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
   }
 }
 

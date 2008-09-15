@@ -143,11 +143,10 @@ gestoBACclarinetebb = {
     fis2. cis4~
     cis8 dis4. c2.)
     dis8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
-    \repeat unfold 2 {
-      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
-    }
-    R1*4/4
-    R1*5/4
+    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r8. c16( dis cis fis e
+    g4.~ e fis4~
+    fis8 cis4. dis2 c4)
   }
 }
 

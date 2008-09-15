@@ -143,8 +143,8 @@ gestoBACoboe = {
     g4. a fis4~
     fis2) r2.
     \repeat unfold 2 {
-      R1*4/4
-      R1*5/4
+      r8[ g-. g-. r] g-.[ g-. r g-.]
+      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
     }
   }
 }

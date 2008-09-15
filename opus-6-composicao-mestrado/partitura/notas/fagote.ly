@@ -123,12 +123,10 @@ gestoBABfagote = {
 gestoBACfagote = {
   \clef bass
   \relative c' {
-    \repeat unfold 7 {
+    \repeat unfold 8 {
       r8[ a-. a-. r] a-.[ a-. r a-.]
       a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
     }
-    R1*4/4
-    R1*5/4
   }
 }
 
