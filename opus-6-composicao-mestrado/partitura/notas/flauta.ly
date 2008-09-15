@@ -95,48 +95,48 @@ gestoABCflauta = {
 
 gestoBAAflauta = {
   \relative c' {
-    R1
-    R1*5/4
-    cis8-.->\mp\energico cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    cis4.-> cis-> cis4~->
-    cis8 cis4.-> cis2-> cis4->
-    g'8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
-    g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
-    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
+    \repeat unfold 8 {
+      R1*4/4
+      R1*5/4
+    }
   }
 }
 
 gestoBABflauta = {
-  \relative c''' {
-    \repeat unfold 3 {
-      g4.-> g-> g4~->
-      g8 g4.-> g2-> g4->
-      g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-      g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
+  \relative c'' {
+    \repeat unfold 4 {
+      R1*4/4
+      R1*5/4
     }
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
-    des'8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-    des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
+    r2 \times 2/3 { r8 c\mf( dis } \times 2/3 { cis fis e }
+    g2.~ g2~
+    g8 e4. fis2~
+    fis2.~ fis2)
+    a,1~\p
+    a2~ a2.
+    a1~
+    a2~ a2.
   }
 }
 
 gestoBACflauta = {
   \relative c''' {
-    \repeat unfold 4 {
-      des4.-> des-> des4~->
-      des8 des4.-> des2-> des4->
-      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
-    }
+    a,1~
+    a2~ a2.
+    a1~
+    a2~ a2.
+    a2. r16 c( dis cis
+    fis e g8~ g1)
+    e4.( fis8~ fis2~
+    fis8 cis4. dis2 c4~
+    c2) r
+    a2~ a2.
+    a1~
+    a2~ a2.
+    r16 a'16( c bes dis cis e8~ e4 cis4~
+    cis8 dis4. bes2 c4
+    a1~
+    a2.) r8. a16( c bes dis cis
   }
 }
 
@@ -144,7 +144,7 @@ gestoBBAflauta = {
   \relative c''' {
     %% sujeito do fugato
     %% #s(5 3 4 1 2 0)
-    d4-^\f b-^ cis-^ gis8( ais
+    d?4-^\f b-^ cis-^ gis8( ais
     g?4.)
     %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
     bes8->( e,8) g'4( cis,8~

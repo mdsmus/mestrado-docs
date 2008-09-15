@@ -96,55 +96,63 @@ gestoABCoboe = {
 
 gestoBAAoboe = {
   \relative c' {
-    R1
-    R1*5/4
-    cis8-.->\mp\energico cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    cis4.-> cis-> cis4~->
-    cis8 cis4.-> cis2-> cis4->
-    dis8-.-> dis-. dis-. dis-.-> dis-. dis-. dis-.-> dis-.
-    dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
-    dis4.-> dis-> dis4~->
-    dis8 dis4.-> dis2-> dis4->
-    dis8-.-> dis-. dis-. dis-.-> dis-. dis-. dis-.-> dis-.
-    dis-. dis-.-> dis-. dis-. dis-.-> dis-. dis-. dis-. dis-.-> dis-.
-    dis4.-> dis-> dis4~->
-    dis8 dis4.-> dis2-> dis4->
-    g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
+    \repeat unfold 6 {
+      R1*4/4
+      R1*5/4
+    }
+    %% anacruze com #s(2 1 4 3) - retrógrado de subconjunto de #s(5 3 4 1 2 0)
+    %% contorno com #s(5 4 1 0) - subconjunto de #s(5 3 4 1 2 0)
+    r2 r4. dis16\mp( cis
+    fis e g8~ g1~
+    g2~ g8 fis8 cis4~
+    cis2. c2~
   }
 }
 
 gestoBABoboe = {
-  \relative c'' {
-    \repeat unfold 4 {
-      a4.-> a-> a4~->
-      a8 a4.-> a2-> a4->
-      a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-      a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+  \relative c' {
+    c4.) r8 g'-.\pp[ g-. r g-.]
+    \repeat unfold 2 {
+      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
+      r[ g-. g-. r] g-.[ g-. r g-.]
     }
+    g8-.[ r g-. g-.] r4. dis16( e g4~
+    g1~
+    g8 cis,~ cis2. dis4
+    c?) r4 g'8-.[ g-. r g-.]
+    \repeat unfold 3 {
+      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
+      r[ g-. g-. r] g-.[ g-. r g-.]
+    }
+    g8-.[ r g-. g-.] r g-. r8 r16 c( dis cis fis e
   }
 }
 
 gestoBACoboe = {
   \relative c''' {
-    \repeat unfold 3 {
-      g4.-> g-> g4~->
-      g8 g4.-> g2-> g4->
-      g8-.-> g-. g-. g-.-> g-. g-. g-.-> g-.
-      g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
+    g2. e4
+    fis2.~ fis4 cis
+    dis4. c?8~ c2~
+    c2.) r2
+    \repeat unfold 2 {
+      r8[ g-. g-. r] g-.[ g-. r g-.]
+      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
     }
-    g1~\mf
-    g8 e4. fis2.
-    cis4. dis c4~
-    c1 r4
-
+    r16 fis( a g c bes cis8~ cis2~
+    cis8) bes4.( c2.
+    g4. a fis4~
+    fis2) r2.
+    \repeat unfold 2 {
+      r8[ g-. g-. r] g-.[ g-. r g-.]
+      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
+    }
   }
 }
 
 gestoBBAoboe = {
   \relative c'' {
-    R1*2
+    r8[ g-. g-. r] g-.[ g-. r g-.]
+    g8-.[ r g-. g-.] r2
     %% sujeito do fugato transposto a quinta
     \transpose d a' {
       \relative {

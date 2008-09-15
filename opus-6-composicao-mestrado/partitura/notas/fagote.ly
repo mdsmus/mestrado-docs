@@ -95,72 +95,54 @@ gestoABCfagote = {
 gestoBAAfagote = {
   \clef bass
   \relative c {
-    a8-.->\mp\energico a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
-    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
-    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
-    a8-.-> a-. a-. a-.-> a-. a-. a-.-> a-.
-    a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
-    a4.-> a-> a4~->
-    a8 a4.-> a2-> a4->
+    %% padrão de 2 compassos:
+    a8-.->\pp[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-. a-.] a-.-> r
+    a8-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-. a-.] a'-.-> r
+    \repeat unfold 2 {
+      a,8-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-. a-.] a'-.-> r
+    }
+    \repeat unfold 4 {
+      a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] a,-.->[ a'-. a-.] dis-.->[ a-. a-.] a,-.->[ a'-. a-. a-.] cis-.-> r
+    }
   }
 }
 
 gestoBABfagote = {
-  \clef tenor
   \relative c' {
-    \repeat unfold 3 {
-      ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-      ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
-      ees4.-> ees-> ees4~->
-      ees8 ees4.-> ees2-> ees4->
+    \repeat unfold 5 {
+      a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.->[ a-. a-.] a,-.->[ a'-. a-. a-.] cis-.-> r
     }
-    g1~\mf
-    g8 e4. fis2.
-    cis4. dis c4~
-    c1 r4
+    a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.-> r4 g,,2.~(
+    g4. e fis4~
+    fis2.) fis2~(
+    fis4. cis dis4~
+    dis8 c?~ c2.) r4
   }
 }
 
 gestoBACfagote = {
-  \clef tenor
+  \clef bass
   \relative c' {
-    \repeat unfold 4 {
-      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
-      des4.-> des-> des4~->
-      des8 des4.-> des2-> des4->
+    \repeat unfold 8 {
+      r8[ a-. a-. r] a-.[ a-. r a-.]
+      a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
     }
   }
 }
 
 gestoBBAfagote = {
-  \clef tenor
   \relative c' {
-    des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-    des-. des-.-> des-. des-. des-.-> des-. des-. des-.
-    des-.-> des-. des4.-> des->
-    des4.-> des4.-> des4~->
-    des4-> des4->
-    %% repetição
+    \repeat unfold 2 {
+      r8[ a-. a-. r] a-.[ a-. r a-.]
+      a-.[ r a-. a-.] r a-. a-. a-. r a-.
+    }
     \setTextDecresc
-    des8-.->\> des-. des-. des-.-> des-. des-. des-.-> des-.
-    des-. des-.-> des-. des-. des-.-> des-. des-. des-.
-    des-.-> des-. des4~->
-    des8 des4.->
-    des4.-> des8~->
-    des4-> des2-> des4->
-    %% repetição parcial
-    des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-    des-. des-.-> des-. des-. des-.-> des-. des-. des-.\pp
+    r8[ a-.\> a-. r] a-.[ a-. r a-.]
+    a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
+    r8[ a-. a-. r] a-.[ a-. r a-.]
+    a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
+    r8[ a-. a-. r] a-.[ a-. r a-.]
+    a-.[ r a-. a-.] r a-. a-.[ a-.]\pp
   }
 }
 

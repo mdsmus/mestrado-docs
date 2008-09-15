@@ -105,71 +105,59 @@ gestoABCclarinetebb = {
 }
 
 gestoBAAclarinetebb = {
-  \relative c' {
-    g8-.->\mp\energico g-. g-. g-.-> g-. g-. g-.-> g-.
-    g-. g-.-> g-. g-. g-.-> g-. g-. g-. g-.-> g-.
-    g4.-> g-> g4~->
-    g8 g4.-> g2-> g4->
-    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    cis4.-> cis-> cis4~->
-    cis8 cis4.-> cis2-> cis4->
-    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    cis4.-> cis-> cis4~->
-    cis8 cis4.-> cis2-> cis4->
-    cis8-.-> cis-. cis-. cis-.-> cis-. cis-. cis-.-> cis-.
-    cis-. cis-.-> cis-. cis-. cis-.-> cis-. cis-. cis-. cis-.-> cis-.
-    dis4.-> dis-> dis4~->
-    dis8 dis4.-> dis2-> dis4->
+  \relative c'' {
+    \repeat unfold 3 {
+      R1*4/4
+      R1*5/4
+    }
+    R1*4/4
+    r2 g2.~\ppp\<(
+    g1~
+    g8\mp\> c,~ c1~
+    c1~
+    c8\pp) r r1
+    g8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
+    g,8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
   }
 }
 
 gestoBABclarinetebb = {
-  \relative c'' {
-    \repeat unfold 4 {
-      des8-.-> des-. des-. des-.-> des-. des-. des-.-> des-.
-      des-. des-.-> des-. des-. des-.-> des-. des-. des-. des-.-> des-.
-      des4.-> des-> des4~->
-      des8 des4.-> des2-> des4->
+  \relative c' {
+    r8. c16( cis e g8~ g2~
+    g1 e4~
+    e4. cis c4~
+    c2) r2 g8-. r
+    \repeat unfold 6 {
+      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     }
   }
 }
 
 gestoBACclarinetebb = {
-  \relative c'' {
+  \relative c' {
     \repeat unfold 2 {
-      ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-      ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
-      ees4.-> ees-> ees4~->
-      ees8 ees4.-> ees2-> ees4->
+      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     }
-    e1~
-    e8 cis4. dis2.
-    bes4. c a4~
-    a1 r4
-    ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-. ees-.-> ees-.
-    ees4.-> ees-> ees4~->
-    ees8 ees4.-> ees2-> ees4->
+    r16 c( dis cis fis e g8~ g2~
+    g2 e fis4~
+    fis2. cis4~
+    cis8 dis4. c2.)
+    dis8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r8. c16( dis cis fis e
+    g4.~ e fis4~
+    fis8 cis4. dis2 c4)
   }
 }
 
 gestoBBAclarinetebb = {
   \relative c' {
-    ees8-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.
-    ees-.-> ees-. ees4.-> ees->
-    ees4.-> ees4.-> ees4~->
-    ees4-> ees4->
-    %% repetição
+    \repeat unfold 2 {
+      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    }
     \setTextDecresc
-    ees8-.->\> ees-. ees-. ees-.-> ees-. ees-. ees-.-> ees-.
-    ees-. ees-.-> ees-. ees-. ees-.-> ees-. ees-. ees-.
-    ees-.-> ees-. ees4~->
-    ees8 ees4.->
-    ees4.-> ees8~->
-    ees4-> ees2-> ees4->\pp
+    dis8-.->[\> r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.->\pp r
     R1*2
   }
 }
