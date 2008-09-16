@@ -32,10 +32,10 @@ gestoAADflauta = {
     %% inclusão de transposição
     %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
     %% procedimentos utilizados: expansão de intervalos e transposição
-    g1\p\dolce\espressivo e4(
-    fis2) fis cis4
+    g1\p\dolce\espressivo( e4
+    fis2) fis( cis4
     e1) r4
-    bes'2.\espressivo fis2(
+    bes'2.\espressivo( fis2
     a2. e4 g4~
     g1) r4
   }
@@ -49,13 +49,13 @@ gestoAAEflauta = {
     %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
     %% procedimentos utilizados: expansão de intervalos e transposição
     \setTextCresc
-    g1\<\espressivo e4(
-    fis2) fis cis4
+    g1\<\espressivo( e4
+    fis2) fis( cis4
     e1) r4
-    bes'2.\espressivo fis2(
+    bes'2.\espressivo( fis2
     a2. e4 g4~
     g1) r4
-    g1\espressivo e4(
+    g1\espressivo( e4
     fis2.~\f fis2)
   }
 }
@@ -125,18 +125,18 @@ gestoBACflauta = {
     a2~ a2.
     a1~
     a2~ a2.
-    a2. r16 c( dis cis
+    a2. r16 c\mf( dis cis
     fis e g8~ g1)
     e4.( fis8~ fis2~
     fis8 cis4. dis2 c4~
     c2) r
-    a2~ a2.
+    a2~\p a2.
     a1~
     a2~ a2.
-    r16 a'16( c bes dis cis e8~ e4 cis4~
+    r16 a'16\mf( c bes dis cis e8~ e4 cis4~
     cis8 dis4. bes2 c4
-    a1~
-    a2.) r8. a16( c bes dis cis
+    a1~\p
+    a2.) r8. a16\<( c bes dis cis
   }
 }
 
@@ -168,7 +168,7 @@ gestoBBAflauta = {
 
     %% sujeito do fugato
     %% #s(5 3 4 1 2 0)
-    d4-^\f b-^ cis-^ gis8( ais
+    d4-^ b-^ cis-^ gis8( ais
   }
 }
 
@@ -184,7 +184,7 @@ gestoBBBflauta = {
 
     %% sujeito do fugato
     %% #s(5 3 4 1 2 0)
-    d4-^\f b-^ cis-^ gis8( ais
+    d4-^ b-^ cis-^ gis8( ais
     g?4.)
     %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
     bes8->( e,8) g'4( cis,8~
@@ -304,7 +304,8 @@ gestoCBCflauta = {
     g2\ff g'16 e fis cis dis c r8
     %% toca também material do fagote transposto oitava acima
     e,16 cis g' e, bes' g r8 g''16 e fis cis dis c r8
-    e,16 cis g' e, bes' g r8 g''16 e fis cis dis c r8
+    \setTextDecresc
+    e,16 cis g' e, bes' g r8 g''16\> e fis cis dis c r8
     e,16 cis g' e, bes' g r8 g''16 e fis cis dis c r8
     e,16 cis g' e, bes' g r8 g'16 e fis cis dis c r8
     e16 cis g' e, bes' g r8 g16\ppp e fis cis dis c r8
@@ -330,7 +331,7 @@ gestoCBEflauta = {
     g4 e8\st fis4. cis8\st e~
     e4 e8\st cis\st r2
     R1*3
-    r4 r8. c'16\p( ees des fis e g4~
+    r4 r8. c'16\f( ees des fis e g4~
     g4) e8\st fis4. cis8\st e~
     e4 g8\st e\st r2
     g4 e8\st fis4. cis8\st e~
