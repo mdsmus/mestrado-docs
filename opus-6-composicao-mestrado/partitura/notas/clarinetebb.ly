@@ -62,7 +62,7 @@ gestoAAEclarinetebb = {
     g'4( e fis cis dis
     bes2) g'4( e fis
     cis dis bes2) g'8( e
-    fis cis dis bes g' e fis cis dis bes)
+    fis cis dis bes g' e fis cis dis bes
     g'2.~\f g2)
   }
 }
@@ -123,10 +123,10 @@ gestoBAAclarinetebb = {
 
 gestoBABclarinetebb = {
   \relative c' {
-    r8. c16( cis e g8~ g2~
+    r8. c16\mp( cis e g8~ g2~
     g1 e4~
     e4. cis c4~
-    c2) r2 g8-. r
+    c2) r2 g8-.\pp r
     \repeat unfold 6 {
       dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     }
