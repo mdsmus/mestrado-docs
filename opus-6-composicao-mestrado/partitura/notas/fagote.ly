@@ -264,7 +264,9 @@ gestoCACfagote = {
 gestoCBAfagote = {
   \clef bass
   \relative c' {
-    R1*8
+    R1*4
+    c16-.\ppp g'-. r8 r2.
+    R1*3
     %% rot3 retr. #s(5 3 4 1 2 0)
     r2. e16\ppp cis g' e,
     bes' g r8 r2.
