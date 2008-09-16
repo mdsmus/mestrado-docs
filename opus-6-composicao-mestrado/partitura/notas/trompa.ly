@@ -21,7 +21,7 @@ gestoAADtrompa = {
     %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
     %% procedimentos utilizados: expansão de intervalos e transposição
     g1\p\dolce\espressivo e4(
-    fis2) fis cis4
+    fis2) fis( cis4
     e1) r4
     bes'2.\espressivo fis2(
     a2. e4 g4~
@@ -37,7 +37,7 @@ gestoAAEtrompa = {
     %% procedimentos utilizados: expansão de intervalos e transposição
     \setTextCresc
     g1\<\dolce\espressivo e4(
-    fis2) fis cis4
+    fis2) fis( cis4
     e1) r4
     bes'2.\espressivo fis2(
     a2. e4 g4~
@@ -101,11 +101,12 @@ gestoBABtrompa = {
   \relative c' {
     g8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
     g,8-.->[ r8 r dis'-.->] r4 g,8-.-> r
-    r8 g~( g2. e4
+    r8 g~\mp( g2. e4
     fis1~
     fis8 c~ c1)
-    \repeat unfold 5 {
-      g'8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
+    g'8-.->\p[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
+    \repeat unfold 4 {
+      g,8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
     }
   }
 }
@@ -120,10 +121,10 @@ gestoBACtrompa = {
     \repeat unfold 2 {
       g8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
     }
-    g,8-.->[ r8 r cis-.->] r4 g'8-.-> r
-    cis1( bes4
+    g,8-.->\<[ r8 r cis-.->] r4 g'8-.-> r
+    cis1\f( bes4
     c4. g a4
-    fis2) r2 g8-.-> r
+    fis2) r2 g8-.->\p r
     g,8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
   }
 }
@@ -229,7 +230,7 @@ gestoCBCtrompa = {
     cis1~
     cis2 bis2(
     dis1)
-    fis2 e
+    fis2\< e
     a g
   }
 }
