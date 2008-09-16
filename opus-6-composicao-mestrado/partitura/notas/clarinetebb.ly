@@ -313,28 +313,24 @@ gestoCBDclarinetebb = {
     R1*3
     r2. ees8-.->\p r
     ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
-    r ees-.->] r4 ees8-.-> r r4
-    ees8-.->[ r ees-.->] r r ees-.-> r4
-    ees8-.->[ r r ees-.->] r4 ees8-.-> r
-    r4 ees8-.-> r ees-.->[ r r ees-.->]
+    r ees-.->] r4 r2
+    ees8-.-> r ees-.->[ r r ees-.->] r4
+    r4 r8 ees-.-> r2
+    r4 ees8-.-> r ees-.-> r r4
     r4 ees8-.-> r r ees-.-> r4
   }
 }
 
 gestoCBEclarinetebb = {
   \relative c' {
-    ees8-.-> r8 r4 ees8-.->[ r ees8-.->] r
-    r ees8-.-> r r ees8-.->[ r r ees8-.->]
-    r4 ees8-.-> r r4 ees8-.-> r
-    %% repete padrão
-    ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
-    r ees-.->] r4 ees8-.-> r r4
-    ees8-.->[ r ees-.->] r r ees-.-> r4
+    R1*4
+    r8 ees-.->] r4 ees8-.-> r r4
+    ees8-.-> r ees-.->[ r r ees-.->] r4
     ees8-.->[ r r ees-.->] r4 ees8-.-> r
     r4 ees8-.-> r ees-.->[ r r ees-.->]
-    r4 ees8-.-> r r ees-.-> r4
-    ees8-.-> r8 r4 ees8-.->[ r ees8-.->] r
-    r ees8-.-> r r ees8-.->[ r r ees8-.->]
+    r4 ees8-.->[ r r ees-.->] r4
+    ees8-.-> r8 r4 ees8-.-> r ees8-.->[ r
+    r ees8-.->] r4 ees8-.->[ r r ees8-.->]
     r4 ees8-.-> r r4 ees8-.-> r
     %% repete padrão
     ees8-.->[ r r ees8-.->] r4 ees8-.->[ r

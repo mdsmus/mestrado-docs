@@ -340,14 +340,22 @@ gestoCBCoboe = {
 }
 
 gestoCBDoboe = {
-  \relative c' {
-    R1*10
+  \relative c'' {
+    R1*5
+    r2 a8-.-> r4.
+    R1
+    a8-.-> r8 r2 a8-.-> r
+    r2. r8 a8-.->
+    R1
   }
 }
 
 gestoCBEoboe = {
   \relative c'' {
-    R1*4
+    a8-.-> r8 r4 a8-.-> r a8-.->[ r
+    r a8-.->] r r a8-.->[ r r a8-.->]
+    r4 a8-.-> r r4 a8-.-> r
+    a8-.-> r8 r4 a8-.->[ r a8-.->] r
     r4 r8. c16\p( ees des fis e g4~
     g4) e8->\st fis4. cis8->\st e~
     e4 g8->\st e->\st r2
