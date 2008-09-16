@@ -279,10 +279,10 @@ gestoCBBclarinetebb = {
     r4 e16 g, bes e, g' cis, r8 r4
     r4 e16 g, bes e, g' cis, r8 r4
     r4 e16 g, bes e, g' cis, r8 r4
-    r4 e16 g, bes e, g' cis, r8 r4
-    r4 e16 g, bes e, g' cis, r8 r4
-    r4 e16 g, bes e, g' cis, r8 r4
-    r4 e16 g, bes e, g' cis, r8 e4~
+    r4 e16 g, bes e, g' cis,8.~ cis4~
+    cis8 r e16 g, bes e, g' cis,8.~ cis4~
+    cis8 r e16 g, bes e, g' cis,8.~ cis4~
+    cis8 r e16 g, bes e, g' cis, r8 e4~
   }
 }
 

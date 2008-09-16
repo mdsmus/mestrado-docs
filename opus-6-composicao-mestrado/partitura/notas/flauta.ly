@@ -292,10 +292,10 @@ gestoCBBflauta = {
     r2 g'16 e fis cis dis c r8
     r2 g'16 e fis cis dis c r8
     \setTextCresc
-    r2 g'16\< e fis cis dis c r8
-    r2 g'16 e fis cis dis c r8
-    r2 g''16 e fis cis dis c r8
-    r2 g'16 e fis cis dis c r8
+    r2 g'16\< e fis cis dis c8.~
+    c4. r8 g'16 e fis cis dis c8.~
+    c4. r8 g'16 e fis cis dis c8.~
+    c4. r8 g'16 e fis cis dis c r8
   }
 }
 

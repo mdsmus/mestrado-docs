@@ -288,10 +288,10 @@ gestoCBBfagote = {
     bes' g r8 r2.
     e'16 cis g' e, bes' g r8 r2
     \setTextCresc
-    e'16\< cis g' e, bes' g r8 r2
-    e'16 cis g' e, bes' g r8 r2
-    e'16 cis g' e, bes' g r8 r2
-    e'16 cis g' e, bes' g r8 e2
+    e'16\< cis g' e, bes' g8.~ g4. r8
+    \repeat unfold 3 {
+      e'16 cis g' e, bes' g8.~ g4. r8
+    }
   }
 }
 

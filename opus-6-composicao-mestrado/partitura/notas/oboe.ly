@@ -310,9 +310,9 @@ gestoCBBoboe = {
     e fis r8 r2 cis'16 dis c g
     \setTextCresc
     e fis r8 r2 cis'16\< dis c g
-    e fis r8 r2 cis'16 dis c g
-    e fis r8 r2 cis'16 dis c g
-    e fis r8 r2 cis'16 dis c g
+    \repeat unfold 3 {
+      e fis8.~ fis4. r8 cis'16 dis c g
+    }
   }
 }
 
