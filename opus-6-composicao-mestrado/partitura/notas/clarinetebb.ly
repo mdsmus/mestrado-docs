@@ -213,13 +213,13 @@ gestoCAAclarinetebb = {
     R1*3
     %% junto à trompa
     r2. g4~\p
-    g e8->\st fis4. fis8 g
+    g e8\st fis4. fis8 g
     e2 r4 g4~
-    g e8->\st fis4. fis8 g~
+    g e8\st fis4. fis8 g~
     g2 r4 g4~
-    g e8->\st fis4. fis8 g
+    g e8\st fis4. fis8 g
     e2 r4 g4~
-    g e8->\st fis4. e8 e~
+    g e8\st fis4. e8 e~
     e2 r2
     R1*3
   }
@@ -234,22 +234,22 @@ gestoCABclarinetebb = {
 
 gestoCACclarinetebb = {
   \relative c'' {
-    ees4) c8->\st bes4. a8->\st c~
-    c4 ees8->\st c->\st r2
-    ees4 c8->\st bes4. a8->\st c~
-    c4 cis8->\st a->\st r2
+    ees4) c8\st bes4. a8\st c~
+    c4 ees8\st c\st r2
+    ees4 c8\st bes4. a8\st c~
+    c4 cis8\st a\st r2
     %% repetição
-    ees'4 c8->\st bes4. a8->\st c~
-    c4 ees8->\st c->\st r2
+    ees'4 c8\st bes4. a8\st c~
+    c4 ees8\st c\st r2
     \setTextCresc
-    ees4\< c8->\st bes4. a8->\st c~
-    c4 cis8->\st a->\st r8. g16( bes a des c?
-    ees4) c8->\st bes4. a8->\st c~
-    c4 ees8->\st c->\st r8. g16( bes a des c?
-    ees4) c8->\st bes4. a8->\st c~
-    c4 cis8->\st a->\st r8. g16( bes a des c?
-    ees4) c8->\st bes4 r16 g16( bes a des c?
-    ees4) c8->\st bes4 r16 g16( bes a des c?
+    ees4\< c8\st bes4. a8\st c~
+    c4 cis8\st a\st r8. g16( bes a des c?
+    ees4) c8\st bes4. a8\st c~
+    c4 ees8\st c\st r8. g16( bes a des c?
+    ees4) c8\st bes4. a8\st c~
+    c4 cis8\st a\st r8. g16( bes a des c?
+    ees4) c8\st bes4 r16 g16( bes a des c?
+    ees4) c8\st bes4 r16 g16( bes a des c?
     ees2)\ff r
   }
 }

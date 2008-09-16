@@ -244,9 +244,9 @@ gestoCAAoboe = {
     R1*11
     %% preparação com retrogradação de #s(5 3 4 1 2 0)
     r4 r8. c16\p( ees des fis e) g4~
-    g e8->\st fis4. cis8 g'
+    g e8\st fis4. cis8 g'
     e2 r4 g4~
-    g e8->\st fis4. cis8 cis~
+    g e8\st fis4. cis8 cis~
   }
 }
 
@@ -357,14 +357,14 @@ gestoCBEoboe = {
     r4 a8-.-> r r4 a8-.-> r
     a8-.-> r8 r4 a8-.->[ r a8-.->] r
     r4 r8. c16\p( ees des fis e g4~
-    g4) e8->\st fis4. cis8->\st e~
-    e4 g8->\st e->\st r2
-    g4 e8->\st fis4. cis8->\st e~
-    e4 e8->\st cis->\st r4 ees4~
-    ees4 c8->\st bes4. a8->\st c~
-    c4 ees8->\st c->\st r2
-    ees4 c8->\st bes4. a8->\st c~
-    c4 cis8->\st a->\st r2
+    g4) e8\st fis4. cis8\st e~
+    e4 g8\st e\st r2
+    g4 e8\st fis4. cis8\st e~
+    e4 e8\st cis\st r4 ees4~
+    ees4 c8\st bes4. a8\st c~
+    c4 ees8\st c\st r2
+    ees4 c8\st bes4. a8\st c~
+    c4 cis8\st a\st r2
     R1
     g'4( e4 fis cis8 dis
     c?1)
