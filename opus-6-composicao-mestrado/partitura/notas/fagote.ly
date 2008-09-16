@@ -88,7 +88,7 @@ gestoABCfagote = {
     r2 a'2.
     r2 cis2.
     r4 g2. r4
-    r2. e2\pp
+    r2. e2\pp\breathe
   }
 }
 
