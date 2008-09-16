@@ -209,31 +209,31 @@ gestoCAAfagote = {
   \clef bass
   \relative c {
     %% idéia de INT_1(5 3 4 1 2 0)
-    a4\p g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
-    a'4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
+    a4\p g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
+    a'4 g8\st a4. g8\st a~
+    a4 g8\st a4. r4
     \repeat unfold 2 {
-      a4 g8->\st a4. g8->\st a~
-      a4 g8->\st a4. cis8->\st dis,->\st
-      a'4 g8->\st a4. g8->\st a~
-      a4 g8->\st a4. r4
+      a4 g8\st a4. g8\st a~
+      a4 g8\st a4. cis8\st dis,\st
+      a'4 g8\st a4. g8\st a~
+      a4 g8\st a4. r4
     }
-      a4 g8->\st a4. g8->\st a~
-      a4 g8->\st a4. cis8->\st dis,->\st
-      a'4 g8->\st a4. g8->\st a~
+      a4 g8\st a4. g8\st a~
+      a4 g8\st a4. cis8\st dis,\st
+      a'4 g8\st a4. g8\st a~
   }
 }
 
 gestoCABfagote = {
   \clef bass
   \relative c {
-    a4 g8->\st a4. r4
+    a4 g8\st a4. r4
     \repeat unfold 2 {
-      a4 g8->\st a4. g8->\st a~
-      a4 g8->\st a4. cis8->\st dis,->\st
-      a'4 g8->\st a4. g8->\st a~
-      a4 g8->\st a4. r4
+      a4 g8\st a4. g8\st a~
+      a4 g8\st a4. cis8\st dis,\st
+      a'4 g8\st a4. g8\st a~
+      a4 g8\st a4. r4
     }
   }
 }
@@ -242,21 +242,21 @@ gestoCACfagote = {
   \clef bass
   \relative c {
     %% repetição de CAA
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
-    a'4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
+    a4 g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
+    a'4 g8\st a4. g8\st a~
+    a4 g8\st a4. r4
+    a4 g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
     \setTextCresc
-    a'4\< g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
-    a'4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
+    a'4\< g8\st a4. g8\st a~
+    a4 g8\st a4. r4
+    a4 g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
+    a'4 g8\st a4. g8\st a~
+    a4 g8\st a4. r4
+    a4 g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
     a'2\ff r
   }
 }
@@ -321,33 +321,33 @@ gestoCBCfagote = {
 gestoCBDfagote = {
   \clef bass
   \relative c {
-    a4\mf g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
-    a'4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
-    a'4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
+    a4\mf g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
+    a'4 g8\st a4. g8\st a~
+    a4 g8\st a4. r4
+    a4 g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
+    a'4 g8\st a4. g8\st a~
+    a4 g8\st a4. r4
+    a4 g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
   }
 }
 
 gestoCBEfagote = {
   \clef bass
   \relative c {
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
+    a4 g8\st a4. g8\st a~
+    a4 g8\st a4. r4
     \repeat unfold 3 {
-      a4 g8->\st a4. g8->\st a~
-      a4 g8->\st a4. cis8->\st dis,->\st
-      a'4 g8->\st a4. g8->\st a~
-      a4 g8->\st a4. r4
+      a4 g8\st a4. g8\st a~
+      a4 g8\st a4. cis8\st dis,\st
+      a'4 g8\st a4. g8\st a~
+      a4 g8\st a4. r4
     }
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
-    a'4 g8->\st a4. g8->\st a~
+    a4 g8\st a4. g8\st a~
+    a4 g8\st a4. cis8\st dis,\st
+    a'4 g8\st a4. g8\st a~
     g4( e4 fis cis8 dis
     c?1~
     c)
