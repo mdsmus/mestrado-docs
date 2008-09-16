@@ -138,14 +138,14 @@ gestoBACclarinetebb = {
     \repeat unfold 2 {
       dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     }
-    r16 c( dis cis fis e g8~ g2~
+    r16 c\mf( dis cis fis e g8~ g2~
     g2 e fis4~
     fis2. cis4~
     cis8 dis4. c2.)
-    dis8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    dis8-.->\p[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
-    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r8. c16( dis cis fis e
-    g4.~ e fis4~
+    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r8. c16\<( dis cis fis e
+    g4.~\f e fis4~
     fis8 cis4. dis2 c4)
   }
 }
@@ -153,7 +153,7 @@ gestoBACclarinetebb = {
 gestoBBAclarinetebb = {
   \relative c' {
     \repeat unfold 2 {
-      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+      dis'8-.->\p[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     }
     \setTextDecresc
     dis8-.->[\> r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
@@ -192,7 +192,7 @@ gestoBBCclarinetebb = {
     bes8->( e,8) g'4( cis,8~
     cis e8~\trill\tris e2) r4
 
-    d,4-^\f b-^ cis-^ gis8( ais
+    d,4-^ b-^ cis-^ gis8( ais
     g?2~ g4.) r8 
 
     d'4-^ b-^ cis-^ gis8( ais
@@ -279,7 +279,8 @@ gestoCBBclarinetebb = {
     r4 e16 g, bes e, g' cis, r8 r4
     r4 e16 g, bes e, g' cis, r8 r4
     r4 e16 g, bes e, g' cis, r8 r4
-    r4 e16 g, bes e, g' cis,8.~ cis4~
+    \setTextCresc
+    r4 e16 g, bes e, g' cis,8.~\< cis4~
     cis8 r e16 g, bes e, g' cis,8.~ cis4~
     cis8 r e16 g, bes e, g' cis,8.~ cis4~
     cis8 r e16 g, bes e, g' cis, r8 e4~
@@ -291,7 +292,6 @@ gestoCBCclarinetebb = {
     e4\ff e16 g, bes e, g' cis,8.~\fp cis4~
     cis4 e16\f g, bes e, g' cis,8.~\p cis4~
     cis4 e16\mf g, bes e, g' cis,8.~\p\> cis4
-    \setTextCresc
     e,16\ppp( g fis bes a c a c bes e cis dis) r4
     e,16( g fis bes a c a c bes e cis dis fis e bes' g
     a4) r4 e,16( g fis bes a c a c
@@ -299,12 +299,13 @@ gestoCBCclarinetebb = {
     a c a c bes e cis dis fis e bes' g a4)
     r2 e,16( g fis bes a c a c
     bes e cis dis) r2.
-    r4 e,16( g fis bes a c a c bes e cis dis
+    \setTextCresc
+    r4 e,16\<( g fis bes a c a c bes e cis dis
     fis e bes' g a4) r4 e16( g fis bes
     a c a c bes e cis dis) r2
     e,16( g fis bes a c a c bes e cis dis fis e bes' g
     a4) r4 e16( g fis bes a c a c
-    bes e cis dis) r2.
+    bes e cis dis)\f r2.
   }
 }
 
@@ -334,11 +335,12 @@ gestoCBEclarinetebb = {
     r4 ees8-.-> r r4 ees8-.-> r
     %% repete padrão
     ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
-    r ees-.->] r4 ees8-.-> r r4
+    \setTextCresc
+    r ees-.->]\< r4 ees8-.-> r r4
     ees8-.->[ r ees-.->] r r ees-.-> r4
     ees8-.->[ r r ees-.->] r4 ees8-.-> r
     r4 ees8-.-> r ees-.->[ r r ees-.->]
-    g4( e4 fis cis8 dis
+    g4\f( e4 fis cis8 dis
     c?1~
     c)
   }
