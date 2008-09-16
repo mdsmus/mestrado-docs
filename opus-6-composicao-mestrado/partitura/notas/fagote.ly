@@ -112,7 +112,7 @@ gestoBABfagote = {
     \repeat unfold 5 {
       a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.->[ a-. a-.] a,-.->[ a'-. a-. a-.] cis-.-> r
     }
-    a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.-> r4 g,,2.~(
+    a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.-> r4 g,,2.~\mf(
     g4. e fis4~
     fis2.) fis2~(
     fis4. cis dis4~
@@ -123,7 +123,9 @@ gestoBABfagote = {
 gestoBACfagote = {
   \clef bass
   \relative c' {
-    \repeat unfold 8 {
+    r8[ a-.\p a-. r] a-.[ a-. r a-.]
+    a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
+    \repeat unfold 7 {
       r8[ a-. a-. r] a-.[ a-. r a-.]
       a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
     }
@@ -312,10 +314,11 @@ gestoCBCfagote = {
     \clef tenor
     r4 c,16( ees des fis e g e g fis bes a c)
     \clef bass
-    r2 c,,16( ees des fis e g e g
+    \setTextCresc
+    r2 c,,16\<( ees des fis e g e g
     fis bes a c ees des fis e g4) r
     \clef tenor
-    c,16( ees des fis e g e g fis bes a c) r4
+    c,16( ees des fis e g e g fis bes a c)\mf r4
     R1
   }
 }
