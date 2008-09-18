@@ -84,69 +84,69 @@ gestoABCtrompa = {
 gestoBAAtrompa = {
   \relative c' {
     R1*6/8*6
-    g8-.->\pp r4 g8-.-> r4
-    g8-.-> r4 g8-.-> r4
-    g8-.-> r4 r8 g8-.-> r
+    g4.\st\pp g4.\st
+    g4.\st g4.\st
+    g4.\st r8 g4\st
     \repeat unfold 3 {
-      g8-.-> r4 g8-.-> r4
-      g8-.-> r4 g8-.-> r4
-      g8-.-> r4 r8 g8-.-> r
+      g4.\st g4.\st
+      g4.\st g4.\st
+      g4.\st r8 g4\st
     }
     \repeat unfold 2 {
-      dis'8-.-> r4 g,8-.-> r4
-      cis8-.-> r4 g8-.-> r4
-      dis'8-.-> r4 r8 g,8-.-> r
+      dis'4.\st g,4.\st
+      cis4.\st g4.\st
+      dis'4.\st r8 g,4\st
     }
   }
 }
 
 gestoBABtrompa = {
   \relative c' {
-    g8-.-> r4 dis'8-.-> r4
-    g,8-.-> r4 cis8-.-> r4
-    g8-.-> r4 r8 dis'8-.-> r
-    g,8-.-> r4 dis'8-.-> r4
-    g,8-.-> r4 g4.\mp(
+    g4.\st dis'4.\st
+    g,4.\st cis4.\st
+    g4.\st r8 dis'4\st
+    g,4.\st dis'4.\st
+    g,4.\st g4.\mp(
     g4.~ g8 e4
     fis2.~
     fis4. c4.~
     c2.)
-    g'8-.->\p r4 dis'8-.-> r4
-    g,8-.-> r4 cis8-.-> r4
-    g8-.-> r4 r8 dis'8-.-> r
+    g'4.\st\p dis'4.\st
+    g,4.\st cis4.\st
+    g4.\st r8 dis'4\st
     \repeat unfold 4 {
-      g,8-.-> r4 dis'8-.-> r4
-      g,8-.-> r4 cis8-.-> r4
-      g8-.-> r4 r8 dis'8-.-> r
+      g,4.\st dis'4.\st
+      g,4.\st cis4.\st
+      g4.\st r8 dis'4\st
     }
   }
 }
 
 gestoBACtrompa = {
   \relative c' {
-    g8-.-> r4 dis'8-.-> r4
-    g,8-.-> r4 cis8-.-> r4
-    g8-.-> r4 r8 dis'8-.-> r
-    g,8-.-> r4 dis'8-.-> r4
+    g4.\st dis'4.\st
+    g,4.\st cis4.\st
+    g4.\st r8 dis'4\st
+    g,4.\st dis'4.\st
     g2.~(
     g4.~ g8 e4
     fis2.
     cis4. dis4.
     c4.~ c8) r4
     \repeat unfold 2 {
-      g8-.-> r4 dis'8-.-> r4
-      g,8-.-> r4 cis8-.-> r4
-      g8-.-> r4 r8 dis'8-.-> r
+      g4.\st dis'4.\st
+      g,4.\st cis4.\st
+      g4.\st r8 dis'4\st
     }
-    g,8-.->\< r4 cis8-.-> r4
-    g'8-.-> r cis8~\f( cis4.~
+    g,4.\st\< cis4.\st
+    g'4.\st cis4.~\f(
     cis4.~ cis8 bes4
     c4. g
     a4 fis8~ fis4.)
-    r4. r8 g8-.->\p r
-    g,8-.-> r4 dis'8-.-> r4
-    g,8-.-> r4 cis8-.-> r4
-    g8-.-> r4 r8 dis'8-.-> r
+    r4. r8 g4\st\p
+    g,4.\st dis'4.\st
+    g,4.\st cis4.\st
+    g4.\st r8 dis'4\st
   }
 }
 

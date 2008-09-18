@@ -114,13 +114,13 @@ gestoBAAclarinetebb = {
     c2.~
     c4.\pp) r
     R1*6/8
-    g8-.-> r4 dis'8-.-> r4
-    g,8-.-> r4 cis8-.-> r4
-    g8-.-> r4 r8 dis'8-.-> r
+    g4.\st dis'4.\st
+    g,4.\st cis4.\st
+    g4.\st r8 dis'4\st
 
-    g,8-.-> r4 dis'8-.-> r4
-    g,8-.-> r4 cis8-.-> r4
-    g8-.-> r4 r8 dis'8-.-> r
+    g,4.\st dis'4.\st
+    g,4.\st cis4.\st
+    g4.\st r8 dis'4\st
   }
 }
 
@@ -133,9 +133,9 @@ gestoBABclarinetebb = {
     c2.)
     r4. r8 g8-.\pp r
     \repeat unfold 6 {
-      dis'8-.-> r4 g,8-.-> r4
-      cis8-.-> r4 g8-.-> r4
-      dis'8-.-> r4 r8 g,8-.-> r
+      dis'4.\st g,4.\st
+      cis4.\st g4.\st
+      dis'4.\st r8 g,4\st
     }
   }
 }
@@ -143,9 +143,9 @@ gestoBABclarinetebb = {
 gestoBACclarinetebb = {
   \relative c' {
     \repeat unfold 2 {
-      dis'8-.-> r4 g,8-.-> r4
-      cis8-.-> r4 g8-.-> r4
-      dis'8-.-> r4 r8 g,8-.-> r
+      dis'4.\st g,4.\st
+      cis4.\st g4.\st
+      dis'4.\st r8 g,4\st
     }
     r16 c\mf( dis cis fis e g4.~
     g2.
@@ -153,15 +153,15 @@ gestoBACclarinetebb = {
     fis2.
     cis4. dis4.
     c2.)
-    dis8-.->\p r4 g,8-.-> r4
-    cis8-.-> r4 g8-.-> r4
-    dis'8-.-> r4 r8 g,8-.-> r
-    dis'8-.-> r4 g,8-.-> r4
-    cis8-.-> r4 g8-.-> r4
-    dis'8-.-> r4 r8 g,8-.-> r
-    dis'8-.-> r4 g,8-.-> r4
-    cis8-.-> r4 g8-.-> r4
-    dis'8-.-> r4 r16 c16\<( dis cis fis e
+    dis8-.->\p r4 g,4.\st
+    cis4.\st g4.\st
+    dis'4.\st r8 g,4\st
+    dis'4.\st g,4.\st
+    cis4.\st g4.\st
+    dis'4.\st r8 g,4\st
+    dis'4.\st g,4.\st
+    cis4.\st g4.\st
+    dis'4.\st r16 c16\<( dis cis fis e
     g4.~\f e
     fis4. cis4.
     dis4.~ dis8 c4)
