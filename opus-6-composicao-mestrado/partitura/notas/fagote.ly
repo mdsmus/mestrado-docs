@@ -118,13 +118,19 @@ gestoBAAfagote = {
 gestoBABfagote = {
   \relative c' {
     \repeat unfold 5 {
-      a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.->[ a-. a-.] a,-.->[ a'-. a-. a-.] cis-.-> r
+      a,8-.-> a'-. a-. cis-.-> a-. a-.
+      g'-.-> a,-. a-. dis-.-> a-. a-.
+      a,-.->[ a'-. a-. a-.] cis-.-> r
     }
-    a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] g'-.->[ a,-. a-.] dis-.-> r4 g,,2.~\mf(
-    g4. e fis4~
-    fis2.) fis2~(
-    fis4. cis dis4~
-    dis8 c?~ c2.) r4
+    a,8-.-> a'-. a-. cis-.-> a-. a-.
+    g'-.-> a,-. a-. dis-.-> r4
+    g,,2.~\mf(
+    g4. e
+    fis2.~
+    fis4) fis8~( fis4.~
+    fis4. cis
+    dis4. c?4.
+    c4.~ c8) r4
   }
 }
 
