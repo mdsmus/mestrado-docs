@@ -345,8 +345,8 @@ gestoCBEflauta = {
     c?1)
     g'4( e4 fis cis8 dis
     c?1)
-    g'4( e4 fis cis8 dis
-    c?1~
-    c)
+    g'4( e4 fis) cis8( dis)
+    r4 c?2.~\p\<
+    c1\f
   }
 }

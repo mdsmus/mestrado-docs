@@ -369,8 +369,8 @@ gestoCBEfagote = {
     a4 g8\st a4. g8\st a~
     a4 g8\st a4. cis8\st dis,\st
     a'4 g8\st a4. g8\st a~
-    g4( e4 fis cis8 dis
-    c?1~
-    c)
+    g'4( e4 fis) cis8( dis)
+    r4 c?2.~\p\<
+    c1\f
   }
 }

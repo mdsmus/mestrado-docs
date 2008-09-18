@@ -358,8 +358,8 @@ gestoCBEclarinetebb = {
     ees8-.->[ r ees-.->] r r ees-.-> r4
     ees8-.->[ r r ees-.->] r4 ees8-.-> r
     r4 ees8-.-> r ees-.->[ r r ees-.->]
-    g4\f( e4 fis cis8 dis
-    c?1~
-    c)
+    g'4\f( e4 fis) cis8( dis)
+    r4 c?2.~\p\<
+    c1\f
   }
 }
