@@ -270,6 +270,12 @@ gestoCBDtrompa = {
 
 gestoCBEtrompa = {
   \relative c {
+    %% material do fagote. AAA
+    e1
+    r4 g2.~
+    g4 e fis2~
+    fis2. fis4~
+    fis2. cis4
     e1
     r4 g2.~
     g4 e fis2~
@@ -287,7 +293,12 @@ gestoCBEtrompa = {
     g'2 e
     fis cis4 dis
     c?1
+    \setTextCresc
+    g'2\< e
+    fis cis4 dis
+    c?1
     g'4 e4 fis cis8 dis
+    g4\f e4 fis cis8 dis
     r4 c?2.~\p\<
     c1\f
   }

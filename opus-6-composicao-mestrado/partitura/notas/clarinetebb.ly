@@ -353,11 +353,20 @@ gestoCBEclarinetebb = {
     r4 ees8-.-> r r4 ees8-.-> r
     %% repete padrão
     ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
-    \setTextCresc
-    r ees-.->]\< r4 ees8-.-> r r4
+    r ees-.->] r4 ees8-.-> r r4
     ees8-.->[ r ees-.->] r r ees-.-> r4
     ees8-.->[ r r ees-.->] r4 ees8-.-> r
     r4 ees8-.-> r ees-.->[ r r ees-.->]
+    r4 ees8-.->[ r r ees-.->] r4
+    ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
+    r ees-.->] r4 ees8-.-> r r4
+    ees8-.->[ r ees-.->] r r ees-.-> r4
+    \setTextCresc
+    ees8-.->\<[ r r ees-.->] r4 ees8-.-> r
+    r4 ees8-.-> r ees-.->[ r r ees-.->]
+    r4 ees8-.->[ r r ees-.->] r4
+    ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
+    r ees-.->] r4 ees8-.-> r r4
     g'4\f( e4 fis) cis8( dis)
     r4 c?2.~\p\<
     c1\f

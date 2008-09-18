@@ -215,6 +215,6 @@ gestoCBEglobal = {
   \padraoglobal
   \tempo 4=112
   \time 4/4
-  s1*20
+  s1*29
   \bar "|."
 }

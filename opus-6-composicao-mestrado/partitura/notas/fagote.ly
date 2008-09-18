@@ -360,16 +360,18 @@ gestoCBEfagote = {
   \relative c {
     a4 g8\st a4. g8\st a~
     a4 g8\st a4. r4
-    \repeat unfold 3 {
+    \repeat unfold 5 {
       a4 g8\st a4. g8\st a~
       a4 g8\st a4. cis8\st dis,\st
       a'4 g8\st a4. g8\st a~
       a4 g8\st a4. r4
     }
-    a4 g8\st a4. g8\st a~
+    \setTextCresc
+    a4\< g8\st a4. g8\st a~
     a4 g8\st a4. cis8\st dis,\st
     a'4 g8\st a4. g8\st a~
-    g'4( e4 fis) cis8( dis)
+    a4 g8\st a4. r4
+    g'4\f( e4 fis) cis8( dis)
     r4 c?2.~\p\<
     c1\f
   }

@@ -340,12 +340,22 @@ gestoCBEflauta = {
     g4) e8\st fis4. cis8\st e~
     e4 g8\st e\st r2
     g4 e8\st fis4. cis8\st e~
+    e4 e8\st cis\st r4 g'~
+    g4 e8\st fis4. cis8\st e~
+    e4 g8\st e\st r2
+    g4 e8\st fis4. cis8\st e~
     e4 e8\st cis\st r2
     g'4( e4 fis cis8 dis
     c?1)
+    g'4 e8\st fis4. cis8\st e~
+    \setTextCresc
+    e4 g8\st e\st r8. c16\<( ees des fis e
+    g4( e4 fis cis8 dis
+    c?1)
     g'4( e4 fis cis8 dis
     c?1)
-    g'4( e4 fis) cis8( dis)
+    g'4( e4 fis) ees16( des fis e
+    g4\f( e4 fis) cis8( dis)
     r4 c?2.~\p\<
     c1\f
   }
