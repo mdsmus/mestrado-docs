@@ -95,48 +95,53 @@ gestoABCflauta = {
 
 gestoBAAflauta = {
   \relative c' {
-    \repeat unfold 8 {
-      R1*4/4
-      R1*5/4
-    }
+    R1*6/8*24
   }
 }
 
 gestoBABflauta = {
   \relative c'' {
-    \repeat unfold 4 {
-      R1*4/4
-      R1*5/4
-    }
-    r2 \times 2/3 { r8 c\mf( dis } \times 2/3 { cis fis e }
-    g2.~ g2~
-    g8 e4. fis2~
-    fis2.~ fis2)
-    a,1~\p
-    a2~ a2.
-    a1~
-    a2~ a2.
+    R1*6/8*12
+    r4. r8 \times 2/3 { r8 c\mf( dis }
+    \times 2/3 { cis fis e } g8~ g4.~
+    g2.~
+    g8 e4~ e8 fis4~
+    fis2.~
+    fis2.)
+    a,2.~\p
+    a2.~
+    a2.
+    a2.~
+    a2.~
+    a2.
   }
 }
 
 gestoBACflauta = {
-  \relative c''' {
-    a,1~
-    a2~ a2.
-    a1~
-    a2~ a2.
-    a2. r16 c\mf( dis cis
-    fis e g8~ g1)
-    e4.( fis8~ fis2~
-    fis8 cis4. dis2 c4~
-    c2) r
-    a2~\p a2.
-    a1~
-    a2~ a2.
-    r16 a'16\mf( c bes dis cis e8~ e4 cis4~
-    cis8 dis4. bes2 c4
-    a1~\p
-    a2.) r8. a16\<( c bes dis cis
+  \relative c'' {
+    \repeat unfold 2 {
+      a2.~
+      a2.~
+      a2.
+    }
+    a2.
+    r16 c\mf( dis cis fis e g4.~
+    g2.)
+    e4.( fis4.
+    fis4. cis4.
+    dis4.~ dis8 c4~
+    c4.~ c8) r4
+    r4 a8~\p a4.~
+    a2.~
+    a2.
+    a2.~
+    a2.
+    r16 a'16\mf( c bes dis cis e4.
+    cis4. dis4.
+    bes4.~ bes8 c4
+    a2.~\p
+    a2.) 
+    r4. r16 a16\<( c bes dis cis
   }
 }
 
