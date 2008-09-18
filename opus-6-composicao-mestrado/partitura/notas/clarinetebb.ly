@@ -106,29 +106,36 @@ gestoABCclarinetebb = {
 
 gestoBAAclarinetebb = {
   \relative c'' {
-    \repeat unfold 3 {
-      R1*4/4
-      R1*5/4
-    }
-    R1*4/4
-    r2 g2.~\ppp\<(
-    g1~
-    g8\mp\> c,~ c1~
-    c1~
-    c8\pp) r r1
-    g8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
-    g,8-.->[ r8 r dis'-.->] r4 g,8-.->[ r r cis-.->] r4 g8-.-> r r4 dis'8-.-> r
+    R1*6/8*11
+    g2.~\ppp\<(
+    g2.~
+    g4.\mp\> c,4.~
+    c2.~
+    c2.~
+    c4.\pp) r
+    R1*6/8
+    g8-.-> r4 dis'8-.-> r4
+    g,8-.-> r4 cis8-.-> r4
+    g8-.-> r4 r8 dis'8-.-> r
+
+    g,8-.-> r4 dis'8-.-> r4
+    g,8-.-> r4 cis8-.-> r4
+    g8-.-> r4 r8 dis'8-.-> r
   }
 }
 
 gestoBABclarinetebb = {
   \relative c' {
-    r8. c16\mp( cis e g8~ g2~
-    g1 e4~
-    e4. cis c4~
-    c2) r2 g8-.\pp r
+    r8. c16\mp( cis e g4.~
+    g2.~
+    g4.~ g8 e4~
+    e4. cis
+    c2.)
+    r4. r8 g8-.\pp r
     \repeat unfold 6 {
-      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+      dis'8-.-> r4 g,8-.-> r4
+      cis8-.-> r4 g8-.-> r4
+      dis'8-.-> r4 r8 g,8-.-> r
     }
   }
 }
@@ -136,17 +143,28 @@ gestoBABclarinetebb = {
 gestoBACclarinetebb = {
   \relative c' {
     \repeat unfold 2 {
-      dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+      dis'8-.-> r4 g,8-.-> r4
+      cis8-.-> r4 g8-.-> r4
+      dis'8-.-> r4 r8 g,8-.-> r
     }
-    r16 c\mf( dis cis fis e g8~ g2~
-    g2 e fis4~
-    fis2. cis4~
-    cis8 dis4. c2.)
-    dis8-.->\p[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
-    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
-    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r8. c16\<( dis cis fis e
-    g4.~\f e fis4~
-    fis8 cis4. dis2 c4)
+    r16 c\mf( dis cis fis e g4.~
+    g2.
+    e4.~ e8 fis4~
+    fis2.
+    cis4. dis4.
+    c2.)
+    dis8-.->\p r4 g,8-.-> r4
+    cis8-.-> r4 g8-.-> r4
+    dis'8-.-> r4 r8 g,8-.-> r
+    dis'8-.-> r4 g,8-.-> r4
+    cis8-.-> r4 g8-.-> r4
+    dis'8-.-> r4 r8 g,8-.-> r
+    dis'8-.-> r4 g,8-.-> r4
+    cis8-.-> r4 g8-.-> r4
+    dis'8-.-> r4 r16 c16\<( dis cis fis e
+    g4.~\f e
+    fis4. cis4.
+    dis4.~ dis8 c4)
   }
 }
 
