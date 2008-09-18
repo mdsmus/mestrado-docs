@@ -101,37 +101,23 @@ gestoABCglobal = {
 gestoBAAglobal = {
   \mark \default
   \padraoglobal
-  \tempo 4=120
-  \repeat unfold 8 {
-    \time 4/4
-    s1
-    \time 5/4
-    s1*5/4
-  }
+  \tempo 4.=80
+  \time 6/8
+  s1*6/8*24
 }
 
 gestoBABglobal = {
   \mark \default
   \padraoglobal
-  \tempo 4=120
-  \repeat unfold 8 {
-    \time 4/4
-    s1
-    \time 5/4
-    s1*5/4
-  }
+  \time 6/8
+  s1*6/8*24
 }
 
 gestoBACglobal = {
   \mark \default
   \padraoglobal
-  \tempo 4=120
-  \repeat unfold 8 {
-    \time 4/4
-    s1
-    \time 5/4
-    s1*5/4
-  }
+  \time 6/8
+  s1*6/8*24
   \bar "||"
 }
 
