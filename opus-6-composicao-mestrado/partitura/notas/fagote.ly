@@ -129,7 +129,7 @@ gestoBABfagote = {
     fis2.~
     fis4) fis8~( fis4.~
     fis4. cis
-    dis4. c?4.
+    dis4. c?4.~
     c4.~ c8) r4
   }
 }
