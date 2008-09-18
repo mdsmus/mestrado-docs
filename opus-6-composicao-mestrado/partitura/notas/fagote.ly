@@ -95,14 +95,22 @@ gestoABCfagote = {
 gestoBAAfagote = {
   \clef bass
   \relative c {
-    %% padrão de 2 compassos:
-    a8-.->\pp[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-.] a-.->[ a-. a-. a-.] a-.-> r
-    a8-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-. a-.] a'-.-> r
+    %% padrão de 3 compassos: 3+3|3+3|4+2
+    a8-.->\pp a-. a-. a-.-> a-. a-.
+    a-.-> a-. a-. a-.-> a-. a-.
+    a-.->[ a-. a-. a-.] a-.-> r
+    a8-.-> a-. a-. a'-.-> a,-. a-.
+    a-.-> a-. a-. a'-.-> a,-. a-.
+    a-.->[ a-. a-. a-.] a'-.-> r
     \repeat unfold 2 {
-      a,8-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-.] a'-.->[ a,-. a-.] a-.->[ a-. a-. a-.] a'-.-> r
+      a,8-.-> a-. a-. a'-.-> a,-. a-.
+      a-.-> a-. a-. a'-.-> a,-. a-.
+      a-.->[ a-. a-. a-.] a'-.-> r
     }
     \repeat unfold 4 {
-      a,8-.->[ a'-. a-.] cis-.->[ a-. a-.] a,-.->[ a'-. a-.] dis-.->[ a-. a-.] a,-.->[ a'-. a-. a-.] cis-.-> r
+      a,8-.-> a'-. a-. cis-.-> a-. a-.
+      a,-.-> a'-. a-. dis-.-> a-. a-.
+      a,-.->[ a'-. a-. a-.] cis-.-> r
     }
   }
 }
