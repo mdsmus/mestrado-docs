@@ -96,56 +96,73 @@ gestoABCoboe = {
 
 gestoBAAoboe = {
   \relative c' {
-    \repeat unfold 6 {
-      R1*4/4
-      R1*5/4
-    }
+    R1*6/8*19
     %% anacruze com #s(2 1 4 3) - retrógrado de subconjunto de #s(5 3 4 1 2 0)
     %% contorno com #s(5 4 1 0) - subconjunto de #s(5 3 4 1 2 0)
-    r2 r4. dis16\mp( cis
-    fis e g8~ g1~
-    g2~ g8 fis8 cis4~
-    cis2. c2~
+    r8 dis16\mp( cis fis e g4.~
+    g2.~
+    g4.~ g4 fis8
+    cis2.~
+    cis4.~ cis8 c4~
   }
 }
 
 gestoBABoboe = {
   \relative c' {
-    c4.) r8 g'-.\pp[ g-. r g-.]
+    c4.) r8 g'-.\pp g-.
+    r g-. g-. r g-. g-.
+    r g-. g-. g-.[ r g-.]
+    r g-. g-. r g-. g-.
+    r g-. g-. r g-. g-.
+    r g-. g-. g-.[ r g-.]
+    r g-. g-. r g-. g-.
+    r g-. g-. r g-. g-.
+    r4. dis16\mp( e g4~
+    g2.~
+    g4. cis,4.~
+    cis4.~ cis8 dis4
+    c?) r8 r g'8-.\pp g-.
+    r g-. g-. r g-. g-.
+    r g-. g-. g-.[ r g-.]
+
     \repeat unfold 2 {
-      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
-      r[ g-. g-. r] g-.[ g-. r g-.]
+      r g-. g-. r g-. g-.
+      r g-. g-. r g-. g-.
+      r g-. g-. g-.[ r g-.]
     }
-    g8-.[ r g-. g-.] r4. dis16\mp( e g4~
-    g1~
-    g8 cis,~ cis2. dis4
-    c?) r4 g'8-.\pp[ g-. r g-.]
-    \repeat unfold 3 {
-      g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
-      r[ g-. g-. r] g-.[ g-. r g-.]
-    }
-    g8-.[ r g-. g-.] r g-. r8 r16 c\mf( dis cis fis e
+
+    r g-. g-. r g-. g-.
+    r g-. g-. r g-. g-.
+    r g4-. r16[ c\mf( dis cis fis e]
   }
 }
 
 gestoBACoboe = {
   \relative c''' {
-    g2. e4
-    fis2.~ fis4 cis
-    dis4. c?8~ c2~
-    c2.) r2
-    r8[ g-.\pp g-. r] g-.[ g-. r g-.]
-    g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
-    r8[ g-. g-. r] g-.[ g-. r g-.]
-    g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
-    r16 fis\f( a g c bes cis8~ cis2~
-    cis8) bes4.( c2.
-    g4. a fis4~
-    fis2) r2.
-    r8[ g-.\p g-. r] g-.[ g-. r g-.]
-    g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
-    r8[ g-. g-. r] g-.[ g-. r g-.]
-    g8-.[ r g-. g-.] r g-. g-.[ g-. r g-.]
+    g2.
+    e4 fis8~ fis4.~
+    fis4.~ fis8 cis4
+    dis4. c?4.~
+    c2.~
+    c4) r8 r4.
+    r8 g-.\pp g-. r g-. g-.
+    r g-. g-. r g-. g-.
+    r g-. g-. g-.[ r g-.]
+    r g-. g-. r g-. g-.
+    r g-. g-. r g-. g-.
+    r g-. g-. g-.[ r g-.]
+    r16 fis\f( a g c bes cis4.~
+    cis4.) bes4.(
+    c2.
+    g4. a
+    fis2.)
+    R1*6/8
+    r8 g-.\p g-. r g-. g-.
+    r g-. g-. r g-. g-.
+    r g-. g-. g-.[ r g-.]
+    r g-. g-. r g-. g-.
+    r g-. g-. r g-. g-.
+    r g-. g-. g-.[ r g-.]
   }
 }
 
