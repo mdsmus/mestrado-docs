@@ -32,7 +32,6 @@ gestoAABglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=82
-  \time 5/4
   s1*5/4*6
 }
 
@@ -40,7 +39,6 @@ gestoAACglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=82
-  \time 5/4
   s1*5/4*8
 }
 
@@ -48,7 +46,6 @@ gestoAADglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=82
-  \time 5/4
   s1*5/4*6
 }
 
@@ -56,7 +53,6 @@ gestoAAEglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=82
-  \time 5/4
   s1*5/4*8
   \bar "||"
 }
@@ -74,7 +70,6 @@ gestoABAglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=66
-  \time 5/4
   s1*5/4*8
 }
 
@@ -84,7 +79,6 @@ gestoABBglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=66
-  \time 5/4
   s1*5/4*4
 }
 
@@ -93,7 +87,6 @@ gestoABCglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=66
-  \time 5/4
   s1*5/4*8
   \bar "||"
 }
@@ -109,14 +102,12 @@ gestoBAAglobal = {
 gestoBABglobal = {
   \mark \default
   \padraoglobal
-  \time 6/8
   s1*6/8*24
 }
 
 gestoBACglobal = {
   \mark \default
   \padraoglobal
-  \time 6/8
   s1*6/8*24
   \bar "||"
 }
@@ -137,7 +128,6 @@ gestoBBBglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=120
-  \time 4/4
   s1*7
 }
 
@@ -147,7 +137,6 @@ gestoBBCglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=120
-  \time 4/4
   s1*11
   \bar "||"
 }
@@ -157,7 +146,6 @@ gestoCAAglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=108
-  \time 4/4
   s1*15
 }
 
@@ -165,7 +153,6 @@ gestoCABglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=108
-  \time 4/4
   s1*9
 }
 
@@ -173,7 +160,6 @@ gestoCACglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=108
-  \time 4/4
   s1*15
   \bar "||"
 }
@@ -182,7 +168,6 @@ gestoCBAglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=112
-  \time 4/4
   s1*16
 }
 
@@ -190,7 +175,6 @@ gestoCBBglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=112
-  \time 4/4
   s1*10
 }
 
@@ -198,7 +182,6 @@ gestoCBCglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=112
-  \time 4/4
   s1*16
 }
 
@@ -206,7 +189,6 @@ gestoCBDglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=112
-  \time 4/4
   s1*10
 }
 
@@ -214,7 +196,6 @@ gestoCBEglobal = {
   \mark \default
   \padraoglobal
   \tempo 4=112
-  \time 4/4
   s1*29
   \bar "|."
 }
