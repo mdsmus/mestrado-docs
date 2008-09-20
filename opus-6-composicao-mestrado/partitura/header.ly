@@ -1,5 +1,5 @@
   \header{
-    title = "Composição ainda sem título"
+    title = "Em torno da romã"
     subtitle = "para quinteto de sopros"
     opus = "Opus 6"
     composer = "Marcos di Silva"
