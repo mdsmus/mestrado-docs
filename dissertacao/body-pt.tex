@@ -18,8 +18,9 @@ tanto do ponto de vista da análise quanto da composição.
 
 Neste trabalho fazemos a revisão de teorias desenvolvidas para o
 estudo de contornos, criamos um programa de computador para
-processamento de contornos, apresentamos a análise e partitura da obra
-\obra{}, composta com base em combinações de operações de contornos.
+processamento de contornos e apresentamos a análise e partitura da
+obra \obra{}, composta com base em combinações de operações de
+contornos.
 
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
@@ -218,15 +219,13 @@ recurso para o reconhecimento de melodias familiares \cite[p.
 maior acuidade na percepção de semelhança de contornos do que na
 semelhança de alturas \cite[p. 226]{marvin.ea87:relating}.
 
-%% substituir "característica musical"
-Contorno melódico é uma importante característica musical no
-reconhecimento de melodias familiares
-\cite[p. 136]{dowling.ea86:music}. Esta afirmação é endossada por
-experimentos realizados por White \cite{white60:recognition}, e
-Dowling e Fujitani \cite{dowling.ea71:contour} nos quais ouvintes
-foram submetidos ao reconhecimento de versões de canções familiares
-que tinham ritmo e/ou intervalos melódicos modificados e o contorno
-preservado.
+Contorno melódico é uma importante estrutura musical no reconhecimento
+de melodias familiares \cite[p. 136]{dowling.ea86:music}. Esta
+afirmação é endossada por experimentos realizados por White
+\cite{white60:recognition}, e Dowling e Fujitani
+\cite{dowling.ea71:contour} nos quais ouvintes foram submetidos ao
+reconhecimento de versões de canções familiares que tinham ritmo e/ou
+intervalos melódicos modificados e o contorno preservado.
 
 %% talvez merge
 %% que "outros elementos"?
@@ -245,14 +244,14 @@ tensão entre harmonias \cite[p. 175]{hindemith41:craft}.
 \section{Contorno como determinante composicional}
 \label{sec:cont-como-determ}
 
-%%% quando citamos literalmente, é bom fazer algum comentario
-Clifford afirma que \citacaoinline{contour, in absence of other
-  pervasive systems of pitch organization, represents a structural
-  factor equal in significance to pitch or set class
-  relations}{contorno, na falta de outros sistemas ocupantes de
-  organização de altura, representa um fator estrutural igual em
-  significado a relações de alturas ou de classes de
-  conjuntos}{p. 157}{clifford95:contour}
+Analisando obras de Anton Webern, Clifford concluiu que contorno pode
+ser entendido como um determinante composicional. De acordo com ele
+\citacaoinline{contour, in absence of other pervasive systems of pitch
+  organization, represents a structural factor equal in significance
+  to pitch or set class relations}{contorno, na falta de outros
+  sistemas ocupantes de organização de altura, representa um fator
+  estrutural igual em significado a relações de alturas ou de classes
+  de conjuntos}{p. 157}{clifford95:contour}
 
 No nível melódico relações de contorno podem associar segmentos de
 contorno distintos entre dois ou mais segmentos. Neste nível contorno
@@ -367,7 +366,6 @@ elementos tem a seguinte configuração: P(P$_0$ P$_1$ P$_2$
 P$_3$). Dessa forma, dado um contorno P(5 9 6 8), P$_0$ é igual a 5,
 P$_1$ é igual a 9 e P$_2$ é igual a 6.
 
-%% confirmar procedimento para expansão de intervalos
 Operações como retrogradação e rotação são semelhantes às realizadas
 com alturas de notas. A expansão de intervalos consiste na
 multiplicação dos intervalos entre cada altura de contorno por um dado
@@ -524,16 +522,9 @@ Morris, processado em várias etapas, reduz a melodia através da
 observação de mudanças de direção entre segmentos adjacentes e
 eliminação de alturas de contorno.
 
-%% texto antigo
-
-Adams propôs uma tipologia de contornos melódicos para classificação
-de melodias indígenas americanas. Esta tipologia está baseada na
-redução do contorno de cada melodia a quatro pontos --- nota inicial
-(I), nota final (F), nota mais aguda (H) e nota mais grave (L) --- e
-na classificação da inclinação entre essas notas. A inclinação entre
-as notas pode ser ascendente, descendente ou nula, e repetição de
-notas são admitidas. Adams propôs 15 tipos de contornos melódicos,
-como se vê na figura \ref{fig:adams-typology}. A inclinação (ou
+A tipologia de Adams considera a inclinação entre as quatro alturas de
+contorno extremas e compreende 15 tipos de contornos melódicos, como
+se vê na figura \ref{fig:adams-typology}. A inclinação (ou
 \eng{slope}) entre a nota inicial e final é indicada por $S1$ ($I >
 F$), $S2$ ($I = F$) e $S3$ ($I < F$). A mudança de direção (ou
 \eng{deviation}) é indicada por $Dø$ (sem mudança de direção), $D1$
@@ -548,106 +539,6 @@ de H) \cite{adams76:melodic}.
   \caption{Tipologia de contornos de Charles Adams}
   \label{fig:adams-typology}
 \end{figure}
-
-A terminologia utilizada em teorias de contornos melódicos não é
-uniforme. Cada autor utiliza termos diferentes para operações
-semelhantes \cite{friedmann87:response}. A tabela
-\ref{tab:compara-ferramentas} tem uma comparação dos termos usados por
-Friedmann, e Morris, Marvin e Laprade.
-
-\begin{table}
-  \centering
-  \begin{tabular}{l|l}
-    Friedmann & Marvin e Laprade \\ \hline
-    \tr{cas}  & INT$_1$ \\
-  \end{tabular}
-  \caption{Quadro comparativo de ferramentas de análise de contornos}
-  \label{tab:compara-ferramentas}
-\end{table}
-
-Morris define os conceitos de espaço de alturas (\tr{p-space}) e
-espaço de contorno (\tr{c-space}) \cite{morris87:composition}. Em
-espaço de altura os elementos a serem considerados são as notas e em
-espaço de contorno os elementos são os registros dessas notas. Beard
-confunde a idéia de espaço do contorno com a definição de classe de
-contorno \cite[p. 11]{beard03:contour}.
-
-A Matriz de Comparação (\tr{COM-matrix}) representa o total de
-comparações de um contorno. É obtida através da comparação de todos os
-pares ordenados de um contorno. Em uma matriz Mi de um contorno P, a
-posição $E (x,y)$ contém $Com (Px,Py)$. A matriz exibe uma simetria de
-sinais invertidos em torno da diagonal principal, esta preenchida
-apenas por zeros. Um exemplo desta matriz referente ao contorno (4 3 5
-6) pode ser visto na tabela \ref{fig:matriz-4356}
-\cite[p. 28]{morris87:composition}.
-
-\begin{figure}
-  \centering
-  \begin{tabular}{r|cccc}
-    & $4$ & $3$ & $5$ & $6$ \\
-    \hline
-    $4$ & $0$ & $-$ & $+$ & $+$ \\
-    $3$ & $+$ & $0$ & $+$ & $+$ \\
-    $5$ & $-$ & $-$ & $0$ & $+$ \\
-    $6$ & $-$ & $-$ & $-$ & $0$ \\
-  \end{tabular}
-  \caption{Matriz de comparação do contorno (4 3 5 6)}
-  \label{fig:matriz-4356}
-\end{figure}
-
-Cada diagonal à direita da diagonal zero recebe o nome INT$_n$, onde
-$n$ representa a diferença de posição entre dois elementos. Dessa
-forma INT$_1$ representa as diferenças de altura entre alturas de
-contorno adjacentes, INT$_2$ representa as diferenças de altura entre
-as alturas de contorno separadas não adjacentes separados por um
-elemento e assim por diante \cite[p. 231]{marvin.ea87:relating}. Dado
-um contorno (4 3 5 6), INT$_1$ = (- + +) representa as diferenças
-entre 4 e 3, 3 e 5, e 5 e 6. INT$_2$ = (+ +) representa as diferenças
-entre 4 e 5, e 3 e 6.
-
-Esta matriz permite a verificação de duas classes de equivalência de
-contornos. A primeira é formada por todos os contornos que dividem uma
-mesma matriz de comparação, e a segunda, chamada de \tr{csegclass}, é
-formada por todos os contornos relacionados por operações de
-identidade, translação, retrogradação, inversão e retrogradação da
-inversão. Contornos têm uma classe de contorno única que pode ser
-vista na Tabela de classes de contornos \cite{marvin.ea87:relating}.
-
-A operação de inversão é obtida pela subtração de todos as alturas de
-contorno por $(n-1)$. Para um dado contorno P, a operação de
-identidade é identificada como IP. A retrogradação de um contorno P
-(representado por RP), bem como de sua inversão (IP) são obtidas
-colocando as alturas de contorno em ordem reversa
-\cite[p. 231]{marvin.ea87:relating}.
-
-A forma prima de um contorno é obtida operando-se de um algoritmo de
-três etapas:
-\begin{enumerate}
-\item realiza-se a translação do contorno caso seja necessário;
-\item se a subtração de $(n-1)$ pela última altura de contorno é menor
-  que a primeiro altura de contorno, inverte-se o contorno;
-\item se a último altura de contorno é menor que a primeiro altura de
-  contorno retrograda-se o contorno.
-\end{enumerate}
-
-Michael Friedmann procurou desenvolver uma metodologia para estudo
-sistemático de contornos \cite{friedmann85:methodology}. Para isso
-criou duas ferramentas principais: série de contornos adjacentes e
-classe de contorno
-
-Há mais seis ferramentas derivadas dessas duas principais:
-
-\begin{enumerate}
-\item Série de contornos adjacentes (CASV),
-\item Intervalo de contorno (CI),
-\item Série de intervalos de contorno (CIS),
-\item Vetor de intervalos de contorno (CIA),
-\item Vetor de classe de contorno I (CCVI),
-\item Vetor de classe de contorno II (CCVII).
-\end{enumerate}
-
-A série de classe de contornos adjacentes é um subconjunto da matriz
-de comparação representada pela diagonal superior à diagonal zero.
 
 \chapter{Ferramentas}
 \label{cha:ferramentas}
