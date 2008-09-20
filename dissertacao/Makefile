@@ -1,5 +1,5 @@
 NAME = dissertacao-default
-TEXSRCS = body-pt.tex abstract.tex resumo.tex
+TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex
 
 SCOREDIR = ../opus-6-composicao-mestrado
 
