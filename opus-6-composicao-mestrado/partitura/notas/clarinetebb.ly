@@ -130,7 +130,7 @@ gestoBABclarinetebb = {
     g2.~
     g4.~ g8 e4~
     e4. cis
-    c2.)
+    c?2.)
     r4. r8 g8-.\pp r
     \repeat unfold 6 {
       dis'4.\st g,4.\st
