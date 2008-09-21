@@ -543,7 +543,10 @@ de H) \cite{adams76:melodic}.
 \chapter{Ferramentas}
 \label{cha:ferramentas}
 
-%% fazer introdução sobre ferramentas
+Para este trabalho desenvolvi ferramentas computacionais exclusivas
+como o Goiaba, um software para processar contornos, bem como utilizei
+sistema de controle de versão e softwares para edição profissional de
+texto e partituras.
 
 \section{Goiaba, um software para processar contornos}
 \label{sec:goiaba-software-para}
@@ -629,6 +632,48 @@ músicos.
 
 \subsection{Lilypond}
 \label{sec:lilypond}
+
+O Lilypond\footnote{\url{www.lilypond.org}} é um software livre para
+edição automática de partituras. É automático porque na maioria dos
+casos dispensa ajustes como número de compassos por sistema, número de
+sistemas por página, distância entre pentagramas, entre notas e
+acidentes, entre outros.
+
+O Lilypond processa música descrita em uma sintaxe própria de marcação
+e gera arquivos como .pdf, .ps, .midi, .png, .svg entre outros. A
+figura XXX por exemplo é gerada com um código como
+\verb!{ \clef bass c4 d8 e d4 c }!. É possível utilizar variáveis para
+abstrair códigos. Em Composição isso pode ser usado para abstrair
+motivos, por exemplo. Dessa forma, um código como este:
+
+\begin{verbatim}
+{
+  c4 e
+  e16 d c d
+  d4 fis
+  e16 d c d
+}
+\end{verbatim}
+
+pode ser escrito desta forma:
+
+\begin{verbatim}
+motivoA = { c4 e }
+motivoB = { e16 d c d }
+{
+  \motivoA
+  \motivoB
+  \transpose c d {motivoA}
+  \motivoB
+}
+\end{verbatim}
+
+O Lilypond se relaciona com o \LaTeX{} de modo a simplificar a
+produção de exemplos musicais para inserir em texto. Por fim é
+possível desenvolver programas que usem o Lilypond para gerar
+partitura automaticamente. O Rameau, por exemplo, faz análise
+harmônica automática e gera como saída partitura através do Lilypond
+\cite{kroger08:rameau}.
 
 \subsection{Sistema de controle de versão Git}
 \label{sec:sistema-de-controle}
