@@ -23,3 +23,6 @@ textoit = #(define-music-function (parser location texto) (string?)
 st = \staccatissimo
 
 dolce = ^\markup{\italic{dolce}}
+
+tris = ^\markup{\sharp}
+tres = ^\markup{\flat}
