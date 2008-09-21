@@ -4,15 +4,15 @@
   \new RhythmicStaff  \with {
     \remove "Clef_engraver" }{
       \relative c' {
-        \time 4/4
+        \time 6/8
         \clef percussion
         \override Staff.StaffSymbol #'line-count = 0
         \stopStaff
         \startStaff
-        c4. c c4~
-        \time 5/4
-        c8 c4. c2 c4
-        \bar ":|"
+        c4. c
+        c c
+        c4.~ c8 c4
+        \bar "||"
       }
     }
   \layout {
