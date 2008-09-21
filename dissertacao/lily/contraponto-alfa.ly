@@ -11,11 +11,6 @@ global = {
   \bracketUp
 }
 
-flauta = {
-  \relative c' {
-  }
-}
-
 oboe = {
   \relative c'' {
     g1\p e4(
@@ -41,9 +36,6 @@ fagote = {
   }
 }
 
-trompa = {
-}
-
 \score {
   \new StaffGroup <<
     \new Staff <<
@@ -52,9 +44,11 @@ trompa = {
       \oboe
     >>
     \new Staff <<
-      \set Staff.instrumentName = \markup {\hcenter-in #5 "Cl."}
+      \set Staff.instrumentName = \markup {\hcenter-in #5 "Cl.Bb"}
       \global
-      \clarinete
+      \transpose c d {
+        \clarinete
+      }
     >>
     \new Staff <<
       \set Staff.instrumentName = \markup {\hcenter-in #5 "Fg."}
