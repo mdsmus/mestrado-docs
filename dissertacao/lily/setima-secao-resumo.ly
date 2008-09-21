@@ -6,39 +6,49 @@
 
 global = {
   \time 4/4
-  \set Score.currentBarNumber = #233
+  \set Score.currentBarNumber = #257
   \bar ""
   \bracketUp
 }
 
 flauta = {
-  \relative c''' {
-    r4 r8. c16\p( ees des fis e? g4~
-    g4) e8->\st fis4. cis8->\st e~
-    e4 g8->\st e->\st r2
-    g4 e8->\st fis4. cis8->\st e~
-    e4 e8->\st cis->\st r2
+  \relative c'' {
+    r4 r8. c'16\f( ees des fis e g4~
+    g4) e8\st fis4. cis8\st e~
+    e4 g8\st e\st r2
+    g4 e8\st fis4. cis8\st e~
+    e4 e8\st cis\st r4 g'~
   }
 }
 
 oboe = {
   \relative c'' {
-    e4 e8->\st cis->\st r4 ees4~
-    ees4 c8->\st bes4. a8->\st c~
-    c4 ees8->\st c->\st r2
-    ees4 c8->\st bes4. a8->\st c~
-    c4 cis8->\st a->\st r2
+    e4 e8\st cis\st r4 ees4~
+    ees4 c8\st bes4. a8\st c~
+    c4 ees8\st c\st r2
+    ees4 c8\st bes4. a8\st c~
+    c4 cis8\st a\st r4 ees'4~
   }
 }
 
 clarinete = {
   \relative c' {
-    r4 ees8-.-> r r ees-.-> r4
-    ees8-.-> r8 r4 ees8-.->[ r ees8-.->] r
-    r ees8-.-> r r ees8-.->[ r r ees8-.->]
+    r4 ees8-.->[ r r ees-.->] r4
+    ees8-.-> r8 r4 ees8-.-> r ees8-.->[ r
+    r ees8-.->] r4 ees8-.->[ r r ees8-.->]
     r4 ees8-.-> r r4 ees8-.-> r
     %% repete padrão
-    ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
+    ees8-.->[ r r ees8-.->] r4 ees8-.-> r
+  }
+}
+
+trompa = {
+  \relative c {
+    fis2. fis4~
+    fis2. cis4
+    e1
+    r4 g2.~
+    g4 e fis2
   }
 }
 
@@ -50,17 +60,6 @@ fagote = {
     a4 g8->\st a4. g8->\st a~
     a4 g8->\st a4. cis8->\st dis,->\st
     a'4 g8->\st a4. g8->\st a~
-  }
-}
-
-trompa = {
-  \clef bass
-  \relative c {
-    fis2. fis4~
-    fis2. cis4
-    e1
-    g2 e
-    fis cis4 dis
   }
 }
 
@@ -79,12 +78,16 @@ trompa = {
     \new Staff <<
       \set Staff.instrumentName = \markup {\hcenter-in #5 "Cl."}
       \global
-      \clarinete
+      \transpose c d {
+        \clarinete
+      }
     >>
     \new Staff <<
       \set Staff.instrumentName = \markup {\hcenter-in #5 "Tpa."}
       \global
-      \trompa
+      \transpose c g {
+        \trompa
+      }
     >>
     \new Staff <<
       \set Staff.instrumentName = \markup {\hcenter-in #5 "Fg."}
