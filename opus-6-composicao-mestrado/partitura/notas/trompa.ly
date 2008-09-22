@@ -191,8 +191,8 @@ gestoCAAtrompa = {
     ees c8\st bes4. cis8 cis~
     cis2 r4 ees'4~
     %% junto com oboé
-    ees c8\st bes4. a8 dis
-    c?2 r4 ees4~
+    ees c?8\st bes4. a8 dis
+    c2 r4 ees4~
     ees c8\st bes4. a8 a~
   }
 }
@@ -292,7 +292,7 @@ gestoCBEtrompa = {
     c?1
     g'2 e
     fis cis4 dis
-    c?1
+    c1
     \setTextCresc
     g'2\< e
     fis cis4 dis

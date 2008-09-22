@@ -215,7 +215,7 @@ gestoBBCflauta = {
     bes8->( e,8) g'4( cis,8~
     cis e8~\trill\tris e2) r4
 
-    g,?2~ g4
+    g,2~ g4
 
     gis16( ais b cis
 
@@ -239,7 +239,7 @@ gestoCAAflauta = {
 gestoCABflauta = {
   \relative c'' {
     R1*8
-    r4 r8. c16\p( ees des fis e? g4~
+    r4 r8. c16\p( ees des fis e g4~
   }
 }
 
@@ -254,13 +254,13 @@ gestoCACflauta = {
     e4 g8\st e\st r2
     \setTextCresc
     g4\< e8\st fis4. cis8\st e~
-    e4 e8\st cis\st r8. c'16( ees des fis e?
+    e4 e8\st cis\st r8. c'16( ees des fis e
     g4) e8\st fis4. cis8\st e~
-    e4 g8\st e\st r8. c16( ees des fis e?
+    e4 g8\st e\st r8. c16( ees des fis e
     g4) e8\st fis4. cis8\st e~
-    e4 e8\st cis\st r8. c16( ees des fis e?
-    g4) e8\st fis4 r16 c16( ees des fis e?
-    g4) e8\st fis4 r16 c16( ees des fis e?
+    e4 e8\st cis\st r8. c16( ees des fis e
+    g4) e8\st fis4 r16 c16( ees des fis e
+    g4) e8\st fis4 r16 c16( ees des fis e
     cis2)\ff r
   }
 }

@@ -211,12 +211,12 @@ gestoBBCfagote = {
     gis16( ais b cis
 
     d4-^) b-^ cis-^ gis8( ais
-    g?2~ g4)
+    g2~ g4)
 
     gis16( ais b cis
 
     d4-^) b-^ cis-^ gis8( ais
-    g?4.) r8 
+    g4.) r8 
 
     d'4-^ b-^ 
     g1\trill\fermata

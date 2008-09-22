@@ -244,13 +244,13 @@ gestoBBCoboe = {
     g?2~ g4.) r8
 
     d'4-^ b-^ cis-^ gis8( ais
-    g?2~ g4.) r8
+    g2~ g4.) r8
 
     d'4-^ b-^ cis-^ gis8( ais
-    g?4.) r8
+    g4.) r8
 
     d'4-^ b-^ cis-^ gis8( ais
-    g?4.) r8
+    g4.) r8
 
     g1\trill\fermata
   }
@@ -278,7 +278,7 @@ gestoCABoboe = {
     fis4( e a g
     %% expansão de #s(5 3 4 1 2 0)
     bes2. a4~
-    a2) bes,16( ees) e,?\<( a) bes,4~
+    a2) bes,16( ees) e,\<( a) bes,4~
     bes2. r4\!
   }
 }
@@ -295,10 +295,10 @@ gestoCACoboe = {
     cis2\<( dis
     c?2) \times 2/3 {r4 cis4( e}
     g4 e fis2)
-    cis4( dis c?2)
+    cis4( dis c2)
     g'4( e fis2)
-    cis4( dis c?2)
-    g'8( e fis4 cis8 dis c?4)
+    cis4( dis c2)
+    g'8( e fis4 cis8 dis c4)
     e2( fis
     g)\ff r
   }

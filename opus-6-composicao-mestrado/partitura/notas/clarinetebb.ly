@@ -214,13 +214,13 @@ gestoBBCclarinetebb = {
     g?2~ g4.) r8 
 
     d'4-^ b-^ cis-^ gis8( ais
-    g?2~ g4.) r8 
+    g2~ g4.) r8 
     
     d'4-^ b-^ cis-^ gis8( ais
-    g?4.) r8
+    g4.) r8
 
     d'4-^ b-^ cis-^ gis8( ais
-    g?4.) r8
+    g4.) r8
 
     cis'1\trill\tris\fermata
   }
@@ -246,7 +246,7 @@ gestoCAAclarinetebb = {
 gestoCABclarinetebb = {
   \relative c'' {
     R1*8
-    r4 r8. g16\p( bes a des c? ees4~
+    r4 r8. g16\p( bes a des c ees4~
   }
 }
 
@@ -261,13 +261,13 @@ gestoCACclarinetebb = {
     c4 ees8\st c\st r2
     \setTextCresc
     ees4\< c8\st bes4. a8\st c~
-    c4 cis8\st a\st r8. g16( bes a des c?
+    c4 cis8\st a\st r8. g16( bes a des c
     ees4) c8\st bes4. a8\st c~
-    c4 ees8\st c\st r8. g16( bes a des c?
+    c4 ees8\st c\st r8. g16( bes a des c
     ees4) c8\st bes4. a8\st c~
-    c4 cis8\st a\st r8. g16( bes a des c?
-    ees4) c8\st bes4 r16 g16( bes a des c?
-    ees4) c8\st bes4 r16 g16( bes a des c?
+    c4 cis8\st a\st r8. g16( bes a des c
+    ees4) c8\st bes4 r16 g16( bes a des c
+    ees4) c8\st bes4 r16 g16( bes a des c
     ees2)\ff r
   }
 }
