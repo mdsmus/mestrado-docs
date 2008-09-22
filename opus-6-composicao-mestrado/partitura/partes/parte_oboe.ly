@@ -6,7 +6,7 @@
 \include "gestosglobal.ly"
 \include "gestosoboe.ly"
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 19)
 
 %% partitura
 
