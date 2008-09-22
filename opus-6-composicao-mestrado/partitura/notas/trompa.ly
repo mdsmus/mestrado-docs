@@ -87,16 +87,24 @@ gestoBAAtrompa = {
     g4.\st\pp g4.\st
     g4.\st g4.\st
     g4.\st r8 g4\st
-    \repeat unfold 3 {
+
+    %% alterna com fagote e trompa
+    \repeat unfold 2 {
       g4.\st g4.\st
       g4.\st g4.\st
       g4.\st r8 g4\st
     }
-    \repeat unfold 2 {
-      dis'4.\st g,4.\st
+      g8-.-> a-. a-. cis-.-> a-. a-.
+      g-.-> a-. a-. dis-.-> a-. a-.
+      g-.->[ a-. a-. a-.] cis-.-> r
+
+      dis4.\st g,4.\st
       cis4.\st g4.\st
       dis'4.\st r8 g,4\st
-    }
+
+      g8-.-> a-. a-. cis-.-> a-. a-.
+      g-.-> a-. a-. dis-.-> a-. a-.
+      g-.->[ a-. a-. a-.] cis-.-> r
   }
 }
 
@@ -144,9 +152,10 @@ gestoBACtrompa = {
     c4. g
     a4 fis8~ fis4.)
     r4. r8 g4\st\p
-    g,4.\st dis'4.\st
-    g,4.\st cis4.\st
-    g4.\st r8 dis'4\st
+
+      r8 a,-. a-. r a-. a-.
+      r a-. a-. r a-. a-.
+      r a-. a-. a4-. a8-.
   }
 }
 

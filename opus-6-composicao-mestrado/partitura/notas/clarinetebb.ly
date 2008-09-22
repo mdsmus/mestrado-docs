@@ -132,7 +132,17 @@ gestoBABclarinetebb = {
     e4. cis
     c?2.)
     r4. r8 g8-.\pp r
-    \repeat unfold 6 {
+
+    %% alterna com fagote e trompa
+      dis'8-.-> a-. a-. cis-.-> a-. a-.
+      g'-.-> a,-. a-. dis-.-> a-. a-.
+      dis-.->[ a-. a-. a-.] cis-.-> r
+
+      dis4.\st g,4.\st
+      cis4.\st g4.\st
+      dis'4.\st r8 g,4\st
+
+    \repeat unfold 4 {
       dis'4.\st g,4.\st
       cis4.\st g4.\st
       dis'4.\st r8 g,4\st

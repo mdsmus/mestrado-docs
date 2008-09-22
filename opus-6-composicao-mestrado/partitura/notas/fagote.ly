@@ -107,17 +107,38 @@ gestoBAAfagote = {
       a-.-> a-. a-. a'-.-> a,-. a-.
       a-.->[ a-. a-. a-.] a'-.-> r
     }
-    \repeat unfold 4 {
+
+    %% alterna com trompa e clarinete
       a,8-.-> a'-. a-. cis-.-> a-. a-.
       a,-.-> a'-. a-. dis-.-> a-. a-.
       a,-.->[ a'-. a-. a-.] cis-.-> r
-    }
+
+    a,4.\st g'4.\st
+    a,4.\st g'4.\st
+    a,4.\st r8 g'4\st
+
+      a,8-.-> a'-. a-. cis-.-> a-. a-.
+      a,-.-> a'-. a-. dis-.-> a-. a-.
+      a,-.->[ a'-. a-. a-.] cis-.-> r
+
+    a,4.\st g'4.\st
+    a,4.\st g'4.\st
+    a,4.\st r8 g'4\st
+
   }
 }
 
 gestoBABfagote = {
   \relative c' {
-    \repeat unfold 5 {
+    \repeat unfold 2 {
+      a,8-.-> a'-. a-. cis-.-> a-. a-.
+      g'-.-> a,-. a-. dis-.-> a-. a-.
+      a,-.->[ a'-. a-. a-.] cis-.-> r
+    }
+      a,4.\st g'4.\st
+      cis4.\st g4.\st
+      a,4.\st r8 g'4\st
+    \repeat unfold 2 {
       a,8-.-> a'-. a-. cis-.-> a-. a-.
       g'-.-> a,-. a-. dis-.-> a-. a-.
       a,-.->[ a'-. a-. a-.] cis-.-> r
@@ -140,11 +161,15 @@ gestoBACfagote = {
     r8 a-.\p a-. r a-. a-.
     r a-. a-. r a-. a-.
     r a-. a-. a4-. a8-.
-    \repeat unfold 7 {
+    \repeat unfold 6 {
       r8 a-. a-. r a-. a-.
       r a-. a-. r a-. a-.
       r a-. a-. a4-. a8-.
     }
+
+    g4.\st dis'4.\st
+    g,4.\st cis4.\st
+    g4.\st r8 dis'4\st
   }
 }
 
