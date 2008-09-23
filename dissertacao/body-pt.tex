@@ -570,50 +570,71 @@ normalmente \texttt{(make-instance 'ponto :x 0 :y 3)} ou simplesmente
 \texttt{contorno-duracao} com dois pontos pode ser instanciado com
 \verb!#d(#p(0 3) #p(1 4))! ao invés de usar \texttt{make-instance}.
 
-As operações em contornos são implementadas em métodos,
-aproveitando-se do despacho múltiplo usado pelo sistema de objetos de
-Common Lisp (CLOS). Desse modo um método como \texttt{transpor} vai se
-comportar de maneira diferente dependendo qual o tipo do seu primeiro
-parâmetro:
+Contornos são representados simbolicamente de duas maneiras: como
+contornos simples, considerando apenas as alturas de contorno
+\verb!(5 9 6)!, e como contornos com duração, considerando também o
+local no tempo onde ocorre cada altura de contorno:
+\verb!((0 5)(1 9)(2 6)!. Apesar de termos uma codificação específica
+que comporte a influência do tempo no contorno, ainda não estamos
+trabalhando com esse elemento.
+
+As operações em contornos são implementadas em métodos, aproveitando
+do despacho múltiplo usado pelo sistema de objetos de Common Lisp
+(CLOS). Desse modo um método como \texttt{transpor} vai se comportar
+de maneira diferente dependendo qual o tipo do seu primeiro parâmetro:
 
 \begin{verbatim}
 (defmethod transpor ((objeto contorno-duracao) fator)
   (map-contorno-duracao #L(transpor !1 fator) (pontos objeto)))
-\end{verbatim}
 
-\begin{verbatim}
 (defmethod transpor ((objeto contorno-simples) fator)
   (map-contorno-simples #L(+ !1 fator) (pontos objeto)))
 \end{verbatim}
 
-O \goiaba{} processa contornos representados de forma simples, como
-uma lista de alturas de contorno: \verb!#c(5 9 6)!, e contorno com
-duração: \verb!#d(#p(0 5)(1 9)(2 6))!. O segundo formato servirá para
-a futura implementação do tempo no contorno.
-
-O \goiaba{} tem diversas operações para lidar com contornos, como
+\goiaba{} tem diversas operações para lidar com contornos, como
 tranposição, inversão, retrogradação, rotação e expansão de
 intervalos. Além disso operações definidas na literatura também estão
 implementadas, como redução de contornos \cite{adams76:melodic},
-classe de contorno, série de contornos adjacentes, vetor de série de
-contornos adjacentes, intervalos de contorno, vetor de intervalos de
-contorno e vetores de classe de contorno I e II
+classe de contorno, série de contornos adjacentes, vetor de séries de
+contornos adjacentes, intervalo de contorno, vetor de intervalo de
+contorno, vetor de classe de contorno I e II
 \cite{friedmann85:methodology} e matriz de comparação
 \cite{morris93:directions}.
 
 Finalmente, \goiaba{} usa a biblioteca
 Cl-pdf\footnote{www.cliki.net/CL-PDF} para plotar facilmente contornos
-definidos, permitindo a fácil visualização de operações em
-contornos. As figuras \ref{fig:graficos-cseg} e \ref{fig:534120} por
-exemplo foram criadas automaticamente pelo \goiaba{}.
+definidos, permitindo a fácil visualização de operações em contornos.
+Por exemplo, o código seguinte gera um gráfico com o contorno
+original, sua transposição, retrogradação, inversão, rotação,
+ampliação de altura e inserção de ponto (figura \ref{fig:operacoes}).
 
+\break
+\begin{verbatim}
+(let ((c1 #d(#p(0 0) #p(1 5) #p(2 3) #p(3 4) #p(4 1) #p(5 3))))
+  (plot-page "contornos.pdf"
+    (plot-contorno-full 50 500
+                        c1 "original" :red
+                        (transpor c1 2) "transposição" :green
+                        (retrogradar c1) "retrógrado" :blue
+                        (inverter c1) "inversão" :pink
+                        (aumentar-altura c1 2) "aumentar-altura" :lightblue
+                        (rotacionar c1 1) "rotação" :darkcyan
+                        (insere-ponto c1 '(1 3) 2) "insere ponto" :purple)))
+\end{verbatim}
+
+\begin{figure}
+  \centering
+%   \includegraphics[scale=.5]{contornos}
+  \caption{Operações em contorno}
+  \label{fig:operacoes}
+\end{figure}
 Para o futuro pretendemos implementar a possibilidade de gerar
-contornos a partir de partituras musicais e vice-versa, e implementar
+contornos a partir de partituras musicais e vice-versa e implementar
 uma interface gráfica. O desenvolvimento do \goiaba{} segue
 procedimentos oriundos do desenvolvimento de software livre como uso
 de controle de versão e disponibilização do código-fonte na
-internet\footnote{Referência ao código-fonte não inserida por motivo
-  do anonimato. Será incluído para a publicação.}.
+internet\footnote{Disponível como marcos-mestrado.git em
+  \url{git.genos.mus.br}.}.
 
 As descrições das teorias de contornos nem sempre são feitas pelos
 seus autores de uma forma totalmente clara. A programação de uma
@@ -622,7 +643,18 @@ processo de aprendizagem, pois o programador é obrigado a expressar de
 forma precisa a compreensão que tem de uma idéia obscura. Dessa forma
 a implementação das operações de contorno em um software de computador
 ajuda na compreensão da teoria, uma vez que é preciso entender
-totalmente como cada operação se processa e que funcionalidade tem.
+totalmente como cada operação se processa e que funcionalidade tem
+para implementá-las.
+
+As operações são implementadas como funções. Para isso é necessário
+conhecê-las de modo profundo e abstraí-las precisamente em descrições
+matemáticas. As funções têm que ser testadas a partir de aplicações
+práticas. Para os testes são utilizados exemplos originais dos
+autores, e são criados exemplos adicionais, o que ajuda na compreensão
+da funcionalidade de cada operação. Finalmente combinações de funções
+são observadas e testadas. Este processo de aprendizagem tem se
+mostrado muito eficiente e se tornou fundamental para o
+desenvolvimento da pesquisa.
 
 \section{Outras ferramentas computacionais}
 \label{sec:outr-ferr-comp}
