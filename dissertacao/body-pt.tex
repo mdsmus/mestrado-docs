@@ -368,17 +368,55 @@ P$_3$). Dessa forma, dado um contorno P(5 9 6 8), P$_0$ é igual a 5,
 P$_1$ é igual a 9 e P$_2$ é igual a 6.
 
 Operações como retrogradação e rotação são semelhantes às realizadas
-com alturas de notas. A expansão de intervalos consiste na
-multiplicação dos intervalos entre cada altura de contorno por um dado
-fator. Por exemplo, a expansão de fator 2 do contorno (5 9 6 8) é (5
-13 7 11).
+com alturas de notas. Um contorno P(5 9 6 8) tem retrógrado RP(8 6 9
+5), rotação de fator 1 Rot-1P(9 6 8 5), rotação de fator 2 Rot-2P(6 8
+5 9) e assim por diante. As representações gráficas dessas operações
+podem ser vistas na figura \ref{fig:operacoes-simples}. A expansão de
+intervalos consiste na multiplicação dos intervalos entre cada altura
+de contorno por um dado fator. Por exemplo, a expansão de fator 2 do
+contorno (5 9 6 8) é (5 13 7 11).
 
-%% inserir exemplos gráficos
+\begin{figure}
+  \centering
+  \subfloat[Contorno P]{
+    \includegraphics{c-5968}
+    \label{fig:operacoes-p}
+  }
+  \subfloat[Inversão de P]{
+    \includegraphics{c-4031}
+    \label{fig:operacoes-ip}
+  }
+  \subfloat[Retrógrado de P]{
+    \includegraphics{c-8695}
+    \label{fig:operacoes-rp}
+  }
+  \subfloat[Retrógrado da inversão de P]{
+    \includegraphics{c-1304}
+    \label{fig:operacoes-ip}
+  }
+
+  \subfloat[Rotação 1 de P]{
+    \includegraphics{c-9685}
+    \label{fig:operacoes-rr1}
+  }
+  \subfloat[Rotação 2 de P]{
+    \includegraphics{c-6859}
+    \label{fig:operacoes-rr2}
+  }
+  \subfloat[Rotação 3 de P]{
+    \includegraphics{c-8596}
+    \label{fig:operacoes-rr3}
+  }
+  \caption{Representação gráfica de operações simples com contorno P(5
+  9 6 8)}
+  \label{fig:operacoes-simples}
+\end{figure}
+
 A operação de inversão de um contorno P de ordem $q$ é representada
-por IP, e é matematicamente calculada por
-IP$_n=(q-1-P_n)$. Portanto, dado um contorno P(5 9 6 8), de ordem
-10, IP$_0=(10-1-P_0)$. Logo, IP$_0=4$. Aplicando-se a mesma idéia
-aos outros elementos chegamos ao contorno IP(4 0 3 1). É possível
+por IP, e é matematicamente calculada por IP$_n=(q-1-P_n)$. Portanto,
+dado um contorno P(5 9 6 8), de ordem 10, IP$_0=(10-1-P_0)$. Logo,
+IP$_0=4$. Aplicando-se a mesma idéia aos outros elementos chegamos ao
+contorno IP(4 0 3 1) (figura \ref{fig:operacoes-simples}). É possível
 ainda relacionar a inversão entre elementos através da matriz de
 comparação. Calcula-se esta inversão com a operação
 $COM(P_a,P_b)=-COM(IP_a,IP_b)$.
