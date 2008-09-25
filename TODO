@@ -1,32 +1,3 @@
-* para 16/11
-** implementar adams
-*** problemas a resolver:
-*** adams - algoritmo para resolver reducao de contornos
-
-* para quando der
-** testar idéia de passos
-*** usar o número 12 para mapear o contorno
-
-* para fazer
-** friedmann
-*** ver uso polifônico de contornos
-*** implementar 'possiveis contornos a partir de um tipo de CAS, CASV, CC, CIA, CCVI e CCVII'
-*** implementar subconjuntos de cc
-
-* férias
-
-* pedro
-** criar lily->contorno e contorno->lily
-
-* dissertação
-** corrigir colchetes em figuras de sujeito e contra-sujeito
-* composição
-** em R: colocar algo no cl. no compasso 177
-** final: dividir ob. e cl. pensar em frase final no grave
-** letra E: reescrever diversificando notas e registros
-** letra H: pensar em acordes mais abertos e divisão dos elementos da textura (engastamento)
-** possibilidades para H: variação dos ritmos das colcheias mantendo acento e uso de oitavas
-** procurar ly2musicxml
 
 %%% Local Variables: 
 %%% mode: org
