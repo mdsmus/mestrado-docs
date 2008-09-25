@@ -3,7 +3,7 @@ TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.
 
 SCOREDIR = ../opus-6-composicao-mestrado
 
-OTHER += $(LILY_EPS)
+OTHER += $(LILY_EPS) $(OTHER_EPS4)
 
 -include ~/lib/make/latex.mk
 -include ~/repositorios/genos-repos/lib/make/latex.mk
