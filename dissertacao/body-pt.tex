@@ -585,9 +585,16 @@ de H) \cite{adams76:melodic}.
 \label{cha:ferramentas}
 
 Para este trabalho desenvolvi ferramentas computacionais exclusivas
-como o Goiaba, um software para processar contornos, bem como utilizei
-sistema de controle de versão e softwares para edição profissional de
-texto e partituras.
+como o software para processamento de contornos Goiaba. Utilizei a
+plataforma Linux para desenvolver todo o trabalho, pois além de ser
+livre, com ela é possível concatenar programas. Com o Linux é possível
+desenvolver funções que enviem a saída de dados de um programa como o
+Goiaba para a entrada de dados de outro programa como o editor de
+partituras Lilypond (vide seção \ref{sec:lilypond}), ou usar
+bibliotecas de gráficas para criar interfaces para o usuário. Com essa
+conectividade podemos desenvolver um software mais completo sem
+precisarmos necessariamente desenvolver bibliotecas ou programas já
+existentes.
 
 \section{Goiaba, um software para processar contornos}
 \label{sec:goiaba-software-para}
@@ -648,7 +655,6 @@ ampliação de altura e inserção de ponto (figura
 definimos o arquivo no qual o gráfico será criado, as dimensões do
 gráfico e as operações e cores que serão geradas no gráfico.
 
-\break
 \begin{verbatim}
 (let ((c1 #d(#p(0 0) #p(1 5) #p(2 3) #p(3 4) #p(4 1) #p(5 3))))
   (plot-page "contornos.pdf"
@@ -699,8 +705,14 @@ desenvolvimento da pesquisa.
 \section{Outras ferramentas computacionais}
 \label{sec:outr-ferr-comp}
 
-Algumas das ferramentas utilizadas são aqui descritas porque, apesar
-de serem amplamente utilizadas em outras áreas como ciência da
+Neste trabalho além de desenvolvermos o Goiaba utilizamos o Lilypond
+tanto para gerar partituras através do Goiaba quanto para escrever a
+obra \obra{}. Usamos também o sistema de controle de versão Git que
+ajudou no desenvolvimento do Goiaba, na composição da obra e na
+comunicação de dados com o orientador.
+
+Além disso essas ferramentas utilizadas são aqui descritas porque,
+apesar de serem amplamente utilizadas em outras áreas como ciência da
 computação ou matemática, são praticamente desconhecidas entre
 músicos.
 
