@@ -1,5 +1,5 @@
 NAME = dissertacao-default
-TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex
+TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex paginas-composicao.tex
 
 SCOREDIR = ../opus-6-composicao-mestrado
 
@@ -18,3 +18,6 @@ cria-partitura:
 	mv score-dissertacao*.eps figs
 	rm score-dissertacao*
 	sh gera-paginas-composicao.sh
+
+paginas-composicao.tex: figs/score-dissertacao*.eps
+	cria-partitura
