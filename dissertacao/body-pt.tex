@@ -488,7 +488,49 @@ na figura \ref{fig:graficos-cseg} podem ser vistos na tabela
 As diagonais superiores paralelas à diagonal principal zero da matriz
 de comparação são chamadas de INT$_n$, onde $n$ é o número da
 diagonal: 1 para a superior mais próxima da diagonal zero, 2 para a
-seguinte, 3 para a posterior e assim por diante.
+seguinte, 3 para a posterior e assim por diante (figura
+\ref{fig:int-exemplos}).
+
+\begin{figure}
+  \centering
+  \subfloat[INT$_1$]{
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ &     & $+$ &     &     \\
+      $9$ &     &     & $-$ &     \\
+      $6$ &     &     &     & $+$ \\
+      $8$ &     &     &     & 
+    \end{tabular}
+    \label{fig:int-1-5968}
+  }
+  \qquad
+  \subfloat[INT$_2$]{
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ &     &     & $+$ &     \\
+      $9$ &     &     &     & $-$ \\
+      $6$ &     &     &     &     \\
+      $8$ &     &     &     & 
+    \end{tabular}
+    \label{fig:int-2-5968}
+  }
+  \qquad
+  \subfloat[INT$_3$]{
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ &     &     &     & $+$ \\
+      $9$ &     &     &     &     \\
+      $6$ &     &     &     &     \\
+      $8$ &     &     &     & 
+    \end{tabular}
+    \label{fig:int-3-5968}
+  }
+  \caption{INT$_n$ de matriz de contorno (5 9 6 8)}
+  \label{fig:int-exemplos}
+\end{figure}
 
 A diagonal INT$_1$ traz comparações de registros entre elementos
 adjacentes do contorno. Em P(5 9 6 8), por exemplo, INT$_1=(+ - +)$,
