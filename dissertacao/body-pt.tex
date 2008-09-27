@@ -762,15 +762,19 @@ O \goiaba{}\footnote{Assim como ocorreu com o nome da empresa de
   especial para dar ao software desenvolvido neste trabalho o nome
   Goiaba.} é desenvolvido na linguagem Common Lisp\footnote{Disponível
   em \url{cliki.net/CLiki}} com o compilador SBCL\footnote{Disponível
-  em \url{sbcl.org}}.
-%% falar sobre as classes do goiaba
-A classe \texttt{ponto} define pontos cartesianos como (x, y), a
-classe \texttt{contorno-duracao} é uma lista de pontos como ((x, y)
-(z, w)), e a classe \texttt{contorno-simples} define apenas as alturas
-dos contornos como (y w). Algumas macros de leitura foram definidas
-para simplificar o processo de criar instâncias de objetos. Por
-exemplo, para criar uma instância do tipo \texttt{ponto} pode-se fazer
-normalmente \texttt{(make-instance 'ponto :x 0 :y 3)} ou simplesmente
+  em \url{sbcl.org}}, é orientado a objetos e tem classes
+\texttt{ponto}, \texttt{contorno-simples} e
+\texttt{contorno-duracao}. A classe \texttt{ponto} define as alturas
+de contorno no tempo como pontos cartesianos como (x, y), onde x é o
+tempo e y a altura. A classe \texttt{contorno-duracao} define um
+contorno como uma lista de pontos como ((x, y) (z, w)), e a classe
+\texttt{contorno-simples} define contornos apenas com as alturas como
+(y w).
+
+Algumas macros de leitura foram definidas para simplificar o processo
+de criar instâncias de objetos. Por exemplo, para criar uma instância
+do tipo \texttt{ponto} pode-se fazer normalmente
+\texttt{(make-instance 'ponto :x 0 :y 3)} ou simplesmente
 \verb!#p(0 3)! com a macro de leitura. Da mesma maneira, um
 \texttt{contorno-duracao} com dois pontos pode ser instanciado com
 \verb!#d(#p(0 3) #p(1 4))! ao invés de usar \texttt{make-instance}.
