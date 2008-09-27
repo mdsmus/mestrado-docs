@@ -880,7 +880,7 @@ músicos.
 \subsection{Lilypond}
 \label{sec:lilypond}
 
-O Lilypond\footnote{\url{www.lilypond.org}} é um software livre para
+O Lilypond \cite{nienhuys.ea08:lilypond} é um software livre para
 edição automática de partituras. É automático porque na maioria dos
 casos dispensa ajustes como número de compassos por sistema, número de
 sistemas por página, distância entre pentagramas, entre notas e
@@ -888,7 +888,7 @@ acidentes, entre outros.
 
 O Lilypond processa música descrita em uma sintaxe própria de marcação
 e gera arquivos como .pdf, .ps, .midi, .png, .svg entre outros. A
-figura XXX por exemplo é gerada com um código como
+figura \ref{fig:exemplo-lily} por exemplo é gerada com um código como
 \verb!{ \clef bass c4 d8 e d4 c }!. É possível utilizar variáveis para
 abstrair códigos. Em Composição isso pode ser usado para abstrair
 motivos, por exemplo. Dessa forma, um código como este:
@@ -902,7 +902,7 @@ motivos, por exemplo. Dessa forma, um código como este:
 }
 \end{verbatim}
 
-pode ser escrito desta forma:
+pode ter os motivos abstraídos em variáveis e ser escrito assim:
 
 \begin{verbatim}
 motivoA = { c4 e }
@@ -910,14 +910,24 @@ motivoB = { e16 d c d }
 {
   \motivoA
   \motivoB
-  \transpose c d {motivoA}
+  \transpose c d {\motivoA}
   \motivoB
 }
 \end{verbatim}
 
-O Lilypond se relaciona com o \LaTeX{} de modo a simplificar a
-produção de exemplos musicais para inserir em texto. Por fim é
-possível desenvolver programas que usem o Lilypond para gerar
+\begin{figure}
+  \centering
+  \includegraphics{exemplo-lily}
+  \caption{Partitura gerada no Lilypond}
+  \label{fig:exemplo-lily}
+\end{figure}
+
+O Lilypond ainda se relaciona com o \LaTeX{}\footnote{Sintaxe de
+  marcação de documentos e um sistema livre e automático de preparação
+  de documentos.} e OpenOffice\footnote{Pacote com softwares livres de
+  escritório como editor de texto e planilha de cálculos.} de modo a
+simplificar a produção de exemplos musicais para inserir em texto. Por
+fim é possível desenvolver programas que usem o Lilypond para gerar
 partitura automaticamente. O Rameau, por exemplo, faz análise
 harmônica automática e gera como saída partitura através do Lilypond
 \cite{kroger08:rameau}.
@@ -940,8 +950,8 @@ ramos paralelos de desenvolvimento e outras inúmeras funcionalidades.
 
 %% explicar em linhas gerais como um sistema de controle de versão funciona
 Normalmente inicia-se o controle de versão no diretório raiz de um
-projeto. O sistema cria um repositório oculto para onde todos os
-arquivos e mudanças colocados em controle de versão são copiados. O
+projeto. O sistema cria um repositório oculto para onde são copiados
+todos os arquivos e mudanças colocados em controle de versão. O
 procedimento do usuário normalmente é salvar cada mudança feita em um
 arquivo com um título e descrição, de forma que ele possa reconhecer a
 mudança quando precisar. A figura \ref{fig:controle-de-versao} mostra
@@ -961,11 +971,10 @@ que apresentamos.
 \end{figure}
 
 %% desenvolver sobre git
-O Git\footnote{\url{http://git.or.cz}}---\eng{Fast Version Control
-  System}---é um software livre de controle de versão bastante
-poderoso e veloz. Como outros sistemas modernos, permite o
-desenvolvimento distribuído, em que cada desenvolvedor pode ter uma
-cópia local do repositório central, que fica acessível via
+O Git\footnote{\url{http://git.or.cz}} é um software livre de controle
+de versão bastante poderoso e veloz. Como outros sistemas modernos,
+permite o desenvolvimento distribuído, em que cada desenvolvedor pode
+ter uma cópia local do repositório central, que fica acessível via
 SSH\footnote{Protocolo de acesso remoto seguro} ou HTTP. O Git tem
 suporte a desenvolvimento não-linear com ramos, ou seja, é possível
 desenvolver uma nova versão de um programa ao mesmo tempo em que
@@ -993,9 +1002,9 @@ alteração em si.
 Utilizamos o sistema de controle de versão Git no desenvolvimento de
 todo o trabalho. Mantivemos este projeto em um repositório
 central\footnote{Disponível em
-  \url{git.genos.mus.br/marcos-mestrado.git}.} com acesso irrestrito
-ao autor e orientador. Este procedimento dinamizou muito o trabalho
-uma vez que todo e qualquer comentário ou modificação pôde ser feita
+  \url{git.genos.mus.br/?r=marcos-mestrado}.} com acesso irrestrito ao
+autor e orientador. Este procedimento dinamizou muito o trabalho uma
+vez que todo e qualquer comentário ou modificação pôde ser feita
 diretamente no texto sem necessidade de um aviso prévio. O sistema de
 controle de versão foi suficiente para registrar dados como mudança e
 autoria. Usamos controle de versão no gerenciamento do desenvolvimento
@@ -1016,7 +1025,6 @@ projeto colaborativo. Em um trabalho sem este tipo de ferramenta,
 enquanto o orientador faz notas no texto, o autor não pode editá-lo
 para não criar conflitos entre as versões. Neste trabalho pudemos
 trabalhar sempre simultaneamente.
-
 
 \chapter{Análise da obra \obra{}}
 \label{cha:anal-da-obra}
