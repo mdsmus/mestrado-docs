@@ -529,6 +529,122 @@ forma, dado um contorno P(5 9 6 8), são considerados seus equivalentes
 os contornos (1 5 2 3), (0 10 4 7), (0 3 1 2) e muitos outros. Todos
 eles têm (0 3 1 2) como forma normal e classe de contorno.
 
+A função de similaridade (\tr{CSIM}) mede numericamente o grau de
+semelhança entre dois contornos de mesma cardinalidade. O maior nível
+de similaridade entre contornos tem valor 1 e o menor tem valor
+0. Este número é calculado comparando-se o triângulo superior da
+matriz de comparação dos dois contornos. Atribui-se o valor 1 para
+cada posição da matriz cujo símbolo é o mesmo no triângulo superior
+das duas matrizes. O valor de similaridade é o quociente da soma
+dessas equivalências pelo número total de posições do triângulo
+superior.
+
+A função de similaridade pode ser melhor compreendida por meio dos
+exemplos da figura \ref{fig:triangulos-com-matrix} e tabela
+\ref{tab:similaridade-contornos}. As figuras \ref{fig:triangulo-5968},
+\ref{fig:triangulo-5768} e \ref{fig:triangulo-3051} mostram os
+triângulos superiores das matrizes de comparação dos contornos P(5 9 6
+8), Q(5 7 6 8) e R(3 0 5 1), respectivamente. As figuras
+\ref{fig:triangulo-pq}, \ref{fig:triangulo-pr} e
+\ref{fig:triangulo-qr} mostram as semelhanças entre os triângulos
+superiores das matrizes de comparação dos contornos P e Q, P e R, e Q
+e R respectivamente. Entre P e Q há 5 elementos semelhantes entre os 6
+possíveis no triângulo. Dessa forma a função de similaridade entre P e
+Q é $\frac{5}{6}$, ou CSIM(P,Q)$=0,83$. Entre P e R há apenas um
+elemento semelhante entre 6 possíveis. Assim, CSIM(P,R)$=0,16$. A
+tabela \ref{tab:similaridade-contornos} mostra os valores de CSIM
+entre estes contornos.
+
+\begin{figure}
+  \centering
+  \subfloat[contorno P(5 9 6 8)]{
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ &     & $+$ & $+$ & $+$ \\
+      $9$ &     &     & $-$ & $-$ \\
+      $6$ &     &     &     & $+$ \\
+      $8$ &     &     &     &
+    \end{tabular}
+    \label{fig:triangulo-5968}
+  }
+  \qquad
+  \subfloat[contorno Q(5 7 6 8)]{
+    \begin{tabular}{c|cccc}
+      & $5$ & $7$ & $6$ & $8$ \\
+      \hline
+      $5$ &     & $+$ & $+$ & $+$ \\
+      $7$ &     &     & $-$ & $+$ \\
+      $6$ &     &     &     & $+$ \\
+      $8$ &     &     &     & 
+    \end{tabular}
+    \label{fig:triangulo-5768}
+  }
+  \qquad
+  \subfloat[contorno R(3 0 5 1)]{
+    \begin{tabular}{c|cccc}
+      & $3$ & $0$ & $5$ & $1$ \\
+      \hline
+      $3$ &     & $-$ & $+$ & $-$ \\
+      $0$ &     &     & $+$ & $+$ \\
+      $5$ &     &     &     & $-$ \\
+      $1$ &     &     &     & 
+    \end{tabular}
+    \label{fig:triangulo-3051}
+  }
+
+  \subfloat[P x Q]{
+    \begin{tabular}{c|cccc}
+      &     &     &     &     \\
+      \hline
+      &     & $+$ & $+$ & $+$ \\
+      &     &     & $-$ &     \\
+      &     &     &     & $+$ \\
+      &     &     &     &
+    \end{tabular}
+    \label{fig:triangulo-pq}
+  }
+  \qquad
+  \subfloat[P x R]{
+    \begin{tabular}{c|cccc}
+      &     &     &     &     \\
+      \hline
+      &     &     & $+$ &     \\
+      &     &     &     &     \\
+      &     &     &     &     \\
+      &     &     &     &
+    \end{tabular}
+    \label{fig:triangulo-pr}
+  }
+  \qquad
+  \subfloat[Q x R]{
+    \begin{tabular}{c|cccc}
+      &     &     &     &     \\
+      \hline
+      &     &     & $+$ &     \\
+      &     &     &     & $+$ \\
+      &     &     &     &     \\
+      &     &     &     &
+    \end{tabular}
+    \label{fig:triangulo-qr}
+  }
+  \caption{Triângulos superiores de matrizes de comparação}
+  \label{fig:triangulos-com-matrix}
+\end{figure}
+
+\begin{table}
+  \centering
+    \begin{tabular}{c|ccc}
+      & (5 9 6 8) & (5 7 6 8) & (3 0 5 1) \\
+      \hline
+      (5 9 6 8) & 1 & .83 & .16 \\
+      (5 7 6 8) & .83 & 1 & .33 \\
+      (3 0 5 1) & .16 & .33 & 1
+    \end{tabular}
+    \caption{Similaridade entre contornos}
+  \label{tab:similaridade-contornos}
+\end{table}
+
 Os Intervalos de Contorno (\tr{CI}) representam as relações entre
 alturas de contorno de uma classe de contorno e podem ser entendidos
 de duas formas: guardando o valor entre as alturas de contorno
