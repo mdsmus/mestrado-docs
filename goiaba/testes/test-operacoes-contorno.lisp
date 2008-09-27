@@ -1,5 +1,4 @@
-(in-package :goiaba)
-(use-package :lisp-unit)
+(in-package #:goiaba-testes)
 
 (define-test ponto-medio-duracao
   (assert-equal 1 (ponto-medio-duracao '((0 1) (2 4))))

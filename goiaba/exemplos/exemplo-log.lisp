@@ -40,3 +40,12 @@
    (retrogradar-contorno a5)
    "a5 + R = c4"
    ))
+
+(let* ((cs '(3 5 2 4))
+       (cd (contorno-simples->contorno-com-duracao cs))
+       (cc (cc (make-contorno-simples cs)))
+       (cas (cas (make-contorno-simples cs)))
+       (ret (retrogradar (make-contorno-simples cs)))
+       (tra (transpor (make-contorno-simples cs) 1))
+       (inv (inverter (make-contorno-simples cs) 2)))
+  (print (list ret tra inv cc cas)))
