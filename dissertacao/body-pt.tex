@@ -773,8 +773,23 @@ O \goiaba{}\footnote{Assim como ocorreu com o nome da empresa de
   especial para dar ao software desenvolvido neste trabalho o nome
   Goiaba.} é desenvolvido na linguagem Common Lisp\footnote{Disponível
   em \url{cliki.net/CLiki}} com o compilador SBCL\footnote{Disponível
-  em \url{sbcl.org}}, é orientado a objetos e tem classes
-\texttt{ponto}, \texttt{contorno-simples} e
+  em \url{sbcl.org}} e com metodologia \eng{bottom-up}.
+
+%% falar sobre common lisp, sbcl e bottom-up
+
+A metodologia \eng{bottom-up} está relacionada à direção do
+desenvolvimento, a partir de subsistemas mais simples em direção ao
+programa como um todo. Ela é bastante adequada ao desenvolvimento de
+programas que progressivamente têm sua complexidade
+aumentada. Programas como \TeX{}\footnote{Sistema de
+  tipografia. Disponível em \url{www.tug.org}.} e X
+Windows\footnote{Sistema gráfico de janelas do Linux. Disponível em
+  \url{www.x.org}.} têm sido desenvolvidos dessa forma
+\cite[p. vi]{graham94:lisp}. Este tipo de metodologia é bastante
+adequada ao \goiaba{}, já que torna possível testar as funcionalidades
+do programa no momento em que são implementadas.
+
+O \goiaba{} tem as classes \texttt{ponto}, \texttt{contorno-simples} e
 \texttt{contorno-duracao}. A classe \texttt{ponto} define as alturas
 de contorno no tempo como pontos cartesianos como (x, y), onde x é o
 tempo e y a altura. A classe \texttt{contorno-duracao} define um
@@ -850,6 +865,7 @@ gráfico e as operações e cores que serão geradas no gráfico.
   \caption{Operações em contorno (0 5 3 4 1 3)}
   \label{fig:operacoes}
 \end{figure}
+
 Para o futuro pretendemos implementar a possibilidade de gerar
 contornos a partir de partituras musicais e vice-versa e implementar
 uma interface gráfica. O desenvolvimento do \goiaba{} segue
