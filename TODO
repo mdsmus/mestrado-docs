@@ -7,7 +7,7 @@
 *** DONE usar "análise da obra \obra"
 *** DONE usar "partitura da obra \obra"
 ** revisar bibliografia
-*** usar referência e não bibliografia
+*** DONE usar referência e não bibliografia
 *** procurar babel para uso em bibliografia (ctan)
 ** diversos
 *** DONE apple é um nome de fruta sem razão para dar nome à empresa de Jobs
@@ -16,7 +16,16 @@
 *** na intro dizer que falarei sobre contornos adiante, com exemplos, etc.
 *** DONE problema na dissertação: "acreditamos ser necessário fazer foo nesta dissertação"
 *** DONE explicar figura de nota com muitas linhas suplementares no texto
+** pendências
+*** aumentar figura logo-ufba
+*** corrigir figura cl-pdf
+*** corrigir partitura (margens)
+*** enxugar um pouco teorias de contornos para mover linha de lugar
+*** verificar quebra de página em códigos lisp
+*** verificar figuras abaixo de notas de rodapé
+*** enxugar um pouco aspectos verticais para mover linha
 
 %%% Local Variables: 
 %%% mode: org
 %%% End:
+
