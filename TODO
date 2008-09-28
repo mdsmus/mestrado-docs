@@ -1,21 +1,21 @@
 * dissertação
-** títulos
-*** melhorar "sobre contornos"
-*** melhorar "ferramentas"
-*** usar "teorias de contornos" ao invés de "sobre"
-*** Git (sem controle de versão)
-*** usar "análise da obra \obra"
-*** usar "partitura da obra \obra"
+** DONE títulos
+*** DONE melhorar "sobre contornos"
+*** DONE melhorar "ferramentas"
+*** DONE usar "teorias de contornos" ao invés de "sobre"
+*** DONE Git (sem controle de versão)
+*** DONE usar "análise da obra \obra"
+*** DONE usar "partitura da obra \obra"
 ** revisar bibliografia
 *** usar referência e não bibliografia
 *** procurar babel para uso em bibliografia (ctan)
 ** diversos
-*** apple é um nome de fruta sem razão para dar nome à empresa de Jobs
-*** eliminar seção sobre latex
-*** relacionar todas as ferramentas ao desenvolvimento do goiaba
+*** DONE apple é um nome de fruta sem razão para dar nome à empresa de Jobs
+*** DONE eliminar seção sobre latex
+*** DONE relacionar todas as ferramentas ao desenvolvimento do goiaba
 *** na intro dizer que falarei sobre contornos adiante, com exemplos, etc.
-*** problema na dissertação: "acreditamos ser necessário fazer foo nesta dissertação"
-*** explicar figura de nota com muitas linhas suplementares no texto
+*** DONE problema na dissertação: "acreditamos ser necessário fazer foo nesta dissertação"
+*** DONE explicar figura de nota com muitas linhas suplementares no texto
 
 %%% Local Variables: 
 %%% mode: org
