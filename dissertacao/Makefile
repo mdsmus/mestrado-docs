@@ -1,5 +1,5 @@
-NAME = dissertacao-default
-TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex paginas-composicao.tex
+NAME = dissertacao-ufba
+TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex paginas-composicao.tex agradecimentos.tex
 
 SCOREDIR = ../opus-6-composicao-mestrado
 
@@ -9,8 +9,7 @@ OTHER += $(LILY_EPS) $(OTHER_EPS4)
 -include ~/repositorios/genos-repos/lib/make/latex.mk
 
 light-clean:
-	rm -f dissertacao-default.{aux,lo*,ps,pdf,bl*,dvi,to*,bb*}
-	rm -f dissertacao-simples.{aux,lo*,ps,pdf,bl*,dvi,to*,bb*}
+	rm -f dissertacao-ufba.{aux,lo*,ps,pdf,bl*,dvi,to*,bb*}
 
 cria-partitura:
 	rm -f figs/score-dissertacao*.eps
