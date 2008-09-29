@@ -1,5 +1,5 @@
 NAME = dissertacao-ufba
-TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex paginas-composicao.tex agradecimentos.tex paginas-composicao.lytex
+TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex paginas-composicao.tex agradecimentos.tex paginas-composicao.lytex figs/contornos.eps
 
 SCOREDIR = ../opus-6-composicao-mestrado
 
@@ -19,3 +19,7 @@ paginas-composicao.tex: paginas-composicao.lytex
 	rm -f figs/lily-*.eps ;\
 	lilypond-book -I $(SCOREDIR)/partitura/notas -I $(SCOREDIR)/script/temp -I $(SCOREDIR)/script/systemfiles -I $(SCOREDIR)/partitura paginas-composicao.lytex ;\
 	bash arruma-lytex.sh
+
+figs/contornos.eps: figs/contornos.pdf
+	convert $< $@
+
