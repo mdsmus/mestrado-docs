@@ -11,11 +11,12 @@ OTHER += $(LILY_EPS) $(OTHER_EPS4)
 light-clean:
 	rm -f dissertacao-ufba.{aux,lo*,ps,pdf,bl*,dvi,to*,bb*}
 
-score-clean:
-	rm -f {lily-*,snippet*,tmp*}
-	rm -f paginas-composicao.tex
+cria-partitura:
+	rm -f figs/score-dissertacao*.eps
+	lilypond -b eps -dno-gs-load-fonts -dinclude-eps-fonts -I $(SCOREDIR)/partitura/notas/ -I $(SCOREDIR)/script/temp -I $(SCOREDIR)/script/systemfiles $(SCOREDIR)/partitura/score-dissertacao.ly
+	mv score-dissertacao*.eps figs
+	rm score-dissertacao*
+	sh gera-paginas-composicao.sh
 
-paginas-composicao.tex:
-	rm -f figs/lily-*.eps ;\
-	lilypond-book -I $(SCOREDIR)/partitura/notas -I $(SCOREDIR)/script/temp -I $(SCOREDIR)/script/systemfiles -I $(SCOREDIR)/partitura paginas-composicao.lytex ;\
-	bash arruma-lytex.sh
+paginas-composicao.tex: figs/score-dissertacao*.eps
+	cria-partitura
