@@ -17,13 +17,13 @@
 *** DONE problema na dissertação: "acreditamos ser necessário fazer foo nesta dissertação"
 *** DONE explicar figura de nota com muitas linhas suplementares no texto
 ** pendências
-*** aumentar figura logo-ufba
-*** corrigir figura cl-pdf
-*** corrigir partitura (margens)
-*** enxugar um pouco teorias de contornos para mover linha de lugar
+*** DONE aumentar figura logo-ufba
+*** DONE corrigir figura cl-pdf
+*** DONE corrigir partitura (margens)
+*** DONE enxugar um pouco teorias de contornos para mover linha de lugar
 *** verificar quebra de página em códigos lisp
 *** verificar figuras abaixo de notas de rodapé
-*** enxugar um pouco aspectos verticais para mover linha
+*** DONE enxugar um pouco aspectos verticais para mover linha
 
 %%% Local Variables: 
 %%% mode: org
