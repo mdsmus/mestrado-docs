@@ -1,0 +1,6 @@
+\documentclass{book}
+\begin{document}
+\begin{lilypond}
+  \include "../opus-6-composicao-mestrado/partitura/score-dissertacao.ly"
+\end{lilypond}
+\end{document}
