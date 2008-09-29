@@ -1,6 +1,6 @@
 \documentclass{book}
 \begin{document}
-\begin[noindent,line-width=150\mm]{lilypond}
+\begin[indent=70\pt,line-width=160\mm]{lilypond}
 %% score.ly
 \version "2.10.33"
 
@@ -17,7 +17,7 @@
 \include "gestosglobal.ly"
 \include "gestostrompa.ly"
 
-  #(set-global-staff-size 15.5)
+  #(set-global-staff-size 15)
 
 %% partitura
 
@@ -25,41 +25,31 @@
   <<
     \new StaffGroup <<
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Flauta"}
-        \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Fl."}
-        \set Staff.midiInstrument = "flute"
+        \set Staff.instrumentName = \markup {\hcenter-in #5 "Flauta "}
         \gestosglobal
         \gestosflauta
       >>
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Oboé"}
-        \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Ob."}
-        \set Staff.midiInstrument = "oboe"
+        \set Staff.instrumentName = \markup {\hcenter-in #5 "Oboé "}
         \gestosglobal
         \gestosoboe
       >>
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Clarinete Bb"}
-        \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Cl.Bb"}
-        \set Staff.midiInstrument = "clarinet"
+        \set Staff.instrumentName = \markup {\hcenter-in #5 "Clarinete Bb. "}
         \gestosglobal
         \transpose c d {
           \gestosclarinetebb
         }
       >>
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Trompa"}
-        \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Tpa."}
-        \set Staff.midiInstrument = "french horn"
+        \set Staff.instrumentName = \markup {\hcenter-in #5 "Trompa F "}
         \gestosglobal
         \transpose c g {
           \gestostrompa
         }
       >>
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Fagote"}
-        \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Fg."}
-        \set Staff.midiInstrument = "bassoon"
+        \set Staff.instrumentName = \markup {\hcenter-in #5 "Fagote "}
         \gestosglobal
         \gestosfagote
       >>
