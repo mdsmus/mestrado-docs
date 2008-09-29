@@ -13,6 +13,8 @@ opus-6-composicao-mestrado/script/systemfiles/gestos*
 opus-6-composicao-mestrado/script/temp
 dissertacao/*.pdf
 dissertacao/paginas-composicao.tex
+dissertacao/lily-*
+dissertacao/snippet*
 dissertacao/lily/*.pdf
 dissertacao/lily/*.tex
 dissertacao/lily/*.texi
@@ -31,3 +33,4 @@ figs-out
 *.gl*
 *.old
 *.eps
+*.dep
