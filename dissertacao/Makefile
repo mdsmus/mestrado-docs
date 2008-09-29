@@ -18,5 +18,5 @@ cria-partitura:
 	rm score-dissertacao*
 	sh gera-paginas-composicao.sh
 
-paginas-composicao.tex: figs/score-dissertacao*.eps
+paginas-composicao.tex:
 	cria-partitura
