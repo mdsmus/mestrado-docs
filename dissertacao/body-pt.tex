@@ -20,10 +20,10 @@ escassos estudos sistemáticos do uso dessas operações de contorno e de
 suas combinações na composição musical. Acredito ser necessário um
 estudo e experimentação dessas operações na composição.
 
-Neste trabalho fazemos a revisão de teorias desenvolvidas para o
-estudo de contornos, crio um programa de computador para processamento
-de contornos e apresento a análise e partitura da obra \obra{},
-composta com base em combinações de operações de contornos.
+Neste trabalho faço a revisão de teorias desenvolvidas para o estudo
+de contornos, crio um programa de computador para processamento de
+contornos e apresento a análise e partitura da obra \obra{}, composta
+com base em combinações de operações de contornos.
 
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
@@ -51,7 +51,7 @@ a área de Composição.
 \section{Metodologia}
 \label{sec:metodologia}
 
-Para a realização deste trabalho cumprimos as seguintes atividades:
+Para a realização deste trabalho cumpri as seguintes atividades:
 
 \begin{enumerate}
 \item Revisão de literatura sobre contornos melódicos
@@ -66,8 +66,8 @@ Para a realização deste trabalho cumprimos as seguintes atividades:
 \item Composição de estudos para experimento de possibilidades com
   contornos melódicos.
 
-  Compomos duas peças para experimentar possibilidades com operações
-  de contornos melódicos. A primeira---\opus{Como é que se preenche um
+  Compus duas peças para experimentar possibilidades com operações de
+  contornos melódicos. A primeira---\opus{Como é que se preenche um
     contorno melódico? Op.3}---contém um único contorno melódico e
   operações de preenchimento deste contorno. A segunda---\opus{Bobó de
     legumes. Op.5}---contém também um único contorno e suas operações
@@ -79,13 +79,13 @@ Para a realização deste trabalho cumprimos as seguintes atividades:
   operações com contornos melódicos (vide seção
   \ref{sec:goiaba-software-para}).
 
-  Desenvolvemos um software que lida com contornos melódicos,
-  operações e combinações. Ele retorna representações simbólicas e
-  gráficas de operações de transposição, inversão, retrogradação e
-  rotação de um dado contorno. Além disso ele permite a combinação de
-  operações e sua concatenação. Este software ajudou no mapeamento e
-  processamento de contornos melódicos no estudo do estado de arte, na
-  composição dos experimentos, e na composição da obra final.
+  Desenvolvi um software que lida com contornos melódicos, operações e
+  combinações. Ele retorna representações simbólicas e gráficas de
+  operações de transposição, inversão, retrogradação e rotação de um
+  dado contorno. Além disso ele permite a combinação de operações e
+  sua concatenação. Este software ajudou no mapeamento e processamento
+  de contornos melódicos no estudo do estado de arte, na composição
+  dos experimentos, e na composição da obra final.
 \end{enumerate}
 
 \section{Estrutura da dissertação}
@@ -108,8 +108,8 @@ Esta dissertação está organizada da seguinte maneira:
 Há diversas definições de contorno melódico na literatura
 \cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,edworthy85:musical,dewitt.ea86:recognition,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour},
 sendo cada uma delas relacionada com o objetivo do trabalho de seu
-autor. Para o presente estudo preferimos criar uma definição
-própria. Dessa forma entendemos que contorno melódico é um conjunto
+autor. Para o presente estudo preferi criar uma definição
+própria. Dessa forma entendo que contorno melódico é um conjunto
 ordenado de alturas de notas (chamadas de pontos) cujo valor absoluto
 é ignorado e somente o registro, que pode ser mantido ou variado
 ascendente e descendentemente entre um ponto e outro, é considerado.
@@ -141,7 +141,7 @@ exemplo ocorre no início da \opus{Música para Cordas, Percussão e
 
 Não abordo contornos associados à duração neste trabalho embora
 existam estudos na literatura abordando este aspecto
-\cite{beard03:contour}. Percebemos ao longo do processo que incluir a
+\cite{beard03:contour}. Percebi ao longo do processo que incluir a
 duração em nosso estudo demandaria mais tempo do que o disponível e
 inviabilizaria o projeto. Pretendo abordar a duração futuramente (vide
 capítulo \ref{cha:conclusao-e-discussao}).
@@ -325,17 +325,16 @@ Cada conjunto de alturas de contorno contido em um espaço de contorno
 contíguos ou não contíguos do espaço de contorno. Subconjuntos de
 segmentos de contornos são chamados \tr{csubseg ou contour
   subsegment}. Para uma simplificação terminológica, neste trabalho
-nos referimos a segmento de contorno com o termo genérico
-``contorno''. A figura \ref{fig:c-space} contém três exemplos de um
-mesmo espaço de contorno de 10 alturas de contorno enumeradas do mais
-grave (0) para o mais agudo (9). Na figura \ref{fig:c-space5968} o
-espaço de contorno contém o contorno P, com as alturas de contorno 5,
-9, 6 e 8. Na figura \ref{fig:c-space7420} o espaço de contorno contém
-o contorno M, com alturas de contorno 7, 4, 2 e 0. Ainda nesta figura
-o contorno M contém o subconjunto de contorno O, com alturas de
-contorno 4 e 2. Por último, na figura \ref{fig:c-space564} o espaço de
-contorno contém o contorno N, com as alturas de contorno não
-adjacentes 5, 6 e 4.
+refiro-me a segmento de contorno com o termo genérico ``contorno''. A
+figura \ref{fig:c-space} contém três exemplos de um mesmo espaço de
+contorno de 10 alturas de contorno enumeradas do mais grave (0) para o
+mais agudo (9). Na figura \ref{fig:c-space5968} o espaço de contorno
+contém o contorno P, com as alturas de contorno 5, 9, 6 e 8. Na figura
+\ref{fig:c-space7420} o espaço de contorno contém o contorno M, com
+alturas de contorno 7, 4, 2 e 0. Ainda nesta figura o contorno M
+contém o subconjunto de contorno O, com alturas de contorno 4 e 2. Por
+último, na figura \ref{fig:c-space564} o espaço de contorno contém o
+contorno N, com as alturas de contorno não adjacentes 5, 6 e 4.
 
 \begin{figure}
   \centering
@@ -698,17 +697,17 @@ e para Morris, ``$-$''.
 O Vetor de Intervalos de Contornos (\tr{CIA}) descreve a freqüência de
 cada tipo de intervalo de contorno em uma classe de contorno. Por
 exemplo, o contorno P(0 3 1 2) tem vetor de intervalos de contornos
-(2,1,1/1,1,0). Os dígitos da esquerda da barra representam os
+(2,1,1/1,1,0). Os dígitos à esquerda da barra representam os
 intervalos de contorno ascendentes em ordem crescente, e os dígitos à
 direita os intervalos de contorno descendentes em ordem crescente de
-valor absoluto. \cite{friedmann85:methodology}. Dessa forma
-consideremos que no contorno P(0 3 1 2) há 2 intervalos de valor +1, 1
-intervalo de valor +2 e outro intervalo de valor +3. Além disso há um
-intervalo de valor -1, outro intervalo de valor -2 e nenhum intervalo
-de valor -3. Os Vetores de classe de contorno (\tr{CCVI} e
-\tr{CCVII}), de dois dígitos cada um, refletem os movimentos
-ascendentes e descendentes de um contorno e são calculados a partir
-dos intervalos de contorno ascendentes e descendentes.
+valor absoluto. \cite{friedmann85:methodology}. Dessa forma, neste
+contorno P(0 3 1 2) há 2 intervalos de valor +1, 1 intervalo de valor
++2 e outro intervalo de valor +3. Além disso há um intervalo de valor
+-1, outro intervalo de valor -2 e nenhum intervalo de valor -3. Os
+Vetores de classe de contorno (\tr{CCVI} e \tr{CCVII}), de dois
+dígitos cada um, refletem os movimentos ascendentes e descendentes de
+um contorno e são calculados a partir dos intervalos de contorno
+ascendentes e descendentes.
 
 A redução de contornos é possível a partir de dois diferentes
 algoritmos \cite{adams76:melodic,morris93:directions}. O algoritmo de
@@ -757,9 +756,8 @@ desenvolver funções que enviem a saída de dados de um programa como o
 Goiaba para a entrada de dados de outro programa como o editor de
 partituras Lilypond (vide seção \ref{sec:lilypond}), ou usar
 bibliotecas de gráficas para criar interfaces para o usuário. Com essa
-conectividade podemos desenvolver um software mais completo sem
-precisarmos necessariamente desenvolver bibliotecas ou programas já
-existentes.
+conectividade posso desenvolver um software mais completo sem precisar
+necessariamente desenvolver bibliotecas ou programas já existentes.
 
 \section{Goiaba, um software para processar contornos}
 \label{sec:goiaba-software-para}
@@ -807,8 +805,8 @@ Contornos são representados simbolicamente de duas maneiras: como
 contornos simples, considerando apenas as alturas de contorno
 \verb!(5 9 6)!, e como contornos com duração, considerando também o
 local no tempo onde ocorre cada altura de contorno:
-\verb!((0 5)(1 9)(2 6))!. Apesar de termos uma codificação específica
-que comporte a influência do tempo no contorno, ainda não estamos
+\verb!((0 5)(1 9)(2 6))!. Apesar de ter uma codificação específica que
+comporte a influência do tempo no contorno, ainda não estou
 trabalhando com este elemento.
 
 As operações em contornos são implementadas em métodos, aproveitando
@@ -840,9 +838,9 @@ definidos, permitindo a fácil visualização de operações em contornos.
 Por exemplo, o código seguinte gera um gráfico com o contorno
 original, sua transposição, retrogradação, inversão, rotação,
 ampliação de altura e inserção de ponto (figura
-\ref{fig:operacoes}). Neste exemplo definimos o contorno \verb!c1!,
-definimos o arquivo no qual o gráfico será criado, as dimensões do
-gráfico e as operações e cores que serão geradas no gráfico.
+\ref{fig:operacoes}). Neste exemplo defino o contorno \verb!c1!, o
+arquivo no qual o gráfico será criado, as dimensões do gráfico e as
+operações e cores que serão geradas no gráfico.
 
 \begin{verbatim}
 (let ((c1 #d(#p(0 0) #p(1 5) #p(2 3) #p(3 4) #p(4 1) #p(5 3))))
@@ -864,11 +862,11 @@ gráfico e as operações e cores que serão geradas no gráfico.
   \label{fig:operacoes}
 \end{figure}
 
-Para o futuro pretendemos implementar a possibilidade de gerar
-contornos a partir de partituras musicais e vice-versa e implementar
-uma interface gráfica. O desenvolvimento do \goiaba{} segue
-procedimentos oriundos do desenvolvimento de software livre como uso
-de controle de versão e disponibilização do código-fonte na
+Para o futuro pretendo implementar a possibilidade de gerar contornos
+a partir de partituras musicais e vice-versa e implementar uma
+interface gráfica. O desenvolvimento do \goiaba{} segue procedimentos
+oriundos do desenvolvimento de software livre como uso de controle de
+versão e disponibilização do código-fonte na
 internet\footnote{Disponível como marcos-mestrado.git em
   \url{git.genos.mus.br}.}.
 
@@ -895,11 +893,11 @@ desenvolvimento da pesquisa.
 \section{Outras ferramentas computacionais}
 \label{sec:outr-ferr-comp}
 
-Neste trabalho além de desenvolvermos o Goiaba utilizo o Lilypond
-tanto para gerar partituras através do Goiaba quanto para escrever a
-obra \obra{}. Uso também o sistema de controle de versão Git que
-ajudou no desenvolvimento do Goiaba, na composição da obra e na
-comunicação de dados com o orientador.
+Neste trabalho além de desenvolver o Goiaba utilizo o Lilypond tanto
+para gerar partituras através do Goiaba quanto para escrever a obra
+\obra{}. Uso também o sistema de controle de versão Git que ajudou no
+desenvolvimento do Goiaba, na composição da obra e na comunicação de
+dados com o orientador.
 
 Além disso essas ferramentas utilizadas são aqui descritas porque,
 apesar de serem amplamente utilizadas em outras áreas como ciência da
@@ -1028,7 +1026,7 @@ arquivos alterados e a alteração em si.
 %% falar sobre controle de versão neste trabalho (programa, projeto,
 %% composições e dissertação)
 Utilizo o sistema de controle de versão Git no desenvolvimento de todo
-o trabalho. Mantivemos este projeto em um repositório
+o trabalho. Mantive este projeto em um repositório
 central\footnote{Disponível em
   \url{git.genos.mus.br/?r=marcos-mestrado}.} com acesso irrestrito ao
 autor e orientador. Este procedimento dinamizou muito o trabalho uma
@@ -1102,11 +1100,11 @@ composicional.
 O tamanho de cada seção foi definido no planejamento inicial da obra
 com proporções baseadas na razão áurea.
 %%
-Porém, como admitimos uma tolerância relativamente alta entre
+Porém, como admito uma tolerância relativamente alta entre
 planejamento e resultado final, estas proporções ficaram diferentes na
 versão final da obra.
 %% dizer o quanto desviei
-Admitimos esta alta tolerância porque decidimos concentrar esforços no
+Admiti esta alta tolerância porque decidi concentrar esforços no
 objetivo principal do trabalho e deixar questões como proporções
 formais em segundo plano.
 
@@ -1151,13 +1149,13 @@ artístico.
   \label{tab:planejamento-inicial}
 \end{table}
 
-No planejamento previmos criar seis seções agrupáveis duas a duas (Aa,
-Ab, Ba, Bb, Ca, Cb). Durante a composição dividimos a seção Cb em dois
+No planejamento previ criar seis seções agrupáveis duas a duas (Aa,
+Ab, Ba, Bb, Ca, Cb). Durante a composição dividi a seção Cb em dois
 pedaços, criando então uma nova seção.
 
 As seções menores estão desmembradas em sub-seções (Aaa, Aab, Aac e
 assim por diante). Estas divisões mínimas foram planejadas para conter
-microgestos, mas ao longo do processo preferimos trabalhar com gestos
+microgestos, mas ao longo do processo preferi trabalhar com gestos
 maiores e usá-las para marcar mudanças de instrumental, de timbre, ou
 outras intervenções musicais. Além disso os nomes e as numerações dos
 gestos ajudaram na organização dos arquivos do Lilypond durante a
@@ -1300,7 +1298,7 @@ e oboé/clarinete.
 A seção 5 tem como elemento fundamental um ostinato na linha do fagote
 (figura \ref{fig:ostinato-fagote}). Este ostinato é inspirado em um
 dos toques da capoeira\footnote{A utilização deste elemento foi apenas
-  pontual. Por este motivo não aprofundaremos em maiores explicações
+  pontual. Por este motivo não aprofundarei em maiores explicações
   sobre a capoeira e seus toques.}. O ritmo do ostinato é aproveitado
 para a construção da estrutura de duas vozes (vide seção
 \ref{sec:aspectos-verticais}). O desenho gestual desta seção é
@@ -1352,8 +1350,8 @@ deste gesto (comp. 194--198). O segundo gesto (comp. 199--214) é
 caracterizado por graduais movimentos ascendentes e movimentação do
 âmbito do grave para o agudo. A linha da trompa (comp. 206--215),
 derivada da linha do oboé (comp. 149--157) interliga esta seção com a
-seguinte. Na figura \ref{fig:transicao-sexta-dois-gestos} percebemos o
-início do segundo gesto com elementos do gesto anterior.
+seguinte. Na figura \ref{fig:transicao-sexta-dois-gestos} é possível
+perceber o início do segundo gesto com elementos do gesto anterior.
 
 A seção 7, última da obra, engloba elementos importantes das seções
 anteriores (figura \ref{fig:setima-secao-resumo}). A linha do fagote é
@@ -1479,9 +1477,9 @@ há apenas os acentos.
 
 O objetivo principal da composição da obra \obra{} foi o uso
 sistemático de combinações de operações de contorno para a criação
-musical. Por isso decidimos escolher um único contorno---de modo a
+musical. Por isso decidi escolher um único contorno---de modo a
 colaborar com a unidade da peça---e manipulá-lo para gerar a maioria
-do material composicional da obra. Escolhemos o contorno de seis
+do material composicional da obra. Escolhi o contorno de seis
 elementos \contpr{}, relacionado com a estrutura de duas vozes e o
 motivo $\alpha$.
 
@@ -1648,7 +1646,7 @@ Sol-Si$\flat$-Lá, e logo após, no compasso 152,
 Dó$\sharp$-Si$\sharp$-Ré$\sharp$. Entre estes dois grupos de notas há
 uma expansão de intervalos do motivo $\gamma$, iniciado em Dó$\sharp$3
 e concluído em Dó$\sharp$4. Como já foi dito, este motivo é uma
-retrogradação do motivo $\alpha$. Entendemos que este motivo está
+retrogradação do motivo $\alpha$. Entendo que este motivo está
 interpolado com o contorno iniciado em Sol.
 
 \subsection{Operações de contornos não combinadas}
