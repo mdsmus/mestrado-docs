@@ -17,14 +17,13 @@ tanto do ponto de vista da análise quanto da composição.
 Apesar da possível coerência musical proporcionada por contornos e das
 operações fornecidas por teorias de contornos, ainda assim são
 escassos estudos sistemáticos do uso dessas operações de contorno e de
-suas combinações na composição musical. Acreditamos ser necessário um
+suas combinações na composição musical. Acredito ser necessário um
 estudo e experimentação dessas operações na composição.
 
 Neste trabalho fazemos a revisão de teorias desenvolvidas para o
-estudo de contornos, criamos um programa de computador para
-processamento de contornos e apresentamos a análise e partitura da
-obra \obra{}, composta com base em combinações de operações de
-contornos.
+estudo de contornos, crio um programa de computador para processamento
+de contornos e apresento a análise e partitura da obra \obra{},
+composta com base em combinações de operações de contornos.
 
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
@@ -116,8 +115,8 @@ ordenado de alturas de notas (chamadas de pontos) cujo valor absoluto
 ascendente e descendentemente entre um ponto e outro, é considerado.
 
 Por exemplo, no fragmento da 5ª Sinfonia de Beethoven (figura
-\ref{fig:5a-sinfonia}), ignoramos todas as alturas e intervalos,
-consideramos que não há diferença de registro entre as três primeiras
+\ref{fig:5a-sinfonia}), ignoro todas as alturas e intervalos,
+considero que não há diferença de registro entre as três primeiras
 notas, que a nota Mi$\flat$ tem registro mais grave que a nota Sol,
 que a nota Fá tem registro mais agudo que a nota Mi$\flat$, e que a
 nota Ré tem registro mais grave que a nota Fá. Estes movimentos
@@ -140,15 +139,15 @@ intervalos são progressivamente expandidos ou contraídos, como por
 exemplo ocorre no início da \opus{Música para Cordas, Percussão e
   Celesta}, de Béla Bartók.
 
-Não abordamos contornos associados à duração neste trabalho embora
+Não abordo contornos associados à duração neste trabalho embora
 existam estudos na literatura abordando este aspecto
 \cite{beard03:contour}. Percebemos ao longo do processo que incluir a
 duração em nosso estudo demandaria mais tempo do que o disponível e
 inviabilizaria o projeto. Pretendo abordar a duração futuramente (vide
 capítulo \ref{cha:conclusao-e-discussao}).
 
-Neste texto consideramos como operação de contorno todo tipo de
-manipulação em um contorno. Dessa forma consideramos operações
+Neste texto considero como operação de contorno todo tipo de
+manipulação em um contorno. Dessa forma considero operações
 procedimentos como inversão, retrogradação, expansão e subconjuntos de
 contorno, matriz de comparação e classe de contorno. Estas operações
 são detalhadas na seção \ref{sec:teor-de-cont}.
@@ -262,8 +261,8 @@ A partir das idéias destas teorias é possível, por exemplo, reconhecer
 semelhanças de registro entre as duas melodias de quatro notas da
 figura \ref{fig:ly-cseg-5968}, cujo contorno está representado
 graficamente na figura \ref{fig:cseg-5968}. Estas semelhanças são
-identificadas apenas se observamos os seus contornos. Outros exemplos
-de melodias de contornos semelhantes podem ser vistos nas figuras
+identificadas apenas se observo os seus contornos. Outros exemplos de
+melodias de contornos semelhantes podem ser vistos nas figuras
 \ref{fig:melodias-cseg} e \ref{fig:graficos-cseg}\footnote{Há
   evidências experimentais de que músicos e leigos têm habilidade de
   usar desenhos gráficos como os da figura \ref{fig:graficos-cseg}
@@ -414,7 +413,7 @@ contorno (5 9 6 8) é (5 13 7 11).
 A operação de inversão de um contorno P de ordem $q$ é representada
 por IP, e é matematicamente calculada por IP$_n=(q-1-P_n)$. Portanto,
 dado um contorno P(5 9 6 8), de ordem 10, IP$_0=(10-1-P_0)$. Logo,
-IP$_0=4$. Aplicando-se a mesma idéia aos outros elementos chegamos ao
+IP$_0=4$. Aplicando-se a mesma idéia aos outros elementos chego ao
 contorno IP(4 0 3 1) (figura \ref{fig:operacoes-simples}). É possível
 ainda relacionar a inversão entre elementos através da matriz de
 comparação. Calcula-se esta inversão com a operação
@@ -428,11 +427,11 @@ A operação de comparação \tr{COM(a,b)} retorna a diferença de registro
 entre dois elementos de contorno $a$ e $b$, ou seja, informa se um
 elemento é mais agudo, mais grave ou de mesma altura que outro. O
 resultado da operação de comparação é ``$+$'' se $b$ é maior que $a$;
-``$-$'' se $b$ é  que $a$; e ``$0$'' se $b$ é igual a $a$. Por
-exemplo, no contorno P(5 9 6 8), o valor de $COM(P_0,P_1)$ é o sinal
-``$+$'', o de $COM(P_1,P_2)$ é ``$-$'', e o valor de $COM(P_3,P_0)$ é
-o sinal ``$+$''. Esta medida de comparação pode ser invertida de modo
-que a comparação entre dois elementos é igual ao inverso da comparação
+``$-$'' se $b$ é que $a$; e ``$0$'' se $b$ é igual a $a$. Por exemplo,
+no contorno P(5 9 6 8), o valor de $COM(P_0,P_1)$ é o sinal ``$+$'', o
+de $COM(P_1,P_2)$ é ``$-$'', e o valor de $COM(P_3,P_0)$ é o sinal
+``$+$''. Esta medida de comparação pode ser invertida de modo que a
+comparação entre dois elementos é igual ao inverso da comparação
 destes elementos em ordem reversa. Esta idéia pode ser melhor
 entendida observando-se a equação $COM(a,b)=-COM(b,a)$.
 
@@ -715,7 +714,7 @@ A redução de contornos é possível a partir de dois diferentes
 algoritmos \cite{adams76:melodic,morris93:directions}. O algoritmo de
 Adams, criado para definir uma tipologia de contornos, reduz uma
 melodia inteira a apenas quatro alturas de contorno\footnote{Adams
-  utiliza uma terminologia diferenciada da que apresentamos aqui.}: a
+  utiliza uma terminologia diferenciada da que apresento aqui.}: a
 primeira altura, a última, a mais aguda e a mais grave. O algoritmo de
 Morris, processado em várias etapas, reduz a melodia através da
 observação de mudanças de direção entre segmentos adjacentes e
@@ -896,9 +895,9 @@ desenvolvimento da pesquisa.
 \section{Outras ferramentas computacionais}
 \label{sec:outr-ferr-comp}
 
-Neste trabalho além de desenvolvermos o Goiaba utilizamos o Lilypond
+Neste trabalho além de desenvolvermos o Goiaba utilizo o Lilypond
 tanto para gerar partituras através do Goiaba quanto para escrever a
-obra \obra{}. Usamos também o sistema de controle de versão Git que
+obra \obra{}. Uso também o sistema de controle de versão Git que
 ajudou no desenvolvimento do Goiaba, na composição da obra e na
 comunicação de dados com o orientador.
 
@@ -1028,25 +1027,25 @@ arquivos alterados e a alteração em si.
 
 %% falar sobre controle de versão neste trabalho (programa, projeto,
 %% composições e dissertação)
-Utilizamos o sistema de controle de versão Git no desenvolvimento de
-todo o trabalho. Mantivemos este projeto em um repositório
+Utilizo o sistema de controle de versão Git no desenvolvimento de todo
+o trabalho. Mantivemos este projeto em um repositório
 central\footnote{Disponível em
   \url{git.genos.mus.br/?r=marcos-mestrado}.} com acesso irrestrito ao
 autor e orientador. Este procedimento dinamizou muito o trabalho uma
 vez que todo e qualquer comentário ou modificação pôde ser feita
 diretamente no texto sem necessidade de um aviso prévio. O sistema de
 controle de versão foi suficiente para registrar dados como mudança e
-autoria. Usamos controle de versão no gerenciamento do desenvolvimento
-do Goiaba, nos experimentos composicionais, na obra final, e na
-escrita desta dissertação e do seu projeto.
+autoria. Uso controle de versão no gerenciamento do desenvolvimento do
+Goiaba, nos experimentos composicionais, na obra final, e na escrita
+desta dissertação e do seu projeto.
 
 A possibilidade de criar ramos diferentes de desenvolvimento nos
 possibilitou fazer a refatoração do Goiaba ao mesmo tempo que podíamos
 ter em funcionamento uma versão estável anterior.
 
 Na composição o sistema possibilitou, por exemplo, consultas
-posteriores a fragmentos que havíamos desistido de manter na obra. Com
-um sistema deste tipo é possível reconstituir o passo-a-passo do
+posteriores a fragmentos que havia desistido de manter na obra. Com um
+sistema deste tipo é possível reconstituir o passo-a-passo do
 compositor na criação de uma obra musical.
 
 A produção desta dissertação ilustra o uso de controle de versão em um
@@ -1061,7 +1060,7 @@ trabalhar sempre simultaneamente.
 
 A obra \obra{} é um quinteto de madeiras em movimento único. Sua
 composição foi focada no uso sistemático de contornos melódicos e
-não-melódicos. Além de contornos, trabalhamos com proporções, metas
+não-melódicos. Além de contornos, trabalhei com proporções, metas
 composicionais, gestos e motivos em um nível secundário.
 
 A obra contém três elementos musicais a partir dos quais todo o
@@ -1134,15 +1133,15 @@ e fim pelo número de compasso e letra de ensaio.
 \label{sec:plan-da-comp}
 
 O planejamento inicial desta peça foi feito pouco menos de um ano
-antes de sua composição. Neste planejamento detalhamos elementos de
-alto nível de abstração como forma, seções, microseções, proporções,
-andamentos, metas composicionais e texturas. Consideramos estruturas
+antes de sua composição. Neste planejamento detalho elementos de alto
+nível de abstração como forma, seções, microseções, proporções,
+andamentos, metas composicionais e texturas. Considero estruturas
 musicais como temas, movimentos, seções como de alto nível de
 abstração, e notas e durações como de baixo nível de abstração. O
 resultado deste planejamento pode ser visto na tabela
 \ref{tab:planejamento-inicial}. Muitos dos elementos planejados foram
 modificados em função da própria dinâmica da composição. À medida que
-a música foi criada adaptamos o planejamento privilegiando o resultado
+a música foi criada adaptei o planejamento privilegiando o resultado
 artístico.
 
 \begin{table}
@@ -1278,17 +1277,18 @@ seção 4.
 
 O início da seção 4 ocorre antes do final da seção 3, que tem um
 desfecho gradativo, formando uma espécie de dégradé entre estas seções
-(figura \ref{fig:transicao-secao-3-4}). A seção 4 é um fugato com sujeito e
-contra-sujeito derivados do contorno principal e de combinações de
-operações\footnote{Para maiores detalhes sobre este fugato e
-  combinações de operações vide seção \ref{sec:comb-de-oper}.}. Do
-ponto de vista gestual, há uma passagem de uma menor densidade no
-início da seção 4, com as entradas instrumentais sucessivas, para uma
-maior densidade no final da mesma seção. Isto ocorre por três razões:
-(1) a entrada da trompa em ritmo largo (comp. 123), (2) o
-estreitamento entre as entradas das madeiras, e (3) a partir do
-compasso 128, o jogo de perguntas e respostas com o primeiro segmento
-do sujeito, que ocorre entre as duplas flauta/fagote e oboé/clarinete.
+(figura \ref{fig:transicao-secao-3-4}). A seção 4 é um fugato com
+sujeito e contra-sujeito derivados do contorno principal e de
+combinações de operações\footnote{Para maiores detalhes sobre este
+  fugato e combinações de operações vide seção
+  \ref{sec:comb-de-oper}.}. Do ponto de vista gestual, há uma passagem
+de uma menor densidade no início da seção 4, com as entradas
+instrumentais sucessivas, para uma maior densidade no final da mesma
+seção. Isto ocorre por três razões: (1) a entrada da trompa em ritmo
+largo (comp. 123), (2) o estreitamento entre as entradas das madeiras,
+e (3) a partir do compasso 128, o jogo de perguntas e respostas com o
+primeiro segmento do sujeito, que ocorre entre as duplas flauta/fagote
+e oboé/clarinete.
 
 \begin{figure}
   \centering
@@ -1495,10 +1495,10 @@ subconjuntos de 5, 4, 3 e 2 elementos.
 \subsection{Combinações de operações de contorno utilizadas}
 \label{sec:comb-de-oper}
 
-Utilizamos um grupo de operações de contorno e as combinamos para
-criar o material musical da obra. Trabalhamos com dois subconjuntos de
+Utilizei um grupo de operações de contorno e as combinei para criar o
+material musical da obra. Trabalhei com dois subconjuntos de
 contornos, operações de INT$_1$, inversão, rotações e de preenchimento
-de contornos. Combinamos estas operações desta forma:
+de contornos. Combinei estas operações desta forma:
 
 \begin{itemize}
 \item Subconjunto com expansão e transposição
