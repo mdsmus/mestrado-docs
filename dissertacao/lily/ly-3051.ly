@@ -1,13 +1,16 @@
 \version "2.10.33"
 
+\include "../config/lib.ly"
+
 \score {
   \new Staff {
     \time 4/4
     \relative c'' {
+      \bracketUp
       \override TextScript #'extra-offset = #'( 0 . 2 )
-      d d, e' a,
+      d\startGroup^\markup{m1} d, e' a,\stopGroup
       \bar "||"
-      e' c f d
+      e'\startGroup^\markup{m2} c f d\stopGroup
       \bar "||"
     }
   }
@@ -16,13 +19,13 @@
       \Staff \consists "Horizontal_bracket_engraver"
     }
   }
-  \midi {}
 }
 \paper {
-  paper-width = 7.1\cm
+  paper-width = 6.6\cm
   paper-height = 2.3\cm
-  line-width = 8\cm
+  line-width = 7.5\cm
   top-margin = -.5\cm
   left-margin = -1.2\cm
   tagline = 0
+  indent = 0
 }
