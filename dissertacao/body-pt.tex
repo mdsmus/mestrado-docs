@@ -188,10 +188,11 @@ Contorno é um conjunto ordenado de elementos distintos, com ou sem
 repetição, numerados de forma ascendente
 \cite[p. 206]{morris93:directions}.
 
-Um contorno pode ser interpretado como registro, dinâmica ou densidade
-de acordes no tempo \cite[p. 206]{morris93:directions}
+Um contorno pode ser interpretado como altura (desconsiderando seu
+valor absoluto), dinâmica ou densidade de acordes no tempo
+\cite[p. 206]{morris93:directions}
 \cite[p. 22]{clifford95:contour}. Um dado contorno (4 3 5 6), por
-exemplo, pode ser associado ao parâmetro registro com as notas Lá, Fá,
+exemplo, pode ser associado ao parâmetro altura com as notas Lá, Fá,
 Si$\flat$ e Ré (figura \ref{fig:pitches-in-time}); pode ser associado
 a densidades de acordes com acordes de duas, uma, quatro e sete notas
 (figura \ref{fig:chord-densities-in-time}); ou pode ainda ser
@@ -274,12 +275,12 @@ Teorias que visam sistematizar o estudo de contornos dispõem de várias
 operações para mapeamento e comparação de contornos
 \cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}.
 A partir das idéias destas teorias é possível, por exemplo, reconhecer
-semelhanças de registro entre as duas melodias de quatro notas da
-figura \ref{fig:ly-cseg-5968}, cujo contorno está representado
-graficamente na figura \ref{fig:cseg-5968}. Estas semelhanças são
-identificadas apenas com a observação dos seus contornos. Outros
-exemplos de melodias de contornos semelhantes podem ser vistos nas
-figuras \ref{fig:melodias-cseg} e \ref{fig:graficos-cseg}\footnote{Há
+semelhanças de altura entre as duas melodias de quatro notas da figura
+\ref{fig:ly-cseg-5968}, cujo contorno está representado graficamente
+na figura \ref{fig:cseg-5968}. Estas semelhanças são identificadas
+apenas com a observação dos seus contornos. Outros exemplos de
+melodias de contornos semelhantes podem ser vistos nas figuras
+\ref{fig:melodias-cseg} e \ref{fig:graficos-cseg}\footnote{Há
   evidências experimentais de que músicos e leigos têm habilidade de
   usar desenhos gráficos como os da figura \ref{fig:graficos-cseg}
   para representar contorno, embora músicos tenham maior acuidade
@@ -323,14 +324,15 @@ figuras \ref{fig:melodias-cseg} e \ref{fig:graficos-cseg}\footnote{Há
   \label{fig:graficos-cseg}
 \end{figure}
 
+%% FIXME: reescrever expandindo a idéia de melodia
 A música pode ser visualizada em diferentes espaços, como de altura e
 de contorno \cite{morris87:composition}. O espaço de contorno
 (\tr{c-space ou contour-space}) é uma abstração de espaço musical que
-consiste em elementos organizados do grave para o agudo
-desconsiderando os intervalos exatos entre eles. Leva-se em conta
-apenas a relação entre os registros dos elementos. O espaço de
-contorno pode ser entendido como um grande conjunto de alturas de
-contorno (\tr{c-pitch ou contour-pitch}).
+consiste em elementos organizados do grave para o agudo e que
+desconsidera a altura precisa e os intervalos exatos entre estes
+elementos. Leva-se em conta apenas a relação entre as alturas dos
+elementos. O espaço de contorno pode ser entendido como um grande
+conjunto de alturas de contorno (\tr{c-pitch ou contour-pitch}).
 
 Cada conjunto de alturas de contorno contido em um espaço de contorno
 é chamado de segmento de contorno (\tr{cseg ou
@@ -439,13 +441,14 @@ Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação, matriz de comparação e classe de
 contorno.
 
-A operação de comparação \tr{COM(a,b)} retorna a diferença de registro
-entre dois elementos de contorno $a$ e $b$, ou seja, informa se um
-elemento é mais agudo, mais grave ou de mesma altura que outro. O
-resultado da operação de comparação é ``$+$'' se $b$ é maior que $a$;
-``$-$'' se $b$ é que $a$; e ``$0$'' se $b$ é igual a $a$. Por exemplo,
-no contorno P(5 9 6 8), o valor de $COM(P_0,P_1)$ é o sinal ``$+$'', o
-de $COM(P_1,P_2)$ é ``$-$'', e o valor de $COM(P_3,P_0)$ é o sinal
+%% FIXME: reescrever expandindo a idéia de altura
+A operação de comparação \tr{COM(a,b)} retorna a diferença de altura
+entre dois elementos de contorno $a$ e $b$ considerando se um elemento
+é mais agudo, mais grave ou de mesma altura que outro. O resultado da
+operação de comparação é ``$+$'' se $b$ é maior que $a$; ``$-$'' se
+$b$ é que $a$; e ``$0$'' se $b$ é igual a $a$. Por exemplo, no
+contorno P(5 9 6 8), o valor de $COM(P_0,P_1)$ é o sinal ``$+$'', o de
+$COM(P_1,P_2)$ é ``$-$'', e o valor de $COM(P_3,P_0)$ é o sinal
 ``$+$''. Esta medida de comparação pode ser invertida de modo que a
 comparação entre dois elementos é igual ao inverso da comparação
 destes elementos em ordem reversa. Esta idéia pode ser melhor
@@ -547,6 +550,7 @@ seguinte, 3 para a posterior e assim por diante (figura
   \label{fig:int-exemplos}
 \end{figure}
 
+%% FIXME: reescrever expandindo além de melodia
 A diagonal INT$_1$ traz comparações de registros entre elementos
 adjacentes do contorno. Em P(5 9 6 8), por exemplo, INT$_1=(+ - +)$,
 ou seja, o movimento melódico é ascendente entre 5 e 9, descendente
