@@ -106,67 +106,113 @@ Há diversas definições de contorno melódico na literatura
 As definições de Piston, Toch, Schönberg, Edworthy, Dewitt e Crowder
 são semelhantes e, em geral consideram contorno melódico como
 movimento ascendente ou descendente entre notas adjacentes de uma
-melodia. Por exemplo,
+melodia.
+
 %% conferir páginas das citações
-Toch define o contorno de uma melodia como uma linha de alturas, seu
-formato, curvas e movimentos ascendentes e descendentes
-\cite[p. 62]{toch77:shaping}. Edworthy considera como contorno a
-seqüência de movimentos ascendentes e descendentes de uma melodia,
-independente da precisão do tamanho do intervalo
+Toch, por exemplo define o contorno de uma melodia como uma linha de
+alturas com seu formato, curvas e movimentos ascendentes e
+descendentes \cite[p. 62]{toch77:shaping}. Edworthy considera como
+contorno a seqüência de movimentos ascendentes e descendentes de uma
+melodia, independente do tamanho do intervalo entre as notas
 \cite{edworthy85:musical}. De modo semelhante Dewitt e Crowder definem
 como contorno o padrão binário de movimento ascendente e descendente
-entre duas alturas adjacentes de uma melodia
+entre alturas adjacentes de uma melodia
 \cite{dewitt.ea86:recognition}.
 
-De acordo com estas definições o fragmento da 5ª Sinfonia de
-Beethoven, na figura \ref{fig:melodia-5a-sinfonia}, tem contorno
-descendente (Sol-Mi$\flat$), ascendente (Mi$\flat$-Fá) e descendente
-(Fá-Ré) conforme é representado na figura
-\ref{fig:contorno-5a-sinfonia}.
+De acordo com estas definições compreende-se que o fragmento da 5ª
+Sinfonia de Beethoven, por exemplo (figura
+\ref{fig:melodia-5a-sinfonia}), tem contorno descendente
+(Sol-Mi$\flat$), ascendente (Mi$\flat$-Fá) e descendente (Fá-Ré) e que
+pode ser representado simbolicamente por (- + -).
 
 \begin{figure}
   \centering
-  \subfloat[Melodia]{
-    \includegraphics{5a-sinfonia}
-    \label{fig:melodia-5a-sinfonia}
-  }
-  \subfloat[Contorno]{
-    \includegraphics{c-3120}
-    \label{fig:contorno-5a-sinfonia}
-  }
-  \caption{Fragmento da 5ª Sinfonia de Beethoven}
+  \includegraphics{5a-sinfonia}
+  \caption{Fragmento melódico da 5ª Sinfonia de Beethoven}
   \label{fig:5a-sinfonia}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \subfloat[(- + -)]{
+    \includegraphics{c-1010}
+    \label{fig:c-1010}
+  }
+  \quad
+  \subfloat[(3 1 2 0)]{
+    \includegraphics{c-3120}
+    \label{fig:c-3120}
+  }
+  \caption{Representações gráficas do contorno do fragmento da 5ª
+    Sinfonia de Beethoven}
+  \label{fig:repr-5a-sinfonia}
 \end{figure}
 
 Estas definições são limitadas para uso em análise ou composição por
 considerarem apenas notas adjacentes e apenas altura em função do
-tempo. Uma definição mais precisa de contorno envolve o conceito de
-espaço de contorno (c-space ou contour-space), que permite relacionar
-também notas não adjacentes de uma melodia. Este conceito é explicado
-na seção \ref{sec:teor-de-cont}.
+tempo. A definição mais precisa de contorno é a de Robert Morris, que
+estabelece como contorno \textbf{um conjunto ordenado de elementos
+  distintos, com ou sem repetição, numerados de forma ascendente}
+\cite[p. 206]{morris93:directions}. Esta definição considera elementos
+não adjacentes e generaliza o conceito de contorno para outros
+parâmetros como densidade de acordes e duração. Contorno é por
+definição ordenado porque a permutação de seus elementos resulta em um
+novo contorno. 
+
+A numeração dos elementos é feita atribuindo 0 para o elemento de
+menor valor, 1 para o segundo elemento de menor valor, 2 para o
+terceiro elemento de menor valor, e assim por diante. O valor do
+elemento depende do parâmetro que ele mapeia. Por exemplo, em um
+contorno de alturas a nota mais grave tem o menor valor. Em um
+contorno de densidade de acordes, o acorde de menor número de notas
+tem o menor valor.
+
+Tendo em vista a definição de contorno de Morris, posso afirmar que o
+fragmento da figura \ref{fig:5a-sinfonia} pode ser representado
+simbolicamente por (3 1 2 0), e graficamente pelo conteúdo da figura
+\ref{fig:c-3120}. A representação simbólica é obtida determinando o
+valor 0 para a nota mais grave (ré), 1 para a segunda nota mais grave
+(mi$\flat$), 2 para a terceira nota mais grave (fá), e assim por
+diante. É importante observar que estes números não estão relacionados
+às classes de notas, como ocorre na Teoria dos Conjuntos, mas à
+posição que cada nota ocupa em ordem de altura. Como contornos são
+ordenados por definição, estes números são apresentados na ordem
+temporal em que as notas ocorrem na melodia. Neste exemplo são
+apresentados na ordem 3, 1, 2 e 0.
+
+A maior granularidade da definição de Morris pode ser percebida a
+partir da comparação das representações da figura
+\ref{fig:repr-5a-sinfonia}. O contorno representado na figura
+\ref{fig:c-1010} não indica por exemplo que a terceira altura é mais
+grave que a primeira, o que fica claro na figura \ref{fig:c-3120},
+decorrente da definição de Morris.
 
 A idéia de preservação de contornos e variação de intervalos entre
 notas é encontrada em diferentes situações musicais. Alguns exemplos
 mais comuns são as mudanças de modo em peças do tipo tema e variações,
-a adequação de notas à tonalidade em respostas tonais de fugas,
-\eng{leitmotifs} e idéias fixas
+a adequação de notas à tonalidade em respostas tonais de fugas, os
+\eng{leitmotifs} e as idéias fixas
 \cite[p. 29]{morris87:composition}. Outras obras têm motivos cujos
 intervalos são progressivamente expandidos ou contraídos, como por
 exemplo ocorre no início da \opus{Música para Cordas, Percussão e
   Celesta}, de Béla Bartók.
 
-Não abordo contornos associados à duração neste trabalho embora
-existam estudos na literatura abordando este aspecto
-\cite{beard03:contour}. Percebi ao longo do processo que incluir a
-duração neste estudo demandaria mais tempo do que o disponível e
-inviabilizaria o projeto. Pretendo abordar a duração futuramente (vide
-capítulo \ref{cha:conclusao-e-discussao}).
+Neste trabalho concentrei esforços no mapeamento de contornos de
+altura em função do tempo. No entanto desprezei a mensuração do tempo
+e atribuí à distância entre dois elementos dos contornos um valor
+padrão 1. Dessa forma não pude abordar características dos contornos
+como inclinação dos segmentos entre dois pontos, embora existam
+estudos na literatura abordando este aspecto
+\cite{beard03:contour}. Percebi ao longo do processo que incluir
+mensurar o tempo neste estudo demandaria um prazo maior do que o
+disponível e inviabilizaria o projeto. Pretendo abordar este parâmetro
+futuramente (vide capítulo \ref{cha:conclusao-e-discussao}).
 
 Neste texto considero como operação de contorno todo tipo de
 manipulação em um contorno. Dessa forma considero como operações
 procedimentos como inversão, retrogradação, expansão e subconjuntos de
 contorno, matriz de comparação e classe de contorno. Estas operações
-são detalhadas na seção \ref{sec:teor-de-cont}.
+também são detalhadas na seção \ref{sec:teor-de-cont}.
 
 Teorias de contornos foram desenvolvidas primariamente como técnicas
 analíticas aplicáveis a composições atonais que podem não possuir as
@@ -176,17 +222,14 @@ harmonia funcional, que dão coerência a composições tonais
 
 %% comentar o sucesso e o que foi achado de diferente nas análises de
 %% friedmann, clifford e beard
-Embora teorias de contorno não tenham sido desenvolvidas para a
-análise de obras tonais, a análise a partir da perspectiva de
-contornos já se mostrou eficiente também neste tipo de obra. Assim,
-além de obras de Schönberg \cite{friedmann85:methodology} e Webern
-\cite{clifford95:contour}, sonatas para piano de Mozart
-\cite{beard03:contour} já foram analisadas sob a ótica das teorias de
-contornos.
+A análise de obras tonais a partir de contornos tonais já se mostrou
+eficiente, embora as teorias de contorno não tenham sido desenvolvidas
+para este tipo de obra. Existem análises bem sucedidas de obras de
+Arnold Schönberg \cite{friedmann85:methodology}, Anton Webern
+\cite{clifford95:contour}, Luigi Dallapicolla
+\cite{marvin88:generalized} e Wolfgang Amadeus Mozart
+\cite{beard03:contour} sob a ótica das teorias de contornos.
 
-Contorno é um conjunto ordenado de elementos distintos, com ou sem
-repetição, numerados de forma ascendente
-\cite[p. 206]{morris93:directions}.
 
 Um contorno pode ser interpretado como altura (desconsiderando seu
 valor absoluto), dinâmica ou densidade de acordes no tempo
@@ -266,35 +309,42 @@ Op.5.
 \section{Teorias de contornos}
 \label{sec:teor-de-cont}
 
-Teorias que visam sistematizar o estudo de contornos dispõem de várias
-operações para mapeamento e comparação de contornos
+Existem várias operações de mapeamento e comparação de contornos nas
+teorias desenvolvidas para sistematização do estudo de contornos.
 \cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}.
-A partir das idéias destas teorias é possível, por exemplo, reconhecer
-semelhanças de altura entre as duas melodias de quatro notas da figura
-\ref{fig:ly-cseg-5968}, cujo contorno está representado graficamente
-na figura \ref{fig:cseg-5968}. Estas semelhanças são identificadas
-apenas com a observação dos seus contornos. Outros exemplos de
-melodias de contornos semelhantes podem ser vistos nas figuras
-\ref{fig:melodias-cseg} e \ref{fig:graficos-cseg}\footnote{Há
-  evidências experimentais de que músicos e leigos têm habilidade de
-  usar desenhos gráficos como os da figura \ref{fig:graficos-cseg}
-  para representar contorno, embora músicos tenham maior acuidade
-  \cite[p. 69]{marvin88:generalized}.}.
+A partir dos conceitos e operações destas teorias é possível, por
+exemplo, reconhecer semelhanças entre as alturas das duas melodias m1
+e m2 da figura \ref{fig:ly-0312}, cujo contorno está representado
+graficamente na figura \ref{fig:cseg-0312}\footnote{Há evidências
+  experimentais de que músicos e leigos têm habilidade de usar
+  desenhos gráficos como os da figura \ref{fig:graficos-cseg} para
+  representar contorno, embora músicos tenham maior acuidade
+  \cite[p. 69]{marvin88:generalized}.}. Este contorno é
+representado simbolicamente por P(0 3 1 2), onde P é o seu nome, 0 é o
+elemento mais grave, 1 é o segundo elemento mais grave, 2 é o terceiro
+elemento mais grave e 3 o elemento mais agudo. Estes números são
+apresentados na ordem temporal em que ocorrem na melodia: primeiro o
+ponto mais grave 0, em seguida o mais agudo 3, e assim por diante. As
+semelhanças entre estas melodias da figura \ref{fig:ly-0312} são
+identificadas apenas com a observação dos seus contornos. As figuras
+\ref{fig:ly-0213} e \ref{fig:ly-2031} contêm outros pares de melodias
+de mesmo contorno.
 
 \begin{figure}
   \centering
-  \subfloat[melodias de contorno P(5 9 6 8)]{
-    \includegraphics[scale=.9]{ly-5968}
-    \label{fig:ly-cseg-5968}
+  \subfloat[melodias de contorno P(0 3 1 2)]{
+    \includegraphics[scale=.9]{ly-0312}
+    \label{fig:ly-0312}
   }
-  \subfloat[melodias de contorno Q(5 7 6 8)]{
-    \includegraphics[scale=.9]{ly-5768}
-    \label{fig:ly-cseg-5768}
+  \quad
+  \subfloat[melodias de contorno Q(0 2 1 3)]{
+    \includegraphics[scale=.9]{ly-0213}
+    \label{fig:ly-0213}
   }
 
-  \subfloat[melodias de contorno R(3 0 5 1)]{
-    \includegraphics[scale=.9]{ly-3051}
-    \label{fig:ly-cseg-3051}
+  \subfloat[melodias de contorno R(2 0 3 1)]{
+    \includegraphics[scale=.9]{ly-2031}
+    \label{fig:ly-2031}
   }
   \caption{Melodias para diferentes contornos}
   \label{fig:melodias-cseg}
@@ -302,18 +352,17 @@ melodias de contornos semelhantes podem ser vistos nas figuras
 
 \begin{figure}
   \centering
-  \subfloat[contorno P(5 9 6 8)]{
+  \subfloat[contorno P(0 3 1 2)]{
     \includegraphics{c-5968}
-    \label{fig:cseg-5968}
+    \label{fig:cseg-0312}
   }
-  \subfloat[contorno Q(5 7 6 8)]{
-    \includegraphics{c-5768}
-    \label{fig:cseg-5768}
+  \subfloat[contorno Q(0 2 1 3)]{
+    \includegraphics{c-0213}
+    \label{fig:cseg-0213}
   }
-  \subfloat[contorno R(3 0 5 1)]{
-    \includegraphics{c-3051}
-
-    \label{fig:cseg-3051}
+  \subfloat[contorno R(2 0 3 1)]{
+    \includegraphics{c-2031}
+    \label{fig:cseg-2031}
   }
   \caption{Gráficos de contornos}
   \label{fig:graficos-cseg}
