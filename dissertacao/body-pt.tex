@@ -98,6 +98,7 @@ Esta dissertação está organizada da seguinte maneira:
 \item Capítulo 6: conclusão, discussão e trabalhos futuros
 \end{itemize}
 
+%% pode ser introdução ao estudo de contornos?
 \chapter{Introdução à teoria de contornos}
 \label{cha:introducao-teoria-contornos}
 
@@ -119,11 +120,11 @@ como contorno o padrão binário de movimento ascendente e descendente
 entre alturas adjacentes de uma melodia
 \cite{dewitt.ea86:recognition}.
 
-De acordo com estas definições compreende-se que o fragmento da 5ª
-Sinfonia de Beethoven, por exemplo (figura
-\ref{fig:melodia-5a-sinfonia}), tem contorno descendente
-(Sol-Mi$\flat$), ascendente (Mi$\flat$-Fá) e descendente (Fá-Ré) e que
-pode ser representado simbolicamente por (- + -).
+A partir destas definições pode-se compreender que o fragmento da 5ª
+Sinfonia de Beethoven, por exemplo (figura \ref{fig:5a-sinfonia}), tem
+contorno descendente (Sol-Mi$\flat$), ascendente (Mi$\flat$-Fá) e
+descendente (Fá-Ré). Este contorno é representado simbolicamente por
+(- + -) e graficamente pelo conteúdo da figura \ref{fig:c-1010}.
 
 \begin{figure}
   \centering
@@ -155,9 +156,9 @@ estabelece como contorno \textbf{um conjunto ordenado de elementos
   distintos, com ou sem repetição, numerados de forma ascendente}
 \cite[p. 206]{morris93:directions}. Esta definição considera elementos
 não adjacentes e generaliza o conceito de contorno para outros
-parâmetros como densidade de acordes e duração. Contorno é por
-definição ordenado porque a permutação de seus elementos resulta em um
-novo contorno. 
+parâmetros como densidade de acordes e duração. Morris define contorno
+como conjunto ordenado porque a permutação dos elementos do conjunto
+resulta em um novo contorno.
 
 A numeração dos elementos é feita atribuindo 0 para o elemento de
 menor valor, 1 para o segundo elemento de menor valor, 2 para o
@@ -167,7 +168,7 @@ contorno de alturas a nota mais grave tem o menor valor. Em um
 contorno de densidade de acordes, o acorde de menor número de notas
 tem o menor valor.
 
-Tendo em vista a definição de contorno de Morris, posso afirmar que o
+Tendo em vista a definição de contorno de Morris, pode-se dizer que o
 fragmento da figura \ref{fig:5a-sinfonia} pode ser representado
 simbolicamente por (3 1 2 0), e graficamente pelo conteúdo da figura
 \ref{fig:c-3120}. A representação simbólica é obtida determinando o
@@ -180,13 +181,45 @@ ordenados por definição, estes números são apresentados na ordem
 temporal em que as notas ocorrem na melodia. Neste exemplo são
 apresentados na ordem 3, 1, 2 e 0.
 
+%% devo repetir que a figura c-1010 é relacionada a "contornos
+%% adjacentes" e c-3120 à definição de morris?
 A maior granularidade da definição de Morris pode ser percebida a
 partir da comparação das representações da figura
 \ref{fig:repr-5a-sinfonia}. O contorno representado na figura
 \ref{fig:c-1010} não indica por exemplo que a terceira altura é mais
-grave que a primeira, o que fica claro na figura \ref{fig:c-3120},
-decorrente da definição de Morris.
+grave que a primeira, o que fica claro na figura \ref{fig:c-3120}.
 
+Como já foi dito, um contorno pode mapear outros parâmetros além de
+altura \cite[p. 206]{morris93:directions}
+\cite[p. 22]{clifford95:contour}. Por exemplo, um dado contorno (1 0 2
+3)---representado graficamente na figura \ref{fig:repr-1023}---pode
+ser associado ao parâmetro altura com as notas Lá, Fá, Si$\flat$ e Ré
+(figura \ref{fig:pitches-in-time}); pode ser associado a densidades de
+acordes com acordes de duas, uma, quatro e sete notas (figura
+\ref{fig:chord-densities-in-time}); ou pode ainda ser associado aos
+níveis de dinâmica \music{p}, \music{ppp}, \music{mf} e \music{ff}
+(figura \ref{fig:dynamics-in-time}).
+
+\begin{figure}
+  \centering
+  \subfloat[alturas no tempo]{
+    \includegraphics[scale=1]{pitches-in-time}
+    \label{fig:pitches-in-time}}
+  \subfloat[densidade de acordes no tempo]{
+    \includegraphics[scale=1]{chord-densities-in-time}
+    \label{fig:chord-densities-in-time}}
+
+  \subfloat[dinâmicas no tempo]{
+    \includegraphics[scale=1]{dynamics-in-time}
+    \label{fig:dynamics-in-time}}
+  \subfloat[representação do contorno (1 0 2 3)]{
+    \includegraphics[scale=1]{c-1023}
+    \label{fig:repr-1023}}
+  \caption{Contornos (1 0 2 3) melódicos e não melódicos}
+  \label{fig:non-melodic-contours}
+\end{figure}
+
+%% não sei onde colocar. na dúvida posso até tirar
 A idéia de preservação de contornos e variação de intervalos entre
 notas é encontrada em diferentes situações musicais. Alguns exemplos
 mais comuns são as mudanças de modo em peças do tipo tema e variações,
@@ -201,10 +234,10 @@ Neste trabalho concentrei esforços no mapeamento de contornos de
 altura em função do tempo. No entanto desprezei a mensuração do tempo
 e atribuí à distância entre dois elementos dos contornos um valor
 padrão 1. Dessa forma não pude abordar características dos contornos
-como inclinação dos segmentos entre dois pontos, embora existam
-estudos na literatura abordando este aspecto
+como inclinação dos segmentos entre dois pontos, embora exista estudo
+na literatura abordando mensuração do tempo
 \cite{beard03:contour}. Percebi ao longo do processo que incluir
-mensurar o tempo neste estudo demandaria um prazo maior do que o
+mensuração do tempo neste estudo demandaria um prazo maior do que o
 disponível e inviabilizaria o projeto. Pretendo abordar este parâmetro
 futuramente (vide capítulo \ref{cha:conclusao-e-discussao}).
 
@@ -212,51 +245,26 @@ Neste texto considero como operação de contorno todo tipo de
 manipulação em um contorno. Dessa forma considero como operações
 procedimentos como inversão, retrogradação, expansão e subconjuntos de
 contorno, matriz de comparação e classe de contorno. Estas operações
-também são detalhadas na seção \ref{sec:teor-de-cont}.
+são detalhadas na seção \ref{sec:teor-de-cont}.
 
-Teorias de contornos foram desenvolvidas primariamente como técnicas
-analíticas aplicáveis a composições atonais que podem não possuir as
-características musicais típicas como frase, períodos, temas e
-harmonia funcional, que dão coerência a composições tonais
+Existem na literatura teorias desenvolvidas para a sistematização do
+estudo de contornos. Estas teorias foram desenvolvidas primariamente
+como técnicas analíticas aplicáveis a composições atonais que podem
+não possuir as características musicais típicas que dão coerência a
+composições tonais, como frase, períodos, temas e harmonia funcional
 \cite[p. 1]{beard03:contour}.
 
 %% comentar o sucesso e o que foi achado de diferente nas análises de
 %% friedmann, clifford e beard
-A análise de obras tonais a partir de contornos tonais já se mostrou
-eficiente, embora as teorias de contorno não tenham sido desenvolvidas
-para este tipo de obra. Existem análises bem sucedidas de obras de
-Arnold Schönberg \cite{friedmann85:methodology}, Anton Webern
+A análise de obras musicais a partir de contornos tem se mostrado
+eficiente em obras não tonais e também em obras tonais, embora as
+teorias de contorno não tenham sido desenvolvidas para este último
+tipo de obra. Existem análises bem sucedidas de obras de Arnold
+Schönberg \cite{friedmann85:methodology}, Anton Webern
 \cite{clifford95:contour}, Luigi Dallapicolla
 \cite{marvin88:generalized} e Wolfgang Amadeus Mozart
-\cite{beard03:contour} sob a ótica das teorias de contornos.
-
-
-Um contorno pode ser interpretado como altura (desconsiderando seu
-valor absoluto), dinâmica ou densidade de acordes no tempo
-\cite[p. 206]{morris93:directions}
-\cite[p. 22]{clifford95:contour}. Um dado contorno (4 3 5 6), por
-exemplo, pode ser associado ao parâmetro altura com as notas Lá, Fá,
-Si$\flat$ e Ré (figura \ref{fig:pitches-in-time}); pode ser associado
-a densidades de acordes com acordes de duas, uma, quatro e sete notas
-(figura \ref{fig:chord-densities-in-time}); ou pode ainda ser
-associado aos graus de dinâmica \music{p}, \music{ppp}, \music{mf} e
-\music{fff} (figura \ref{fig:dynamics-in-time}).
-
-\begin{figure}
-  \centering
-  \subfloat[alturas no tempo]{
-    \includegraphics[scale=1]{pitches-in-time}
-    \label{fig:pitches-in-time}}
-  \subfloat[densidade de acordes no tempo]{
-    \includegraphics[scale=1]{chord-densities-in-time}
-    \label{fig:chord-densities-in-time}}
-
-  \subfloat[dinâmicas no tempo]{
-    \includegraphics[scale=1]{dynamics-in-time}
-    \label{fig:dynamics-in-time}}
-  \caption{Contornos (4 3 5 6) não melódicos}
-  \label{fig:non-melodic-contours}
-\end{figure}
+\cite{beard03:contour} sob a ótica das teorias de contornos. Estas
+teorias são explicadas com exemplos na seção \ref{sec:teor-de-cont}.
 
 \section{Estudos de contorno em outras áreas da Música}
 \label{sec:estudos-de-contorno}
