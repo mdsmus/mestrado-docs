@@ -783,7 +783,9 @@ contornos são considerados equivalentes quando geram uma mesma matriz
 de comparação, ou seja, quando mantêm a mesma estrutura de valores
 entre seus elementos. Dessa forma, dado um contorno P(5 9 6 8), são
 considerados seus equivalentes os contornos (1 5 2 3), (0 10 4 7), (0
-3 1 2) e muitos outros, pois todos eles pertencem à classe (0 3 1 2).
+3 1 2) e muitos outros, pois todos eles pertencem à classe (0 3 1
+2). Também são considerados contornos de classe equivalente aqueles
+relacionados por operações de translação, retrógrado e inversão.
 
 A função de similaridade (\tr{csim}) mede numericamente o grau de
 semelhança entre dois contornos de mesma cardinalidade. O maior nível
@@ -799,7 +801,7 @@ meio dos exemplos da figura \ref{fig:triangulos-com-matrix} e tabela
 \ref{fig:triangulo-5768} e \ref{fig:triangulo-3051} mostram os
 triângulos superiores das matrizes de comparação dos contornos P(5 9 6
 8), Q(5 7 6 8) e R(3 0 5 1), respectivamente. As figuras
-\ref{fig:triangulo-pq}, \ref{fig:triangulo-pr} e
+\ref{fig:triangulo-pq}, \ref{fig:triangulo-pr}, e
 \ref{fig:triangulo-qr} mostram as semelhanças entre os triângulos
 superiores das matrizes de comparação dos contornos P e Q, P e R, e Q
 e R respectivamente. Entre P e Q há 5 elementos semelhantes entre os 6
