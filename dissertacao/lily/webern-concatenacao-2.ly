@@ -21,7 +21,6 @@
       \Staff \consists "Horizontal_bracket_engraver"
     }
   }
-  \midi {}
 }
 \paper {
   paper-width = 7.1\cm
