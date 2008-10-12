@@ -19,8 +19,8 @@
         fis4( e a g
         %% expansão de #s(5 3 4 1 2 0)
         bes2. a4~
-        a2)^\startGroup^\markup{Expansão de 2ª para 4ª} bes,16( ees) e,?( a bes,4~\<
-        bes2.)\stopGroup r4\!
+        a2)^\startGroup^\markup{Expansão de 2ª para 4ª} bes,16( ees) e,?\<( a) bes,4~
+        bes2.\stopGroup r4\!
       }
     }
   \layout {
