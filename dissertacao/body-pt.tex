@@ -403,7 +403,7 @@ de mesmo contorno.
 \begin{figure}
   \centering
   \subfloat[contorno P(0 3 1 2)]{
-    \includegraphics{c-5968}
+    \includegraphics{c-0312}
     \label{fig:cseg-0312}
   }
   \subfloat[contorno Q(0 2 1 3)]{
@@ -595,30 +595,52 @@ com operações como comparação, matriz de comparação, forma prima e
 classe de contorno.
 
 %% FIXME: reescrever expandindo a idéia de altura
-A operação de comparação \tr{com(a,b)}\footnote{Morris define com
-  maiúsculas operações como a função de comparação (COM), a matriz de
-  comparação (COM-Matrix) e as diagonais da matriz de comparação
-  (INT$_n$). No entanto, como já foi visto, prefiro padronizar
-  operações com minúsculas e nomes de contornos com maiúsculas.}
-retorna a diferença de altura entre dois elementos de contorno $a$ e
-$b$ considerando se um elemento é mais agudo, mais grave ou de mesma
-altura que outro. O resultado da operação de comparação é ``$+$'' se
-$b$ é maior que $a$; ``$-$'' se $b$ é que $a$; e ``$0$'' se $b$ é
-igual a $a$. Por exemplo, no contorno P(5 9 6 8), o valor de
-$com(P_0,P_1)$ é o sinal ``$+$'', o de $com(P_1,P_2)$ é ``$-$'', e o
-valor de $com(P_3,P_0)$ é o sinal ``$+$''. Esta medida de comparação
-pode ser invertida de modo que a comparação entre dois elementos é
-igual ao inverso da comparação destes elementos em ordem reversa. Esta
-idéia pode ser melhor entendida observando-se a equação
-$com(a,b)=-com(b,a)$.
+A operação de comparação \tr{com(a,b)}\footnote{Operações como a
+  função de comparação, a matriz de comparação e as diagonais da
+  matriz de comparação são definidas em maiúsculas, ou seja,
+  respectivamente COM, COM-Matrix e INT$_n$
+  \cite{morris87:composition}. No entanto, como já foi visto, prefiro
+  padronizar operações com minúsculas e nomes de contornos com
+  maiúsculas.} retorna a diferença entre os valores de dois elementos
+de contorno $a$ e $b$ considerando se um elemento tem valor maior,
+igual ou menor que o outro. Em um contorno que mapeia a altura, esta
+operação determina se um elemento é mais grave, mais agudo ou de mesma
+altura que outro. Em um contorno que mapeia a densidade, a operação
+determina se um elemento é mais, menos ou igualmente denso que o
+outro. O resultado da operação de comparação é ``$+$'' se $b$ é maior
+que $a$; ``$-$'' se $b$ é que $a$; e ``$0$'' se $b$ é igual a $a$. Por
+exemplo, no contorno P(5 9 6 8), o valor de $com(P_0,P_1)$ é o sinal
+``$+$'', o de $com(P_1,P_2)$ é ``$-$'', e o valor de $com(P_3,P_0)$ é
+``$+$''. Esta medida de comparação pode ser invertida de modo que a
+comparação entre dois elementos é igual ao inverso da comparação
+destes elementos em ordem reversa. Esta idéia pode ser melhor
+entendida observando-se a equação $com(a,b)=-com(b,a)$.
 
 A matriz de comparação é bidimensional e compara um contorno com ele
 próprio. Esta matriz mostra os resultados da operação de comparação
-para todas as alturas de contorno de um contorno. A tabela
-\ref{fig:matriz-5968} contém a matriz de comparação do contorno P(5 9
-6 8). As matrizes de comparação dos exemplos já vistos na figura
-\ref{fig:graficos-cseg} podem ser vistos na tabela
-\ref{fig:matriz-exemplos}.
+para todos os elementos de um contorno. Os contornos P, Q e R,
+representados graficamente nas figuras \ref{fig:cseg-5968},
+\ref{fig:cseg-5768} e \ref{fig:cseg-3051}, têm suas matrizes de
+comparação nas figuras \ref{fig:matriz-5968}, \ref{fig:matriz-5768} e
+\ref{fig:matriz-3051} respectivamente.
+
+\begin{figure}
+  \centering
+  \subfloat[contorno P(5 9 6 8)]{
+    \includegraphics{c-5968}
+    \label{fig:cseg-5968}
+  }
+  \subfloat[contorno Q(5 7 6 8)]{
+    \includegraphics{c-5768}
+    \label{fig:cseg-5768}
+  }
+  \subfloat[contorno R(3 0 5 1)]{
+    \includegraphics{c-3051}
+    \label{fig:cseg-3051}
+  }
+  \caption{Representação gráfica dos contornos P, Q e R}
+  \label{fig:repr-grafica-pqr}
+\end{figure}
 
 \begin{figure}
   \centering
@@ -704,33 +726,39 @@ seguinte, 3 para a posterior e assim por diante (figura
     \end{tabular}
     \label{fig:int-3-5968}
   }
-  \caption{int$_n$ de matriz de contorno (5 9 6 8)}
+  \caption{int$_n$ de matriz do contorno P(5 9 6 8)}
   \label{fig:int-exemplos}
 \end{figure}
 
 %% FIXME: reescrever expandindo além de melodia
-A diagonal int$_1$ traz comparações de registros entre elementos
-adjacentes do contorno. Em P(5 9 6 8), por exemplo, int$_1=(+ - +)$,
-ou seja, o movimento melódico é ascendente entre 5 e 9, descendente
-entre 9 e 6, e ascendente entre 6 e 8. Esta comparação é feita também
-com uma operação conhecida como série de contornos adjacentes
-(\tr{cas})\footnote{Em teorias de contornos não há consenso em relação
-  a terminologia. Dessa forma há idéias semelhantes com nomes
-  diferentes, como int$_1$ e série de contornos adjacentes
-  \cite{friedmann87:response}. A série de contornos adjacentes de
-  Friedmann, por exemplo, seria entendida por Morris como uma série de
-  alturas de contorno adjacentes.}. A tabela \ref{tab:int-contornos}
-traz as int$_n$ dos contornos (5 9 6 8), (5 7 6 8) e (3 0 5 1), cujas
-matrizes são apresentadas na figura \ref{fig:matriz-exemplos}.
+A diagonal int$_1$ retorna comparações entre os valores dos elementos
+adjacentes do contorno. Por exemplo, em um contorno P(5 9 6 8),
+int$_1=(+ - +)$ (figura \ref{fig:int-1-5968}), ou seja, no caso de
+mapeamento de altura em função do tempo o movimento melódico é
+ascendente entre 5 e 9, descendente entre 9 e 6, e ascendente entre 6
+e 8. Esta comparação é feita também com uma operação conhecida como
+série de contornos adjacentes (\tr{cas})\footnote{Em teorias de
+  contornos não há consenso em relação a terminologia. Dessa forma há
+  idéias semelhantes com nomes diferentes, como int$_1$ e série de
+  contornos adjacentes \cite{friedmann87:response}. A série de
+  contornos adjacentes de Friedmann, por exemplo, seria entendida por
+  Morris como uma série de alturas de contorno adjacentes.}. A
+operação de int$_2$ retorna a comparação entre elementos alternados do
+contorno. Por exemplo, em P(5 9 6 8), int$_2=(+ -)$ (figura
+\ref{fig:int-2-5968}), ou seja, a diferença entre 5 e 6 é positiva, e
+entre 9 e 8 é negativa. A tabela \ref{tab:int-contornos} traz as
+int$_n$ dos contornos P, Q e R, cujas matrizes são apresentadas nas
+figuras \ref{fig:matriz-5968}, \ref{fig:matriz-5768} e
+\ref{fig:matriz-3051} respectivamente.
 
 \begin{table}
   \centering
   \begin{tabular}{r|ccc}
     Contorno & int$_1$ & int$_2$ & int$_3$ \\
     \hline
-    (5 9 6 8) & (+ - +) & (+ -) & (+) \\
-    (5 7 6 8) & (+ - +) & (+ -) & (+) \\
-    (3 0 5 1) & (- + -) & (+ +) & (-)
+    P(5 9 6 8) & (+ - +) & (+ -) & (+) \\
+    Q(5 7 6 8) & (+ - +) & (+ +) & (+) \\
+    R(3 0 5 1) & (- + -) & (+ +) & (-)
   \end{tabular}
   \caption{Exemplos de int$_n$}
   \label{tab:int-contornos}
