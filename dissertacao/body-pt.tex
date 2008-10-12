@@ -499,13 +499,26 @@ contorno N, com as alturas de contorno não adjacentes 5, 6 e 4.
 \end{figure}
 
 Operações como retrogradação e rotação são semelhantes às realizadas
-com alturas de notas. Um contorno P(5 9 6 8) tem retrógrado RP(8 6 9
-5), rotação de fator 1 Rot-1P(9 6 8 5), rotação de fator 2 Rot-2P(6 8
-5 9) e assim por diante. As representações gráficas dessas operações
-podem ser vistas na figura \ref{fig:operacoes-simples}. A expansão de
-intervalos consiste na multiplicação dos intervalos entre cada altura
-de contorno por um dado fator. Por exemplo, a expansão de fator 2 do
-contorno (5 9 6 8) é (5 13 7 11).
+com alturas de notas. A retrogradação é obtida reordenando os
+elementos de trás para frente. A rotação é obtida reordenando os
+elementos de forma que os primeiros elementos do contorno são movidos
+para o final. A rotação depende, além do contorno, de um fator que
+determina quantos elementos são movidos para o fim. Por exemplo, uma
+rotação de fator 1 tem o primeiro elemento movido para o final do
+contorno. Uma rotação de fator 2 tem os 2 primeiros elementos movidos
+para o fim, uma rotação de fator 3 tem os 3 primeiros elementos e
+assim por diante.
+
+Por exemplo, dado um contorno P(5 9 6 8) representado graficamente na
+figura \ref{fig:operacoes-p} e aplicando-se retrogradação a este
+contorno obtém-se como saída (8 6 9 5), ou seja
+\verb!(retr(P(5 9 6 8)))! = N(8 6 9 5) (figura
+\ref{fig:operacoes-rp}). A operação de rotação de fator 1 aplicada a
+este mesmo contorno P(5 9 6 8) retorna L(9 6 8 5), ou seja,
+\verb!(rot(P(5 9 6 8)) 1)! = L(9 6 8 5) (figura
+\ref{fig:operacoes-rr1}). Aplicando-se a rotação de fator 2 a P(5 9 6
+8) obtém-se M(6 8 9 5) (figura \ref{fig:operacoes-rr2}), e assim por
+diante.
 
 \begin{figure}
   \centering
@@ -542,6 +555,16 @@ contorno (5 9 6 8) é (5 13 7 11).
   9 6 8)}
   \label{fig:operacoes-simples}
 \end{figure}
+
+A operação de expansão de intervalos é calculada multiplicando-se a
+diferença entre os elementos do contorno pelo fator de expansão. Por
+exemplo, a expansão de fator 2 do contorno P(5 9 6 8) é F(5 13 7
+11). A diferença entre P$_1$ e P$_2$ é +4, entre P$_2$ e P$_3$ é -3, e
+entre P$_3$ e P$_4$ é +2. Multiplicando-se estas diferenças pelo fator
+de expansão 2 obtém-se +8, -6 e +4. Aplicando-se estas novas
+diferenças ao contorno obtém-se que F$_2$ = P$_1$ + 8, ou seja, F$_2$
+= 5 + 8, então F$_2$ = 13. Aplicando-se este procedimento para
+calcular os outros elementos obtém-se F(5 13 7 11).
 
 A operação de inversão de um contorno P de ordem $q$ é representada
 por IP, e é matematicamente calculada por IP$_n=(q-1-P_n)$. Portanto,
