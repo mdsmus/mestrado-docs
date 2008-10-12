@@ -13,15 +13,15 @@
         \override TextScript #'extra-offset = #'( -6 . 4 )
         %% FIXME: inicia no sujeito
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
-        gis4\p^\startGroup^\markup{rot-5 RP(5 3 4 1 2 0)}
+        gis4\p^\startGroup^\markup{rot(retr(P(5 3 4 1 2 0)) 5)}
         b8( ais4) d8( cis4)\stopGroup
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
         \revert TextScript #'extra-offset
         \override TextScript #'extra-offset = #'( -1 . 0 )
-        e8->(^\startGroup^\markup{rot-4 RP(5 3 4 1 2 0)} gis,)
+        e8->(^\startGroup^\markup{rot(retr(P(5 3 4 1 2 0)) 4)} gis,)
         b( ais) d2 e4~\stopGroup
         \override TextScript #'extra-offset = #'( 0 . 2 )
-        e\startGroup^\markup{rot-3 RP(5 3 4 1 2 0)} cis4 g' e,
+        e\startGroup^\markup{rot(retr(P(5 3 4 1 2 0)) 3)} cis4 g' e,
         bes' g2.\stopGroup
       }
     }
@@ -32,9 +32,9 @@
   }
 }
 \paper {
-  paper-width = 12.6\cm
+  paper-width = 14.6\cm
   paper-height = 3\cm
-  line-width = 13.5\cm
+  line-width = 15.5\cm
   top-margin = -.1\cm
   left-margin = -1.2\cm
   tagline = 0

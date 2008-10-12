@@ -16,7 +16,7 @@
         g?4.)\colcheteC
         %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         \override TextScript #'extra-offset = #'( 0 . 3 )
-        bes8->^\startGroup^\markup{rot-3 P(5 3 4 1 2 0)}( e,8) g'4( cis,8~
+        bes8->^\startGroup^\markup{rot(P(5 3 4 1 2 0) 3)}( e,8) g'4( cis,8~
         cis e8~ e2)\stopGroup
       }
     }
