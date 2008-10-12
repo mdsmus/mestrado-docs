@@ -777,28 +777,24 @@ translação \cite[p. 228]{marvin.ea87:relating}.
 
 %% falar da forma prima
 
-A classe de contorno (\tr{cc}) é uma operação importante para a
-verificação de similaridade entre contornos. Obtém-se a classe de
-contorno numerando-se ordenadamente todas as alturas de contorno de
-$0$ a $(n-1)$, sendo $n$ o número total de alturas de contorno do
-contorno. Uma classe de contorno engloba todos os contornos
-considerados equivalentes. Dois ou mais contornos são considerados
-equivalentes quando geram uma mesma matriz de comparação, ou seja,
-quando mantêm a mesma estrutura de registro entre suas notas. Dessa
-forma, dado um contorno P(5 9 6 8), são considerados seus equivalentes
-os contornos (1 5 2 3), (0 10 4 7), (0 3 1 2) e muitos outros. Todos
-eles têm (0 3 1 2) como forma normal e classe de contorno. A função de
-similaridade (\tr{csim}) mede numericamente o grau de semelhança entre
-dois contornos de mesma cardinalidade. O maior nível de similaridade
-entre contornos tem valor 1 e o menor tem valor 0. Este número é
-calculado comparando-se o triângulo superior da matriz de comparação
-dos dois contornos. Atribui-se o valor 1 para cada posição da matriz
-cujo símbolo é o mesmo no triângulo superior das duas matrizes. O
-valor de similaridade é o quociente da soma dessas equivalências pelo
-número total de posições do triângulo superior.
+A classe de contornos equivalentes (\tr{cc}) é uma operação importante
+para a verificação de similaridade entre contornos. Dois ou mais
+contornos são considerados equivalentes quando geram uma mesma matriz
+de comparação, ou seja, quando mantêm a mesma estrutura de valores
+entre seus elementos. Dessa forma, dado um contorno P(5 9 6 8), são
+considerados seus equivalentes os contornos (1 5 2 3), (0 10 4 7), (0
+3 1 2) e muitos outros, pois todos eles pertencem à classe (0 3 1 2).
 
-A função de similaridade pode ser melhor compreendida por meio dos
-exemplos da figura \ref{fig:triangulos-com-matrix} e tabela
+A função de similaridade (\tr{csim}) mede numericamente o grau de
+semelhança entre dois contornos de mesma cardinalidade. O maior nível
+de similaridade entre contornos tem valor 1 e o menor tem valor
+0. Este número é calculado comparando-se o triângulo superior da
+matriz de comparação dos dois contornos. Atribui-se o valor 1 para
+cada posição da matriz cujo símbolo é o mesmo no triângulo superior
+das duas matrizes. O valor de similaridade é o quociente da soma
+dessas equivalências pelo número total de posições do triângulo
+superior. A função de similaridade pode ser melhor compreendida por
+meio dos exemplos da figura \ref{fig:triangulos-com-matrix} e tabela
 \ref{tab:similaridade-contornos}. As figuras \ref{fig:triangulo-5968},
 \ref{fig:triangulo-5768} e \ref{fig:triangulo-3051} mostram os
 triângulos superiores das matrizes de comparação dos contornos P(5 9 6
