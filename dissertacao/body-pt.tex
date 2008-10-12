@@ -1017,28 +1017,27 @@ Composição Musical.
 \chapter{Ferramentas computacionais}
 \label{cha:ferramentas}
 
-Para este trabalho desenvolvi ferramentas computacionais exclusivas
-como o software para processamento de contornos Goiaba. Utilizei a
-plataforma Linux para desenvolver todo o trabalho, pois além de ser
-livre, com ela é possível concatenar programas. Com o Linux é possível
-desenvolver funções que enviem a saída de dados de um programa como o
-Goiaba para a entrada de dados de outro programa como o editor de
-partituras Lilypond (vide seção \ref{sec:lilypond}), ou usar
-bibliotecas de gráficas para criar interfaces para o usuário. Com essa
-conectividade posso desenvolver um software mais completo sem precisar
-necessariamente desenvolver bibliotecas ou programas já existentes.
+Para este trabalho desenvolvi ferramentas computacionais como o
+software para processamento de contornos Goiaba. Utilizei a plataforma
+Linux para desenvolver todo o trabalho, pois além de ser livre, com
+ela é possível desenvolver funções que enviem a saída de dados de um
+programa como o Goiaba para a entrada de dados de outro programa como
+o editor de partituras Lilypond (vide seção \ref{sec:lilypond}), ou
+usar bibliotecas gráficas para criar interfaces para o usuário. Com
+essa conectividade posso desenvolver um software mais completo sem
+precisar necessariamente desenvolver bibliotecas ou programas já
+existentes.
 
 \section{Goiaba, um software para processar contornos}
 \label{sec:goiaba-software-para}
 
-O \goiaba{}\footnote{Assim como ocorreu com o nome da empresa de
-  computadores \eng{Apple} em sua fundação, não houve uma razão
-  especial para dar ao software desenvolvido neste trabalho o nome
-  Goiaba.} é um software desenvolvido na linguagem Common Lisp
-\cite{graham94:lisp,seibel05:practical,shapiro92:common}, o compilador
-SBCL \cite{team07:sbcl} e com metodologia \eng{bottom-up}. Utilizo no
-desenvolvimento do \goiaba{} ferramentas como GNU Emacs
-\cite{stallman07:gnu} e Slime \cite{team05:slime}.
+O \goiaba{}\footnote{Não há uma razão específica para o nome do
+  software.}  é um software desenvolvido na linguagem Common Lisp
+\cite{graham94:lisp,seibel05:practical,shapiro92:common}, compilado
+com o \eng{Steel Bank Common Lisp} (SBCL) \cite{team07:sbcl} e com
+metodologia \eng{bottom-up}. Utilizei ferramentas como GNU Emacs
+\cite{stallman07:gnu} e Slime \cite{team05:slime} no desenvolvimento
+do \goiaba{}.
 
 A metodologia \eng{bottom-up} utilizada está relacionada à direção do
 desenvolvimento, a partir de subsistemas mais simples em direção ao
@@ -1046,13 +1045,21 @@ programa como um todo. Ela é bastante adequada ao desenvolvimento de
 programas que progressivamente têm sua complexidade
 aumentada. Programas como \TeX{}\footnote{Sistema de
   tipografia. Disponível em \url{www.tug.org}.} e X
-Windows\footnote{Sistema gráfico de janelas do Linux. Disponível em
+Windows\footnote{Sistema gráfico de janelas. Disponível em
   \url{www.x.org}.} têm sido desenvolvidos dessa forma
 \cite[p. vi]{graham94:lisp}. Esta metodologia tem vantagens como a
 possibilidade de deixar os programas menores e mais ágeis, de
 reutilizar funções de um subsistema em outro, de simplificar a leitura
 dos programas e de clarear as idéias do programador
 \cite[p. 4]{graham94:lisp}.
+
+Contornos são representados simbolicamente de duas maneiras: como
+contornos simples, considerando apenas as alturas de contorno
+\verb!(5 9 6)!, e como contornos com duração, considerando também o
+local no tempo onde ocorre cada altura de contorno:
+\verb!((0 5)(1 9)(2 6))!. Apesar de ter uma codificação específica que
+comporte a influência do tempo no contorno, ainda não estou
+trabalhando com este elemento.
 
 O \goiaba{} tem as classes \texttt{ponto}, \texttt{contorno-simples} e
 \texttt{contorno-duracao}. A classe \texttt{ponto} define as alturas
@@ -1070,19 +1077,14 @@ do tipo \texttt{ponto} pode-se fazer normalmente
 \texttt{contorno-duracao} com dois pontos pode ser instanciado com
 \verb!#d(#p(0 3) #p(1 4))! ao invés de usar \texttt{make-instance}.
 
-Contornos são representados simbolicamente de duas maneiras: como
-contornos simples, considerando apenas as alturas de contorno
-\verb!(5 9 6)!, e como contornos com duração, considerando também o
-local no tempo onde ocorre cada altura de contorno:
-\verb!((0 5)(1 9)(2 6))!. Apesar de ter uma codificação específica que
-comporte a influência do tempo no contorno, ainda não estou
-trabalhando com este elemento.
-
 As operações em contornos são implementadas em métodos, aproveitando
 do despacho múltiplo usado pelo sistema de objetos de Common Lisp
 (CLOS). Desse modo um método como \texttt{transpor} se comporta de
-maneira diferente dependendo qual o tipo do seu primeiro parâmetro:
+maneira diferente dependendo qual o tipo do seu primeiro parâmetro. No
+código seguinte há dois métodos, sendo o primeiro para
+\code{contorno-duracao}, e o segundo para \code{contorno-simples}.
 
+\singlespacing
 \begin{verbatim}
 (defmethod transpor ((objeto contorno-duracao) fator)
   (map-contorno-duracao #L(transpor !1 fator) (pontos objeto)))
@@ -1090,6 +1092,7 @@ maneira diferente dependendo qual o tipo do seu primeiro parâmetro:
 (defmethod transpor ((objeto contorno-simples) fator)
   (map-contorno-simples #L(+ !1 fator) (pontos objeto)))
 \end{verbatim}
+\doublespacing
 
 \goiaba{} tem diversas operações para lidar com contornos, como
 tranposição, inversão, retrogradação, rotação e expansão de
@@ -1111,6 +1114,7 @@ ampliação de altura e inserção de ponto (figura
 arquivo no qual o gráfico será criado, as dimensões do gráfico e as
 operações e cores que serão geradas no gráfico.
 
+\singlespacing
 \begin{verbatim}
 (let ((c1 #d(#p(0 0) #p(1 5) #p(2 3) #p(3 4) #p(4 1) #p(5 3))))
   (plot-page "contornos.pdf"
@@ -1123,6 +1127,7 @@ operações e cores que serão geradas no gráfico.
                         (rotacionar c1 1) "rotação" :darkcyan
                         (insere-ponto c1 '(1 3) 2) "insere ponto" :purple)))
 \end{verbatim}
+\doublespacing
 
 \begin{figure}
   \centering
@@ -1136,15 +1141,15 @@ a partir de partituras musicais e vice-versa e implementar uma
 interface gráfica. O desenvolvimento do \goiaba{} segue procedimentos
 oriundos do desenvolvimento de software livre como uso de controle de
 versão e disponibilização do código-fonte na
-internet\footnote{Disponível como marcos-mestrado.git em
-  \url{git.genos.mus.br}.}.
+internet\footnote{Disponível em
+  \url{http://git.genos.mus.br/cgit.cgi?url=marcos-mestrado}.}.
 
 As descrições das teorias de contornos nem sempre são feitas pelos
-seus autores de uma forma totalmente clara. A programação de uma
+seus autores de uma forma totalmente clara. A implementação de uma
 teoria em um software de computador é um exercício poderoso no
 processo de aprendizagem, pois o programador é obrigado a expressar de
-forma precisa a compreensão que tem de uma idéia obscura. Dessa forma
-a implementação das operações de contorno em um software de computador
+forma precisa a compreensão que tem de uma teoria. Dessa forma a
+implementação das operações de contorno em um software de computador
 ajuda na compreensão da teoria, uma vez que é preciso entender
 totalmente como cada operação se processa e que funcionalidade tem
 para implementá-las.
@@ -1183,12 +1188,24 @@ sistemas por página, distância entre pentagramas, entre notas e
 acidentes, entre outros.
 
 O Lilypond processa música descrita em uma sintaxe própria de marcação
-e gera arquivos como .pdf, .ps, .midi, .png, .svg entre outros. A
-figura \ref{fig:exemplo-lily} por exemplo é gerada com um código como
-\verb!{ \clef bass c4 d8 e d4 c }!. É possível utilizar variáveis para
-abstrair códigos. Em Composição isso pode ser usado para abstrair
-motivos, por exemplo. Dessa forma, um código como este:
+e gera arquivos \eng{postscript}, de documento portátil (pdf), MIDI,
+de imagem (png), de gráfico vetorial (svg) e outros. A figura
+\ref{fig:exemplo-lily} por exemplo é gerada com um código como este:
 
+\singlespacing
+\begin{verbatim}
+{
+  \clef bass 
+  c4 d8 e d4 c 
+}
+\end{verbatim}
+\doublespacing
+
+É possível utilizar variáveis para abstrair códigos. Em Composição
+isso pode ser usado para abstrair motivos, por exemplo. Dessa forma,
+um código como este:
+
+\singlespacing
 \begin{verbatim}
 {
   c4 e
@@ -1197,9 +1214,11 @@ motivos, por exemplo. Dessa forma, um código como este:
   e16 d c d
 }
 \end{verbatim}
+\doublespacing
 
 pode ter os motivos abstraídos em variáveis e ser escrito assim:
 
+\singlespacing
 \begin{verbatim}
 motivoA = { c4 e }
 motivoB = { e16 d c d }
@@ -1210,8 +1229,9 @@ motivoB = { e16 d c d }
   \motivoB
 }
 \end{verbatim}
+\doublespacing
 
-\begin{figure}
+\begin{figure}[!h]
   \centering
   \includegraphics{exemplo-lily}
   \caption{Partitura gerada no Lilypond}
@@ -1220,12 +1240,14 @@ motivoB = { e16 d c d }
 
 O Lilypond ainda se relaciona com o \LaTeX{}\footnote{Sintaxe de
   marcação de documentos e um sistema livre e automático de preparação
-  de documentos.} e OpenOffice\footnote{Pacote com softwares livres de
-  escritório como editor de texto e planilha de cálculos.} de modo a
-simplificar a produção de exemplos musicais para inserir em texto. Por
-fim é possível desenvolver programas que usem o Lilypond para gerar
-partitura automaticamente. O Rameau, por exemplo, faz análise
-harmônica automática e gera como saída partitura através do Lilypond
+  de documentos. Disponível em \url{http://www.latex-project.org}} e
+OpenOffice\footnote{Pacote com softwares livres de escritório como
+  editor de texto e planilha de cálculos. Disponível em
+  \url{http://www.openoffice.org}} de modo a simplificar a produção de
+exemplos musicais para inserir em texto. Por fim é possível
+desenvolver programas que usem o Lilypond para gerar partitura
+automaticamente. O Rameau, por exemplo, faz análise harmônica
+automática e gera como saída partitura através do Lilypond
 \cite{kroger08:rameau}.
 
 \subsection{Git}
@@ -1267,23 +1289,24 @@ que apresentamos.
 \end{figure}
 
 %% desenvolver sobre git
-O Git\footnote{\url{http://git.or.cz}} é um software livre de controle
-de versão bastante poderoso e veloz. O Git permite um desenvolvimento
-distribuído, em que cada desenvolvedor pode ter uma cópia local do
-repositório central, que fica acessível via SSH\footnote{Protocolo de
-  acesso remoto seguro} ou HTTP. O Git tem suporte a desenvolvimento
-não-linear com ramos, ou seja, é possível desenvolver uma nova versão
-de um programa ao mesmo tempo em que defeitos da versão anterior são
-corrigidos. Com o Git é possível trabalhar com grandes projetos e ter
-velocidade de processamento muito maior que outros sistemas de
-controle de versão. O Git proporciona segurança do histórico de
-mudanças. Uma vez que uma mudança é registrada ela pode ser revertida,
-mas não pode ser removida do histórico, ou seja, é possível saber tudo
-que foi feito em um projeto. Finalmente o Git oferece um conjunto de
-ferramentas de fácil utilização para gerenciar o projeto. A figura
-\ref{fig:historico-git} mostra uma interface gráfica do Git para
-visualizar histórico de mudanças, autor, data e hora da mudança,
-arquivos alterados e a alteração em si.
+O Git\footnote{\url{Disponível em http://git.or.cz}} é um software
+livre de controle de versão bastante poderoso e veloz. O Git permite
+um desenvolvimento distribuído, em que cada desenvolvedor pode ter uma
+cópia local do repositório central, que fica acessível via
+SSH\footnote{Protocolo de acesso remoto seguro} ou HTTP. O Git tem
+suporte a desenvolvimento não-linear com ramos, ou seja, é possível
+desenvolver uma nova versão de um programa ao mesmo tempo em que
+defeitos da versão anterior são corrigidos. Com o Git é possível
+trabalhar com grandes projetos e ter velocidade de processamento muito
+maior que outros sistemas de controle de versão. O Git proporciona
+segurança do histórico de mudanças. Uma vez que uma mudança é
+registrada ela pode ser revertida, mas não pode ser removida do
+histórico, ou seja, é possível saber tudo que foi feito em um
+projeto. Finalmente o Git oferece um conjunto de ferramentas de fácil
+utilização para gerenciar o projeto. A figura \ref{fig:historico-git}
+mostra uma interface gráfica do Git para visualizar histórico de
+mudanças, autor, data e hora da mudança, arquivos alterados e a
+alteração em si.
 
 \begin{figure}
   \centering
