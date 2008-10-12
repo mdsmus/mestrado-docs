@@ -2,6 +2,8 @@
 
 \include "../config/lib.ly"
 
+#(set-global-staff-size 15.5)
+
 \score {
   \new Staff {
       \time 4/4
@@ -25,7 +27,7 @@
   paper-width = 12.6\cm
   paper-height = 3\cm
   line-width = 13.5\cm
-  top-margin = -.1\cm
+  head-separation = -1\cm
   left-margin = -1.2\cm
   tagline = 0
   indent = #0
