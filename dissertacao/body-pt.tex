@@ -776,8 +776,6 @@ elemento de menor valor, é redefinido para 0, P$_2$, segundo elemento
 de menor valor, para 1, P$_3$, terceiro de menor valor, para 2, e
 P$_1$ para 3.
 
-%% falar da forma prima
-
 A classe de contornos equivalentes (\tr{cc}) é uma operação importante
 para a verificação de similaridade entre contornos. Dois ou mais
 contornos são considerados equivalentes quando geram uma mesma matriz
@@ -787,6 +785,43 @@ considerados seus equivalentes os contornos (1 5 2 3), (0 10 4 7), (0
 3 1 2) e muitos outros, pois todos eles pertencem à classe (0 3 1
 2). Também são considerados contornos de classe equivalente aqueles
 relacionados por operações de translação, retrógrado e inversão.
+
+A forma prima de um contorno é uma forma criada para identificação da
+classe deste contorno. A forma prima é obtida a partir do algoritmo de
+Laprade \cite[p. 234]{marvin.ea87:relating}. Este algoritmo consiste
+em
+\begin{enumerate}
+\item transladar o contorno, caso não esteja em sua forma normal,
+\item inverter o contorno, caso a diferença entre $(n - 1)$ e o valor
+  do último elemento seja maior que o valor do primeiro,
+\item retrogradar o contorno se o valor do último elemento for maior
+  que o primeiro
+\end{enumerate}
+
+A partir deste algoritmo Laprade criou um software de computador para
+gerar automaticamente uma tabela de formas primas para contornos de
+cardinalidades variadas, e publicou uma tabela para cardinalidades 1 a
+6 \cite[p. 257]{marvin.ea87:relating}. Um trecho desta tabela pode ser
+visto na tabela \ref{tab:c-space-segment-classes}. A coluna da
+esquerda representa a cardinalidade e o número da classe desta
+cardinalidade. Por exemplo, 3-2 é a segunda classe de contornos de
+cardinalidade 3.
+
+\begin{table}
+  \centering
+  \begin{tabular}{r|rr}
+    Classe & Forma prima & int$_1$ \\
+    \hline
+    2-1 & (0 1) & (+) \\
+    3-1 & (0 1 2) & (+ +) \\
+    3-2 & (0 2 1) & (+ -) \\
+    4-1 & (0 1 2 3) & (+ + +) \\
+    4-2 & (0 1 3 2) & (+ + -) \\
+    4-3 & (0 2 1 3) & (+ - +)
+  \end{tabular}
+  \caption{Classes de espaço de contornos}
+  \label{tab:c-space-segment-classes}
+\end{table}
 
 A função de similaridade (\tr{csim}) mede numericamente o grau de
 semelhança entre dois contornos de mesma cardinalidade. O maior nível
