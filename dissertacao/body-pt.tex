@@ -536,7 +536,7 @@ diante.
   }
   \subfloat[Retrógrado da inversão de P]{
     \includegraphics{c-1304}
-    \label{fig:operacoes-ip}
+    \label{fig:operacoes-rip}
   }
 
   \subfloat[Rotação 1 de P]{
@@ -582,13 +582,11 @@ um contorno pode ser sempre calculada somando o seu elemento de maior
 valor com 1.
 
 A operação de inversão de um contorno P de ordem $q$ é representada
-por IP, e é matematicamente calculada por IP$_n=(q-1-P_n)$. Portanto,
-dado um contorno P(5 9 6 8), de ordem 10, IP$_0=(10-1-P_0)$. Logo,
-IP$_0=4$. Aplicando-se a mesma idéia aos outros elementos chego ao
-contorno IP(4 0 3 1) (figura \ref{fig:operacoes-simples}). É possível
-ainda relacionar a inversão entre elementos através da matriz de
-comparação. Calcula-se esta inversão com a operação
-$COM(P_a,P_b)=-COM(IP_a,IP_b)$.
+por inv(P), e é matematicamente calculada por
+$inv(P_n)=(q-1-P_n)$. Portanto, dado um contorno P(5 9 6 8), de ordem
+10, $inv(P_0)=(10-1-P_0)$. Logo, $inv(P_0)=4$. Aplicando-se a mesma
+operação aos outros elementos obtém-se o contorno inv(P(5 9 6 8)) =
+S(4 0 3 1) (figura \ref{fig:operacoes-ip}).
 
 %% falar da forma prima
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
