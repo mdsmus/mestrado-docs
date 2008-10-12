@@ -511,10 +511,10 @@ assim por diante.
 Por exemplo, dado um contorno P(5 9 6 8) representado graficamente na
 figura \ref{fig:operacoes-p} e aplicando-se retrogradação a este
 contorno obtém-se como saída (8 6 9 5), ou seja
-\verb!(retr(P(5 9 6 8)))! = N(8 6 9 5) (figura
+\verb!(retr(P(5 9 6 8)))! $\Rightarrow$ N(8 6 9 5) (figura
 \ref{fig:operacoes-rp}). A operação de rotação de fator 1 aplicada a
 este mesmo contorno P(5 9 6 8) retorna L(9 6 8 5), ou seja,
-\verb!(rot(P(5 9 6 8)) 1)! = L(9 6 8 5) (figura
+\verb!(rot(P(5 9 6 8)) 1)! $\Rightarrow$ L(9 6 8 5) (figura
 \ref{fig:operacoes-rr1}). Aplicando-se a rotação de fator 2 a P(5 9 6
 8) obtém-se M(6 8 9 5) (figura \ref{fig:operacoes-rr2}), e assim por
 diante. O resultado de outras operações aplicadas ao contorno P(5 9 6
@@ -563,9 +563,9 @@ exemplo, a expansão de fator 2 do contorno P(5 9 6 8) é F(5 13 7
 11). A diferença entre P$_1$ e P$_2$ é +4, entre P$_2$ e P$_3$ é -3, e
 entre P$_3$ e P$_4$ é +2. Multiplicando-se estas diferenças pelo fator
 de expansão 2 obtém-se +8, -6 e +4. Aplicando-se estas novas
-diferenças ao contorno obtém-se que F$_2$ = P$_1$ + 8, ou seja, F$_2$
-= 5 + 8, então F$_2$ = 13. Aplicando-se este procedimento para
-calcular os outros elementos obtém-se F(5 13 7 11).
+diferenças ao contorno obtém-se que $F_2 = P_1$ + 8, ou seja, $F_2 = 5
++ 8$, então $F_2 = 13$. Aplicando-se este procedimento para calcular
+os outros elementos obtém-se F(5 13 7 11).
 
 A ordem de um contorno está relacionada com o número de elementos do
 seu espaço de contorno. Pode-se subentender que o espaço ao qual um
@@ -586,8 +586,9 @@ A operação de inversão de um contorno P de ordem $q$ é representada
 por inv(P), e é matematicamente calculada por
 $inv(P_n)=(q-1-P_n)$. Portanto, dado um contorno P(5 9 6 8), de ordem
 10, $inv(P_0)=(10-1-P_0)$. Logo, $inv(P_0)=4$. Aplicando-se a mesma
-operação aos outros elementos obtém-se o contorno inv(P(5 9 6 8)) =
-S(4 0 3 1) (figura \ref{fig:operacoes-ip}).
+operação aos outros elementos obtém-se o contorno
+\verb!inv(P(5 9 6 8))!  $\Rightarrow$ S(4 0 3 1) (figura
+\ref{fig:operacoes-ip}).
 
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação, matriz de comparação, forma prima e
