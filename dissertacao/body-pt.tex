@@ -51,8 +51,6 @@ a área de Composição.
 \section{Metodologia}
 \label{sec:metodologia}
 
-%% pensar em como fazer link para seção de ferramentas.
-
 Para a realização deste trabalho revisei a literatura sobre contornos
 melódicos, mapeei contornos para elementos musicais, compus estudos
 para experimento de possibilidades com contornos melódicos, e
@@ -100,9 +98,8 @@ Esta dissertação está organizada da seguinte maneira:
 \item Capítulo 6: conclusão, discussão e trabalhos futuros
 \end{itemize}
 
-%% pode ser introdução ao estudo de contornos?
-\chapter{Introdução à teoria de contornos}
-\label{cha:introducao-teoria-contornos}
+\chapter{Introdução ao estudo de contornos}
+\label{cha:introducao-estudo-contornos}
 
 Existem diversas definições de contorno melódico na literatura
 \cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,edworthy85:musical,dewitt.ea86:recognition,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour}.
@@ -1062,7 +1059,7 @@ contorno \verb!(5 9 6)!, e como contornos com duração, considerando
 também o local no tempo onde ocorre cada elemento do contorno:
 \verb!((0 5)(1 9)(2 6))!. Apesar de ter uma codificação específica que
 comporte a influência do tempo no contorno, como vimos no capítulo
-\ref{cha:introducao-teoria-contornos}, ainda não estou trabalhando com
+\ref{cha:introducao-estudo-contornos}, ainda não estou trabalhando com
 este elemento.
 
 O \goiaba{} tem as classes \texttt{ponto}, \texttt{contorno-simples} e
@@ -1259,20 +1256,17 @@ automática e gera como saída partitura através do Lilypond
 \subsection{Git}
 \label{sec:git}
 
-%% dizer o que é um sistema de controle de versão
 Um sistema de controle de versão é um programa de computador que tem
 como função gerenciar todas as versões de arquivos de um determinado
 projeto. É normalmente utilizado em desenvolvimento de software,
 embora seu uso não seja restrito a este tipo de atividade.
 
-%% falar de funcionalidades de um sistema de controle de versão
 Um sistema de controle de versão possibilita o trabalho colaborativo
 sem conflitos entre as versões dos arquivos dos participantes. Com um
 sistema deste é possível comparar versões de arquivos para observar as
 mudanças, voltar a versões antigas para encontrar erros, criar novos
 ramos paralelos de desenvolvimento e outras inúmeras funcionalidades.
 
-%% explicar em linhas gerais como um sistema de controle de versão funciona
 Normalmente inicia-se o controle de versão no diretório raiz de um
 projeto. O sistema cria um repositório oculto para onde são copiados
 todos os arquivos e mudanças colocados em controle de versão. O
@@ -1294,7 +1288,6 @@ que apresentamos.
   \label{fig:controle-de-versao}
 \end{figure}
 
-%% desenvolver sobre git
 O Git\footnote{\url{Disponível em http://git.or.cz}} é um software
 livre de controle de versão bastante poderoso e veloz. O Git permite
 um desenvolvimento distribuído, em que cada desenvolvedor pode ter uma
@@ -1321,8 +1314,6 @@ alteração em si.
   \label{fig:historico-git}
 \end{figure}
 
-%% falar sobre controle de versão neste trabalho (programa, projeto,
-%% composições e dissertação)
 Utilizo o sistema de controle de versão Git no desenvolvimento de todo
 o trabalho. Mantive este projeto em um repositório
 central\footnote{Disponível em
@@ -1352,7 +1343,6 @@ trabalhar sempre simultaneamente.
 
 \chapter{Análise da obra \obra{}}
 \label{cha:anal-da-obra}
-%% falar de contornos, motivos, forma, altura, timbre, gestual
 
 A obra \obra{} é um quinteto de madeiras em movimento único. Sua
 composição foi focada no uso sistemático de contornos melódicos e
@@ -1805,14 +1795,6 @@ de contornos. Combinei estas operações desta forma:
 \item Rotação com retrogradação
 \end{itemize}
 
-%% dúvida: que termo devo usar em relação à linha do fagote? melodia?
-%% fragmento melódico? motivo?
-
-%% kroger: talvez "solo de fagote" se voce esta se referindo apenas ao
-%% solo de fagote (antes dos instrumentos entrarem) :-)
-
-%% marcos: estou preferindo deixar "melodia"
-
 A combinação das operações de subconjunto, expansão e transposição foi
 utilizada no início da peça na linha do fagote. No início da peça há
 uma melodia (figura \ref{fig:melodia-inicial},
@@ -2074,8 +2056,6 @@ ampliação do estado de arte de teorias de contorno incorporando
 possibilidades de aplicações de operações de contorno na composição
 musical.
 
-% operações "mais e menos interessantes"
-
 Das operações de contorno experimentadas algumas foram vistas como
 mais adequadas para a composição musical, como expansão e redução de
 intervalos, retrogradação, inversão, rotação, subconjuntos, rotação e
@@ -2088,16 +2068,11 @@ composição.
 A realização deste estudo abre caminho para o desenvolvimento de pelo
 menos quatro trabalhos futuros.
 
-% Expansão do estudo: mapeamento de parâmetros em função de outros
-% parâmetros além do tempo, survey
-
 O primeiro deles é a realização de um mapeamento dos mais diversos
 parâmetros musicais como dinâmica, densidade ou textura em função de
 outros parâmetros além do tempo. Desta forma pode-se trabalhar com
 contornos como dinâmica em função da densidade ou homogeneidade de
 timbre em função da complexidade rítmica.
-
-% Utilização de outras operações em composição.
 
 O segundo trabalho é o teste de outras operações das teorias de
 contornos em composição a partir da composição sistemática de estudos
@@ -2108,8 +2083,6 @@ O terceiro trabalho é a composição de estudos com instrumentos mais
 variados, como por exemplo instrumentos sintetizados por
 computador. Este estudo pode contribuir com os trabalhos de música
 computacional disponibilizando contorno como elemento estruturador.
-
-% Expansão do Goiaba
 
 Por fim o quatro trabalho é a expansão do software Goiaba, com a
 inserção operações de todas as teorias de contornos, com o acréscimo
