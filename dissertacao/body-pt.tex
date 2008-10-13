@@ -65,14 +65,14 @@ particularidades de tais elementos como representação numérica de
 notas, intervalos e ritmo, bem como estudo de possíveis operações de
 contornos.
 
-Compus duas peças para experimentar possibilidades com operações de
-contornos melódicos. A primeira---\opus{Como é que se preenche um
-  contorno melódico? Op.3}---contém um único contorno melódico e
-operações de preenchimento deste contorno. A segunda---\opus{Bobó de
-  legumes. Op.5}---contém também um único contorno, suas operações e
-concatenações. Com estes experimentos foi possível aprofundar a
-prática da composição de contornos antes de compor a obra final do
-mestrado.
+Compus duas peças com o objetivo de experimentar possibilidades com
+operações de contornos melódicos. A primeira---\opus{Como é que se
+  preenche um contorno melódico? Op.3}---contém um único contorno
+melódico e operações de preenchimento deste contorno. A
+segunda---\opus{Bobó de legumes. Op.5}---contém também um único
+contorno, suas operações e concatenações. Com estes experimentos foi
+possível aprofundar a prática da composição de contornos antes de
+compor a obra final do mestrado.
 
 Por fim desenvolvi um software que lida com contornos melódicos,
 operações e combinações. Ele retorna representações simbólicas e
@@ -80,7 +80,9 @@ gráficas de operações de transposição, inversão, retrogradação e
 rotação de um contorno dado. Além disso ele permite a combinação de
 operações e sua concatenação. Este software ajudou no mapeamento e
 processamento de contornos melódicos no estudo do estado de arte, na
-composição dos experimentos, e na composição da obra final.
+composição dos experimentos, e na composição da obra final. Abordo o
+desenvolvimento deste software e de outras ferramentas computacionais
+no capítulo \ref{cha:ferramentas}.
 
 \section{Estrutura da dissertação}
 \label{sec:estr-da-diss}
@@ -102,7 +104,7 @@ Esta dissertação está organizada da seguinte maneira:
 \chapter{Introdução à teoria de contornos}
 \label{cha:introducao-teoria-contornos}
 
-Há diversas definições de contorno melódico na literatura
+Existem diversas definições de contorno melódico na literatura
 \cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,edworthy85:musical,dewitt.ea86:recognition,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour}.
 As definições de Piston, Toch, Schönberg, Edworthy, Dewitt e Crowder
 são semelhantes e, em geral consideram contorno melódico como
@@ -535,6 +537,7 @@ diante. O resultado de outras operações aplicadas ao contorno P(5 9 6
     \includegraphics{c-4031}
     \label{fig:operacoes-ip}
   }
+
   \subfloat[Retrógrado de P]{
     \includegraphics{c-8695}
     \label{fig:operacoes-rp}
@@ -1054,12 +1057,13 @@ dos programas e de clarear as idéias do programador
 \cite[p. 4]{graham94:lisp}.
 
 Contornos são representados simbolicamente de duas maneiras: como
-contornos simples, considerando apenas as alturas de contorno
-\verb!(5 9 6)!, e como contornos com duração, considerando também o
-local no tempo onde ocorre cada altura de contorno:
+contornos simples, considerando apenas os valores dos elementos de
+contorno \verb!(5 9 6)!, e como contornos com duração, considerando
+também o local no tempo onde ocorre cada elemento do contorno:
 \verb!((0 5)(1 9)(2 6))!. Apesar de ter uma codificação específica que
-comporte a influência do tempo no contorno, ainda não estou
-trabalhando com este elemento.
+comporte a influência do tempo no contorno, como vimos no capítulo
+\ref{cha:introducao-teoria-contornos}, ainda não estou trabalhando com
+este elemento.
 
 O \goiaba{} tem as classes \texttt{ponto}, \texttt{contorno-simples} e
 \texttt{contorno-duracao}. A classe \texttt{ponto} define as alturas
@@ -1083,6 +1087,8 @@ do despacho múltiplo usado pelo sistema de objetos de Common Lisp
 maneira diferente dependendo qual o tipo do seu primeiro parâmetro. No
 código seguinte há dois métodos, sendo o primeiro para
 \code{contorno-duracao}, e o segundo para \code{contorno-simples}.
+
+\break
 
 \singlespacing
 \begin{verbatim}
@@ -1119,13 +1125,13 @@ operações e cores que serão geradas no gráfico.
 (let ((c1 #d(#p(0 0) #p(1 5) #p(2 3) #p(3 4) #p(4 1) #p(5 3))))
   (plot-page "contornos.pdf"
     (plot-contorno-full 50 500
-                        c1 "original" :red
-                        (transpor c1 2) "transposição" :green
-                        (retrogradar c1) "retrógrado" :blue
-                        (inverter c1) "inversão" :pink
-                        (aumentar-altura c1 2) "aumentar-altura" :lightblue
-                        (rotacionar c1 1) "rotação" :darkcyan
-                        (insere-ponto c1 '(1 3) 2) "insere ponto" :purple)))
+                     c1 "original" :red
+                     (transpor c1 2) "transposição" :green
+                     (retrogradar c1) "retrógrado" :blue
+                     (inverter c1) "inversão" :pink
+                     (aumentar-altura c1 2) "aumentar-altura" :lightblue
+                     (rotacionar c1 1) "rotação" :darkcyan
+                     (insere-ponto c1 '(1 3) 2) "insere ponto" :purple)))
 \end{verbatim}
 \doublespacing
 
@@ -1435,7 +1441,7 @@ resultado artístico.
 
 \begin{table}
   %% aumentar a fonte das palavras
-  \includegraphics[scale=.81]{planejamento-inicial}
+  \includegraphics[scale=.76]{planejamento-inicial}
   \caption{Planejamento inicial da peça}
   \label{tab:planejamento-inicial}
 \end{table}
