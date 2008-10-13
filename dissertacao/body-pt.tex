@@ -428,13 +428,13 @@ combinar muitas operações, como transposição do retrógrado da inversão
 da rotação.
 
 Preferi criar outra forma de representar operações. Para representar o
-retrógrado de um contorno X(1 2 3) utilizo a notação
-\verb!retr(X(1 2 3))!. O resultado desta operação é o contorno Y(3 2
-1). Esta notação ajuda na visualização de combinações maiores de
-operações como \verb!(transp(retr(inv(rot(X(1 2 3)) 2)) 3)!. Esta
-representação diferencia o nome do contorno da operação utilizada, já
-que mantém o nome em maiúscula e define o nome da operação em
-minúsculas abreviadas.
+retrógrado de um contorno X(1 2 3) utilizo a notação \code{retr(X(1 2
+  3))}. O resultado desta operação é o contorno Y(3 2 1). Esta notação
+ajuda na visualização de combinações maiores de operações como
+\code{(transp(retr(inv(rot(X(1 2 3)) 2)) 3)}. Esta representação
+diferencia o nome do contorno da operação utilizada, já que mantém o
+nome em maiúscula e define o nome da operação em minúsculas
+abreviadas.
 
 A música pode ser visualizada em diferentes espaços, como de altura e
 de contorno \cite{morris87:composition}.
@@ -504,11 +504,11 @@ assim por diante.
 
 Por exemplo, dado um contorno P(5 9 6 8) representado graficamente na
 figura \ref{fig:operacoes-p} e aplicando-se retrogradação a este
-contorno obtém-se como saída (8 6 9 5), ou seja
-\verb!(retr(P(5 9 6 8)))! $\Rightarrow$ N(8 6 9 5) (figura
-\ref{fig:operacoes-rp}). A operação de rotação de fator 1 aplicada a
-este mesmo contorno P(5 9 6 8) retorna L(9 6 8 5), ou seja,
-\verb!(rot(P(5 9 6 8)) 1)! $\Rightarrow$ L(9 6 8 5) (figura
+contorno obtém-se como saída (8 6 9 5), ou seja \code{(retr(P(5 9 6
+  8)))} $\Rightarrow$ N(8 6 9 5) (figura \ref{fig:operacoes-rp}). A
+operação de rotação de fator 1 aplicada a este mesmo contorno P(5 9 6
+8) retorna L(9 6 8 5), ou seja, \code{(rot(P(5 9 6 8)) 1)}
+$\Rightarrow$ L(9 6 8 5) (figura
 \ref{fig:operacoes-rr1}). Aplicando-se a rotação de fator 2 a P(5 9 6
 8) obtém-se M(6 8 9 5) (figura \ref{fig:operacoes-rr2}), e assim por
 diante. O resultado de outras operações aplicadas ao contorno P(5 9 6
@@ -581,9 +581,8 @@ A operação de inversão de um contorno P de ordem $q$ é representada
 por inv(P), e é matematicamente calculada por
 $inv(P_n)=(q-1-P_n)$. Portanto, dado um contorno P(5 9 6 8), de ordem
 10, $inv(P_0)=(10-1-P_0)$. Logo, $inv(P_0)=4$. Aplicando-se a mesma
-operação aos outros elementos obtém-se o contorno
-\verb!inv(P(5 9 6 8))!  $\Rightarrow$ S(4 0 3 1) (figura
-\ref{fig:operacoes-ip}).
+operação aos outros elementos obtém-se o contorno \code{inv(P(5 9 6
+  8))} $\Rightarrow$ S(4 0 3 1) (figura \ref{fig:operacoes-ip}).
 
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação, matriz de comparação, forma prima e
@@ -1046,9 +1045,9 @@ dos programas e de clarear as idéias do programador
 
 Contornos são representados simbolicamente de duas maneiras: como
 contornos simples, considerando apenas os valores dos elementos de
-contorno \verb!(5 9 6)!, e como contornos com duração, considerando
+contorno \code{(5 9 6)}, e como contornos com duração, considerando
 também o local no tempo onde ocorre cada elemento do contorno:
-\verb!((0 5)(1 9)(2 6))!. Apesar de ter uma codificação específica que
+\code{((0 5)(1 9)(2 6))}. Apesar de ter uma codificação específica que
 comporte a influência do tempo no contorno, como vimos no capítulo
 \ref{cha:introducao-estudo-contornos}, ainda não estou trabalhando com
 este elemento.
@@ -1063,11 +1062,11 @@ contorno como uma lista de pontos como ((x, y) (z, w)), e a classe
 
 Algumas macros de leitura foram definidas para simplificar o processo
 de criar instâncias de objetos. Por exemplo, para criar uma instância
-do tipo \texttt{ponto} pode-se fazer normalmente
-\texttt{(make-instance 'ponto :x 0 :y 3)} ou simplesmente
-\verb!#p(0 3)! com a macro de leitura. Da mesma maneira, um
-\texttt{contorno-duracao} com dois pontos pode ser instanciado com
-\verb!#d(#p(0 3) #p(1 4))! ao invés de usar \texttt{make-instance}.
+do tipo \texttt{ponto} pode-se fazer normalmente \code{(make-instance
+  'ponto :x 0 :y 3)} ou simplesmente \code{\#p(0 3)} com a macro de
+leitura. Da mesma maneira, um \texttt{contorno-duracao} com dois
+pontos pode ser instanciado com \code{\#d(\#p(0 3) \#p(1 4))} ao invés
+de usar \texttt{make-instance}.
 
 As operações em contornos são implementadas em métodos, aproveitando
 do despacho múltiplo usado pelo sistema de objetos de Common Lisp
@@ -1104,7 +1103,7 @@ definidos, permitindo a fácil visualização de operações em contornos.
 Por exemplo, o código seguinte gera um gráfico com o contorno
 original, sua transposição, retrogradação, inversão, rotação,
 ampliação de altura e inserção de ponto (figura
-\ref{fig:operacoes}). Neste exemplo defino o contorno \verb!c1!, o
+\ref{fig:operacoes}). Neste exemplo defino o contorno \code{c1}, o
 arquivo no qual o gráfico será criado, as dimensões do gráfico e as
 operações e cores que serão geradas no gráfico.
 
@@ -1265,8 +1264,8 @@ procedimento do usuário normalmente é salvar cada mudança feita em um
 arquivo com um título e descrição, de forma que ele possa reconhecer a
 mudança quando precisar. A figura \ref{fig:controle-de-versao} mostra
 um esquema gráfico deste processo. Neste exemplo o arquivo foo é
-alterado e a linha com o texto \verb!43! é substituída por
-\verb!43 MS!. O sistema compara a versão do diretório com a versão do
+alterado e a linha com o texto \code{43} é substituída por \code{43
+  MS}. O sistema compara a versão do diretório com a versão do
 repositório e salva apenas as mudanças. O esquema de funcionamento
 interno dos repositórios é diferente em cada sistema de controle de
 versão, embora o processo para o usuário seja sempre parecido com o
