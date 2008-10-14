@@ -1,6 +1,6 @@
 \documentclass{book}
 \begin{document}
-\begin[indent=70\pt,line-width=160\mm]{lilypond}
+\begin[indent=55\pt,line-width=160\mm]{lilypond}
 %% score.ly
 \version "2.10.33"
 
@@ -58,7 +58,6 @@
   \layout {
     \context { \Score
                \override MetronomeMark #'extra-offset = #'(-9 . 0)
-               \override MetronomeMark #'padding = #'3
                \override BarNumber #'extra-offset = #'(0 . .5)
              }
     \context { \Staff
