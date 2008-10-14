@@ -198,7 +198,7 @@ gestoBBBclarinetebb = {
     g?4.)
     %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
     bes8->( e,8) g'4( cis,8~
-    cis e8~\trill\tris e2)
+    cis e8~\tris e2)
     %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
     gis,4\p
     b8( ais4) d8( cis4)
@@ -218,7 +218,7 @@ gestoBBCclarinetebb = {
     g?4.)
     %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
     bes8->( e,8) g'4( cis,8~
-    cis e8~\trill\tris e2) r4
+    cis e8~\tris e2) r4
 
     d,4-^ b-^ cis-^ gis8( ais
     g?2~ g4.) r8 
@@ -232,7 +232,7 @@ gestoBBCclarinetebb = {
     d'4-^ b-^ cis-^ gis8( ais
     g4.) r8
 
-    cis'1\trill\tris\fermata
+    cis'1\tris\fermata
   }
 }
 

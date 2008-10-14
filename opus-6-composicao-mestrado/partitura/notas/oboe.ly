@@ -178,7 +178,7 @@ gestoBBAoboe = {
         g?4.)
         %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         bes8->( e,8) g'4( cis,8~
-        cis e8~\trill\tris e2)
+        cis e8~\tris e2)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
         gis,4\p
         b8( ais4) d8( cis4)
@@ -186,7 +186,7 @@ gestoBBAoboe = {
         e8->( gis,)
         b( ais) d2 e4~
         e cis4 g' e,
-        bes' g2.\trill\tris
+        bes' g2.\tris
         %% #s(5 3 4 1 2 0)
         d'4-^\f b-^ cis-^ gis8( ais
         g?4.)
@@ -202,7 +202,7 @@ gestoBBBoboe = {
     %% continuação do fugato transposto a quinta
     \transpose d a' {
       \relative {
-        cis8 e8~\trill\tris e2) r4
+        cis8 e8~\tris e2) r4
 
         R1*2
 
@@ -213,7 +213,7 @@ gestoBBBoboe = {
         g?4.)
         %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         bes8->( e,8) g'4( cis,8~
-        cis e8~\trill\tris e2)
+        cis e8~\tris e2)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
         gis,4\p
         b8( ais4) d8( cis4)
@@ -235,7 +235,7 @@ gestoBBCoboe = {
 
         b8( ais) d2 e4~
         e cis4 g' e,
-        bes' g2.\trill\tris
+        bes' g2.\tris
 
       }
     }
@@ -274,7 +274,7 @@ gestoCABoboe = {
     g bes4. a4.~
     a2~ a8.) cis,16( g' e bes' g
     cis2. bis4
-    dis1)\trill\tris
+    dis1)\tris
     fis4( e a g
     %% expansão de #s(5 3 4 1 2 0)
     bes2. a4~

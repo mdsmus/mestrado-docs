@@ -126,5 +126,5 @@ menomosso = \tempoMark "Meno mosso"
 st = \staccatissimo
 
 % sinal para alterar trill
-tris = ^\markup{\sharp}
-tres = ^\markup{\flat}
+tris = ^\markup{\musicglyph #"scripts.trill" {\raise #1 \sharp}}
+tres =  ^\markup{\musicglyph #"scripts.trill" {\raise #1 \flat}}
