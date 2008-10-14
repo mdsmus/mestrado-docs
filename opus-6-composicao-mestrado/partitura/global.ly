@@ -17,8 +17,6 @@ padraoglobal = {
   \override Score.RehearsalMark #'padding = #0.5
 }
 
-%% verificar acidentes nos trill
-
 gestoAAAglobal = {
   %% merge do AAA e AAB planejados
   \padraoglobal
@@ -60,13 +58,6 @@ gestoAAEglobal = {
 gestoABAglobal = {
   %% s(5 3 4 1 2 0) distribuido entre os instrunentos expansão de
   %% intervalos.
-
-  %% repensar uso de trinado exclusivo na flauta. a distribuição dos
-  %% trinados pode incorporar uma operação de contorno
-
-  %% repensar timbre do contorno. mudar os instrumentos que tocam as
-  %% notas
-  
   \mark \default
   \padraoglobal
   \tempo 4=66
@@ -74,8 +65,6 @@ gestoABAglobal = {
 }
 
 gestoABBglobal = {
-  %% inserir nos 2 últimos compassos crescendo e decrescendo
-  %% expressivo
   \mark \default
   \padraoglobal
   \tempo 4=66
@@ -83,7 +72,6 @@ gestoABBglobal = {
 }
 
 gestoABCglobal = {
-  %% FIXME: inserir fermata no final
   \mark \default
   \padraoglobal
   \tempo 4=66
