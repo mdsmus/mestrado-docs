@@ -93,19 +93,10 @@
     }
   }
   \paper {
-    %%    #(set-global-staff-size 8)
     #(set-paper-size "a4")
-
     line-width = 17.5\cm
     bottom-margin = 1.5\cm
     left-margin = 2\cm
-%     right-margin = 2\cm
-%     head-separation = 1\cm
-%     foot-separation = 1\cm
-%     before-title-space = 1\cm
-%     after-title-space = 1\cm
-%     between-title-space = 1\cm
-
     print-page-number = ##t
     ragged-last-bottom = ##t
   }
