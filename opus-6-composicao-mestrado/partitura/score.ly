@@ -77,7 +77,7 @@
     \midi { }
     \layout {
       \context { \Score
-                 \override MetronomeMark #'extra-offset = #'(-7 . 1)
+                 \override MetronomeMark #'extra-offset = #'(-7 . 0)
                  \override BarNumber #'extra-offset = #'(0 . .5)
                }
       \context { \Staff
