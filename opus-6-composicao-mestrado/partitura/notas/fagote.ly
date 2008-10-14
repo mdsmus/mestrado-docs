@@ -148,8 +148,8 @@ gestoBABfagote = {
     g,,2.~\mf(
     g4. e
     fis2.~
-    fis4) fis8~( fis4.~
-    fis4. cis
+    fis4) fis8~ fis4.~
+    fis4. cis(
     dis4. c?4.~
     c4.~ c8) r4
   }
