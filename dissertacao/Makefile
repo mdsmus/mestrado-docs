@@ -19,6 +19,7 @@ light-clean:
 
 score-clean:
 	rm -f {lily-*,snippet*,tmp*}
+	rm -f lily\*-systems*
 	rm -f paginas-composicao.tex
 
 paginas-composicao.tex: paginas-composicao.lytex $(GESTOS)
