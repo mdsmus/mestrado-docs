@@ -20,6 +20,9 @@ escassos estudos sistemáticos do uso dessas operações de contorno e de
 suas combinações na composição musical. Acredito ser necessário um
 estudo e experimentação dessas operações na composição.
 
+%% kroger: voce apresenta o programa de computador nesse trabalho, não
+%% cria
+
 Neste trabalho faço a revisão de teorias desenvolvidas para o estudo
 de contornos, crio um programa de computador para processamento de
 contornos e apresento a análise e partitura da obra \obra{}, composta
@@ -42,6 +45,7 @@ São objetivos secundários deste trabalho:
 \item Levantamento do estado de arte de contornos melódicos.
 \end{enumerate}
 
+%% kroger: "este estudo" -> esse trabalho"
 O uso sistemático de contornos melódicos tanto para geração de
 material composicional quanto como determinante composicional é um
 assunto carente de literatura. Este estudo pode elevar o estado de
@@ -51,6 +55,7 @@ a área de Composição.
 \section{Metodologia}
 \label{sec:metodologia}
 
+%% kroger: \ref para a revisao de literatura
 Para a realização deste trabalho revisei a literatura sobre contornos
 melódicos, mapeei contornos para elementos musicais, compus estudos
 para experimento de possibilidades com contornos melódicos, e
@@ -87,6 +92,8 @@ no capítulo \ref{cha:ferramentas}.
 
 Esta dissertação está organizada da seguinte maneira:
 
+%% kroger: isso nao diz muito mais do que o sumario, ampliar:
+
 \begin{itemize}
 \item Capítulo 1: identificação dos problemas abordados e objetivos
   deste trabalho
@@ -114,6 +121,8 @@ intervalo entre as notas \cite{edworthy85:musical}. De modo semelhante
 Dewitt e Crowder definem como contorno o padrão binário de movimento
 ascendente e descendente entre alturas adjacentes de uma melodia
 \cite{dewitt.ea86:recognition}.
+
+%% kroger: "que o fragmento da ... na figura ...."
 
 A partir destas definições pode-se compreender que o fragmento da 5ª
 Sinfonia de Beethoven, por exemplo (figura \ref{fig:5a-sinfonia}), tem
@@ -143,6 +152,8 @@ descendente (Fá-Ré). Este contorno é representado simbolicamente por
     Sinfonia de Beethoven}
   \label{fig:repr-5a-sinfonia}
 \end{figure}
+
+%% tirar textbf, deixe o leitor decidir se e importante ou nao
 
 Estas definições têm limitações para uso em análise ou composição por
 considerarem apenas notas adjacentes e apenas altura em função do
@@ -223,6 +234,8 @@ mais comuns são as mudanças de modo em peças do tipo tema e variações,
 a adequação de notas à tonalidade em respostas tonais de fugas, os
 \eng{leitmotifs} e as idéias fixas \cite[p. 29]{morris87:composition}.
 
+%%% kroger:  s/mensuração/medida
+%%% kroger: [Contudo,] pretendo abordar esse parâmetro...
 Neste trabalho concentrei esforços no mapeamento de contornos de
 altura em função do tempo. No entanto desprezei a mensuração do tempo
 e atribuí à distância entre dois elementos dos contornos um valor
@@ -234,6 +247,7 @@ mensuração do tempo neste estudo demandaria um prazo maior do que o
 disponível e inviabilizaria o projeto. Pretendo abordar este parâmetro
 futuramente (vide capítulo \ref{cha:conclusao-e-discussao}).
 
+%%% kroger: merge 2 primeiras frases
 Neste texto considero como operação de contorno todo tipo de
 manipulação em um contorno. Dessa forma considero como operações
 procedimentos como inversão, retrogradação, expansão e subconjuntos de
@@ -280,6 +294,7 @@ foram submetidos ao reconhecimento de versões de canções familiares
 que tinham ritmo e/ou intervalos melódicos modificados e o contorno
 preservado.
 
+%%% kroger: isso continua estranho (proque são "mais significativas"?)
 De acordo com Friedmann as implicações do estudo de contornos na
 música do século XX são mais significativas para os ouvintes do que
 para os compositores. Isto porque a percepção de contornos é mais
@@ -304,6 +319,7 @@ contorno distintos entre dois ou mais segmentos. Neste nível contorno
 pode contribuir com um processo de transformação melódica
 \cite[p. 159]{clifford95:contour}.
 
+%%% kroger: dizer de quem é a obra
 Um exemplo do uso de contornos na geração de melodias ocorre, por
 exemplo, no terceiro movimento da obra \eng{Fünf Sätze für
   Streichquartett}\footnote{Cinco movimentos para quarteto de
@@ -355,6 +371,7 @@ foi dito estas operações são explicadas na seção
 \section{Teorias de contornos}
 \label{sec:teor-de-cont}
 
+%%% kroger: tira ponto paragrafo antes \cite
 Existem várias operações de mapeamento e comparação de contornos nas
 teorias desenvolvidas para sistematização do estudo de contornos.
 \cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}.
@@ -426,6 +443,11 @@ contorno X é definido como RIX. O uso de maiúsculas para o nome do
 contorno e para o nome das operações pode se tornar confusa ao
 combinar muitas operações, como transposição do retrógrado da inversão
 da rotação.
+
+%%% kroger: tira "Preferi criar outra forma de representar operações."
+%%% kroger: afinal voce usa operacao(x) ou (operacao x)? eu sugiro
+%%% operacao(x). e talvez seja melhor usar $$ e não \code nesses casos
+%%% e la na frente voce usa \tr e operacao(x): decida-se!!
 
 Preferi criar outra forma de representar operações. Para representar o
 retrógrado de um contorno X(1 2 3) utilizo a notação \code{retr(X(1 2
@@ -561,6 +583,8 @@ de expansão 2 obtém-se +8, -6 e +4. Aplicando-se estas novas
 diferenças ao contorno obtém-se que $F_2 = P_1$ + 8, ou seja, $F_2 = 5
 + 8$, então $F_2 = 13$. Aplicando-se este procedimento para calcular
 os outros elementos obtém-se F(5 13 7 11).
+
+%%% kroger: porque nao "entender" no lugar de "subentender"?
 
 A ordem de um contorno está relacionada com o número de elementos do
 seu espaço de contorno. Pode-se subentender que o espaço ao qual um
@@ -722,6 +746,10 @@ seguinte, 3 para a posterior e assim por diante (figura
   \caption{int$_n$ de matriz do contorno P(5 9 6 8)}
   \label{fig:int-exemplos}
 \end{figure}
+
+%%% kroger: ter parenteses antes da citacao bibliografia (que usa
+%%% parenteses) é feio. re-escrever frase para evitar isso, exemplo:
+%%% "Por exemplo (figura \ref), em um contorno ...
 
 A diagonal int$_1$ retorna comparações entre os valores dos elementos
 adjacentes do contorno. Por exemplo, em um contorno P(5 9 6 8),
@@ -1112,13 +1140,13 @@ operações e cores que serão geradas no gráfico.
 (let ((c1 #d(#p(0 0) #p(1 5) #p(2 3) #p(3 4) #p(4 1) #p(5 3))))
   (plot-page "contornos.pdf"
     (plot-contorno-full 50 500
-                     c1 "original" :red
-                     (transpor c1 2) "transposição" :green
-                     (retrogradar c1) "retrógrado" :blue
-                     (inverter c1) "inversão" :pink
-                     (aumentar-altura c1 2) "aumentar-altura" :lightblue
-                     (rotacionar c1 1) "rotação" :darkcyan
-                     (insere-ponto c1 '(1 3) 2) "insere ponto" :purple)))
+       c1 "original" :red
+       (transpor c1 2) "transposição" :green
+       (retrogradar c1) "retrógrado" :blue
+       (inverter c1) "inversão" :pink
+       (aumentar-altura c1 2) "aumentar-altura" :lightblue
+       (rotacionar c1 1) "rotação" :darkcyan
+       (insere-ponto c1 '(1 3) 2) "insere ponto" :purple)))
 \end{verbatim}
 \doublespacing
 
