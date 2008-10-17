@@ -441,38 +441,36 @@ minúsculas abreviadas.
 
 Morris desenvolveu uma teoria sobre composição com classes de alturas
 que envolve conceitos de espaços de altura e de contorno
-\cite[p. 3]{morris87:composition}. O espaço de contorno (\tr{c-space
-  ou contour-space}) é uma abstração de espaço musical que consiste em
-elementos organizados do valor mais baixo para o mais alto,
-desconsiderando o seu valor real exato. Por exemplo, no mapeamento de
-alturas, o espaço de contorno consiste na organização das alturas do
-grave para o agudo desconsiderando altura real e intervalos entre
-alturas. Neste caso o espaço de contorno pode ser entendido como um
-grande conjunto de alturas de contorno (\tr{c-pitch ou
-  contour-pitch}). No mapeamento de dinâmica, o espaço de contorno
+\cite[p. 3]{morris87:composition}. O espaço de contorno é uma
+abstração de espaço musical que consiste em elementos organizados do
+valor mais baixo para o mais alto, desconsiderando o seu valor real
+exato. Por exemplo, no mapeamento de alturas, o espaço de contorno
+consiste na organização das alturas do grave para o agudo
+desconsiderando altura real e intervalos entre alturas. Neste caso o
+espaço de contorno pode ser entendido como um grande conjunto de
+alturas de contorno. No mapeamento de dinâmica, o espaço de contorno
 consiste na organização de dinâmicas do mais piano para o mais forte,
 sem considerar o valor exato. Leva-se em conta apenas a relação entre
 os valores dos elementos.
 
 Cada conjunto de elementos de contorno contido em um espaço de
-contorno é chamado de segmento de contorno (\tr{cseg ou
-  contour-segment})\footnote{Trata-se de uma idéia semelhante à da
-  geometria, de reta e segmento de reta, onde o espaço de contorno
-  seria análogo à reta, e o segmento de contorno ao segmento de
-  reta.}. Estes segmentos de contornos podem conter elementos
-contíguos ou não contíguos do espaço de contorno. Subconjuntos de
-segmentos de contornos são chamados \tr{csubseg ou contour
-  subsegment}. Para uma simplificação terminológica, neste trabalho
-refiro-me a segmento de contorno com o termo genérico ``contorno''. A
-figura \ref{fig:c-space} contém três exemplos de um mesmo espaço de
-contorno de 10 alturas de contorno enumeradas do mais grave (0) para o
-mais agudo (9). Na figura \ref{fig:c-space5968} o espaço de contorno
-contém o contorno P, com as alturas de contorno 5, 9, 6 e 8. Na figura
-\ref{fig:c-space7420} o espaço de contorno contém o contorno M, com
-alturas de contorno 7, 4, 2 e 0. Ainda nesta figura o contorno M
-contém o subconjunto de contorno O, com alturas de contorno 4 e 2. Por
-último, na figura \ref{fig:c-space564} o espaço de contorno contém o
-contorno N, com as alturas de contorno não adjacentes 5, 6 e 4.
+contorno é chamado de segmento de contorno\footnote{Trata-se de uma
+  idéia semelhante à da geometria, de reta e segmento de reta, onde o
+  espaço de contorno seria análogo à reta, e o segmento de contorno ao
+  segmento de reta.}. Estes segmentos de contornos podem conter
+elementos contíguos ou não contíguos do espaço de contorno e podem
+conter subconjuntos de segmentos de contornos. Para uma simplificação
+terminológica, neste trabalho refiro-me a segmento de contorno com o
+termo genérico ``contorno''. A figura \ref{fig:c-space} contém três
+exemplos de um mesmo espaço de contorno de 10 alturas de contorno
+enumeradas do mais grave (0) para o mais agudo (9). Na figura
+\ref{fig:c-space5968} o espaço de contorno contém o contorno P, com as
+alturas de contorno 5, 9, 6 e 8. Na figura \ref{fig:c-space7420} o
+espaço de contorno contém o contorno M, com alturas de contorno 7, 4,
+2 e 0. Ainda nesta figura o contorno M contém o subconjunto de
+contorno O, com alturas de contorno 4 e 2. Por último, na figura
+\ref{fig:c-space564} o espaço de contorno contém o contorno N, com as
+alturas de contorno não adjacentes 5, 6 e 4.
 
 \begin{figure}
   \centering
@@ -731,13 +729,13 @@ um contorno P(5 9 6 8) o valor de int$_1$ é $(+ - +)$, ou seja, no
 caso de mapeamento de altura em função do tempo o movimento melódico é
 ascendente entre 5 e 9, descendente entre 9 e 6, e ascendente entre 6
 e 8. Esta comparação é feita também com uma operação conhecida como
-série de contornos adjacentes (\tr{cas})\footnote{Em teorias de
-  contornos não há consenso em relação a terminologia. Dessa forma há
-  idéias semelhantes com nomes diferentes, como int$_1$ e série de
-  contornos adjacentes \cite{friedmann87:response}. A série de
-  contornos adjacentes de Friedmann, por exemplo, seria entendida por
-  Morris como uma série de alturas de contorno adjacentes.}. A
-operação de int$_2$ retorna a comparação entre elementos alternados do
+série de contornos adjacentes\footnote{Em teorias de contornos não há
+  consenso em relação a terminologia. Dessa forma há idéias
+  semelhantes com nomes diferentes, como int$_1$ e série de contornos
+  adjacentes \cite{friedmann87:response}. A série de contornos
+  adjacentes de Friedmann, por exemplo, seria entendida por Morris
+  como uma série de alturas de contorno adjacentes.}. A operação de
+int$_2$ retorna a comparação entre elementos alternados do
 contorno. Por exemplo, em P(5 9 6 8), o valor de int$_2$ é $(+ -)$
 (figura \ref{fig:int-2-5968}), ou seja, a diferença entre 5 e 6 é
 positiva, e entre 9 e 8 é negativa. A tabela \ref{tab:int-contornos}
@@ -772,11 +770,11 @@ elemento de menor valor, é redefinido para 0, P$_2$, segundo elemento
 de menor valor, para 1, P$_3$, terceiro de menor valor, para 2, e
 P$_1$ para 3.
 
-A classe de contornos equivalentes (\tr{cc}) é uma operação importante
-para a verificação de similaridade entre contornos. Dois ou mais
-contornos são considerados equivalentes quando geram uma mesma matriz
-de comparação, ou seja, quando mantêm a mesma estrutura de valores
-entre seus elementos. Dessa forma, dado um contorno P(5 9 6 8), são
+A classe de contornos equivalentes é uma operação importante para a
+verificação de similaridade entre contornos. Dois ou mais contornos
+são considerados equivalentes quando geram uma mesma matriz de
+comparação, ou seja, quando mantêm a mesma estrutura de valores entre
+seus elementos. Dessa forma, dado um contorno P(5 9 6 8), são
 considerados seus equivalentes os contornos (1 5 2 3), (0 10 4 7), (0
 3 1 2) e muitos outros, pois todos eles pertencem à classe (0 3 1
 2). Também são considerados contornos de classe equivalente aqueles
@@ -819,9 +817,9 @@ cardinalidade 3.
   \label{tab:c-space-segment-classes}
 \end{table}
 
-A função de similaridade (\tr{csim}) mede numericamente o grau de
-semelhança entre dois contornos de mesma cardinalidade. O maior nível
-de similaridade entre contornos tem valor 1 e o menor tem valor
+A função de similaridade (\code{csim(X,Y)}) mede numericamente o grau
+de semelhança entre dois contornos de mesma cardinalidade. O maior
+nível de similaridade entre contornos tem valor 1 e o menor tem valor
 0. Este número é calculado comparando-se o triângulo superior da
 matriz de comparação dos dois contornos. Atribui-se o valor 1 para
 cada posição da matriz cujo símbolo é o mesmo no triângulo superior
@@ -935,11 +933,12 @@ contornos.
 
 Os intervalos de contorno (\tr{ci})\footnote{Friedmann utiliza
   maiúsculas para definir todas as suas operação com
-  maiúsculas. Utiliza CC, CI, CIA, CCV, etc.} representam as relações
-entre alturas de contorno de uma classe de contorno e podem ser
-entendidos de duas formas: guardando o valor entre as alturas de
-contorno \cite{friedmann85:methodology}, ou guardando apenas a
-direção, mas não o valor da diferença entre as alturas de contorno
+  maiúsculas. Utiliza CC para classe de contorno, CI para intervalo de
+  contorno, CIA, CCV, etc.} representam as relações entre alturas de
+contorno de uma classe de contorno e podem ser entendidos de duas
+formas: guardando o valor entre as alturas de contorno
+\cite{friedmann85:methodology}, ou guardando apenas a direção, mas não
+o valor da diferença entre as alturas de contorno
 \cite{morris93:directions}. Por exemplo, para um mesmo contorno P(0 3
 1 2), o intervalo de contorno entre $P_1$ e $P_2$ para Friedmann é -2,
 e para Morris, ``$-$''.
