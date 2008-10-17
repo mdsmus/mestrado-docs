@@ -20,13 +20,10 @@ escassos estudos sistemáticos do uso dessas operações de contorno e de
 suas combinações na composição musical. Acredito ser necessário um
 estudo e experimentação dessas operações na composição.
 
-%% kroger: voce apresenta o programa de computador nesse trabalho, não
-%% cria
-
 Neste trabalho faço a revisão de teorias desenvolvidas para o estudo
-de contornos, crio um programa de computador para processamento de
-contornos e apresento a análise e partitura da obra \obra{}, composta
-com base em combinações de operações de contornos.
+de contornos, apresento um programa de computador para processamento
+de contornos, e apresento a análise e partitura da obra \obra{},
+composta com base em combinações de operações de contornos.
 
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
@@ -45,22 +42,21 @@ São objetivos secundários deste trabalho:
 \item Levantamento do estado de arte de contornos melódicos.
 \end{enumerate}
 
-%% kroger: "este estudo" -> esse trabalho"
 O uso sistemático de contornos melódicos tanto para geração de
 material composicional quanto como determinante composicional é um
-assunto carente de literatura. Este estudo pode elevar o estado de
+assunto carente de literatura. Este trabalho pode elevar o estado de
 arte das teorias de contornos e contribuir com novas ferramentas para
 a área de Composição.
 
 \section{Metodologia}
 \label{sec:metodologia}
 
-%% kroger: \ref para a revisao de literatura
 Para a realização deste trabalho revisei a literatura sobre contornos
-melódicos, mapeei contornos para elementos musicais, compus estudos
-para experimento de possibilidades com contornos melódicos, e
-desenvolvi um programa de computador para processar operações com
-contornos melódicos (vide seção \ref{sec:goiaba-software-para}).
+melódicos (capítulo \ref{cha:introducao-estudo-contornos}), mapeei
+contornos para elementos musicais, compus estudos para experimento de
+possibilidades com contornos melódicos, e desenvolvi um programa de
+computador para processar operações com contornos melódicos (vide
+seção \ref{sec:goiaba-software-para}).
 
 O mapeamento de contorno é de fato a representação de elementos
 musicais como altura e duração para contornos. Envolveu o estudo das
@@ -92,15 +88,16 @@ no capítulo \ref{cha:ferramentas}.
 
 Esta dissertação está organizada da seguinte maneira:
 
-%% kroger: isso nao diz muito mais do que o sumario, ampliar:
-
 \begin{itemize}
-\item Capítulo 1: identificação dos problemas abordados e objetivos
-  deste trabalho
-\item Capítulo 2: introdução ao estudo de contornos
-\item Capítulo 3: descrição das ferramentas desenvolvidas e utilizadas
-  na composição
-\item Capítulo 4: análise da obra \obra{}
+\item Capítulo 1: identificação dos problemas abordados e dos
+  objetivos deste trabalho.
+\item Capítulo 2: introdução ao estudo de contornos, apresentação de
+  definições, operações e exemplos de contornos.
+\item Capítulo 3: descrição das ferramentas computacionais utilizadas,
+  como o \goiaba{}, desenvolvido especificamente para este trabalho, o
+  Lilypond e o Git.
+\item Capítulo 4: análise de aspectos formais, harmônicos e de
+  contorno da obra \obra{}.
 \item Capítulo 5: partitura da obra \obra{}
 \item Capítulo 6: conclusão, discussão e trabalhos futuros
 \end{itemize}
@@ -122,11 +119,9 @@ Dewitt e Crowder definem como contorno o padrão binário de movimento
 ascendente e descendente entre alturas adjacentes de uma melodia
 \cite{dewitt.ea86:recognition}.
 
-%% kroger: "que o fragmento da ... na figura ...."
-
 A partir destas definições pode-se compreender que o fragmento da 5ª
-Sinfonia de Beethoven, por exemplo (figura \ref{fig:5a-sinfonia}), tem
-contorno descendente (Sol-Mi$\flat$), ascendente (Mi$\flat$-Fá) e
+Sinfonia de Beethoven, na figura \ref{fig:5a-sinfonia}, por exemplo,
+tem contorno descendente (Sol-Mi$\flat$), ascendente (Mi$\flat$-Fá) e
 descendente (Fá-Ré). Este contorno é representado simbolicamente por
 (- + -) e graficamente pelo conteúdo da figura \ref{fig:c-1010}.
 
@@ -153,13 +148,11 @@ descendente (Fá-Ré). Este contorno é representado simbolicamente por
   \label{fig:repr-5a-sinfonia}
 \end{figure}
 
-%% tirar textbf, deixe o leitor decidir se e importante ou nao
-
 Estas definições têm limitações para uso em análise ou composição por
 considerarem apenas notas adjacentes e apenas altura em função do
 tempo. A definição mais precisa de contorno é a de Robert Morris, que
-estabelece como contorno \textbf{um conjunto ordenado de elementos
-  distintos, com ou sem repetição, numerados de forma ascendente}
+estabelece como contorno um conjunto ordenado de elementos distintos,
+com ou sem repetição, numerados de forma ascendente
 \cite[p. 206]{morris93:directions}. Esta definição considera elementos
 não adjacentes e generaliza o conceito de contorno para outros
 parâmetros como densidade de acordes e duração. Morris define contorno
@@ -234,25 +227,22 @@ mais comuns são as mudanças de modo em peças do tipo tema e variações,
 a adequação de notas à tonalidade em respostas tonais de fugas, os
 \eng{leitmotifs} e as idéias fixas \cite[p. 29]{morris87:composition}.
 
-%%% kroger:  s/mensuração/medida
-%%% kroger: [Contudo,] pretendo abordar esse parâmetro...
 Neste trabalho concentrei esforços no mapeamento de contornos de
-altura em função do tempo. No entanto desprezei a mensuração do tempo
-e atribuí à distância entre dois elementos dos contornos um valor
-padrão 1. Dessa forma não pude abordar características dos contornos
-como inclinação dos segmentos entre dois pontos, embora exista estudo
-na literatura abordando mensuração do tempo
-\cite{beard03:contour}. Percebi ao longo do processo que incluir
-mensuração do tempo neste estudo demandaria um prazo maior do que o
-disponível e inviabilizaria o projeto. Pretendo abordar este parâmetro
-futuramente (vide capítulo \ref{cha:conclusao-e-discussao}).
+altura em função do tempo. No entanto desprezei a medida do tempo e
+atribuí à distância entre dois elementos dos contornos um valor padrão
+1. Dessa forma não pude abordar características dos contornos como
+inclinação dos segmentos entre dois pontos, embora exista estudo na
+literatura abordando medida do tempo \cite{beard03:contour}. Percebi
+ao longo do processo que incluir medida do tempo neste estudo
+demandaria um prazo maior do que o disponível e inviabilizaria o
+projeto, contudo pretendo abordar este parâmetro futuramente (vide
+capítulo \ref{cha:conclusao-e-discussao}).
 
-%%% kroger: merge 2 primeiras frases
 Neste texto considero como operação de contorno todo tipo de
-manipulação em um contorno. Dessa forma considero como operações
-procedimentos como inversão, retrogradação, expansão e subconjuntos de
-contorno, matriz de comparação e classe de contorno. Estas operações
-são detalhadas na seção \ref{sec:teor-de-cont}.
+manipulação em um contorno, como inversão, retrogradação, expansão e
+subconjuntos de contorno, matriz de comparação e classe de
+contorno. Estas operações são detalhadas na seção
+\ref{sec:teor-de-cont}.
 
 Existem na literatura teorias desenvolvidas para a sistematização do
 estudo de contornos. Estas teorias foram desenvolvidas primariamente
@@ -319,18 +309,17 @@ contorno distintos entre dois ou mais segmentos. Neste nível contorno
 pode contribuir com um processo de transformação melódica
 \cite[p. 159]{clifford95:contour}.
 
-%%% kroger: dizer de quem é a obra
 Um exemplo do uso de contornos na geração de melodias ocorre, por
 exemplo, no terceiro movimento da obra \eng{Fünf Sätze für
   Streichquartett}\footnote{Cinco movimentos para quarteto de
-  cordas.}, Op.5. Este movimento tem três características principais:
-pode ser dividido em duas partes (c. 1--14 e 15--23), tem como meta
-composicional em ambas as partes um tema principal (figura
-\ref{fig:webern-tema-analisado}), e tem a maioria dos fragmentos
-melódicos divisíveis em 3 ou 6 notas. O tema principal é construído
-com os contornos de 3 notas (0 1 2), (2 0 1), (1 2 0) e (2 1 0) e 80\%
-dos fragmentos melódicos do movimento derivam dos contornos deste tema
-principal.
+  cordas.}, Op.5, de Anton Webern (1883--1945). Este movimento tem
+três características principais: pode ser dividido em duas partes
+(c. 1--14 e 15--23), tem como meta composicional em ambas as partes um
+tema principal (figura \ref{fig:webern-tema-analisado}), e tem a
+maioria dos fragmentos melódicos divisíveis em 3 ou 6 notas. O tema
+principal é construído com os contornos de 3 notas (0 1 2), (2 0 1),
+(1 2 0) e (2 1 0) e 80\% dos fragmentos melódicos do movimento derivam
+dos contornos deste tema principal.
 
 Neste movimento um dos processos de geração de melodias ocorre por
 concatenação de contornos. Pode-se observar que no fragmento da figura
@@ -371,9 +360,8 @@ foi dito estas operações são explicadas na seção
 \section{Teorias de contornos}
 \label{sec:teor-de-cont}
 
-%%% kroger: tira ponto paragrafo antes \cite
 Existem várias operações de mapeamento e comparação de contornos nas
-teorias desenvolvidas para sistematização do estudo de contornos.
+teorias desenvolvidas para sistematização do estudo de contornos
 \cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}.
 A partir dos conceitos e operações destas teorias é possível, por
 exemplo, reconhecer semelhanças entre as alturas das duas melodias m1
@@ -444,19 +432,17 @@ contorno e para o nome das operações pode se tornar confusa ao
 combinar muitas operações, como transposição do retrógrado da inversão
 da rotação.
 
-%%% kroger: tira "Preferi criar outra forma de representar operações."
 %%% kroger: afinal voce usa operacao(x) ou (operacao x)? eu sugiro
 %%% operacao(x). e talvez seja melhor usar $$ e não \code nesses casos
 %%% e la na frente voce usa \tr e operacao(x): decida-se!!
 
-Preferi criar outra forma de representar operações. Para representar o
-retrógrado de um contorno X(1 2 3) utilizo a notação \code{retr(X(1 2
-  3))}. O resultado desta operação é o contorno Y(3 2 1). Esta notação
-ajuda na visualização de combinações maiores de operações como
-\code{(transp(retr(inv(rot(X(1 2 3)) 2)) 3)}. Esta representação
-diferencia o nome do contorno da operação utilizada, já que mantém o
-nome em maiúscula e define o nome da operação em minúsculas
-abreviadas.
+Para representar o retrógrado de um contorno X(1 2 3) utilizo a
+notação \code{retr(X(1 2 3))}. O resultado desta operação é o contorno
+Y(3 2 1). Esta notação ajuda na visualização de combinações maiores de
+operações como \code{transp(retr(inv(rot(X(1 2 3)) 2)) 3)}. Esta
+representação diferencia o nome do contorno da operação utilizada, já
+que mantém o nome em maiúscula e define o nome da operação em
+minúsculas abreviadas.
 
 Morris desenvolveu uma teoria sobre composição com classes de alturas
 que envolve conceitos de espaços de altura e de contorno
@@ -526,16 +512,15 @@ assim por diante.
 
 Por exemplo, dado um contorno P(5 9 6 8) representado graficamente na
 figura \ref{fig:operacoes-p} e aplicando-se retrogradação a este
-contorno obtém-se como saída (8 6 9 5), ou seja \code{(retr(P(5 9 6
-  8)))} $\Rightarrow$ N(8 6 9 5) (figura \ref{fig:operacoes-rp}). A
+contorno obtém-se como saída (8 6 9 5), ou seja \code{retr(P(5 9 6
+  8))} $\Rightarrow$ N(8 6 9 5) (figura \ref{fig:operacoes-rp}). A
 operação de rotação de fator 1 aplicada a este mesmo contorno P(5 9 6
-8) retorna L(9 6 8 5), ou seja, \code{(rot(P(5 9 6 8)) 1)}
-$\Rightarrow$ L(9 6 8 5) (figura
-\ref{fig:operacoes-rr1}). Aplicando-se a rotação de fator 2 a P(5 9 6
-8) obtém-se M(6 8 9 5) (figura \ref{fig:operacoes-rr2}), e assim por
-diante. O resultado de outras operações aplicadas ao contorno P(5 9 6
-8) estão representadas graficamente na figura
-\ref{fig:operacoes-simples}.
+8) retorna L(9 6 8 5), ou seja, \code{rot(P(5 9 6 8) 1)} $\Rightarrow$
+L(9 6 8 5) (figura \ref{fig:operacoes-rr1}). Aplicando-se a rotação de
+fator 2 a P(5 9 6 8) obtém-se M(6 8 9 5) (figura
+\ref{fig:operacoes-rr2}), e assim por diante. O resultado de outras
+operações aplicadas ao contorno P(5 9 6 8) estão representadas
+graficamente na figura \ref{fig:operacoes-simples}.
 
 \begin{figure}
   \centering
@@ -584,10 +569,8 @@ diferenças ao contorno obtém-se que $F_2 = P_1$ + 8, ou seja, $F_2 = 5
 + 8$, então $F_2 = 13$. Aplicando-se este procedimento para calcular
 os outros elementos obtém-se F(5 13 7 11).
 
-%%% kroger: porque nao "entender" no lugar de "subentender"?
-
 A ordem de um contorno está relacionada com o número de elementos do
-seu espaço de contorno. Pode-se subentender que o espaço ao qual um
+seu espaço de contorno. Pode-se entender que o espaço ao qual um
 contorno P(5 9 6 8) pertence contém outros elementos além destes
 quatro contidos em P. Ou seja, pode-se afirmar que o espaço que
 engloba P contém, além de 5, 9, 6 e 8, os elementos 0, 1, 2, 3, 4 e
@@ -612,7 +595,7 @@ Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação, matriz de comparação, forma prima e
 classe de contorno.
 
-A operação de comparação \tr{com(a,b)}\footnote{Operações como a
+A operação de comparação \code{com(a,b)}\footnote{Operações como a
   função de comparação, a matriz de comparação e as diagonais da
   matriz de comparação são definidas em maiúsculas, ou seja,
   respectivamente COM, COM-Matrix e INT$_n$
@@ -747,14 +730,10 @@ seguinte, 3 para a posterior e assim por diante (figura
   \label{fig:int-exemplos}
 \end{figure}
 
-%%% kroger: ter parenteses antes da citacao bibliografia (que usa
-%%% parenteses) é feio. re-escrever frase para evitar isso, exemplo:
-%%% "Por exemplo (figura \ref), em um contorno ...
-
 A diagonal int$_1$ retorna comparações entre os valores dos elementos
-adjacentes do contorno. Por exemplo, em um contorno P(5 9 6 8),
-int$_1=(+ - +)$ (figura \ref{fig:int-1-5968}), ou seja, no caso de
-mapeamento de altura em função do tempo o movimento melódico é
+adjacentes do contorno. Por exemplo (figura \ref{fig:int-1-5968}), em
+um contorno P(5 9 6 8) o valor de int$_1$ é $(+ - +)$, ou seja, no
+caso de mapeamento de altura em função do tempo o movimento melódico é
 ascendente entre 5 e 9, descendente entre 9 e 6, e ascendente entre 6
 e 8. Esta comparação é feita também com uma operação conhecida como
 série de contornos adjacentes (\tr{cas})\footnote{Em teorias de
@@ -764,12 +743,12 @@ série de contornos adjacentes (\tr{cas})\footnote{Em teorias de
   contornos adjacentes de Friedmann, por exemplo, seria entendida por
   Morris como uma série de alturas de contorno adjacentes.}. A
 operação de int$_2$ retorna a comparação entre elementos alternados do
-contorno. Por exemplo, em P(5 9 6 8), int$_2=(+ -)$ (figura
-\ref{fig:int-2-5968}), ou seja, a diferença entre 5 e 6 é positiva, e
-entre 9 e 8 é negativa. A tabela \ref{tab:int-contornos} traz as
-int$_n$ dos contornos P, Q e R, cujas matrizes são apresentadas nas
-figuras \ref{fig:matriz-5968}, \ref{fig:matriz-5768} e
-\ref{fig:matriz-3051} respectivamente.
+contorno. Por exemplo, em P(5 9 6 8), o valor de int$_2$ é $(+ -)$
+(figura \ref{fig:int-2-5968}), ou seja, a diferença entre 5 e 6 é
+positiva, e entre 9 e 8 é negativa. A tabela \ref{tab:int-contornos}
+traz as int$_n$ dos contornos P, Q e R, cujas matrizes são
+apresentadas nas figuras \ref{fig:matriz-5968}, \ref{fig:matriz-5768}
+e \ref{fig:matriz-3051} respectivamente.
 
 \begin{table}
   \centering
