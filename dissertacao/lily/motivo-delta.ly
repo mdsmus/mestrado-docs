@@ -1,5 +1,7 @@
 \version "2.10.33"
 
+\include "../config/lib.ly"
+
 \score {
   \new RhythmicStaff  \with {
     \remove "Clef_engraver" }{
@@ -9,9 +11,9 @@
         \override Staff.StaffSymbol #'line-count = 0
         \stopStaff
         \startStaff
-        c4. c
-        c c
-        c4.~ c8 c4
+        c4.\st c\st
+        c\st c\st
+        c4.~\st c8 c4\st
         \bar "||"
       }
     }
