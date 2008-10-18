@@ -3,7 +3,7 @@
 
 Contorno pode ser definido como o perfil, desenho ou formato de um
 objeto. Pode ser bidimensional e associar altura a comprimento,
-largura ou tempo. Em música contornos podem ser associados a altura,
+largura ou tempo. Em Música contornos podem ser associados a altura,
 densidade, ritmo, complexidade rítmica, homogeneidade orquestral,
 amplitude de harmônicos, intensidade, etc. Contornos melódicos estão
 relacionados com movimento de altura de notas em função do tempo.
@@ -18,12 +18,12 @@ Apesar da possível coerência musical proporcionada por contornos e das
 operações fornecidas por teorias de contornos, ainda assim são
 escassos estudos sistemáticos do uso dessas operações de contorno e de
 suas combinações na composição musical. Acredito ser necessário um
-estudo e experimentação dessas operações na composição.
+estudo e experimentação dessas operações na área da composição.
 
 Neste trabalho faço a revisão de teorias desenvolvidas para o estudo
-de contornos, apresento um programa de computador para processamento
-de contornos, e apresento a análise e partitura da obra \obra{},
-composta com base em combinações de operações de contornos.
+de contornos, apresento o \goiaba{}, programa de computador para
+processamento de contornos, e apresento a análise e partitura da obra
+\obra{}, composta com base em combinações de operações de contornos.
 
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
@@ -52,14 +52,14 @@ a área de Composição.
 \label{sec:metodologia}
 
 Para a realização deste trabalho revisei a literatura sobre contornos
-melódicos (capítulo \ref{cha:introducao-estudo-contornos}), mapeei
-contornos para elementos musicais, compus estudos para experimento de
-possibilidades com contornos melódicos, e desenvolvi um programa de
-computador para processar operações com contornos melódicos (vide
-seção \ref{sec:goiaba-software-para}).
+melódicos (vide capítulo \ref{cha:introducao-estudo-contornos}),
+mapeei contornos para elementos musicais, compus estudos para
+experimento de possibilidades com contornos melódicos, e desenvolvi um
+programa de computador para processar operações com contornos
+melódicos (vide seção \ref{sec:goiaba-software-para}).
 
-O mapeamento de contorno é de fato a representação de elementos
-musicais como altura e duração para contornos. Envolveu o estudo das
+O mapeamento de contorno é a representação de elementos musicais como
+altura e duração para contornos. Envolveu o estudo das
 particularidades de tais elementos como representação numérica de
 notas, intervalos e ritmo, bem como estudo de possíveis operações de
 contornos.
@@ -89,8 +89,8 @@ no capítulo \ref{cha:ferramentas}.
 Esta dissertação está organizada da seguinte maneira:
 
 \begin{itemize}
-\item Capítulo 1: identificação dos problemas abordados e dos
-  objetivos deste trabalho.
+\item Capítulo 1: identificação dos problemas abordados, dos objetivos
+  e metodologia deste trabalho.
 \item Capítulo 2: introdução ao estudo de contornos, apresentação de
   definições, operações e exemplos de contornos.
 \item Capítulo 3: descrição das ferramentas computacionais utilizadas,
@@ -108,16 +108,15 @@ Esta dissertação está organizada da seguinte maneira:
 Existem diversas definições de contorno melódico na literatura
 \cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,edworthy85:musical,dewitt.ea86:recognition,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour}.
 As definições de Piston, Toch, Schönberg, Edworthy, Dewitt e Crowder
-são semelhantes e, em geral consideram contorno melódico como
-movimento ascendente ou descendente entre notas adjacentes de uma
-melodia.
+são semelhantes e em geral consideram contorno melódico como movimento
+ascendente ou descendente entre notas adjacentes de uma melodia.
 
-Edworthy por exemplo considera como contorno a seqüência de movimentos
-ascendentes e descendentes de uma melodia, independente do tamanho do
-intervalo entre as notas \cite{edworthy85:musical}. De modo semelhante
-Dewitt e Crowder definem como contorno o padrão binário de movimento
-ascendente e descendente entre alturas adjacentes de uma melodia
-\cite{dewitt.ea86:recognition}.
+Edworthy, por exemplo, considera como contorno a seqüência de
+movimentos ascendentes e descendentes de uma melodia, independente do
+tamanho do intervalo entre as notas \cite{edworthy85:musical}. De modo
+semelhante Dewitt e Crowder definem como contorno o padrão binário de
+movimento ascendente e descendente entre alturas adjacentes de uma
+melodia \cite{dewitt.ea86:recognition}.
 
 A partir destas definições pode-se compreender que o fragmento da 5ª
 Sinfonia de Beethoven, na figura \ref{fig:5a-sinfonia}, por exemplo,
@@ -164,7 +163,7 @@ menor valor, 1 para o segundo elemento de menor valor, 2 para o
 terceiro elemento de menor valor, e assim por diante. O valor do
 elemento depende do parâmetro que ele mapeia. Por exemplo, em um
 contorno de alturas a nota mais grave tem o menor valor. Em um
-contorno de densidade de acordes, o acorde de menor número de notas
+contorno de densidade de acordes o acorde de menor número de notas
 tem o menor valor.
 
 Tendo em vista a definição de contorno de Morris, pode-se dizer que o
@@ -185,10 +184,12 @@ apresentados na ordem 3, 1, 2 e 0.
 A maior granularidade da definição de Morris pode ser percebida a
 partir da comparação das representações da figura
 \ref{fig:repr-5a-sinfonia}. O contorno representado na figura
-\ref{fig:c-1010} não indica por exemplo que a terceira altura é mais
-grave que a primeira, o que fica claro na figura
-\ref{fig:c-3120}. Decidi usar a definição de Morris por causa desta
-precisão.
+\ref{fig:c-1010}, decorrente de conceitos que consideram movimentos
+ascendentes e descendentes de elementos adjacentes, não indica por
+exemplo que a terceira altura é mais grave que a primeira. A relação
+de registro entre os elementos do contorno fica clara na figura
+\ref{fig:c-3120}, decorrente da definição de Morris. Decidi usar a
+definição de Morris por causa desta precisão.
 
 Como já foi dito, um contorno pode mapear outros parâmetros além de
 altura \cite[p. 206]{morris93:directions}
@@ -196,7 +197,7 @@ altura \cite[p. 206]{morris93:directions}
 3)---representado graficamente na figura \ref{fig:repr-1023}---pode
 ser associado ao parâmetro altura com as notas Lá, Fá, Si$\flat$ e Ré
 (figura \ref{fig:pitches-in-time}); pode ser associado a densidades de
-acordes com acordes de duas, uma, quatro e sete notas (figura
+acordes, com acordes de duas, uma, quatro e sete notas (figura
 \ref{fig:chord-densities-in-time}); ou pode ainda ser associado aos
 níveis de dinâmica \music{p}, \music{ppp}, \music{mf} e \music{ff}
 (figura \ref{fig:dynamics-in-time}).
@@ -268,10 +269,10 @@ teorias são explicadas com exemplos na seção \ref{sec:teor-de-cont}.
 
 Há estudos e aplicações de contornos melódicos também em outras áreas
 da música como Etnomusicologia, Computação Musical e Percepção. Na
-área de Etnomusicologia contornos são usados para representar
-classificar melodias \cite{adams76:melodic}. Na área de Computação
-Musical, contornos são utilizados em sistemas \eng{query by
-  humming}---de busca em bases de dados a partir de melodias cantadas
+área de Etnomusicologia contornos são usados para classificar melodias
+\cite{adams76:melodic}. Na área de Computação Musical, contornos são
+utilizados, por exemplo, em sistemas \eng{query by humming}---de busca
+em bases de dados a partir de melodias cantadas
 \cite{ghias.ea95:query}.
 
 No campo da percepção musical é reconhecido que ouvintes têm maior
@@ -503,8 +504,8 @@ contorno. Uma rotação de fator 2 tem os 2 primeiros elementos movidos
 para o fim, uma rotação de fator 3 tem os 3 primeiros elementos e
 assim por diante.
 
-Por exemplo, dado um contorno P(5 9 6 8) representado graficamente na
-figura \ref{fig:operacoes-p} e aplicando-se retrogradação a este
+Por exemplo, dado um contorno P(5 9 6 8), representado graficamente na
+figura \ref{fig:operacoes-p}, e aplicando-se retrogradação a este
 contorno obtém-se como saída (8 6 9 5), ou seja \code{retr(P(5 9 6
   8))} $\Rightarrow$ N(8 6 9 5) (figura \ref{fig:operacoes-rp}). A
 operação de rotação de fator 1 aplicada a este mesmo contorno P(5 9 6
@@ -567,15 +568,14 @@ seu espaço de contorno. Pode-se entender que o espaço ao qual um
 contorno P(5 9 6 8) pertence contém outros elementos além destes
 quatro contidos em P. Ou seja, pode-se afirmar que o espaço que
 engloba P contém, além de 5, 9, 6 e 8, os elementos 0, 1, 2, 3, 4 e
-7. Assim pode-se afirmar que o espaço de contorno de P contém pelo
-menos 10 elementos. Dado apenas um contorno P(5 9 6 8) é impossível
-saber se o espaço de contorno ao qual P pertence contém elementos além
-do valor 9. Em um outro exemplo, o número de elementos do espaço de um
-contorno V(1 2 4 5) contém certamente os elementos 0, 1, 2, 3, 4 e 5,
-ou seja, 6 elementos. É impossível determinar se este espaço de
-contorno contém elementos de valor maior que 5. Dessa forma a ordem de
-um contorno pode ser sempre calculada somando o seu elemento de maior
-valor com 1.
+7. Assim pode-se dizer que o espaço de contorno de P contém pelo menos
+10 elementos. Dado apenas um contorno P(5 9 6 8) é impossível saber se
+o espaço de contorno ao qual P pertence contém elementos além do valor
+9. Em um outro exemplo, o número de elementos do espaço de um contorno
+V(1 2 4 5) contém certamente os elementos 0, 1, 2, 3, 4 e 5, ou seja,
+6 elementos. É impossível determinar se este espaço de contorno contém
+elementos de valor maior que 5. Dessa forma a ordem de um contorno
+pode ser sempre calculada somando o seu elemento de maior valor com 1.
 
 A operação de inversão de um contorno P de ordem $q$ é representada
 por inv(P), e é matematicamente calculada por
@@ -592,8 +592,8 @@ A operação de comparação \code{com(a,b)}\footnote{Operações como a
   função de comparação, a matriz de comparação e as diagonais da
   matriz de comparação são definidas em maiúsculas, ou seja,
   respectivamente COM, COM-Matrix e INT$_n$
-  \cite{morris87:composition}. No entanto, como já foi visto, prefiro
-  padronizar operações com minúsculas e nomes de contornos com
+  \cite{morris87:composition}. No entanto, como já foi visto,
+  padronizo operações com minúsculas e nomes de contornos com
   maiúsculas.} retorna a diferença entre os valores de dois elementos
 de contorno $a$ e $b$ considerando se um elemento tem valor maior,
 igual ou menor que o outro. Em um contorno que mapeia a altura, esta
@@ -601,21 +601,27 @@ operação determina se um elemento é mais grave, mais agudo ou de mesma
 altura que outro. Em um contorno que mapeia a densidade, a operação
 determina se um elemento é mais, menos ou igualmente denso que o
 outro. O resultado da operação de comparação é ``$+$'' se $b$ é maior
-que $a$; ``$-$'' se $b$ é que $a$; e ``$0$'' se $b$ é igual a $a$. Por
-exemplo, no contorno P(5 9 6 8), o valor de $com(P_0,P_1)$ é o sinal
-``$+$'', o de $com(P_1,P_2)$ é ``$-$'', e o valor de $com(P_3,P_0)$ é
-``$+$''. Esta medida de comparação pode ser invertida de modo que a
-comparação entre dois elementos é igual ao inverso da comparação
-destes elementos em ordem reversa. Esta idéia pode ser melhor
-entendida observando-se a equação $com(a,b)=-com(b,a)$.
+que $a$; ``$-$'' se $b$ é menor que $a$; e ``$0$'' se $b$ é igual a
+$a$. Por exemplo, no contorno P(5 9 6 8), o valor de
+\code{com(P$_0$,P$_1$)} é o sinal ``$+$'', o de
+\code{com(P$_1$,P$_2$)} é ``$-$'', e o valor de
+\code{com(P$_3$,P$_0$)} é ``$+$''. Esta medida de comparação pode ser
+invertida de modo que a comparação entre dois elementos é igual ao
+inverso da comparação destes elementos em ordem reversa. Esta idéia
+pode ser melhor entendida observando-se a equação
+$com(a,b)=-com(b,a)$.
 
 A matriz de comparação é bidimensional e compara um contorno com ele
 próprio. Esta matriz mostra os resultados da operação de comparação
-para todos os elementos de um contorno. Os contornos P, Q e R,
-representados graficamente nas figuras \ref{fig:cseg-5968},
-\ref{fig:cseg-5768} e \ref{fig:cseg-3051}, têm suas matrizes de
-comparação nas figuras \ref{fig:matriz-5968}, \ref{fig:matriz-5768} e
-\ref{fig:matriz-3051} respectivamente.
+para todos os elementos de um contorno. Por exemplo, a primeira linha
+da matriz da figura \ref{fig:matriz-5968} compara todos os elementos
+do contorno P(5 9 6 8) com o valor 5, de P$_0$. A segunda linha
+compara os elementos com o valor de P$_1$, a terceira com o valor de
+P$_2$, e assim por diante. Os contornos P, Q e R, representados
+graficamente nas figuras \ref{fig:cseg-5968}, \ref{fig:cseg-5768} e
+\ref{fig:cseg-3051}, têm suas matrizes de comparação nas figuras
+\ref{fig:matriz-5968}, \ref{fig:matriz-5768} e \ref{fig:matriz-3051}
+respectivamente.
 
 \begin{figure}
   \centering
@@ -760,15 +766,15 @@ A forma normal de um contorno ocorre quando seus elementos aparecem em
 ordem temporal de ocorrência, e com valores definidos de 0 (menor
 valor) a $n-1$ (maior valor), onde n é o número de elementos do
 contorno\footnote{Friedmann define como classe de contorno o que
-  Marvin define como forma normal.}. A operação de translação de um
-contorno retorna a sua forma normal
+  Marvin define como forma normal.}. A operação de translação aplicada
+a um contorno retorna a sua forma normal
 \cite[p. 228]{marvin.ea87:relating}. Esta operação consiste em
 redefinir o elemento de menor valor para 0, o segundo elemento de
-menor valor para 1, o terceiro para 2 e assim por diante. Por exemplo,
-o contorno P(5 9 6 8) tem forma normal F(0 3 1 2), pois P$_0$,
-elemento de menor valor, é redefinido para 0, P$_2$, segundo elemento
-de menor valor, para 1, P$_3$, terceiro de menor valor, para 2, e
-P$_1$ para 3.
+menor valor para 1, o terceiro para 2, e assim por diante. Por
+exemplo, o contorno P(5 9 6 8) tem forma normal F(0 3 1 2), pois
+P$_0$, elemento de menor valor, é redefinido para 0, P$_2$, segundo
+elemento de menor valor, para 1, P$_3$, terceiro de menor valor, para
+2, e P$_1$ para 3.
 
 A classe de contornos equivalentes é uma operação importante para a
 verificação de similaridade entre contornos. Dois ou mais contornos
@@ -785,11 +791,12 @@ classe deste contorno. A forma prima é obtida a partir do algoritmo de
 Laprade \cite[p. 234]{marvin.ea87:relating}. Este algoritmo consiste
 em
 \begin{enumerate}
-\item transladar o contorno, caso não esteja em sua forma normal,
-\item inverter o contorno, caso a diferença entre $(n - 1)$ e o valor
-  do último elemento seja maior que o valor do primeiro,
+\item transladar o contorno, caso não esteja em sua forma normal;
+\item inverter o contorno (de $n$ elementos), caso a diferença entre
+  $(n - 1)$ e o valor do último elemento seja maior que o valor do
+  primeiro;
 \item retrogradar o contorno se o valor do último elemento for maior
-  que o primeiro
+  que o primeiro.
 \end{enumerate}
 
 A partir deste algoritmo Laprade criou um software de computador para
@@ -813,7 +820,7 @@ cardinalidade 3.
     4-2 & (0 1 3 2) & (+ + -) \\
     4-3 & (0 2 1 3) & (+ - +)
   \end{tabular}
-  \caption{Classes de espaço de contornos}
+  \caption{Classes de espaços de contornos}
   \label{tab:c-space-segment-classes}
 \end{table}
 
@@ -836,10 +843,10 @@ triângulos superiores das matrizes de comparação dos contornos P(5 9 6
 superiores das matrizes de comparação dos contornos P e Q, P e R, e Q
 e R respectivamente. Entre P e Q há 5 elementos semelhantes entre os 6
 possíveis no triângulo. Dessa forma a função de similaridade entre P e
-Q é $5/6$, ou csim(P,Q)$=0,83$. Entre P e R há apenas um elemento
-semelhante entre 6 possíveis. Assim, csim(P,R)$=0,16$. A tabela
-\ref{tab:similaridade-contornos} mostra os valores de csim entre estes
-contornos.
+Q é $5/6$, ou $csim(P,Q)=0,83$. Entre P e R há apenas um elemento
+semelhante entre 6 possíveis. Assim, $csim(P,R)=0,16$. A tabela
+\ref{tab:similaridade-contornos} mostra os valores de \code{csim(X,Y)}
+entre estes contornos.
 
 \begin{figure}
   \centering
@@ -931,10 +938,12 @@ contornos.
   \label{tab:similaridade-contornos}
 \end{table}
 
-Os intervalos de contorno (\tr{ci})\footnote{Friedmann utiliza
-  maiúsculas para definir todas as suas operação com
-  maiúsculas. Utiliza CC para classe de contorno, CI para intervalo de
-  contorno, CIA, CCV, etc.} representam as relações entre alturas de
+Os intervalos de contorno\footnote{Friedmann utiliza maiúsculas para
+  definir todas as suas operação com maiúsculas. Utiliza CAS para
+  série de contornos adjacentes, CASV para vetor de série de contornos
+  adjacentes, CC para classe de contorno, CI para intervalo de
+  contorno, CIA para vetor de intervalos de contorno, e CCV para vetor
+  de classe de contorno.}  representam as relações entre alturas de
 contorno de uma classe de contorno e podem ser entendidos de duas
 formas: guardando o valor entre as alturas de contorno
 \cite{friedmann85:methodology}, ou guardando apenas a direção, mas não
@@ -943,9 +952,9 @@ o valor da diferença entre as alturas de contorno
 1 2), o intervalo de contorno entre $P_1$ e $P_2$ para Friedmann é -2,
 e para Morris, ``$-$''.
 
-O vetor de intervalos de contornos (\tr{cia}) descreve a freqüência de
-cada tipo de intervalo de contorno em uma classe de contorno. Por
-exemplo, o contorno P(0 3 1 2) tem vetor de intervalos de contornos
+O vetor de intervalos de contornos descreve a freqüência de cada tipo
+de intervalo de contorno em uma classe de contorno. Por exemplo, o
+contorno P(0 3 1 2) tem vetor de intervalos de contornos
 (2,1,1/1,1,0). Os dígitos à esquerda da barra representam os
 intervalos de contorno ascendentes em ordem crescente, e os dígitos à
 direita os intervalos de contorno descendentes em ordem crescente de
@@ -953,10 +962,9 @@ valor absoluto. \cite{friedmann85:methodology}. Dessa forma, neste
 contorno P(0 3 1 2) há 2 intervalos de valor +1, 1 intervalo de valor
 +2 e outro intervalo de valor +3. Além disso há um intervalo de valor
 -1, outro intervalo de valor -2 e nenhum intervalo de valor -3. Os
-vetores de classe de contorno (\tr{ccvi} e \tr{ccvii}), de dois
-dígitos cada um, refletem os movimentos ascendentes e descendentes de
-um contorno e são calculados a partir dos intervalos de contorno
-ascendentes e descendentes.
+vetores de classe de contorno, de dois dígitos cada um, refletem os
+movimentos ascendentes e descendentes de um contorno e são calculados
+a partir dos intervalos de contorno ascendentes e descendentes.
 
 A redução de contornos é possível a partir de dois diferentes
 algoritmos \cite{adams76:melodic,morris93:directions}. O algoritmo de
@@ -1000,9 +1008,9 @@ mesma altura, e em S3 o ponto inicial é mais grave que o final.
 O estado de arte das teorias de contornos aqui relacionadas vem sendo
 elevado através da implementação de novos conceitos e operações, e da
 constante revisão crítica de autores como Beard e Clifford
-\cite{beard03:contour,clifford95:contour}. O principal objetivo desta
-revisão de teorias de contornos é reunir e conhecer operações de
-contornos para testar suas funcionalidades em aplicações na área de
+\cite{beard03:contour,clifford95:contour}. O principal objetivo da
+presente revisão de teorias de contornos é reunir e conhecer operações
+de contornos para testar suas funcionalidades em aplicações na área de
 Composição Musical.
 
 \chapter{Ferramentas computacionais}
