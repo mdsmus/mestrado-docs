@@ -1052,14 +1052,14 @@ reutilizar funções de um subsistema em outro, de simplificar a leitura
 dos programas e de clarear as idéias do programador
 \cite[p. 4]{graham94:lisp}.
 
-Contornos são representados simbolicamente de duas maneiras: como
-contornos simples, considerando apenas os valores dos elementos de
-contorno \code{(5 9 6)}, e como contornos com duração, considerando
-também o local no tempo onde ocorre cada elemento do contorno:
-\code{((0 5)(1 9)(2 6))}. Apesar de ter uma codificação específica que
-comporte a influência do tempo no contorno, como vimos no capítulo
-\ref{cha:introducao-estudo-contornos}, ainda não estou trabalhando com
-este elemento.
+No \goiaba{} contornos são representados simbolicamente de duas
+maneiras: como contornos simples, considerando apenas os valores dos
+elementos de contorno \code{(5 9 6)}, e como contornos com duração,
+considerando também o local no tempo onde ocorre cada elemento do
+contorno: \code{((0 5)(1 9)(2 6))}. Apesar de ter uma codificação
+específica que comporte a influência do tempo no contorno, como vimos
+no capítulo \ref{cha:introducao-estudo-contornos}, ainda não estou
+trabalhando com este elemento.
 
 O \goiaba{} tem as classes \texttt{ponto}, \texttt{contorno-simples} e
 \texttt{contorno-duracao}. A classe \texttt{ponto} define as alturas
@@ -1139,7 +1139,7 @@ operações e cores que serão geradas no gráfico.
 \end{figure}
 
 Para o futuro pretendo implementar a possibilidade de gerar contornos
-a partir de partituras musicais e vice-versa e implementar uma
+a partir de partituras musicais e vice-versa, e implementar uma
 interface gráfica. O desenvolvimento do \goiaba{} segue procedimentos
 oriundos do desenvolvimento de software livre como uso de controle de
 versão e disponibilização do código-fonte na
@@ -1154,24 +1154,24 @@ forma precisa a compreensão que tem de uma teoria. Dessa forma a
 implementação das operações de contorno em um software de computador
 ajuda na compreensão da teoria, uma vez que é preciso entender
 totalmente como cada operação se processa e que funcionalidade tem
-para implementá-las.
+para que se possa implementá-las.
 
 As operações são implementadas como funções. Para isso é necessário
 conhecê-las de modo profundo e abstraí-las precisamente em descrições
 matemáticas. As funções têm que ser testadas a partir de aplicações
-práticas. Para os testes são utilizados exemplos originais dos
-autores, e são criados exemplos adicionais, o que ajuda na compreensão
-da funcionalidade de cada operação. Finalmente combinações de funções
-são observadas e testadas. Este processo de aprendizagem tem se
-mostrado muito eficiente e se tornou fundamental para o
-desenvolvimento da pesquisa.
+práticas. Para os testes são utilizados exemplos originais dos autores
+das teorias de contornos, e são criados exemplos adicionais, o que
+ajuda na compreensão da funcionalidade de cada operação. Finalmente
+combinações de funções são observadas e testadas. Este processo de
+aprendizagem tem se mostrado muito eficiente e se tornou fundamental
+para o desenvolvimento deste trabalho.
 
 \section{Outras ferramentas computacionais}
 \label{sec:outr-ferr-comp}
 
-Neste trabalho além de desenvolver o Goiaba utilizo o Lilypond tanto
+Neste trabalho além de desenvolver o Goiaba utilizei o Lilypond tanto
 para gerar partituras através do Goiaba quanto para escrever a obra
-\obra{}. Uso também o sistema de controle de versão Git que ajudou no
+\obra{}. Usei também o sistema de controle de versão Git que ajudou no
 desenvolvimento do Goiaba, na composição da obra e na comunicação de
 dados com o orientador.
 
@@ -1192,7 +1192,7 @@ acidentes, entre outros.
 O Lilypond processa música descrita em uma sintaxe própria de marcação
 e gera arquivos \eng{postscript}, de documento portátil (pdf), MIDI,
 de imagem (png), de gráfico vetorial (svg) e outros. A figura
-\ref{fig:exemplo-lily} por exemplo é gerada com um código como este:
+\ref{fig:exemplo-lily}, por exemplo, é gerada com um código como este:
 
 \singlespacing
 \begin{verbatim}
@@ -1270,10 +1270,10 @@ Normalmente inicia-se o controle de versão no diretório raiz de um
 projeto. O sistema cria um repositório oculto para onde são copiados
 todos os arquivos e mudanças colocados em controle de versão. O
 procedimento do usuário normalmente é salvar cada mudança feita em um
-arquivo com um título e descrição, de forma que ele possa reconhecer a
+arquivo com um título e descrição de forma que ele possa reconhecer a
 mudança quando precisar. A figura \ref{fig:controle-de-versao} mostra
-um esquema gráfico deste processo. Neste exemplo o arquivo foo é
-alterado e a linha com o texto \code{43} é substituída por \code{43
+um esquema gráfico deste processo. Neste exemplo o arquivo \code{foo}
+é alterado e a linha com o texto \code{43} é substituída por \code{43
   MS}. O sistema compara a versão do diretório com a versão do
 repositório e salva apenas as mudanças. O esquema de funcionamento
 interno dos repositórios é diferente em cada sistema de controle de
@@ -1287,24 +1287,20 @@ que apresentamos.
   \label{fig:controle-de-versao}
 \end{figure}
 
-O Git\footnote{\url{Disponível em http://git.or.cz}} é um software
+O Git\footnote{Disponível em \url{http://git.or.cz}} é um software
 livre de controle de versão bastante poderoso e veloz. O Git permite
 um desenvolvimento distribuído, em que cada desenvolvedor pode ter uma
 cópia local do repositório central, que fica acessível via
-SSH\footnote{Protocolo de acesso remoto seguro} ou HTTP. O Git tem
+SSH\footnote{Protocolo de acesso remoto seguro.} ou HTTP. O Git tem
 suporte a desenvolvimento não-linear com ramos, ou seja, é possível
 desenvolver uma nova versão de um programa ao mesmo tempo em que
 defeitos da versão anterior são corrigidos. Com o Git é possível
 trabalhar com grandes projetos e ter velocidade de processamento muito
-maior que outros sistemas de controle de versão. O Git proporciona
-segurança do histórico de mudanças. Uma vez que uma mudança é
-registrada ela pode ser revertida, mas não pode ser removida do
-histórico, ou seja, é possível saber tudo que foi feito em um
-projeto. Finalmente o Git oferece um conjunto de ferramentas de fácil
-utilização para gerenciar o projeto. A figura \ref{fig:historico-git}
-mostra uma interface gráfica do Git para visualizar histórico de
-mudanças, autor, data e hora da mudança, arquivos alterados e a
-alteração em si.
+maior que outros sistemas de controle de versão. Finalmente o Git
+oferece um conjunto de ferramentas de fácil utilização para gerenciar
+o projeto. A figura \ref{fig:historico-git} mostra uma interface
+gráfica do Git para visualizar histórico de mudanças, autor, data e
+hora da mudança, arquivos alterados e a alteração em si.
 
 \begin{figure}
   \centering
@@ -1313,32 +1309,31 @@ alteração em si.
   \label{fig:historico-git}
 \end{figure}
 
-Utilizo o sistema de controle de versão Git no desenvolvimento de todo
-o trabalho. Mantive este projeto em um repositório
+Utilizei o sistema de controle de versão Git no desenvolvimento de
+todo o trabalho. Mantive este projeto em um repositório
 central\footnote{Disponível em
   \url{git.genos.mus.br/?r=marcos-mestrado}.} com acesso irrestrito ao
-autor e orientador. Este procedimento dinamizou muito o trabalho uma
-vez que todo e qualquer comentário ou modificação pôde ser feita
-diretamente no texto sem necessidade de um aviso prévio. O sistema de
-controle de versão foi suficiente para registrar dados como mudança e
-autoria. Uso controle de versão no gerenciamento do desenvolvimento do
-Goiaba, nos experimentos composicionais, na obra final, e na escrita
-desta dissertação e do seu projeto.
-
-A possibilidade de criar ramos diferentes de desenvolvimento nos
-possibilitou fazer a refatoração do Goiaba ao mesmo tempo que podíamos
-ter em funcionamento uma versão estável anterior.
+autor e orientador. Este procedimento dinamizou muito o trabalho, pois
+possibilitou que mudanças e comentários fossem feitos diretamente no
+texto sem necessidade de um aviso prévio para prevenir conflitos, e
+com registro automático de mudança, autoria e data de cada
+alteração. Usei controle de versão no gerenciamento do desenvolvimento
+do Goiaba, nos experimentos composicionais, na obra final, na escrita
+desta dissertação e do seu projeto. Um exemplo de uso de ramos
+diferentes de desenvolvimento foi a refatoração do Goiaba, que foi
+feita paralelamente ao funcionamento da versão estável anterior do
+software.
 
 Na composição o sistema possibilitou, por exemplo, consultas
-posteriores a fragmentos que havia desistido de manter na obra. Com um
-sistema deste tipo é possível reconstituir o passo-a-passo do
-compositor na criação de uma obra musical.
+posteriores a fragmentos que desisti de manter na obra. Com um sistema
+deste tipo é possível reconstituir o passo-a-passo do compositor na
+criação de uma obra musical.
 
 A produção desta dissertação ilustra o uso de controle de versão em um
 projeto colaborativo. Em um trabalho sem este tipo de ferramenta,
 enquanto o orientador faz notas no texto, o autor não pode editá-lo
-para não criar conflitos entre as versões. Neste trabalho pudemos
-trabalhar sempre simultaneamente.
+para não criar conflitos entre as versões. Neste trabalho pude
+trabalhar sempre simultaneamente com o orientador.
 
 \chapter{Análise da obra \obra{}}
 \label{cha:anal-da-obra}
