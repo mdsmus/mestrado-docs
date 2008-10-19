@@ -19,6 +19,11 @@ dissertacao/lily/*.pdf
 dissertacao/lily/*.tex
 dissertacao/lily/*.texi
 dissertacao/lily/*.midi
+defesa/*.nav
+defesa/*.out
+defesa/*.ps
+defesa/*.pdf
+defesa/*.snm
 *.aux
 *.bbl
 *.blg
