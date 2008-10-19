@@ -1,29 +1,3 @@
-* dissertação
-** DONE títulos
-*** DONE melhorar "sobre contornos"
-*** DONE melhorar "ferramentas"
-*** DONE usar "teorias de contornos" ao invés de "sobre"
-*** DONE Git (sem controle de versão)
-*** DONE usar "análise da obra \obra"
-*** DONE usar "partitura da obra \obra"
-** revisar bibliografia
-*** DONE usar referência e não bibliografia
-*** procurar babel para uso em bibliografia (ctan)
-** diversos
-*** DONE apple é um nome de fruta sem razão para dar nome à empresa de Jobs
-*** DONE eliminar seção sobre latex
-*** DONE relacionar todas as ferramentas ao desenvolvimento do goiaba
-*** na intro dizer que falarei sobre contornos adiante, com exemplos, etc.
-*** DONE problema na dissertação: "acreditamos ser necessário fazer foo nesta dissertação"
-*** DONE explicar figura de nota com muitas linhas suplementares no texto
-** pendências
-*** DONE aumentar figura logo-ufba
-*** DONE corrigir figura cl-pdf
-*** DONE corrigir partitura (margens)
-*** DONE enxugar um pouco teorias de contornos para mover linha de lugar
-*** verificar quebra de página em códigos lisp
-*** verificar figuras abaixo de notas de rodapé
-*** DONE enxugar um pouco aspectos verticais para mover linha
 
 %%% Local Variables: 
 %%% mode: org
