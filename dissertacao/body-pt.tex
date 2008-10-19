@@ -429,14 +429,10 @@ contorno e para o nome das operações pode se tornar confusa ao
 combinar muitas operações, como transposição do retrógrado da inversão
 da rotação.
 
-%%% kroger: afinal voce usa operacao(x) ou (operacao x)? eu sugiro
-%%% operacao(x). e talvez seja melhor usar $$ e não \code nesses casos
-%%% e la na frente voce usa \tr e operacao(x): decida-se!!
-
 Para representar o retrógrado de um contorno X(1 2 3) utilizo a
-notação \code{retr(X(1 2 3))}. O resultado desta operação é o contorno
+notação $retr(X(1\;2\;3))$. O resultado desta operação é o contorno
 Y(3 2 1). Esta notação ajuda na visualização de combinações maiores de
-operações como \code{transp(retr(inv(rot(X(1 2 3)) 2)) 3)}. Esta
+operações como $transp(retr(inv(rot(X(1\;2\;3))\;2))\;3)$. Esta
 representação diferencia o nome do contorno da operação utilizada, já
 que mantém o nome em maiúscula e define o nome da operação em
 minúsculas abreviadas.
@@ -507,15 +503,16 @@ assim por diante.
 
 Por exemplo, dado um contorno P(5 9 6 8), representado graficamente na
 figura \ref{fig:operacoes-p}, e aplicando-se retrogradação a este
-contorno obtém-se como saída (8 6 9 5), ou seja \code{retr(P(5 9 6
-  8))} $\Rightarrow$ N(8 6 9 5) (figura \ref{fig:operacoes-rp}). A
-operação de rotação de fator 1 aplicada a este mesmo contorno P(5 9 6
-8) retorna L(9 6 8 5), ou seja, \code{rot(P(5 9 6 8) 1)} $\Rightarrow$
-L(9 6 8 5) (figura \ref{fig:operacoes-rr1}). Aplicando-se a rotação de
-fator 2 a P(5 9 6 8) obtém-se M(6 8 9 5) (figura
-\ref{fig:operacoes-rr2}), e assim por diante. O resultado de outras
-operações aplicadas ao contorno P(5 9 6 8) estão representadas
-graficamente na figura \ref{fig:operacoes-simples}.
+contorno obtém-se como saída (8 6 9 5), ou seja
+$retr(P(5\;9\;6\;8))=N(8\;6\;9\;5)$, como mostra a figura
+\ref{fig:operacoes-rp}. A operação de rotação de fator 1 aplicada a
+este mesmo contorno P(5 9 6 8) retorna L(9 6 8 5), ou seja,
+$rot(P(5\;9\;6\;8)\;1)=L(9\;6\;8\;5)$, como mostra a figura
+\ref{fig:operacoes-rr1}. Aplicando-se a rotação de fator 2 a P(5 9 6
+8) obtém-se M(6 8 9 5), como se vê na figura \ref{fig:operacoes-rr2},
+e assim por diante. O resultado de outras operações aplicadas ao
+contorno P(5 9 6 8) estão representadas graficamente na figura
+\ref{fig:operacoes-simples}.
 
 \begin{figure}
   \centering
@@ -582,34 +579,33 @@ A operação de inversão de um contorno P de ordem $q$ é representada
 por inv(P), e é matematicamente calculada por
 $inv(P_n)=(q-1-P_n)$. Portanto, dado um contorno P(5 9 6 8), de ordem
 10, $inv(P_0)=(10-1-P_0)$. Logo, $inv(P_0)=4$. Aplicando-se a mesma
-operação aos outros elementos obtém-se o contorno \code{inv(P(5 9 6
-  8))} $\Rightarrow$ S(4 0 3 1) (figura \ref{fig:operacoes-ip}).
+operação aos outros elementos obtém-se o contorno
+$inv(P(5\;9\;6\;8))=S(4\;0\;3\;1)$, como mostra a figura
+\ref{fig:operacoes-ip}.
 
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
 com operações como comparação, matriz de comparação, forma prima e
 classe de contorno.
 
-A operação de comparação \code{com(a,b)}\footnote{Operações como a
-  função de comparação, a matriz de comparação e as diagonais da
-  matriz de comparação são definidas em maiúsculas, ou seja,
-  respectivamente COM, COM-Matrix e INT$_n$
-  \cite{morris87:composition}. No entanto, como já foi visto,
-  padronizo operações com minúsculas e nomes de contornos com
-  maiúsculas.} retorna a diferença entre os valores de dois elementos
-de contorno $a$ e $b$ considerando se um elemento tem valor maior,
-igual ou menor que o outro. Em um contorno que mapeia a altura, esta
-operação determina se um elemento é mais grave, mais agudo ou de mesma
-altura que outro. Em um contorno que mapeia a densidade, a operação
-determina se um elemento é mais, menos ou igualmente denso que o
-outro. O resultado da operação de comparação é ``$+$'' se $b$ é maior
-que $a$; ``$-$'' se $b$ é menor que $a$; e ``$0$'' se $b$ é igual a
-$a$. Por exemplo, no contorno P(5 9 6 8), o valor de
-\code{com(P$_0$,P$_1$)} é o sinal ``$+$'', o de
-\code{com(P$_1$,P$_2$)} é ``$-$'', e o valor de
-\code{com(P$_3$,P$_0$)} é ``$+$''. Esta medida de comparação pode ser
-invertida de modo que a comparação entre dois elementos é igual ao
-inverso da comparação destes elementos em ordem reversa. Esta idéia
-pode ser melhor entendida observando-se a equação
+A operação de comparação $com(a,b)$\footnote{Operações como a função
+  de comparação, a matriz de comparação e as diagonais da matriz de
+  comparação são definidas em maiúsculas, ou seja, respectivamente
+  COM, COM-Matrix e INT$_n$ \cite{morris87:composition}. No entanto,
+  como já foi visto, padronizo operações com minúsculas e nomes de
+  contornos com maiúsculas.} retorna a diferença entre os valores de
+dois elementos de contorno $a$ e $b$ considerando se um elemento tem
+valor maior, igual ou menor que o outro. Em um contorno que mapeia a
+altura, esta operação determina se um elemento é mais grave, mais
+agudo ou de mesma altura que outro. Em um contorno que mapeia a
+densidade, a operação determina se um elemento é mais, menos ou
+igualmente denso que o outro. O resultado da operação de comparação é
+``$+$'' se $b$ é maior que $a$; ``$-$'' se $b$ é menor que $a$; e
+``$0$'' se $b$ é igual a $a$. Por exemplo, no contorno P(5 9 6 8), o
+valor de $com(P_0,P_1)$ é o sinal ``$+$'', o de $com(P_1,P_2)$ é
+``$-$'', e o valor de $com(P_3,P_0)$ é ``$+$''. Esta medida de
+comparação pode ser invertida de modo que a comparação entre dois
+elementos é igual ao inverso da comparação destes elementos em ordem
+reversa. Esta idéia pode ser melhor entendida observando-se a equação
 $com(a,b)=-com(b,a)$.
 
 A matriz de comparação é bidimensional e compara um contorno com ele
@@ -825,9 +821,9 @@ cardinalidade 3.
   \label{tab:c-space-segment-classes}
 \end{table}
 
-A função de similaridade (\code{csim(X,Y)}) mede numericamente o grau
-de semelhança entre dois contornos de mesma cardinalidade. O maior
-nível de similaridade entre contornos tem valor 1 e o menor tem valor
+A função de similaridade, $csim(X,Y)$, mede numericamente o grau de
+semelhança entre dois contornos de mesma cardinalidade. O maior nível
+de similaridade entre contornos tem valor 1 e o menor tem valor
 0. Este número é calculado comparando-se o triângulo superior da
 matriz de comparação dos dois contornos. Atribui-se o valor 1 para
 cada posição da matriz cujo símbolo é o mesmo no triângulo superior
@@ -846,7 +842,7 @@ e R respectivamente. Entre P e Q há 5 elementos semelhantes entre os 6
 possíveis no triângulo. Dessa forma a função de similaridade entre P e
 Q é $5/6$, ou $csim(P,Q)=0,83$. Entre P e R há apenas um elemento
 semelhante entre 6 possíveis. Assim, $csim(P,R)=0,16$. A tabela
-\ref{tab:similaridade-contornos} mostra os valores de \code{csim(X,Y)}
+\ref{tab:similaridade-contornos} mostra os valores de $csim(X,Y)$
 entre estes contornos.
 
 \begin{figure}
@@ -950,7 +946,7 @@ formas: guardando o valor entre as alturas de contorno
 \cite{friedmann85:methodology}, ou guardando apenas a direção, mas não
 o valor da diferença entre as alturas de contorno
 \cite{morris93:directions}. Por exemplo, para um mesmo contorno P(0 3
-1 2), o intervalo de contorno entre $P_1$ e $P_2$ para Friedmann é -2,
+1 2), o intervalo de contorno entre P$_1$ e P$_2$ para Friedmann é -2,
 e para Morris, ``$-$''.
 
 O vetor de intervalos de contornos descreve a freqüência de cada tipo
