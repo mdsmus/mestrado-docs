@@ -6,7 +6,7 @@
   \new Staff {
       \time 4/4
       \relative c {
-        \set Score.currentBarNumber = #134
+        \set Score.currentBarNumber = #158
         \bar ""
         \bracketUp
         

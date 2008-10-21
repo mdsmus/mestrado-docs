@@ -6,7 +6,7 @@
   \new Staff {
       \time 4/4
       \relative c''' {
-        \set Score.currentBarNumber = #105
+        \set Score.currentBarNumber = #129
         \bar ""
         \bracketUp
         \override TextScript #'extra-offset = #'( 0 . 1 )

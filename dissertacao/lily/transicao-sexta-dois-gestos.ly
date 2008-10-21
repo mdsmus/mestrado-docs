@@ -6,7 +6,7 @@
 
 global = {
   \time 4/4
-  \set Score.currentBarNumber = #199
+  \set Score.currentBarNumber = #223
   \bar ""
   \bracketUp
 }
