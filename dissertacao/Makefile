@@ -14,8 +14,11 @@ cleanall:
 	score-clean
 	rm -f lily\*-*
 
+medium-clean: light-clean
+	rm -f $(NAME).{ps,pdf,dvi}
+
 light-clean:
-	rm -f dissertacao-ufba.{aux,lo*,ps,pdf,bl*,dvi,to*,bb*}
+	rm -f $(NAME).{aux,lo*,bl*,to*,bb*}
 
 score-clean:
 	rm -f {lily-*,snippet*,tmp*}
@@ -34,4 +37,3 @@ $(GESTOS):
 
 figs/contornos.eps: figs/contornos.pdf
 	convert $< $@
-
