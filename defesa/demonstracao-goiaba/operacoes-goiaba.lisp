@@ -52,11 +52,26 @@
   (let ((*default-page-bounds* #(0 0 580 400)))
     (plot-page "/tmp/foo.pdf"
       (plot-contorno-full 50 50
-			  contorno "original" :red
+			  contorno "original" :blue
+			  (inverter contorno) "inversão" :darkgreen
+        ))))
+
+(let ((contorno #s(0 5 3 4 1 3)))
+  (let ((*default-page-bounds* #(0 0 580 400)))
+    (plot-page "/tmp/foo.pdf"
+      (plot-contorno-full 50 50
+			  contorno "original" :blue
+			  (rotacionar contorno 1) "rotação 1" :red
+        ))))
+
+(let ((contorno #s(0 5 3 4 1 3)))
+  (let ((*default-page-bounds* #(0 0 580 400)))
+    (plot-page "/tmp/foo.pdf"
+      (plot-contorno-full 50 50
+			  contorno "original" :blue
 			  (transpor contorno 2) "transposição" :green
-			  (retrogradar contorno) "retrógrado" :blue
+			  (retrogradar contorno) "retrógrado" :red
 			  (inverter contorno) "inversão" :orange
-			  (aumentar-altura contorno 2) "aumentar-altura" :lightblue
+			  (aumentar-altura contorno 2) "aumentar-altura" :lightgreen
 			  (rotacionar contorno 1) "rotação" :darkcyan
-			  (insere-ponto contorno '(1 3) 2) "insere ponto" :purple
         ))))
