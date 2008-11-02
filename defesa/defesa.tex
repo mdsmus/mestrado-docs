@@ -248,6 +248,37 @@
 }
 
 \frame{
+  \frametitle{Representação de operações}
+  \begin{itemize}
+  \item Retrógrado de X(1 2 3): $retr(X(1\:2\:3))=Y(3\:2\:1)$
+  \item Transposição de X(1 2 3) com fator 2: $transp(X(1\:2\:3)\:2)=W(3\:4\:5)$
+  \item Concatenação de operações: $transp(retr(inv(rot(X(1\;2\;3))\;2))\;3)$
+  \end{itemize}
+}
+
+\frame {
+  \frametitle{Espaço de contorno}
+  \begin{itemize}
+  \item Elementos organizados do valor mais baixo para o mais alto,
+    desconsiderando seus valores exatos.
+  \item Contém segmentos e subconjuntos de segmentos de contornos.
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[scale=.8]{cspace-5968}
+  \end{figure}
+}
+
+\frame {
+  \frametitle{Exemplos de espaço de contorno}
+  \begin{figure}
+    \includegraphics[scale=.7]{cspace-564}
+  \end{figure}
+  \begin{figure}
+    \includegraphics[scale=.7]{cspace-7420}
+  \end{figure}
+}
+
+\frame{
   \frametitle{}
 }
 
@@ -263,7 +294,10 @@
   \frametitle{}
 }
 
-\bibliographystyle{alpha}
-\bibliography{melodic-contour,music-perception,composition,music-harmony-and-theory,programs,music-analysis,audio,genos,computer-science}
+\frame[allowframebreaks]{
+  \frametitle{Referências}
+  \bibliographystyle{alpha}
+  \bibliography{melodic-contour,music-perception,composition,music-harmony-and-theory,programs,music-analysis,audio,genos,computer-science}
+}
 
 \end{document}
