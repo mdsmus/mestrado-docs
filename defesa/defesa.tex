@@ -27,19 +27,24 @@
 
 \frame{
   \frametitle{O que são contornos?}
-  \begin{enumerate}
-  \item Perfis, desenhos ou formatos de objetos.
-  \item Podem ser bidimensionais
-  \item Podem associar:
+  \begin{columns}[t]
+    \column{8cm}
     \begin{enumerate}
-    \item altura a comprimento
-    \item altura a largura
-    \item altura a tempo
+    \item Perfis, desenhos ou formatos de objetos.
+    \item Podem ser bidimensionais
+    \item Podem associar:
+      \begin{enumerate}
+      \item altura a comprimento
+      \item altura a largura
+      \item altura a tempo
+      \end{enumerate}
     \end{enumerate}
-  \end{enumerate}
-  \includegraphics[scale=.3]{roma-pura}
-  \hspace{1em}
-  \includegraphics[scale=.3]{contorno-com-roma}
+
+    \column[T]{3cm}
+    \includegraphics[scale=.3]{roma-pura}
+    
+    \includegraphics[scale=.3]{contorno-com-roma}
+  \end{columns}
 }
 
 \frame{
@@ -103,8 +108,10 @@
 
 \frame{
   \frametitle{Definição 1}
+
   Movimento ascendente ou descendente entre notas adjacentes de uma
-  melodia (Piston; Toch; Schoenberg; Edworthy; Dewitt e Crowder).
+  melodia
+  \cite{piston59:harmony,toch77:shaping,edworthy85:musical,dewitt.ea86:recognition}.
 
   \begin{figure}
     \centering
@@ -123,7 +130,7 @@
 \frame{
   \frametitle{Definição 2}
   Conjunto ordenado de elementos distintos com ou sem repetição,
-  numerados de forma ascendente (Morris 1993).
+  numerados de forma ascendente \cite{morris93:directions}.
 
   \begin{figure}
     \centering
@@ -173,6 +180,76 @@
   \includegraphics[scale=.5]{c-1023}
 }
 
+\subsection{Outras considerações}
+
+\frame{
+  \frametitle{Outras considerações sobre este trabalho}
+  \begin{enumerate}
+  \item Não trabalhei com medida do tempo no contorno
+  \item Definição de ``operações de contorno''
+  \item Análises de obras a partir da perspectiva de contornos:
+    Schoenberg \cite{friedmann85:methodology}, Webern
+    \cite{clifford95:contour,sampaio08:analise}, Dallapicolla
+    \cite{marvin88:generalized} e Mozart \cite{beard03:contour}.
+  \end{enumerate}
+}
+
+\frame{
+  \frametitle{Contornos em Etnomusicologia, Computação Musical e Percepção}
+  \begin{enumerate}
+  \item Etnomusicologia: Contornos para classificação de melodias
+    \cite{adams76:melodic}.
+  \item Computação musical: Contornos em sistemas \eng{query by
+      humming} \cite{ghias.ea95:query}.
+  \item Percepção: Semelhança entre contornos x semelhança entre
+    alturas
+    \cite{marvin88:generalized,friedmann90:ear,dowling.ea86:music,dowling.ea71:contour}.
+  \end{enumerate}
+}
+
+\frame{
+  \frametitle{Contorno como determinante composicional}
+}
+
+\subsection{Teorias de contornos}
+
+\frame{
+  \frametitle{Conceitos e operações de contornos}
+  \begin{enumerate}
+  \item Operações de mapeamento e comparação
+    \cite{friedmann85:methodology,friedmann87:response,morris87:composition,morris93:directions,marvin.ea87:relating,clifford95:contour,polansky.ea92:possible,quinn97:fuzzy,beard03:contour}.
+  \item Melodias com semelhança reconhecível apenas pelo contorno
+    \includegraphics[scale=.7]{ly-0312}
+    \includegraphics[scale=.6]{c-0312}
+  \end{enumerate}
+
+}
+
+\frame{
+  \frametitle{Representações de contornos}
+  \begin{columns}[t]
+
+    \column{6cm}
+  \begin{enumerate}
+  \item Representação simbólica
+    \begin{itemize}
+    \item Contorno: Z(2 0 3 1)
+    \item Elementos: Z$_0=2$, Z$_1=0$, Z$_2=3$ e Z$_3=1$
+    \end{itemize}
+  \item Representação gráfica
+
+    \includegraphics[scale=.6]{c-2031}
+  \end{enumerate}
+
+    \column[T]{4cm}
+  \includegraphics[scale=.5]{ly-2031}
+  \end{columns}
+}
+
+\frame{
+  \frametitle{}
+}
+
 \section{Análise da obra}
 
 \frame{
@@ -184,5 +261,8 @@
 \frame{
   \frametitle{}
 }
+
+\bibliographystyle{apalike}
+\bibliography{melodic-contour,music-perception,composition,music-harmony-and-theory,programs,music-analysis,audio,genos,computer-science}
 
 \end{document}
