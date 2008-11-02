@@ -250,8 +250,8 @@
 \frame{
   \frametitle{Representação de operações}
   \begin{itemize}
-  \item Retrógrado de X(1 2 3): $retr(X(1\:2\:3))=Y(3\:2\:1)$
-  \item Transposição de X(1 2 3) com fator 2: $transp(X(1\:2\:3)\:2)=W(3\:4\:5)$
+  \item Retrógrado de X(1 2 3): $retr(X(1\;2\;3))=Y(3\;2\;1)$
+  \item Transposição de X(1 2 3) com fator 2: $transp(X(1\;2\;3)\;2)=W(3\;4\;5)$
   \item Concatenação de operações: $transp(retr(inv(rot(X(1\;2\;3))\;2))\;3)$
   \end{itemize}
 }
@@ -279,7 +279,38 @@
 }
 
 \frame{
-  \frametitle{}
+  \frametitle{Operações de retrogradação e rotação}
+  \begin{itemize}
+  \item $retr(P(5\;9\;6\;8))=N(8\;6\;9\;5)$
+  \item $rot(P(5\;9\;6\;8)\;1)=L(9\;6\;8\;5)$
+  \item $rot(P(5\;9\;6\;8)\;2)=M(6\;8\;5\;9)$
+  \end{itemize}
+  \begin{columns}[t]
+    \column{3cm}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=.7]{c-5968}
+      \caption{P}
+    \end{figure}
+    \column{3cm}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=.7]{c-8695}
+      \caption{N}
+    \end{figure}
+    \column{3cm}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=.7]{c-9685}
+      \caption{L}
+    \end{figure}
+    \column{3cm}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=.7]{c-6859}
+      \caption{M}
+    \end{figure}
+  \end{columns}
 }
 
 \section{Análise da obra}
