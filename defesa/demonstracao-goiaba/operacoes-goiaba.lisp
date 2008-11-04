@@ -17,66 +17,59 @@
 (converter #s(1 4 2 5))
 (converter #d(#p(0 1) #p(1 4) #p(2 2) #p(3 5)))
 
+;; plotagem de contornos
+
+(simple-plot #s(5 3 4 1 2 0) "P(5 3 4 1 2 0)" :blue)
+
 ;; operações simples
 (retrogradar #s(1 4 2 5))
 (retrogradar #d(#p(0 1) #p(1 4) #p(2 2) #p(3 5)))
 
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (retrogradar #s(1 4 2 5)) "retrógrado" :orange)
+
+
 (transpor #s(1 4 2 5) 1)
 (transpor #s(1 4 2 5) 2)
+
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (transpor #s(1 4 2 5) 3) "transposição" :orange)
+
 
 (rotacionar #s(1 4 2 5))
 (rotacionar #s(1 4 2 5) 2)
 
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (rotacionar #s(1 4 2 5) 3) "rotação 3" :orange)
+
 ;; concatenando operações
 (rotacionar (retrogradar #s(1 4 2 5)))
+
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (retrogradar #s(1 4 2 5)) "retrógrado" :orange
+ (rotacionar (retrogradar #s(1 4 2 5)) 3) "rotação do retrógrado" :darkgreen)
+
 (inverter (retrogradar (rotacionar (transpor #s(1 4 2 5) -1))) 2)
 
-;; abstraindo contorno
-(let* ((contorno #s(1 4 2 5))
-       (rot (rotacionar contorno))
-       (transp (transpor contorno 2))
-       (retr (retrogradar contorno))
-       (inv (inverter contorno))
-       )
-  (list contorno rot transp retr inv))
-
-
-;; plotagem de contornos
-;;; plota 1 contorno
-
-;; função para simplificação
-(defun plota-um-contorno (legenda contorno)
-  (let ((*default-page-bounds* #(0 0 580 400)))
-    (plot-page "/tmp/foo.pdf"
-               (plot-contorno 50 50 legenda contorno))))
-
-(plota-um-contorno "P(5 3 4 1 2 0)" #s(5 3 4 1 2 0))
-
 ;;; plota vários contornos
-(let ((contorno #s(0 5 3 4 1 3)))
-  (let ((*default-page-bounds* #(0 0 580 400)))
-    (plot-page "/tmp/foo.pdf"
-      (plot-contorno-full 50 50
-			  contorno "original" :blue
-			  (inverter contorno) "inversão" :darkgreen
-        ))))
+(simple-plot
+ #s(0 5 3 4 1 3) "original" :blue
+ (inverter #s(0 5 3 4 1 3)) "inversão" :darkgreen)
+
+(simple-plot
+ #s(0 5 3 4 1 3) "original" :blue
+ (rotacionar #s(0 5 3 4 1 3) 1) "rotação 1" :red)
 
 (let ((contorno #s(0 5 3 4 1 3)))
-  (let ((*default-page-bounds* #(0 0 580 400)))
-    (plot-page "/tmp/foo.pdf"
-      (plot-contorno-full 50 50
-			  contorno "original" :blue
-			  (rotacionar contorno 1) "rotação 1" :red
-        ))))
-
-(let ((contorno #s(0 5 3 4 1 3)))
-  (let ((*default-page-bounds* #(0 0 580 400)))
-    (plot-page "/tmp/foo.pdf"
-      (plot-contorno-full 50 50
-			  contorno "original" :blue
-			  (transpor contorno 2) "transposição" :green
-			  (retrogradar contorno) "retrógrado" :red
-			  (inverter contorno) "inversão" :orange
-			  (aumentar-altura contorno 2) "aumentar-altura" :lightgreen
-			  (rotacionar contorno 1) "rotação" :darkcyan
-        ))))
+  (simple-plot
+   contorno "original" :blue
+   (transpor contorno 2) "transposição" :green
+   (retrogradar contorno) "retrógrado" :red
+   (inverter contorno) "inversão" :orange
+   (aumentar-altura contorno 2) "aumentar-altura" :lightgreen
+   (rotacionar contorno 1) "rotação" :darkcyan
+   ))
