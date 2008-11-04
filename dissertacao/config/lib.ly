@@ -24,5 +24,5 @@ st = \staccatissimo
 
 dolce = ^\markup{\italic{dolce}}
 
-tris = ^\markup{\sharp}
-tres = ^\markup{\flat}
+tris = ^\markup{\musicglyph #"scripts.trill" {\raise #1 \sharp}}
+tres =  ^\markup{\musicglyph #"scripts.trill" {\raise #1 \flat}}
