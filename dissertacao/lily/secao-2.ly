@@ -23,6 +23,10 @@
     \context {
       \Staff \consists "Horizontal_bracket_engraver"
     }
+    \context {
+      \Score
+      \remove "Bar_number_engraver"
+    }
   }
 }
 \paper {
