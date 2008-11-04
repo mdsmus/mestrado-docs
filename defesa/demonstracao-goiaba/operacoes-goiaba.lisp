@@ -43,9 +43,14 @@
 
 ;; plotagem de contornos
 ;;; plota 1 contorno
-(let ((*default-page-bounds* #(0 0 580 400)))
-  (plot-page "/tmp/foo.pdf"
-    (plot-contorno 50 50 "P(5 3 4 1 2 0)" #s(5 3 4 1 2 0))))
+
+;; função para simplificação
+(defun plota-um-contorno (legenda contorno)
+  (let ((*default-page-bounds* #(0 0 580 400)))
+    (plot-page "/tmp/foo.pdf"
+               (plot-contorno 50 50 legenda contorno))))
+
+(plota-um-contorno "P(5 3 4 1 2 0)" #s(5 3 4 1 2 0))
 
 ;;; plota vários contornos
 (let ((contorno #s(0 5 3 4 1 3)))
