@@ -1,8 +1,13 @@
+Citar alguém ao invés de dizer que prefiro
+
+Nas respostas mostrar que sou o especialista em contornos no brasil
+
 * porque repetição/ostinato?
 * porque quinteto de metais?
 ** gosto de música de câmara
 ** gosto da formação
 ** é mais fácil conseguir um quinteto do que uma orquestra.
+** p.45 fg tpa cl
 * poderia ter feito a musica sem contornos?
 ** não. o contorno está inserido em toda a estrturação da obra.
 ** pensei em contornos ao compor os principais elementos da obra
@@ -14,6 +19,14 @@
 ** contornos permitem operações e combinações de operações
 * pensa em motivos?
 ** sim, um motivo principal (g e fis cis dis c), e suas derivações
+* preferencia primeira pessoa
+** marie-claire
+** on writing well
+* posição de figuras
+** pegar referencias de tipografia
+* perguntas bizarras "isso é uma porcaria" ou "isso é uma maravilha"
+* o que achou da música
+* esse capítulo 3 poderia sair da dissertação?
 
 %%% Local Variables: 
 %%% mode: org
