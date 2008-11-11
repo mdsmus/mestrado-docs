@@ -1,8 +1,98 @@
 (in-package #:goiaba)
 (use-package :pdf)
 
+;;;;;;;;;;;;;
+;;; intro ;;;
+;;;;;;;;;;;;;
+
 ;; classe contorno simples
 #s(1 4 2 5)
+
+;; operações simples
+(retrogradar #s(1 4 2 5))
+
+;; plotagem de contornos
+(simple-plot #s(5 3 4 1 2 0) "P(5 3 4 1 2 0)" :blue)
+
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (retrogradar #s(1 4 2 5)) "retrógrado" :orange)
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;; outras operações ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; transposição
+(transpor #s(1 4 2 5) 1)
+
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (transpor #s(1 4 2 5) 3) "transposição" :orange)
+
+;; rotação
+(rotacionar #s(1 4 2 5))
+(rotacionar #s(1 4 2 5) 2)
+
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (rotacionar #s(1 4 2 5) 3) "rotação 3" :orange)
+
+;; inversão
+(inverter #s(1 4 2 5))
+(inverter #s(1 4 2 5) 3)
+
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (inverter #s(1 4 2 5)) "inversão" :orange)
+
+;; expansão de alturas
+;;; corrigir função
+(aumentar-altura #s(1 4 2 5) 3)
+
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (aumentar-altura #s(1 4 2 5) 3) "expansão" :orange)
+
+;; classe de contorno
+;;; corrigir função
+(cc #s(1 4 2 5))
+
+;; série de contornos adjacentes
+;;; corrigir função
+(cas #s(1 4 2 5))
+
+;; matriz de comparação
+;;; corrigir função
+(matriz-de-comparacao #s(1 4 2 5))
+
+;; concatenação de operações
+(rotacionar (retrogradar #s(1 4 2 5)))
+
+(simple-plot
+ #s(1 4 2 5) "original" :blue
+ (retrogradar #s(1 4 2 5)) "retrógrado" :orange
+ (rotacionar (retrogradar #s(1 4 2 5)) 3) "rotação do retrógrado" :darkgreen)
+
+(inverter (retrogradar (rotacionar (transpor #s(1 4 2 5) -1))) 2)
+
+;;; plota vários contornos
+(let ((contorno #s(0 5 3 4 1 3)))
+  (simple-plot
+   contorno "original" :blue
+   (transpor contorno 2) "transposição" :green
+   (retrogradar contorno) "retrógrado" :red
+   (inverter contorno) "inversão" :orange
+   (rotacionar contorno 1) "rotação" :darkcyan
+   ))
+
+(let ((contorno #s(0 5 3 4 1 3)))
+  (simple-plot
+   contorno "original" :blue
+   (aumentar-altura contorno 2) "expansão" :orange))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; outros detalhes sobre o programa ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; classe contorno com duração
 #d(#p(0 1) #p(1 4) #p(2 2) #p(3 5))
@@ -17,59 +107,6 @@
 (converter #s(1 4 2 5))
 (converter #d(#p(0 1) #p(1 4) #p(2 2) #p(3 5)))
 
-;; plotagem de contornos
-
-(simple-plot #s(5 3 4 1 2 0) "P(5 3 4 1 2 0)" :blue)
-
-;; operações simples
+;; operações simples. orientação a objetos
 (retrogradar #s(1 4 2 5))
 (retrogradar #d(#p(0 1) #p(1 4) #p(2 2) #p(3 5)))
-
-(simple-plot
- #s(1 4 2 5) "original" :blue
- (retrogradar #s(1 4 2 5)) "retrógrado" :orange)
-
-
-(transpor #s(1 4 2 5) 1)
-(transpor #s(1 4 2 5) 2)
-
-(simple-plot
- #s(1 4 2 5) "original" :blue
- (transpor #s(1 4 2 5) 3) "transposição" :orange)
-
-
-(rotacionar #s(1 4 2 5))
-(rotacionar #s(1 4 2 5) 2)
-
-(simple-plot
- #s(1 4 2 5) "original" :blue
- (rotacionar #s(1 4 2 5) 3) "rotação 3" :orange)
-
-;; concatenando operações
-(rotacionar (retrogradar #s(1 4 2 5)))
-
-(simple-plot
- #s(1 4 2 5) "original" :blue
- (retrogradar #s(1 4 2 5)) "retrógrado" :orange
- (rotacionar (retrogradar #s(1 4 2 5)) 3) "rotação do retrógrado" :darkgreen)
-
-(inverter (retrogradar (rotacionar (transpor #s(1 4 2 5) -1))) 2)
-
-;;; plota vários contornos
-(simple-plot
- #s(0 5 3 4 1 3) "original" :blue
- (inverter #s(0 5 3 4 1 3)) "inversão" :darkgreen)
-
-(simple-plot
- #s(0 5 3 4 1 3) "original" :blue
- (rotacionar #s(0 5 3 4 1 3) 1) "rotação 1" :red)
-
-(let ((contorno #s(0 5 3 4 1 3)))
-  (simple-plot
-   contorno "original" :blue
-   (transpor contorno 2) "transposição" :green
-   (retrogradar contorno) "retrógrado" :red
-   (inverter contorno) "inversão" :orange
-   (aumentar-altura contorno 2) "aumentar-altura" :lightgreen
-   (rotacionar contorno 1) "rotação" :darkcyan
-   ))
