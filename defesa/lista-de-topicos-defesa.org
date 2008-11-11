@@ -1,0 +1,77 @@
+* cumprimentos
+* introdução
+** o que são contornos?
+*** perfis, desenhos ou formatos de objetos
+*** ex.: contorno da romã
+*** podem ser bidimensionais e associar
+*** altura a comprimento
+*** altura a largura
+*** altura a tempo
+** contornos em música
+*** podem ser associados a
+**** altura - contornos melódicos (ex. partitura)
+**** densidade
+**** ritmo
+**** homogeneidade de timbre
+**** intensidade
+** importância de contornos
+*** coerência
+*** estruturas manipuláveis por operações
+** objetivos e justificativa
+*** estudos escassos de contornos em composição
+*** objetivo: composição baseado em operações de contornos
+*** outros objetivos
+**** desenvolvimento de processador de operações de contornos
+**** mapeamento de contornos para elementos musicais
+**** levantamento do estado de arte de teorias de contorno
+** metodologia
+*** revisão
+*** mapeamento
+*** composição de experimentos
+*** software
+*** composição
+* contornos
+** definições
+*** movimento ascendente/descente entre pontos adjacentes
+**** 5a sinfonia
+**** (- + -)
+*** conjunto ordenado de elementos enumerados de forma ascendente
+**** 5a sinfonia
+**** (3 1 2 0)
+*** comparação entre definições
+**** elementos não adjacentes
+**** expansão para outros elementos (dinâmica, densidade, etc)
+** melodias com semelhança de contornos
+** outras considerações
+*** não trabalho com medida de tempo
+*** definição de operações de contornos
+*** análises a partir de contornos (friedmann, clifford, marvin, beard, eu mesmo)
+*** contornos em etnomusicologia, computação e percepção
+*** contorno como determinante composicional (webern)
+** representações
+*** de contorno
+**** simbólica
+**** gráfica
+*** de operações
+**** simples
+**** concatenação
+** espaço de contorno
+*** elementos organizados do grave para agudo desconsiderando valores exatos
+*** segmentos e subconjuntos de segmentos
+** !!  -> goiaba
+** operações implementadas
+*** ver no goiaba!!!!
+** operações não implementadas
+*** INT_n
+*** forma normal
+*** forma prima
+*** similaridade de contornos
+*** intervalos de contorno
+*** vetores
+**** de intervalos de contorno
+**** de classe de contorno
+*** redução de contornos
+**** adams
+**** morris
+* análise da peça
+* conclusões
