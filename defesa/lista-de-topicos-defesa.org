@@ -74,4 +74,44 @@
 **** adams
 **** morris
 * análise da peça
+** características gerais
+*** instrumental
+*** duração
+** foco da composição
+*** contornos melódicos e não melódicos
+*** proporções
+*** metas composicionais
+*** gestos
+*** motivos
+** materiais utilizados
+*** estrutura de duas vozes
+*** motivo alfa
+*** contorno P(5 3 4 1 2 0)
+** aspectos formais
+*** sete seções
+*** proporção áurea aproximada
+** planejamento da composição
+*** mostrar tabela
+*** partes, seções e subseções
+*** duração/proporção
+*** metas composicionais
+*** andamentos
+*** texturas
+*** respirações entre as seções
+*** resultado diferente do planejamento
+** descrição dos gestos das seções
+*** descrever seções
+** aspectos verticais
+*** escala octatônica
+*** acorde motivo
+*** estrutura de duas vozes
+** uso de motivos
+** uso de contornos
+*** contorno simétrico P(5 3 4 1 2 0)
+*** combinações de operações utilizadas
+**** subconjunto com expansão e transposição (melodia inicial)
+**** interpolação com expansão
+**** rotação com expansão (sujeito e cs e seção 6)
+**** concatenação de contornos resultando em novo material
+**** rotação com retrogradação (solo oboé seção 5)
 * conclusões
