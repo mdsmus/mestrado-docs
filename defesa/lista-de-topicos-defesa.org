@@ -110,8 +110,18 @@
 *** contorno simétrico P(5 3 4 1 2 0)
 *** combinações de operações utilizadas
 **** subconjunto com expansão e transposição (melodia inicial)
-**** interpolação com expansão
+**** interpolação com expansão (solo oboé seção 5)
 **** rotação com expansão (sujeito e cs e seção 6)
 **** concatenação de contornos resultando em novo material
 **** rotação com retrogradação (solo oboé seção 5)
+*** operações não combinadas utilizadas
+**** int_1 (ostinato do fagote (- + - + -) seção 5)
+**** expansão associada à amplitude (segunda seção)
+***** processo a partir da escala octatônica
+**** redução de contornos (seção 3)
+***** omissão de notas
+*** associação a outros parâmetros
+**** andamentos. subconjunto de 5 elementos
+**** densidade. subconjunto de 5 elementos (seção 1)
+**** complexidade das texturas (- + - + -)
 * conclusões
