@@ -27,6 +27,7 @@ Nas respostas mostrar que sou o especialista em contornos no brasil
 * perguntas bizarras "isso é uma porcaria" ou "isso é uma maravilha"
 * o que achou da música
 * esse capítulo 3 poderia sair da dissertação?
+* contornos não podem ser determinantes composicionais
 
 %%% Local Variables: 
 %%% mode: org
