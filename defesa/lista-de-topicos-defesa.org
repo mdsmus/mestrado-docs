@@ -67,9 +67,6 @@
 *** forma prima
 *** similaridade de contornos
 *** intervalos de contorno
-*** vetores
-**** de intervalos de contorno
-**** de classe de contorno
 *** redução de contornos
 **** adams
 **** morris
