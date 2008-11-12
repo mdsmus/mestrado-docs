@@ -90,9 +90,30 @@
    contorno "original" :blue
    (aumentar-altura contorno 2) "expansão" :orange))
 
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; voltar para slides ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; outros detalhes sobre o programa ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; representação de contornos
+;; simples
+;; (5 9 6)
+;; com duração
+;; ((0 5)(1 9)(2 6))
+
+;;; classes e macros
+;; ponto: (x y)
+;; #p(x y)
+;; contorno-simples (y w)
+;; #s(y w)
+;; contorno-duracao ((x y)(x w))
+;; #d(#p(x y) #p(z w))
+
+;; classe contorno simples
+#s(1 4 2 5)
 
 ;; classe contorno com duração
 #d(#p(0 1) #p(1 4) #p(2 2) #p(3 5))
@@ -103,10 +124,16 @@
 #p(2 2)
 #p(3 5)
 
-;; conversão entre classes
+;; conversão entre classes (orientação a objetos)
 (converter #s(1 4 2 5))
 (converter #d(#p(0 1) #p(1 4) #p(2 2) #p(3 5)))
 
-;; operações simples. orientação a objetos
+;; operações simples (orientação a objetos)
 (retrogradar #s(1 4 2 5))
 (retrogradar #d(#p(0 1) #p(1 4) #p(2 2) #p(3 5)))
+
+;;; programação como metodologia de estudo
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; voltar para slides ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
