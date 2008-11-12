@@ -173,9 +173,54 @@
 }
 
 \frame{
-  \frametitle{Operações implementadas}
+  \frametitle{Operações}
+  \begin{itemize}
+  \item implementadas no Goiaba (rodar no programa)
+  \item não implementadas no Goiaba
+  \end{itemize}
+}
 
-  Ver direto no Goiaba
+\frame{
+  \frametitle{Matriz de comparação e INT$_n$}
+  \begin{figure}
+    \centering
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ & $0$ & $+$ & $+$ & $+$ \\
+      $9$ & $-$ & $0$ & $-$ & $-$ \\
+      $6$ & $-$ & $+$ & $0$ & $+$ \\
+      $8$ & $-$ & $+$ & $-$ & $0$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ &     & $+$ &     &     \\
+      $9$ &     &     & $-$ &     \\
+      $6$ &     &     &     & $+$ \\
+      $8$ &     &     &     & 
+    \end{tabular}
+
+    \vspace{1em}
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ &     &     & $+$ &     \\
+      $9$ &     &     &     & $-$ \\
+      $6$ &     &     &     &     \\
+      $8$ &     &     &     & 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ &     &     &     & $+$ \\
+      $9$ &     &     &     &     \\
+      $6$ &     &     &     &     \\
+      $8$ &     &     &     & 
+    \end{tabular}
+  \end{figure}
 }
 
 \section{Goiaba}
