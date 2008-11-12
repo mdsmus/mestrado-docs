@@ -181,6 +181,41 @@
 }
 
 \frame{
+  \frametitle{Forma normal, translação, forma prima e classe de
+    contornos equivalentes}
+  \begin{itemize}
+  \item Contorno original: (3 11 1 5 9 7)
+  \item Forma normal: (1 5 0 2 4 3)
+  \item Forma prima: (2 1 3 5 0 4)
+    \begin{enumerate}
+    \item transladar o contorno, caso não esteja em sua forma normal;
+    \item inverter o contorno (de $n$ elementos), caso a diferença entre
+      $(n - 1)$ e o valor do último elemento seja maior que o valor do
+      primeiro;
+    \item retrogradar o contorno se o valor do último elemento for maior
+      que o primeiro.
+    \end{enumerate}
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Tabela de classes de contornos equivalentes}
+  \begin{table}
+    \centering
+    \begin{tabular}{r|rr}
+      Classe & Forma prima & int$_1$ \\
+      \hline
+      2-1 & (0 1) & (+) \\
+      3-1 & (0 1 2) & (+ +) \\
+      3-2 & (0 2 1) & (+ -) \\
+      4-1 & (0 1 2 3) & (+ + +) \\
+      4-2 & (0 1 3 2) & (+ + -) \\
+      4-3 & (0 2 1 3) & (+ - +)
+    \end{tabular}
+  \end{table}
+}
+
+\frame{
   \frametitle{Matriz de comparação e INT$_n$}
   \begin{figure}
     \centering
@@ -222,6 +257,71 @@
     \end{tabular}
   \end{figure}
 }
+
+\frame{
+  \frametitle{Similaridade de contornos}
+
+  \begin{figure}
+    \centering
+    \begin{tabular}{c|cccc}
+      & $5$ & $9$ & $6$ & $8$ \\
+      \hline
+      $5$ &     & $+$ & $+$ & $+$ \\
+      $9$ &     &     & $-$ & $-$ \\
+      $6$ &     &     &     & $+$ \\
+      $8$ &     &     &     &
+    \end{tabular}
+    \begin{tabular}{c|cccc}
+      & $5$ & $7$ & $6$ & $8$ \\
+      \hline
+      $5$ &     & $+$ & $+$ & $+$ \\
+      $7$ &     &     & $-$ & $+$ \\
+      $6$ &     &     &     & $+$ \\
+      $8$ &     &     &     & 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|cccc}
+      & $3$ & $0$ & $5$ & $1$ \\
+      \hline
+      $3$ &     & $-$ & $+$ & $-$ \\
+      $0$ &     &     & $+$ & $+$ \\
+      $5$ &     &     &     & $-$ \\
+      $1$ &     &     &     & 
+    \end{tabular}
+
+    \begin{tabular}{c|cccc}
+      &     &     &     &     \\
+      \hline
+      &     & $+$ & $+$ & $+$ \\
+      &     &     & $-$ &     \\
+      &     &     &     & $+$ \\
+      &     &     &     &
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|cccc}
+      &     &     &     &     \\
+      \hline
+      &     &     & $+$ &     \\
+      &     &     &     &     \\
+      &     &     &     &     \\
+      &     &     &     &
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|cccc}
+      &     &     &     &     \\
+      \hline
+      &     &     & $+$ &     \\
+      &     &     &     & $+$ \\
+      &     &     &     &     \\
+      &     &     &     &
+    \end{tabular}
+  \end{figure}
+}
+
+\frame{
+  \frametitle{Intervalos e vetores}
+}
+
 
 \section{Goiaba}
 
