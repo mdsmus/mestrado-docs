@@ -28,6 +28,9 @@ Nas respostas mostrar que sou o especialista em contornos no brasil
 * o que achou da música
 * esse capítulo 3 poderia sair da dissertação?
 * contornos não podem ser determinantes composicionais
+* explique:
+** redução de adams
+** vetores de friedmann
 
 %%% Local Variables: 
 %%% mode: org
