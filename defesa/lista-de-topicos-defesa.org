@@ -58,9 +58,9 @@
 ** espaço de contorno
 *** elementos organizados do grave para agudo desconsiderando valores exatos
 *** segmentos e subconjuntos de segmentos
-** !!  -> goiaba
 ** operações implementadas
 *** ver no goiaba!!!!
+**** o que é o goiaba e para que serve
 ** operações não implementadas
 *** INT_n
 *** forma normal
@@ -73,6 +73,12 @@
 *** redução de contornos
 **** adams
 **** morris
+* goiaba
+** desenvolvimento
+*** common lisp e sbcl
+*** bottom-up
+*** orientação a objetos
+** ir para o goiaba
 * análise da peça
 ** características gerais
 *** instrumental
@@ -125,3 +131,15 @@
 **** densidade. subconjunto de 5 elementos (seção 1)
 **** complexidade das texturas (- + - + -)
 * conclusões
+** trabalhos futuros
+*** mapeamento de outros parâmetros
+**** dinâmica x densidade
+**** homogeneidade de timbre x complexidade rítmica
+*** teste de outras operações das teorias com pequenos experimentos
+*** uso de contornos em música computacional (outros elementos e parâmetros)
+*** expansão do software goiaba
+**** conversão de/para partituras musicais
+**** gui
+**** versão estável
+**** api fácil de usar
+**** anteprojeto aceito para doutorado
