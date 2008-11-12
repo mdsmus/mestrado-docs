@@ -14,6 +14,7 @@
 **** ritmo
 **** homogeneidade de timbre
 **** intensidade
+** melodias com semelhança de contornos
 ** importância de contornos
 *** coerência
 *** estruturas manipuláveis por operações
@@ -41,7 +42,6 @@
 *** comparação entre definições
 **** elementos não adjacentes
 **** expansão para outros elementos (dinâmica, densidade, etc)
-** melodias com semelhança de contornos
 ** outras considerações
 *** não trabalho com medida de tempo
 *** definição de operações de contornos
