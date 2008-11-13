@@ -72,6 +72,7 @@
 **** adams
 **** morris
 * goiaba
+** autoria: marcos e pedro
 ** desenvolvimento
 *** common lisp e sbcl
 *** bottom-up
