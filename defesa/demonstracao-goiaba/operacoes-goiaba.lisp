@@ -62,8 +62,7 @@
 (cas #s(1 4 2 5))
 
 ;; matriz de comparação
-;;; corrigir função
-(matriz-de-comparacao #s(1 4 2 5))
+(print-matriz-de-comparacao #s(1 4 2 5))
 
 ;; concatenação de operações
 (rotacionar (retrogradar #s(1 4 2 5)))
