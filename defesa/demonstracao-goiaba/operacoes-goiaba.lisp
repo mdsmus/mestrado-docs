@@ -47,11 +47,11 @@
 
 ;; expansão de alturas
 ;;; corrigir função
-(aumentar-altura #s(1 4 2 5) 3)
+(aumentar-altura #s(0 4 2 5) 3)
 
 (simple-plot
- #s(1 4 2 5) "original" :blue
- (aumentar-altura #s(1 4 2 5) 3) "expansão" :orange)
+ #s(0 4 2 5) "original" :blue
+ (aumentar-altura #s(0 4 2 5) 3) "expansão" :orange)
 
 ;; classe de contorno
 ;;; corrigir função
