@@ -15,16 +15,15 @@
 **** homogeneidade de timbre
 **** intensidade
 ** melodias com semelhança de contornos
+*** análises a partir de contornos (friedmann, clifford, marvin, beard, eu mesmo)
 ** importância de contornos
 *** coerência
 *** estruturas manipuláveis por operações
 ** objetivos e justificativa
 *** estudos escassos de contornos em composição
-*** objetivo: composição baseado em operações de contornos
-*** outros objetivos
+*** objetivos
+**** composição baseada em operações de contornos
 **** desenvolvimento de processador de operações de contornos
-**** mapeamento de contornos para elementos musicais
-**** levantamento do estado de arte de teorias de contorno
 ** metodologia
 *** revisão
 *** mapeamento
@@ -32,7 +31,7 @@
 *** software
 *** composição
 * contornos
-** literatura - vários autores
+** literatura - teorias de contornos desenvolvidas por vários autores 
 ** definições
 *** movimento ascendente/descente entre pontos adjacentes
 **** 5a sinfonia
@@ -46,28 +45,14 @@
 ** outras considerações
 *** não trabalho com medida de tempo
 *** definição de operações de contornos
-*** análises a partir de contornos (friedmann, clifford, marvin, beard, eu mesmo)
-*** contornos em etnomusicologia, computação e percepção
-*** contorno como determinante composicional (webern)
 ** representações
 *** de contorno
-**** simbólica
-**** gráfica
 *** de operações
-**** simples
-**** concatenação
-** espaço de contorno
-*** elementos organizados do grave para agudo desconsiderando valores exatos
-*** segmentos e subconjuntos de segmentos
 ** operações implementadas
 *** ver no goiaba!!!!
 **** o que é o goiaba e para que serve
 ** operações não implementadas
 *** INT_n
-*** forma normal
-*** forma prima
-*** similaridade de contornos
-*** intervalos de contorno
 *** redução de contornos
 **** adams
 **** morris
@@ -89,42 +74,25 @@
 *** gestos
 *** motivos
 ** materiais utilizados
-*** estrutura de duas vozes
 *** motivo alfa
 *** contorno P(5 3 4 1 2 0)
 ** aspectos formais
 *** sete seções
 *** proporção áurea aproximada
-** planejamento da composição
-*** mostrar tabela
-*** partes, seções e subseções
-*** duração/proporção
-*** metas composicionais
-*** andamentos
-*** texturas
-*** respirações entre as seções
-*** resultado diferente do planejamento
 ** descrição dos gestos das seções
 *** descrever seções (goiaba)
 ** aspectos verticais
 *** escala octatônica
-*** acorde motivo
-*** estrutura de duas vozes
 ** uso de motivos
 ** uso de contornos
 *** contorno simétrico P(5 3 4 1 2 0)
 *** combinações de operações utilizadas
-**** subconjunto com expansão e transposição (melodia inicial)
 **** interpolação com expansão (solo oboé seção 5)
 **** rotação com expansão (sujeito e cs e seção 6)
-**** concatenação de contornos resultando em novo material
 **** rotação com retrogradação (solo oboé seção 5)
 *** operações não combinadas utilizadas
-**** int_1 (ostinato do fagote (- + - + -) seção 5)
 **** expansão associada à amplitude (segunda seção)
-***** processo a partir da escala octatônica
 **** redução de contornos (seção 3)
-***** omissão de notas
 *** associação a outros parâmetros
 **** andamentos. subconjunto de 5 elementos
 **** densidade. subconjunto de 5 elementos (seção 1)
