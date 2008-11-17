@@ -116,19 +116,6 @@
 }
 
 \frame{
-  \frametitle{Contornos como determinante composicional}
-\begin{figure}
-  \centering
-    \includegraphics[scale=.7]{webern-tema-analisado}
-
-    \includegraphics[scale=.7]{webern-concatenacao-1}
-
-    \includegraphics[scale=.7]{webern-concatenacao-2}
-\end{figure}
-
-}
-
-\frame{
   \frametitle{Representações de contornos}
   \begin{itemize}
   \item Representação simbólica
@@ -153,55 +140,12 @@
   \end{itemize}
 }
 
-\frame {
-  \frametitle{Espaço de contorno}
-  \begin{figure}
-    \centering
-    \includegraphics[scale=1.5]{cspace-7420}
-  \end{figure}
-}
-
 \frame{
   \frametitle{Operações}
   \begin{itemize}
   \item implementadas no Goiaba (rodar no programa)
   \item não implementadas no Goiaba
   \end{itemize}
-}
-
-\frame{
-  \frametitle{Forma normal, translação, forma prima e classe de
-    contornos equivalentes}
-  \begin{itemize}
-  \item Contorno original: (3 11 1 5 9 7)
-  \item Forma normal: (1 5 0 2 4 3)
-  \item Forma prima: (2 1 3 5 0 4)
-    \begin{enumerate}
-    \item transladar o contorno, caso não esteja em sua forma normal;
-    \item inverter o contorno (de $n$ elementos), caso a diferença entre
-      $(n - 1)$ e o valor do último elemento seja maior que o valor do
-      primeiro;
-    \item retrogradar o contorno se o valor do último elemento for maior
-      que o primeiro.
-    \end{enumerate}
-  \end{itemize}
-}
-
-\frame{
-  \frametitle{Tabela de classes de contornos equivalentes}
-  \begin{table}
-    \centering
-    \begin{tabular}{r|rr}
-      Classe & Forma prima & int$_1$ \\
-      \hline
-      2-1 & (0 1) & (+) \\
-      3-1 & (0 1 2) & (+ +) \\
-      3-2 & (0 2 1) & (+ -) \\
-      4-1 & (0 1 2 3) & (+ + +) \\
-      4-2 & (0 1 3 2) & (+ + -) \\
-      4-3 & (0 2 1 3) & (+ - +)
-    \end{tabular}
-  \end{table}
 }
 
 \frame{
@@ -248,66 +192,6 @@
 }
 
 \frame{
-  \frametitle{Similaridade de contornos}
-
-  \begin{figure}
-    \centering
-    \begin{tabular}{c|cccc}
-      & $5$ & $9$ & $6$ & $8$ \\
-      \hline
-      $5$ &     & $+$ & $+$ & $+$ \\
-      $9$ &     &     & $-$ & $-$ \\
-      $6$ &     &     &     & $+$ \\
-      $8$ &     &     &     &
-    \end{tabular}
-    \begin{tabular}{c|cccc}
-      & $5$ & $7$ & $6$ & $8$ \\
-      \hline
-      $5$ &     & $+$ & $+$ & $+$ \\
-      $7$ &     &     & $-$ & $+$ \\
-      $6$ &     &     &     & $+$ \\
-      $8$ &     &     &     & 
-    \end{tabular}
-    \quad
-    \begin{tabular}{c|cccc}
-      & $3$ & $0$ & $5$ & $1$ \\
-      \hline
-      $3$ &     & $-$ & $+$ & $-$ \\
-      $0$ &     &     & $+$ & $+$ \\
-      $5$ &     &     &     & $-$ \\
-      $1$ &     &     &     & 
-    \end{tabular}
-
-    \begin{tabular}{c|cccc}
-      &     &     &     &     \\
-      \hline
-      &     & $+$ & $+$ & $+$ \\
-      &     &     & $-$ &     \\
-      &     &     &     & $+$ \\
-      &     &     &     &
-    \end{tabular}
-    \quad
-    \begin{tabular}{c|cccc}
-      &     &     &     &     \\
-      \hline
-      &     &     & $+$ &     \\
-      &     &     &     &     \\
-      &     &     &     &     \\
-      &     &     &     &
-    \end{tabular}
-    \quad
-    \begin{tabular}{c|cccc}
-      &     &     &     &     \\
-      \hline
-      &     &     & $+$ &     \\
-      &     &     &     & $+$ \\
-      &     &     &     &     \\
-      &     &     &     &
-    \end{tabular}
-  \end{figure}
-}
-
-\frame{
   \frametitle{Tipologia de Adams}
   \begin{figure}
     \centering
@@ -336,26 +220,15 @@
 
 \frame{
   \frametitle{Materiais utilizados}
-  \vspace{-2em}
   \begin{columns}[t]
-    \hspace{-2em}
-    \column[T]{5cm}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=1]{bifonia}
-      \vspace{-2em}
-      \caption{Estrutura de duas vozes}
-    \end{figure}
-
-    \vspace{-4em}
+    \column[T]{4cm}
     \begin{figure}
       \centering
       \includegraphics[scale=1]{motivo-alfa}
       \vspace{-2em}
       \caption{Motivo $\alpha$}
     \end{figure}
-
-    \column{4cm}
+    \column{6cm}
     \begin{figure}
       \centering
       \includegraphics[scale=1]{c-534120}
@@ -365,42 +238,8 @@
 }
 
 \frame{
-  \frametitle{Planejamento da composição}
-  \includegraphics[scale=.4]{planejamento-inicial}
-}
-
-\frame{
   \frametitle{Descrição das seções}
   (ver na partitura)
-}
-
-\frame{
-  \frametitle{Aspectos verticais}
-  \begin{columns}[t]
-    \column[T]{6cm}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=1]{bifonia}
-      \vspace{-2em}
-      \caption{Estrutura de duas vozes}
-    \end{figure}
-
-    \vspace{-5em}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=1]{escala-octatonica}
-      \vspace{-2em}
-      \caption{Escala octatônica}
-    \end{figure}
-
-    \column{6cm}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=1]{acorde-motivo}
-      \vspace{-2em}
-      \caption{Acorde motivo}
-    \end{figure}
-  \end{columns}
 }
 
 \frame{
@@ -447,26 +286,11 @@
 }
 
 \frame{
-  \frametitle{Motivo $\delta$}
-  \hspace{-2em} \includegraphics[scale=.7]{lily-044813d1e9-14}
-}
-
-\frame{
   \frametitle{Contorno principal}
   \begin{figure}
     \centering
     \includegraphics[scale=1]{c-534120}
     \caption{Contorno P(5 3 4 1 2 0)}
-  \end{figure}
-}
-
-\frame{
-  \frametitle{Subconjunto de contorno com expansão e transposição}
-  \begin{figure}
-    \centering
-    \includegraphics[scale=1]{melodia-inicial}
-
-    \includegraphics{c-201}
   \end{figure}
 }
 
@@ -502,13 +326,6 @@
 }
 
 \frame{
-  \frametitle{Int$_1$}
-  (- + - + -)
-
-  \hspace{-2em} \includegraphics[scale=.7]{lily-044813d1e9-29}
-}
-
-\frame{
   \frametitle{Expansão associada à amplitude}
   \begin{figure}
     \centering
@@ -521,18 +338,6 @@
   \begin{figure}
     \centering
     \includegraphics[scale=.6]{secao-2}
-  \end{figure}
-}
-
-\frame{
-  \frametitle{Redução de contornos}
-  \begin{figure}
-    \centering
-    \includegraphics[scale=.8]{reducao-contornos-secao-3-clarinete}
-
-    \includegraphics[scale=.8]{reducao-contornos-secao-3-oboe}
-
-    \includegraphics[scale=.8]{reducao-contornos-secao-3-clarinete-2}
   \end{figure}
 }
 
