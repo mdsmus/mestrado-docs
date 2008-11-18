@@ -23,11 +23,6 @@
 
 \frame{\titlepage}
 
-\frame{
-  \frametitle{Esta apresentação}
-  \tableofcontents
-}
-
 \section{Introdução}
 
 \frame{
@@ -89,10 +84,9 @@
   \end{figure}
   \begin{itemize}
   \item Movimento asc./desc. entre elementos adjacentes
-    \cite{piston59:harmony,toch77:shaping,edworthy85:musical,dewitt.ea86:recognition}
 
     (- + -)
-  \item Conjunto ordenado numerado ascendentemente \cite{morris93:directions}
+  \item Conjunto ordenado numerado ascendentemente
 
     (3 1 2 0)
   \end{itemize}
@@ -119,10 +113,8 @@
   \frametitle{Representações de contornos}
   \begin{itemize}
   \item Representação simbólica
-    \begin{itemize}
-    \item Contorno: Z(2 0 3 1)
-    \item Elementos: Z$_0=2$, Z$_1=0$, Z$_2=3$ e Z$_3=1$
-    \end{itemize}
+
+    Contorno: Z(2 0 3 1)
   \item Representação gráfica
     \begin{figure}
       \centering
@@ -134,9 +126,11 @@
 \frame{
   \frametitle{Representação de operações}
   \begin{itemize}
-  \item Retrógrado de X(1 2 3): $retr(X(1\;2\;3))=Y(3\;2\;1)$
+  \item Retrógrado de X(1 2 3):\\
+    $retr(X(1\;2\;3))=Y(3\;2\;1)$
   \item Transposição de X(1 2 3) com fator 2: $transp(X(1\;2\;3)\;2)=W(3\;4\;5)$
-  \item Concatenação de operações: $transp(retr(inv(rot(X(1\;2\;3))\;2))\;3)$
+  \item Concatenação de operações:
+    $transp(retr(inv(rot(X(1\;2\;3))\;2))\;3)=K(6\;4\;5)$
   \end{itemize}
 }
 
@@ -358,12 +352,6 @@
   \item Discussão
   \item Trabalhos futuros
   \end{itemize}
-}
-
-\frame[allowframebreaks]{
-  \frametitle{Referências}
-  \bibliographystyle{alpha}
-  \bibliography{melodic-contour,music-perception,composition,music-harmony-and-theory,programs,music-analysis,audio,genos,computer-science}
 }
 
 \end{document}
