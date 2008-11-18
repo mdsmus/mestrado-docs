@@ -24,6 +24,11 @@ defesa/*.out
 defesa/*.ps
 defesa/*.pdf
 defesa/*.snm
+defesa/lista-de-topicos/*.nav
+defesa/lista-de-topicos/*.out
+defesa/lista-de-topicos/*.ps
+defesa/lista-de-topicos/*.pdf
+defesa/lista-de-topicos/*.snm
 *.aux
 *.bbl
 *.blg
