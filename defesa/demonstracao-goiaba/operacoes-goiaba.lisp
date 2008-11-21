@@ -53,15 +53,8 @@
  #s(0 4 2 5) "original" :blue
  (aumentar-altura #s(0 4 2 5) 3) "expansão" :orange)
 
-;; classe de contorno
-;;; corrigir função
-(cc #s(1 4 2 5))
-
-;; série de contornos adjacentes
-;;; corrigir função
-(cas #s(1 4 2 5))
-
 ;; matriz de comparação
+;;; explicar com slides
 (print-matriz-de-comparacao #s(1 4 2 5))
 
 ;; concatenação de operações
@@ -74,7 +67,7 @@
 
 (inverter (retrogradar (rotacionar (transpor #s(1 4 2 5) -1))) 2)
 
-;;; plota vários contornos
+;;; plotagem de vários contornos
 (let ((contorno #s(0 5 3 4 1 3)))
   (simple-plot
    contorno "original" :blue
