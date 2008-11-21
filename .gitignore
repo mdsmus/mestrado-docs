@@ -19,6 +19,8 @@ dissertacao/lily/*.pdf
 dissertacao/lily/*.tex
 dissertacao/lily/*.texi
 dissertacao/lily/*.midi
+dissertacao/data/*.pdf
+dissertacao/figs/*.pdf
 defesa/*.nav
 defesa/*.out
 defesa/*.ps
