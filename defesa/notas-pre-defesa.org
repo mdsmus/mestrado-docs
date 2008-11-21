@@ -1,0 +1,27 @@
+Notas da pré-defesa
+
+* Pedro
+  - tick: bater na perna
+  - falar em pé
+  - postura
+  - olhar menos para o papel
+  - não precisa dizer o que fez (depois de objetivos e justifivativa)
+  - tirar .5 dos gráficos
+  - em contornos: frisar que não só densidade acordes/dinâmica
+  - operações: use vírgulas para separar parâmetros
+  - goiaba: 8' a 12'45"
+  - matriz compassos: highlight diagonais
+  - por que não aprofundou em morris?
+  - não precisa falar especificidades do goiaba (objetos, etc) - falar
+    antes da demo
+  - não dizer "falta de tempo"
+  - conversor de objetos (não classes)
+  - quando listar coisas falar que tem tudo na dissertação
+  - 20'?
+** composição 
+   - preparar melhor exemplos
+   - focar em contornos na música e não descrever
+   - 24:35 highlight motivos nos exemplos
+   - não usar "não consegui", mas "não usei"
+   - não ter slide conclusão
+     - listar cada caso ou vantagens do que fez
