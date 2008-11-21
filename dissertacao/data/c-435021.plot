@@ -1,4 +1,6 @@
 set terminal postscript eps enhanced
+set xtics 1
+set ytics 1
 set output "data/c-435021.eps"
 set grid
 set nokey

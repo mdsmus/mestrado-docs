@@ -1,6 +1,8 @@
 set terminal postscript eps enhanced
 set ylabel "altura"
 set xlabel "tempo"
+set xtics 1
+set ytics 1
 set output "data/c-6859.eps"
 set grid
 set nokey
