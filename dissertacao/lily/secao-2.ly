@@ -38,4 +38,5 @@
   tagline = 0
   indent = #0
   print-page-number = #'nil
+  between-system-padding = -4\cm
 }
