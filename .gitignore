@@ -29,6 +29,9 @@ defesa/lista-de-topicos/*.out
 defesa/lista-de-topicos/*.ps
 defesa/lista-de-topicos/*.pdf
 defesa/lista-de-topicos/*.snm
+defesa/audio/*.ps
+defesa/audio/*.pdf
+defesa/audio/*.midi
 *.aux
 *.bbl
 *.blg
