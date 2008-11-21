@@ -1,7 +1,9 @@
 NAME = defesa
 TEXSRCS =  figs/pagina-inicial-opus-6.eps figs/planejamento-inicial.eps
 
-OTHER += $(LILY_EPS) $(OTHER_EPS4) $(OTHER_PDF4)
+OTHER += $(LILY_PDF) $(OTHER_EPS4) $(OTHER_PDF4) $(OTHER_PDF3)
+
+USE_PDFLATEX = 1
 
 -include ~/repositorios/genos-repos/lib/make/latex.mk
 
