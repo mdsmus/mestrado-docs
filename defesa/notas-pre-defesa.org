@@ -25,3 +25,33 @@ Notas da pré-defesa
    - não usar "não consegui", mas "não usei"
    - não ter slide conclusão
      - listar cada caso ou vantagens do que fez
+
+* marcos di silva
+  - grifar exemplos
+  - não descrever seções da peça
+    - mostrar operações do fugato no goiaba
+  - no goiaba falar mais sobre gui
+  - na definição falar sobre elementos distintos
+  - explicar o pq de transposição
+  - highlight matriz
+  - mostrar apenas redução de adams
+  - semelhança e _possível_ coerência
+  - listar coisas no último slide
+    - recapitular o que fiz na conclusão
+  - imprimir 4 partituras
+  - tocar exemplos
+  - dissertação
+    - ligar coerência com análise de webern
+    - notas para coisas como teorias de conjuntos, etc
+  - recolocar slide com análise de webern
+  - semelhanças de melodias: usar 5a sinfonia
+  - colocar áudio em todos os exemplos
+  - deixar slide de espaço de contorno de sobreaviso
+
+* espinheira
+  - p. 14 - erro notação (fator 2)
+  - p. 15 - formatação
+  - 3.2 - propaganda das ferramentas (pode sair)
+  - fig. 4.6, .7, .9b, .10, .13. exemplos crus
+  - partitura - letras M e Q (formatação)
+  - p. 75 - corrigir "de com a"
