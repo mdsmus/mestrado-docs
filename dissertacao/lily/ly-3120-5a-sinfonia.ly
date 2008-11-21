@@ -15,9 +15,10 @@
         d2\stopGroup
         \bar "||"
       }
-      r8 g'\startGroup^\markup{m2} g g
-      aes,2
-      r8 ges' ges ges a,!2\stopGroup
+      \clef bass
+      g4.\startGroup^\markup{m2} a,,8
+      g'2
+      aes,\stopGroup
       \bar "||"
     }
   }
