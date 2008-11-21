@@ -6,11 +6,9 @@ Notas da pré-defesa
   - postura
   - olhar menos para o papel
   - não precisa dizer o que fez (depois de objetivos e justifivativa)
-  - tirar .5 dos gráficos
   - em contornos: frisar que não só densidade acordes/dinâmica
   - operações: use vírgulas para separar parâmetros
   - goiaba: 8' a 12'45"
-  - matriz compassos: highlight diagonais
   - por que não aprofundou em morris?
   - não precisa falar especificidades do goiaba (objetos, etc) - falar
     antes da demo
@@ -33,19 +31,14 @@ Notas da pré-defesa
   - no goiaba falar mais sobre gui
   - na definição falar sobre elementos distintos
   - explicar o pq de transposição
-  - highlight matriz
   - mostrar apenas redução de adams
-  - semelhança e _possível_ coerência
   - listar coisas no último slide
     - recapitular o que fiz na conclusão
   - imprimir 4 partituras
-  - tocar exemplos
   - dissertação
     - ligar coerência com análise de webern
     - notas para coisas como teorias de conjuntos, etc
   - recolocar slide com análise de webern
-  - semelhanças de melodias: usar 5a sinfonia
-  - colocar áudio em todos os exemplos
   - deixar slide de espaço de contorno de sobreaviso
 
 * espinheira
