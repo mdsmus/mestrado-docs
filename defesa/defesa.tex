@@ -13,6 +13,7 @@
 
 \newcommand{\eng}[1]{\textit{#1}}
 \newcommand{\obra}{\textit{Em torno da romã}}
+\newcommand{\goiaba}{\textit{Goiaba}}
 
 \title{\obra{}: aplicações de operações de contorno na composição}
 \author{Marcos da Silva Sampaio}
@@ -169,8 +170,8 @@
 \frame{
   \frametitle{Operações}
   \begin{itemize}
-  \item implementadas no Goiaba (rodar no programa)
-  \item não implementadas no Goiaba
+  \item implementadas no \goiaba{} (rodar no programa)
+  \item não implementadas no \goiaba{}
   \end{itemize}
 }
 
@@ -240,18 +241,6 @@
     \centering
     \includegraphics[scale=.3]{adams-typology}
   \end{figure}
-}
-
-\section{Goiaba}
-
-\frame{
-  \frametitle{Desenvolvimento do Goiaba}
-  \begin{itemize}
-  \item Common Lisp e SBCL
-  \item Metodologia bottom-up
-  \item Orientação a objetos
-  \item Classes, macros, métodos e saída (no programa)
-  \end{itemize}
 }
 
 \section{Composição}
@@ -414,9 +403,38 @@
 \frame{
   \frametitle{Conclusões}
   \begin{itemize}
+  \item O que foi feito
+    \begin{itemize}
+    \item Revisão de literatura
+    \item Mapeamento de elementos para contornos
+    \item Composição de experimentos
+    \item Software \goiaba{}
+    \item Composição de \obra{}
+    \end{itemize}
   \item Discussão
-  \item Trabalhos futuros
+    \begin{itemize}
+    \item Operações não utilizadas
+    \end{itemize}
   \end{itemize}
+}
+
+\frame{
+  \frametitle{Trabalhos futuros}
+  \begin{enumerate}
+  \item Teste de outras operações das teorias com pequenos experimentos
+  \item Mapeamento de outros parâmetros (dinâmica x densidade)
+  \item Uso de contornos em música computacional (outros elementos e parâmetros)
+  \item Expansão do software goiaba:
+    \begin{itemize}
+    \item lançamento de uma versão para usuário
+    \item interface gráfica
+    \item api fácil de usar
+    \item conversão de/para partituras musicais
+    \end{itemize}
+  \end{enumerate}
+
+  \tiny
+  A dissertação está disponível em \url{www.marcosdisilva.net/mestrado}
 }
 
 \end{document}
