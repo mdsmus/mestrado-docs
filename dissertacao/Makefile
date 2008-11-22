@@ -1,10 +1,12 @@
 NAME = dissertacao-ufba
-TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex paginas-composicao.tex agradecimentos.tex paginas-composicao.lytex figs/contornos.eps
+TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.tex paginas-composicao.tex agradecimentos.tex paginas-composicao.lytex
 
 SCOREDIR = ../opus-6-composicao-mestrado
 GESTOS = $(SCOREDIR)/script/systemfiles/gestosglobal.ly
 
-OTHER += $(LILY_EPS) $(OTHER_EPS4)
+OTHER += $(LILY_PDF) $(OTHER_EPS4) $(OTHER_PDF4) $(OTHER_PDF3)
+
+USE_PDFLATEX = 1
 
 -include ~/lib/make/latex.mk
 -include ~/repositorios/genos-repos/lib/make/latex.mk
@@ -34,6 +36,3 @@ $(GESTOS):
 	cd $(SCOREDIR) ;\
 	make atualiza compila ;\
 	cd -
-
-figs/contornos.eps: figs/contornos.pdf
-	convert $< $@
