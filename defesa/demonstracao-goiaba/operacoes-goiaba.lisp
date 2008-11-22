@@ -82,3 +82,41 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; voltar para slides ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; operações utilizadas no fugato
+
+;; sujeito
+(simple-plot
+ #s(5 3 4 1 2 0) "P" :blue)
+
+(simple-plot
+ (rotacionar #s(5 3 4 1 2 0) 3) "rot(P) 3" :darkgreen)
+
+(let ((contorno #s(5 3 4 1 2 0)))
+  (simple-plot
+   contorno "P" :blue
+   (rotacionar contorno 3) "rot(P) 3" :darkgreen))
+
+;; contra-sujeito
+
+(simple-plot
+ (retrogradar #s(5 3 4 1 2 0)) "retr(P)" :darkcyan)
+
+(simple-plot
+ (rotacionar (retrogradar #s(5 3 4 1 2 0)) 5) "rot(retr(P) 5)" :red)
+
+(simple-plot
+ (rotacionar (retrogradar #s(5 3 4 1 2 0)) 4) "rot(retr(P) 4)" :green)
+
+(simple-plot
+ (rotacionar (retrogradar #s(5 3 4 1 2 0)) 3) "rot(retr(P) 3)" :orange)
+
+(let ((contorno #s(5 3 4 1 2 0)))
+  (simple-plot
+   (rotacionar (retrogradar contorno) 5) "rot(retr(P) 5)" :red
+   (rotacionar (retrogradar contorno) 4) "rot(retr(P) 4)" :green
+   (rotacionar (retrogradar contorno) 3) "rot(retr(P) 3)" :orange))
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; voltar para slides ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
