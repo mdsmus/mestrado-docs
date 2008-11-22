@@ -19,6 +19,7 @@ dissertacao/lily/*.pdf
 dissertacao/lily/*.tex
 dissertacao/lily/*.texi
 dissertacao/lily/*.midi
+dissertacao/lily/*.ps
 dissertacao/data/*.pdf
 dissertacao/figs/*.pdf
 defesa/*.nav
@@ -34,6 +35,8 @@ defesa/lista-de-topicos/*.snm
 defesa/audio/*.ps
 defesa/audio/*.pdf
 defesa/audio/*.midi
+defesa/audio/*.wav
+defesa/audio/*.og*
 *.aux
 *.bbl
 *.blg
