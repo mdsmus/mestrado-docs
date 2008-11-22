@@ -5,7 +5,6 @@
 #(set-global-staff-size 12.5)
 
 global = {
-%   \with-color #(x11-color 'red)
   \override TextScript #'color = #red
   \override Staff.HorizontalBracket #'color = #blue
   \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-7 . 3)
