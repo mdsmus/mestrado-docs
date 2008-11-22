@@ -5,7 +5,9 @@
 ;;; intro ;;;
 ;;;;;;;;;;;;;
 
-;; classe contorno simples
+;; o que é o Goiaba e interface
+
+;; objeto contorno simples
 #s(1 4 2 5)
 
 ;; operações simples
@@ -46,7 +48,7 @@
  (inverter #s(1 4 2 5)) "inversão" :orange)
 
 ;; expansão de alturas
-;;; corrigir função
+;;; função a ser corrigida
 (aumentar-altura #s(0 4 2 5) 3)
 
 (simple-plot
@@ -76,11 +78,6 @@
    (inverter contorno) "inversão" :orange
    (rotacionar contorno 1) "rotação" :darkcyan
    ))
-
-(let ((contorno #s(0 5 3 4 1 3)))
-  (simple-plot
-   contorno "original" :blue
-   (aumentar-altura contorno 2) "expansão" :orange))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; voltar para slides ;;
