@@ -4,7 +4,7 @@
 
 \score {
   \new Staff {
-    \tempo 4=108
+    \tempo 4=144
     \time 2/4
     \key c \minor
     \relative c'' {

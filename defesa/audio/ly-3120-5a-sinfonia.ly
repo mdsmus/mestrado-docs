@@ -4,7 +4,7 @@
 
 \score {
   \new Staff {
-    \tempo 4=108
+    \tempo 4=144
     \time 4/4
     \relative c'' {
       \bracketUp
