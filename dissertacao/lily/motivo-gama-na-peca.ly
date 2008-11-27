@@ -23,7 +23,7 @@ oboe = {
     %% preparação com retrogradação de #s(5 3 4 1 2 0)
     \override TextScript #'color = #red
     \override TextScript #'extra-offset = #'( 0 . 1 )
-    r4 r8. c16\p(^\startGroup^\markup{\italic{motivo #(ly:export (ly:wide-char->utf-8 #x3B2))}} ees des fis e) g4~
+    r4 r8. c16\p(^\startGroup^\markup{\italic{motivo #(ly:export (ly:wide-char->utf-8 #x3B3))}} ees des fis e) g4~
     g\stopGroup e8\st fis4. cis8 g'
     e2 r4 s
   }
