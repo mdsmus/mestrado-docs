@@ -32,6 +32,11 @@ defesa/lista-de-topicos/*.out
 defesa/lista-de-topicos/*.ps
 defesa/lista-de-topicos/*.pdf
 defesa/lista-de-topicos/*.snm
+defesa/anexos/*.nav
+defesa/anexos/*.out
+defesa/anexos/*.ps
+defesa/anexos/*.pdf
+defesa/anexos/*.snm
 defesa/audio/*.ps
 defesa/audio/*.pdf
 defesa/audio/*.midi
