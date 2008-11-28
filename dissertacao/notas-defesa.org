@@ -13,4 +13,3 @@ Notas da banca da defesa (28/11/2008)
   - Deixar mais claro contornos "iguais" (ex: rotação)
   - usar letras para função (Pedro discorda). também discordo
   - Contorno em Beethoven: na minha opinião é abstrato. prefiro não mudar
-  - Terminologia: densidade.
