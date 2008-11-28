@@ -7,12 +7,10 @@ Notas da banca da defesa (28/11/2008)
   - Forma prima não é operação
   - Termo amplitude é ruim
   - Sexta francesa no acorde motivo
-  - Legenda: usar "som real", e não "em dó"
   - Sugestão: seg-contorno para duração
 * Jamary
   - "Pode ser" na intro
   - Deixar mais claro contornos "iguais" (ex: rotação)
   - usar letras para função (Pedro discorda)
-  - Não usar CLOS
   - Contorno em Beethoven: na minha opinião é abstrato
   - Terminologia: densidade
