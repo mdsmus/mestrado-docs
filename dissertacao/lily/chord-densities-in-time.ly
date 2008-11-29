@@ -4,9 +4,9 @@
   \new Staff \with {
     \remove "Time_signature_engraver" }{
       \time 5/4
-      \relative c'' {
+      \relative c' {
         \override Stem #'transparent = ##t
-        <a c>4 b <g a c d> <f g b c d e f>
+        <f b f'>4 <f f'> <f a c f> <f g a b c d e f>
       }
     }
   \layout {
