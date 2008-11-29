@@ -52,7 +52,7 @@ gestoABAtrompa = {
     %% lembrete: dimnuir duração das notas
     R1*5/4*5
     r1 g4~-+\p
-    g2.~-+ g2-+
+    g2.~ g2
     r1 a4~
   }
 }
@@ -114,7 +114,7 @@ gestoBABtrompa = {
     g,4.\st cis4.\st
     g4.\st r8 dis'4\st
     g,4.\st dis'4.\st
-    g,4.\st g4.\mp(
+    g,4.\st g4.~\mp(
     g4.~ g8 e4
     fis2.~
     fis4. c4.~
@@ -146,8 +146,8 @@ gestoBACtrompa = {
       g,4.\st cis4.\st
       g4.\st r8 dis'4\st
     }
-    g,4.\st\< cis4.\st
-    g'4.\st cis4.~\f(
+    g,4.\st\< dis'4.\st
+    g4.\st cis4.~\f(
     cis4.~ cis8 bes4
     c4. g
     a4 fis8~ fis4.)
@@ -218,13 +218,13 @@ gestoCACtrompa = {
     R1*3
     r2 \times 2/3 {a2-+\p( bes4}
     a1~-+
-    a1)-+
+    a1)
     R1
     r2 \times 2/3 {a2-+( bes4}
     a1)-+
     R1
     a1~-+\mp
-    a1-+
+    a1
     R1
     c2-+\mf\<( bes-+
     a-+)\ff r

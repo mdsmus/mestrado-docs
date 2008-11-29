@@ -75,7 +75,7 @@ gestoABAflauta = {
 gestoABBflauta = {
   \relative c'''' {
     \setTextCresc
-    g2.~\< g4 r
+    g1~\< r4
     g2. g2->~
     g4 g2.-> g4~->\f
     g2 g2.->
@@ -127,7 +127,7 @@ gestoBACflauta = {
     a2.
     r16 c\mf( ees des fis e g4.~
     g2.)
-    e4.( fis4.
+    e4.( fis4.~
     fis4. cis4.
     dis4.~ dis8 c4~
     c4.~ c8) r4
@@ -141,7 +141,7 @@ gestoBACflauta = {
     bes4.~ bes8 c4
     a2.~\p
     a2.) 
-    r4. r16 a16\<( c bes dis cis
+    r4. r16 a16\<( c bes dis cis)
   }
 }
 
@@ -215,16 +215,16 @@ gestoBBCflauta = {
     bes8->( e,8) g'4( cis,8~
     cis e8~\tris e2) r4
 
-    g,2~ g4
+    g,2.
 
-    gis16( ais b cis
+    gis16( ais b cis)
 
-    d4-^) b-^ cis-^ gis8( ais
-    g?2~ g4)
+    d4-^ b-^ cis-^ gis8( ais
+    g?2.)
 
-    gis16( ais b cis
+    gis16( ais b cis)
 
-    d4-^) b-^ cis-^ gis8( ais
+    d4-^ b-^ cis-^ gis8( ais
     g?4.) r8 
 
     d'4-^ b-^ 
