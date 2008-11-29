@@ -3,7 +3,10 @@
 \include "../config/lib.ly"
 
 \score {
-  \new Staff \with { \remove "Time_signature_engraver" }{
+  \new Staff \with {
+    \remove "Time_signature_engraver"
+    \remove "Bar_number_engraver"
+  }{
       \override Stem #'transparent = ##t
       \relative c'''' {
         \time 16/4
@@ -18,6 +21,10 @@
   \layout {
     \context {
       \Staff \consists "Horizontal_bracket_engraver"
+    }
+    \context {
+      \Score
+      \remove "Bar_number_engraver"
     }
   }
 }

@@ -3,7 +3,10 @@
 \include "../config/lib.ly"
 
 \score {
-  \new Staff \with { \remove "Time_signature_engraver" }{
+  \new Staff \with {
+    \remove "Time_signature_engraver"
+    \remove "Bar_number_engraver"
+  }{
       \override Stem #'transparent = ##t
       \relative c'''' {
         \time 11/4
@@ -11,6 +14,7 @@
         \override TextScript #'extra-offset = #'( 0 . 2 )
         g4\startGroup^\markup{Escala octatônica} fis e dis cis c bes a g4 fis e\stopGroup \bar "||"
         \time 6/4
+        \break
         g'\startGroup^\markup{Notas escolhidas} e cis bes g e\stopGroup \bar "||"
         g'\startGroup^\markup{Contorno} cis, e g, bes e,\stopGroup \bar "||"
       }
@@ -18,6 +22,10 @@
   \layout {
     \context {
       \Staff \consists "Horizontal_bracket_engraver"
+    }
+    \context {
+      \Score
+      \remove "Bar_number_engraver"
     }
   }
 }
