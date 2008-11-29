@@ -102,8 +102,8 @@ gestoBAAflauta = {
 gestoBABflauta = {
   \relative c'' {
     R1*6/8*12
-    r4. r8 \times 2/3 { r8 c\mf( dis }
-    \times 2/3 { cis fis e } g8~ g4.~
+    r4. r8 \times 2/3 { r8 c\mf( ees }
+    \times 2/3 { des fis e? } g8~ g4.~
     g2.~
     g8 e4~ e8 fis4~
     fis2.~
@@ -125,7 +125,7 @@ gestoBACflauta = {
       a2.
     }
     a2.
-    r16 c\mf( dis cis fis e g4.~
+    r16 c\mf( ees des fis e g4.~
     g2.)
     e4.( fis4.
     fis4. cis4.
