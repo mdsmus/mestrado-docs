@@ -9,8 +9,10 @@
       \set Score.currentBarNumber = #7
       \bar ""
       \bracketUp
-      \override TextScript #'extra-offset = #'( 0 . 2 )
-      r8 cis\startGroup^\markup{(2 1 0)} a gis\stopGroup
+      \once \override TextScript #'extra-offset = #'( -4 . 0 )
+      r8^\markup{\italic{vln.I}}
+      \override TextScript #'extra-offset = #'( 0 . 1.5 )
+      cis\startGroup^\markup{(2 1 0)} a gis\stopGroup
       e\startGroup^\markup{(2 1 0)} dis d\stopGroup
       \override TextScript #'extra-offset = #'( 0 . 3 )
       des\startGroup^\markup{(1 0 2)} r c r b'\stopGroup
