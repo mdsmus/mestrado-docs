@@ -239,7 +239,7 @@ gestoCAAclarinetebb = {
   \relative c' {
     R1*3
     %% junto à trompa
-    r2. g4~\p
+    r2 r4 g4~\p
     g e8\st fis4. fis8 g
     e2 r4 g4~
     g e8\st fis4. fis8 g~

@@ -190,7 +190,7 @@ gestoCAAtrompa = {
     R1*3
     %% bifonia
     %% junto com clarinete. adaptação por causa da tessitura do cl.
-    r2. ees4~\p
+    r2 r4 ees4~\p
     ees c8\st bes4. cis8 dis
     c?2 r4 ees4~
     ees c8\st bes4. cis8 dis~

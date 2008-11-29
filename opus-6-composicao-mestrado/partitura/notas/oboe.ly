@@ -388,7 +388,7 @@ gestoCBEoboe = {
     c4 cis8\st a\st r2
     g'4( e4 fis cis8 dis)
     g4( e4 fis cis8 dis)
-    ees4 c8\st bes4. a8\st c~
+    dis4 c?8\st bes4. a8\st c~
     c4 ees8\st c\st r2
     \setTextCresc
     g'4\<( e4 fis cis8 dis)
