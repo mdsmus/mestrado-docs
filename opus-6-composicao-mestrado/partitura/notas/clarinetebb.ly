@@ -180,9 +180,8 @@ gestoBACclarinetebb = {
 
 gestoBBAclarinetebb = {
   \relative c' {
-    \repeat unfold 2 {
-      dis'8-.->\p[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
-    }
+    dis'8-.->\p[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
+    dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     \setTextDecresc
     dis8-.->[\> r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.->\pp r
@@ -200,7 +199,7 @@ gestoBBBclarinetebb = {
     bes8->( e,8) g'4( cis,8~
     cis e8~\tris e2)
     %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
-    gis,4\p
+    gis,4
     b8( ais4) d8( cis4)
     %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
     e8->( gis,)
@@ -214,7 +213,7 @@ gestoBBBclarinetebb = {
 gestoBBCclarinetebb = {
   \relative c'' {
     %% continuação do fugato
-    d4-^\f b-^ cis-^ gis8( ais
+    d4-^ b-^ cis-^ gis8( ais
     g?4.)
     %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
     bes8->( e,8) g'4( cis,8~

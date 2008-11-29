@@ -62,7 +62,7 @@ gestoABAfagote = {
   \relative c' {
     R1*5/4*6
     r2. dis2~\p
-    dis2. cis2
+    dis2. cis2~
   }
 }
 
@@ -81,7 +81,7 @@ gestoABCfagote = {
   \clef bass
   \relative c, {
     \setTextDecresc
-    dis2.~\> dis8 fis4.
+    dis2.~\> dis8 fis4.~
     fis2 r2.
     r4 cis2. r4
     R1*5/4
@@ -203,7 +203,7 @@ gestoBBBfagote = {
         bes8->( e,8) g'4( cis,8~
         cis e8~\tris e2)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
-        gis,4\p
+        gis,4
         b8( ais4) d8( cis4)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
         e8->( gis,)
@@ -222,7 +222,7 @@ gestoBBCfagote = {
       \relative {
         bes4 g2.\trill
         %% #s(5 3 4 1 2 0)
-        d'4-^\f b-^ cis-^ gis8( ais
+        d'4-^ b-^ cis-^ gis8( ais
         g?4.)
         %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         bes8->( e,8) g'4( cis,8~

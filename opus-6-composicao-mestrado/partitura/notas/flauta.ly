@@ -155,7 +155,7 @@ gestoBBAflauta = {
     bes8->( e,8) g'4( cis,8~
     cis e8~\tris e2)
     %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
-    gis,4\p
+    gis,4
     b8( ais4) d8( cis4)
     %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
     e8->( gis,)
@@ -163,7 +163,7 @@ gestoBBAflauta = {
     e cis4 g' e,
     bes' g2.\trill
     %% #s(5 3 4 1 2 0)
-    d'4-^\f b-^ cis-^ gis8( ais
+    d'4-^ b-^ cis-^ gis8( ais
     g?4.)
     %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
     bes8->( e,8) g'4( cis,8~
@@ -195,7 +195,7 @@ gestoBBBflauta = {
     bes8->( e,8) g'4( cis,8~
     cis e8~\tris e2)
     %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
-    gis,4\p
+    gis,4
     b8( ais4) d8( cis4)
     %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
     e8->( gis,)
@@ -209,7 +209,7 @@ gestoBBCflauta = {
     e cis4 g' e,
     bes' g2.\trill
     %% #s(5 3 4 1 2 0)
-    d'4-^\f b-^ cis-^ gis8( ais
+    d'4-^ b-^ cis-^ gis8( ais
     g?4.)
     %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
     bes8->( e,8) g'4( cis,8~

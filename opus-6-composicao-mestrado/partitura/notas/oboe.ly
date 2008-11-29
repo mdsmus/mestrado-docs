@@ -180,7 +180,7 @@ gestoBBAoboe = {
         bes8->( e,8) g'4( cis,8~
         cis e8~\tris e2)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
-        gis,4\p
+        gis,4
         b8( ais4) d8( cis4)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
         e8->( gis,)
@@ -188,7 +188,7 @@ gestoBBAoboe = {
         e cis4 g' e,
         bes' g2.\tris
         %% #s(5 3 4 1 2 0)
-        d'4-^\f b-^ cis-^ gis8( ais
+        d'4-^ b-^ cis-^ gis8( ais
         g?4.)
         %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         bes8->( e,8) g'4( cis,8~
@@ -209,18 +209,16 @@ gestoBBBoboe = {
         %% repetição
 
         %% #s(5 3 4 1 2 0)
-        d4-^\f b-^ cis-^ gis8( ais
+        d4-^ b-^ cis-^ gis8( ais
         g?4.)
         %% (rotacionar #s(5 3 4 1 2 0) 3) com expansão de intervalos
         bes8->( e,8) g'4( cis,8~
         cis e8~\tris e2)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 5))
-        gis,4\p
+        gis,4
         b8( ais4) d8( cis4)
         %% (rotacionar (retrogradar #s(5 3 4 1 2 0) 4))
         e8->( gis,)
-
-
 
       }
     }
@@ -240,7 +238,7 @@ gestoBBCoboe = {
       }
     }
     %% #s(5 3 4 1 2 0)
-    d4-^\f b-^ cis-^ gis8( ais
+    d4-^ b-^ cis-^ gis8( ais
     g?2~ g4.) r8
 
     d'4-^ b-^ cis-^ gis8( ais
@@ -337,7 +335,8 @@ gestoCBCoboe = {
   \relative c' {
     e16 fis8.~\fp fis2\f cis'16 dis c g
     e fis8.~\p fis2 cis'16\f dis c g
-    e fis8.~\p fis2 cis'16\mf dis c g
+    \setTextDecresc
+    e fis8.~\p fis2 cis'16\mf\> dis c g
     %% toca também material do clarinte transposto oitava acima
     e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c g
     e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c g
