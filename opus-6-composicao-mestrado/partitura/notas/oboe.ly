@@ -186,7 +186,7 @@ gestoBBAoboe = {
         e8->( gis,)
         b( ais) d2 e4~
         e cis4 g' e,
-        bes' g2.\tris
+        bes' g2.\trill
         %% #s(5 3 4 1 2 0)
         d'4-^ b-^ cis-^ gis8( ais
         g?4.)
