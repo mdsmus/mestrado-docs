@@ -30,7 +30,7 @@ processamento de contornos, e apresento a análise e partitura da obra
 \section{Objetivos e justificativa}
 \label{sec:objet-e-just}
 
-O presente trabalho tem como principais objetivos a composição de uma
+O presente trabalho teve como principais objetivos a composição de uma
 obra musical com base em combinações de operações de contornos e a
 produção do seu memorial. O instrumental da obra é um quinteto de
 madeiras e a duração é de aproximadamente 11 minutos.
@@ -684,10 +684,10 @@ respectivamente.
 \end{figure}
 
 As diagonais superiores paralelas à diagonal principal zero da matriz
-de comparação são chamadas de int$_n$, onde $n$ é o número da
-diagonal: 1 para a superior mais próxima da diagonal zero, 2 para a
-seguinte, 3 para a posterior e assim por diante (figura
-\ref{fig:int-exemplos}).
+de comparação são chamadas de diagonais internas e são representadas
+por int$_n$, onde $n$ é o número da diagonal: 1 para a superior mais
+próxima da diagonal zero, 2 para a seguinte, 3 para a posterior e
+assim por diante (figura \ref{fig:int-exemplos}).
 
 \begin{figure}
   \centering
@@ -998,8 +998,8 @@ e/ou mais grave coincidem com os pontos inicial e/ou final.
 Por exemplo, na figura \ref{fig:adams-typology} a linha Dø contém
 contornos em que os pontos extremos (agudo e grave) coincidem com nota
 inicial e final, ou seja, ocorrem apenas dois pontos. A linha D1
-contém contornos em que um dos pontos extremos coincidem com ponto
-inicial e final---em D1R1 o ponto que coincide é o mais grave e em
+contém contornos em que um dos pontos extremos coincide com ponto
+inicial e/ou final---em D1R1 o ponto que coincide é o mais grave e em
 D1R2 o mais agudo. A linha D2 contém contornos em que os pontos
 extremos não coincidem com ponto inicial ou final---em D2R1 o ponto
 mais agudo ocorre antes do mais grave, e em D2R2 ocorre o inverso. As
@@ -1019,10 +1019,11 @@ Composição Musical.
 \label{cha:ferramentas}
 
 Para este trabalho desenvolvi ferramentas computacionais como o
-software para processamento de contornos Goiaba. Utilizei a plataforma
-Linux para desenvolver todo o trabalho, pois além de ser livre, com
-ela é possível desenvolver funções que enviem a saída de dados de um
-programa como o Goiaba para a entrada de dados de outro programa como
+software \goiaba{}, para processamento de contornos. Utilizei a
+plataforma Linux para desenvolver todo o trabalho, pois além de ser
+livre, com ela é possível desenvolver funções que enviem a saída de
+dados de um programa como o \goiaba{} para a entrada de dados de outro
+programa como
 %% FIXME: espinheira: tirar seção sobre lilypond. usar nota
 o editor de partituras Lilypond (vide seção \ref{sec:lilypond}), ou
 usar bibliotecas gráficas para criar interfaces para o usuário. Com
@@ -1172,11 +1173,11 @@ para o desenvolvimento deste trabalho.
 \section{Outras ferramentas computacionais}
 \label{sec:outr-ferr-comp}
 
-Neste trabalho além de desenvolver o Goiaba utilizei o Lilypond tanto
-para gerar partituras através do Goiaba quanto para escrever a obra
-\obra{}. Usei também o sistema de controle de versão Git que ajudou no
-desenvolvimento do Goiaba, na composição da obra e na comunicação de
-dados com o orientador.
+Neste trabalho além de desenvolver o \goiaba{} utilizei o Lilypond
+tanto para gerar partituras através do \goiaba{} quanto para escrever
+a obra \obra{}. Usei também o sistema de controle de versão Git (vide
+seção \ref{sec:git}) que ajudou no desenvolvimento do \goiaba{}, na
+composição da obra e na comunicação de dados com o orientador.
 
 Além disso essas ferramentas utilizadas são aqui descritas porque,
 apesar de serem amplamente utilizadas em outras áreas como ciência da
@@ -1321,9 +1322,9 @@ possibilitou que mudanças e comentários fossem feitos diretamente no
 texto sem necessidade de um aviso prévio para prevenir conflitos, e
 com registro automático de mudança, autoria e data de cada
 alteração. Usei controle de versão no gerenciamento do desenvolvimento
-do Goiaba, nos experimentos composicionais, na obra final, na escrita
-desta dissertação e do seu projeto. Um exemplo de uso de ramos
-diferentes de desenvolvimento foi a refatoração do Goiaba, que foi
+do \goiaba{}, nos experimentos composicionais, na obra final, na
+escrita desta dissertação e do seu projeto. Um exemplo de uso de ramos
+diferentes de desenvolvimento foi a refatoração do \goiaba{}, que foi
 feita paralelamente ao funcionamento da versão estável anterior do
 software.
 
@@ -2077,7 +2078,7 @@ variados, como por exemplo instrumentos sintetizados por
 computador. Este estudo pode contribuir com os trabalhos de música
 computacional disponibilizando contorno como elemento estruturador.
 
-Finalmente o quarto trabalho é a expansão do software Goiaba, com a
+Finalmente o quarto trabalho é a expansão do software \goiaba{}, com a
 inserção de operações de todas as teorias de contornos, com o
 acréscimo de uma interface gráfica para que o usuário possa clicar e
 arrastar elementos em um gráfico para gerar contornos, com a inserção
