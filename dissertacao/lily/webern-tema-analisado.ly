@@ -13,10 +13,10 @@
       \clef bass
       \bracketUp
       \override TextScript #'extra-offset = #'( 0 . 4 )
-      r8 a8\startGroup^\markup{(0 1 2)} \times 2/3 {f'8[ e'\stopGroup r]}
+      r8 a8\startGroup^\markup{(0 1 2)}^\markup{\italic{vlc.}} \times 2/3 {f'8[ e'\stopGroup r]}
       \clef treble
       \override TextScript #'extra-offset = #'( 0 . 2 )
-      d'8\startGroup^\markup{(2 0 1)} bes cis4.\stopGroup 
+      d'8\startGroup^\markup{(2 0 1)}^\markup{\italic{vln.I}} bes cis4.\stopGroup 
       bes?8\startGroup^\markup{(1 2 0)} c b\stopGroup
       \revert Score.BarNumber #'break-visibility
       \override TextScript #'extra-offset = #'( 0 . 2 )
