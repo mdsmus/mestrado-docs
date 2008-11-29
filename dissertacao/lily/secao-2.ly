@@ -3,7 +3,10 @@
 \include "../config/lib.ly"
 
 \score {
-  \new Staff \with { \remove "Time_signature_engraver" }{
+  \new Staff \with {
+    \remove "Time_signature_engraver"
+    \remove "Bar_number_engraver"
+  }{
       \time 6/4
       \override Stem #'transparent = ##t
       \relative c'''' {
