@@ -10,7 +10,7 @@
         \bracketUp
         g16^\markup{\italic{fl.}} e fis cis dis[ c]
         \bar "||"
-        e16^\markup{\italic{cl. (em dó)}} g, bes e, g'[ cis,]
+        e16^\markup{\italic{cl. (som real)}} g, bes e, g'[ cis,]
         \bar "||"
         cis'16^\markup{\italic{ob.}} dis c g e[ fis]
         \bar "||"
