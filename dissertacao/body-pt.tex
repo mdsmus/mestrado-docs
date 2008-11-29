@@ -302,10 +302,10 @@ ser entendido como uma determinante composicional. De acordo com ele
 ``contour, in absence of other pervasive systems of pitch
 organization, represents a structural factor equal in significance to
 pitch or set class relations''\footnote{``contorno, na falta de outros
-  sistemas ocupantes de organização de altura, representa um fator
+  sistemas abrangentes de organização de altura, representa um fator
   estrutural igual em significado a relações de alturas ou de classes
-  de conjuntos''. Todas as traduções são
-  minhas.} \cite[p. 157]{clifford95:contour}.
+  de conjuntos''. Todas as traduções são minhas.}
+\cite[p. 157]{clifford95:contour}.
 
 No nível melódico, relações de contorno podem associar segmentos de
 contorno distintos entre dois ou mais segmentos. Neste nível contorno
@@ -509,7 +509,7 @@ assim por diante.
 
 Por exemplo, dado um contorno P(5 9 6 8), representado graficamente na
 figura \ref{fig:operacoes-p}, e aplicando-se retrogradação a este
-contorno obtém-se como saída (8 6 9 5), ou seja
+contorno obtém-se como saída N(8 6 9 5), ou seja
 $retr(P(5\;9\;6\;8))=N(8\;6\;9\;5)$, como mostra a figura
 \ref{fig:operacoes-rp}. A operação de rotação de fator 1 aplicada a
 este mesmo contorno P(5 9 6 8) retorna L(9 6 8 5), ou seja,
@@ -590,8 +590,7 @@ $inv(P(5\;9\;6\;8))=S(4\;0\;3\;1)$, como mostra a figura
 \ref{fig:operacoes-ip}.
 
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
-com operações como comparação, matriz de comparação, forma prima e
-classe de contorno.
+com operação e matriz de comparação, forma prima e classe de contorno.
 
 A operação de comparação $com(a,b)$\footnote{Operações como a função
   de comparação, a matriz de comparação e as diagonais da matriz de
@@ -780,14 +779,14 @@ P$_0$, elemento de menor valor, é redefinido para 0, P$_2$, segundo
 elemento de menor valor, para 1, P$_3$, terceiro de menor valor, para
 2, e P$_1$ para 3.
 
-A classe de contornos equivalentes é uma operação importante para a
-verificação de similaridade entre contornos. Dois ou mais contornos
-são considerados equivalentes quando geram uma mesma matriz de
-comparação, ou seja, quando mantêm a mesma estrutura de valores entre
-seus elementos. Dessa forma, dado um contorno P(5 9 6 8), são
-considerados seus equivalentes os contornos (1 5 2 3), (0 10 4 7), (0
-3 1 2) e muitos outros, pois todos eles pertencem à classe (0 3 1
-2). Também são considerados contornos de classe equivalente aqueles
+A classe de contornos equivalentes é um sistema classificatório
+importante para a verificação de similaridade entre contornos. Dois ou
+mais contornos são considerados equivalentes quando geram uma mesma
+matriz de comparação, ou seja, quando mantêm a mesma estrutura de
+valores entre seus elementos. Dessa forma, dado um contorno P(5 9 6
+8), são considerados seus equivalentes os contornos (1 5 2 3), (0 10 4
+7), (0 3 1 2) e muitos outros, pois todos eles pertencem à classe (0 3
+1 2). Também são considerados contornos de classe equivalente aqueles
 relacionados por operações de translação, retrógrado e inversão.
 
 A forma prima de um contorno é uma forma criada para identificação da
@@ -1146,10 +1145,10 @@ operações e cores que serão geradas no gráfico.
 \end{figure}
 
 Para o futuro pretendo implementar a possibilidade de gerar contornos
-a partir de partituras musicais e vice-versa, e implementar uma
-interface gráfica. O desenvolvimento do \goiaba{} segue procedimentos
-oriundos do desenvolvimento de software livre como uso de controle de
-versão e disponibilização do código-fonte na
+a partir de partituras musicais em formato Lilypond e vice-versa, e
+implementar uma interface gráfica. O desenvolvimento do \goiaba{}
+segue procedimentos oriundos do desenvolvimento de software livre como
+uso de controle de versão e disponibilização do código-fonte na
 internet\footnote{Disponível em
   \url{http://git.genos.mus.br/cgit.cgi?url=marcos-mestrado}.}.
 
