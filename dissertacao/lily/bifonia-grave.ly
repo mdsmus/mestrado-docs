@@ -6,10 +6,14 @@
 
 global = {
   \time 4/4
-  \set Score.currentBarNumber = #137
+  \set Score.currentBarNumber = #162
+  \override Score.BarNumber #'break-visibility = #end-of-line-invisible
   \bar ""
   \partial 4
   \bracketUp
+  s4
+  s1
+  \revert Score.BarNumber #'break-visibility
 }
 
 flauta = {
