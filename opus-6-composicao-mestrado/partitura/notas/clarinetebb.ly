@@ -162,7 +162,7 @@ gestoBACclarinetebb = {
     e4.~ e8 fis4~
     fis2.
     cis4. dis4.
-    c2.)
+    c?2.)
     dis8-.->\p r4 g,4.\st
     cis4.\st g4.\st
     dis'4.\st r8 g,4\st
