@@ -1123,24 +1123,23 @@ Finalmente, \goiaba{} usa a biblioteca
 Cl-pdf\footnote{www.cliki.net/CL-PDF} para plotar facilmente contornos
 definidos, permitindo a fácil visualização de operações em contornos.
 Por exemplo, o código seguinte gera um gráfico com o contorno
-original, sua transposição, retrogradação, inversão, rotação,
-ampliação de altura e inserção de ponto (figura
-\ref{fig:operacoes}). Neste exemplo defino o contorno \code{c1}, o
-arquivo no qual o gráfico será criado, as dimensões do gráfico e as
-operações e cores que serão geradas no gráfico.
+original, sua transposição, retrogradação, inversão, rotação e
+ampliação de altura (figura \ref{fig:operacoes}). Neste exemplo defino
+o contorno \code{Z}, o arquivo no qual o gráfico será criado, as
+dimensões do gráfico e as operações e cores que serão geradas no
+gráfico.
 
 \singlespacing
 \begin{verbatim}
-(let ((c1 #d(#p(0 0) #p(1 5) #p(2 3) #p(3 4) #p(4 1) #p(5 3))))
+(let ((Z #s(0 5 3 4 1 3)))
   (plot-page "contornos.pdf"
     (plot-contorno-full 50 500
-       c1 "original" :red
-       (transpor c1 2) "transposição" :green
-       (retrogradar c1) "retrógrado" :blue
-       (inverter c1) "inversão" :pink
-       (aumentar-altura c1 2) "aumentar-altura" :lightblue
-       (rotacionar c1 1) "rotação" :darkcyan
-       (insere-ponto c1 '(1 3) 2) "insere ponto" :purple)))
+       Z "original Z" :red
+       (transpor Z 2) "transposição" :green
+       (retrogradar Z) "retrógrado" :blue
+       (inverter Z) "inversão" :orange
+       (aumentar-altura Z 2) "aumentar-altura" :lightblue
+       (rotacionar Z 1) "rotação" :darkcyan)))
 \end{verbatim}
 \doublespacing
 
