@@ -4,12 +4,12 @@
 Contorno pode ser definido como o perfil, desenho ou formato de um
 objeto. Pode ser bidimensional e associar uma dimensão como altura a
 outra como o tempo, ou multidimensional, associando três ou mais
-dimensões, como por exemplo, altura e comprimento ao tempo
-simultaneamente. Neste trabalho utilizo apenas contornos
-bidimensionais. Em Música contornos podem ser associados a altura,
-densidade, ritmo, complexidade rítmica, homogeneidade orquestral,
-amplitude de harmônicos, intensidade, etc. Contornos melódicos estão
-relacionados com movimento de altura de notas em função do tempo.
+dimensões, como por exemplo, altura e comprimento ao tempo. Neste
+trabalho utilizo apenas contornos bidimensionais. Em Música contornos
+podem ser associados a altura, densidade, ritmo, complexidade rítmica,
+homogeneidade orquestral, amplitude de harmônicos, intensidade,
+etc. Contornos melódicos estão relacionados com movimento de altura de
+notas em função do tempo.
 
 %% FIXME: sugestão gbertis: nota com link para referência de coerência
 O estudo de contornos é importante porque, assim como conjuntos de
@@ -26,7 +26,7 @@ suas combinações na composição musical. Acredito ser necessário um
 estudo e experimentação dessas operações na área da composição.
 
 Neste trabalho faço a revisão de teorias desenvolvidas para o estudo
-de contornos, apresento o \goiaba{}, programa de computador para
+de contornos, apresento o \goiaba{}---programa de computador para
 processamento de contornos, e apresento a análise e partitura da obra
 \obra{}, composta com base em combinações de operações de contornos.
 
@@ -51,7 +51,7 @@ O uso sistemático de contornos melódicos tanto para geração de
 material composicional quanto como determinante composicional é um
 assunto carente de literatura. Este trabalho ajuda a elevar o estado
 de arte das teorias de contornos através do experimentos com contornos
-na criação musical e contribuir com novas ferramentas para a área de
+na criação musical e contribui com novas ferramentas para a área de
 Composição.
 
 \section{Metodologia}
@@ -76,16 +76,16 @@ operações de contornos melódicos. A primeira---\opus{Como é que se
 melódico e operações de preenchimento deste contorno. A
 segunda---\opus{Bobó de legumes. Op.5}---contém também um único
 contorno, suas operações e concatenações. Com estes experimentos foi
-possível aprofundar a prática da composição de contornos antes de
+possível aprofundar a prática da composição com contornos antes de
 compor a obra final do mestrado.
 
 Por fim desenvolvi um software que lida com contornos melódicos,
 operações e combinações. Ele retorna representações simbólicas e
-gráficas de operações de transposição, inversão, retrogradação e
-rotação de um contorno dado. Além disso ele permite a combinação de
-operações e sua concatenação. Este software ajudou no mapeamento e
-processamento de contornos melódicos no estudo do estado de arte, na
-composição dos experimentos, e na composição da obra final. Abordo o
+gráficas de operações como inversão, retrogradação e rotação de um
+contorno dado. Além disso ele permite a combinação de operações e sua
+concatenação. Este software ajudou no mapeamento e processamento de
+contornos melódicos durante o estudo do estado de arte, na composição
+dos experimentos, e na composição da obra final. Abordo o
 desenvolvimento deste software e de outras ferramentas computacionais
 no capítulo \ref{cha:ferramentas}.
 
@@ -111,11 +111,12 @@ Esta dissertação está organizada da seguinte maneira:
 \chapter{Introdução ao estudo de contornos}
 \label{cha:introducao-estudo-contornos}
 
-Existem diversas definições de contorno melódico na literatura
+Existem várias definições de contorno melódico na literatura
 \cite{piston59:harmony,toch77:shaping,schonberg:fundamentals,adams76:melodic,edworthy85:musical,dewitt.ea86:recognition,marvin.ea87:relating,morris87:composition,clifford95:contour,beard03:contour}.
 As definições de Piston, Toch, Schönberg, Edworthy, Dewitt e Crowder
-são semelhantes e em geral consideram contorno melódico como movimento
-ascendente ou descendente entre notas adjacentes de uma melodia.
+são semelhantes e em geral consideram contorno melódico como o
+conjunto dos movimentos ascendentes e descendentes entre notas
+adjacentes de uma melodia.
 
 Edworthy, por exemplo, considera como contorno a seqüência de
 movimentos ascendentes e descendentes de uma melodia, independente do
@@ -160,9 +161,15 @@ estabelece como contorno um conjunto ordenado de elementos distintos,
 com ou sem repetição, numerados de forma ascendente
 \cite[p. 206]{morris93:directions}. Esta definição considera elementos
 não adjacentes e generaliza o conceito de contorno para outros
-parâmetros como densidade de acordes e duração. Morris define contorno
-como conjunto ordenado porque a permutação dos elementos do conjunto
-pode resultar em um novo contorno.
+parâmetros como densidade de acordes e duração.
+
+Contorno é um conjunto ordenado porque a permutação dos seus elementos
+pode resultar em um contorno idêntico ou não ao seu
+original. Permutação em conjuntos que não têm repetição de elementos
+gera conjuntos diferentes do seu original. Permutação em conjuntos que
+têm repetição de elementos pode gerar conjuntos idênticos ou não ao
+seu original. Por exemplo, a rotação de fator 2 de um conjunto
+original (0 1 0 1) resulta no mesmo conjunto original.
 
 A numeração dos elementos é feita atribuindo 0 para o elemento de
 menor valor, 1 para o segundo elemento de menor valor, 2 para o
@@ -183,8 +190,8 @@ diante. É importante observar que estes números não estão relacionados
 às classes de notas, como ocorre na Teoria dos Conjuntos, mas à
 posição que cada nota ocupa em ordem de altura. Como contornos são
 ordenados por definição, estes números são apresentados na ordem
-temporal em que as notas ocorrem na melodia. Neste exemplo são
-apresentados na ordem 3, 1, 2 e 0.
+temporal em que as notas ocorrem na melodia. Neste exemplo, na ordem
+3, 1, 2 e 0.
 
 %% devo repetir que a figura c-1010 é relacionada a "contornos
 %% adjacentes" e c-3120 à definição de morris?
@@ -194,7 +201,7 @@ partir da comparação das representações da figura
 \ref{fig:c-1010}, decorrente de conceitos que consideram movimentos
 ascendentes e descendentes de elementos adjacentes, não indica por
 exemplo que a terceira altura é mais grave que a primeira. A relação
-de registro entre os elementos do contorno fica clara na figura
+de altura entre os elementos do contorno fica clara na figura
 \ref{fig:c-3120}, decorrente da definição de Morris. Decidi usar a
 definição de Morris por causa desta precisão.
 
@@ -202,12 +209,13 @@ Como já foi dito, um contorno pode mapear outros parâmetros além de
 altura \cite[p. 206]{morris93:directions}
 \cite[p. 22]{clifford95:contour}. Por exemplo, um dado contorno (1 0 2
 3)---representado graficamente na figura \ref{fig:repr-1023}---pode
-ser associado ao parâmetro altura com as notas lá, fá, si$\flat$ e ré
-(figura \ref{fig:pitches-in-time}); pode ser associado a densidades de
-acordes, com acordes de duas, uma, quatro e sete notas (figura
-\ref{fig:chord-densities-in-time}); ou pode ainda ser associado aos
-níveis de dinâmica \music{p}, \music{ppp}, \music{mf} e \music{ff}
-(figura \ref{fig:dynamics-in-time}).
+ser associado ao parâmetro altura e representar as notas lá, fá,
+si$\flat$ e ré (figura \ref{fig:pitches-in-time}); pode ser associado
+a densidades de acordes e representar acordes de duas, uma, quatro e
+sete notas (figura \ref{fig:chord-densities-in-time}); ou pode ainda
+ser associado a níveis de dinâmica e representar níveis como
+\music{p}, \music{ppp}, \music{mf} e \music{ff} (figura
+\ref{fig:dynamics-in-time}).
 
 \begin{figure}
   \centering
@@ -238,7 +246,7 @@ a adequação de notas à tonalidade em respostas tonais de fugas, os
 Neste trabalho concentrei esforços no mapeamento de contornos de
 altura em função do tempo. No entanto desprezei a medida do tempo e
 atribuí à distância entre dois elementos dos contornos um valor padrão
-1. Dessa forma não pude abordar características dos contornos como
+1. Dessa forma não abordei características dos contornos como
 inclinação dos segmentos entre dois pontos, embora exista estudo na
 literatura abordando medida do tempo \cite{beard03:contour}. Percebi
 ao longo do processo que incluir medida do tempo neste estudo
@@ -247,7 +255,7 @@ projeto, contudo pretendo abordar este parâmetro futuramente (vide
 capítulo \ref{cha:conclusao-e-discussao}).
 
 Neste texto considero como operação de contorno todo tipo de
-manipulação em um contorno ou de ação que gera um produto, como
+manipulação em um contorno ou de ação que gera um resultado, como
 inversão, retrogradação, expansão e subconjuntos de contorno e
 translação. Estas operações são detalhadas na seção
 \ref{sec:teor-de-cont}.
@@ -322,10 +330,9 @@ tema principal (figura \ref{fig:webern-tema-analisado}), e tem a
 maioria dos fragmentos melódicos divisíveis em 3 ou 6 notas. O tema
 principal é construído com os contornos de 3 notas\footnote{Um
   contorno de 3 elementos tem 6 possíveis permutações não ordenadas:
-  (0 1 2), (0 2 1), (1 0 2), (1 2 0), (2 0 1), e (2 1 0). O único
-  contorno ausente nesta peça é o (0 2 1).} (0 1 2), (2 0 1), (1 2 0)
-e (2 1 0) e 80\% dos fragmentos melódicos do movimento derivam dos
-contornos deste tema principal.
+  (0 1 2), (0 2 1), (1 0 2), (1 2 0), (2 0 1), e (2 1 0).} (0 1 2), (2
+0 1), (0 2 1) e (2 1 0) e 80\% dos fragmentos melódicos do movimento
+derivam dos contornos deste tema principal.
 
 \begin{figure}
   \centering
@@ -349,19 +356,17 @@ contornos deste tema principal.
 
 Neste movimento um dos processos de geração de melodias ocorre por
 concatenação de contornos. Pode-se observar que no fragmento da figura
-\ref{fig:webern-concatenacao-1} ambos os contornos são derivados do
-tema principal. Porém neste exemplo a ordem de ocorrência é (1 2 0) (2
-0 1), e no tema principal é (2 0 1) (1 2 0). Além disso as notas e
+\ref{fig:webern-concatenacao-1} ambos os contornos (1 2 0) e (2 0 1)
+estão representados no tema principal. O contorno (2 0 1) aparece em
+sua forma original e (1 2 0) como retrógrado de (0 2 1). As notas e
 intervalos do exemplo são diferentes das utilizadas no tema. Por
-exemplo, no tema o contorno (1 2 0) tem intervalos de meio tom entre
-as notas. No exemplo da figura \ref{fig:webern-concatenacao-1} o mesmo
-contorno tem intervalo de terça menor ascendente e nona menor
-descendente. Na figura \ref{fig:webern-concatenacao-2} ocorre uma
-repetição do contorno (2 1 0) e o contorno (1 0 2), que não é derivado
-diretamente do tema principal. O contorno (1 0 2) no entanto é obtido
-por meio de uma operação de retrogradação do contorno (2 0 1). Como
-foi dito estas operações são explicadas na seção
-\ref{sec:teor-de-cont}.
+exemplo, no tema o contorno (0 2 1) tem intervalos de meio tom entre
+as notas. No exemplo da figura \ref{fig:webern-concatenacao-1} o
+retrógrado deste contorno tem intervalos de terça menor e nona
+menor. Na figura \ref{fig:webern-concatenacao-2} ocorre uma repetição
+do contorno (2 1 0) e o contorno (1 0 2) obtido por retrogradação do
+contorno (2 0 1). Como foi dito estas operações são explicadas na
+seção \ref{sec:teor-de-cont}.
 
 \section{Teorias de contornos}
 \label{sec:teor-de-cont}
@@ -435,13 +440,12 @@ considera R como retrógrado, I como inversão, RI como retrógrado da
 inversão e assim por diante. Dessa forma o retrógrado da inversão do
 contorno X é definido como RIX. O uso de maiúsculas para o nome do
 contorno e para o nome das operações pode se tornar confusa ao
-combinar muitas operações, como transposição do retrógrado da inversão
-da rotação.
+combinar muitas operações, como retrógrado da inversão da rotação.
 
 Para representar o retrógrado de um contorno X(1 2 3) utilizo a
 notação $retr(X(1\;2\;3))$. O resultado desta operação é o contorno
 Y(3 2 1). Esta notação ajuda na visualização de combinações maiores de
-operações como $transp(retr(inv(rot(X(1\;2\;3))\;2))\;3)$. Esta
+operações como $retr(inv(rot(X(1\;2\;3))\;2))$. Esta
 representação diferencia o nome do contorno da operação utilizada, já
 que mantém o nome em maiúscula e define o nome da operação em
 minúsculas abreviadas.
@@ -587,6 +591,7 @@ elementos de valor maior que 5. Dessa forma, na falta de determinação
 do conjunto universo, o contorno pode ser confinado em um sistema de
 base $n+1$, onde $n$ é o maior valor numérico e a ordem de um contorno
 calculada somando o seu elemento de maior valor com 1.
+%% dar exemplo de base com um dos contornos V ou P
 
 A operação de inversão de um contorno P de ordem $q$ é representada
 por inv(P), e é matematicamente calculada por
@@ -786,15 +791,15 @@ P$_0$, elemento de menor valor, é redefinido para 0, P$_2$, segundo
 elemento de menor valor, para 1, P$_3$, terceiro de menor valor, para
 2, e P$_1$ para 3.
 
-A classe de contornos equivalentes é um sistema classificatório
-importante para a verificação de similaridade entre contornos. Dois ou
-mais contornos são considerados equivalentes quando geram uma mesma
-matriz de comparação, ou seja, quando mantêm a mesma estrutura de
-valores entre seus elementos. Dessa forma, dado um contorno P(5 9 6
-8), são considerados seus equivalentes os contornos (1 5 2 3), (0 10 4
-7), (0 3 1 2) e muitos outros, pois todos eles pertencem à classe (0 3
-1 2). Também são considerados contornos de classe equivalente aqueles
-relacionados por operações de translação, retrógrado e inversão.
+A classe de contornos equivalentes é importante para a verificação de
+similaridade entre contornos. Dois ou mais contornos são considerados
+equivalentes quando geram uma mesma matriz de comparação, ou seja,
+quando mantêm a mesma estrutura de valores entre seus elementos. Dessa
+forma, dado um contorno P(5 9 6 8), são considerados seus equivalentes
+os contornos (1 5 2 3), (0 10 4 7), (0 3 1 2) e muitos outros, pois
+todos eles pertencem à classe (0 3 1 2). Também são considerados
+contornos de classe equivalente aqueles relacionados por operações de
+translação, retrógrado e inversão.
 
 A forma prima de um contorno é uma forma criada para identificação da
 classe deste contorno. A forma prima é obtida a partir do algoritmo de
