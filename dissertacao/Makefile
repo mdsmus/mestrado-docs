@@ -4,7 +4,7 @@ TEXSRCS = body-pt.tex abstract.tex resumo.tex newcommand.tex lista-bibliografia.
 SCOREDIR = ../opus-6-composicao-mestrado
 GESTOS = $(SCOREDIR)/script/systemfiles/gestosglobal.ly
 
-OTHER += $(LILY_PDF) $(OTHER_EPS4) $(OTHER_PDF4) $(OTHER_PDF3)
+OTHER += $(LILY_PDF) $(PNG_PDF) $(GNUPLOT_PDF) $(SVG_PDF)
 
 USE_PDFLATEX = 1
 
