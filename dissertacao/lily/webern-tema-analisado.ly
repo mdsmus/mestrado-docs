@@ -18,7 +18,7 @@
       \clef treble
       \override TextScript #'extra-offset = #'( 0 . 1.5 )
       d'8\startGroup^\markup{(2 0 1)} bes cis4.\stopGroup 
-      bes?8\startGroup^\markup{(1 2 0)} c b\stopGroup
+      bes?8\startGroup^\markup{(0 2 1)} c b\stopGroup
       \revert Score.BarNumber #'break-visibility
       \override TextScript #'extra-offset = #'( 0 . 1.5 )
       bes-.\startGroup^\markup{(2 1 0)} f-. a,4-.\stopGroup
