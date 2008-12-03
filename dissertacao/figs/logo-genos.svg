@@ -12,11 +12,12 @@
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.45.1"
-   width="210mm"
-   height="297mm"
-   sodipodi:docbase="/home/marcos/profissional/genos/genos-repos/artigo-contornos-webern-op-5/apresentacao-forum-ppgmus/figs"
+   width="200"
+   height="218.45865"
+   sodipodi:docbase="/home/marcos/profissional/mestrado/marcos-mestrado/defesa/figs"
    sodipodi:docname="logo-genos.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -119,8 +120,8 @@
      pagecolor="#ffffff"
      id="base"
      inkscape:zoom="2.6000344"
-     inkscape:cx="100.00001"
-     inkscape:cy="943.13286"
+     inkscape:cx="100"
+     inkscape:cy="109.22933"
      inkscape:window-x="0"
      inkscape:window-y="15"
      inkscape:current-layer="svg2"
