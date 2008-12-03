@@ -29,11 +29,11 @@ oboe = {
 clarinete = {
   \relative c' {
     g4~\p
-    g e8->\st fis4. fis8 g
+    g e8->\st fis8~ fis4 fis8 g
     e2 r4 g4~
-    g e8->\st fis4. fis8 g~
+    g e8->\st fis8~ fis4 fis8 g~
     g2 r4 g4~
-    g e8->\st fis4. fis8 g
+    g e8->\st fis8~ fis4 fis8 g
   }
 }
 
@@ -41,11 +41,11 @@ fagote = {
   \clef bass
   \relative c {
     r4
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
-    a'4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
-    a4 g8->\st a4. g8->\st a~
+    a4 g8->\st a8~ a4 g8->\st a~
+    a4 g8->\st a8~ a4 cis8->\st dis,->\st
+    a'4 g8->\st a8~ a4 g8->\st a~
+    a4 g8->\st a8~ a4 r4
+    a4 g8->\st a8~ a4 g8->\st a~
   }
 }
 
@@ -53,11 +53,11 @@ trompa = {
   \relative c {
     \clef bass
     ees4~\p
-    ees c8->\st bes4. cis8 dis
+    ees c8->\st bes8~ bes4 cis8 dis
     c?2 r4 ees4~
-    ees c8->\st bes4. cis8 dis~
+    ees c8->\st bes8~ bes4 cis8 dis~
     dis2 r4 ees4~
-    ees c8->\st bes4. cis8 dis
+    ees c8->\st bes8~ bes4 cis8 dis
   }
 }
 

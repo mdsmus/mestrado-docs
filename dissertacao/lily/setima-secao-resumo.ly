@@ -14,9 +14,9 @@ global = {
 flauta = {
   \relative c'' {
     r4 r8. c'16\f( ees des fis e g4~
-    g4) e8\st fis4. cis8\st e~
+    g4) e8\st fis8~ fis4 cis8\st e~
     e4 g8\st e\st r2
-    g4 e8\st fis4. cis8\st e~
+    g4 e8\st fis8~ fis4 cis8\st e~
     e4 e8\st cis\st r4 g'~
   }
 }
@@ -24,9 +24,9 @@ flauta = {
 oboe = {
   \relative c'' {
     e4 e8\st cis\st r4 ees4~
-    ees4 c8\st bes4. a8\st c~
+    ees4 c8\st bes8~ bes4 a8\st c~
     c4 ees8\st c\st r2
-    ees4 c8\st bes4. a8\st c~
+    ees4 c8\st bes8~ bes4 a8\st c~
     c4 cis8\st a\st r4 ees'4~
   }
 }
@@ -55,11 +55,11 @@ trompa = {
 fagote = {
   \clef bass
   \relative c {
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. r4
-    a4 g8->\st a4. g8->\st a~
-    a4 g8->\st a4. cis8->\st dis,->\st
-    a'4 g8->\st a4. g8->\st a~
+    a4 g8->\st a8~ a4 g8->\st a~
+    a4 g8->\st a8~ a4 r4
+    a4 g8->\st a8~ a4 g8->\st a~
+    a4 g8->\st a8~ a4 cis8->\st dis,->\st
+    a'4 g8->\st a8~ a4 g8->\st a~
   }
 }
 
