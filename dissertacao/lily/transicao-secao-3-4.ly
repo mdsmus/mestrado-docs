@@ -25,7 +25,7 @@ flauta = {
     bes4.~( bes8 c4
     a2.~\p
     a2.) 
-    r4. r16 a16\<( c bes dis cis
+    r4. r16 a16\<( c bes dis cis)
     %% seção BBA
     d?4-^\f b-^ cis-^ gis8( ais
     g?4.)
