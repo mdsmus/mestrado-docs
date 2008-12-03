@@ -18,6 +18,7 @@
         \bar "||"
         \cadenzaOn
         \override Stem #'transparent = ##t
+        \override TextScript #'extra-offset = #'( -5 . 0 )
         e4^\markup{Notas omitidas} dis
         \bar "||"
       }
@@ -29,11 +30,11 @@
   }
 }
 \paper {
-  paper-width = 10.1\cm
+  paper-width = 11.8\cm
   paper-height = 3\cm
   line-width = 11\cm
   top-margin = -.1\cm
-  left-margin = -1.2\cm
+  left-margin = .2\cm
   tagline = 0
   indent = #0
 }

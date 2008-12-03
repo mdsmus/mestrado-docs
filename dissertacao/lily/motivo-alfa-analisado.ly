@@ -13,7 +13,7 @@
         g4^\startGroup^\markup{\italic{motivo #(ly:export (ly:wide-char->utf-8 #x3B2))}} e
         \revert TextScript #'extra-offset
         \override TextScript #'extra-offset = #'( 0 . 2 )
-        fis\stopGroup cis^\startGroup^\markup{\italic{motivo #(ly:export (ly:wide-char->utf-8 #x3B2)) invertido}} dis c\stopGroup
+        fis\stopGroup cis^\startGroup^\markup{\italic{inv(motivo #(ly:export (ly:wide-char->utf-8 #x3B2)))}} dis c\stopGroup
       }
     }
   \layout {
@@ -23,11 +23,11 @@
   }
 }
 \paper {
-  paper-width = 4.6\cm
-  paper-height = 3\cm
+  paper-width = 5.8\cm
+  paper-height = 2.2\cm
   line-width = 5.5\cm
-  top-margin = -.1\cm
-  left-margin = -1.2\cm
+  top-margin = -.3\cm
+  left-margin = .1\cm
   tagline = 0
   indent = #0
 }

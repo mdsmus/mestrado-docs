@@ -25,11 +25,11 @@
   }
 }
 \paper {
-  paper-width = 12.6\cm
-  paper-height = 3\cm
-  line-width = 13.5\cm
-  head-separation = -1\cm
-  left-margin = -1.2\cm
+  paper-width = 13.6\cm
+  paper-height = 2\cm
+  line-width = 13.4\cm
+  top-margin = -.5\cm
+  left-margin = .2\cm
   tagline = 0
   indent = #0
 }

@@ -141,11 +141,13 @@ fagote = {
   }
 }
 \paper {
-  paper-width = 12.6\cm
-  paper-height = 3\cm
+  paper-width = 14.6\cm
+  paper-height = 12.5\cm
   line-width = 13.5\cm
+  top-margin = -.9\cm
   head-separation = -1\cm
-  left-margin = -1.2\cm
+  left-margin = 1\cm
+  bottom-margin = -3\cm
   tagline = 0
   indent = #0
 }

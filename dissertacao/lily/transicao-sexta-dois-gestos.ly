@@ -96,11 +96,13 @@ trompa = {
   }
 }
 \paper {
-  paper-width = 12.6\cm
-  paper-height = 3\cm
-  line-width = 13.5\cm
+  paper-width = 14.3\cm
+  paper-height = 14.5\cm
+  line-width = 13.4\cm
   head-separation = -1\cm
-  left-margin = -1.2\cm
+  left-margin = .8\cm
+  top-margin = -1\cm
+  bottom-margin = -2\cm
   tagline = 0
   print-page-number = #'nil
   head-separation = -1\cm

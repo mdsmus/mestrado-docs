@@ -35,7 +35,7 @@
   paper-height = 2\cm
   line-width = 13\cm
   top-margin = -.4\cm
-  left-margin = -1.2\cm
+  left-margin = .1\cm
   tagline = 0
   indent = 0
 }

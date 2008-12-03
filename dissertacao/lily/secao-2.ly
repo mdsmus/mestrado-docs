@@ -13,9 +13,11 @@
         g4 cis, e g, bes e, \bar "||"
         g' g, cis g, cis cis, \bar "||"
         g''' e, c' cis,, a' fis, \bar "||"
+        \break
         g''' cis,, bes' g,, e' bes, \bar "||"
         g'''' bes,, a' cis,,, c' dis,, \bar "||"
         g''' e, c' cis,, a' fis, \bar "||"
+        \break
         g''' g, cis g, cis cis, \bar "||"
         g''' bes, dis cis, fis a, \bar "||"
         \clef bass
@@ -33,13 +35,13 @@
   }
 }
 \paper {
-  paper-width = 12.6\cm
-  paper-height = 6\cm
+  paper-width = 13.6\cm
+  paper-height = 10\cm
   line-width = 13.5\cm
-  top-margin = -.1\cm
-  left-margin = -1.2\cm
+  top-margin = -.3\cm
+  left-margin = .1\cm
   tagline = 0
   indent = #0
   print-page-number = #'nil
-  between-system-padding = -4\cm
+  between-system-padding = 0\cm
 }

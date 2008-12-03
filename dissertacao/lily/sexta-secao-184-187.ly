@@ -79,10 +79,11 @@ trompa = {
   }
 }
 \paper {
-  paper-width = 12.6\cm
-  line-width = 13.5\cm
-  head-separation = -1\cm
-  left-margin = -1.2\cm
+  paper-width = 14.3\cm
+  paper-height = 4.5\cm
+  line-width = 13.4\cm
+  top-margin = -1\cm
+  left-margin = .8\cm
   tagline = 0
   indent = #0
 }

@@ -9,7 +9,7 @@
         \set Score.currentBarNumber = #81
         \bar ""
         \bracketUp
-        s4. g4.~^\markup{Cl. (em dó)}
+        s4. g4.~^\markup{Cl. (som real)}
         g2.~
         g4.~ g8 e4~
         e4. cis
@@ -17,6 +17,7 @@
         \bar "||"
         \cadenzaOn
         \override Stem #'transparent = ##t
+        \override TextScript #'extra-offset = #'( -5 . 0 )
         fis4^\markup{Notas omitidas} dis
         \bar "||"
       }
@@ -28,11 +29,11 @@
   }
 }
 \paper {
-  paper-width = 10.1\cm
+  paper-width = 11.8\cm
   paper-height = 3\cm
   line-width = 11\cm
   top-margin = -.1\cm
-  left-margin = -1.2\cm
+  left-margin = .2\cm
   tagline = 0
   indent = #0
 }
