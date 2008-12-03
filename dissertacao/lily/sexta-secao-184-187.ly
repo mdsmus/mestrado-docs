@@ -20,7 +20,7 @@ flauta = {
 }
 
 oboe = {
-  \relative c' {
+  \relative c'' {
     r2 cis16\ppp dis c? g e fis r8
     R1
     r4 cis'16 dis c? g r2
