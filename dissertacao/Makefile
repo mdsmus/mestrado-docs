@@ -11,9 +11,7 @@ USE_PDFLATEX = 1
 -include ~/lib/make/latex.mk
 -include ~/repositorios/genos-repos/lib/make/latex.mk
 
-cleanall:
-	clean
-	score-clean
+cleanall: clean score-clean
 	rm -f lily\*-*
 
 medium-clean: light-clean
@@ -26,6 +24,8 @@ score-clean:
 	rm -f {lily-*,snippet*,tmp*}
 	rm -f lily\*-systems*
 	rm -f paginas-composicao.tex
+	rm -f paginas-composicao.dep
+	rm -f paginas-composicao.psfonts
 
 paginas-composicao.tex: paginas-composicao.lytex $(GESTOS)
 	rm -f figs/lily-*.eps ;\
