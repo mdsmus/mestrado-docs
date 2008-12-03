@@ -374,21 +374,21 @@ gestoCBEoboe = {
     r4 a8-.-> r r4 a8-.-> r
     a8-.-> r8 r4 a8-.->[ r a8-.->] r
     r4 r8. c16\f( ees des fis e g4~
-    g4) e8\st fis4. cis8\st e~
+    g4) e8\st fis8~ fis4 cis8\st e~
     e4 g8\st e\st r2
-    g4 e8\st fis4. cis8\st e~
+    g4 e8\st fis8~ fis4 cis8\st e~
     e4 e8\st cis\st r4 ees4~
-    ees4 c8\st bes4. a8\st c~
+    ees4 c8\st bes8~ bes4 a8\st c~
     c4 ees8\st c\st r2
-    ees4 c8\st bes4. a8\st c~
+    ees4 c8\st bes8~ bes4 a8\st c~
     c4 cis8\st a\st r4 ees'4~
-    ees4 c8\st bes4. a8\st c~
+    ees4 c8\st bes8~ bes4 a8\st c~
     c4 ees8\st c\st r2
-    ees4 c8\st bes4. a8\st c~
+    ees4 c8\st bes8~ bes4 a8\st c~
     c4 cis8\st a\st r2
     g'4( e4 fis cis8 dis)
     g4( e4 fis cis8 dis)
-    dis4 c?8\st bes4. a8\st c~
+    dis4 c?8\st bes8~ bes4 a8\st c~
     c4 ees8\st c\st r2
     \setTextCresc
     g'4\<( e4 fis cis8 dis)
