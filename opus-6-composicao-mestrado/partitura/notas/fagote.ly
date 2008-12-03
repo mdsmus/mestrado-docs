@@ -233,14 +233,14 @@ gestoBBCfagote = {
     d4-^ b-^ cis-^ gis8( ais
     g?2~ g4)
 
-    gis16( ais b cis
+    gis16( ais b cis)
 
-    d4-^) b-^ cis-^ gis8( ais
+    d4-^ b-^ cis-^ gis8( ais
     g2~ g4)
 
-    gis16( ais b cis
+    gis16( ais b cis)
 
-    d4-^) b-^ cis-^ gis8( ais
+    d4-^ b-^ cis-^ gis8( ais
     g4.) r8 
 
     d'4-^ b-^ 
