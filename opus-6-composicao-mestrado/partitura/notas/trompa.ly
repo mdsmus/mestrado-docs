@@ -191,18 +191,18 @@ gestoCAAtrompa = {
     %% bifonia
     %% junto com clarinete. adaptação por causa da tessitura do cl.
     r2 r4 ees4~\p
-    ees c8\st bes4. cis8 dis
+    ees c8\st bes8~ bes4 cis8 dis
     c?2 r4 ees4~
-    ees c8\st bes4. cis8 dis~
+    ees c8\st bes8~ bes4 cis8 dis~
     dis2 r4 ees4~
-    ees c8\st bes4. cis8 dis
+    ees c8\st bes8~ bes4 cis8 dis
     c?2 r4 ees4~
-    ees c8\st bes4. cis8 cis~
+    ees c8\st bes8~ bes4 cis8 cis~
     cis2 r4 ees'4~
     %% junto com oboé
-    ees c?8\st bes4. a8 dis
+    ees c?8\st bes8~ bes4 a8 dis
     c2 r4 ees4~
-    ees c8\st bes4. a8 a~
+    ees c8\st bes8~ bes4 a8 a~
   }
 }
 
@@ -221,13 +221,13 @@ gestoCACtrompa = {
     a1)
     R1
     r2 \times 2/3 {a2-+( bes4}
-    a1)-+
+    a1)
     R1
     a1~-+\mp
     a1
     R1
-    c2-+\mf\<( bes-+
-    a-+)\ff r
+    c2-+\mf\<( bes
+    a)\ff r
   }
 }
 
