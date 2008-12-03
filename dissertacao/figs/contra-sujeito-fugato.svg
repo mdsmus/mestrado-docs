@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.2"
-   width="146"
-   height="30"
+   version="1.0"
+   width="160.49548"
+   height="26.135141"
    id="svg3769"
    sodipodi:version="0.32"
    inkscape:version="0.45.1"
@@ -2376,7 +2376,8 @@
     </font>
   </defs>
   <g
-     id="g14887">
+     id="g14887"
+     transform="translate(17.495485,-3.0582655)">
     <g
        id="g4562"
        transform="matrix(1.757299,0,0,1.757299,-12,-1.757299)">
@@ -3697,8 +3698,8 @@
   <text
      id="text13528"
      style="font-size:3.06738281px;fill:currentColor;font-family:Schoolbook"
-     x="6.8395014"
-     y="17.382895">
+     x="24.334988"
+     y="14.324629">
     <tspan
        id="tspan13530">132</tspan>
   </text>

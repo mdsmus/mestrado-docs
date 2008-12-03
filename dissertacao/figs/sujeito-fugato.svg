@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.2"
-   width="96"
-   height="30"
+   version="1.0"
+   width="108.11716"
+   height="28.200001"
    id="svg12527"
    sodipodi:version="0.32"
    inkscape:version="0.45.1"
@@ -40,11 +40,13 @@
      pagecolor="#ffffff"
      id="base"
      inkscape:zoom="11.025076"
-     inkscape:cx="38.941415"
-     inkscape:cy="16.528343"
+     inkscape:cx="54.058583"
+     inkscape:cy="13.793784"
      inkscape:window-x="0"
      inkscape:window-y="15"
-     inkscape:current-layer="svg12527" />
+     inkscape:current-layer="svg12527"
+     height="28.2px"
+     width="108.11716px" />
   <defs
      id="defs12529">
     <font
@@ -2374,7 +2376,8 @@
     </font>
   </defs>
   <g
-     id="g15882">
+     id="g15882"
+     transform="translate(15.117168,0.5962305)">
     <g
        id="g13320"
        transform="matrix(1.757299,0,0,1.757299,-12,-1.757299)">
