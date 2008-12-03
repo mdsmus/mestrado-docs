@@ -36,10 +36,11 @@
 }
 \paper {
   paper-width = 13.6\cm
-  paper-height = 10\cm
+  paper-height = 7.7\cm
   line-width = 13.5\cm
   top-margin = -.3\cm
   left-margin = .1\cm
+  bottom-margin = -2\cm
   tagline = 0
   indent = #0
   print-page-number = #'nil
