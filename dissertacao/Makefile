@@ -29,7 +29,7 @@ score-clean:
 
 paginas-composicao.tex: paginas-composicao.lytex $(GESTOS)
 	rm -f figs/lily-*.eps ;\
-	lilypond-book --psfonts -I $(SCOREDIR)/partitura/notas -I $(SCOREDIR)/script/temp -I $(SCOREDIR)/script/systemfiles -I $(SCOREDIR)/partitura paginas-composicao.lytex ;\
+	lilypond-book --pdf -I $(SCOREDIR)/partitura/notas -I $(SCOREDIR)/script/temp -I $(SCOREDIR)/script/systemfiles -I $(SCOREDIR)/partitura paginas-composicao.lytex ;\
 	bash arruma-lytex.sh
 
 $(GESTOS):
