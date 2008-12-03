@@ -236,11 +236,10 @@ ser associado a níveis de dinâmica e representar níveis como
   \label{fig:non-melodic-contours}
 \end{figure}
 
-%% não sei onde colocar. na dúvida posso até tirar
-A idéia de preservação de contornos e variação de intervalos entre
-notas é encontrada em diferentes situações musicais. Alguns exemplos
-mais comuns são as mudanças de modo em peças do tipo tema e variações,
-a adequação de notas à tonalidade em respostas tonais de fugas, os
+A preservação de contornos e variação de intervalos entre notas é
+encontrada em diferentes situações musicais. Alguns exemplos mais
+comuns são as mudanças de modo em peças do tipo tema e variações, a
+adequação de notas à tonalidade em respostas tonais de fugas, os
 \eng{leitmotifs} e as idéias fixas \cite[p. 29]{morris87:composition}.
 
 Neste trabalho concentrei esforços no mapeamento de contornos de
@@ -576,22 +575,15 @@ diferenças ao contorno obtém-se que $F_2 = P_1$ + 8, ou seja, $F_2 = 5
 + 8$, então $F_2 = 13$. Aplicando-se este procedimento para calcular
 os outros elementos obtém-se F(5 13 7 11).
 
-A ordem de um contorno está relacionada com o número de elementos do
-seu espaço de contorno. Pode-se entender que o espaço ao qual um
-contorno P(5 9 6 8) pertence contém outros elementos além destes
-quatro contidos em P. Ou seja, pode-se afirmar que o espaço que
-engloba P contém, além de 5, 9, 6 e 8, os elementos 0, 1, 2, 3, 4 e
-7. Assim pode-se dizer que o espaço de contorno de P contém pelo menos
-10 elementos. Dado apenas um contorno P(5 9 6 8) é impossível saber se
-o espaço de contorno ao qual P pertence contém elementos além do valor
-9. Em um outro exemplo, o número de elementos do espaço de um contorno
-V(1 2 4 5) contém certamente os elementos 0, 1, 2, 3, 4 e 5, ou seja,
-6 elementos. É impossível determinar se este espaço de contorno contém
-elementos de valor maior que 5. Dessa forma, na falta de determinação
-do conjunto universo, o contorno pode ser confinado em um sistema de
-base $n+1$, onde $n$ é o maior valor numérico e a ordem de um contorno
-calculada somando o seu elemento de maior valor com 1.
-%% dar exemplo de base com um dos contornos V ou P
+A ordem de um contorno é calculada através da soma do maior valor
+numérico dos seus elementos com 1. Um dado contorno P(5 9 6 8), por
+exemplo, tem ordem 10 $(9+1)$. O espaço de contorno ao qual P pertence
+contém pelo menos os elementos de valores numéricos menor que 9, ou
+seja, além de 5, 9, 6 e 8, os elementos 0, 1, 2, 3, 4 e 7. Porém é
+impossível determinar se este espaço de contorno tem outros elementos
+maiores do que 9.  Então, na falta de determinação de um conjunto
+universo ao qual o contorno faz parte, o contorno pode ser confinado
+em um sistema de base $n+1$, onde $n$ é o maior valor numérico.
 
 A operação de inversão de um contorno P de ordem $q$ é representada
 por inv(P), e é matematicamente calculada por
@@ -602,7 +594,8 @@ $inv(P(5\;9\;6\;8))=S(4\;0\;3\;1)$, como mostra a figura
 \ref{fig:operacoes-ip}.
 
 Relações de similaridade \cite{marvin.ea87:relating} são analisadas
-com operação e matriz de comparação, forma prima e classe de contorno.
+com operação de comparação, matriz de comparação, forma prima e classe
+de contorno.
 
 A operação de comparação $com(a,b)$\footnote{Operações como a função
   de comparação, a matriz de comparação e as diagonais da matriz de
@@ -619,7 +612,7 @@ igualmente denso que o outro. O resultado da operação de comparação é
 ``$+$'' se $b$ é maior que $a$; ``$-$'' se $b$ é menor que $a$; e
 ``$0$'' se $b$ é igual a $a$. Por exemplo, no contorno P(5 9 6 8), o
 valor de $com(P_0,P_1)$ é o sinal ``$+$'', o de $com(P_1,P_2)$ é
-``$-$'', e o valor de $com(P_3,P_0)$ é ``$+$''. Esta medida de
+``$-$'', e o valor de $com(P_3,P_0)$ é ``$-$''. Esta medida de
 comparação pode ser invertida de modo que a comparação entre dois
 elementos é igual ao inverso da comparação destes elementos em ordem
 reversa. Esta idéia pode ser melhor entendida observando-se a equação
@@ -1097,7 +1090,7 @@ de usar \texttt{make-instance}.
 
 As operações em contornos são implementadas em métodos, aproveitando
 do despacho múltiplo usado pelo sistema de objetos de Common
-Lisp. Desse modo um método como \texttt{transpor} se comporta de
+Lisp. Desse modo um método como \texttt{rotacionar} se comporta de
 maneira diferente dependendo qual o tipo do seu primeiro parâmetro. No
 código seguinte há dois métodos, sendo o primeiro para
 \code{contorno-duracao}, e o segundo para \code{contorno-simples}.
@@ -1106,25 +1099,29 @@ código seguinte há dois métodos, sendo o primeiro para
 
 \singlespacing
 \begin{verbatim}
-(defmethod transpor ((objeto contorno-duracao) fator)
-  (map-contorno-duracao #L(transpor !1 fator) (pontos objeto)))
+(defmethod rotacionar ((objeto contorno-duracao) &optional (fator 1))
+  (if (> fator (length (pontos objeto)))
+      (let ((x (mapcar #'ponto-x (pontos objeto)))
+            (y (mapcar #'ponto-y (pontos objeto))))
+        (make-contorno-duracao (mapcar #'make-ponto x
+           (append (subseq y fator) (subseq y 0 fator)))))))
 
-(defmethod transpor ((objeto contorno-simples) fator)
-  (map-contorno-simples #L(+ !1 fator) (pontos objeto)))
+(defmethod rotacionar ((objeto contorno-simples) &optional (fator 1))
+  (make-contorno-simples (append (subseq (pontos objeto) fator)
+                                 (subseq (pontos objeto) 0 fator))))
 \end{verbatim}
 \doublespacing
 
-\goiaba{} tem diversas operações para lidar com contornos, como
-tranposição, inversão, retrogradação, rotação e expansão de
-intervalos. Além disso operações definidas na literatura também estão
-implementadas, como redução de contornos \cite{adams76:melodic},
-classe de contorno, série de contornos adjacentes, vetor de séries de
-contornos adjacentes, intervalo de contorno, vetor de intervalo de
-contorno, vetor de classe de contorno I e II
-\cite{friedmann85:methodology} e matriz de comparação
-\cite{morris93:directions}.
+O \goiaba{} tem diversas operações para lidar com contornos, como
+inversão, retrogradação, rotação e expansão de intervalos. Além disso
+operações definidas na literatura também estão implementadas, como
+redução de contornos \cite{adams76:melodic}, classe de contorno, série
+de contornos adjacentes, vetor de séries de contornos adjacentes,
+intervalo de contorno, vetor de intervalo de contorno, vetor de classe
+de contorno I e II \cite{friedmann85:methodology} e matriz de
+comparação \cite{morris93:directions}.
 
-Finalmente, \goiaba{} usa a biblioteca
+Finalmente, o \goiaba{} usa a biblioteca
 Cl-pdf\footnote{www.cliki.net/CL-PDF} para plotar facilmente contornos
 definidos, permitindo a fácil visualização de operações em contornos.
 Por exemplo, o código seguinte gera um gráfico com o contorno
@@ -1140,10 +1137,9 @@ gráfico.
   (plot-page "contornos.pdf"
     (plot-contorno-full 50 500
        Z "original Z" :red
-       (transpor Z 2) "transposição" :green
        (retrogradar Z) "retrógrado" :blue
        (inverter Z) "inversão" :orange
-       (aumentar-altura Z 2) "aumentar-altura" :lightblue
+       (aumentar-altura Z 2) "aumentar-altura" :green
        (rotacionar Z 1) "rotação" :darkcyan)))
 \end{verbatim}
 \doublespacing
@@ -1155,13 +1151,13 @@ gráfico.
   \label{fig:operacoes}
 \end{figure}
 
-Para o futuro pretendo implementar a possibilidade de gerar contornos
-a partir de partituras musicais em formato Lilypond e vice-versa, e
-implementar uma interface gráfica. O desenvolvimento do \goiaba{}
-segue procedimentos oriundos do desenvolvimento de software livre como
-uso de controle de versão e disponibilização do código-fonte na
+Para o futuro pretendo implementar a geração de contornos a partir de
+partituras musicais em formato Lilypond e vice-versa, e implementar
+uma interface gráfica. O desenvolvimento do \goiaba{} segue
+procedimentos oriundos do desenvolvimento de software livre como uso
+de controle de versão e disponibilização do código-fonte na
 internet\footnote{Disponível em
-  \url{http://git.genos.mus.br/cgit.cgi?url=marcos-mestrado}.}.
+  \url{http://git.genos.mus.br/cgit.cgi?url=goiaba}.}.
 
 As descrições das teorias de contornos nem sempre são feitas pelos
 seus autores de uma forma totalmente clara. A implementação de uma
@@ -2073,7 +2069,7 @@ contorno na composição musical, uma vez que há carência deste tópico
 na literatura.
 
 A realização deste estudo abre caminho para o desenvolvimento de pelo
-menos quatro trabalhos futuros.
+menos seis trabalhos futuros.
 
 O primeiro deles é a realização de um mapeamento dos mais diversos
 parâmetros musicais como dinâmica, densidade ou textura em função de
@@ -2086,12 +2082,16 @@ contornos na criação musical a partir da composição sistemática de
 estudos para teste de cada operação. Dessa forma é possível verificar
 como cada operação pode realmente ser utilizada na composição musical.
 
-O terceiro trabalho é a composição de estudos com instrumentos mais
+O terceiro trabalho é a incorporação da medida do tempo no estudo de
+contornos. Este trabalho possibilita o estudo das inclinações entre os
+elementos de contorno.
+
+O quarto trabalho é a composição de estudos com instrumentos mais
 variados, como por exemplo instrumentos sintetizados por
 computador. Este estudo pode contribuir com os trabalhos de música
 computacional disponibilizando contorno como elemento estruturador.
 
-Finalmente o quarto trabalho é a expansão do software \goiaba{}, com a
+Finalmente o quinto trabalho é a expansão do software \goiaba{}, com a
 inserção de operações de todas as teorias de contornos, com o
 acréscimo de uma interface gráfica para que o usuário possa clicar e
 arrastar elementos em um gráfico para gerar contornos, com a inserção
