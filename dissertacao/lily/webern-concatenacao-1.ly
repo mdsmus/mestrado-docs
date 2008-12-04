@@ -9,9 +9,9 @@
       \set Score.currentBarNumber = #4
       \bar ""
       \bracketUp
-      \once \override TextScript #'extra-offset = #'( -4 . 0 )
+      \once \override TextScript #'extra-offset = #'( -4 . -5 )
       r8^\markup{\italic{vln.I}}
-      \override TextScript #'extra-offset = #'( 0 . 2 )
+      \once \override TextScript #'extra-offset = #'( 0 . -2 )
       d\startGroup^\markup{(1 2 0)} f e,\stopGroup
       c'\startGroup^\markup{(2 0 1)} fis, bes\stopGroup r
     }
@@ -23,11 +23,11 @@
   }
 }
 \paper {
-  paper-width = 6.1\cm
-  paper-height = 3\cm
+  paper-width = 5.5\cm
+  paper-height = 2.6\cm
   line-width = 6\cm
-  top-margin = -.1\cm
-  left-margin = .1\cm
+  top-margin = -.6\cm
+  left-margin = .2\cm
   tagline = 0
   indent = 0
 }

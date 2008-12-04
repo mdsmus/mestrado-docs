@@ -7,7 +7,6 @@
     \time 4/4
     \relative c' {
       \bracketUp
-      \override TextScript #'extra-offset = #'( 0 . 2 )
       f\startGroup^\markup{m1} d' b f'\stopGroup
       \bar "||"
       g,\startGroup^\markup{m2} a gis ais\stopGroup
@@ -21,10 +20,10 @@
   }
 }
 \paper {
-  paper-width = 7.6\cm
-  paper-height = 2.3\cm
+  paper-width = 6.5\cm
+  paper-height = 2\cm
   line-width = 7.5\cm
-  top-margin = -.5\cm
+  top-margin = -.4\cm
   left-margin = .1\cm
   tagline = 0
   indent = 0

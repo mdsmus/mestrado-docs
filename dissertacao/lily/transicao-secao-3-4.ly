@@ -135,15 +135,17 @@ fagote = {
     >>
   >>
   \layout {
+    indent = #0
+    line-width = #140
+    ragged-last = ##f
     \context {
       \Staff \consists "Horizontal_bracket_engraver"
     }
   }
 }
 \paper {
-  paper-width = 14.6\cm
+  paper-width = 15.1\cm
   paper-height = 12.5\cm
-  line-width = 13.5\cm
   top-margin = -.9\cm
   head-separation = -1\cm
   left-margin = 1\cm

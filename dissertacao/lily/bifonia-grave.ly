@@ -80,15 +80,17 @@ trompa = {
     >>
   >>
   \layout {
+    indent = #0
+    line-width = #142
+    ragged-last = ##f
     \context {
       \Staff \consists "Horizontal_bracket_engraver"
     }
   }
 }
 \paper {
-  paper-width = 14.4\cm
+  paper-width = 15.1\cm
   paper-height = 4\cm
-  line-width = 13.5\cm
   top-margin = -1.4\cm
   left-margin = .8\cm
   tagline = 0

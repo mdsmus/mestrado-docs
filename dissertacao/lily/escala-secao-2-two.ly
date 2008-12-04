@@ -11,7 +11,6 @@
       \relative c'''' {
         \time 16/4
         \bracketUp
-        \override TextScript #'extra-offset = #'( 0 . 2 )
         g4\startGroup^\markup{Escala octatônica} fis e dis cis c bes a g4 fis e dis cis c bes a\stopGroup \bar "||"
         \time 6/4
         g''\startGroup^\markup{Notas escolhidas} dis bes fis cis a\stopGroup \bar "||"
@@ -30,9 +29,9 @@
 }
 \paper {
   paper-width = 13.6\cm
-  paper-height = 6\cm
+  paper-height = 5.3\cm
   line-width = 13.5\cm
-  top-margin = -.1\cm
+  top-margin = -.2\cm
   left-margin = .1\cm
   bottom-margin = -2\cm
   tagline = 0

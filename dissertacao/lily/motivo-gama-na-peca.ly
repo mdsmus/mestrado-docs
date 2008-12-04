@@ -97,10 +97,9 @@ fagote = {
   }
 }
 \paper {
-  paper-width = 14.6\cm
-  paper-height = 6\cm
-  line-width = 13.5\cm
-  head-separation = 0\cm
+  paper-width = 13.3\cm
+  paper-height = 5.5\cm
+  top-margin = -.6\cm
   left-margin = 1\cm
   tagline = 0
   indent = #0
