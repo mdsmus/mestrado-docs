@@ -1,4 +1,4 @@
-\version "2.10.33"
+\version "2.11.64"
 
 \include "../config/lib.ly"
 
@@ -36,7 +36,7 @@ clarinete = {
     e4\ff e16 g, bes e, g' cis,8.~\fp cis4~
     cis4 e16\f g, bes e, g' cis,8.~\p cis4~
     cis4 e16\mf g, bes e, g' cis,8.~\p\> cis4
-    \setTextCresc
+    \crescTextCresc
     e,16\ppp( g fis bes a c a c bes e cis dis) r4
   }
 }
@@ -53,7 +53,7 @@ fagote = {
 
 trompa = {
   \relative c' {
-    \setTextDecresc
+    \dimTextDecresc
     g8~\sfz\> g2..~
     g1~
     g8\ppp r8 r2.
