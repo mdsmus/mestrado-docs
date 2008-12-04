@@ -25,31 +25,36 @@
   <<
     \new StaffGroup <<
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Flauta "}
+        \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+        \set Staff.instrumentName = #"Flauta "
         \gestosglobal
         \gestosflauta
       >>
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Oboé "}
+        \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+        \set Staff.instrumentName = #"Oboé "
         \gestosglobal
         \gestosoboe
       >>
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Clarinete Bb. "}
+        \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+        \set Staff.instrumentName = #"Clarinete Bb. "
         \gestosglobal
         \transpose c d {
           \gestosclarinetebb
         }
       >>
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Trompa F "}
+        \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+        \set Staff.instrumentName = #"Trompa F "
         \gestosglobal
         \transpose c g {
           \gestostrompa
         }
       >>
       \new Staff <<
-        \set Staff.instrumentName = \markup {\hcenter-in #5 "Fagote "}
+        \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+        \set Staff.instrumentName = #"Fagote "
         \gestosglobal
         \gestosfagote
       >>

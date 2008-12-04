@@ -1,5 +1,5 @@
 %% flauta.ly
-\version "2.10.33"
+\version "2.11.64"
 \include "newcommand.ly"
 
 gestoAAAflauta = {
@@ -48,7 +48,7 @@ gestoAAEflauta = {
     %% inclusão de transposição
     %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
     %% procedimentos utilizados: expansão de intervalos e transposição
-    \setTextCresc
+    \crescTextCresc
     g1\<\espressivo( e4
     fis2) fis( cis4
     e1) r4
@@ -74,7 +74,7 @@ gestoABAflauta = {
 
 gestoABBflauta = {
   \relative c'''' {
-    \setTextCresc
+    \crescTextCresc
     g1~\< r4
     g2. g2->~
     g4 g2.-> g4~->\f
@@ -84,7 +84,7 @@ gestoABBflauta = {
 
 gestoABCflauta = {
   \relative c''' {
-    \setTextDecresc
+    \dimTextDecresc
     g2.\> r2
     g2. r2
     r2 g,2.~\mp
@@ -140,7 +140,8 @@ gestoBACflauta = {
     cis4. dis4.
     bes4.~ bes8 c4
     a2.~\p
-    a2.) 
+    a2.)
+    \crescHairpin
     r4. r16 a16\<( c bes dis cis)
   }
 }
@@ -252,7 +253,7 @@ gestoCACflauta = {
     %% repetição
     g'4 e8\st fis8~ fis4 cis8\st e~
     e4 g8\st e\st r2
-    \setTextCresc
+    \crescTextCresc
     g4\< e8\st fis8~ fis4 cis8\st e~
     e4 e8\st cis\st r8. c'16( ees des fis e
     g4) e8\st fis8~ fis4 cis8\st e~
@@ -296,7 +297,7 @@ gestoCBBflauta = {
     g'16 e fis cis dis c r8 r2
     r2 g'16 e fis cis dis c r8
     r2 g'16 e fis cis dis c r8
-    \setTextCresc
+    \crescTextCresc
     r2 g'16\< e fis cis dis c8.~
     c4. r8 g'16 e fis cis dis c8.~
     c4. r8 g'16 e fis cis dis c8.~
@@ -309,7 +310,7 @@ gestoCBCflauta = {
     g2\ff g'16 e fis cis dis c r8
     %% toca também material do fagote transposto oitava acima
     e,16 cis g' e, bes' g r8 g''16 e fis cis dis c r8
-    \setTextDecresc
+    \dimTextDecresc
     e,16 cis g' e, bes' g r8 g''16\> e fis cis dis c r8
     e,16 cis g' e, bes' g r8 g''16 e fis cis dis c r8
     e,16 cis g' e, bes' g r8 g'16 e fis cis dis c r8
@@ -348,7 +349,7 @@ gestoCBEflauta = {
     g'4( e4 fis cis8 dis
     c?1)
     g'4 e8\st fis8~ fis4 cis8\st e~
-    \setTextCresc
+    \crescTextCresc
     e4 g8\st e\st r8. c16\<( ees des fis e
     g4( e4 fis cis8 dis
     c?1)
@@ -356,6 +357,7 @@ gestoCBEflauta = {
     c?1)
     g'4( e4 fis) ees16( des fis e
     g4\f( e4 fis) cis8( dis)
+    \crescHairpin
     r4 c?2.~\p\<
     c1\f
   }

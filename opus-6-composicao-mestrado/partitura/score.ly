@@ -1,5 +1,5 @@
 %% score.ly
-\version "2.10.33"
+\version "2.11.64"
 
 %% includes
 
@@ -32,22 +32,25 @@
     <<
       \new StaffGroup <<
         \new Staff <<
-          \set Staff.instrumentName = \markup {\hcenter-in #5 "Flauta "}
-          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Fl. "}
+          \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+          \set Staff.instrumentName = #"Flauta "
+          \set Staff.shortInstrumentName = #"Fl. "
           \set Staff.midiInstrument = "flute"
           \gestosglobal
           \gestosflauta
         >>
         \new Staff <<
-          \set Staff.instrumentName = \markup {\hcenter-in #5 "Oboé "}
-          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Ob. "}
+          \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+          \set Staff.instrumentName = #"Oboé "
+          \set Staff.shortInstrumentName = #"Ob. "
           \set Staff.midiInstrument = "oboe"
           \gestosglobal
           \gestosoboe
         >>
         \new Staff <<
-          \set Staff.instrumentName = \markup {\hcenter-in #5 "Clarinete Bb "}
-          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Cl.Bb "}
+          \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+          \set Staff.instrumentName = #"Clarinete Bb "
+          \set Staff.shortInstrumentName = #"Cl.Bb "
           \set Staff.midiInstrument = "clarinet"
           \transposition bes
           \gestosglobal
@@ -56,8 +59,9 @@
           }
         >>
         \new Staff <<
-          \set Staff.instrumentName = \markup {\hcenter-in #5 "Trompa F "}
-          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Tpa. "}
+          \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+          \set Staff.instrumentName = #"Trompa F "
+          \set Staff.shortInstrumentName = #"Tpa. "
           \set Staff.midiInstrument = "french horn"
           \transposition f
           \gestosglobal
@@ -66,8 +70,9 @@
           }
         >>
         \new Staff <<
-          \set Staff.instrumentName = \markup {\hcenter-in #5 "Fagote "}
-          \set Staff.shortInstrumentName = \markup {\hcenter-in #5 "Fg. "}
+          \override Staff.InstrumentName #'self-alignment-X = #RIGHT
+          \set Staff.instrumentName = #"Fagote "
+          \set Staff.shortInstrumentName = #"Fg. "
           \set Staff.midiInstrument = "bassoon"
           \gestosglobal
           \gestosfagote
@@ -77,7 +82,7 @@
     \midi { }
     \layout {
       \context { \Score
-                 \override MetronomeMark #'extra-offset = #'(-7 . 0)
+%                  \override MetronomeMark #'extra-offset = #'(-7 . 0)
                  \override BarNumber #'extra-offset = #'(0 . .5)
                }
       \context { \Staff
