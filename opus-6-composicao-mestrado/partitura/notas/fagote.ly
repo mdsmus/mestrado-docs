@@ -1,5 +1,5 @@
 %% fagote.ly
-\version "2.10.33"
+\version "2.11.64"
 \include "newcommand.ly"
 
 gestoAAAfagote = {
@@ -69,7 +69,7 @@ gestoABAfagote = {
 gestoABBfagote = {
   \clef bass
   \relative c' {
-    \setTextCresc
+    \crescTextCresc
     cis4\< r2 bes,~
     bes2 r8 dis,~ dis2~
     dis8 dis->~ dis2~ dis8 dis-> dis4~->\f
@@ -80,7 +80,7 @@ gestoABBfagote = {
 gestoABCfagote = {
   \clef bass
   \relative c, {
-    \setTextDecresc
+    \dimTextDecresc
     dis2.~\> dis8 fis4.~
     fis2 r2.
     r4 cis2. r4
@@ -179,7 +179,7 @@ gestoBBAfagote = {
       r8[ a-. a-. r] a-.[ a-. r a-.]
       a-.[ r a-. a-.] r a-. a-. a-. r a-.
     }
-    \setTextDecresc
+    \dimTextDecresc
     r8[ a-.\> a-. r] a-.[ a-. r a-.]
     a-.[ r a-. a-.] r a-. a-.[ a-. r a-.]
     r8[ a-. a-. r] a-.[ a-. r a-.]
@@ -291,7 +291,7 @@ gestoCACfagote = {
     a4 g8\st a8~ a4 r4
     a4 g8\st a8~ a4 g8\st a~
     a4 g8\st a8~ a4 cis8\st dis,\st
-    \setTextCresc
+    \crescTextCresc
     a'4\< g8\st a8~ a4 g8\st a~
     a4 g8\st a8~ a4 r4
     a4 g8\st a8~ a4 g8\st a~
@@ -330,7 +330,7 @@ gestoCBBfagote = {
     bes' g r8 r2 e'16 cis g' e,
     bes' g r8 r2.
     e'16 cis g' e, bes' g r8 r2
-    \setTextCresc
+    \crescTextCresc
     e'16\< cis g' e, bes' g8.~ g4. r8
     \repeat unfold 3 {
       e'16 cis g' e, bes' g8.~ g4. r8
@@ -355,7 +355,7 @@ gestoCBCfagote = {
     \clef tenor
     r4 c,16( ees des fis e g e g fis bes a c)
     \clef bass
-    \setTextCresc
+    \crescTextCresc
     r2 c,,16\<( ees des fis e g e g
     fis bes a c ees des fis e g4) r
     \clef tenor
@@ -391,7 +391,7 @@ gestoCBEfagote = {
       a'4 g8\st a8~ a4 g8\st a~
       a4 g8\st a8~ a4 r4
     }
-    \setTextCresc
+    \crescTextCresc
     a4\< g8\st a8~ a4 g8\st a~
     a4 g8\st a8~ a4 cis8\st dis,\st
     a'4 g8\st a8~ a4 g8\st a~

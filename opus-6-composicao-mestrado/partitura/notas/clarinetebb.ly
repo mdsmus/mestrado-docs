@@ -1,5 +1,5 @@
 %% clarinetebb.ly
-\version "2.10.33"
+\version "2.11.64"
 \include "newcommand.ly"
 
 gestoAAAclarinetebb = {
@@ -53,7 +53,7 @@ gestoAADclarinetebb = {
 
 gestoAAEclarinetebb = {
   \relative c'' {
-    \setTextCresc
+    \crescTextCresc
     g2\<( e fis4~
     fis cis2 dis2
     bes2.~ bes2)
@@ -82,7 +82,7 @@ gestoABAclarinetebb = {
 
 gestoABBclarinetebb = {
   \relative c''' {
-    \setTextCresc
+    \crescTextCresc
     r4 bes4\< e,,2.
     r8 bes'~ bes2. a'4
     c,,2 a''2 a8->\f bes,~
@@ -92,7 +92,7 @@ gestoABBclarinetebb = {
 
 gestoABCclarinetebb = {
   \relative c' {
-    \setTextDecresc
+    \dimTextDecresc
     c4\> c'2 a,~
     a4 r cis'2.
     r1 bes,4~
@@ -182,7 +182,7 @@ gestoBBAclarinetebb = {
   \relative c' {
     dis'8-.->\p[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
-    \setTextDecresc
+    \dimTextDecresc
     dis8-.->[\> r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.-> r
     dis'8-.->[ r8 r g,-.->] r4 cis8-.->[ r r g-.->] r4 dis'8-.-> r r4 g,8-.->\pp r
     R1*2
@@ -268,7 +268,7 @@ gestoCACclarinetebb = {
     %% repetição
     ees'4 c8\st bes8~ bes4 a8\st c~
     c4 ees8\st c\st r2
-    \setTextCresc
+    \crescTextCresc
     ees4\< c8\st bes8~ bes4 a8\st c~
     c4 cis8\st a\st r8. g16( bes a des c
     ees4) c8\st bes8~ bes4 a8\st c~
@@ -306,7 +306,7 @@ gestoCBBclarinetebb = {
     r4 e16 g, bes e, g' cis, r8 r4
     r4 e16 g, bes e, g' cis, r8 r4
     r4 e16 g, bes e, g' cis, r8 r4
-    \setTextCresc
+    \crescTextCresc
     r4 e16 g, bes e, g' cis,8.~\< cis4~
     cis8 r e16 g, bes e, g' cis,8.~ cis4~
     cis8 r e16 g, bes e, g' cis,8.~ cis4~
@@ -326,7 +326,7 @@ gestoCBCclarinetebb = {
     a c a c bes e cis dis fis e bes' g a4)
     r2 e,16( g fis bes a c a c
     bes e cis dis) r2.
-    \setTextCresc
+    \crescTextCresc
     r4 e,16\<( g fis bes a c a c bes e cis dis
     fis e bes' g a4) r4 e16( g fis bes
     a c a c bes e cis dis) r2
@@ -370,7 +370,7 @@ gestoCBEclarinetebb = {
     ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
     r ees-.->] r4 ees8-.-> r r4
     ees8-.->[ r ees-.->] r r ees-.-> r4
-    \setTextCresc
+    \crescTextCresc
     ees8-.->\<[ r r ees-.->] r4 ees8-.-> r
     r4 ees8-.-> r ees-.->[ r r ees-.->]
     r4 ees8-.->[ r r ees-.->] r4

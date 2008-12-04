@@ -1,5 +1,5 @@
 %% oboe.ly
-\version "2.10.33"
+\version "2.11.64"
 \include "newcommand.ly"
 
 gestoAAAoboe = {
@@ -45,7 +45,7 @@ gestoAAEoboe = {
   \relative c'' {
     %% repetição material seção AAB - clarinete
     %% #s(5 3 4 1 2 0)
-    \setTextCresc
+    \crescTextCresc
     e2\<( cis2.
     dis2) r4 a2(
     bes2 g2) r4
@@ -74,7 +74,7 @@ gestoABAoboe = {
 
 gestoABBoboe = {
   \relative c''' {
-    \setTextCresc
+    \crescTextCresc
     c8\< cis,~ cis1
     r4 a'4 c,,4. bes'4.~
     bes4. bes8~ bes4 c,4 c->\f
@@ -84,7 +84,7 @@ gestoABBoboe = {
 
 gestoABCoboe = {
   \relative c'' {
-    \setTextDecresc
+    \dimTextDecresc
     bes8\> e,~e2. r4
     R1*5/4
     cis2. r2
@@ -289,7 +289,7 @@ gestoCACoboe = {
     c?2) \times 2/3 {r4 cis4( e}
     g2 e
     fis1)
-    \setTextCresc
+    \crescTextCresc
     cis2\<( dis
     c?2) \times 2/3 {r4 cis4( e}
     g4 e fis2)
@@ -305,7 +305,7 @@ gestoCACoboe = {
 gestoCBAoboe = {
   \relative c'' {
     R1*11
-    \setTextCresc
+    \crescTextCresc
     %% variação de rot3 #s(5 3 4 1 2 0)
     r2 cis16\ppp dis c g e fis r8
     R1
@@ -323,7 +323,7 @@ gestoCBBoboe = {
     r2 cis'16 dis c g e fis r8
     r2. cis'16 dis c g
     e fis r8 r2 cis'16 dis c g
-    \setTextCresc
+    \crescTextCresc
     e fis r8 r2 cis'16\< dis c g
     \repeat unfold 3 {
       e fis8.~ fis4. r8 cis'16 dis c g
@@ -335,7 +335,7 @@ gestoCBCoboe = {
   \relative c' {
     e16 fis8.~\fp fis2\f cis'16 dis c g
     e fis8.~\p fis2 cis'16\f dis c g
-    \setTextDecresc
+    \dimTextDecresc
     e fis8.~\p fis2 cis'16\mf\> dis c g
     %% toca também material do clarinte transposto oitava acima
     e fis r8 e'16 g, bes e, g' cis, r8 cis16 dis c g
@@ -345,7 +345,7 @@ gestoCBCoboe = {
     r2 c,16( ees des fis e g e g
     fis bes a c) r2.
     c,16( ees des fis e g e g fis bes a c ees des fis e
-    \setTextCresc
+    \crescTextCresc
     g4) r2 c,,16\<( ees des fis
     e g e g fis bes a c) r2
     c,16( ees des fis e g e g fis bes a c ees des fis e
@@ -390,7 +390,7 @@ gestoCBEoboe = {
     g4( e4 fis cis8 dis)
     dis4 c?8\st bes8~ bes4 a8\st c~
     c4 ees8\st c\st r2
-    \setTextCresc
+    \crescTextCresc
     g'4\<( e4 fis cis8 dis)
     g4( e4 fis cis8 dis)
     g4( e4 fis cis8 dis)

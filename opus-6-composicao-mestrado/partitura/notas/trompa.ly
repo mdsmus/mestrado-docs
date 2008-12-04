@@ -1,5 +1,5 @@
 %% trompa.ly
-\version "2.10.33"
+\version "2.11.64"
 \include "newcommand.ly"
 
 gestoAAAtrompa = {
@@ -35,7 +35,7 @@ gestoAAEtrompa = {
     %% inclusão de transposição
     %% #s(5 3 4) - subconjunto de  #s(5 3 4 1 2 0)
     %% procedimentos utilizados: expansão de intervalos e transposição
-    \setTextCresc
+    \crescTextCresc
     g1\<\dolce\espressivo e4(
     fis2) fis( cis4
     e1) r4
@@ -59,7 +59,7 @@ gestoABAtrompa = {
 
 gestoABBtrompa = {
   \relative c'' {
-    \setTextCresc
+    \crescTextCresc
     a4.\< g,8~ g2.~
     g4 r8 cis,~ cis2~ cis8 cis~->
     cis2~ cis8 cis->~ cis4 cis~->\f
@@ -69,7 +69,7 @@ gestoABBtrompa = {
 
 gestoABCtrompa = {
   \relative c {
-    \setTextDecresc
+    \dimTextDecresc
     cis2~\> cis8 cis~ cis2
     r4 g''2.-+ g,4~
     g2 r2.
@@ -238,7 +238,7 @@ gestoCBAtrompa = {
 gestoCBBtrompa = {
   \relative c'' {
     R1*6
-    \setTextCresc
+    \crescTextCresc
     g1~\ppp\<
     g~
     g~
@@ -248,7 +248,7 @@ gestoCBBtrompa = {
 
 gestoCBCtrompa = {
   \relative c'' {
-    \setTextDecresc
+    \dimTextDecresc
     g8~\sfz\> g2..~
     g1~
     g8\ppp r8 r2.
@@ -302,7 +302,7 @@ gestoCBEtrompa = {
     g'2 e
     fis cis4 dis
     c1
-    \setTextCresc
+    \crescTextCresc
     g'2\< e
     fis cis4 dis
     c?1
