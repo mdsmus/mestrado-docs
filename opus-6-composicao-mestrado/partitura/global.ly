@@ -19,7 +19,7 @@ padraoglobal = {
 
 gestoAAAglobal = {
   %% merge do AAA e AAB planejados
-  \once \override Score.MetronomeMark #'extra-offset = #'(-7 . 2)
+  \once \override Score.MetronomeMark #'extra-offset = #'(-7 . 0)
   \padraoglobal
   \tempo 4=82
   \time 5/4
@@ -61,7 +61,7 @@ gestoABAglobal = {
   %% intervalos.
   \mark \default
   \padraoglobal
-  \once \override Score.MetronomeMark #'extra-offset = #'(-4 . 1)
+  \once \override Score.MetronomeMark #'extra-offset = #'(-4 . 0)
   \tempo 4=66
   s1*5/4*8
 }
@@ -107,7 +107,7 @@ gestoBBAglobal = {
   %% encerramento gradual da homofonia da seção anterior
   \mark \default
   \padraoglobal
-  \once \override Score.MetronomeMark #'extra-offset = #'(-7 . 2)
+  \once \override Score.MetronomeMark #'extra-offset = #'(-7 . 0)
   \tempo 4=120
   \time 4/4
   s1*11
