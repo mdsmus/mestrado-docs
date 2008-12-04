@@ -1,68 +1,28 @@
 #!/bin/bash
 
-letras=$(ls lily-*-systems.tex | awk -F '-' '{print $2}')
-sistemas=lily-score-systems.tex
-pages=paginas-composicao.tex
-l="  \linebreak"
+lbdir=lbook
+dirclily=$(ls -l ${lbdir} | grep ^d | awk '{print $9}')
+letras=$(grep --color lily ${lbdir}/snippet-names* | awk -F '-' '{print $2}' | awk -F '.' '{print $1}')
+texfile=paginas-composicao.tex
+systemnumbers=$(tac $lbdir/$dirclily/lily-${letras}-systems.tex | head -n 1 | awk -F '-' '{print $3}' | awk -F '}' '{print $1}')
 
-function renomeia-arquivos-principais {
-    for f in lily-*
+function cria-texfile {
+    rm ${texfile} 2> /dev/null
+    for i in $(seq 1 $systemnumbers)
     do
-        g=$(echo $f | sed "s/$letras/score/")
-        sed "s/$letras/score/" $f > $g
-        rm $f
+        echo "\includegraphics{lily-score-$i}  \linebreak \vspace{2em}" >> ${texfile}
     done
 }
 
-function processa-eps {
-    mv lily-${letras}*.eps figs
-    cd figs
-    mv lily-$letras.eps lily-score.eps
-    epstopdf lily-score.eps
-    rm lily-score.eps
-    for f in lily-$letras-*.eps
+function renomeia-e-move-lily {
+    cd $lbdir/$dirclily
+    rm *.eps 2> /dev/null
+    for f in lily-${letras}*.pdf
     do
-        g=$(echo $f | sed "s/$letras/score/")
-        mv $f $g
-        epstopdf $g
-        rm $g
+        mv $f ../../figs/$(echo $f | sed "s/$letras/score/")
     done
-    cd ..
+    cd -
 }
 
-function distancia-sistemas {
-    sed '1,2 !d' ${sistemas} > ${sistemas}-new
-    echo $l >> ${sistemas}-new
-    sed '4,8 !d' ${sistemas} >> ${sistemas}-new
-    echo $l \\vspace{20pt} >> ${sistemas}-new
-
-    sed '10,$!d' ${sistemas} |\
- sed 's/includegraphics{/includegraphics{figs\//g' |\
- sed 's/linebreak/linebreak\ \\vspace{22pt}/g' \
-        >> ${sistemas}-new
-    mv ${sistemas}-new ${sistemas}
-}
-
-function arruma-paginas {
-    sed '1,3 d' ${pages} | sed '$ d' > ${pages}-new ; mv ${pages}-new ${pages}
-    sed "s/$letras/score/" ${pages} > ${pages}-novo
-    mv ${pages}-novo ${pages}
-    ## muda nomes dos sistemas
-    sed "s/$letras/score/" ${sistemas} > ${sistemas}-novo
-    mv ${sistemas}-novo ${sistemas}
-}
-
-function snippet-etc {
-    for f in snippet*
-    do
-        sed "s/$letras/score/" $f > $f-novo
-        mv $f-novo $f
-    done
-}
-
-echo "Processando lytex"
-processa-eps
-renomeia-arquivos-principais
-distancia-sistemas
-arruma-paginas
-snippet-etc
+cria-texfile
+renomeia-e-move-lily
