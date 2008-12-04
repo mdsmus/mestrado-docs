@@ -107,8 +107,10 @@ gestoABCclarinetebb = {
 gestoBAAclarinetebb = {
   \relative c'' {
     R1*6/8*11
+    \crescHairpin
     g2.~\ppp\<(
     g2.~
+    \dimHairpin
     g4.\mp\> c,4.~
     c2.~
     c2.~
@@ -171,6 +173,7 @@ gestoBACclarinetebb = {
     dis'4.\st r8 g,4\st
     dis'4.\st g,4.\st
     cis4.\st g4.\st
+    \crescHairpin
     dis'4.\st r16 c16\<( dis cis fis e
     g4.~\f e
     fis4. cis4.
@@ -318,6 +321,7 @@ gestoCBCclarinetebb = {
   \relative c' {
     e4\ff e16 g, bes e, g' cis,8.~\fp cis4~
     cis4 e16\f g, bes e, g' cis,8.~\p cis4~
+    \dimHairpin
     cis4 e16\mf g, bes e, g' cis,8.~\p\> cis4
     e,16\ppp( g fis bes a c a c bes e cis dis) r4
     e,16( g fis bes a c a c bes e cis dis fis e bes' g
@@ -377,6 +381,7 @@ gestoCBEclarinetebb = {
     ees8-.->[ r r ees8-.->] r4 ees8-.->[ r
     r ees-.->] r4 ees8-.-> r r4
     g'4\f( e4 fis) cis8( dis)
+    \crescHairpin
     r4 c?2.~\p\<
     c1\f
   }

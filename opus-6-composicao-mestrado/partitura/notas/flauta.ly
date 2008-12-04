@@ -140,7 +140,8 @@ gestoBACflauta = {
     cis4. dis4.
     bes4.~ bes8 c4
     a2.~\p
-    a2.) 
+    a2.)
+    \crescHairpin
     r4. r16 a16\<( c bes dis cis)
   }
 }
@@ -356,6 +357,7 @@ gestoCBEflauta = {
     c?1)
     g'4( e4 fis) ees16( des fis e
     g4\f( e4 fis) cis8( dis)
+    \crescHairpin
     r4 c?2.~\p\<
     c1\f
   }

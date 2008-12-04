@@ -397,6 +397,7 @@ gestoCBEfagote = {
     a'4 g8\st a8~ a4 g8\st a~
     a4 g8\st a8~ a4 r4
     g'4\f( e4 fis) cis8( dis)
+    \crescHairpin
     r4 c?2.~\p\<
     c1\f
   }

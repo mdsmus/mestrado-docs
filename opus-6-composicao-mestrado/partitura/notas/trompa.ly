@@ -146,6 +146,7 @@ gestoBACtrompa = {
       g,4.\st cis4.\st
       g4.\st r8 dis'4\st
     }
+    \crescHairpin
     g,4.\st\< dis'4.\st
     g4.\st cis4.~\f(
     cis4.~ cis8 bes4
@@ -226,6 +227,7 @@ gestoCACtrompa = {
     a1~-+\mp
     a1
     R1
+    \crescHairpin
     c2-+\mf\<( bes
     a)\ff r
   }
@@ -308,6 +310,7 @@ gestoCBEtrompa = {
     c?1
     g'4 e4 fis cis8 dis
     g4\f e4 fis cis8 dis
+    \crescHairpin
     r4 c?2.~\p\<
     c1\f
   }

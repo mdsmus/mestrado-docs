@@ -276,6 +276,7 @@ gestoCABoboe = {
     fis4( e a g
     %% expansão de #s(5 3 4 1 2 0)
     bes2. a4~
+    \crescHairpin
     a2) bes,16( ees) e,\<( a) bes,4~
     bes2. r4\!
   }
@@ -397,6 +398,7 @@ gestoCBEoboe = {
     g4( e4 fis cis8 dis)
     g4( e4 fis) ees16( des fis e
     g4\f( e4 fis) cis8( dis)
+    \crescHairpin
     r4 c?2.~\p\<
     c1\f
   }
