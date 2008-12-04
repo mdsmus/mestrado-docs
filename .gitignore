@@ -22,6 +22,7 @@ dissertacao/lily/*.midi
 dissertacao/lily/*.ps
 dissertacao/data/*.pdf
 dissertacao/figs/*.pdf
+dissertacao/lbook*
 defesa/*.nav
 defesa/*.out
 defesa/*.ps
