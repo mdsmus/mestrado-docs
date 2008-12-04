@@ -18,13 +18,13 @@ function processa-eps {
     mv lily-${letras}*.eps figs
     cd figs
     mv lily-$letras.eps lily-score.eps
-    #epstopdf lily-score.eps
+    epstopdf lily-score.eps
     rm lily-score.eps
     for f in lily-$letras-*.eps
     do
         g=$(echo $f | sed "s/$letras/score/")
         mv $f $g
-        #epstopdf $g
+        epstopdf $g
         rm $g
     done
     cd ..
