@@ -1,5 +1,5 @@
 NAME = projeto-dissertacao
--include /usr/share/latex-mk/latex.gmk
+-include ~/.latexmk
 
 export BIBINPUTS=../:
 export TEXINPUTS=../config:
